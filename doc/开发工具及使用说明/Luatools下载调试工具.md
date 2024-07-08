@@ -4,10 +4,6 @@
 >
 > 最近修改时间：2024.7.8
 
-# 开发工具
-
-[TOC]
-
 ## Luatools下载调试工具
 
 ### LuaTools 简介
@@ -21,9 +17,13 @@ Luatools是合宙提供的单机版调试工具，支持最新固件获取、固
 ### LuaTools 安装
 
 1、下载[Luatools_v2.7z](https://luatos.com/luatools/download/last)，解压后是一个文件名为Luatools_v2.exe的运行程序。
+
 2、新建一个 LuaTools文件夹，将Luatools_v2.exe拷贝或移动到LuaTools文件夹下
+
 3、双击 Luatools_v2.exe开始安装，出现如下情况，点击更多信息选项，然后选择仍要运行选项即可完成安装。
-![image.png](../../image/20231121102748626_image.png)
+
+![image.png](../../image/开发工具及使用说明/Luatools下载调试工具/20231121102748626_image.png)
+
 4、运行Luatools后会提示开始升级，点击开始，进行升级，升级完成后可正常使用。
 
 ### LuaTools 功能介绍
@@ -36,7 +36,7 @@ LuaTools 支持最新固件获取、固件打包、项目管理、trace打印、
 
 ##### AT开发
 
-![](../../image/开发工具及使用说明/开发工具/20221009110353731_image.png)
+![](../../image/开发工具及使用说明/Luatools下载调试工具/20221009110353731_image.png)
 
 1、点击`下载固件`按钮。
 
@@ -48,7 +48,7 @@ LuaTools 支持最新固件获取、固件打包、项目管理、trace打印、
 
 ##### LuatOS开发
 
-![](../../image/开发工具及使用说明/开发工具/4fe214de-bd60-4513-96bc-6bd16bf5d77d.png)
+![](../../image/开发工具及使用说明/Luatools下载调试工具/4fe214de-bd60-4513-96bc-6bd16bf5d77d.png)
 
 1、在Luatools工具主界面点击"项目管理测试"
 
@@ -66,7 +66,7 @@ LuaTools 支持最新固件获取、固件打包、项目管理、trace打印、
 
 ##### CSDK开发
 
-![img](../../image/开发工具及使用说明/开发工具/7897d771-ec3d-4051-929a-1fcda565d7d3.png)
+![img](../../image/开发工具及使用说明/Luatools下载调试工具/7897d771-ec3d-4051-929a-1fcda565d7d3.png)
 
 1、在Luatools工具主界面点击"下载固件"
 
@@ -74,7 +74,7 @@ LuaTools 支持最新固件获取、固件打包、项目管理、trace打印、
 
 3&4、视调试情况进行勾选
 
-5、按住下载模式按键（boot 键)不放，同时再长按开机键开机，这时开发板会进入下载模式，luatools下载进度条会开始跑，这时可以松开 boot 按键。直到工具提示下载完成。
+5、按住下载模式按键（boot 键）不放，同时再长按开机键开机，这时开发板会进入下载模式，luatools下载进度条会开始跑，这时可以松开 boot 按键。直到工具提示下载完成。
 
 
 
@@ -83,9 +83,9 @@ LuaTools 支持最新固件获取、固件打包、项目管理、trace打印、
 如何判断有没有进入下载模式:可以通过 PC 端的设备管理器中虚拟出来的 USB 断开数量来判断：
 
 - 正常开机模式：
-  ![image.png](../../image/开发工具及使用说明/开发工具/20221009111242010_image.png)
+  ![image.png](../../image/开发工具及使用说明/Luatools下载调试工具/20221009111242010_image.png)
 - 下载模式：
-  ![image.png](../../image/开发工具及使用说明/开发工具/20221009111448780_image.png)
+  ![image.png](../../image/开发工具及使用说明/Luatools下载调试工具/20221009111448780_image.png)
 
 ## 视频烧录教程
 
