@@ -1,4 +1,4 @@
-# LuatOS_Document-Wiki
+# luatos-doc-pool
 
 #### 介绍
 {**以下是 Gitee 平台说明，您可以替换此简介**
@@ -8,6 +8,7 @@ Gitee 是 OSCHINA 推出的基于 Git 的代码托管平台（同时支持 SVN�
 #### 软件架构
 软件架构说明
 
+![](./image/luatos-doc-pool结构图.png)
 
 #### 安装教程
 
