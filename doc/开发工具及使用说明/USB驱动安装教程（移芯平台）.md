@@ -2,13 +2,6 @@
 
 **目前移芯平台采用的驱动方式为微软官方推荐的[USB 串行驱动程序 (Usbser.sys)](https://learn.microsoft.com/zh-cn/windows-hardware/drivers/usbcon/usb-driver-installation-based-on-compatible-ids)，只要使用了该方法，即可免驱动安装，方便用户开发项目。**
 
-## 目录名称
-
-- [USB驱动说明](#USB驱动说明)
-  - [win10系统](#win10系统)
-  - [win7及其以下系统](#win7及其以下系统)
-- [包含在 Windows 中的 USB 设备类驱动程序](#包含在 Windows 中的 USB 设备类驱动程序)
-
 ## USB驱动说明
 
 ### win10系统
