@@ -313,9 +313,8 @@
 
 ---
 
-## pio.pin.setIoMux(pins,fc)  （注：该接口目前仅支持Air795）
-写入文件指定的内容(掉电保护)
-
+## pio.pin.setIoMux(pins[,fc])  （注：该接口目前仅支持Air795）
+IO复用
 **参数**
 
 |参数|类型|释义|取值|
