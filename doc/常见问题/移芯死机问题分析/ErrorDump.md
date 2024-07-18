@@ -118,7 +118,7 @@ luatools也会自动抓ramdump，但是只能保存成文件，仍然需要用EP
 
 这里表示动态分配ram时，最大的block只有712字节了，这是非常典型的内存不足引起的死机，正常来说，至少要有个70KB左右的空间来满足LTE协议栈的需求
 
-如果ramdump信息完整，则可以从ramdump里找到查找方向[EC618从Ramdump里分析内存泄露问题](https://e3zt58hesn.feishu.cn/docx/HnjPdIF58oxDAdx8pChcMnbSnIf)
+如果ramdump信息完整，则可以从ramdump里找到查找方向[EC618从Ramdump里分析内存泄露问题](ramDump.md)
 
 ## C4 看门狗死机
 
@@ -138,7 +138,7 @@ ramdump里能看到最后停在NMI Handler里。
 
 先要排除一下栈溢出的可能，一旦栈溢出，什么奇怪的现象都有可能发生，运气好的，触发断言，运气不好的，就什么错误都可能发生，任务链表都可能被破坏，导致ramdump里的信息都会缺失。
 
-如果ramdump信息完整，则可以从ramdump大致分析出有没有栈溢出现象[EC618从ramdump里看栈溢出](https://e3zt58hesn.feishu.cn/docx/M8eldgmx4oIu9oxEfQpc36hCnif)
+如果ramdump信息完整，则可以从ramdump大致分析出有没有栈溢出现象[EC618从ramdump里看栈溢出](ramDump.md)
 
 如果ramdump的信息看起来完整，stackframe with local里调用顺序也比较合理，那么就能定位发生问题的函数和语句，后续就看代码调试吧，这是比较理想的情况。
 
