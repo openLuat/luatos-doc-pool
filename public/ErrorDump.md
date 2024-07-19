@@ -1,24 +1,22 @@
-# Air780EP遇到死机问题如何分析
+# Air780E/Air780EP/Air780EQ/Air201模块遇到死机问题如何分析
 
 # 简介
 
-> - 本文档扩展到目前移芯所有CAT1芯片，EC618 和 EC7XX（指716s、718p、716e等）
+> - 本文档适用于合宙Air780E、Air780EP、Air780EQ、Air201
 >
 > - 关联文档和使用工具：
 >
 >   - [从Ramdump里分析内存泄漏问题](ramDump.md)
 >
->   - [无法抓底层log的情况下如何导出死机dump](../../%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%8F%8A%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/FlashTools_%E6%97%A0%E6%B3%95%E6%8A%93log%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E5%A6%82%E4%BD%95%E5%AF%BC%E5%87%BA%E6%AD%BB%E6%9C%BADUMP.md)
+>   - [无法抓底层log的情况下如何导出死机dump](../%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%8F%8A%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/FlashTools_%E6%97%A0%E6%B3%95%E6%8A%93log%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E5%A6%82%E4%BD%95%E5%AF%BC%E5%87%BA%E6%AD%BB%E6%9C%BADUMP.md)
 >
->   - [Luatools下载调试工具](../../%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%8F%8A%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/Luatools%E4%B8%8B%E8%BD%BD%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7.md)
+>   - [Luatools下载调试工具](../%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%8F%8A%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/Luatools%E4%B8%8B%E8%BD%BD%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7.md)
 >
->   - [EPAT抓取底层日志](../../%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%8F%8A%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/%E5%BA%95%E5%B1%82%E6%97%A5%E5%BF%97%E6%8A%93%E5%8F%96%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%EF%BC%88%E7%A7%BB%E8%8A%AF%E5%B9%B3%E5%8F%B0%EF%BC%89.md)
->   
+>   - [EPAT抓取底层日志](../%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%8F%8A%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/%E5%BA%95%E5%B1%82%E6%97%A5%E5%BF%97%E6%8A%93%E5%8F%96%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%EF%BC%88%E7%A7%BB%E8%8A%AF%E5%B9%B3%E5%8F%B0%EF%BC%89.md)
+>
 >   - [Flashtools_v4.1.9下载](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240515135114385_FlashTools_V4.1.9_20231106.rar)
 
-luatools和EPAT这2个工具，具体使用方法要了解，本文不做深入讲解，EPAT内有详细使用说明
-
-FlashTools这个工具，至少要掌握怎么连接模块，及读取模块内数据的方法
+luatools和EPAT这2个工具，具体使用方法要了解，本文不做深入讲解，**EPAT抓取底层日志**文档内有详细使用说明
 
 luatools用于捕获从USB口的用户log，即luat_debug_print输出的log，仅用于csdk和luatos。AT版本没有用户log和用户串口通道，需要使用EPAT工具抓取。
 
@@ -38,45 +36,48 @@ csdk固件默认死机后存储死机信息到flash后重启，luatos固件死�
 
 # A 怎么抓LOG
 
-抓日志需要使用EPAT工具，说明请看 [EPAT抓取底层日志文档](../%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%8F%8A%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/%E5%BA%95%E5%B1%82%E6%97%A5%E5%BF%97%E6%8A%93%E5%8F%96%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%EF%BC%88%E7%A7%BB%E8%8A%AF%E5%B9%B3%E5%8F%B0%EF%BC%89.md)
-
 ## A1 认识USB虚拟串口
 
 由于电脑识别出来串口名字都是一样的，因此需要从串口属性上来区分对应功能，具体看下面截图红框
 
 ### A1.1 用户log通道
 
-![image-20240718191845169](../../../image/常见问题/移芯死机问题分析/errorDump/image-20240718191845169.png)
+![image-20240718191845169](../image/常见问题/移芯死机问题分析/errorDump/image-20240718191845169.png)
 
 ### A1.2 底层log通道
 
-![image-20240718191857119](../../../image/常见问题/移芯死机问题分析/errorDump/image-20240718191857119.png)
+![image-20240718191857119](../image/常见问题/移芯死机问题分析/errorDump/image-20240718191857119.png)
 
 ### A1.3 用户串口通道
 
-![image-20240718191908025](../../../image/常见问题/移芯死机问题分析/errorDump/image-20240718191908025.png)
+![image-20240718191908025](../image/常见问题/移芯死机问题分析/errorDump/image-20240718191908025.png)
 
 ## A2 抓log
 
+如果使用EPAT工具抓取日志，说明请看 [EPAT抓取底层日志文档](../doc/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%8F%8A%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/%E5%BA%95%E5%B1%82%E6%97%A5%E5%BF%97%E6%8A%93%E5%8F%96%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%EF%BC%88%E7%A7%BB%E8%8A%AF%E5%B9%B3%E5%8F%B0%EF%BC%89.md)
+
 ### A2.1 USB可用
 
-建议方案1，只用luatools勾选USB打印模式即可，没有配置上的要求，luatools会自动识别log通道，需低层log的，工具配置--》log--》**勾选ap log**，luatools会自动识别log通道，底层log保存在log/4gdiag。luatools版本必须在2.2.1及以上
+建议方案1，只用luatools勾选USB打印模式即可，没有配置上的要求，luatools会自动识别log通道，需底层log的，工具配置--》log--》**勾选ap log**，luatools会自动识别log通道，底层log保存在log/4gdiag。luatools版本必须在2.2.1及以上
 
 建议方案2，直接用EPAT，按照EPAT手册操作即可，如果luatools开着，工具配置--》log--》**不要勾选ap log**
 
 ### A2.2 USB不可用
 
-只能用EPAT通过UART抓LOG了
+只能用EPAT通过DBG_UART抓LOG了，需要6M波特率抓取（USB转TTL工具也要支持6M波特率），如果是AT版本还需要通过发送以下指令配置
+~~~
+AT+ECPCFG=logCtrl,2             // 输出全部日志
+AT+ECPCFG=logPortSel,1          // 只从DBG_UART串口输出日志
+AT+ECPCFG=logBaudrate,6000000   // 设置波特率为6M
+~~~
 
 ---
-
-
 
 # B 遇到死机怎么办
 
 设置死机不重启方法
 
-- AT固件：发送 **AT+ECPCFG="faultAction",0** 或者 **AT*EXASSERT=1 ** 指令开启死机不重启。
+- AT固件：发送 **AT+ECPCFG="faultAction",0** 或者 **AT*EXASSERT=1** 指令开启死机不重启。
 - LuatOS开发：调用 mcu.hardfault(0) 接口开启死机不重启。
 - CSDK开发：在task中执行 luat_debug_set_fault_mode(LUAT_DEBUG_FAULT_HANG); 开启死机不重启。
 
@@ -90,11 +91,9 @@ luatools也会自动抓ramdump，但是只能保存成文件，仍然需要用EP
 
 ## B3 固件设置成死机重启，或者没有工具抓底层log
 
-帮助文档：[无法抓底层log的情况下如何导出死机dump](../../doc/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%8F%8A%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/FlashTools_%E6%97%A0%E6%B3%95%E6%8A%93log%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E5%A6%82%E4%BD%95%E5%AF%BC%E5%87%BA%E6%AD%BB%E6%9C%BADUMP.md)
+帮助文档：[无法抓底层log的情况下如何导出死机dump](../doc/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%8F%8A%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/FlashTools_%E6%97%A0%E6%B3%95%E6%8A%93log%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E5%A6%82%E4%BD%95%E5%AF%BC%E5%87%BA%E6%AD%BB%E6%9C%BADUMP.md)
 
 ---
-
-
 
 # C 死机重启原因常见情况分析
 
@@ -106,7 +105,7 @@ luatools也会自动抓ramdump，但是只能保存成文件，仍然需要用EP
 
 ## C2 断言死机
 
-看底层log就可以，搜索EcAssert字样，可以看到断言的位置，如果有源码，就看源码，没有原厂没给源码的，直接问原厂
+看底层log就可以，搜索EcAssert字样，可以看到断言的位置
 
 如果没有底层log，ramdump里需要看list source的代码上下是不是调用了ec_assert_regs，然后在stackframe with local里看看调用顺序，大概率能看到断言的位置。
 
@@ -116,17 +115,17 @@ luatools也会自动抓ramdump，但是只能保存成文件，仍然需要用EP
 
 这是最常见的死机原因，而且9成9可以判断是内存泄露，剩下也有可能malloc时的参数不对，申请了不可能申请到的空间大小。内存不足直接表现，C2中已有部分描述，如果有底层log，还可以从死机时打印的信息来判断
 
-![image-20240718193811176](../../../image/常见问题/移芯死机问题分析/errorDump/image-20240718193811176.png)
+![image-20240718193811176](../image/常见问题/移芯死机问题分析/errorDump/image-20240718193811176.png)
 
 这里表示动态分配ram时，最大的block只有712字节了，这是非常典型的内存不足引起的死机，正常来说，至少要有个70KB左右的空间来满足LTE协议栈的需求
 
-如果ramdump信息完整，则可以从ramdump里找到查找方向[EC618从Ramdump里分析内存泄露问题](ramDump.md)
+如果ramdump信息完整，则可以从ramdump里找到查找方向[从Ramdump里分析内存泄露问题](ramDump.md)
 
 ## C4 看门狗死机
 
 在底层log和ramdump里都能看到，
 
-![image-20240718193821689](../../../image/常见问题/移芯死机问题分析/errorDump/image-20240718193821689.png)
+![image-20240718193821689](../image/常见问题/移芯死机问题分析/errorDump/image-20240718193821689.png)
 
 ramdump里能看到最后停在NMI Handler里。
 
@@ -140,7 +139,7 @@ ramdump里能看到最后停在NMI Handler里。
 
 先要排除一下栈溢出的可能，一旦栈溢出，什么奇怪的现象都有可能发生，运气好的，触发断言，运气不好的，就什么错误都可能发生，任务链表都可能被破坏，导致ramdump里的信息都会缺失。
 
-如果ramdump信息完整，则可以从ramdump大致分析出有没有栈溢出现象[EC618从ramdump里看栈溢出](ramDump.md)
+如果ramdump信息完整，则可以从ramdump大致分析出有没有栈溢出现象[从Ramdump里看栈溢出](ramDump.md)
 
 如果ramdump的信息看起来完整，stackframe with local里调用顺序也比较合理，那么就能定位发生问题的函数和语句，后续就看代码调试吧，这是比较理想的情况。
 
