@@ -14,31 +14,31 @@
 
 1、780E开发板一套
 
-../image/LuatOS开发资料/示例/780E_LCD/模块型号.jpg
+![模块型号]../image/LuatOS开发资料/示例/780E_LCD/模块型号.jpg
 
 2、屏幕一个，这里选用的是st7789型号
 
-../image/LuatOS开发资料/示例/780E_LCD/屏幕正面.jpg
+![屏幕正面]../image/LuatOS开发资料/示例/780E_LCD/屏幕正面.jpg
 
-../image/LuatOS开发资料/示例/780E_LCD/屏幕反面.jpg
+![屏幕反面]../image/LuatOS开发资料/示例/780E_LCD/屏幕反面.jpg
 
 ### 2、修改部分参数
 
 根据指示接好线：
 
-../image/LuatOS开发资料/示例/780E_LCD/接线.png
+![接线]../image/LuatOS开发资料/示例/780E_LCD/接线.png
 
 设置屏幕的型号和分辨率：
 
-../image/LuatOS开发资料/示例/780E_LCD/程序更改.png
+![程序更改]../image/LuatOS开发资料/示例/780E_LCD/程序更改.png
 
 
 ### 3、固件及软件下载
 
 打开luatools项目管理新建项目并下载固件
 
-../image/LuatOS开发资料/示例/780E_LCD/luatools下载.png
+![luatools下载]../image/LuatOS开发资料/示例/780E_LCD/luatools下载.png
 
 ### 4、效果
 
-../image/LuatOS开发资料/示例/780E_LCD/效果1.jpg
+![模块型号]../image/LuatOS开发资料/示例/780E_LCD/效果1.jpg
