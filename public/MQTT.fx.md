@@ -18,41 +18,41 @@
 
 1、780E开发板一套，记得装一个能用的sim卡
 
-![](..\image\LuatOS开发资料\示例\MQTT.fx\开发板.jpg)
+![](../image/LuatOS开发资料/示例/MQTT.fx/开发板.jpg)
 
 ### 2、配置连接MQTT.fx
 
 打开mqtt.fx软件准备配置连接文件
 
-![](..\image\LuatOS开发资料\示例\MQTT.fx\mqtt.fx配置1-1.png)
+![](../image/LuatOS开发资料/示例/MQTT.fx/mqtt.fx配置1-1.png)
 
-![](..\image\LuatOS开发资料\示例\MQTT.fx\mqtt.fx配置1-2.png)
+![](../image/LuatOS开发资料/示例/MQTT.fx/mqtt.fx配置1-2.png)
 
 打开程序，匹配mqtt连接的参数
 
 
 
-![](..\image\LuatOS开发资料\示例\MQTT.fx\mqtt.fx配置1.png)
+![](../image/LuatOS开发资料/示例/MQTT.fx/mqtt.fx配置1.png)
 
-![](..\image\LuatOS开发资料\示例\MQTT.fx\mqtt.fx配置2.png)
+![](../image/LuatOS开发资料/示例/MQTT.fx/mqtt.fx配置2.png)
 
 连接服务器：
 
-![](..\image\LuatOS开发资料\示例\MQTT.fx\mqtt.fx配置3.png)
+![](../image/LuatOS开发资料/示例/MQTT.fx/mqtt.fx配置3.png)
 
 ### 3、固件及脚本下载
 
-![](..\image\LuatOS开发资料\示例\MQTT.fx\Luatools下载.png)
+![](../image/LuatOS开发资料/示例/MQTT.fx/Luatools下载.png)
 
 ### 4、效果展示
 
 订阅模块发布的消息
 
-![](..\image\LuatOS开发资料\示例\MQTT.fx\模块发布消息.png)
+![](../image/LuatOS开发资料/示例/MQTT.fx/模块发布消息.png)
 
 给模块发布消息
 
-![](..\image\LuatOS开发资料\示例\MQTT.fx\模块订阅消息.png)
+![](../image/LuatOS开发资料/示例/MQTT.fx/模块订阅消息.png)
 
 
 
