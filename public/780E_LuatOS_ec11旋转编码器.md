@@ -27,9 +27,10 @@ ec11.init(GPIO_A,GPIO_B)
 
 参数
 
-|number    |GPIO_A A引脚对应的GPIO编号, 例如 GPIO6, 就写6    |
-
-|number    |GPIO_B B引脚对应的GPIO编号, 例如 GPIO7, 就写7    |
+| 参数类型             | 描述                    |
+| :------------------ | ----------------------- |
+| number       | GPIO_A A引脚对应的GPIO编号, 例如 GPIO6, 就写6 |
+| number       | GPIO_B B引脚对应的GPIO编号, 例如 GPIO7, 就写7 |
 
 返回值
 
