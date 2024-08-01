@@ -1,3 +1,5 @@
+# Air780EP模块AT开发TCP/UDP应用指南
+
 # 简介
 
 > - 关联文档和使用工具：
@@ -87,7 +89,7 @@ AT+CGDCONT?
 
 OK
 
-## 1.6连接TCP
+## 1.6.1连接TCP
 
 此处使用的是非SSL连接
 TCP/UDP测试网页[TCP/UDP测试网页](https://netlab.luatos.com/)
@@ -101,6 +103,22 @@ OK
 
 CONNECT OK
 ```
+
+## 1.6.2连接UDP
+
+此处使用的是非SSL连接
+TCP/UDP测试网页[TCP/UDP测试网页](https://netlab.luatos.com/)
+
+使用AT+CIPSTART来建立连接
+
+```
+AT+CIPSTART="UDP","112.125.89.8",42458
+
+OK
+
+CONNECT OK
+```
+
 
 ![](../image/AT开发资料/应用开发指南/TCP应用指南/QQ_1721718887736.png)
 
@@ -395,13 +413,10 @@ https://netlab.luatos.com/
 
 ----
 
-```
 
-- 合宙支持AT功能的模组型号，除本文介绍的Air780EP外，
-- 还有Air780EPA、Air780E、Air780EX、Air724UG等型号，
-- 本文介绍的TCP应用流程，同样也适用于这些型号。
-
-```
+> - 合宙支持AT功能的模组型号，除本文介绍的Air780EP外，
+> - 还有Air780EPA、Air780E、Air780EX、Air724UG、Air201、Air780EQ、Air700ECQ、Air700EAQ、Air780EPT、Air780EPS等型号，
+> - 本文介绍的TCP/UDP应用流程，同样也适用于这些型号。
 
 ![选型手册简洁版01](../image/1.jpg)
 ![选型手册简洁版02](../image/2.jpg)

@@ -581,15 +581,10 @@ AT版本：有缓存机制，内存中有一个的缓冲区（780EP模块AT固�
 
 ----
 
-```
+> 合宙支持AT功能的模组型号，除本文介绍的Air780EP外，
+> 还有Air780EPA、Air780E、Air780EX、Air724UG、Air201、Air780EQ、Air700ECQ、Air700EAQ、Air780EPT、Air780EPS等型号，
+> 本文介绍的HTTP应用流程，同样也适用于这些型号。
 
-- 合宙支持AT功能的模组型号，除本文介绍的Air780EP外，
-- 还有Air780EPA、Air780E、Air780EX、Air724UG等型号，
-- 本文介绍的HTTP应用流程，同样也适用于这些型号。
-
-```
 
 ![选型手册简洁版01](../image/1.jpg)
 ![选型手册简洁版02](../image/2.jpg)
-
-
