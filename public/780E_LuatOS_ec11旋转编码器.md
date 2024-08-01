@@ -19,6 +19,22 @@
 
 ### 2、程序实例
 
+#### API说明
+
+接口
+
+ec11.init(GPIO_A,GPIO_B)
+
+参数
+
+|number    |GPIO_A A引脚对应的GPIO编号, 例如 GPIO6, 就写6    |
+|number    |GPIO_B B引脚对应的GPIO编号, 例如 GPIO7, 就写7    |
+
+返回值
+
+无
+
+#### 完整程序
 在main.lua中添加如下程序
 
 ![模块型号](../image/LuatOS开发资料/示例/780E_ec11旋转编码器/程序实例.png)
