@@ -13,6 +13,12 @@
 
 ![模块型号](../image/LuatOS开发资料/示例/ctwing/开发板.jpg)
 
+可用的SIM卡一张
+
+![模块型号](../image/LuatOS开发资料/示例/ctwing/SIM卡.jpg)
+
+
+
 ## 2、程序介绍
 
 ### API说明
