@@ -17,7 +17,7 @@
 - AT固件获取：https://gitee.com/openLuat/airm2m-ec718-at/releases ，进页面按下Ctrl+F 搜索 **AirM2M_780EP_LTE_AT** 即可找到780EP模块所使用的AT固件，推荐选用该固件名称后面数字版本号最高的最新relase版本进行调试。
 - 当前文档示例使用[AirM2M_780EP_V1007_LTE_AT版本固件](https://cdn.openluat-erp.openluat.com/erp_site_file/product_file/sw_file_20240422190620_AirM2M_780EP_V1007_LTE_AT.zip)
 
- <img src="../image/780EP/Air780EP(V)开发板.png" width="50%">
+ <img src="../image/780EP/微信图片_20240722101832.jpg" width="50%">
 
 # 应用概述
 

@@ -2,9 +2,18 @@
 
 ## 简介
 
-**优势：**长连接，低带宽，高可靠。
+**优势**：长连接，低带宽，高可靠。
 
-**实用场景：**需要服务器下发消息给设备，需要及时收到。例如，远程开关，充电桩等
+**实用场景**：需要服务器下发消息给设备，需要及时收到。例如，远程开关，充电桩等
+
+
+## 材料准备
+
+1. 780EP开发板一套，包括天线SIM卡，USB线
+2. PC电脑，以及登录官方IOT后台 [https://iot.openluat.com/](https://gitee.com/link?target=https%3A%2F%2Fiot.openluat.com%2F)
+3. 固件和DEMO下载地址 [LuatOS软件包](https://gitee.com/openLuat/LuatOS/releases)
+
+ <img src="../image/780EP/微信图片_20240722101832.jpg" width="50%">
 
 ## 名词解析
 
