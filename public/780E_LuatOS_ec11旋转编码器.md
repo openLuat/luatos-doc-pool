@@ -39,8 +39,6 @@ ec11.init(GPIO_A,GPIO_B)
 #### 完整程序
 在main.lua中添加如下程序
 
-![模块型号](../image/LuatOS开发资料/示例/780E_ec11旋转编码器/程序实例.png)
-
 ```lua
 PROJECT = "ROTARY_TEST"
 VERSION = "1.0.0"
@@ -84,4 +82,12 @@ sys.run()
 ![](../image/LuatOS开发资料/示例/780E_ec11旋转编码器/效果展示.png)
 
 
+----
+
+> 合宙支持LuatOS开发的模组型号，除本文介绍的Air780E外，
+> 还有Air780EPA、Air780EP、Air780EX、Air201、Air780EPT、Air780EPS等型号，
+> 本文介绍的适配EC11旋转编码器的流程，同样也适用于这些型号。但是要注意实际的接线方式，因为不同的模组引脚定义可能不同。
+
+![选型手册简洁版01](../image/1.jpg)
+![选型手册简洁版02](../image/2.jpg)
 

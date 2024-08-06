@@ -330,3 +330,12 @@ sys.subscribe("mqtt_payload", function(topic, payload)
 end)
 ```
 
+----
+
+> 合宙支持LuatOS功能的模组型号，除本文介绍的Air780EP外，
+> 还有Air780EPA、Air780E、Air780EX、Air201、Air780EPT、Air780EPS等型号，
+> 本文介绍的MQTT应用流程，同样也适用于这些型号。
+
+
+![选型手册简洁版01](../image/1.jpg)
+![选型手册简洁版02](../image/2.jpg)

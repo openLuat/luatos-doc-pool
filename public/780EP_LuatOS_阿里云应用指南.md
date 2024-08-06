@@ -245,3 +245,13 @@ end
 ![image-20240722141823942](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722141823942.png)
 
 ![image-20240722141856255](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722141856255.png)
+
+
+----
+
+> 合宙支持LuatOS开发的模组型号，除本文介绍的Air780EP外，
+> 还有Air780EPA、Air780E、Air780EX、Air201、Air780EPT、Air780EPS等型号，
+> 本文介绍的接入阿里云的流程，同样也适用于这些型号。
+
+![选型手册简洁版01](../image/1.jpg)
+![选型手册简洁版02](../image/2.jpg)

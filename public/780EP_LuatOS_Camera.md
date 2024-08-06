@@ -60,3 +60,11 @@ camera_id = gc032aInit(cspiId,i2cId,24000000,SCAN_MODE,SCAN_MODE)
 
  ![sscom安装目录下查找读取的文件](../image/LuatOS%E5%BC%80%E5%8F%91%E8%B5%84%E6%96%99/%E7%A4%BA%E4%BE%8B/Camera/%E5%9B%BE%E7%89%878.png)
  ![sscom安装目录下查找读取的文件](../image/LuatOS%E5%BC%80%E5%8F%91%E8%B5%84%E6%96%99/%E7%A4%BA%E4%BE%8B/Camera/%E5%9B%BE%E7%89%879.png)
+
+
+----
+
+
+![选型手册简洁版01](../image/1.jpg)
+![选型手册简洁版02](../image/2.jpg)
+
