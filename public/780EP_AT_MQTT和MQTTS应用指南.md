@@ -1,3 +1,5 @@
+# Air780EP模块AT开发MQTT和MQTTS的应用指南
+
 # 简介
 
 > - 关联文档和使用工具：
@@ -229,6 +231,7 @@ OK
 CONNACK OK
 ```
 ## PDP被动去激活示例
+
 先来看下PDP被动去激活时的AT命令处理序列，如果不理解AT命令含义，请自行参考AT手册
 
 ```lua
@@ -262,6 +265,140 @@ AT+MCONNECT=1,60
 OK
 CONNACK OK
 ```
+## SSL带证书验证流程（单向认证）
+
+先来看下SSL带证书验证（单向认证）时的AT命令处理序列，如果不理解AT命令含义，请自行参考AT手册
+
+```lua
+AT+CGATT?
+
++CGATT: 1
+
+OK
+
+AT+FSCREATE="ca.crt"			//创建CA 证书文件
+
+OK
+
+AT+FSWRITE="ca.crt",0,1212,15  //1212是证书文件长度，15为超时时间，这里是举例说明，请填入实际数据，不要照抄
+
+>
+//此处填写证书数据
+
+OK
+
+AT+SSLCFG="cacert",88,"ca.crt"	//设置CA证书文件为ca.crt
+
+OK
+
+AT+SSLCFG="seclevel",88,1		//1表示设置认证模式为只对服务器认证
+
+OK
+
+AT+MCONFIG="868488076506128","user","password"	//这三个参数可以不加双引号，第一个参数需要开发者自己设置
+												//后两个参数可以不填，格式为:AT+MCONFIG="868488076506128","",""
+
+OK
+
+AT+SSLMIPSTART="airtest.openluat.com",8883		//开发者请修改为自己的服务器地址和端口
+
+OK
+
+CONNECT OK
+
+AT+MCONNECT=1,60								//在MIPSTART返回CONNECT OK后才能发MCONNECT命令
+												//而且要立即发，否则会被服务器踢掉
+
+OK
+
+CONNACK OK
+
+--后面发布和接收与前面一样，直接参考
+```
+
+## SSL带证书验证流程（双向认证）
+
+先来看下SSL带证书验证（双向认证）时的AT命令处理序列，如果不理解AT命令含义，请自行参考AT手册
+
+```lua
+AT+CGATT?
+
++CGATT: 1
+
+OK
+
+AT+FSCREATE="ca.crt"			//创建CA 证书文件
+
+OK
+
+AT+FSWRITE="ca.crt",0,1212,15  //1212是证书文件长度，15为超时时间，这里是举例说明，请填入实际数据，不要照抄
+
+>
+//此处填写证书数据
+
+OK
+
+AT+FSCREATE="client.crt"		//创建客户端证书文件
+
+OK
+
+AT+FSWRITE="client.crt",0,1127,15
+
+>
+//此处填写证书数据
+
+OK
+
+AT+FSCREATE="client.key"		//创建客户端key文件
+
+OK
+
+AT+FSWRITE="client.key",0,1679,15
+
+>
+//此处填写证书数据
+
+OK
+
+AT+SSLCFG="cacert",88,"ca.crt"	//设置CA证书文件为ca.crt
+
+OK
+
+AT+SSLCFG="clientcert",88,"client.crt"	//设置客户端证书文件为client.crt
+
+OK
+
+AT+SSLCFG="clientkey",88,"client.key"	//设置客户端密钥文件为client.key
+
+OK
+
+AT+SSLCFG="seclevel",88,2				//设置认证模式为双向认证
+
+OK
+
+AT+MCONFIG="868488076506128","user","password"	//这三个参数可以不加双引号，第一个参数需要开发者自己设置
+												//后两个参数可以不填，格式为:AT+MCONFIG="868488076506128","",""
+
+OK
+
+AT+SSLMIPSTART="airtest.openluat.com",8883		//开发者请修改为自己的服务器地址和端口
+
+OK
+
+CONNECT OK
+
+AT+MCONNECT=1,60								//在MIPSTART返回CONNECT OK后才能发MCONNECT命令
+												//而且要立即发，否则会被服务器踢掉
+
+OK
+
+CONNACK OK
+
+--后面发布和接收与前面一样，直接参考
+```
+
+
+
 ------
 
 
