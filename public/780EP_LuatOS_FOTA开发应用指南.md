@@ -6,7 +6,7 @@ update是物联网中比较常用的功能，本文介绍如何使用Air780EP开
 
 LuatOS-Air开发模式下，固件分为两部分：core和script
 
-远程升级时：core为差分升级；script为全量覆盖升级
+名词介绍：core为底层固件；script为脚本文件
 
 远程升级时：可以仅升级script；可以仅升级core；也可以同时升级core+script
 
