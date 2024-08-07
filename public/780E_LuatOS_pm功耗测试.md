@@ -119,7 +119,7 @@
 
 ### 1、pm.WORK_MODE=1模式，参考功耗：
 
-![模块型号](../image/LuatOS开发资料/示例/780E_PM/High power.png)
+![模块型号](../image/LuatOS开发资料/示例/780E_PM/HighPower.png)
 
 
 
@@ -186,7 +186,7 @@
 
 ​		这是因为模块在和基站通信。
 
-![模块型号](../image/LuatOS开发资料/示例/780E_PM/High power-2.png)
+![模块型号](../image/LuatOS开发资料/示例/780E_PM/HighPower-2.png)
 
 
 
