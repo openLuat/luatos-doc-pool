@@ -4,7 +4,7 @@
 >
 > - 关联文档和使用工具：
 >
->   - [LuatOS-SoC固件获取](https://gitee.com/openLuat/LuatOS/releases)
+>   - [LuatOS-SoC固件获取](https://gitee.com/openLuat/LuatOS/releases) （页面Ctrl+F搜索780EP即可找到对应的固件）
 >
 >   - [camera Demo](https://gitee.com/openLuat/LuatOS/tree/master/demo/camera/spi_cam)
 >

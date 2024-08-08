@@ -1,11 +1,20 @@
-# 780EP_LuatOS_MQTT应用指南
+# Air780EP模块LuatOS开发的MQTT应用指南
 
 ## 简介
 
 **优势**：长连接，低带宽，高可靠。
 
-**实用场景**：需要服务器下发消息给设备，需要及时收到。例如，远程开关，充电桩等
+**实用场景**：需要服务器下发消息给设备，需要及时收到。实际场景较多应用在远程智能开关、充电桩等等
 
+> - 关联文档和使用工具：
+>
+>   - [LuatOS固件获取](https://gitee.com/openLuat/LuatOS/releases) （页面Ctrl+F搜索780EP即可找到对应的固件）
+>
+>   - [示例demo获取](https://gitee.com/openLuat/LuatOS/tree/master/demo/mqtt)
+>
+>   - [mqtt API接口说明](https://wiki.luatos.com/api/mqtt.html?highlight=mqtt#mqtt.create)
+>
+>   - [mqtt协议说明](https://www.runoob.com/w3cnote/mqtt-intro.html)
 
 ## 材料准备
 
@@ -22,7 +31,7 @@
   - QOS为0时，压入底层TCP发送堆栈，视为成功
   - QOS为1时，收到服务器回应PUBACK，视为成功
   - QOS为2时，收到服务器响应PUBREC，立即上行PUBCOMP压入TCP发送队列，视为成功
-- **mqtt_host**主机，**mqtt_port**端口，MQTT需要连接的服务器参数。mqtt_host可以说是ip或者域名。
+- **mqtt_host**主机服务器地址，**mqtt_port**端口，MQTT需要连接的服务器参数。mqtt_host可以说是ip或者域名。
 - **topic**主题，根据主题区别消息类型和来源，主要用来分类数据。同时mqtt是发布订阅模型，topic是发布和订阅者通信的重要通道。
 - **payload**消息内容，发布和订阅的具体数据。
 - **retain**保留消息，保留消息是一条将保留标志（retained flag）置为true的普通MQTT消息。broker会针对主题依照QoS级别保留最后一条保留消息，当订阅者订阅主题时会立即收到保留消息。broker仅为每个主题保留一条保留消息。
@@ -101,7 +110,7 @@
 | ---------- | ------------------------------- |
 | boolean    | 发起成功返回true, 否则返回false |
 
-**注意：**本函数仅代表发起成功, 后续仍需根据ready函数判断mqtt是否连接正常
+**注意**：本函数仅代表发起成功, 后续仍需根据ready函数判断mqtt是否连接正常
 
 ### 5. 订阅主题
 
@@ -176,7 +185,7 @@
 
 3. 设置MQTTX软件上发布消息的主题
 
-​	**注意：**格式要求默认为 /luatos/sub/ 加模块的IMEI号，例如 /luatos/sub/868488076506128
+​	**注意**：格式要求默认为 /luatos/sub/ 加模块的IMEI号，例如 /luatos/sub/868488076506128
 
 ![image-20240730164836593](../image/LuatOS开发资料/示例/780EP_MQTT/image-20240730164836593.png)
 
@@ -188,11 +197,11 @@
 
    ![image-20240730165613869](../image/LuatOS开发资料/示例/780EP_MQTT/image-20240730165613869.png)
 
-## 代码分析
+## MQTT单链接示例
 
 - 在代码开头部分，可根据自己的服务器修改指定的参数
 
-  **注意：**user_name、password可填可不填
+  **注意**：user_name、password在有些服务器上是可以不传入的，或者是对传入的值没有要求限制。要根据实际服务器要求来填写
 
 ```lua
 --根据自己的服务器修改以下参数
@@ -203,8 +212,8 @@ local client_id = "abc"
 local user_name = "user"
 local password = "password"
 
-local pub_topic = "/luatos/pub/" .. (mcu.unique_id():toHex())
-local sub_topic = "/luatos/sub/" .. (mcu.unique_id():toHex())
+local pub_topic = "/luatos/pub/" .. (mcu.unique_id():toHex())   -- 该变量在下方代码有重新赋值，根据实际应用场景，可自行修改脚本逻辑
+local sub_topic = "/luatos/sub/" .. (mcu.unique_id():toHex())   -- 该变量在下方代码有重新赋值，根据实际应用场景，可自行修改脚本逻辑
 ```
 
 - 此task实现的是mqtt的连接、订阅消息、发布消息的流程。
@@ -216,7 +225,7 @@ sys.taskInit(function()
     -- 等待联网
     local ret, device_id = sys.waitUntil("net_ready")
     -- 下面的是mqtt的参数均可自行修改
-    client_id = device_id
+    -- client_id = device_id
     pub_topic = "/luatos/pub/" .. device_id
     sub_topic = "/luatos/sub/" .. device_id
 
@@ -329,6 +338,82 @@ sys.subscribe("mqtt_payload", function(topic, payload)
     uart.write(1, payload)
 end)
 ```
+
+--- 
+
+## MQTT多链接示例
+
+多链接的核心，就是要创建两个mqtt客户端的对象，通过不同的变量控制，代码部分如下
+~~~lua
+    --------------------第一个mqtt客户端--------------------
+    mqttc1 = mqtt.create(nil, mqtt_host, mqtt_port, mqtt_isssl, ca_file)    -- 创建的第一个mqtt对象
+    mqttc1:auth(client1_id,user_name,password) -- client_id必填,其余选填
+    -- mqttc1:keepalive(240) -- 默认值240s
+    mqttc1:autoreconn(true, 3000) -- 自动重连机制
+    mqttc1:on(function(mqtt_client, event, data, payload)
+        -- 用户自定义代码
+        log.info("mqtt", "event", event, mqtt_client, data, payload)
+        if event == "conack" then
+            -- 联上了
+            sys.publish("mqtt_conack")
+            mqtt_client:subscribe(sub_topic_client)--单主题订阅
+            -- mqtt_client:subscribe({[topic1]=1,[topic2]=1,[topic3]=1})--多主题订阅
+        elseif event == "recv" then
+            -- 客户端1 接收数据
+            log.info("mqtt", "downlink", "topic", data, "payload", payload)
+            sys.publish("mqtt_payload", data, payload)
+        elseif event == "sent" then
+            -- log.info("mqtt", "sent", "pkgid", data)
+        -- elseif event == "disconnect" then
+            -- 非自动重连时,按需重启mqttc
+            -- mqtt_client:connect()
+        end~
+    end)
+
+    --------------------第二个mqtt客户端--------------------
+    mqttc2 = mqtt.create(nil, mqtt_host, mqtt_port, mqtt_isssl, ca_file)    -- 创建的第二个mqtt对象
+    mqttc2:auth(client2_id,user_name,password) -- client_id必填,其余选填
+    -- mqttc2:keepalive(240) -- 默认值240s
+    mqttc2:autoreconn(true, 3000) -- 自动重连机制
+    mqttc2:on(function(mqtt_client, event, data, payload)
+        -- 用户自定义代码
+        log.info("mqtt", "event", event, mqtt_client, data, payload)
+        if event == "conack" then
+            -- 联上了
+            sys.publish("mqtt_conack")
+            
+            mqtt_client:subscribe(sub_topic_client)     -- 主题订阅 -> 订阅主题可以额外自定义
+            -- mqtt_client:subscribe({[topic1]=1,[topic2]=1,[topic3]=1})--多主题订阅
+        elseif event == "recv" then
+            -- 客户端2 接收数据
+            log.info("mqtt", "downlink", "topic", data, "payload", payload)
+            sys.publish("mqtt_payload", data, payload)
+        elseif event == "sent" then
+            -- log.info("mqtt", "sent", "pkgid", data)
+        -- elseif event == "disconnect" then
+            -- 非自动重连时,按需重启mqttc
+            -- mqtt_client:connect()
+        end
+    end)
+
+    -- 客户端1 发送数据
+    mqttc1:publish(topic, data, qos)    -- 发布topic主题可以自定义，可以不相同
+    -- 客户端2 发送数据
+    mqttc2:publish(topic, data, qos)    -- 发布topic主题可以自定义，可以不相同
+
+~~~
+
+## 常见问题
+
+- **Q: 模组支持MQTT最新的版本是多少？**
+
+  **A: MQTT_V3.1.1版本**
+
+</br>
+
+- **Q: 模组最多支持几路链接？**
+
+  **A: mqtt/tcp/udp的链接公用8路通道**
 
 ----
 

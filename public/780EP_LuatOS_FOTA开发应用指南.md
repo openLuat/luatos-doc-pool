@@ -12,11 +12,23 @@ LuatOS-Air开发模式下，固件分为两部分：core和script
 
 支持合宙iot平台升级和自建第三方服务器升级
 
+> - 关联文档和使用工具：
+>
+>   - [LuatOS固件获取](https://gitee.com/openLuat/LuatOS/releases) （页面Ctrl+F搜索780EP即可找到对应的固件）
+>
+>   - [示例demo获取](https://gitee.com/openLuat/LuatOS/blob/master/demo/fota2)
+>
+>   - [生成差分包工具网址](https://doc.openluat.com/chafen)
+>
+>   - [合宙iot平台](https://iot.openluat.com/)
+>
+
+
 ## 二. 材料准备
 
 1. 780EP开发板一套，包括天线SIM卡，USB线
-2. PC电脑，以及登录官方IOT后台 [https://iot.openluat.com/](https://gitee.com/link?target=https%3A%2F%2Fiot.openluat.com%2F)
-3. 固件和DEMO下载地址 [LuatOS软件包](https://gitee.com/openLuat/LuatOS/releases)
+2. PC电脑，以及登录官方IOT后台 [https://iot.openluat.com/](https://iot.openluat.com/)
+3. 固件和DEMO下载地址 [LuatOS固件](https://gitee.com/openLuat/LuatOS/releases)、[示例demo](https://gitee.com/openLuat/LuatOS/blob/master/demo/fota2)
 
  <img src="../image/780EP/微信图片_20240722101832.jpg" width="50%">
 
@@ -24,7 +36,7 @@ LuatOS-Air开发模式下，固件分为两部分：core和script
 
 ### 1. iot平台创建产品
 
-1. 登录[合宙iot平台](https://gitee.com/link?target=http%3A%2F%2Fiot.openluat.com%2F)
+1. 登录[合宙iot平台](https://iot.openluat.com/)
 
 2. 如果没有账户，注册一个账户
 

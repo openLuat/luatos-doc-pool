@@ -6,9 +6,15 @@
 >
 >![20210219163908526_阿里云2](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/20210219163908526_阿里云2.png)
 >
->- 关联文档和使用工具：
->  - [LuatOS库](https://gitee.com/openLuat/LuatOS)
->  - [阿里云平台](https://www.aliyun.com/)
+> - 关联文档和使用工具：
+>
+>   - [LuatOS固件获取](https://gitee.com/openLuat/LuatOS/releases) （页面Ctrl+F搜索780EP即可找到对应的固件）
+>
+>   - [示例demo获取](https://gitee.com/openLuat/LuatOS/tree/master/demo/aliyun)
+>
+>   - [LuatOS库](https://gitee.com/openLuat/LuatOS)
+>
+>   - [阿里云平台](https://www.aliyun.com/)
 
 # 准备工作
 
