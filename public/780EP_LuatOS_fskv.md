@@ -186,7 +186,8 @@ fskv.status()
 
 ![效果展示](../image/LuatOS开发资料/示例/780EP_fskv/效果展示.png)
 
-
+由上图可以看出，fskv支持存放布尔，数值，小数，字符串，等均可。还可以存放table类型的值。
+但不能存放nil, function, userdata, task类型的值。
 
 ## 常见问题：
 
