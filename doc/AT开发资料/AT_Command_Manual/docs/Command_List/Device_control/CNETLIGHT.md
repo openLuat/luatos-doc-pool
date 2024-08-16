@@ -8,9 +8,9 @@ Air780EP系列模块用如下管脚信号来指示网络的状态。如下表描
 
 网络指示管脚定义
 
-![](../../../../../image/AT开发资料/AT Command Manual/718P/Device control command/cnetlight1.jpg) 
+![](image/cnetlight1.jpg) 
 
-![](../../../../../image/AT开发资料/AT Command Manual/718P/Device control command/cnetlight2.jpg) 
+![](image/cnetlight2.jpg) 
 
  
 

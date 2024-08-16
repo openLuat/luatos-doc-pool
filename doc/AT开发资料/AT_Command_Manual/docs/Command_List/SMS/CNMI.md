@@ -24,7 +24,7 @@
 |        |                          | 1    | 若SMS-DELIVER存储在ME/TA，存储位置靠非请求结果码+CMTI: <mem>,<index> 来提示给TE。 |
 |        |                          | 2    | SMS-DELIVER消息(类别2的消息和位于消息等待指示组中的消息(存储消息))直接发送到TE。使用如下指令的非请求结果码： <br>+CMT：[<alpha>],<length><CR><LF><pdu> (启用PDU模式)或者+CMT：<oa>,[<alpha>],<scts> ,<tooa>[*,<fo>,<pid>,<dcs>,<sca>,<tosca>,<length>*]<CR><LF><data>(启用TEXT模式。斜体部分是否显示由+CSDH设置命令决定) <br>说明：若AT指令接口作为唯一的显示设备，ME必须支持类别0消息和位于消息等待指示组中的消息的存储(丢弃消息)。 |
 |        |                          | 3    | 通过使用<mt>=2定义的非请求结果码，类别3的SMS-DELIVER消息直可接发送到TE。其他数据编码方案下的消息显示结果均遵循<mt>=1的定义。 |
-|        |                          |      | SMS-DELIVER 结果码（+CMT, +CMTI）和确认(+CNMA)的关系总结：<br>![](../../../../../image/AT开发资料/AT Command Manual/718P/SMS command/sms5.png) |
+|        |                          |      | SMS-DELIVER 结果码（+CMT, +CMTI）和确认(+CNMA)的关系总结：<br>![](image/sms5.png) |
 | <bm>   | 小区广播短消息的上报方式 | 0    | 无 CBM 指示发送到 TE                                         |
 |        |                          | 2    | 收到的CBM使用如下格式直接发送到TE：<br>+CBM：<length><CR><LF><pdu>(启用PDU 模式)或者<br>+CBM：<sn>,<mid>,<dcs>,<page>,<pages><CR><LF><data>(启用TEXT模式) |
 | <ds>   | 短信状态报告上报方式     | 0    | 无SMS-STATUS-REPORTS发送到TE。                               |

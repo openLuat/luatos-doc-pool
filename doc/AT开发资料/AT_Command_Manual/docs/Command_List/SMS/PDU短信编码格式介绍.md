@@ -1,12 +1,12 @@
 ## PDU短信编码格式介绍
 
- ![](../../../../../image/AT开发资料/AT Command Manual/718P/SMS command/sms1.png) 
+ ![](image/sms1.png) 
 
  
 
  图表 1 ：MO 短信 PDU格式
 
- ![](../../../../../image/AT开发资料/AT Command Manual/718P/SMS command/sms2.png)
+ ![](image/sms2.png)
 
  
 
