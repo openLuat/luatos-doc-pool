@@ -175,27 +175,27 @@
 本文以**demo_lua\LuatOS\demo\mqtt**这个demo为例作为演示，以MQTTX工具来测试MQTT运行状况
 
 1. 在MQTTX软件上建立连接
-   ![image-20240730164124181](../image/LuatOS开发资料/示例/780EP_MQTT/image-20240730164124181.png)
+   ![image-20240730164124181](image/image-20240730164124181.png)
 
 2. 在MQTTX软件上添加订阅
 
    **注意**：订阅主题格式要求默认为 /luatos/pub/ 加模块的IMEI号，例如 /luatos/pub/868488076506128
 
-   ![image-20240730164501329](../image/LuatOS开发资料/示例/780EP_MQTT/image-20240730164501329.png)
+   ![image-20240730164501329](image/image-20240730164501329.png)
 
 3. 设置MQTTX软件上发布消息的主题
 
 ​	**注意**：格式要求默认为 /luatos/sub/ 加模块的IMEI号，例如 /luatos/sub/868488076506128
 
-![image-20240730164836593](../image/LuatOS开发资料/示例/780EP_MQTT/image-20240730164836593.png)
+![image-20240730164836593](image/image-20240730164836593.png)
 
 4. 烧录脚本，上电开机后模块会自动向服务器发送消息，这是代码默认设置的，若不需要可以删掉
 
-   ![image-20240730165423761](../image/LuatOS开发资料/示例/780EP_MQTT/image-20240730165423761.png)
+   ![image-20240730165423761](image/image-20240730165423761.png)
 
 5. 模块向服务器发送消息，通过Luatools软件可以看到
 
-   ![image-20240730165613869](../image/LuatOS开发资料/示例/780EP_MQTT/image-20240730165613869.png)
+   ![image-20240730165613869](image/image-20240730165613869.png)
 
 ## MQTT单链接示例
 
@@ -709,5 +709,5 @@ end)
 > 本文介绍的MQTT应用流程，同样也适用于这些型号。
 
 
-![选型手册简洁版01](../image/1.jpg)
-![选型手册简洁版02](../image/2.jpg)
+![选型手册简洁版01](image/1.jpg)
+![选型手册简洁版02](image/2.jpg)

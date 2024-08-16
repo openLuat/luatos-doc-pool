@@ -33,16 +33,16 @@ luatools升级到2.2.29，可以自动读出并保存成文件，但是USB要能
 通过flashtools读取，USB或者UART1留出即可，以USB为例
 
 选择好prj file和binpkg文件
-![](../../image/开发工具及使用说明/FlashTools/1-1-01.PNG)
+![](image/1-1-01.PNG)
 在readback界面里选择hardfault dump
-![](../../image/开发工具及使用说明/FlashTools/1-1-02.PNG)
+![](image/1-1-02.PNG)
 操作模块进入烧录模式，点击start即可，文件保存在binpkg所在目录
 
 ## 数据如何解析
 项目编译生成目录里找到comdb.txt，如果对方提供了soc文件，解压出comdb.txt
 EPAT里确保db文件是上述的comdb.txt，在主选项栏‘Log‘选项中可看到’
 Exception Info‘的子选项，
-![](../../image/开发工具及使用说明/FlashTools/1-1-03.PNG)
+![](image/1-1-03.PNG)
 选中此选项后会弹出 dump 文件处理窗，选择对应的 dump 文件后，会在 Excep Info 窗里显示解析后的 dump 数据，如图所示。
-![](../../image/开发工具及使用说明/FlashTools/1-1-04.PNG)
-![](../../image/开发工具及使用说明/FlashTools/1-1-05.PNG)
+![](image/1-1-04.PNG)
+![](image/1-1-05.PNG)

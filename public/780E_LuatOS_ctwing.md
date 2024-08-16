@@ -11,11 +11,11 @@
 
 1、780E开发板一套
 
-![模块型号](../image/LuatOS开发资料/示例/ctwing/开发板.jpg)
+![模块型号](image/开发板.jpg)
 
 可用的SIM卡一张
 
-![模块型号](../image/LuatOS开发资料/示例/ctwing/SIM卡.jpg)
+![模块型号](image/SIM卡.jpg)
 
 
 
@@ -274,37 +274,37 @@ mqtt客户端关闭(关闭后资源释放无法再使用)
 
 ### 1、进入[ctwing网站](https://www.ctwing.cn/)并创建一个产品
 
-![模块型号](../image/LuatOS开发资料/示例/ctwing/0-1进入平台.png)
+![模块型号](image/0-1进入平台.png)
 
-![模块型号](../image/LuatOS开发资料/示例/ctwing/0-2进入平台.png)
+![模块型号](image/0-2进入平台.png)
 
-![模块型号](../image/LuatOS开发资料/示例/ctwing/创建产品1-1.png)
+![模块型号](image/创建产品1-1.png)
 
-![模块型号](../image/LuatOS开发资料/示例/ctwing/创建产品2-1.png)
+![模块型号](image/创建产品2-1.png)
 
 ### 2、在产品中添加设备
 
-![模块型号](../image/LuatOS开发资料/示例/ctwing/添加设备1.png)
+![模块型号](image/添加设备1.png)
 
-![模块型号](../image/LuatOS开发资料/示例/ctwing/添加设备2.png)
+![模块型号](image/添加设备2.png)
 
 ### 3、在程序中添加设备认证信息
 
-![模块型号](../image/LuatOS开发资料/示例/ctwing/查看设备认证信息.png)
+![模块型号](image/查看设备认证信息.png)
 
-![模块型号](../image/LuatOS开发资料/示例/ctwing/添加设备认证信息2.png)
+![模块型号](image/添加设备认证信息2.png)
 
 ### 4、固件和软件下载
 
 使用[Luatools下载调试工具](https://gitee.com/openLuat/luatos-doc-pool/blob/master/doc/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E5%8F%8A%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/Luatools%E4%B8%8B%E8%BD%BD%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7.md)工具
 
-![模块型号](../image/LuatOS开发资料/示例/ctwing/Luatools下载.png)
+![模块型号](image/Luatools下载.png)
 
 ### 5、效果展示
 
-![模块型号](../image/LuatOS开发资料/示例/ctwing/效果展示1.png)
+![模块型号](image/效果展示1.png)
 
-![模块型号](../image/LuatOS开发资料/示例/ctwing/效果展示2.png)
+![模块型号](image/效果展示2.png)
 
 
 

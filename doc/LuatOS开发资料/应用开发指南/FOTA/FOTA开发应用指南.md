@@ -15,9 +15,9 @@ LuatOS-Air开发模式下，固件分为两部分：core和script
 ## 二. 材料准备
 1. [[EVB_Air780E]](https://item.taobao.com/item.htm?spm=a1z10.1-c-s.w5003-23813349255.25.43af346aVmYQNY&id=614125604268&scene=taobao_shop "EVB_Air724UG_A13")开发板一套，包括天线SIM卡，USB线。
 2. PC电脑，以及登录官方IOT后台 https://iot.openluat.com/
-3. 固件和DEMO下载地址 [LuatOS软件包](https://gitee.com/openLuat/LuatOS/releases "LuatOS软件包")
+3. 固件和DEMO下载地址 [LuatOS软件包](https://gitee.com/openLuat/LuatOS/releases)
 
-![image.png](../../../../image/LuatOS开发资料/示例/FOTA/20221026153211012_image.png)
+![image.png](image/20221026153211012_image.png)
 
 
 
@@ -30,10 +30,10 @@ LuatOS-Air开发模式下，固件分为两部分：core和script
 2. 如果没有账户，注册一个账户
 
 3. 我的项目->新建产品
-![undefined](../../../../image/LuatOS开发资料/示例/FOTA/20221205145338072_创建项目.png "undefined")
+![undefined](image/20221205145338072_创建项目.png)
 
 4. 复制PRODUCT_KEY
-![image.png](../../../../image/LuatOS开发资料/示例/FOTA/20230208103223720_image.png)
+![image.png](image/20230208103223720_image.png)
 
 ###    2. 模块端脚本修改，生成升级包
 
@@ -58,7 +58,7 @@ LuatOS-Air开发模式下，固件分为两部分：core和script
 2、main.lua 内填写版本号要符合 x.y.z 形式, 其中 x/y/z 均为数值, 不限于个位数
 3、若fota使用合宙iot平台, 版本号中的 y 会被忽略, 推荐写0, 务必留意**
 
-![image.png](../../../../image/LuatOS开发资料/示例/FOTA/20230208103649907_image.png)
+![image.png](image/20230208103649907_image.png)
 
 
 ### 4. 使用Luatools生成bin文件差分包
@@ -66,45 +66,45 @@ LuatOS-Air开发模式下，固件分为两部分：core和script
 **`注意：只有Luatools版本2.1.89以上支持生成bin文件差分包，低版本仅支持生成sota文件`**
 * **只升级脚本，差分包制作流程如下：**
 固件和DEMO下载地址 [LuatOS软件包](https://gitee.com/openLuat/LuatOS/releases "LuatOS软件包")，这里下载的是LuatOS-SoC@EC618 V1103项目下面的core_V1103.zip软件包。下载对应软件包后按如下步骤生成对应的差分包。
-![image.png](../../../../image/LuatOS开发资料/示例/FOTA/20230208111956211_image.png)
+![image.png](image/20230208111956211_image.png)
 
   在Luatools目录下的SOC量产及远程升级文件下，找到EC618文件夹，打开后缀名为.bin的文件fotademo_1103.1.2_LuatOS-SoC_EC618.bin，这个就是文件差分包。
-![image.png](../../../../image/LuatOS开发资料/示例/FOTA/20230208104229210_image.png)
+![image.png](image/20230208104229210_image.png)
 
 * **需要升级底层CORE，差分包制作流程如下：**
 1）生成新版本的量产固件，如下所示：
-![image.png](../../../../image/LuatOS开发资料/示例/FOTA/20230920145138226_image.png)
+![image.png](image/20230920145138226_image.png)
 2）根据新旧固件生成对应差分文件，如下所示：
 a、点击选项及工具选项，选择升级包制作工具
-![undefined](../../../../image/LuatOS开发资料/示例/FOTA/20230920145736346_4.png "undefined")
+![undefined](image/20230920145736346_4.png)
 b、选择对应文件，点击开始执行生成对应差分文件
-![undefined](../../../../image/LuatOS开发资料/示例/FOTA/20230920145320651_2.png "undefined")
+![undefined](image/20230920145320651_2.png)
 3）生成的对应差分文件见下图所示：
-![undefined](../../../../image/LuatOS开发资料/示例/FOTA/20230920145409347_3.png "undefined")
+![undefined](image/20230920145409347_3.png)
 
   ###  5.在合宙iot平台配置升级包
 
    进入iot平台创建的产品，打开我的项目->固件列表->创建固件，如下图所示
-![undefined](../../../../image/LuatOS开发资料/示例/FOTA/20221205151149084_点击上传升级固件.png "undefined")
+![undefined](image/20221205151149084_点击上传升级固件.png)
 
-![image.png](../../../../image/LuatOS开发资料/示例/FOTA/20230208104854227_image.png)
+![image.png](image/20230208104854227_image.png)
 
 
 点击确定之后，升级配置完成，如下图所示
-![image.png](../../../../image/LuatOS开发资料/示例/FOTA/20230208105526866_image.png)
+![image.png](image/20230208105526866_image.png)
 
 添加需要升级的模块imei，如下图所示
 
-![image.png](../../../../image/LuatOS开发资料/示例/FOTA/20230208113037224_image.png)
+![image.png](image/20230208113037224_image.png)
 
-![image.png](../../../../image/LuatOS开发资料/示例/FOTA/20230208110233022_image.png)
+![image.png](image/20230208110233022_image.png)
 
 ### 6. 模块开机，完成升级
 
 烧录旧版本的模块开机后，连接升级服务器，下载差分升级包，自动重启，重启过程中完成固件升级，整个过程的关键日志如下图所示
-![image.png](../../../../image/LuatOS开发资料/示例/FOTA/20230208110930874_image.png)
+![image.png](image/20230208110930874_image.png)
 
-![image.png](../../../../image/LuatOS开发资料/示例/FOTA/20230208111144813_image.png)
+![image.png](image/20230208111144813_image.png)
 
 ### 7.云平台查看升级日志
 
@@ -144,37 +144,37 @@ b、选择对应文件，点击开始执行生成对应差分文件
 手动生成差分包的过程如下：
 
 用合宙提供的luatools中的soc差分工具生成差分包
-![undefined](../../../../image/LuatOS开发资料/示例/FOTA/20221202162203775_luatoolssoc差分工具.png "undefined")
-![undefined](../../../../image/LuatOS开发资料/示例/FOTA/20221202162210405_luatoolssoc差分工具2.png "undefined")
+![undefined](image/20221202162203775_luatoolssoc差分工具.png)
+![undefined](image/20221202162210405_luatoolssoc差分工具2.png)
 
 操作步骤：
 
 #### 1、准备：模块中使用的旧版本core升级文件
 
 此文件指的是模块中旧版本core中的.soc文件（从合宙官方渠道下载），例如以LuatOS-SoC_V1103_EC618.soc为例
-![image.png](../../../../image/LuatOS开发资料/示例/FOTA/20230208152827091_image.png)
+![image.png](image/20230208152827091_image.png)
 
 
 ### 2. 使用Luatools分别生成新旧版本的升级包
 
 如下图所示
 
-![image.png](../../../../image/LuatOS开发资料/示例/FOTA/20230208153434423_image.png)
+![image.png](image/20230208153434423_image.png)
 
  在Luatools目录下SOC量产及远程升级文件下的EC618下，生了一个后缀名为.soc的文件fotademo_1.0.2_LuatOS-SoC_V1103_EC618.soc，这个就是新版本的升级包
-![image.png](../../../../image/LuatOS开发资料/示例/FOTA/20230208153655988_image.png)
+![image.png](image/20230208153655988_image.png)
 
 
 #### 3、生成差分包
 
 使用luatools生成升级文件，无论core是否需要升级，升级文件必须包含core，因为差分会用到
 使用luatools内的soc差分工具生成即可
-![image.png](../../../../image/LuatOS开发资料/示例/FOTA/20230208154154884_image.png)
+![image.png](image/20230208154154884_image.png)
 生成对应差分包如下图所示：
 
 >**注意：差分包不能超过480k**
 
-![image.png](../../../../image/LuatOS开发资料/示例/FOTA/20230208154340240_image.png)
+![image.png](image/20230208154340240_image.png)
 
 #### 4、差分包上传到自建服务器
 
