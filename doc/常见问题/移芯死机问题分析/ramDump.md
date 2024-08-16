@@ -15,17 +15,17 @@
 
 进入trace32后，在自动弹出下发图片的窗口里能找到哪个函数在哪个task里用了多少ram没有归还，<font color=red>**如果遇到哪个API大量申请了ram没有归还，基本上就是问题点了**</font>
 
-![image-20240718183925718](../../../image/常见问题/移芯死机问题分析/ramDump/image-20240718183925718.png)
+![image-20240718183925718](image/image-20240718183925718.png)
 
 为了查找方便，在trace_node选择某个数据，框里面右键 -> 点击format
 
-![image-20240718184432427](../../../image/常见问题/移芯死机问题分析/ramDump/image-20240718184432427.png)
+![image-20240718184432427](image/image-20240718184432427.png)
 
-![image-20240718184503053](../../../image/常见问题/移芯死机问题分析/ramDump/image-20240718184503053.png)
+![image-20240718184503053](image/image-20240718184503053.png)
 
 上图里看到0x00868909 这个API在消耗大量的ram，从map文件，或者从trace_32工具菜单 view -> symbols -> browes 里搜索，Ctrl+F，或者Cov - > list functions，就能找到函数名称。
 
-![image-20240718184734564](../../../image/常见问题/移芯死机问题分析/ramDump/image-20240718184734564.png)
+![image-20240718184734564](image/image-20240718184734564.png)
 
 这样查找问题解答方向上 就相对明确了。
 
@@ -39,7 +39,7 @@
 
 打开trace32 -> freertos -> stack Coverage -> List Stacks
 
-![image-20240718191339012](../../../image/常见问题/移芯死机问题分析/ramDump/image-20240718191339012.png)
+![image-20240718191339012](image/image-20240718191339012.png)
 
 可以看到ram使用情况，注意这里认为栈空间只有1KB，但是实际上可能是远超的，不过没关系，如果max里是0%，说明还有很多栈空间，不用去管
 

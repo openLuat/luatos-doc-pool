@@ -41,23 +41,23 @@
 
    打开OneNET官网，进入控制台，进入[Onenet Studio](https://open.iot.10086.cn/studio/summary)，选择设备接入与管理，点击产品管理。
 
-   ![](../image/AT开发资料/应用开发指南/OneNET(中国移动物联网开放平台)接入指南/图片1.png) 
+   ![](image/onenet//图片1.png) 
 
    点击添加产品
 
-   ![](../image/AT开发资料/应用开发指南/OneNET(中国移动物联网开放平台)接入指南/图片2.png) 
+   ![](image/onenet//图片2.png) 
 
    根据自己产品填写，注意：节点类型选择直连设备，接入协议选择MQTT，点击确定
 
-   ![](../image/AT开发资料/应用开发指南/OneNET(中国移动物联网开放平台)接入指南/图片3.png) 
+   ![](image/onenet//图片3.png) 
 
    点击详情
 
-   ![](../image/AT开发资料/应用开发指南/OneNET(中国移动物联网开放平台)接入指南/图片4.png) 
+   ![](image/onenet//图片4.png) 
 
    将右上角自动注册打开
 
-   ![](../image/AT开发资料/应用开发指南/OneNET(中国移动物联网开放平台)接入指南/图片5.png) 
+   ![](image/onenet//图片5.png) 
 
    记住产品ID和产品key
 
@@ -66,13 +66,13 @@
 
    填入设备名，选择产品，这里我使用的是模块的imei来做设备名称
 
-   ![](../image/AT开发资料/应用开发指南/OneNET(中国移动物联网开放平台)接入指南/QQ20240722-151053.png)
+   ![](image/onenet//QQ20240722-151053.png)
 
 3. 查看onenet接入协议
 
    [MQTT设备连接_开发者文档_OneNET (10086.cn)](https://open.iot.10086.cn/doc/v5/fuse/detail/919))
    
-   ![](../image/AT开发资料/应用开发指南/OneNET(中国移动物联网开放平台)接入指南/20230808174902316_image.png)
+   ![](image/onenet//20230808174902316_image.png)
 
    可以看到，登入onenet时，mqtt的clientID、username和password都有指定
 
@@ -80,7 +80,7 @@
 
    username为创建的产品ID
 
-![](../image/AT开发资料/应用开发指南/OneNET(中国移动物联网开放平台)接入指南/QQ20240722-152651.png)
+![](image/onenet//QQ20240722-152651.png)
 
 
    password是需要经过加密计算得来的鉴权token
@@ -142,7 +142,7 @@ mqttPassword: token
 
 下图为工具计算出的token
 
-![](../image/AT开发资料/应用开发指南/OneNET(中国移动物联网开放平台)接入指南/QQ20240722-154010.png)
+![](image/onenet//QQ20240722-154010.png)
 
 ```lua
 AT+MCONFIG="868655072230313","Wf5IXIGcZn","version=2018-10-31&res=products%2FWf5IXIGcZn%2Fdevices%2F868655072230313&et=1721630715&method=md5&sign=DPqCcsPQAQok9Gt7mNPTbA%3D%3D"
@@ -166,7 +166,7 @@ CONNACK OK
 
 可以从平台上看到设备已经在线了
 
-![](../image/AT开发资料/应用开发指南/OneNET(中国移动物联网开放平台)接入指南/QQ20240722-160748.png)
+![](image/onenet//QQ20240722-160748.png)
 
 ## 3.发布与订阅消息
 
@@ -174,7 +174,7 @@ onenet studio有固定的通信TOPIC，可以到官网查看，这里演示下�
 
 [通信主题_开发者文档_OneNET (10086.cn)](https://open.iot.10086.cn/doc/iot_platform/book/device-connect&manager/MQTT/topic.html)
 
-![](../image/AT开发资料/应用开发指南/OneNET(中国移动物联网开放平台)接入指南/20210812151650017_image.png)
+![](image/onenet//20210812151650017_image.png)
 
 ### 订阅
 ```lua
@@ -190,7 +190,7 @@ SUBACK
 
 例如：在文章开始创建的产品具有如下图所示的属性
 
-![](../image/AT开发资料/应用开发指南/OneNET(中国移动物联网开放平台)接入指南/QQ20240722-162245.png)
+![](image/onenet//QQ20240722-162245.png)
 
 ```lua
 向上报属性的主题发布一条payload格式错误的消息
@@ -214,7 +214,7 @@ OK
 
 可以看到平台已经有数据更新
 
-![](../image/AT开发资料/应用开发指南/OneNET(中国移动物联网开放平台)接入指南/QQ20240722-163446.png)
+![](image/onenet//QQ20240722-163446.png)
 
 ----
 
@@ -223,5 +223,5 @@ OK
 > 本文介绍的接入OneNET 移动物联网开放平台应用流程，同样也适用于这些型号。
 
 
-![选型手册简洁版01](../image/1.jpg)
-![选型手册简洁版02](../image/2.jpg)
+![选型手册简洁版01](image/1.jpg)
+![选型手册简洁版02](image/2.jpg)

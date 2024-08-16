@@ -65,6 +65,6 @@ camera_id = gc032aInit(cspiId,i2cId,24000000,SCAN_MODE,SCAN_MODE)
 ----
 
 
-![选型手册简洁版01](../image/1.jpg)
-![选型手册简洁版02](../image/2.jpg)
+![选型手册简洁版01](image/1.jpg)
+![选型手册简洁版02](image/2.jpg)
 

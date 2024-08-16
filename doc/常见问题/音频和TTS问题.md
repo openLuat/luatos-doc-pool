@@ -42,7 +42,7 @@
 
 ## 7.Air724模块支持通话过程中给对端播放音频文件吗？
 >支持。
->![](../../image/常见问题/音频和TTS问题/20210615140007798_image.png)
+>![](image/20210615140007798_image.png)
 
 ## 8. Air724模块AT版本在进行TTS播报时，手动中止后，继续发送下一条TTS，出现报错。
 >TTS不管自动播放还是手动中止都会有个URC上报（+CTTS:0）,只有在收到该URC上报后再发送下一条TTS才不会报错。
@@ -51,9 +51,9 @@
 ## 10.Air724模块AT版本支持通话过程中给对端播放音频文件吗？
 
 >支持。
->![](../../image/常见问题/音频和TTS问题/20220721173733433_image.png)
+>![](image/20220721173733433_image.png)
 >![image.png](https://cdn.openluat-luatcommunity.openluat.com/images/20220721173812166_image.png)
->![](../../image/常见问题/音频和TTS问题/20220721173015289_image.png)
+>![](image/20220721173015289_image.png)
 
 ## 11.Air724模块AT版本能支持通话中录音吗？
 >支持，在语音通话进行时本命令仅能实现 voice call 录音。参考AT+CAUDREC指令。

@@ -30,7 +30,7 @@ Serverless 部署最大的优势在于连接场景只按照实际的使用量进
 
 3. 在**选择版本**中选中 **Serverless**。
 
-   ![EMXQIMAGE](../../../../image/LuatOS开发资料/示例/MQTT/MQTT-EMXQ/1.webp)
+   ![EMXQIMAGE](image/1.webp)
 
 4. 在配置步骤，您可以设置 Serverless 部署的本月最大[消费限额](https://docs.emqx.com/zh/cloud/latest/deployments/spend_limit.html)，默认值为 0，即为只使用免费额度。消费限额在部署创建之后也可以进行修改。
 
@@ -46,7 +46,7 @@ Serverless 部署最大的优势在于连接场景只按照实际的使用量进
 
 部署概览页面可获取到部署实时状态和连接信息：
 
-![EMXQIMAGE](../../../../image/LuatOS开发资料/示例/MQTT/MQTT-EMXQ/2.webp)
+![EMXQIMAGE](image/2.webp)
 
 ---
 
@@ -78,8 +78,8 @@ Serverless 部署最大的优势在于连接场景只按照实际的使用量进
 
 1. 获取连接信息。在概览页找到连接地址以及连接端口。Serverless 默认支持 8883(mqtts), 8084(wss) 端口。
 2. 添加客户端认证信息。点击左侧菜单中的**访问控制**->**客户端认证**，点击**添加**按钮，输入客户端或设备用户名和密码并点击**确认**。
-3. 设置 [MQTTX](https://mqttx.app/zh/) 连接信息并连接到部署。![EMXQIMAGE](../../../../image/LuatOS开发资料/示例/MQTT/MQTT-EMXQ/3.webp)
-4. 连接成功之后即可以发布和订阅消息。![EMXQIMAGE](../../../../image/LuatOS开发资料/示例/MQTT/MQTT-EMXQ/4.webp)
+3. 设置 [MQTTX](https://mqttx.app/zh/) 连接信息并连接到部署。![EMXQIMAGE](image/3.webp)
+4. 连接成功之后即可以发布和订阅消息。![EMXQIMAGE](image/4.webp)
 
 
 
@@ -125,13 +125,13 @@ ___
 
 1.需要提前按照文档中[创建 Serverless 部署](#2.查看部署信息 )章节进行查询，获取连接地址。
 
-![EMXQIMAGE](../../../../image/LuatOS开发资料/示例/MQTT/MQTT-EMXQ/5.png)
+![EMXQIMAGE](image/5.png)
 
 ---
 
 2.然后找到所使用的脚本版本进入demo目录找到**mqtt_emqx**文件夹打开**main.lua**，按照注释修改部分参数进行链接。
 
-![EMXQIMAGE](../../../../image/LuatOS开发资料/示例/MQTT/MQTT-EMXQ/6.png)
+![EMXQIMAGE](image/6.png)
 
 ---
 

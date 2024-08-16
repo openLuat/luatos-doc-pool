@@ -10,11 +10,11 @@
 
 1、780EP开发板一套
 
-![780EP开发板](../image/LuatOS开发资料/示例/780EP_rc522/开发板实物图.jpg)
+![780EP开发板](image/开发板实物图.jpg)
 
 2、rc522实物一个
 
-![780EP开发板](../image/LuatOS开发资料/示例/780EP_rc522/rc522实物图.jpg)
+![780EP开发板](image/rc522实物图.jpg)
 
 ## 2、程序详解
 
@@ -136,11 +136,11 @@ end)
 
 ### 程序下载
 
-![780EP开发板](../image/LuatOS开发资料/示例/780EP_rc522/luatools下载脚本.png)
+![780EP开发板](image/luatools下载脚本.png)
 
 ### 运行效果
 
-![780EP开发板](../image/LuatOS开发资料/示例/780EP_rc522/效果展示.png)
+![780EP开发板](image/效果展示.png)
 
 ## 代码分析
 

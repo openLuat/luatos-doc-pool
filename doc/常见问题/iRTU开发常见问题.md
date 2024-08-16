@@ -1,6 +1,6 @@
 ## 1. iRTU的开源代码在哪找？
 >8910平台（Air724模块）：https://gitee.com/hotdll/iRTU
->![](../../image/常见问题/iRTU开发常见问题/20220725164151095_image.png)
+>![](image/20220725164151095_image.png)
 >
 >EC618平台（Air780E模块）：https://gitee.com/openLuat/luatos-irtu
 
@@ -16,17 +16,17 @@
 
 ## 4. AIR724模块，我用USB 烧写了DTU固件，然后开机 那个网络灯就不亮了，没烧写之前是会亮的。
 >单独模块，我自己供电的，灯用的58脚，看看58脚对应的哪个GPIO，去DTU平台上配置下GPIO就好。
->![](../../image/常见问题/iRTU开发常见问题/20220725101733181_image.png)
+>![](image/20220725101733181_image.png)
 >这里58对应的是GPIO_1,如下配置为GPIO1即可：
->![](../../image/常见问题/iRTU开发常见问题/20220725101811690_image.png)
+>![](image/20220725101811690_image.png)
 
 ## 5. 怎么确认模块联网状态
 >以通过AT口发rrpc,netstatus和rrpc,getnetmode指令查询模块状态：
->![](../../image/常见问题/iRTU开发常见问题/20220725101902377_image.png)<br>
->![](../../image/常见问题/iRTU开发常见问题/20220725101951653_image.png)<br>
+>![](image/20220725101902377_image.png)<br>
+>![](image/20220725101951653_image.png)<br>
 >对应指令说明如下：
->![](../../image/常见问题/iRTU开发常见问题/20220725103542353_image.png)
->![](../../image/常见问题/iRTU开发常见问题/20220725103631673_image.png)
+>![](image/20220725103542353_image.png)
+>![](image/20220725103631673_image.png)
 >[DTU固件参考手册V3.6.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20211217154117439_DTU固件参考手册V3.6.pdf)
 >[串口助手LLcom](https://llcom.papapoi.com/index.html)
 
@@ -38,7 +38,7 @@
 >5、勾选4G模块USB打印
 >[Cat.1模块通用工具](https://doc.openluat.com/wiki/21?wiki_page_id=2070 "Cat.1模块通用工具")
 >有如下打印，说明正常。
->![](../../image/常见问题/iRTU开发常见问题/20211217172553060_image.png)
+>![](image/20211217172553060_image.png)
 >也可以通过上面的AT口发指令的方式判断。
 
 ## 7. 无法正常连接服务器

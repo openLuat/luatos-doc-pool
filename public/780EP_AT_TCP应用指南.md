@@ -120,7 +120,7 @@ CONNECT OK
 ```
 
 
-![](../image/AT开发资料/应用开发指南/TCP应用指南/QQ_1721718887736.png)
+![](image/QQ_1721718887736.png)
 
 ## 1.7发送数据
 
@@ -134,37 +134,37 @@ AT+CIPSEND可以发送定长或不定长数据，收到>以后就可以发送数
 
 AT+CIPSEND=10	输入发送数据
 
-![](../image/AT开发资料/应用开发指南/TCP应用指南/QQ_1721722096330.png)
+![](image/QQ_1721722096330.png)
 可以看到调试网页已经接收到了数据
 
-![](../image/AT开发资料/应用开发指南/TCP应用指南/QQ20240723-161244.png)
+![](image/QQ20240723-161244.png)
 
 **不定长数据**
 直接发送AT+CIPSEND，会返回一个>符号，之后可以输入数据，数据输入完毕后，发送十六进制的1A，结束发送，模块会将输入的数据发送到服务器
 
 发送AT+CIPSEND后，可以看到返回了一个>，后续输入的内容没有返回值
 
-![](../image/AT开发资料/应用开发指南/TCP应用指南/QQ20240723-162057.png)
+![](image/QQ20240723-162057.png)
 
 此时再发送十六进制的1A来结束发送
 ![image.png](https://cdn.openluat-luatcommunity.openluat.com/images/20210508134027178_image.png)
 
 返回了SEND OK
 
-![](../image/AT开发资料/应用开发指南/TCP应用指南/QQ20240723-161529.png)
+![](image/QQ20240723-161529.png)
 
 再看调试服务器网页，已经收到了刚才发送的数据
-![](../image/AT开发资料/应用开发指南/TCP应用指南/QQ20240723-161739.png)
+![](image/QQ20240723-161739.png)
 
 ## 1.8  接收数据
 
 当连接服务器成功以后，模块默认配置是服务器下发的数据会通过串口自动上报，直接就可以接收数据。
 
 从调试网页发送数据到模块
-![](../image/AT开发资料/应用开发指南/TCP应用指南/QQ20240723-162657.png)
+![](image/QQ20240723-162657.png)
 
 可以看到模块收到了数据
-![](../image/AT开发资料/应用开发指南/TCP应用指南/QQ20240723-163125.png)
+![](image/QQ20240723-163125.png)
 **其他说明**
 
 最新的AT固件支持开机直接发送AT+CIPSTART联网，不过不推荐使用，推荐根据状态机一步一步实现
@@ -395,7 +395,7 @@ https://netlab.luatos.com/
 - (10) **当我连续发送几百个字节的数据的时候，在里面会夹杂0x0a0x0d这种，如何避免这个呢**
   通过AT+CIPRXF设置接收的数据末尾是否自动添加回车换行（网络连接前设置）
 
-  ![](../image/AT开发资料/应用开发指南/TCP应用指南/20211207135729748_image.png)
+  ![](image/20211207135729748_image.png)
 
 -  ![image.png](https://cdn.openluat-luatcommunity.openluat.com/images/20211207135729748_image.png)
 
@@ -418,5 +418,5 @@ https://netlab.luatos.com/
 > - 还有Air780EPA、Air780E、Air780EX、Air724UG、Air201、Air780EQ、Air700ECQ、Air700EAQ、Air780EPT、Air780EPS等型号，
 > - 本文介绍的TCP/UDP应用流程，同样也适用于这些型号。
 
-![选型手册简洁版01](../image/1.jpg)
-![选型手册简洁版02](../image/2.jpg)
+![选型手册简洁版01](image/1.jpg)
+![选型手册简洁版02](image/2.jpg)

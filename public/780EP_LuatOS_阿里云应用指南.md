@@ -4,7 +4,7 @@
 
 >- 本文简单讲述了利用LuatOS-Air进行二次开发，采用一型一密、一机一密两种方式认证方式连接阿里云。整体结构如图
 >
->![20210219163908526_阿里云2](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/20210219163908526_阿里云2.png)
+>![20210219163908526_阿里云2](image/20210219163908526_阿里云2.png)
 >
 > - 关联文档和使用工具：
 >
@@ -51,7 +51,7 @@
 物联网平台提供安全可靠的设备连接通信能力，支持设备数据采集上云，规则引擎流转数据和云端数据下发设备端。此外，也提供方便快捷的设备管理能力，支持物模型定义，数据结构化存储，和远程调试、监控、运维。阿里云物联网平台为设备提供安全可靠的连接通信能力，向下连接海量设备，支撑设备数据采集上云；向上提供云端API，服务端通过调用云端API将指令下发至设备端，实现远程控制。物联网平台消息通信流程图如下。
 ```
 
-![p132750](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/p132750.png)
+![p132750](image/p132750.png)
 
 # API说明
 
@@ -76,7 +76,7 @@
 
   配置为在阿里云创建项目时所用地区。每个地域完全独立。每个可用区完全隔离，但同一个地域内的可用区之间使用低时延链路相连。地域和可用区之间的关系如下图所示。
 
-![p144045](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/p144045.png)
+![p144045](image/p144045.png)
 
 # 阿里云操作
 
@@ -88,7 +88,7 @@
 
 [具体详细介绍见阿里云页面](https://help.aliyun.com/document_detail/73728.html?spm=a2c4g.11174283.6.571.3a8b1668Vmv5CZ)
 
-![动画1](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/动画1.gif)
+![动画1](image/动画1.gif)
 
 ## 设备操作
 
@@ -98,7 +98,7 @@
 
 [阿里云设备创建](https://help.aliyun.com/document_detail/73729.html?spm=a2c4g.11186623.6.573.55977b7bAjX04B)
 
-![动画2](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/动画2.gif)
+![动画2](image/动画2.gif)
 
 # 连接阿里云
 
@@ -116,62 +116,62 @@ LuatOS-Air连接相比AT更为简单，只需要简单的配置即可连接，�
 
 然后找到所使用的脚本版本进入demo目录找到**aliyun**文件夹打开**main.lua**，根据下方图示打开这三行的**require**（如果有被注释掉，将注释去掉），并将其他不相关的注释掉。
 
-![image-20240708140658836](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240708140658836.png)
+![image-20240708140658836](image/image-20240708140658836.png)
 
 接着打开**testYjym.lua**，根据后面的操作修改三元组信息（**DeviceName**、**ProductKey**、**DeviceSecret**）和**InstanceId**信息。
 
-![QQ_1720254927378](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/QQ_1720254927378.png)
+![QQ_1720254927378](image/QQ_1720254927378.png)
 
-![image-20240722112359490](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722112359490.png)
+![image-20240722112359490](image/image-20240722112359490.png)
 
 首先将**testYjym.lua**中的三元组信息（**DeviceName**、**ProductKey**、**DeviceSecret**）修改为自己项目中的三元组信息。通过下方图示可找到自己项目中的三元组信息。
 
-![image-20240722122856109](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722122856109.png)
+![image-20240722122856109](image/image-20240722122856109.png)
 
-![image-20240722122944995](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722122944995.png)
+![image-20240722122944995](image/image-20240722122944995.png)
 
-![image-20240722123203649](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722123203649.png)
+![image-20240722123203649](image/image-20240722123203649.png)
 
 然后在实例详情页面，找到实例id并将其填写到代码中对应位置。
 
-![image-20240722123306910](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722123306910.png)
+![image-20240722123306910](image/image-20240722123306910.png)
 
-![image-20240722123326763](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722123326763.png)
+![image-20240722123326763](image/image-20240722123326763.png)
 
 最后将代码保存，通过**Luatools**软件将固件+脚本烧录进设备后，便能连接上阿里云了。这是[烧录教程](https://doc.openluat.com/wiki/21?wiki_page_id=6072#LuatOS_289)。
 
-![image-20240722123501999](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722123501999.png)
+![image-20240722123501999](image/image-20240722123501999.png)
 
-![image-20240722123630269](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722123630269.png)
+![image-20240722123630269](image/image-20240722123630269.png)
 
 ## 一型一密LuatOS-Air方式连接（公共实例）
 
 除了需要添加产品和设备外还需要在阿里云平台中打开对应产品的动态注册开关
 
-![image-20240722123724307](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722123724307.png)
+![image-20240722123724307](image/image-20240722123724307.png)
 
 先找到所使用的脚本版本进入**demo**目录找到**aliyun**文件夹打开**main.lua**，根据下方图示打开这两行的**require**（如果有被注释掉，将注释去掉），并将其他不相关的注释掉。
 
-![image-20240708141102660](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240708141102660.png)
+![image-20240708141102660](image/image-20240708141102660.png)
 
 接着打开**testYxym.lua**，根据后面的操作修改**DeviceName**、**ProductKey**、**ProductSecret**和**InstanceId**信息。
 
-![QQ_1720259977966](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/QQ_1720259977966.png)
+![QQ_1720259977966](image/QQ_1720259977966.png)
 
 其中**DeviceName**、**ProductKey**和**InstanceId**信息的位置在[一机一密LuatOS-Air方式连接](#一机一密LuatOS-Air方式连接)中已指出。下图为**ProductSecret**信息的位置。
 
-![image-20240722123956355](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722123956355.png)
+![image-20240722123956355](image/image-20240722123956355.png)
 
-![image-20240722124019448](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722124019448.png)
+![image-20240722124019448](image/image-20240722124019448.png)
 
 接着将**DeviceName**、**ProductKey**、**ProductSecret**和**InstanceId**信息填写到**testYxym.lua**中对应位置。
 
-![image-20240722124212869](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722124212869.png)
+![image-20240722124212869](image/image-20240722124212869.png)
 
 最后将代码保存，通过**Luatools**软件将固件+脚本烧录进设备后，便能连接上阿里云了。这是[烧录教程](https://doc.openluat.com/wiki/21?wiki_page_id=6072#LuatOS_289)。
 **注意：第一次使用一型一密时，设备要处于未激活状态。**
 
-![image-20240722124309366](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722124309366.png)
+![image-20240722124309366](image/image-20240722124309366.png)
 
 ![image-20240722140346833](C:/Users/30238/AppData/Roaming/Typora/typora-user-images/image-20240722140346833.png)
 
@@ -241,17 +241,17 @@ end
 2. 制作差分升级文件包 [生成差分包详细步骤](https://doc.openluat.com/wiki/21?wiki_page_id=6078)
 3. 阿里云平台上传差分包
 
-![image-20240722141443183](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722141443183.png)
+![image-20240722141443183](image/image-20240722141443183.png)
 
 4. 升级包验证
 
-![image-20240722141648477](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722141648477.png)
+![image-20240722141648477](image/image-20240722141648477.png)
 
 5. 平台查看升级结果
 
-![image-20240722141823942](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722141823942.png)
+![image-20240722141823942](image/image-20240722141823942.png)
 
-![image-20240722141856255](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722141856255.png)
+![image-20240722141856255](image/image-20240722141856255.png)
 
 
 ----
@@ -260,5 +260,5 @@ end
 > 还有Air780EPA、Air780E、Air780EX、Air201、Air780EPT、Air780EPS等型号，
 > 本文介绍的接入阿里云的流程，同样也适用于这些型号。
 
-![选型手册简洁版01](../image/1.jpg)
-![选型手册简洁版02](../image/2.jpg)
+![选型手册简洁版01](image/1.jpg)
+![选型手册简洁版02](image/2.jpg)
