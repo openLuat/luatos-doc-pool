@@ -16,7 +16,7 @@
 - AT固件获取：https://gitee.com/openLuat/airm2m-ec718-at/releases ，进页面按下Ctrl+F 搜索 **AirM2M_780EP_LTE_AT** 即可找到780EP模块所使用的AT固件，推荐选用该固件名称后面数字版本号最高的最新relase版本进行调试。
 - 当前文档示例使用[AirM2M_780EP_V1007_LTE_AT版本固件](https://cdn.openluat-erp.openluat.com/erp_site_file/product_file/sw_file_20240422190620_AirM2M_780EP_V1007_LTE_AT.zip)
 
- <img src="../image/780EP/微信图片_20240722101832.jpg" width="50%">
+ <img src="image/微信图片_20240722101832.jpg" width="50%">
 
 # TCP 示例
 ## 1.1 开机
@@ -147,7 +147,10 @@ AT+CIPSEND=10	输入发送数据
 ![](image/QQ20240723-162057.png)
 
 此时再发送十六进制的1A来结束发送
-![image.png](https://cdn.openluat-luatcommunity.openluat.com/images/20210508134027178_image.png)
+
+![](image/20210508134027178_image.png)
+
+
 
 返回了SEND OK
 
@@ -396,8 +399,6 @@ https://netlab.luatos.com/
   通过AT+CIPRXF设置接收的数据末尾是否自动添加回车换行（网络连接前设置）
 
   ![](image/20211207135729748_image.png)
-
--  ![image.png](https://cdn.openluat-luatcommunity.openluat.com/images/20211207135729748_image.png)
 
 -  (11)  **支持什么加密证书**
   支持证书配置，支持单向认证和双向认证
