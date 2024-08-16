@@ -17,7 +17,7 @@
 | 参数  | 定义                       | 取值              | 对取值的说明                                                 |
 | ----- | -------------------------- | ----------------- | ------------------------------------------------------------ |
 | <fo>  | 短信首字节（First Octet）  | 17,21,33,37,49,53 | 对<fo>字节的具体描述如下（以SMS-SUBMIT为例）：![](image/sms3.png) MTI：消息类型<br>b1=0&b0=0  表示SMS-DELIVER<br>b1=0&b0=1  表示SMS-SUBMIT <br>其他消息类型请参考GSM03.40<br>VPF：定义短信有效时间的格式<br>b4=1&b3=0：Relative format，此时<vp>是1个字节的整数型<br>b4=1&b3=1：Absolute format，此时<vp>是7个字节的整数型<br>SRR：Status Report Request，设置是否需要短信状态报告<br>UDHI：User Data Header Indicator，指示User Data单元是否有一个header<br>RP：Reply Path，回复路径<br>RD：Reject Duplicate，拒绝重复短信 |
-| <vp>  | 短信有效期（Valid Period） |                   | 取值由<fo>字段的VPF决定：<br>如果VPF=10(Binary)，则<vp>为相对模式，与短信有效时间的对应关系如下：<br>![](../../../../../image/AT开发资料/AT Command Manual/718P/SMS command/sms4.png) 如果VPF=11(Binary)，则<vp>为绝对模式，是7个字节的字符型，表示短信有效期到期的时间点。 |
+| <vp>  | 短信有效期（Valid Period） |                   | 取值由<fo>字段的VPF决定：<br>如果VPF=10(Binary)，则<vp>为相对模式，与短信有效时间的对应关系如下：<br>![](image/sms4.png) 如果VPF=11(Binary)，则<vp>为绝对模式，是7个字节的字符型，表示短信有效期到期的时间点。 |
 | <pid> | TP-协议-标识               | 0                 | 整数型，具体请参考GSM03.40                                   |
 | <dcs> | 短信内容编码方案           |                   | 整数型，具体请参考GSM03.38。一般情况下：0- 7bit GSM Default4-  8bit Data8-  UCS2 |
 
