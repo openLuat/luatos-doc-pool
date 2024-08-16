@@ -141,7 +141,7 @@ CSDK版本的远程升级主要是对CSDK固件的内容升级，升级方式可
 
 手动输入固件名为**1.0.1_TEST_FOTA_CSDK_EC7XX**，版本号填入**1.0.2**，确定即可
 
-![image-20240718155710950](C:/Users/30238/AppData/Roaming/Typora/typora-user-images/image-20240718155710950.png)
+![image-20240718155710950](image/image-20240718155710950.png)
 
 10. 配置设备升级
 
