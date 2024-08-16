@@ -55,15 +55,16 @@
 
 # API说明
 
-| API接口                 | 功能描述                                 |
-| ----------------------- | ---------------------------------------- |
-| aLiYun.setup()          | 配置阿里云物联网套件的产品信息和设备信息 |
-| aLiYun.setRegion()      | 设置地域region id                        |
-| aLiYun.setConnectMode() | 设置连接方式                             |
-| aLiYun.subscribe()      | 订阅主题                                 |
-| aLiYun.publish()        | 发布一条消息                             |
+| API接口                           | 功能描述                                 |
+| --------------------------------- | ---------------------------------------- |
+| aliyun.setup(tPara)              | 配置阿里云物联网套件的产品信息和设备信息 |
+| aliyun.ready()                   | 判断阿里云物联网套件是否已经连接                        |
+| aliyun.store(result)             | 获取或存储注册信息                             |
+| aliyun.subscribe(topic,qos)      | 订阅主题                                 |
+| aliyun.publish(topic,qos,payload,cbFnc,cbPara)        | 发布一条消息                             |
+| aliyun.on(evt,cbFnc)        | 注册事件的处理函数                             |
 
-详细的API介绍请参见[aLiYun章节](https://doc.openluat.com/wiki/31?wiki_page_id=3937)
+详细的API介绍请参见[aLiYun章节](https://wiki.luatos.com/api/libs/aliyun.html)
 
 # 实现流程
 
@@ -107,7 +108,7 @@
 LuatOS-Air连接相比AT更为简单，只需要简单的配置即可连接，还可以灵活的对数据进行处理。需要从官网或者github下载aliyun的脚本包，或者使用luatoolsv2会自动下载脚本资源，在工具根目录的\Luatools\resource\soc_script\v2024.06.25.16\demo\aliyun中脚本资源会随官网同步更新，具体版本可能和本文不同，不过功能都是一致的。
 ```
 
-文档中用到的API接口见[aLiYun API](https://doc.openluat.com/wiki/27?wiki_page_id=3213)章节。
+文档中用到的API接口见[aLiYun API](https://wiki.luatos.com/api/libs/aliyun.html?highlight=aliyun)章节。
 
 ## 一机一密LuatOS-Air方式连接
 
