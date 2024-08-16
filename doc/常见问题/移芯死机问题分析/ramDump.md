@@ -43,15 +43,15 @@
 
 可以看到ram使用情况，注意这里认为栈空间只有1KB，但是实际上可能是远超的，不过没关系，如果max里是0%，说明还有很多栈空间，不用去管
 
-![image-20240718191437360](C:/Users/HP/AppData/Roaming/Typora/typora-user-images/image-20240718191437360.png)
+![image-20240718191437360](image/image-20240718191437360.png)
 
 Tmr Svc这个task居然用到了93%
 
-![image-20240718191458562](C:/Users/HP/AppData/Roaming/Typora/typora-user-images/image-20240718191458562.png)
+![image-20240718191458562](image/image-20240718191458562.png)
 
 右键点击红框，在弹出菜单里选择display memory->dump
 
-![image-20240718191510208](C:/Users/HP/AppData/Roaming/Typora/typora-user-images/image-20240718191510208.png)
+![image-20240718191510208](image/image-20240718191510208.png)
 
 距离溢出只有不到70字节，如果用户代码里有类似uint8_t temp[71]，那么很容易就操作了栈外的ram，死机就很正常了
 
