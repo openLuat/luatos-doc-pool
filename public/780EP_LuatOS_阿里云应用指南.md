@@ -138,7 +138,7 @@ LuatOS-Air连接相比AT更为简单，只需要简单的配置即可连接，�
 
 ![image-20240722123326763](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722123326763.png)
 
-最后将代码保存，通过**Luatools**软件将固件+脚本烧录进设备后，便能连接上阿里云了。这是[烧录教程](https://wiki.luatos.com/boardGuide/flash.html)。
+最后将代码保存，通过**Luatools**软件将固件+脚本烧录进设备后，便能连接上阿里云了。这是[烧录教程](https://doc.openluat.com/wiki/21?wiki_page_id=6072#LuatOS_289)。
 
 ![image-20240722123501999](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722123501999.png)
 
@@ -168,7 +168,7 @@ LuatOS-Air连接相比AT更为简单，只需要简单的配置即可连接，�
 
 ![image-20240722124212869](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722124212869.png)
 
-最后将代码保存，通过**Luatools**软件将固件+脚本烧录进设备后，便能连接上阿里云了。这是[烧录教程](https://wiki.luatos.com/boardGuide/flash.html)。
+最后将代码保存，通过**Luatools**软件将固件+脚本烧录进设备后，便能连接上阿里云了。这是[烧录教程](https://doc.openluat.com/wiki/21?wiki_page_id=6072#LuatOS_289)。
 **注意：第一次使用一型一密时，设备要处于未激活状态。**
 
 ![image-20240722124309366](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722124309366.png)
@@ -238,7 +238,7 @@ end
 # OTA升级
 
 1. 建立项目并接入阿里云
-2. 制作差分升级文件包 [生成差分包详细步骤](https://doc.openluat.com/wiki/37?wiki_page_id=4578#__132)
+2. 制作差分升级文件包 [生成差分包详细步骤](https://doc.openluat.com/wiki/21?wiki_page_id=6078)
 3. 阿里云平台上传差分包
 
 ![image-20240722141443183](../image/LuatOS开发资料/示例/MQTT/MQTT-接入阿里云/image-20240722141443183.png)
