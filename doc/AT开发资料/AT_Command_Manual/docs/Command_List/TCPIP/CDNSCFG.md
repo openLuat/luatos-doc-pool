@@ -35,7 +35,7 @@
 | ←              | PrimaryDns: 211.136.112.50<br>SecondaryDns: 211.136.150.66 <br>OK |                                                              |
 | →              | AT+CDNSCFG=ip1,ip2                                           | 如果有需要，客户可以修改DNS服务器<br>ip1和ip2请按照实际的dns服务器地址输入，ip1和ip2可以加双括号，也可以不加 |
 | ←              | OK                                                           |                                                              |
-| →              | AT+CIPSTART=TCP,<server domain>,<port>                       | 连接一个域名地址。所有参数可加双括号，也可不加 <br>本例是TCPIP的应用举例。如果是MQTT应用，此时可依次输入: <br>AT+MCONFIG,AT+MIPSTART,AT+MCONNECT等命令，具体请参考[MQTT使用方法举例](#_使用方法举例) |
+| →              | AT+CIPSTART=TCP,<server domain>,<port>                       | 连接一个域名地址。所有参数可加双括号，也可不加 <br>本例是TCPIP的应用举例。如果是MQTT应用，此时可依次输入: <br>AT+MCONFIG,AT+MIPSTART,AT+MCONNECT等命令，具体请参考[MQTT使用方法举例] |
 | ←              | OK <br>CONNECT OK                                            |                                                              |
 |                | **+CDNSCFG查询和修改域名服务器的场景应用2（HTTP,FTP应用）:** |                                                              |
 | →              | AT+SAPBR=3,1,"CONTYPE","GPRS"                                |                                                              |
@@ -49,5 +49,5 @@
 | →              | AT+CDNSCFG=ip1,ip2,1                                         |                                                              |
 | ←              | OK                                                           |                                                              |
 | →              | AT+CDNSCFG?                                                  | 查询DNS服务器。这种应用场景，必须要先执行+CDNSCFG设置命令才能查询 |
-| ←              | PrimaryDns: ip1<br>SecondaryDns: ip2 OK                      | 以上ip1,ip2都是实际的DNS域名服务器的ip地址，可加双括号，也可不加 |
-| →              | HTTP应用，依次输入：AT+HTTPINIT，AT+HTTPPARA，AT+HTTPACTION等命令，具体请参考：[HTTP使用方法举例](#_使用方法举例_1) <br>FTP应用，依次输入：AT+FTPCID，AT+FTPSERV，AT+FTPUN，AT+FTPPW等命令，具体请参考：[FTP使用方法举例](#_使用方法举例_2) |                                                              |
+| ←              | PrimaryDns: ip1<br>SecondaryDns: ip2 <br>OK                  | 以上ip1,ip2都是实际的DNS域名服务器的ip地址，可加双括号，也可不加 |
+| →              | HTTP应用，依次输入：AT+HTTPINIT，AT+HTTPPARA，AT+HTTPACTION等命令，具体请参考：<br>[HTTP使用方法举例]<br>FTP应用，依次输入：AT+FTPCID，AT+FTPSERV，AT+FTPUN，AT+FTPPW等命令，具体请参考：<br>[FTP使用方法举例] |                                                              |
