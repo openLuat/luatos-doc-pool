@@ -22,7 +22,7 @@
 
 1、780EP开发板一套
 
-![780EP开发板](image/780EP开发板.jpg)
+![780EP开发板](image/fskv_780EP开发板.jpg)
 
 
 
