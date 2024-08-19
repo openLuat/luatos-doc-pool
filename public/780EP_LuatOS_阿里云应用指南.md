@@ -19,7 +19,8 @@
 # 准备工作
 
 1. Air780EP_全IO开发板一套，包括天线SIM卡，USB线
-   ![d37e1424dda26c3e771b83738f36dcb(1)](image/d37e1424dda26c3e771b83738f36dcb(1).jpg)
+
+    ![d37e1424dda26c3e771b83738f36dcb(1)](image/d37e1424dda26c3e771b83738f36dcb(1).jpg)
 
 2. PC电脑，串口工具
 
