@@ -119,7 +119,7 @@ LuatOS-Air连接相比AT更为简单，只需要简单的配置即可连接，�
 
 接着打开**testYjym.lua**，根据后面的操作修改三元组信息（**DeviceName**、**ProductKey**、**DeviceSecret**）和**InstanceId**信息。
 
-![QQ_1720254927378](image/QQ_1720254927378.png)
+![image-1720](image/image-1720.png)
 
 ![image-20240722112359490](image/image-20240722112359490.png)
 
@@ -155,7 +155,7 @@ LuatOS-Air连接相比AT更为简单，只需要简单的配置即可连接，�
 
 接着打开**testYxym.lua**，根据后面的操作修改**DeviceName**、**ProductKey**、**ProductSecret**和**InstanceId**信息。
 
-![QQ_1720259977966](image/QQ_1720259977966.png)
+![image-202408190000](image/image-202408190000.png)
 
 其中**DeviceName**、**ProductKey**和**InstanceId**信息的位置在[一机一密LuatOS-Air方式连接](#一机一密LuatOS-Air方式连接)中已指出。下图为**ProductSecret**信息的位置。
 
