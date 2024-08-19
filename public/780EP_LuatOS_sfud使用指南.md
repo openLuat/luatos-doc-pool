@@ -8,9 +8,11 @@ sfud是一款开源的串行SPI Flash通用驱动库，LuatOS中集成了该库�
 
   - [LuatOS 固件获取](https://gitee.com/openLuat/LuatOS/releases)
 
-  - [tcs3472 颜色传感器接口说明](https://wiki.luatos.com/api/libs/tcs3472.html)
+  - [sufd-demo](https://gitee.com/openLuat/LuatOS/tree/master/demo/sfud)
 
   - [Luatools下载调试工具](https://gitee.com/openLuat/luatos-doc-pool/blob/master/doc/开发工具及使用说明/Luatools下载调试工具.md)
+  
+  - [开发板Core_Air780EP使用说明 ](https://doc.openluat.com/share_article/ekP9pxVv5b0m8)
 
 ## 材料准备
 
