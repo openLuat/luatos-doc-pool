@@ -180,7 +180,7 @@ tcs3472.init(i2cid)--初始化,传入i2c_id
 
 ### 1、下载固件和脚本
 
-![image-20240730164124181](image/Luatools下载固件和脚本.png)
+![image-20240730164124181](image/tcs_Luatools下载固件和脚本.png)
 
 ### 2、在Luatools工具中查看效果
 
