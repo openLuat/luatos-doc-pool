@@ -1,8 +1,8 @@
-# 780EP_LuatOS_sfud使用指南
+# 780EP_LuatOS_rsa使用指南
 
 ## 简介
 
-sfud是一款开源的串行SPI Flash通用驱动库，LuatOS中集成了该库，可以调用sfud的api实现对各类SPI Flash的读写操作。
+RSA算法的安全性基于：将两个大质数相乘很容易，但是想要将其乘积分解成原始的质数因子却非常困难。
 
 - 关联文档和使用工具：
 
