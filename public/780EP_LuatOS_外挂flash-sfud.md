@@ -1,8 +1,8 @@
-# 780EP_LuatOS_sfud使用指南
+# 780EP模块LuatOS开发如何外挂一个Flash芯片
 
 ## 简介
 
-sfud是一款开源的串行SPI Flash通用驱动库，LuatOS中集成了该库，可以调用sfud的api实现对各类SPI Flash的读写操作。
+采用sfud是一款开源的串行SPI Flash通用驱动库，LuatOS中集成了该库，可以调用sfud的api实现对各类SPI Flash的读写操作。
 
 - 关联文档和使用工具：
 
