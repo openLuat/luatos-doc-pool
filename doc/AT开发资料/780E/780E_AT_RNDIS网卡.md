@@ -32,7 +32,9 @@
 
 # 指令和功能介绍
 
-## AT+RNDISCALL=1 打开RNDIS功能
+## 打开RNDIS功能
+
+### 发送AT+RNDISCALL=1打开
 
 > 仅以示例进行简单参数描述，AT指令的详细描述请自行参考AT手册
 
