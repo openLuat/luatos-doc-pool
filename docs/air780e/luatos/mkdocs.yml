@@ -1,0 +1,449 @@
+site_name: 合宙Air780E模组LuatOS资料中心
+
+nav:
+  - 首页: index.md
+  - 快速入门:
+    - 介绍: quick_start/index.md
+    - HelloWorld教程:
+      - 介绍: quick_start/hello/index.md
+      - 必须先要告诉你的一些废话: quick_start/hello/01.md
+      - 下载模组的示例代码: quick_start/hello/02.md
+      - 修改代码: quick_start/hello/03.md
+      - 烧录代码到硬件: quick_start/hello/04.md
+      - 验证功能: quick_start/hello/05.md
+      - 总结: quick_start/hello/summary.md
+    - 本地脚本控制灯的亮和灭: 
+      - 介绍: quick_start/led/index.md
+      - 编写脚本: quick_start/led/01.md
+      - 烧录代码到硬件: quick_start/led/02.md
+      - 验证功能: quick_start/led/03.md
+      - 总结: quick_start/led/summary.md
+      - 扩展: quick_start/led/ext.md
+    - 电脑浏览器通过Air780E控制灯的亮和灭:
+      - 介绍: quick_start/netled/index.md
+      - 编写脚本: quick_start/netled/01.md
+      - 烧录代码到硬件: quick_start/netled/02.md
+      - 验证功能: quick_start/netled/03.md
+      - 总结: quick_start/netled/summary.md
+    - 控制串口传感器实现网页查看温湿度:
+      - 介绍: quick_start/nettemp/index.md
+      - 硬件准备: quick_start/nettemp/01.md
+      - 编写脚本: quick_start/nettemp/02.md
+      - 烧录代码到硬件: quick_start/nettemp/03.md
+      - 验证功能: quick_start/nettemp/04.md
+      - 总结: quick_start/nettemp/summary.md
+      - 扩展: quick_start/nettemp/ext.md
+    - 固件的远程升级:
+      - 介绍: quick_start/upgrade/index.md
+      - 编写脚本: quick_start/upgrade/01.md
+      - 烧录代码到硬件: quick_start/nettemp/02.md
+      - 验证功能: quick_start/nettemp/03.md
+      - 总结: quick_start/nettemp/summary.md
+      - 常见问题: quick_start/upgrade/faq.md
+      - 扩展: quick_start/upgrade/ext.md
+    - 通过MQTT连接实现远程控制:
+      - 介绍: quick_start/mqtt/index.md
+      - 编写脚本: quick_start/mqtt/01.md
+      - 烧录代码到硬件: quick_start/mqtt/02.md
+      - 验证功能: quick_start/mqtt/03.md
+      - 总结: quick_start/mqtt/summary.md
+      - 常见问题: quick_start/mqtt/faq.md
+      - 扩展: quick_start/mqtt/ext.md
+    - 驱动IIC小屏幕的详细讲解:
+      - 介绍: quick_start/oled/index.md
+      - 硬件准备: quick_start/oled/01.md
+      - 编写脚本: quick_start/oled/02.md
+      - 烧录代码到硬件: quick_start/oled/03.md
+      - 验证功能: quick_start/oled/04.md
+      - 总结: quick_start/oled/summary.md
+      - 常见问题: quick_start/oled/faq.md
+      - 扩展: quick_start/oled/ext.md
+    - 使用文件系统对温湿度的存储和上报:
+      - 介绍: quick_start/file/index.md
+      - 编写脚本: quick_start/file/01.md
+      - 烧录代码到硬件: quick_start/file/02.md
+      - 验证功能: quick_start/file/03.md
+      - 总结: quick_start/file/summary.md
+      - 常见问题: quick_start/file/faq.md
+      - 扩展: quick_start/file/ext.md
+    - 500毫安的电池让Air780E续航10年:
+      - 介绍: quick_start/battery/index.md
+      - 编写脚本: quick_start/battery/01.md
+      - 烧录代码到硬件: quick_start/battery/02.md
+      - 验证功能: quick_start/battery/03.md
+      - 总结: quick_start/battery/summary.md
+      - 常见问题: quick_start/battery/faq.md
+      - 扩展: quick_start/battery/ext.md
+    - Air780E 跟服务器之间的加密通信:
+      - 介绍: quick_start/ssl/index.md
+      - 编写脚本: quick_start/ssl/01.md
+      - 烧录代码到硬件: quick_start/ssl/02.md
+      - 验证功能: quick_start/ssl/03.md
+      - 总结: quick_start/ssl/04.md
+      - 常见问题: quick_start/ssl/faq.md
+      - 扩展: quick_start/ssl/ext.md
+    - Air780E怎么获取精准的时钟:
+      - 介绍: quick_start/time/index.md
+      - 编写脚本: quick_start/time/01.md
+      - 烧录代码到硬件: quick_start/time/02.md
+      - 验证功能: quick_start/time/03.md
+      - 总结: quick_start/time/summary.md
+      - 常见问题: quick_start/time/faq.md
+      - 扩展: quick_start/time/ext.md
+  - 典型功能应用:
+    - 介绍: app/index.md
+    - 硬件驱动:
+      - 简介: app/driver/index.md
+      - 串口(UART):
+        - 简介: app/driver/uart/index.md
+        - 硬件准备: app/driver/uart/01.md
+        - 基本用法: app/driver/uart/basic.md
+        - RS485通信: app/driver/uart/rs485.md
+        - USB虚拟串口: app/driver/uart/usb_uart.md
+        - 多串口: app/driver/uart/uarts.md
+        - 低功耗唤醒: app/driver/uart/uart_pm.md
+        - TCP-UART透传: app/driver/uart/uart_tcp.md
+        - MQTT-UART透传: app/driver/uart/uart_mqtt.md
+        - UDP-UART透传: app/driver/uart/uart_udp.md
+        - WebSocket-UART透传: app/driver/uart/uart_ws.md
+        - 总结: app/driver/uart/summary.md
+        - 常见问题: app/driver/uart/faq.md
+        - 扩展: app/driver/uart/ext.md
+      - 模数转换(ADC):
+        - 简介: app/driver/adc/index.md
+        - 硬件准备: app/driver/adc/01.md
+        - 基本用法: app/driver/adc/basic.md
+        - 读取供电电压: app/driver/adc/vbat.md
+        - 读取CPU温度: app/driver/adc/cputemp.md
+        - 总结: app/driver/adc/summary.md
+        - 常见问题: app/driver/adc/faq.md
+        - 扩展: app/driver/adc/ext.md
+      - 通用输入输出(GPIO):
+        - 简介: app/driver/gpio/index.md
+        - 硬件准备: app/driver/gpio/01.md
+        - 基本用法: app/driver/gpio/basic.md
+        - 输入模式: app/driver/gpio/input.md
+        - 输出模式: app/driver/gpio/output.md
+        - 中断模式: app/driver/gpio/interrupt.md
+        - IO复用: app/driver/gpio/iomux.md
+        - 上拉下拉: app/driver/gpio/pull.md
+        - 开漏模式: app/driver/gpio/open_drain.md
+        - 常驻GPIO: app/driver/gpio/retention.md
+        - IO翻转速度: app/driver/gpio/speed.md
+        - 总结: app/driver/gpio/summary.md
+        - 常见问题: app/driver/gpio/faq.md
+        - 扩展: app/driver/gpio/ext.md
+    - 网络驱动(Socket):
+      - 简介: app/socket/index.md
+      - TCP通信:
+        - 简介: app/socket/tcp/index.md
+        - 硬件准备: app/socket/tcp/01.md
+        - 基本用法: app/socket/tcp/02.md
+        - TCP-UART透传: app/socket/tcp/03.md
+        - TCP单向加密通信: app/socket/tcp/04.md
+        - TCP双向加密通信: app/socket/tcp/05.md
+        - TCP断链重连: app/socket/tcp/06.md
+        - TCP低功耗唤醒: app/socket/tcp/07.md
+        - 总结: app/socket/tcp/summary.md
+        - 常见问题: app/socket/tcp/faq.md
+        - 扩展: app/socket/tcp/ext.md
+        - 参考: app/socket/tcp/ref.md
+      - UDP通信:
+        - 简介: app/socket/udp/index.md
+        - 硬件准备: app/socket/udp/01.md
+        - 基本用法: app/socket/udp/basic.md
+        - UDP-UART透传: app/socket/udp/uart.md
+        - UDP加密通信: app/socket/udp/dtls.md
+        - 总结: app/socket/tcp/summary.md
+        - 常见问题: app/socket/tcp/faq.md
+        - 扩展: app/socket/tcp/ext.md
+        - 参考: app/socket/tcp/ref.md
+      - HTTP通信:
+        - 简介: app/socket/http/index.md
+        - 硬件准备: app/socket/http/01.md
+        - 基本用法: app/socket/http/basic.md
+        - GET请求: app/socket/http/get.md
+        - POST请求: app/socket/http/post.md
+        - 文件上传: app/socket/http/upload.md
+        - 文件下载: app/socket/http/download.md
+        - HTTPS加密通信: app/socket/http/https.md
+        - 处理JSON数据: app/socket/http/json.md
+        - 压缩和解压: app/socket/http/zip.md
+        - 总结: app/socket/http/summary.md
+        - 常见问题: app/socket/http/faq.md
+        - 扩展: app/socket/http/ext.md
+        - 参考: app/socket/http/ref.md
+      - MQTT通信:
+        - 简介: app/socket/mqtt/index.md
+        - 硬件准备: app/socket/mqtt/01.md
+        - 基本用法: app/socket/mqtt/basic.md
+        - 连接到阿里云: app/socket/mqtt/aliyun.md
+        - 连接到腾讯云: app/socket/mqtt/tencent.md
+        - 连接到华为云: app/socket/mqtt/huawei.md
+        - 连接到百度云: app/socket/mqtt/baidu.md
+        - 连接到ThingCloud: app/socket/mqtt/thingcloud.md
+        - MQTTS加密通信: app/socket/mqtt/mqtts.md
+        - 总结: app/socket/mqtt/summary.md
+        - 常见问题: app/socket/mqtt/faq.md
+        - 扩展: app/socket/mqtt/ext.md
+        - 参考: app/socket/mqtt/ref.md
+      - WebSocket通信:
+        - 简介: app/socket/websocket/index.md
+        - 硬件准备: app/socket/websocket/01.md
+        - 基本用法: app/socket/websocket/basic.md
+        - WebSocket加密通信: app/socket/websocket/wss.md
+        - 总结: app/socket/websocket/summary.md
+        - 常见问题: app/socket/websocket/faq.md
+        - 扩展: app/socket/websocket/ext.md
+        - 参考: app/socket/websocket/ref.md
+    - 基础服务:
+      - 简介: app/service/index.md
+      - 文件系统(io):
+        - 简介: app/service/fs/index.md
+        - 硬件准备: app/service/fs/01.md
+        - 基本用法: app/service/fs/basic.md
+        - 文件追加: app/service/fs/append.md
+        - 文件删除: app/service/fs/delete.md
+        - 文件重命名: app/service/fs/rename.md
+        - 文件拷贝: app/service/fs/copy.md
+        - 文件移动: app/service/fs/move.md
+        - 文件大小: app/service/fs/size.md
+        - 文件枚举: app/service/fs/lsdir.md
+        - 总结: app/service/fs/summary.md
+        - 常见问题: app/service/fs/faq.md
+        - 扩展: app/service/fs/ext.md
+        - 参考: app/service/fs/ref.md
+      - 定时器(timer):
+        - 简介: app/service/timer/index.md
+        - 硬件准备: app/service/timer/01.md
+        - 基本用法: app/service/timer/basic.md
+        - 总结: app/service/timer/summary.md
+        - 常见问题: app/service/timer/faq.md
+        - 扩展: app/service/timer/ext.md
+        - 参考: app/service/timer/ref.md
+      - 任务机制(task):
+        - 简介: app/service/task/index.md
+        - 硬件准备: app/service/task/01.md
+        - 基本用法: app/service/task/basic.md
+        - 总结: app/service/task/summary.md
+        - 常见问题: app/service/task/faq.md
+        - 扩展: app/service/task/ext.md
+        - 参考: app/service/task/ref.md
+        - 任务调度详解: app/service/task/schedule.md
+      - 数学运算(math):
+        - 简介: app/service/math/index.md
+        - 硬件准备: app/service/math/01.md
+        - 基本用法: app/service/math/basic.md
+        - 总结: app/service/math/summary.md
+        - 常见问题: app/service/math/faq.md
+        - 扩展: app/service/math/ext.md
+        - 参考: app/service/math/ref.md
+      - 位运算(bit):
+        - 简介: app/service/bit/index.md
+        - 硬件准备: app/service/bit/01.md
+        - 基本用法: app/service/bit/basic.md
+        - 总结: app/service/bit/summary.md
+        - 常见问题: app/service/bit/faq.md
+        - 扩展: app/service/bit/ext.md
+        - 参考: app/service/bit/ref.md
+      - hash运算(md5/sha1/sha256/hmac):
+        - 简介: app/service/hash/index.md
+        - 硬件准备: app/service/hash/01.md
+        - 基本用法: app/service/hash/basic.md
+        - 总结: app/service/hash/summary.md
+        - 常见问题: app/service/hash/faq.md
+        - 扩展: app/service/hash/ext.md
+        - 参考: app/service/hash/ref.md
+      - 随机数(random):
+        - 简介: app/service/random/index.md
+        - 硬件准备: app/service/random/01.md
+        - 基本用法: app/service/random/basic.md
+        - 总结: app/service/random/summary.md
+        - 常见问题: app/service/random/faq.md
+        - 扩展: app/service/random/ext.md
+      - 模块信息(hmeta):
+        - 简介: app/service/module/index.md
+        - 唯一ID: app/service/module/id.md
+        - 硬件型号: app/service/module/model.md
+        - 硬件版本: app/service/module/version.md
+        - 固件版本: app/service/module/firmware.md
+        - 总结: app/service/module/summary.md
+        - 常见问题: app/service/module/faq.md
+    - 4G通信:
+      - 简介: app/mobile/index.md
+      - 通信信息(mobile):
+        - 简介: app/mobile/info/index.md
+        - IMEI获取: app/mobile/info/imei.md
+        - IMSI获取: app/mobile/info/imsi.md
+        - ICCID获取: app/mobile/info/iccid.md
+        - 信号强度: app/mobile/info/rssi.md
+        - 运营商信息: app/mobile/info/operator.md
+        - 切换SIM卡: app/mobile/info/sim.md
+        - 切换网络: app/mobile/info/net.md
+        - 设置APN: app/mobile/info/apn.md
+        - 获取网络状态: app/mobile/info/net_status.md
+        - 获取网络类型: app/mobile/info/net_type.md
+      - 物联网卡专讲(iot):
+        - 简介: app/mobile/iot/index.md
+        - 硬件准备: app/mobile/iot/01.md
+        - 基本用法: app/mobile/iot/basic.md
+        - 总结: app/mobile/iot/summary.md
+        - 常见问题: app/mobile/iot/faq.md
+      - 境外使用:
+        - 简介: app/mobile/oversea/index.md
+        - 硬件准备: app/mobile/oversea/01.md
+        - 基本用法: app/mobile/oversea/basic.md
+        - 总结: app/mobile/oversea/summary.md
+        - 常见问题: app/mobile/oversea/faq.md
+        - 扩展: app/mobile/oversea/ext.md
+    - 功耗管理:
+      - 简介: app/power/index.md
+      - 休眠控制:
+        - 简介: app/power/sleep/index.md
+        - 硬件准备: app/power/sleep/01.md
+        - 基本用法: app/power/sleep/basic.md
+        - 总结: app/power/sleep/summary.md
+        - 常见问题: app/power/sleep/faq.md
+        - 扩展: app/power/sleep/ext.md
+      - 超低功耗模式:
+        - 简介: app/power/psm/index.md
+        - 硬件准备: app/power/psm/01.md
+        - 基本用法: app/power/psm/basic.md
+        - 总结: app/power/psm/summary.md
+        - 常见问题: app/power/psm/faq.md
+        - 扩展: app/power/psm/ext.md
+        - 参考: app/power/psm/ref.md
+    - 通用工具库:
+      - 简介: app/utils/index.md
+      - JSON数据处理:
+        - 简介: app/utils/json/index.md
+        - 基本用法: app/utils/json/basic.md
+        - 总结: app/utils/json/summary.md
+        - 常见问题: app/utils/json/faq.md
+        - 扩展: app/utils/json/ext.md
+      - 字符串处理:
+        - 简介: app/utils/string/index.md
+        - 基本用法: app/utils/string/basic.md
+        - 总结: app/utils/string/summary.md
+        - 常见问题: app/utils/string/faq.md
+        - 扩展: app/utils/string/ext.md
+      - 日志输出:
+        - 简介: app/utils/log/index.md
+        - 基本用法: app/utils/log/basic.md
+        - 总结: app/utils/log/summary.md
+        - 常见问题: app/utils/log/faq.md
+        - 扩展: app/utils/log/ext.md
+      - 数据打包解包(pack):
+        - 简介: app/utils/pack/index.md
+        - 基本用法: app/utils/pack/basic.md
+        - 总结: app/utils/pack/summary.md
+        - 常见问题: app/utils/pack/faq.md
+        - 扩展: app/utils/pack/ext.md
+      - 通用加密函数(crypto):
+        - 简介: app/utils/crypto/index.md
+        - 基本用法: app/utils/crypto/basic.md
+        - MD5加密: app/utils/crypto/md5.md
+        - SHA1加密: app/utils/crypto/sha1.md
+        - SHA256加密: app/utils/crypto/sha256.md
+        - HMAC加密: app/utils/crypto/hmac.md
+        - RSA加密: app/utils/crypto/rsa.md
+        - AES加密: app/utils/crypto/aes.md
+        - DES加密: app/utils/crypto/des.md
+        - 总结: app/utils/crypto/summary.md
+        - 常见问题: app/utils/crypto/faq.md
+        - 扩展: app/utils/crypto/ext.md
+      - 国密加密函数(gmssl):
+        - 简介: app/utils/gmssl/index.md
+        - 基本用法: app/utils/gmssl/basic.md
+        - SM2加密: app/utils/gmssl/sm2.md
+        - SM3加密: app/utils/gmssl/sm3.md
+        - SM4加密: app/utils/gmssl/sm4.md
+        - 总结: app/utils/gmssl/summary.md
+        - 常见问题: app/utils/gmssl/faq.md
+        - 扩展: app/utils/gmssl/ext.md
+    - 配置信息存储:
+      - 简介: app/config/index.md
+      - 键值对存储(fskv):
+        - 简介: app/config/fskv/index.md
+        - 基本用法: app/config/fskv/basic.md
+        - 刷机清空: app/config/fskv/clear.md
+        - 总结: app/config/fskv/summary.md
+        - 常见问题: app/config/fskv/faq.md
+      - 文件系统存储(fs):
+        - 简介: app/config/fs/index.md
+        - 基本用法: app/config/fs/basic.md
+        - 刷机清空: app/config/fs/clear.md
+        - 总结: app/config/fs/summary.md
+        - 常见问题: app/config/fs/faq.md
+    - 高级功能:
+      - 简介: app/advanced/index.md
+    - 量产相关:
+      - 简介: app/produce/index.md
+      - 量产准备:
+        - 简介: app/produce/prepare/index.md
+        - 固件生成: app/produce/prepare/firmware.md
+        - 硬件准备: app/produce/prepare/hardware.md
+        - 检查单: app/produce/prepare/checklist.md
+        - 物料清单: app/produce/prepare/material.md
+        - 总结: app/produce/prepare/summary.md
+        - 常见问题: app/produce/prepare/faq.md
+      - 量产流程:
+        - 简介: app/produce/flow/index.md
+        - 工具清单: app/produce/flow/tools.md
+        - 工具用法: app/produce/flow/usage.md
+        - 总结: app/produce/flow/summary.md
+        - 常见问题: app/produce/flow/faq.md
+        - 扩展: app/produce/flow/ext.md
+    - 实际应用:
+      - 钉钉机器人:
+        - 简介: app/demo/dingtalk/index.md
+        - 基本用法: app/demo/dingtalk/basic.md
+        - 总结: app/demo/dingtalk/summary.md
+        - 常见问题: app/demo/dingtalk/faq.md
+      - 飞书机器人:
+        - 简介: app/demo/feishu/index.md
+        - 基本用法: app/demo/feishu/basic.md
+        - 总结: app/demo/feishu/summary.md
+        - 常见问题: app/demo/feishu/faq.md
+  - 硬件资料: 
+    - 硬件资料索引: hardware.md
+  - 常见问题: faq.md
+  - 问答中心: https://chat.openluat.com/
+  - 合宙官网: https://www.openluat.com/
+
+
+theme:
+  name: material
+  language: zh
+  features:
+    - announce.dismiss
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    # - content.footnote.tooltips
+    # - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    # - navigation.expand
+    - navigation.footer
+    - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.prefetch
+    # - navigation.instant.progress
+    - navigation.prune
+    - navigation.sections
+    - navigation.tabs
+    # - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    - toc.integrate
+
+plugins:
+  - search:
+      indexing: 'full'
