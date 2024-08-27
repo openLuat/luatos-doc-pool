@@ -9,7 +9,7 @@ def do_build(path):
         return
     root = os.path.abspath(path)
     try :
-        subprocess.check_call("docker run --rm -v {}:/docs squidfunk/mkdocs-material build".format(root))
+        subprocess.check_call("docker run --rm -v {}:/docs registry.cn-beijing.aliyuncs.com/wendal/mkdocs-material build".format(root), shell=True)
         os.makedirs("/opt/docs/site/" + path + "/", exist_ok=True)
         shutil.copytree(path + "/site", "/opt/docs/site/" + path + "/", dirs_exist_ok=True)
     except:
