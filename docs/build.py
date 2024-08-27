@@ -23,10 +23,11 @@ def git_hook():
             do_build(os.path.join(name, "at"))
             do_build(os.path.join(name, "luatos"))
 
-from bottle import route, run, template
+from bottle import post, run, template
 
-@route('/api/git_hook')
-def index(name):
+@post('/api/git_hook')
+def index():
+    git_hook()
     return "ok"
 
 
