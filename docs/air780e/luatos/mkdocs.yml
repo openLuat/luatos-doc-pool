@@ -90,7 +90,7 @@ nav:
       - 总结: quick_start/time/summary.md
       - 常见问题: quick_start/time/faq.md
       - 扩展: quick_start/time/ext.md
-  - 典型功能应用:
+  - 功能应用:
     - 介绍: app/index.md
     - 硬件驱动:
       - 简介: app/driver/index.md
@@ -106,6 +106,8 @@ nav:
         - MQTT-UART透传: app/driver/uart/uart_mqtt.md
         - UDP-UART透传: app/driver/uart/uart_udp.md
         - WebSocket-UART透传: app/driver/uart/uart_ws.md
+        - UART2复用到另外一组管脚: app/driver/uart/uart_mux.md
+        - UART电平: app/driver/uart/uart_level.md
         - 总结: app/driver/uart/summary.md
         - 常见问题: app/driver/uart/faq.md
         - 扩展: app/driver/uart/ext.md
@@ -115,6 +117,7 @@ nav:
         - 基本用法: app/driver/adc/basic.md
         - 读取供电电压: app/driver/adc/vbat.md
         - 读取CPU温度: app/driver/adc/cputemp.md
+        - 输入电压的范围: app/driver/adc/range.md
         - 总结: app/driver/adc/summary.md
         - 常见问题: app/driver/adc/faq.md
         - 扩展: app/driver/adc/ext.md
@@ -246,7 +249,7 @@ nav:
         - 常见问题: app/service/bit/faq.md
         - 扩展: app/service/bit/ext.md
         - 参考: app/service/bit/ref.md
-      - hash运算(md5/sha1/sha256/hmac):
+      - 哈希运算:
         - 简介: app/service/hash/index.md
         - 硬件准备: app/service/hash/01.md
         - 基本用法: app/service/hash/basic.md
