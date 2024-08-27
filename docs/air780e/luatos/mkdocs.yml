@@ -409,7 +409,32 @@ nav:
         - 总结: app/demo/feishu/summary.md
         - 常见问题: app/demo/feishu/faq.md
   - 硬件资料: 
-    - 硬件资料索引: hardware.md
+    - 硬件资料:
+      - 索引: hardware/index.md
+      - 典型硬件设计图:
+        - 简介: hardware/design/index.md
+        - 常见供电电路: hardware/design/power.md
+        - 常见充电电路: hardware/design/charge.md
+        - 常见开机电路: hardware/design/poweron.md
+        - 常见关机电路: hardware/design/poweroff.md
+        - Reset电路: hardware/design/reset.md
+        - 看门狗电路: hardware/design/wdt.md
+        - SIM卡电路: hardware/design/sim.md
+        - 天线电路: hardware/design/ant.md
+        - UART 1通信电路: hardware/design/uart1.md
+        - USB通信电路: hardware/design/usb.md
+        - UART 0调试电路: hardware/design/uart0.md
+        - UART 2通信电路: hardware/design/uart2.md
+        - LED状态灯电路: hardware/design/led.md
+        - 模组休眠唤醒电路: hardware/design/sleep.md
+        - 模组唤醒休眠状态下的主控电路: hardware/design/wakeup.md
+        - 模组控制外设的电路: hardware/design/ctrl.md
+        - 外设触发模组中断的电路: hardware/design/int.md
+        - 测试点电路: hardware/design/check_point.md
+        - 温湿度传感器参考电路: hardware/design/sensor.md
+        - 远程空开参考电路: hardware/design/remote.md
+  - 产品手册:
+    - 产品手册下载: product_manual/index.html
   - 常见问题: faq.md
   - 问答中心: https://chat.openluat.com/
   - 合宙官网: https://www.openluat.com/
