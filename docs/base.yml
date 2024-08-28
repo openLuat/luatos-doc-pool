@@ -37,5 +37,5 @@ plugins:
   - search:
       lang: zh
 
-repo_url: https://gitee.com/openLuat/luatos-doc-pool
+#repo_url: https://gitee.com/openLuat/luatos-doc-pool
 copyright: Copyright (c) 2019-2024 openLuat & AirM2M
