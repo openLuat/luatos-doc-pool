@@ -25,17 +25,5 @@ def git_hook():
             do_build(os.path.join(name, "at"))
             do_build(os.path.join(name, "luatos"))
 
-from bottle import post, run, template
-
-@post('/api/git_hook')
-def index():
-    git_hook()
-    return "ok"
-
-
-
 if __name__ == '__main__':
     git_hook()
-    
-    if len(sys.argv) > 1 and sys.argv[1] == "web":
-        run(host='0.0.0.0', port=8000)

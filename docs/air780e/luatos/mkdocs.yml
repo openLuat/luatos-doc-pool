@@ -1,7 +1,6 @@
 site_name: 合宙Air780E模组LuatOS资料中心
 
 nav:
-  - 首页: index.md
   - 快速入门:
     - 介绍: quick_start/index.md
     - HelloWorld教程:
@@ -90,7 +89,7 @@ nav:
       - 总结: quick_start/time/summary.md
       - 常见问题: quick_start/time/faq.md
       - 扩展: quick_start/time/ext.md
-  - 功能应用:
+  - 软件demo:
     - 介绍: app/index.md
     - 硬件驱动:
       - 简介: app/driver/index.md
@@ -408,7 +407,7 @@ nav:
         - 基本用法: app/demo/feishu/basic.md
         - 总结: app/demo/feishu/summary.md
         - 常见问题: app/demo/feishu/faq.md
-  - 硬件资料: 
+  - 硬件demo: 
     - 硬件资料:
       - 索引: hardware/index.md
       - 典型硬件设计图:
