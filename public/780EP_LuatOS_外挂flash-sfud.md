@@ -363,6 +363,16 @@ f:close()
 
 
 
+## 常见问题
+
+### 1、接线都正确，但为什么在初始化的时候还是失败
+
+需要检查下对应flash芯片工作电压是多少
+
+780EP硬件可通过IO_SET引脚控制GPIO电压，IO_SET脚连接3.3V，GPIO的电压就会变为3.3V，IO_SET脚连接1.8V同理。按需求进行硬件上的改动。
+
+如果硬件不方便修改，则可以通过软件接口，pm.ioVol(pm.IOVOL_ALL_GPIO,  3300) 修改为3.3V，接口详情请在这里查看[pm.ioVol接口说明](https://wiki.luatos.com/api/pm.html?highlight=%E7%94%B5%E5%8E%8B#pm-iovol-id-val)
+
 
 
 
