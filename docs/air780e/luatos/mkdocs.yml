@@ -433,8 +433,8 @@ nav:
         - 测试点电路: hardware/design/check_point.md
         - 温湿度传感器参考电路: hardware/design/sensor.md
         - 远程空开参考电路: hardware/design/remote.md
-  - 产品手册:
-    - 产品手册下载: product_manual/index.html
+  - 选型手册:
+    - 选型手册下载: product_manual/index.html
   - 常见问题: faq.md
   - 问答中心: https://chat.openluat.com/
   - 合宙官网: https://www.openluat.com/

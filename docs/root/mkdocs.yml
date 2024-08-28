@@ -2,7 +2,7 @@ INHERIT: ../base.yml
 site_name: 合宙模组资料中心
 
 nav:
-  - 产品手册: product_manual/index.md
+  - 选型手册: product_manual/index.md
   - Air780E: air780e/index.md
   - Air780EP: air780ep/index.md
   - Air780EPS: air780eps/index.md
