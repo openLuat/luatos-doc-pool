@@ -1,5 +1,5 @@
 INHERIT: ../../base.yml
-site_name: 合宙Air780E模组LuatOS资料中心
+site_name: "Air780E/LuatOS"
 
 nav:
   - 快速入门:
