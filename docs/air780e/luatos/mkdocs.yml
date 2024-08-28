@@ -1,3 +1,4 @@
+INHERIT: ../../base.yml
 site_name: 合宙Air780E模组LuatOS资料中心
 
 nav:
@@ -437,40 +438,3 @@ nav:
   - 常见问题: faq.md
   - 问答中心: https://chat.openluat.com/
   - 合宙官网: https://www.openluat.com/
-
-
-theme:
-  name: material
-  language: zh
-  features:
-    - announce.dismiss
-    - content.action.edit
-    - content.action.view
-    - content.code.annotate
-    - content.code.copy
-    # - content.code.select
-    # - content.footnote.tooltips
-    # - content.tabs.link
-    - content.tooltips
-    # - header.autohide
-    # - navigation.expand
-    - navigation.footer
-    - navigation.indexes
-    # - navigation.instant
-    # - navigation.instant.prefetch
-    # - navigation.instant.progress
-    # - navigation.prune
-    - navigation.sections
-    - navigation.tabs
-    # - navigation.tabs.sticky
-    - navigation.top
-    - navigation.tracking
-    - search.highlight
-    - search.share
-    - search.suggest
-    - toc.follow
-    - toc.integrate
-
-plugins:
-  - search:
-      lang: zh
