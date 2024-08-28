@@ -2,11 +2,25 @@ INHERIT: ../base.yml
 site_name: 合宙模组资料中心
 
 nav:
-  - 选型手册: product_manual/index.md
-  - Air780E: air780e/index.md
-  - Air780EP: air780ep/index.md
-  - Air780EPS: air780eps/index.md
-  - Air780EG: air780eg/index.md
-  - Air201: air201/index.md
+  - 产品手册: product_manual/index.md
+  - Air780E:
+    - 简介: air780e/index.md
+    - AT资料: https://docs.openluat.com/air780e/at/
+    - LuatOS资料: https://docs.openluat.com/air780e/at/
+  - Air780EP:
+    - 简介: air780ep/index.md
+    - AT资料: https://docs.openluat.com/air780ep/at/
+    - LuatOS资料: https://docs.openluat.com/air780ep/at/
+  - Air780EPS:
+    - 简介: air780eps/index.md
+    - AT资料: https://docs.openluat.com/air780eps/at/
+    - LuatOS资料: https://docs.openluat.com/air780eps/at/
+  - Air780EG:
+    - 简介: air780eg/index.md
+    - AT资料: https://docs.openluat.com/air780eg/at/
+    - LuatOS资料: https://docs.openluat.com/air780eg/at/
+  - Air201:
+    - 简介: air201/index.md
+    - LuatOS资料: https://docs.openluat.com/air201/at/
   - 问答中心: https://chat.openluat.com/
   - 合宙官网: https://www.openluat.com/
