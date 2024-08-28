@@ -6,9 +6,9 @@
 >
 >   - AT指令手册：[Luat4G模块EC618&EC716&EC718系列AT命令手册](https://doc.openluat.com/article/4985)
 >
->   - 780E模块AT固件：[合宙Air780E&600E AT固件更新说明](https://doc.openluat.com/article/4922)
+>   - 780EP模块AT固件：[合宙Air780E&600E AT固件更新说明](https://doc.openluat.com/article/5055)
 >
->   - 本示例所烧录的AT固件版本： **AirM2M_780E_LTE_AT_V1165**
+>   - 本示例所烧录的AT固件版本： **AirM2M_780EP_LTE_AT_V1007**
 >   
 >   - 如果不会烧录，可参考 [烧录教程](https://doc.openluat.com/wiki/21?wiki_page_id=6072)
 >   
@@ -20,9 +20,9 @@
 
 # 准备工作
 
-1. Air780E开发板
+1. Air780EP开发板
 
-    ![780E(1)](image/780E(1).jpg)
+    ![780EP](image/780EP.jpg)
 
 2. 数据线
 
@@ -39,7 +39,7 @@
 > 仅以示例进行简单参数描述，AT指令的详细描述请自行参考AT手册
 
 ~~~c
-// 780E的标准AT固件 其实默认都是有打开USB和RNDIS功能，这里先演示一下如果有关闭过怎么重新开启
+// 780EP的标准AT固件 其实默认都是有打开USB和RNDIS功能，这里先演示一下如果有关闭过怎么重新开启
 
 AT+RNDISCALL?       // 查询一下RNDIS的状态
 
@@ -124,8 +124,8 @@ OK
 
 # 适用型号&选型手册
 
-> 合宙支持AT功能的模组型号，除本文介绍的Air780E外，
-> 还有Air780EPA、Air780EP、Air780EX、Air201、Air780EQ、Air700ECQ、Air700EAQ、Air780EPT、Air780EPS等型号，
+> 合宙支持AT功能的模组型号，除本文介绍的Air780EP外，
+> 还有Air780EPA、Air780E、Air780EX、Air201、Air780EQ、Air700ECQ、Air700EAQ、Air780EPT、Air780EPS等型号，
 > 本文介绍的是TTS与音频文件播放应用指南的AT流程，同样也适用于这些型号。
 
 ![选型手册简洁版01](image/1.jpg)
