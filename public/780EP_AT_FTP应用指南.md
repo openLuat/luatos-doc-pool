@@ -12,7 +12,7 @@
 
 1. Air780EP_全IO开发板一套，包括天线SIM卡，USB线，并烧录AT固件
 
-  <img src="../image/AT开发资料/应用开发指南/FTP应用指南/d37e1424dda26c3e771b83738f36dcb.jpg" alt="d37e1424dda26c3e771b83738f36dcb" style="zoom:15%;" />
+  <img src="image/d37e1424dda26c3e771b83738f36dcb.jpg" alt="d37e1424dda26c3e771b83738f36dcb" style="zoom:15%;" />
 
 2. PC电脑，串口工具
 
