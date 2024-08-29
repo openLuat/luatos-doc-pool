@@ -1,5 +1,9 @@
 site_name: 合宙Air780E模组AT资料中心
 
+meta:
+  model: "air780e"
+  doctp : "at"
+
 nav:
   - 首页: index.md
   - 快速开始: quick_start.md

@@ -1,6 +1,8 @@
 INHERIT: ../../base.yml
-site_name: "/Air780E/LuatOS"
-
+site_name: "合宙文档中心"
+meta:
+  model: "air780e"
+  doctp : "luatos"
 nav:
   - 快速入门:
     - 介绍: quick_start/index.md

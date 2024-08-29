@@ -1,6 +1,9 @@
 INHERIT: ../base.yml
 site_name: 合宙模组资料中心
 
+meta:
+  author: 上海合宙通信科技有限公司
+
 nav:
   - 产品手册: product_manual/index.md
   - Air780E:

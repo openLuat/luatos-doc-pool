@@ -10,6 +10,8 @@ def do_build(path):
     root = os.path.abspath(path)
     # 拷贝产品手册的图片到当前目录
     shutil.copytree("../image", root + "/docs/image", dirs_exist_ok=True)
+    shutil.copytree("custom_theme", root + "/custom_theme", dirs_exist_ok=True)
+
     gitroot = os.path.abspath("../../")
     cmd = "docker run --rm -v {}:/opt/gitee/ -w /opt/gitee/luatos-doc-pool/docs/{} registry.cn-beijing.aliyuncs.com/wendal/mkdocs-material build"
     cmd = cmd.format(gitroot, path.replace("\\", "/"))
