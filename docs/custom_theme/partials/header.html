@@ -47,11 +47,13 @@
               {%  endif %}
             {%  endif %}
             {%  if paths.__len__() > 1 %}
+            {%  if paths[1].__len__() > 1 %}
               {%  if paths[1] == "at" %}
               <a href="/{{paths[0]}}/at/">/AT</a>
               {%  else %}
               <a href="/{{paths[0]}}/luatos/">/LuatOS</a>
               {%  endif %}
+            {%  endif %}
             {%  endif %}
           {%  endif %}
           </span>
