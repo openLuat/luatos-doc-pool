@@ -26,7 +26,7 @@ def build_blog():
             with open("blog/docs/pages/" + name, "r", encoding="utf-8") as f:
                 title = f.read().split("\n")[0][1:].strip()
 
-            tmp = "- [%s](pages/%s)\n" % (title, name)
+            tmp = "- %s [%s](pages/%s)\n" % (name.split("_")[0], title, name)
             tmpl += tmp
     with open("blog/docs/index.md", "w", encoding="utf-8") as f:
         f.write(tmpl)
