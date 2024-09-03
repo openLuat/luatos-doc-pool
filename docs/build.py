@@ -19,7 +19,7 @@ def build_blog():
     mons = []
     for name in pages:
         if name.startswith("20") and name.endswith(".md"):
-            month = name[:4]
+            month = name[:6]
             if month not in mons:
                 mons.append(month)
                 tmpl += "\n## %s\n\n" % month
