@@ -25,5 +25,9 @@ nav:
   - Air201:
     - 简介: air201/index.md
     - LuatOS资料: https://docs.openluat.com/air201/luatos/
+  - 技术博客: https://docs.openluat.com/blog/
   - 问答中心: https://chat.openluat.com/
   - 合宙官网: https://www.openluat.com/
+
+not_in_nav: |
+  - /askforhelp.md
