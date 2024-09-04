@@ -4,8 +4,9 @@
 
     感谢你们一直以来对合宙的支持！
 
-    为了让用户的开发体验更丝滑，合宙决定在 doc.openluat.com 和 wiki.openluat.com 文档中心的基础上， 新  建一个 docs.openluat.com,  重构合宙的产品文档。
-    
+    为了让用户的开发体验更丝滑，合宙决定在 `doc.openluat.com` 和 `wiki.openluat.com` 文档中心的基础上,
+    新建一个 `docs.openluat.com`, 重构合宙的产品文档。
+
     在这个重构的合宙 docs 文档中心，会改变之前合宙文档比较难以查找，描述不完整的状态。
 
 ## 初步打算这么规划
