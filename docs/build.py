@@ -52,12 +52,14 @@ def do_build(path):
     cmd = "docker run --rm -v {}:/opt/gitee/ -w /opt/gitee/luatos-doc-pool/docs/{} registry.cn-beijing.aliyuncs.com/wendal/mkdocs-material build"
     cmd = cmd.format(gitroot, path.replace("\\", "/"))
     try :
+        print("path", path)
         subprocess.check_call(cmd, shell=True)
-        if "/" not in path and "\\" not in path :
+        if "/" in path and "\\" in path :
             os.makedirs("/opt/docs/site/" + path + "/", exist_ok=True)
             shutil.copytree(path + "/site", "/opt/docs/site/" + path + "/", dirs_exist_ok=True)
         else :
             if path == "root":
+                print("copy from", path + "/site", "-->", "/opt/docs/site/")
                 os.makedirs("/opt/docs/site/", exist_ok=True)
                 shutil.copytree(path + "/site", "/opt/docs/site/", dirs_exist_ok=True)
             elif path == "blog":
