@@ -1,4 +1,4 @@
-# 780EP模块LuatOS开发如何外挂一个Flash芯片
+# Air780EP模块LuatOS开发如何外挂一个Flash芯片
 
 ## 简介
 
