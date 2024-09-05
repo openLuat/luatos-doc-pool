@@ -5,7 +5,7 @@ meta:
   author: 上海合宙通信科技有限公司
 
 nav:
-  - 产品手册: product_manual/index.md
+  - 产品手册: product.md
   - 技术博客: index.md
   - 问答中心: https://chat.openluat.com/
   - 合宙官网: https://www.openluat.com/
