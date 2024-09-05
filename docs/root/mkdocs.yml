@@ -5,7 +5,7 @@ meta:
   author: 上海合宙通信科技有限公司
 
 nav:
-  - 产品手册: product_manual/index.md
+  - 产品手册: product.md
   - Air780E:
     - 简介: air780e/index.md
     - LuatOS资料: https://docs.openluat.com/air780e/luatos/
