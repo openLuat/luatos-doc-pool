@@ -38,12 +38,16 @@ def do_build(path):
     root = os.path.abspath(path)
     # 拷贝产品手册的图片到当前目录
     shutil.copytree("../image", root + "/docs/image", dirs_exist_ok=True)
+    # 拷贝产品手册的index到当前目录
+    shutil.copytree("product_manual/", root + "/docs/product_manual/", dirs_exist_ok=True)
+
     # 拷贝自定义主题文件
     shutil.copytree("custom_theme", root + "/custom_theme", dirs_exist_ok=True)
     # 如果是AT文档,且不是Air724UG系列,那就拷贝一下AT手册
     if str(path).endswith("at") or str(path).endswith("at/") :
         if "air724ug" not in path:
             shutil.copytree("../doc/AT开发资料/AT_Command_Manual/docs/Command_List", root + "/docs/Command_List", dirs_exist_ok=True)
+
 
     # 构建简易博客
     build_blog()
