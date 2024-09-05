@@ -14,6 +14,10 @@ nav:
     - 简介: air780ep/index.md
     - LuatOS资料: https://docs.openluat.com/air780ep/luatos/
     - AT资料: https://docs.openluat.com/air780ep/at/
+  - Air724UG:
+    - 简介: air724ug/index.md
+    - LuatOS资料: https://docs.openluat.com/air724ug/luatos/
+    - AT资料: https://docs.openluat.com/air724ug/at/
   - Air780EPS:
     - 简介: air780eps/index.md
     - LuatOS资料: https://docs.openluat.com/air780eps/luatos/
@@ -22,6 +26,9 @@ nav:
     - 简介: air780eg/index.md
     - LuatOS资料: https://docs.openluat.com/air780eg/luatos/
     - AT资料: https://docs.openluat.com/air780eg/at/
+  - Air780EQ:
+    - 简介: air780eq/index.md
+    - AT资料: https://docs.openluat.com/air780eq/at/
   - Air201:
     - 简介: air201/index.md
     - LuatOS资料: https://docs.openluat.com/air201/luatos/
