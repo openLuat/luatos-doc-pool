@@ -22,7 +22,7 @@
 2. PC电脑，以及登录官方IOT后台 [https://iot.openluat.com/](https://gitee.com/link?target=https%3A%2F%2Fiot.openluat.com%2F)
 3. 固件和DEMO下载地址 [LuatOS软件包](https://gitee.com/openLuat/LuatOS/releases)
 
- <img src="../image/780EP/微信图片_20240722101832.jpg" width="50%">
+ ![image-20240722101832](image/image-20240722101832.jpg)
 
 ## 名词解析
 
@@ -339,7 +339,7 @@ sys.subscribe("mqtt_payload", function(topic, payload)
 end)
 ```
 
---- 
+---
 
 ## MQTT多链接示例
 
@@ -404,7 +404,7 @@ end)
 ~~~
 
 
---- 
+---
 
 ## MQTT SSL不带证书连接示例
 
