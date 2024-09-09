@@ -10,28 +10,41 @@ nav:
     - 简介: air780e/index.md
     - LuatOS资料: https://docs.openluat.com/air780e/luatos/
     - AT资料: https://docs.openluat.com/air780e/at/
+  - Air700:
+    - 简介: air700/index.md
+    - AT资料: https://docs.openluat.com/air700/at/
+  - Air780EQ:
+    - 简介: air780eq/index.md
+    - AT资料: https://docs.openluat.com/air780eq/at/
   - Air780EP:
     - 简介: air780ep/index.md
     - LuatOS资料: https://docs.openluat.com/air780ep/luatos/
     - AT资料: https://docs.openluat.com/air780ep/at/
-  - Air724UG:
-    - 简介: air724ug/index.md
-    - LuatOS资料: https://docs.openluat.com/air724ug/luatos/
-    - AT资料: https://docs.openluat.com/air724ug/at/
   - Air780EPS:
     - 简介: air780eps/index.md
     - LuatOS资料: https://docs.openluat.com/air780eps/luatos/
     - AT资料: https://docs.openluat.com/air780eps/at/
+  - Air780EX:
+    - 简介: air780ex/index.md
+    - LuatOS资料: https://docs.openluat.com/air780ex/luatos/
+    - AT资料: https://docs.openluat.com/air780ex/at/
+  - Air724UG:
+    - 简介: air724ug/index.md
+    - LuatOS资料: https://docs.openluat.com/air724ug/luatos/
+    - AT资料: https://docs.openluat.com/air724ug/at/
+  - Air201:
+    - 简介: air201/index.md
+    - LuatOS资料: https://docs.openluat.com/air201/luatos/
   - Air780EG:
     - 简介: air780eg/index.md
     - LuatOS资料: https://docs.openluat.com/air780eg/luatos/
     - AT资料: https://docs.openluat.com/air780eg/at/
-  - Air780EQ:
-    - 简介: air780eq/index.md
-    - AT资料: https://docs.openluat.com/air780eq/at/
-  - Air201:
-    - 简介: air201/index.md
-    - LuatOS资料: https://docs.openluat.com/air201/luatos/
+  - Air510U:
+    - 简介: air510u/index.md
+    - GNSS资料: https://docs.openluat.com/air510u/gnss/
+  - Air530Z:
+    - 简介: air510u/index.md
+    - GNSS资料: https://docs.openluat.com/air530z/gnss/
   - 技术博客: https://docs.openluat.com/blog/
   - 问答中心: https://chat.openluat.com/
   - 合宙官网: https://www.openluat.com/
