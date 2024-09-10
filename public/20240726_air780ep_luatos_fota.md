@@ -30,7 +30,7 @@ LuatOS-Air开发模式下，固件分为两部分：core和script
 2. PC电脑，以及登录官方IOT后台 [https://iot.openluat.com/](https://iot.openluat.com/)
 3. 固件和DEMO下载地址 [LuatOS固件](https://gitee.com/openLuat/LuatOS/releases)、[示例demo](https://gitee.com/openLuat/LuatOS/blob/master/demo/fota2)
 
- <img src="../image/780EP/微信图片_20240722101832.jpg" width="50%">
+ ![image-20240722101832](image/image-20240722101832.jpg)
 
 ## 三. 合宙iot平台升级core+script过程
 
@@ -108,6 +108,8 @@ LuatOS-Air开发模式下，固件分为两部分：core和script
    ![image-20240726152238293](image/image-20240726152238293.png)
 
 2. 选择新固件升级文件
+
+   特别说明：1002为固件版本号，1.1为脚本版本号
 
    ![image-20240726163148873](image/image-20240726163148873.png)
 
