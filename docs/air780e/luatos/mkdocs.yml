@@ -1,9 +1,12 @@
 INHERIT: ../../base.yml
 site_name: "合宙文档中心"
+site_url: https://docs.openluat.com/air780e/luatos/
+
 meta:
   model: "air780e"
   doctp : "luatos"
 nav:
+  - 产品手册: product.md
   - 快速入门:
     - 介绍: quick_start/index.md
     - HelloWorld教程:
@@ -357,15 +360,6 @@ nav:
         - 总结: app/utils/crypto/summary.md
         - 常见问题: app/utils/crypto/faq.md
         - 扩展: app/utils/crypto/ext.md
-      - 国密加密函数(gmssl):
-        - 简介: app/utils/gmssl/index.md
-        - 基本用法: app/utils/gmssl/basic.md
-        - SM2加密: app/utils/gmssl/sm2.md
-        - SM3加密: app/utils/gmssl/sm3.md
-        - SM4加密: app/utils/gmssl/sm4.md
-        - 总结: app/utils/gmssl/summary.md
-        - 常见问题: app/utils/gmssl/faq.md
-        - 扩展: app/utils/gmssl/ext.md
     - 配置信息存储:
       - 简介: app/config/index.md
       - 键值对存储(fskv):
@@ -435,8 +429,7 @@ nav:
         - 测试点电路: hardware/design/check_point.md
         - 温湿度传感器参考电路: hardware/design/sensor.md
         - 远程空开参考电路: hardware/design/remote.md
-  - 产品手册:
-    - 产品手册下载: product_manual.md
+  
   - 常见问题: faq.md
   - 问答中心: https://chat.openluat.com/
   - 合宙官网: https://www.openluat.com/
