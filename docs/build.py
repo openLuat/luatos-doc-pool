@@ -54,6 +54,7 @@ def do_build(path):
 
     gitroot = os.path.abspath("../../")
     cmd = "docker run --rm -v {}:/opt/gitee/ -w /opt/gitee/luatos-doc-pool/docs/{} registry.cn-beijing.aliyuncs.com/wendal/mkdocs-material build"
+    # cmd = "docker run --rm -v {}:/opt/gitee/ -w /opt/gitee/luatos-doc-pool/docs/{} squidfunk/mkdocs-material:9.5.34 build"
     cmd = cmd.format(gitroot, path.replace("\\", "/"))
     try :
         print("path", path)
@@ -84,4 +85,7 @@ def git_hook():
     do_build("root")
 
 if __name__ == '__main__':
-    git_hook()
+    if len(sys.argv) > 1 :
+        do_build(sys.argv[1])
+    else :
+        git_hook()
