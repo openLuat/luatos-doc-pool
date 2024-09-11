@@ -43,12 +43,11 @@ nav:
     - 简介: air510u/index.md
     - GNSS资料: https://docs.openluat.com/air510u/gnss/
   - Air530Z:
-    - 简介: air510u/index.md
+    - 简介: air530z/index.md
     - GNSS资料: https://docs.openluat.com/air530z/gnss/
   - DTU: https://irtu.cn/
   - 技术博客: https://docs.openluat.com/blog/
   - 问答中心: https://chat.openluat.com/
   - 合宙官网: https://www.openluat.com/
+  - 文档共建: askforhelp.md
 
-not_in_nav: |
-  - /askforhelp.md

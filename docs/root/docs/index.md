@@ -2,7 +2,7 @@
 
 本资料中心包含合宙模组的所有资料
 
-- [产品手册](./product/index.md)
+- [产品手册](./product.md)
 - [技术博客](https://docs.openluat.com/blog/)
 - [问答中心](https://chat.openluat.com/)
 - [合宙官网](https://www.openluat.com/)

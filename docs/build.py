@@ -55,7 +55,7 @@ def do_build(path):
     # cmd = "docker run --rm -v {}:/opt/gitee/ -w /opt/gitee/luatos-doc-pool/docs/{} squidfunk/mkdocs-material:9.5.34 build"
     cmd = cmd.format(gitroot, path.replace("\\", "/"))
     try :
-        print("path", path)
+        # print("path", path)
         subprocess.check_call(cmd, shell=True)
         dst = "/opt/docs/site/" + path + "/"
         if "/" in path and "\\" in path :
