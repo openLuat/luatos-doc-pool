@@ -130,10 +130,10 @@
 
 ```lua
 -- 动态注册
---iotcloudc = iotcloud.new(iotcloud.TENCENT,{produt_id = "xxx" ,product_secret = "xxx",device_name = "xxx"})
+--iotcloudc = iotcloud.new(iotcloud.TENCENT,{produt_id = "xxx" ,product_secret = "xxx")
 ```
 
-​	第一个参数表示我们使用的是腾讯云，第二个参数我们将上面得到的产品ID和产品密钥，产品名称我们可以取模组的IMEI，非常的简单！
+​	第一个参数表示我们使用的是腾讯云，第二个参数我们将上面得到的产品ID和产品密钥，非常的简单！
 
 ### 连接/断开云平台
 
