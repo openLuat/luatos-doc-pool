@@ -19,14 +19,14 @@ theme:
     #- header.autohide
     #- navigation.expand
     #- navigation.footer
-    #- navigation.indexes
+    # - navigation.indexes
     # - navigation.instant
     # - navigation.instant.prefetch
     # - navigation.instant.progress
-    - navigation.prune
+    # - navigation.prune
     - navigation.sections
     - navigation.tabs
-    - navigation.tabs.sticky
+    # - navigation.tabs.sticky
     # - navigation.top
     # - navigation.tracking
     # - navigation.path
