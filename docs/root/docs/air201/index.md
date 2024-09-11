@@ -1,5 +1,5 @@
 # 合宙Air201模组资料中心
 
-- [合宙Air201模组LuatOS资料中心](https://docs.openluat.com/air201/luatos/)
+- [使用手册(点我)](https://e3zt58hesn.feishu.cn/wiki/TbvvwP1YOidp9rkgLi8cL51enlh)
 
-![Air201模组图片](./image/air201.jpg)
+![Air201模组图片](./image/air201.png)
