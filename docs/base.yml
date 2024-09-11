@@ -27,8 +27,8 @@ theme:
     #- navigation.sections
     #- navigation.tabs
     #- navigation.tabs.sticky
-    #- navigation.top
-    #- navigation.tracking
+    - navigation.top
+    - navigation.tracking
     #- search.highlight
     #- search.share
     #- search.suggest
