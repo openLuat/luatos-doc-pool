@@ -47,29 +47,28 @@ def do_build(path):
     if str(path).endswith("at") or str(path).endswith("at/") :
         if "air724ug" not in path:
             shutil.copytree("../doc/AT开发资料/AT_Command_Manual/docs/Command_List", root + "/docs/Command_List", dirs_exist_ok=True)
-
-
     # 构建简易博客
     build_blog()
 
     gitroot = os.path.abspath("../../")
-    cmd = "docker run --rm -v {}:/opt/gitee/ -w /opt/gitee/luatos-doc-pool/docs/{} registry.cn-beijing.aliyuncs.com/wendal/mkdocs-material build"
+    cmd = "docker run --rm -v {}:/opt/docs/ -w /opt/docs/luatos-doc-pool/docs/{} registry.cn-beijing.aliyuncs.com/wendal/mkdocs-material build"
     # cmd = "docker run --rm -v {}:/opt/gitee/ -w /opt/gitee/luatos-doc-pool/docs/{} squidfunk/mkdocs-material:9.5.34 build"
     cmd = cmd.format(gitroot, path.replace("\\", "/"))
     try :
         print("path", path)
         subprocess.check_call(cmd, shell=True)
+        dst = "/opt/docs/site/" + path + "/"
         if "/" in path and "\\" in path :
-            os.makedirs("/opt/docs/site/" + path + "/", exist_ok=True)
-            shutil.copytree(path + "/site", "/opt/docs/site/" + path + "/", dirs_exist_ok=True)
+            if os.path.exists(dst) :
+                shutil.rmtree(dst)
         else :
             if path == "root":
-                print("copy from", path + "/site", "-->", "/opt/docs/site/")
-                os.makedirs("/opt/docs/site/", exist_ok=True)
-                shutil.copytree(path + "/site", "/opt/docs/site/", dirs_exist_ok=True)
+                dst = "/opt/docs/site/"
             elif path == "blog":
-                os.makedirs("/opt/docs/site/", exist_ok=True)
-                shutil.copytree(path + "/site", "/opt/docs/site/blog/", dirs_exist_ok=True)
+                dst = "/opt/docs/site/blog/"
+                if os.path.exists(dst) :
+                    shutil.rmtree(dst)
+        shutil.copytree(path + "/site", dst, dirs_exist_ok=True)
     except:
         import traceback
         traceback.print_exc()
