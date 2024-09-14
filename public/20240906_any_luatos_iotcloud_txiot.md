@@ -88,7 +88,7 @@
 
 ```lua
 -- 密钥校验
--- iotcloudc = iotcloud.new(iotcloud.TENCENT,{produt_id = "xxx",device_name = "xxx",key = "xxx"})
+-- iotcloudc = iotcloud.new(iotcloud.TENCENT,{produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})
 ```
 
 ​	第一个参数表示我们使用的是腾讯云，第二个参数我们将上面得到的三个参数填写到table中即可，so easy~
