@@ -14,17 +14,22 @@ http是物联网中比较常用的功能，本文介绍如何用Air780EP开发�
 
 ## 三. API说明
 
+
 | API接口             | 描述                    |
 | :------------------ | ----------------------- |
 | http.request()       | get或post一个http客户端 |
+
 
 ## 实现流程
 
 ### 1. 创建一个Task协程
 
 **接口**  ​
+
 sys.taskInit(func, arg1, arg2, argN)
+
 **参数**
+
 | 传入值类型 | 解释                                                 |
 | ---------- | ---------------------------------------------------- |
 | function   | 待执行的函数,可以是匿名函数, 也可以是local或全局函数 |
@@ -52,8 +57,11 @@ sys.waitUntil("IP_READY", 30000)
 ### 3. 创建一个http实例
 
 **接口**  ​
+
 http.request(method,url,headers,body,opts,ca_file,client_ca, client_key, client_password)
+
 **参数**
+
 | 传入值类型 | 解释                                                         |
 | ---------- | ------------------------------------------------------------ |
 | string        | 请求方法, 支持 GET/POST 等合法的HTTP方法 |
@@ -65,7 +73,9 @@ http.request(method,url,headers,body,opts,ca_file,client_ca, client_key, client_
 | string | 客户端ca证书数据, 可选, 一般不需要, 双向https认证才需要 |
 | string | 客户端私钥加密数据, 可选, 一般不需要, 双向https认证才需要 |
 | string | 客户端私钥口令数据, 可选, 一般不需要, 双向https认证才需要 |
+
 **返回值**
+
 | 返回值类型 | 解释                                   |
 | ---------- | -------------------------------------- |
 | int | code , 服务器反馈的值>=100, 最常见的是200.如果是底层错误,例如连接失败, 返回值小于0 |
@@ -131,13 +141,21 @@ end
 ```
 
 **第一个get请求body返回服务器响应的内容字符串**
+
 ![image.png](https://cdn.openluat-luatcommunity.openluat.com/images/20240809162951115_image.png)
+
 **第二个服务器暂不支持，所以会返回链接失败**
+
 ![image.png](https://cdn.openluat-luatcommunity.openluat.com/images/20240809163258647_image.png)
+
 **第三个get返回结果**
+
 ![image.png](https://cdn.openluat-luatcommunity.openluat.com/images/20240809170822667_image.png)
+
 3. 开始演示POST请求
+
 **注：post请求需要将demo_http_post_file()打开**
+
 ![image.png](https://cdn.openluat-luatcommunity.openluat.com/images/20240809172802706_image.png)
 
 ```lua
@@ -146,14 +164,16 @@ function demo_http_post_file()
 -- 这里通过当前时间戳来确保boundary的唯一性
 local boundary = "----WebKitFormBoundary"..os.time()
 -- 设置HTTP请求头，指定内容类型为multipart/form-data，并附上boundary
-local req_headers = {           ["Content-Type"] = "multipart/form-data; boundary="..boundary,       }
+local req_headers = {
+    ["Content-Type"] = "multipart/form-data; boundary="..boundary,
+           }
 -- 手动拼接multipart/form-data的请求体
 -- 包括文件信息（文件名、类型等）和文件内容
 local body = "--"..boundary.."\r\n"..
-"Content-Disposition: form-data; name=\"uploadFile\"; filename=\"luatos_uploadFile_TEST01.txt\""..
-"\r\nContent-Type: text/plain\r\n\r\n"..
-"1111http_测试一二三四654zacc\r\n"..
-"--"..boundary
+             "Content-Disposition: form-data; name=\"uploadFile\";filename=\"luatos_uploadFile_TEST01.txt\""..
+             "\r\nContent-Type: text/plain\r\n\r\n"..
+             "1111http_测试一二三四654zacc\r\n"..
+             "--"..boundary
 -- 打印请求头和请求体，用于调试
 log.info("headers: ", "\r\n"..json.encode(req_headers))
 log.info("body: ", "\r\n"..body)
@@ -161,8 +181,8 @@ log.info("body: ", "\r\n"..body)
 -- 使用http.request函数，传入方法（POST）、URL、请求头和请求体
 -- 然后调用.wait()方法等待请求完成，并获取响应的状态码、响应头和响应体
 local code, headers, body = http.request("POST","http://airtest.openluat.com:2900/uploadFileToStatic",
-req_headers,
-body -- POST请求所需要的body
+        req_headers,
+        body -- POST请求所需要的body
 ).wait()
 -- 打印HTTP响应的状态码、响应头和响应体
 log.info("http.post", code, headers, body)
@@ -183,7 +203,10 @@ postMultipartFormData(
         }
     }
     )
-    end```
+
+end
+```
+
 运行结果：
 ![image.png](https://cdn.openluat-luatcommunity.openluat.com/images/20240809173625028_image.png)
 ![image.png](https://cdn.openluat-luatcommunity.openluat.com/images/20240809173716947_image.png)
