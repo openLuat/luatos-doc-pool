@@ -16,7 +16,7 @@ sys.taskInit(function()
     -- 对于双卡单待的设备来说,只能获取当前SIM卡的ICCID
     local iccid = mobile.iccid()
     log.info("sim_iccid", iccid)
-    -- 实例输出：sim0_iccid 898604981022C0254186
+    -- 实例输出：sim_iccid 898604981022C0254186
 end)
 ```
 

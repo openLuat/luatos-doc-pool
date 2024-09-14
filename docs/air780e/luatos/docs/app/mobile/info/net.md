@@ -2,251 +2,146 @@
 
 网络切换可以通过进出飞行模式，锁定band，重启协议栈，配置小区重选信号差值门限来进行切换网络。
 
-## mobile.flymode(index, enable)
+## 进出飞行模式
 
-进出飞行模式
+如果模块长时间注册不上网络，可以通过进出飞行模式的方式，重新注册网络。
 
-**参数**
+**mobile.flymode(index, enable)**
 
-| 传入值类型 | 解释                                             |
-| ---------- | ------------------------------------------------ |
-| int        | 编号,默认0. 在支持双卡的模块上才会出现0或1的情况 |
-| bool       | 是否设置为飞行模式,true为设置, false为退出,可选  |
+进出飞行模式，index编号,默认0. 在支持双卡的模块上才会出现0或1的情况。
 
-**返回值**
+enable是否设置为飞行模式，true为设置，false为退出,可选。
 
-| 返回值类型 | 解释             |
-| ---------- | ---------------- |
-| bool       | 原飞行模式的状态 |
-
-**例子**
-
-mobile.flymode(0,true)   --进入飞行模式
-
-mobile.flymode(0,false)  --退出飞行模式
-
-## mobile.getCellInfo()
-
-获取基站信息
-
-**参数**
-
-无
-
-**返回值**
-
-| 返回值类型 | 解释               |
-| ---------- | ------------------ |
-| table      | 包含基站数据的数组 |
-
-**例子**
-
-```
--- 注意: 从2023.06.20开始, 需要主动请求一次reqCellInfo才会有基站数据.
-
---示例输出(原始数据是table, 下面是json格式化后的内容)
---[[
-[
-    {"rsrq":-10,"rssi":-55,"cid":124045360,"mnc":17,"pci":115,"earfcn":1850,"snr":15,"rsrp":-85,"mcc":1120,"tdd":0},
-    {"pci":388,"rsrq":-11,"mnc":17,"earfcn":2452,"snr":5,"rsrp":-67,"mcc":1120,"cid":124045331},
-    {"pci":100,"rsrq":-9,"mnc":17,"earfcn":75,"snr":17,"rsrp":-109,"mcc":1120,"cid":227096712}
-]
-]]
-
-mobile.reqCellInfo(60)
--- 订阅
-sys.subscribe("CELL_INFO_UPDATE", function()
-    log.info("cell", json.encode(mobile.getCellInfo()))
-end)
-
--- 定期轮训式
+```lua
 sys.taskInit(function()
-    sys.wait(3000)
-    while 1 do
-        mobile.reqCellInfo(15)
-        sys.waitUntil("CELL_INFO_UPDATE", 15000)
-        log.info("cell", json.encode(mobile.getCellInfo()))
-    end
+    -- 如果在刚开机就要执行获取，最好先加些延时，等待网络注册成功
+    sys.wait(4000)
+    --进入飞行模式   
+    log.info("进入飞行模式 ", mobile.flymode(0,true))
+    -- 实例输出：I/user.进入飞行模式 	true mobile NETIF_LINK_OFF -> IP_LOSE 
+
+    sys.wait(2000)  
+    -- 延时2秒退出飞行模式 
+    log.info("退出飞行模式 ", mobile.flymode(0,false)) 
+    -- 实例输出：I/user.退出飞行模式 	false mobile NETIF_LINK_ON -> IP_READY
 end)
 ```
 
-## mobile.reqCellInfo(timeout)
+## 获取当前使用/支持的band
 
-发起基站信息查询,含临近小区
+**mobile.getBand(band)**
 
-**参数**
+获取当前使用/支持的band。band：输出band
 
-| 传入值类型 | 解释                                  |
-| ---------- | ------------------------------------- |
-| int        | 超时时长,单位秒,默认15. 最少5, 最高60 |
+## 设置使用的band
 
-**返回值**
+**mobile.setBand(band, num)**
 
-| 返回值类型 | 解释     |
-| ---------- | -------- |
-| nil        | 无返回值 |
+设置使用的band。band：输入使用的band，num：band数量。
 
-**例子**
+```lua
+sys.taskInit(function()
+	local band = zbuff.create(40)
+    local band1 = zbuff.create(40)
+        
+    mobile.getBand(band)
+    log.info("当前使用的band:")
+    for i=0,band:used()-1 do
+        log.info("band", band[i])
+    end
+    -- 实例输出：当前使用的band: 1 3 5 8 34 38 39 40 41
+        
+    -- 改成使用38,39,40
+    band1[0] = 38
+    band1[1] = 39
+    band1[2] = 40
+    mobile.setBand(band1, 3)
+        
+    band1:clear()
+    mobile.getBand(band1)
+    log.info("修改后使用的band:")
+    for i=0,band1:used()-1 do
+        log.info("band", band1[i])
+    end
+    -- 实例输出：修改后使用的band: 38 39 40
+        
+    -- 改回原先使用的band，也可以下载的时候选择清除fs
+    mobile.setBand(band, band:used())    
 
-```
--- 参考 mobile.getCellInfo 函数
-```
-
-## mobile.reset()
-
-重启协议栈
-
-**参数**
-
-无
-
-**返回值**
-
-| 返回值类型 | 解释     |
-| ---------- | -------- |
-| nil        | 无返回值 |
-
-**例子**
-
-```
--- 重启LTE协议栈
-mobile.reset()
-```
-
-## mobile.dataTraffic(clearUplink, clearDownlink)
-
-数据量流量处理
-
-**参数**
-
-| 传入值类型 | 解释                                   |
-| ---------- | -------------------------------------- |
-| boolean    | 清空上行流量累计值，true清空，其他忽略 |
-| boolean    | 清空下行流量累计值，true清空，其他忽略 |
-
-**返回值**
-
-| 返回值类型 | 解释       |
-| ---------- | ---------- |
-| int        | 上行流量GB |
-| int        | 上行流量B  |
-| int        | 下行流量GB |
-| int        | 下行流量B  |
-
-**例子**
-
-```
--- 获取上下行流量累计值
--- 上行流量值Byte = uplinkGB * 1024 * 1024 * 1024 + uplinkB
--- 下行流量值Byte = downlinkGB * 1024 * 1024 * 1024 + downlinkB
-local uplinkGB, uplinkB, downlinkGB, downlinkB = mobile.dataTraffic()
-
--- 清空上下行流量累计值
-mobile.dataTraffic(true, true)
-
--- 仅记录开机后的流量,复位/重启会归零
+    mobile.getBand(band1)
+    log.info("修改回默认使用的band:")
+    for i=0,band1:used()-1 do
+        log.info("band", band1[i])
+    end
+	-- 实例输出：修改回默认使用的band: 1 3 5 8 34 38 39 40 41
+end)
 ```
 
-## mobile.config(item, value)
+## 重启协议栈
 
-网络特殊配置
+如果模块长时间注册不上网络，可以重启协议栈，重新注册网络。
 
-**参数**
+**mobile.reset()**
 
-| 传入值类型 | 解释                          |
-| ---------- | ----------------------------- |
-| int        | 配置项目，看mobile.CONF_XXX   |
-| int        | 配置值,根据具体配置的item决定 |
-
-**返回值**
-
-| 返回值类型 | 解释     |
-| ---------- | -------- |
-| boolean    | 是否成功 |
-
-**例子**
-
+```lua
+sys.taskInit(function()
+    -- 如果在刚开机就要执行获取，最好先加些延时，等待网络注册成功
+    sys.wait(4000)
+    --进入飞行模式   
+    log.info("重启协议栈", mobile.reset())
+    -- 实例输出：
+    -- 重启协议栈 [10:35:23.554]D/mobile NETIF_LINK_OFF -> IP_LOSE
+              --[10:35:25.562]D/mobile NETIF_LINK_ON -> IP_READY
+end)
 ```
---针对不同平台有不同的配置，谨慎使用，目前只有EC618/EC718系列
 
--- EC618配置小区重选信号差值门限，不能大于15dbm，必须在飞行模式下才能用
+## 辅助周期性或者自动功能
+
+**mobile.setAuto（check_sim_period, get_cell_period, search_cell_time, auto_reset_stack, network_check_period）**
+
+设置一些辅助周期性或者自动功能，目前支持SIM卡暂时脱离后恢复，周期性获取小区信息，网络遇到严重故障时尝试自动恢复。
+
+```lua
+sys.taskInit(function()
+    -- check_sim_period: SIM卡自动恢复时间，单位毫秒，建议5000~10000，和飞行模式/SIM卡切换冲突，不能			再同一时间使用，必须错开执行。写0或者不写则是关闭功能
+    -- get_cell_period: 周期性获取小区信息的时间间隔，单位毫秒。获取小区信息会增加部分功耗。写0或者不写则          是关闭功能
+    -- search_cell_time: 每次搜索小区时最大搜索时间，单位秒。不要超过8秒
+    -- auto_reset_stack: 网络遇到严重故障时尝试自动恢复，和飞行模式/SIM卡切换冲突，true开启，false关		闭，开始状态是false，留空则不做改变
+    -- 设置定时检测网络是否正常并且在检测到长时间无网时通过重启协议栈来恢复，无网恢复时长，单位ms，建议            60000以上，为网络搜索网络保留足够的时间，留空则不做更改      
+    log.info("辅助周期性或者自动功能", mobile.setAuto(5000,0,8,true,60000))
+end)
+```
+
+## 网络特殊配置
+
+**mobile.config(item, value)**
+
+```lua
+sys.taskInit(function()
+--配置小区重选信号差值门限，不能大于15dbm，必须在飞行模式下才能用
 mobile.flymode(0,true)
 mobile.config(mobile.CONF_RESELTOWEAKNCELL, 15)
-mobile.config(mobile.CONF_STATICCONFIG, 1) --开启网络静态优化
+--开启网络静态优化        
+mobile.config(mobile.CONF_STATICCONFIG, 1) 
 mobile.flymode(0,false)
-
--- EC618设置SIM写入次数的统计
--- 关闭统计
-mobile.config(mobile.CONF_SIM_WC_MODE, 0)
--- 开启统计, 默认也是开启的.
-mobile.config(mobile.CONF_SIM_WC_MODE, 1)
--- 读取统计值,异步, 需要通过系统消息SIM_IND获取
-sys.subscribe("SIM_IND", function(stats, value)
-    log.info("SIM_IND", stats)
-    if stats == "SIM_WC" then
-        log.info("sim", "write counter", value)
-    end
 end)
-mobile.config(mobile.CONF_SIM_WC_MODE, 2)
--- 清空统计值
-mobile.config(mobile.CONF_SIM_WC_MODE, 3)
 ```
 
-## mobile.getBand(band, is_default)
+## 锁定/解锁小区
 
-获取当前使用/支持的band
+**mobile.lockCell(mode, earfcn, pci)**
 
-**参数**
+锁定/解锁小区，仅用于外场测试，没接触过的，或者生产环境中请勿使用
 
-| 传入值类型 | 解释                                                         |
-| ---------- | ------------------------------------------------------------ |
-| zbuff      | 输出band                                                     |
-| boolean    | true默认支持，false当前支持的，默认是false，当前是预留功能，不要写true |
+mode: 操作码 0删除优先的频点，1设置优先频点，2锁定小区，3解锁小区
 
-**返回值**
+earfcn: 下行频点
 
-| 返回值类型 | 解释                        |
-| ---------- | --------------------------- |
-| boolean    | 成功返回true，失败放回false |
+pci: phycellid
 
-**例子**
-
+```lua
+sys.taskInit(function()
+	mobile.lockCell(2,1860,32)    --锁定小区
+	mobile.lockCell(3)            --解锁小区
+end)
 ```
-local buff = zbuff.create(40)
-mobile.getBand(buff) --输出当前使用的band，band号放在buff内，buff[0]，buff[1]，buff[2] .. buff[buff:used() - 1]
-```
-
-
-
-------
-
-## mobile.setBand(band, num)
-
-设置使用的band
-
-**参数**
-
-| 传入值类型 | 解释           |
-| ---------- | -------------- |
-| zbuff      | 输入使用的band |
-| int        | band数量       |
-
-**返回值**
-
-| 返回值类型 | 解释                        |
-| ---------- | --------------------------- |
-| boolean    | 成功返回true，失败放回false |
-
-**例子**
-
-```
-local buff = zbuff.create(40)
-buff[0] = 3
-buff[1] = 5
-buff[2] = 8
-buff[3] = 40
-mobile.setBand(buff, 4) --设置使用的band一共4个，为3,5,8,40
-```
-
-------
-

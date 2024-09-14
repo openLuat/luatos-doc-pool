@@ -1,27 +1,21 @@
-# IMEI获取
+# IMEI介绍
 
 IMEI（International Mobile Equipment Identity）是国际移动设备识别码的缩写，也被称为手机序列号或手机“串号”。这个号码由15位数字组成，是全球范围内唯一识别每一部移动设备的代码。IMEI号相当于手机的“身份证”，用于在移动通信网络中准确识别每一部手机。
 
-## mobile.imei(index)
+## 获取IMEI
 
-获取IMEI
+**mobile.imei(index)**
 
-**参数**
-
-| 传入值类型 | 解释                                             |
-| ---------- | ------------------------------------------------ |
-| int        | 编号,默认0. 在支持双卡的模块上才会出现0或1的情况 |
-
-**返回值**
-
-| 返回值类型 | 解释                       |
-| ---------- | -------------------------- |
-| string     | 当前的IMEI值,若失败返回nil |
-
-**例子**
-
+```lua
+--4G模组只支持双卡单待/单卡，只有一个IMEI，可以通过mobile.imei()直接获取
+sys.taskInit(function()
+    -- 获取IMEI
+    log.info("imei", mobile.imei())    
+    -- 实例输出：imei 866374063853768
+end)
 ```
-log.info("imei", mobile.imei()) --866374063853768
 
-```
+## 通过IMEI查询模块生产记录
+
+[合宙云平台 (openluat.com)](https://iot.openluat.com/mes/mes-device-info)
 

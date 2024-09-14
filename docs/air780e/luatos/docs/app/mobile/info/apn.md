@@ -1,57 +1,60 @@
-# 设置APN
+# APN介绍
+
+APN，全称Access Point Name，即接入点名称。它是移动设备在连接移动网络时，用于指示数据连接的网络接入点的一个标识符。简单来说，APN就是告诉手机或其他移动设备，应该通过哪个“门”来访问互联网或其他外部网络。
 
 如果是公网SIM卡，不需要用户主动设置APN，软件自动去网络端查询APN进行设置。
 
-如果是专网SIM卡，首先咨询SIM卡提供商APN参数，设置APN必须在入网前就设置好，比如在SIM卡识别完成前就设置好mobile.apn（）。
+如果是专网SIM卡，首先咨询SIM卡提供商APN参数，设置APN必须在入网前就设置好，比如在SIM卡识别完成前就设置好。
 
-## mobile.apn(index, cid, new_apn_name, user_name, password, ip_type, protocol)
+## 获取当前SIM卡的apn
+
+**mobile.apn()**
+
+```lua
+sys.taskInit(function()
+    -- 如果在刚开机就要执行获取，最好先加些延时，防止sim卡刚上电还未准备好，读取失败。
+    sys.wait(2000)
+
+    -- 获取apn
+    -- 对于双卡单待的设备来说,只能获取当前SIM卡的apn
+    local apn = mobile.apn()
+    log.info("sim_apn", apn)
+    -- 实例输出：sim_apn cmnet.mnc008.mcc460.gprs
+end)
+```
+
+## 设置当前SIM卡的apn
+
+**mobile.apn(index, cid, new_apn_name, user_name, password, ip_type, protocol)**
 
 获取或设置APN，设置APN必须在入网前就设置好，比如在SIM卡识别完成前就设置好
 
-**参数**
-
-| 传入值类型 | 解释                                                         |
-| ---------- | ------------------------------------------------------------ |
-| int        | 编号,默认0. 在支持双卡的模块上才会出现0或1的情况             |
-| int        | cid, 默认0，如果要用非默认APN来激活，必须>0                  |
-| string     | 新的APN,不填就是获取APN, 填了就是设置APN, 是否支持设置取决于底层实现 |
-| string     | 新的APN的username,如果APN不是空,那必须填写,如果没有留个空字符串””。如果APN是空的，那可以nil |
-| string     | 新的APN的password,如果APN不是空,那必须填写,如果没有留个空字符串””。如果APN是空的，那可以nil |
-| int        | 激活APN时的IP TYPE,1=IPV4 2=IPV6 3=IPV4V6,默认是1            |
-| int        | 激活APN时,如果需要username和password,就要写鉴权协议类型,1~3,默认3,代表1和2都尝试一下。不需要鉴权的写0 |
-| boolean    | 是否删除APN,true是,其他都否,只有参数3新的APN不是string的时候才有效果 |
-
-**返回值**
-
-| 返回值类型 | 解释                          |
-| ---------- | ----------------------------- |
-| string     | 获取到的默认APN值,失败返回nil |
-
-**例子**
-
-```
-mobile.apn(0,1,"cmiot","","",nil,0) -- 移动公网卡设置APN为cmiot,一般不用设置
-mobile.apn(0,1,"name","user","password",nil,3) -- 专网卡设置的demo，name，user，password
+```lua
+sys.taskInit(function()
+    -- 移动公网卡设置APN为cmiot,一般不用设置
+	mobile.apn(0,1,"cmiot","","",nil,0) 
+    -- 专网卡设置的demo，name，user，password联系卡商获取
+	mobile.apn(0,1,"name","user","password",nil,3) 
+end)
 ```
 
-## mobile.ipv6(onff)
-
-是否默认开启IPV6功能，必须在LTE网络连接前就设置好
-
-**参数**
-
-| 传入值类型 | 解释                     |
-| ---------- | ------------------------ |
-| boolean    | 开关 true开启 false 关闭 |
-
-**返回值**
-
-| 返回值类型 | 解释                                  |
-| ---------- | ------------------------------------- |
-| boolean    | true 当前是开启的，false 当前是关闭的 |
-
-**例子**
+## 如何区分专网卡
 
 ```
--- 注意, 开启ipv6后, 开机联网会慢2~3秒
+根据使用的网络类型来分，sim卡可以分为公网卡和专网卡两种
+如何判断sim卡是公网卡还是专网卡，可按照如下顺序确认：
+1. 咨询sim卡供应商
+2. 如果apn有账号、或者有密码、或者有加密类型，则可以认为是专网卡
 ```
+
+## 专网卡访问白名单
+
+用定向Ip的物联网卡，需要把域名或IP加入白名单才能使用，下面列出模块会访问的域名或IP服务器。
+
+| 功能         | 地址                  | 端口  | 协议 |
+| ------------ | --------------------- | ----- | ---- |
+| 远程升级     | iot.openluat.com      | 80    | http |
+| 日志服务     | dev_msg1.openluat.com | 12425 | udp  |
+| 基站WIFI定位 | bs.openluat.com       | 12411 | udp  |
+| AGPS星历下载 | download.openluat.com | 80    | http |
+| NTP时间同步  | ntp.aliyun.com        | 123   | udp  |
