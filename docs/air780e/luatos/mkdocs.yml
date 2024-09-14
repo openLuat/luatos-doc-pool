@@ -40,10 +40,12 @@ nav:
       - 扩展: quick_start/nettemp/ext.md
     - 固件的远程升级:
       - 介绍: quick_start/upgrade/index.md
-      - 编写脚本: quick_start/upgrade/01.md
-      - 烧录代码到硬件: quick_start/nettemp/02.md
-      - 验证功能: quick_start/nettemp/03.md
-      - 总结: quick_start/nettemp/summary.md
+      - 生成差分包: quick_start/upgrade/01.md
+      - 云平台配置: quick_start/upgrade/02.md
+      - 编写脚本: quick_start/upgrade/03.md
+      - 烧录代码到硬件: quick_start/upgrade/04.md
+      - 验证功能: quick_start/upgrade/05.md
+      - 总结: quick_start/upgrade/summary.md
       - 常见问题: quick_start/upgrade/faq.md
       - 扩展: quick_start/upgrade/ext.md
     - 通过MQTT连接实现远程控制:
