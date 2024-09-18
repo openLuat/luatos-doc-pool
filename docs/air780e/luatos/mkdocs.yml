@@ -56,7 +56,7 @@ nav:
       - 总结: quick_start/mqtt/summary.md
       - 常见问题: quick_start/mqtt/faq.md
       - 扩展: quick_start/mqtt/ext.md
-    - 驱动IIC小屏幕的详细讲解:
+    - 驱动SPI小屏幕的详细讲解:
       - 介绍: quick_start/oled/index.md
       - 硬件准备: quick_start/oled/01.md
       - 编写脚本: quick_start/oled/02.md

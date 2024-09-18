@@ -4,5 +4,5 @@
 
 2、脚本中PROJECT保持一致，VERSION版本号大于旧版
 
-查看升级日志
+3、升级时的错误可以查看升级日志
 ![xiaoguozhanshi2](./image/xiaoguozhanshi2.jpg)
