@@ -39,13 +39,9 @@ nav:
     - 简介: air780eg/index.md
     - LuatOS资料: https://docs.openluat.com/air780eg/luatos/
     - AT资料: https://docs.openluat.com/air780eg/at/
-  - Air510U:
-    - 简介: air510u/index.md
-    - GNSS资料: https://docs.openluat.com/air510u/gnss/
-  - Air530Z:
-    - 简介: air530z/index.md
-    - GNSS资料: https://docs.openluat.com/air530z/gnss/
+  - 卫星定位模组: gnss.md
   - DTU: https://irtu.cn/
+  - 增值服务: web.md
   - 技术博客: https://docs.openluat.com/blog/
   - 问答中心: https://chat.openluat.com/
   - 合宙官网: https://www.openluat.com/
