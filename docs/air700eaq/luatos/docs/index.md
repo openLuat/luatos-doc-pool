@@ -1,6 +1,6 @@
-# 合宙Air201模组LuatOS资料中心
+# 合宙Air700EAQ模组LuatOS资料中心
 
-本资料中心包含Air201使用LuatOS开发的所有资料
+本资料中心包含Air700EAQ使用LuatOS开发的所有资料
 
 - [快速入门](./quick_start/index.md)
 - [软件demo](./app/index.md)
@@ -13,7 +13,7 @@
 <script>
 var tmp = window.location.pathname.split("/").filter(part => part.length > 0);
 console.log(tmp)
-var redirectUrl = 'quick_start/';
+var redirectUrl = 'product/';
 if (tmp.length == 0 || (tmp.length == 2 && window.location.pathname.endsWith("/"))) {
     // 如果符合，跳转到指定URL
     window.location.href = window.location.pathname + redirectUrl;

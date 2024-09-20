@@ -1,6 +1,6 @@
-# 合宙Air201模组LuatOS资料中心
+# 合宙Air700ECQ模组LuatOS资料中心
 
-本资料中心包含Air201使用LuatOS开发的所有资料
+本资料中心包含Air700ECQ使用LuatOS开发的所有资料
 
 - [快速入门](./quick_start/index.md)
 - [软件demo](./app/index.md)

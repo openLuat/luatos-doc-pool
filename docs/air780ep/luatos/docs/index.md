@@ -5,7 +5,7 @@
 - [快速入门](./quick_start/index.md)
 - [软件demo](./app/index.md)
 - [硬件demo](./hardware.md)
-- [产品手册](./product_manual/)
+- [产品手册](./product/)
 - [常见问题](./faq.md)
 - [问答中心](https://chat.openluat.com/)
 - [合宙官网](https://www.openluat.com/)
