@@ -38,7 +38,7 @@
 
 ### 硬件准备
 
-- air780ep开发板一块
+- air780e开发板一块
 - USB数据线
 - 电脑
 
@@ -106,7 +106,7 @@
 ​	接下来我们看下代码具体怎么用
 
 ```lua
--- 密钥校验
+-- 一型一密
 -- iotcloudc = iotcloud.new(iotcloud.ONENET,{produt_id = "xxx",device_name = "xxx",product_secret = "xxx"})
 ```
 
@@ -125,7 +125,7 @@
 ​	接下来我们再来看下代码具体怎么用
 
 ```lua
--- 证书校验
+-- 一机一密
 -- iotcloudc = iotcloud.new(iotcloud.ONENET,{produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})
 ```
 

@@ -1,0 +1,12 @@
+INHERIT: ../../base.yml
+site_name: "合宙文档中心"
+site_url: https://docs.openluat.com/air724ug/luatos/
+
+meta:
+  model: "air724ug"
+  doctp : "luatos"
+nav:
+  - 产品手册: product/index.md
+  - 常见问题: faq.md
+  - 问答中心: https://chat.openluat.com/
+  - 合宙官网: https://www.openluat.com/

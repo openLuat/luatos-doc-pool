@@ -13,3 +13,6 @@
 [IOT_CLOUD系列文档之腾讯物联网云平台](./20240906_any_luatos_iotcloud_txiot.md)
 
 [IOT_CLOUD系列文档之中移ONENET物联网云平台](./20240912_any_luatos_iotcloud_onenet.md)
+
+[IOT_CLOUD系列文档之中移阿里云物联网云平台](./20240920_any_luatos_iotcloud_aliyun.md)
+

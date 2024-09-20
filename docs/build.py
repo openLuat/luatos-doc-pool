@@ -39,7 +39,8 @@ def do_build(path):
     # 拷贝产品手册的图片到当前目录
     shutil.copytree("../image", root + "/docs/image", dirs_exist_ok=True)
     # 拷贝产品手册的index到当前目录
-    shutil.copytree("common/", root + "/docs/", dirs_exist_ok=True)
+    if not path.startswith("air"):
+        shutil.copytree("common/", root + "/docs/", dirs_exist_ok=True)
 
     # 拷贝自定义主题文件
     shutil.copytree("custom_theme", root + "/custom_theme", dirs_exist_ok=True)
@@ -47,8 +48,7 @@ def do_build(path):
     if str(path).endswith("at") or str(path).endswith("at/") :
         if "air724ug" not in path:
             shutil.copytree("../doc/AT开发资料/AT_Command_Manual/docs/Command_List", root + "/docs/Command_List", dirs_exist_ok=True)
-    # 构建简易博客
-    build_blog()
+    
 
     gitroot = os.path.abspath("../../")
     cmd = "docker run --rm -v {}:/opt/docs/ -w /opt/docs/luatos-doc-pool/docs/{} registry.cn-beijing.aliyuncs.com/wendal/mkdocs-material build"
@@ -75,6 +75,8 @@ def do_build(path):
 
 def git_hook():
     subprocess.check_call(["git", "pull"])
+    # 构建简易博客
+    build_blog()
     do_build("blog")
     for name in os.listdir(".") :
         if os.path.isdir(name) :

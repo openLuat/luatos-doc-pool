@@ -6,7 +6,7 @@ meta:
   model: "air780e"
   doctp : "luatos"
 nav:
-  - 产品手册: product.md
+  - 产品手册: product/index.md
   - 快速入门:
     - 介绍: quick_start/index.md
     - HelloWorld教程:
