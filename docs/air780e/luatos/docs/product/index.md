@@ -1,5 +1,11 @@
 # Air780E产品手册
 
+| 模块名称  | 适用区域         | 频段                                          | 封装尺寸        |
+| -------- | ---------------- | --------------------------------------------- | --------------- |
+| 780E    | 中国/印度/东南亚 | TDD：B34/B38/B39/B40/B41</br>FDD：B1/B3/B5/B8 | 17.7\*15.8\*2.3 |
+
+## 模块硬件资料
+
 | 资料简介 | 相关链接|
 | ------- | ------ |
 | 规格书 | [Air780E_模块产品规格书_V1.0.5.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240814171731789_Air780E_模块产品规格书_V1.0.5.pdf)<br>[Air780E_Product_Specification_Sheet_V1.0.3.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240814171748402_Air780E_Product_Specification_Sheet_V1.0.3.pdf) |
