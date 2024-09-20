@@ -65,7 +65,7 @@ nav:
       - 总结: quick_start/lcd/summary.md
       - 常见问题: quick_start/lcd/faq.md
       - 扩展: quick_start/lcd/ext.md
-    - 使用文件系统对温湿度的存储和上报:
+    - 使用文件系统对温湿度数据存储:
       - 介绍: quick_start/file/index.md
       - 编写脚本: quick_start/file/01.md
       - 烧录代码到硬件: quick_start/file/02.md
