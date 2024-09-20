@@ -1,10 +1,10 @@
 INHERIT: ../../base.yml
 site_name: "合宙文档中心"
 
-site_url: https://docs.openluat.com/air780e/at/
+site_url: https://docs.openluat.com/air780eq/at/
 
 meta:
-  model: "air780e"
+  model: "air780eq"
   doctp : "at"
 
 nav:
