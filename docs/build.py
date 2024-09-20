@@ -39,7 +39,8 @@ def do_build(path):
     # 拷贝产品手册的图片到当前目录
     shutil.copytree("../image", root + "/docs/image", dirs_exist_ok=True)
     # 拷贝产品手册的index到当前目录
-    shutil.copytree("common/", root + "/docs/", dirs_exist_ok=True)
+    if not path.startswith("air"):
+        shutil.copytree("common/", root + "/docs/", dirs_exist_ok=True)
 
     # 拷贝自定义主题文件
     shutil.copytree("custom_theme", root + "/custom_theme", dirs_exist_ok=True)
