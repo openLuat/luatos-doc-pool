@@ -63,12 +63,12 @@ sys.run()
 ## 对应log
 循环定时器log
 
-![780E](./image/timer_1.png)
+![780E](./image/timer_1.jpg)
 
 单次定时器log
 
-![780E](./image/timer_2.png)
+![780E](./image/timer_2.jpg)
 
 关闭同一回调函数的所有定时器log
 
-![780E](./image/timer_3.png)
+![780E](./image/timer_3.jpg)
