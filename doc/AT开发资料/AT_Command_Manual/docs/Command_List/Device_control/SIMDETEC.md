@@ -8,7 +8,7 @@
 
 | 命令类型 | 语法                  | 返回                                |
 | -------- | --------------------- | ----------------------------------- |
-| 设置命令 | AT*SIMDETEC=<simslot> | *SIMDETEC: <simslot>,<state> <br>OK |
+| 设置命令 | `AT*SIMDETEC=<simslot>` | `*SIMDETEC: <simslot>,<state> <br>OK` |
 | 测试命令 | AT*SIMDETEC=?         | *SIMDETEC: (1,2) <br>OK             |
 
  
@@ -17,9 +17,9 @@
 
 | 参数      | 定义        | 取值 | 对取值的说明        |
 | --------- | ----------- | ---- | ------------------- |
-| <simslot> | 哪个sim卡槽 | 1    | 主sim卡             |
+| `<simslot>` | 哪个sim卡槽 | 1    | 主sim卡             |
 |           |             | 2    | 备用sim卡(暂不支持) |
-| <state>   | SIM卡状态   | NOS  | SIM卡不存在         |
+| `<state>`   | SIM卡状态   | NOS  | SIM卡不存在         |
 |           |             | SIM  | SIM卡已插入         |
 
  
