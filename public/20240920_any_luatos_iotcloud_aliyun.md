@@ -110,7 +110,7 @@
 ​	接下来我们再来看下代码具体怎么用
 
 ```lua
--- 动态注册(免预注册)(一型一密)(仅企业版支持)
+-- 一型一密(免预注册-仅企业版支持)
 -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",product_secret = "xxx"}) -- 企业版公共实例
 ```
 
@@ -127,7 +127,7 @@
    接下来我们看下代码具体怎么用
 
 ```lua
--- 动态注册(预注册)(一型一密)
+-- 一型一密(预注册)
 -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",product_secret = "xxx"})                     -- 旧版公共实例
 -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",product_secret = "xxx"}) -- 新版公共实例
 ```
@@ -145,7 +145,7 @@
 ​	接下来我们再来看下代码具体怎么用
 
 ```lua
--- 密钥校验 (预注册)(一机一密)
+-- 一机一密(预注册)
 -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",key = "xxx"})                    -- 旧版公共实例
 -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",key = "xxx"})-- 新版公共实例
 ```
