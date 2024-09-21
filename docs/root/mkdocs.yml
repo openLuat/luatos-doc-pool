@@ -12,9 +12,15 @@ nav:
     - AT资料: https://docs.openluat.com/air780e/at/
   - Air700:
     - 简介: air700/index.md
-    - AT资料: https://docs.openluat.com/air700/at/
+    - Air700ECQ的LuatOS资料: https://docs.openluat.com/air700ecq/luatos/
+    - Air700EAQ的LuatOS资料: https://docs.openluat.com/air700eaq/luatos/
+    - Air700EMQ的LuatOS资料: https://docs.openluat.com/air700emq/luatos/
+    - Air700ECQ的AT资料: https://docs.openluat.com/air700ecq/at/
+    - Air700EAQ的AT资料: https://docs.openluat.com/air700eaq/at/
+    - Air700EMQ的AT资料: https://docs.openluat.com/air700emq/at/
   - Air780EQ:
     - 简介: air780eq/index.md
+    - LuatOS资料: https://docs.openluat.com/air780eq/luatos/
     - AT资料: https://docs.openluat.com/air780eq/at/
   - Air780EP:
     - 简介: air780ep/index.md

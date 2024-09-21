@@ -8,7 +8,7 @@
 
 | 命令类型 | 语法                  | 返回                                |
 | -------- | --------------------- | ----------------------------------- |
-| 设置命令 | `AT*SIMDETEC=<simslot>` | `*SIMDETEC: <simslot>,<state> <br>OK` |
+| 设置命令 | `AT*SIMDETEC=<simslot>` | `*SIMDETEC: <simslot>,<state>` <br>OK |
 | 测试命令 | AT*SIMDETEC=?         | *SIMDETEC: (1,2) <br>OK             |
 
  
