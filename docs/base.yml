@@ -42,3 +42,6 @@ plugins:
 
 #repo_url: https://gitee.com/openLuat/luatos-doc-pool
 copyright: Copyright (c) 2019-2024 openLuat & AirM2M
+
+markdown_extensions:
+  - attr_list

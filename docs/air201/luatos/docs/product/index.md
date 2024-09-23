@@ -6,11 +6,14 @@
 
 ## 模块硬件资料
 
-TODO
+[详细资料](../../hardware/index.md)
 
 ## 模块外形
 
-TODO
+![正面](./image/air201_1.png)
+![侧面](./image/air201_2.png)
+![背面](./image/air201_3.png)
+![实物](./image/air201_4.png)
 
 ## 认证证书
 
