@@ -411,7 +411,7 @@ nav:
     - 硬件资料:
       # - 索引: hardware/index.md
     - 典型硬件设计图:
-      - 简介: hardware/index.md
+      - 简介: hardware/design/index.md
       - 常见供电电路: hardware/design/power.md
       - 常见充电电路: hardware/design/charge.md
       - 常见开机电路: hardware/design/poweron.md
