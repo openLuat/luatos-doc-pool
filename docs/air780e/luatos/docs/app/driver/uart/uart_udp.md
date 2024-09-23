@@ -162,9 +162,11 @@ local uart_rx_buff = zbuff.create(1024)     -- 串口接收到的数据
 
 local libnet = require "libnet"         -- libnet库，支持tcp、udp协议所用的同步阻塞接口
 local ip = "112.125.89.8"               -- 连接udp服务器的ip地址
-local port = 47104                      -- 连接udp服务器的端口
+local port = 47205                      -- 连接udp服务器的端口
 local netCB = nil                       -- socket服务的回调函数
 local connect_state = false             -- 连接状态 true:已连接   false:未连接
+local protocol = true                   -- 通讯协议 true:UDP协议  false:TCP协议
+local ssl = false                       -- 加密传输 true:加密     false:不加密
 local tx_buff = zbuff.create(1024)      -- 发送至udp服务器的数据
 local rx_buff = zbuff.create(1024)      -- 从udp服务器接收到的数据
 
@@ -183,7 +185,7 @@ function UDP_TASK()
     sys.waitUntil("IP_READY")                -- 等待联网成功
     netCB = socket.create(nil, taskName)     -- 创建socket对象
     socket.debug(netCB, true)                -- 打开调试日志
-    socket.config(netCB, nil, true, nil)     -- 此配置为UDP连接，无SSL加密
+    socket.config(netCB, nil, protocol, ssl)     -- 此配置为UDP连接，无SSL加密
 
     -- 串口和UDP服务器的交互逻辑
     while true do

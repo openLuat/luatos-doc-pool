@@ -166,6 +166,8 @@ local ip = "112.125.89.8"               -- 连接tcp服务器的ip地址
 local port = 47104                      -- 连接tcp服务器的端口
 local netCB = nil                       -- socket服务的回调函数
 local connect_state = false             -- 连接状态 true:已连接   false:未连接
+local protocol = false                  -- 通讯协议 true:UDP协议  false:TCP协议
+local ssl = false                       -- 加密传输 true:加密     false:不加密
 local tx_buff = zbuff.create(1024)      -- 发送至tcp服务器的数据
 local rx_buff = zbuff.create(1024)      -- 从tcp服务器接收到的数据
 
@@ -184,7 +186,7 @@ function TCP_TASK()
     sys.waitUntil("IP_READY")                -- 等待联网成功
     netCB = socket.create(nil, taskName)     -- 创建socket对象
     socket.debug(netCB, true)                -- 打开调试日志
-    socket.config(netCB, nil, nil, nil)      -- 此配置为TCP连接，无SSL加密
+    socket.config(netCB, nil, protocol, ssl)      -- 此配置为TCP连接，无SSL加密
 
     -- 串口和TCP服务器的交互逻辑
     while true do
