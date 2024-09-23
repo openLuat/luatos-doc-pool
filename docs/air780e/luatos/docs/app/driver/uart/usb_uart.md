@@ -28,6 +28,7 @@ USB虚拟串口广泛应用于各种领域，如工业自动化、物联网、�
 
 ![](image/usb_uart.png)
 
+![](image/usbport.gif)
 <img src="image/usbport.gif" width="60%" height="60%">
 
 ## 一、初始化usb_uart
