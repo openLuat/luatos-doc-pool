@@ -3,7 +3,7 @@
 本资料中心包含Air700EMQ使用LuatOS开发的所有资料
 
 - [产品手册](./product/)
-- [快速入门](./quick_start/index.md)
+- [快速入门]((./product/)index.md)
 - [软件demo](./app/index.md)
 - [硬件demo](./hardware.md)
 - [常见问题](./faq.md)
