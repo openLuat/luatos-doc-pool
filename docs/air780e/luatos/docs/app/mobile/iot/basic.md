@@ -22,7 +22,7 @@ band1[1] = 39
 band1[2] = 40
 mobile.setBand(band1, 3)    --改成使用38,39,40
 
-log.info("imei", mobile.imei()) -- 获取IMWI
+log.info("imei", mobile.imei()) -- 获取IMEI
 log.info("imsi", mobile.imsi()) -- 获取IMSI
 log.info("status", mobile.status()) -- 获取网络状态
         
