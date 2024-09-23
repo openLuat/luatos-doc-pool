@@ -82,6 +82,7 @@ def git_hook():
         if os.path.isdir(name) :
             do_build(os.path.join(name, "at"))
             do_build(os.path.join(name, "luatos"))
+            do_build(os.path.join(name, "csdk"))
     # 然后还需要编译跟目录
     do_build("root")
 
