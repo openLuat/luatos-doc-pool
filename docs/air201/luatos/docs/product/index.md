@@ -10,10 +10,7 @@
 
 ## 模块外形
 
-![正面](./image/air201_1.png)
-![侧面](./image/air201_2.png)
-![背面](./image/air201_3.png)
-![实物](./image/air201_4.png)
+![Air201的4张图](./image/air201.png)
 
 ## 认证证书
 
