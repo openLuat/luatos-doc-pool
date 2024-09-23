@@ -31,7 +31,7 @@ def build_blog():
     with open("blog/docs/index.md", "w", encoding="utf-8") as f:
         f.write(tmpl)
 
-def do_build(path):
+def do_build(path, copy_product=False):
     # 读取mkdocs文件
     if not os.path.exists(path) :
         return
@@ -49,6 +49,10 @@ def do_build(path):
         if "air724ug" not in path:
             shutil.copytree("../doc/AT开发资料/AT_Command_Manual/docs/Command_List", root + "/docs/Command_List", dirs_exist_ok=True)
     
+    if copy_product and os.path.exists(copy_product) :
+        if os.path.exists(root + "/docs/product/") :
+            shutil.rmtree(root + "/docs/product/")
+        shutil.copytree(copy_product, root + "/docs/product/", dirs_exist_ok=True)
 
     gitroot = os.path.abspath("../../")
     cmd = "docker run --rm -v {}:/opt/docs/ -w /opt/docs/luatos-doc-pool/docs/{} registry.cn-beijing.aliyuncs.com/wendal/mkdocs-material build"
@@ -80,9 +84,9 @@ def git_hook():
     do_build("blog")
     for name in os.listdir(".") :
         if os.path.isdir(name) :
-            do_build(os.path.join(name, "at"))
             do_build(os.path.join(name, "luatos"))
-            do_build(os.path.join(name, "csdk"))
+            do_build(os.path.join(name, "at"), copy_product=os.path.join(name, "luatos", "docs", "product"))
+            do_build(os.path.join(name, "csdk"), copy_product=os.path.join(name, "luatos", "docs", "product"))
     # 然后还需要编译跟目录
     do_build("root")
 
