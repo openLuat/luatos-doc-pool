@@ -1,4 +1,4 @@
-# 典型硬件设计图
+# 典型硬件设计指南
 
 - [简介](index.md)
 - [常见供电电路](power.md)
@@ -9,10 +9,10 @@
 - [看门狗电路](wdt.md)
 - [SIM卡电路](sim.md)
 - [天线电路](ant.md)
-- [UART 1通信电路](uart1.md)
-- [USB通信电路](usb.md)
 - [UART 0调试电路](uart0.md)
+- [UART 1通信电路](uart1.md)
 - [UART 2通信电路](uart2.md)
+- [USB通信电路](usb.md)
 - [LED状态灯电路](led.md)
 - [模组休眠唤醒电路](sleep.md)
 - [模组唤醒休眠状态下的主控电路](wakeup.md)
