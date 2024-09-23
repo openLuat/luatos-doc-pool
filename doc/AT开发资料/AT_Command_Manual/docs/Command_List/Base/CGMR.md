@@ -4,7 +4,7 @@
 
 | 命令类型 | 语法      | 返回                          |
 | -------- | --------- | ----------------------------- |
-| 执行命令 | AT+CGMR   | `Revision: <revision><br> OK` |
+| 执行命令 | AT+CGMR   | `Revision: <revision>`<br> OK |
 | 测试命令 | AT+CGMR=? | OK                            |
 
  

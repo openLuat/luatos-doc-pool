@@ -10,7 +10,7 @@
 
 | 命令类型 | 语法                     | 返回                          |
 | -------- | ------------------------ | ----------------------------- |
-| 查询命令 | AT+CATCHPCAP?            | `+CATCHPCAP:<limited><br> OK` |
+| 查询命令 | AT+CATCHPCAP?            | `+CATCHPCAP:<limited>`<br> OK |
 | 设置命令 | `AT+CATCHPCAP=<limited>` | OK                            |
 
 参数定义：

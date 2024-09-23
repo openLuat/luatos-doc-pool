@@ -4,7 +4,7 @@
 
 | 命令类型 | 语法 | 返回                                                         |
 | -------- | ---- | ------------------------------------------------------------ |
-| 设置命令 | AT*I | `Manufacturer:<manufacturer><br>Model: <model><br>Revision: <revision><bt>HWVer: <hwver><br>Buildtime: <Buildtime><br>IMEI: <imei><br>ICCID:<iccid><br>IMSI:<imsi><br> OK` |
+| 设置命令 | AT*I | `Manufacturer:<manufacturer>`<br>`Model: <model>`<br>`Revision: <revision>`<br>`HWVer: <hwver>`<br>`Buildtime: <Buildtime>`<br>`IMEI: <imei>`<br>`ICCID:<iccid>`<br>`IMSI:<imsi>`<br> OK |
 
  
 
