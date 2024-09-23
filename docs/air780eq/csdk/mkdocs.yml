@@ -1,0 +1,15 @@
+INHERIT: ../../base.yml
+site_name: "合宙文档中心"
+site_url: https://docs.openluat.com/air780eq/csdk/
+
+meta:
+  model: "air780eq"
+  doctp : "csdk"
+nav:
+  - 产品手册: product/index.md
+  - 快速入门: 
+    - 简介: quickstart/index.md
+    - Flash和RAM资源: quickstart/ramrom.md
+  - 常见问题: faq.md
+  - 问答中心: https://chat.openluat.com/
+  - 合宙官网: https://www.openluat.com/
