@@ -420,10 +420,10 @@ nav:
       - 看门狗电路: hardware/design/wdt.md
       - SIM卡电路: hardware/design/sim.md
       - 天线电路: hardware/design/ant.md
-      - UART 1通信电路: hardware/design/uart1.md
-      - USB通信电路: hardware/design/usb.md
       - UART 0调试电路: hardware/design/uart0.md
+      - UART 1通信电路: hardware/design/uart1.md
       - UART 2通信电路: hardware/design/uart2.md
+      - USB通信电路: hardware/design/usb.md
       - LED状态灯电路: hardware/design/led.md
       - 模组休眠唤醒电路: hardware/design/sleep.md
       - 模组唤醒休眠状态下的主控电路: hardware/design/wakeup.md
