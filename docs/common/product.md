@@ -1,7 +1,27 @@
 # 产品手册
 
-[点我查看](https://doc.openluat.com/wiki/21)
+[点我下载](./image/airm2m.pdf){target="_blank"}
 
-![型号总表](./image/1.jpg)
-
-![可用资源](./image/1.jpg)
+![产品手册airm2m_00.jpg](./image/airm2m_00.jpg)
+![产品手册airm2m_01.jpg](./image/airm2m_01.jpg)
+![产品手册airm2m_02.jpg](./image/airm2m_02.jpg)
+![产品手册airm2m_03.jpg](./image/airm2m_03.jpg)
+![产品手册airm2m_04.jpg](./image/airm2m_04.jpg)
+![产品手册airm2m_05.jpg](./image/airm2m_05.jpg)
+![产品手册airm2m_06.jpg](./image/airm2m_06.jpg)
+![产品手册airm2m_07.jpg](./image/airm2m_07.jpg)
+![产品手册airm2m_08.jpg](./image/airm2m_08.jpg)
+![产品手册airm2m_09.jpg](./image/airm2m_09.jpg)
+![产品手册airm2m_10.jpg](./image/airm2m_10.jpg)
+![产品手册airm2m_11.jpg](./image/airm2m_11.jpg)
+![产品手册airm2m_12.jpg](./image/airm2m_12.jpg)
+![产品手册airm2m_13.jpg](./image/airm2m_13.jpg)
+![产品手册airm2m_14.jpg](./image/airm2m_14.jpg)
+![产品手册airm2m_15.jpg](./image/airm2m_15.jpg)
+![产品手册airm2m_16.jpg](./image/airm2m_16.jpg)
+![产品手册airm2m_17.jpg](./image/airm2m_17.jpg)
+![产品手册airm2m_18.jpg](./image/airm2m_18.jpg)
+![产品手册airm2m_19.jpg](./image/airm2m_19.jpg)
+![产品手册airm2m_20.jpg](./image/airm2m_20.jpg)
+![产品手册airm2m_21.jpg](./image/airm2m_21.jpg)
+![产品手册airm2m_22.jpg](./image/airm2m_22.jpg)
