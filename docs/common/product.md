@@ -1,6 +1,6 @@
 # 产品手册
 
-[右键点我,另存为](./image/airm2m.pdf)
+[右键点我,另存为](https://docs.openluat.com/file/airm2m.pdf)
 
 ![产品手册airm2m_00.png](./image/airm2m_00.png)
 ![产品手册airm2m_01.png](./image/airm2m_01.png)
