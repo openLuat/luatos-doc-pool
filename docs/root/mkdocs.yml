@@ -13,15 +13,21 @@ nav:
     - AT资料: https://docs.openluat.com/air780e/at/
   - Air700:
     - 简介: air700/index.md
-    - Air700ECQ的产品手册: air700ecq/product/index.md
-    - Air700EAQ的产品手册: air700eaq/product/index.md
-    - Air700EMQ的产品手册: air700emq/product/index.md
-    - Air700ECQ的LuatOS资料: https://docs.openluat.com/air700ecq/luatos/
-    - Air700EAQ的LuatOS资料: https://docs.openluat.com/air700eaq/luatos/
-    - Air700EMQ的LuatOS资料: https://docs.openluat.com/air700emq/luatos/
-    - Air700ECQ的AT资料: https://docs.openluat.com/air700ecq/at/
-    - Air700EAQ的AT资料: https://docs.openluat.com/air700eaq/at/
-    - Air700EMQ的AT资料: https://docs.openluat.com/air700emq/at/
+    - Air700ECQ资料:
+      - 简介: air700ecq/index.md
+      - 产品手册: air700ecq/product/index.md
+      - LuatOS资料: https://docs.openluat.com/air700ecq/luatos/
+      - AT资料: https://docs.openluat.com/air700ecq/at/
+    - Air700EMQ资料:
+      - 简介: air700emq/index.md
+      - 产品手册: air700emq/product/index.md
+      - LuatOS资料: https://docs.openluat.com/air700emq/luatos/
+      - AT资料: https://docs.openluat.com/air700emq/at/
+    - Air700EAQ资料:
+      - 简介: air700eaq/index.md
+      - 产品手册: air700eaq/product/index.md
+      - LuatOS资料: https://docs.openluat.com/air700eaq/luatos/
+      - AT资料: https://docs.openluat.com/air700eaq/at/
   - Air780EQ:
     - 简介: air780eq/index.md
     - 产品手册: air780eq/product/index.md
