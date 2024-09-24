@@ -8,30 +8,30 @@ meta:
   doctp : "at"
 
 nav:
-  - 产品手册: product/index.md
+  - 首页: index.md
   - 快速开始: quick_start.md
   - AT指令:
     - AT介绍: 
       - 完整指令手册: at_command.md
     - 应用实例:
-      - 连接TCP服务器: basic/URC.md
-      - 连接MQTT服务器: basic/newline.md
-      - 基站定位: basic/at_i.md
-      - 连接到阿里云: ABC.md
-      - 透传模式: abc.md
-      - 访问HTTP地址: http.md
+      - 连接TCP服务器: app/tcp.md
+      - 连接MQTT服务器: app/mqtt.md
+      - 访问HTTP地址: app/http.md
     - MCU实例代码:
-      - STM32演示代码: stm32.md
-      - Air32演示代码: air32.md
+      - STM32演示代码: mcu/stm32.md
+      - Air32演示代码: mcu/air32.md
     - 常用状态机:
-      - TCP状态机: tcp.md
-      - MQTT状态机: mqtt.md
-      - 网络状态机: network.md
+      - TCP状态机: state/tcp.md
+      - MQTT状态机: state/mqtt.md
+      - 网络状态机: state/network.md
     - 常见异常:
-      - 网络异常类: network_error.md
-      - 通信异常类: ip_error.md
-  - 硬件资料: 
-    - 硬件资料索引: hardware.md
+      - 网络异常类: error/network.md
+      - 通信异常类: error/error.md
+  - 固件下载: firmware.md
   - 常见问题: faq.md
+  - 卫星定位模组: https://docs.openluat.com/gnss/
+  - DTU: https://irtu.cn/
+  - 卫星定位模组: https://docs.openluat.com/web/
   - 问答中心: https://chat.openluat.com/
   - 合宙官网: https://www.openluat.com/
+

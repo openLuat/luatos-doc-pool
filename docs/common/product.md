@@ -1,4 +1,4 @@
-# 产品手册
+# 合宙模组选型指南
 
 [右键点我,另存为](https://docs.openluat.com/file/airm2m.pdf){:target="_blank"}
 

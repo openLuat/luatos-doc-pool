@@ -6,7 +6,6 @@ meta:
   model: "air780eq"
   doctp : "csdk"
 nav:
-  - 产品手册: product/index.md
   - 快速入门: 
     - 简介: quickstart/index.md
     - Flash和RAM资源: quickstart/ramrom.md

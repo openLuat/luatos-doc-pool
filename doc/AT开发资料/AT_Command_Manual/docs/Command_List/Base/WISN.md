@@ -8,7 +8,7 @@ AT+WISN是用来写用户 sn(serial number)到模块里的。
 | ------------------- | ------------------- | ------------------ |
 | 设置命令            | `AT+WISN=<user_sn>` | OK                 |
 | `+CME ERROR: <err>` |                     |                    |
-| 查询命令            | AT+WISN?            | `<user_sn><br> OK` |
+| 查询命令            | AT+WISN?            | `<user_sn>`<br> OK |
 
  
 
@@ -28,5 +28,4 @@ AT+WISN是用来写用户 sn(serial number)到模块里的。
 | ←                   | OK                   |              |
 | →                   | AT+WISN?             | 查询客户SN号 |
 | ←                   | 1234567890 <br>OK    |              |
-
 

@@ -6,7 +6,7 @@
 
 | 命令类型 | 语法       | 返回                               |
 | -------- | ---------- | ---------------------------------- |
-| 查询命令 | AT*EXINFO? | `*EXINFO:<Power-on reason> <br>OK` |
+| 查询命令 | AT*EXINFO? | `*EXINFO:<Power-on reason>` <br>OK |
 
 参数定义：
 

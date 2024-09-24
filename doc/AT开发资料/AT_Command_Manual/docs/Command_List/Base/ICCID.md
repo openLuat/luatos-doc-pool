@@ -4,8 +4,8 @@
 
 | 命令类型 | 语法                    | 返回             |
 | -------- | ----------------------- | ---------------- |
-| 执行命令 | AT+CCID                 | `<iccid><br> OK` |
-| AT+ICCID | `+ICCID:<iccid> <br>OK` |                  |
+| 执行命令 | AT+CCID                 | `<iccid>`<br> OK |
+| AT+ICCID | `+ICCID:<iccid>` <br>OK |                  |
 
  
 
