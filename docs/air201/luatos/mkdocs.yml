@@ -6,7 +6,6 @@ meta:
   model: "air201"
   doctp : "luatos"
 nav:
-  - 产品手册: product/index.md
   - 快速入门: 
     - 简介: quickstart/index.md
     - 资料链接: https://e3zt58hesn.feishu.cn/wiki/DfMMw2ZFziqPIikh1BMcZDwHnCb

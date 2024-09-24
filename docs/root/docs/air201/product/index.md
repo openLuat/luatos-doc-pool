@@ -6,7 +6,7 @@
 
 ## 模块硬件资料
 
-[详细资料](../../hardware/index.md)
+[详细资料](https://docs.openluat.com/air201/luatos/hardware/)
 
 ## 模块外形
 
