@@ -6,7 +6,10 @@ meta:
   model: "air780eg"
   doctp : "luatos"
 nav:
-  - 产品手册: product/index.md
+  - 快速入门: quickstart/index.md
   - 常见问题: faq.md
+  - 卫星定位模组: https://docs.openluat.com/gnss/
+  - DTU: https://irtu.cn/
+  - 卫星定位模组: https://docs.openluat.com/web/
   - 问答中心: https://chat.openluat.com/
   - 合宙官网: https://www.openluat.com/

@@ -6,7 +6,6 @@ meta:
   model: "air780e"
   doctp : "luatos"
 nav:
-  - 产品手册: product/index.md
   - 快速入门:
     - 介绍: quick_start/index.md
     - HelloWorld教程:
@@ -407,10 +406,8 @@ nav:
         - 基本用法: app/demo/feishu/basic.md
         - 总结: app/demo/feishu/summary.md
         - 常见问题: app/demo/feishu/faq.md
-  - 硬件demo: 
-    - 硬件资料:
-      # - 索引: hardware/index.md
-    - 典型硬件设计指南: hardware/index.md
+  - 硬件demo:
+    - 典型硬件设计指南:
       - 简介: hardware/design/index.md
       - 常见供电电路: hardware/design/power.md
       - 常见充电电路: hardware/design/charge.md
@@ -432,7 +429,9 @@ nav:
       - 测试点电路: hardware/design/check_point.md
       - 温湿度传感器参考电路: hardware/design/sensor.md
       - 远程空开参考电路: hardware/design/remote.md
-  
   - 常见问题: faq.md
+  - 卫星定位模组: https://docs.openluat.com/gnss/
+  - DTU: https://irtu.cn/
+  - 卫星定位模组: https://docs.openluat.com/web/
   - 问答中心: https://chat.openluat.com/
   - 合宙官网: https://www.openluat.com/
