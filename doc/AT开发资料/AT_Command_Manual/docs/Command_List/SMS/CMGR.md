@@ -1,38 +1,38 @@
 ## 读短信：AT+CMGR
 
-使用设置指令，可将消息存储器<mem1>中，索引为<index>的消息返回到TE。若该消息处于"已接收未读"状态，则将其状态变为"已接收已读"。
+使用设置指令，可将消息存储器`<mem1>`中，索引为`<index>`的消息返回到TE。若该消息处于"已接收未读"状态，则将其状态变为"已接收已读"。
 
 语法规则：
 
-| 命令类型 | 语法            | 返回和说明                                                   |
-| -------- | --------------- | ------------------------------------------------------------ |
-| 设置命令 | AT+CMGR=<index> | PDU模式下（AT+CMGF=0），返回：<br>+CMGR:<stat>,[<alpha>],<length><CR><LF><pdu><br> OK |
-|          |                 | 如果是TEXT模式（AT+CMGF=1）：<br>对于SMS-DELIVER：<br>+CMGR:<stat>,<oa>,[<alpha>],<scts>[,*<tooa>,<fo>,<pid>,<dcs>,<sca>,<tosca>,<length>*]<CR><LF><data><br> OK <br>对于SMS-SUBMIT：<br>+CMGR:<stat>,<da>,[<alpha>][*,,,,,[],<sca>,<tosca>,<length>*]<CR><LF><data> OK 对于SMS-STATUS-REPORT：+CMGR:<stat>,<fo>,<mr>,[<ra>],[<tora>],<scts>,<dt>,<st> <br>OK <br>对于SMS-COMMAND：<br>+CMGR:<stat>,<fo>,<ct>[,*<pid>,[<m**n**>],[<da>],[<toda>],<length><CR><LF><cdata>] <br>OK<br> 注:以上斜体字是否显示由+CSDH的设置决定 |
-| 测试命令 | AT+CMGR=?       | OK                                                           |
+| 命令类型 | 语法              | 返回和说明                                                   |
+| -------- | ----------------- | ------------------------------------------------------------ |
+| 设置命令 | `AT+CMGR=<index>` | PDU模式下（AT+CMGF=0），返回：<br>`+CMGR:<stat>,[<alpha>],<length><CR><LF><pdu>`<br> OK |
+|          |                   | 如果是TEXT模式（AT+CMGF=1）：<br>对于SMS-DELIVER：<br>`+CMGR:<stat>,<oa>,[<alpha>],<scts>[,*<tooa>,<fo>,<pid>,<dcs>,<sca>,<tosca>,<length>*]<CR><LF><data>`<br> OK <br>对于SMS-SUBMIT：<br>`+CMGR:<stat>,<da>,[<alpha>][*,,,,,[],<sca>,<tosca>,<length>*]<CR><LF><data>`<br> OK <br>对于SMS-STATUS-REPORT：<br>`+CMGR:<stat>,<fo>,<mr>,[<ra>],[<tora>],<scts>,<dt>,<st>` <br>OK <br>对于SMS-COMMAND：<br>`+CMGR:<stat>,<fo>,<ct>[,*<pid>,[<m**n**>],[<da>],[<toda>],<length><CR><LF><cdata>] `<br>OK<br> 注:以上斜体字是否显示由+CSDH的设置决定 |
+| 测试命令 | AT+CMGR=?         | OK                                                           |
 
  
 
 参数定义：
 
-| 参数           | 定义                                              | 取值 | 对取值的说明                                              |
-| -------------- | ------------------------------------------------- | ---- | --------------------------------------------------------- |
-| <da>，<oa>     |                                                   |      | 请参考AT+CMGW条目                                         |
-| <toda>，<tooa> |                                                   |      |                                                           |
-| <length>       |                                                   |      |                                                           |
-| <stat>         |                                                   |      |                                                           |
-| <alpha>        | MT 电话簿记录对应<da>或<oa>的显示                 |      | 字符型                                                    |
-| <pid>          | Protocol Identification                           |      | 请参考AT+CSMP条目                                         |
-| <fo>           | PDU短信首字节                                     |      |                                                           |
-| <vp>           | Valid Period                                      |      |                                                           |
-| <dcs>          | Data Coding System                                |      |                                                           |
-| <scts>         | 短信中心时间戳（Short Message Center Time Stamp） |      | 时间-字符串型GSM 03.40 TP-Service-Centre-Time-Stamp       |
-| <dt>           | Discharge time                                    |      | 时间-字符串型GSM 03.40 TP-Discharge-Time，与<st>成对出现  |
-| <st>           | Status                                            |      | 整数型GSM 03.40 TP-Status描述上一个已经发送的MO短信的状态 |
-| <ct>           | Command Type                                      |      | 整数型GSM 03.40 TP-Command-Type，缺省为0                  |
-| <ra>           | 接收地址                                          |      | 字符串型的GSM 03.40 TP-Recipient-Address 地址-取值字段    |
-| <cdata>        | TEXT模式下SMS-COMMAND的返回                       |      | TP-Command-Data(GSM 03.40)                                |
-| <mr>           | 消息参考（MessageReference）                      |      | TP-Message-Reference(GSM 03.40), 整数型                   |
-| <mn>           | 消息序号                                          |      | TP-Message-Number(GSM 03.40), 整数型                      |
+| 参数             | 定义                                              | 取值 | 对取值的说明                                               |
+| ---------------- | ------------------------------------------------- | ---- | ---------------------------------------------------------- |
+| `<da>，<oa>`     |                                                   |      | 请参考AT+CMGW条目                                          |
+| `<toda>，<tooa>` |                                                   |      |                                                            |
+| `<length>`       |                                                   |      |                                                            |
+| `<stat>`         |                                                   |      |                                                            |
+| `<alpha>`        | MT 电话簿记录对应`<da>`或`<oa>`的显示             |      | 字符型                                                     |
+| `<pid>`          | Protocol Identification                           |      | 请参考AT+CSMP条目                                          |
+| `<fo>`           | PDU短信首字节                                     |      |                                                            |
+| `<vp>`           | Valid Period                                      |      |                                                            |
+| `<dcs>`          | Data Coding System                                |      |                                                            |
+| `<scts>`         | 短信中心时间戳（Short Message Center Time Stamp） |      | 时间-字符串型GSM 03.40 TP-Service-Centre-Time-Stamp        |
+| `<dt>`           | Discharge time                                    |      | 时间-字符串型GSM 03.40 TP-Discharge-Time，与`<st>`成对出现 |
+| `<st>`           | Status                                            |      | 整数型GSM 03.40 TP-Status描述上一个已经发送的MO短信的状态  |
+| `<ct>`           | Command Type                                      |      | 整数型GSM 03.40 TP-Command-Type，缺省为0                   |
+| `<ra>`           | 接收地址                                          |      | 字符串型的GSM 03.40 TP-Recipient-Address 地址-取值字段     |
+| `<cdata>`        | TEXT模式下SMS-COMMAND的返回                       |      | TP-Command-Data(GSM 03.40)                                 |
+| `<mr>`           | 消息参考（MessageReference）                      |      | TP-Message-Reference(GSM 03.40), 整数型                    |
+| `<mn>`           | 消息序号                                          |      | TP-Message-Number(GSM 03.40), 整数型                       |
 
  
 
