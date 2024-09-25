@@ -53,6 +53,7 @@ nav:
     - 产品手册: air724ug/product/index.md
     - LuatOS资料: https://docs.openluat.com/air724ug/luatos/
     - AT资料: https://docs.openluat.com/air724ug/at/
+    - USB驱动安装: https://docs.openluat.com/air724ug/driver/
   - Air201:
     - 简介: air201/index.md
     - 产品手册: air201/product/index.md
