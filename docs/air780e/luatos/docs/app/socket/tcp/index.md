@@ -7,5 +7,6 @@ TCP-SOCKET，全称为基于TCP协议的套接字（Socket），是现代网络�
 - [硬件准备](01.md)
 - [基本用法](02.md)
 - [TCP-UART透传](03.md)
+- [TCP单向加密通信](04.md)
 - [常见问题](faq.md)
 - [总结](summary.md)
