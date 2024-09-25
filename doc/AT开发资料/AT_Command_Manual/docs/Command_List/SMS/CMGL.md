@@ -1,14 +1,14 @@
 ## 列举短消息：AT+CMGL
 
-使用设置指令，可将查询优选消息存储器<mem1>中，状态值为<stat>的消息显示在 TE中。若该消息处于"已接收未读"状态，则将其状态变为"已接收已读"。
+使用设置指令，可将查询优选消息存储器`<mem1>`中，状态值为`<stat>`的消息显示在 TE中。若该消息处于"已接收未读"状态，则将其状态变为"已接收已读"。
 
 语法规则：
 
-| 命令类型 | 语法           | 返回和说明                                                   |
-| -------- | -------------- | ------------------------------------------------------------ |
-| 设置命令 | AT+CMGL=<stat> | 如果是PDU模式（AT+CMGF=0），则<stat>取值如下：<br>0已接收的未读消息<br>1  已接收的已读消息<br>2  已存储的未发送短信<br>3  已存储的已发送短信<br>4  所有短信<br>且返回如下：<br>+CMGL:<index>,<stat>,[<alpha>],<length><CR><LF>< pdu><CR><LF>+CMGL:<index>,<stat>,[<alpha>],<length><CR><LF><pdu>[...]] <br>OK |
-|          |                | 如果是TEXT模式（AT+CMGF=1），则<stat>取值如下：<br>"REC UNREAD"  已接收的未读消息<br>"REC READ"    已接收的已读消息<br>"STO UNSENT"已存储的未发送短信<br>"STO SENT"已存储的已发送短信<br>"ALL"所有短信<br>**注意：对于以上取值，所有字母要大写。双引号可加可不加**。<br>对于SMS-DELIVER或SMS-SUBMIT，则返回（注：斜体字是否显示由+CSDH的设置决定）：<br>+CMGL:<index>,<stat>,<oa/da>,[<alpha>],[<scts>][,*,*]<CR><LF><data>[<CR><LF>+CMGL:<index>,<stat>,<da/oa>,[<alpha>],[<scts>][,*,*]<CR><LF><data>[...]]  <br>OK <br>对于SMS-STATUS-REPORT，则返回：<br>+CMGL:<index>,<stat>,<fo>,<mr>,[<ra>],[<tora>],<scts>,<dt>,<st>[<CR><LF>+CMGL:<index>,<stat>,<fo>,<mr>,[<ra>],[<tora>],<scts>,<dt>,<st>[...]] <br>OK<br> 对于SMS-COMMAND，则返回：<br>+CMGL:<index>,<stat>,<fo>,<ct>[<CR><LF>+CMGL:<index>,<stat>,<fo>,<ct>[...]] <br>OK |
-| 测试命令 | AT+CMGL=?      | +CMGL: (<stat>取值列表) <br>OK                               |
+| 命令类型 | 语法             | 返回和说明                                                   |
+| -------- | ---------------- | ------------------------------------------------------------ |
+| 设置命令 | `AT+CMGL=<stat>` | 如果是PDU模式（AT+CMGF=0），则`<stat>`取值如下：<br>0已接收的未读消息<br>1  已接收的已读消息<br>2  已存储的未发送短信<br>3  已存储的已发送短信<br>4  所有短信<br>且返回如下：<br>`+CMGL:<index>,<stat>,[<alpha>],<length><CR><LF>< pdu><CR><LF>+CMGL:<index>,<stat>,[<alpha>],<length><CR><LF><pdu>[...]] `<br>OK |
+|          |                  | 如果是TEXT模式（AT+CMGF=1），则`<stat>`取值如下：<br>"REC UNREAD"  已接收的未读消息<br>"REC READ"    已接收的已读消息<br>"STO UNSENT"已存储的未发送短信<br>"STO SENT"已存储的已发送短信<br>"ALL"所有短信<br>**注意：对于以上取值，所有字母要大写。双引号可加可不加**。<br>对于SMS-DELIVER或SMS-SUBMIT，则返回（注：斜体字是否显示由+CSDH的设置决定）：<br>`+CMGL:<index>,<stat>,<oa/da>,[<alpha>],[<scts>][,*,*]<CR><LF><data>[<CR><LF>+CMGL:<index>,<stat>,<da/oa>,[<alpha>],[<scts>][,*,*]<CR><LF><data>[...]] ` <br>OK <br>对于SMS-STATUS-REPORT，则返回：<br>`+CMGL:<index>,<stat>,<fo>,<mr>,[<ra>],[<tora>],<scts>,<dt>,<st>[<CR><LF>+CMGL:<index>,<stat>,<fo>,<mr>,[<ra>],[<tora>],<scts>,<dt>,<st>[...]] `<br>OK<br> 对于SMS-COMMAND，则返回：<br>`+CMGL:<index>,<stat>,<fo>,<ct>[<CR><LF>+CMGL:<index>,<stat>,<fo>,<ct>[...]]` <br>OK |
+| 测试命令 | AT+CMGL=?        | `+CMGL: (<stat>取值列表)` <br>OK                             |
 
  
 
