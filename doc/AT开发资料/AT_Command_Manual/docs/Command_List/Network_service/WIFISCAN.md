@@ -4,11 +4,11 @@
 
 语法规则：
 
-| 命令类型 | 语法                                              | 返回                                       | 说明                                               |
-| -------- | ------------------------------------------------- | ------------------------------------------ | -------------------------------------------------- |
-| 设置命令 | AT+WIFISCAN=<wifiPriority>,<maxScanNum>,<channel> | +WIFISCAN: <mac>, <rssi>, <channel> <br>OK | 指定条件扫描（阻塞方式查询）                       |
-| 查询命令 | AT+WIFISCAN?                                      | +WIFISCAN: <mac>, <rssi>, <channel><br>OK  | 阻塞方式查询所有信道                               |
-| 执行命令 | AT+WIFISCAN                                       | OK<br> +WIFISCAN: <mac>, <rssi>, <channel> | 非阻塞方式查询所有信道，立即返回，查询完毕主动上报 |
+| 命令类型 | 语法                                                | 返回                                         | 说明                                               |
+| -------- | --------------------------------------------------- | -------------------------------------------- | -------------------------------------------------- |
+| 设置命令 | `AT+WIFISCAN=<wifiPriority>,<maxScanNum>,<channel>` | `+WIFISCAN: <mac>, <rssi>, <channel> `<br>OK | 指定条件扫描（阻塞方式查询）                       |
+| 查询命令 | AT+WIFISCAN?                                        | `+WIFISCAN: <mac>, <rssi>, <channel>`<br>OK  | 阻塞方式查询所有信道                               |
+| 执行命令 | AT+WIFISCAN                                         | OK<br>` +WIFISCAN: <mac>, <rssi>, <channel>` | 非阻塞方式查询所有信道，立即返回，查询完毕主动上报 |
 
  
 
@@ -19,6 +19,6 @@
 | wifiPriority | 数据/wifi扫描优先                                       | 0     | 数据通信优先                             |
 |              |                                                         | 1     | wifi扫描优先                             |
 | maxScanNum   | 最大扫描wifi显示数量                                    | 1~30  |                                          |
-| <channel>    | 扫描信道                                                | 0~255 | 只支持2.4G频段，所以支持扫描的信道有1~14 |
-| <mac>        | MAC地址                                                 |       |                                          |
-| <rssi>       | 接收信号强度指示（Received Signal Strength Indication） |       |                                          |
+| `<channel>`  | 扫描信道                                                | 0~255 | 只支持2.4G频段，所以支持扫描的信道有1~14 |
+| `<mac>`      | MAC地址                                                 |       |                                          |
+| `<rssi>`     | 接收信号强度指示（Received Signal Strength Indication） |       |                                          |
