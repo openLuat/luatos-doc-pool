@@ -70,8 +70,8 @@ def do_build(path, copy_product=False):
         else :
             if path == "root":
                 dst = "/opt/docs/site/"
-            elif path == "blog":
-                dst = "/opt/docs/site/blog/"
+            else:
+                dst = "/opt/docs/site/%s/" % path
                 if os.path.exists(dst) :
                     shutil.rmtree(dst)
         shutil.copytree(path + "/site", dst, dirs_exist_ok=True)
@@ -84,6 +84,7 @@ def git_hook():
     # 构建简易博客
     build_blog()
     do_build("blog")
+    do_build("dtu")
     for name in os.listdir(".") :
         if os.path.isdir(name) :
             do_build(os.path.join(name, "luatos"))
