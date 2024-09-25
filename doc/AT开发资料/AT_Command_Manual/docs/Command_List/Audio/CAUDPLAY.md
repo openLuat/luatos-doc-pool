@@ -4,25 +4,25 @@
 
 语法规则：
 
-| 命令类型 | 语法                                                         | 返回                                              |
-| -------- | ------------------------------------------------------------ | ------------------------------------------------- |
-| 设置命令 | AT+CAUDPLAY=<mode>[,<filename>]                              | OK                                                |
-| 查询命令 | AT+CAUDPLAY?                                                 | +CAUDPLAY: <mode><br>OK                           |
-| 测试命令 | AT+CAUDPLAY=?                                                | +CAUDPLAY: (<mode>取值范围列表),<filename><br> OK |
-| URC上报  | 1)AT+CAUDPLAY=1,<filename>开始播放，模块自己结束播放后提示+CAUDPLAY: 1,<duration>   // <duration>为播放持续时间 <br>2) AT+CAUDPLAY=2 结束播放，提示+CAUDPLAY: 1,<duration>  //<duration>为从开始播放到停止播放的持续时间<br>3) AT+CAUDPLAY=3 暂停播放，OK<br>4) AT+CAUDPLAY=4 恢复播放，模块自己结束播放后提示+CAUDPLAY: 1,<duration>   // <duration>为从开始播放到停止播放的持续时间 |                                                   |
+| 命令类型 | 语法                                                         | 返回                                                |
+| -------- | ------------------------------------------------------------ | --------------------------------------------------- |
+| 设置命令 | `AT+CAUDPLAY=<mode>[,<filename>]`                            | OK                                                  |
+| 查询命令 | AT+CAUDPLAY?                                                 | `+CAUDPLAY: <mode>`<br>OK                           |
+| 测试命令 | AT+CAUDPLAY=?                                                | `+CAUDPLAY: (<mode>取值范围列表),<filename>`<br> OK |
+| URC上报  | 1)`AT+CAUDPLAY=1,<filename>`开始播放，模块自己结束播放后提示`+CAUDPLAY: 1,<duration>   // <duration>`为播放持续时间 <br>2) AT+CAUDPLAY=2 结束播放，提示`+CAUDPLAY: 1,<duration>  //<duration>`为从开始播放到停止播放的持续时间<br>3) AT+CAUDPLAY=3 暂停播放，OK<br>4) AT+CAUDPLAY=4 恢复播放，模块自己结束播放后提示`+CAUDPLAY: 1,<duration>   // <duration>`为从开始播放到停止播放的持续时间 |                                                     |
 
  
 
 参数定义：
 
-| 参数       | 定义         | 取值 | 对取值的说明                                    |
-| ---------- | ------------ | ---- | ----------------------------------------------- |
-| <mode>     | 使用模式     | 1    | 开始播放(start)                                 |
-|            |              | 2    | 停止播放(stop)                                  |
-|            |              | 3    | 暂停播放(pause)                                 |
-|            |              | 4    | 恢复播放(resume)                                |
-| <filename> | 音频文件名字 |      | AMR,WAV,MP3格式。需要加后缀，支持8K采样音频数据 |
-| <duration> | 播放持续时间 |      | 单位：毫秒                                      |
+| 参数         | 定义         | 取值 | 对取值的说明                                    |
+| ------------ | ------------ | ---- | ----------------------------------------------- |
+| `<mode>`     | 使用模式     | 1    | 开始播放(start)                                 |
+|              |              | 2    | 停止播放(stop)                                  |
+|              |              | 3    | 暂停播放(pause)                                 |
+|              |              | 4    | 恢复播放(resume)                                |
+| `<filename>` | 音频文件名字 |      | AMR,WAV,MP3格式。需要加后缀，支持8K采样音频数据 |
+| `<duration>` | 播放持续时间 |      | 单位：毫秒                                      |
 
  
 
