@@ -33,27 +33,29 @@
 
 ![img](image/air201.png)
 
-| ![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=N2VkNDBjZDBhZGJhZmJmY2Q1YzFmNWU0ZDdlNmIzYWRfbTkwdUpjMDFyblRVWnJvSld2RHM1RmRXeDZoSlRRdW9fVG9rZW46UGZQWGJCNmFXb000U214VVg5WmNjbzllbkFjXzE3MjcxODIzMzc6MTcyNzE4NTkzN19WNA) | ![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=MjViZTgxMTdmYTk0MWRlYzk0YzVjMjE3ZDY5ZDBlM2RfQ0RMS1FzcWplc1lhbmpxTzk5RlZmMXozNGVnN1pXS01fVG9rZW46WFhJSmJ1azhIb2lPZXN4bHVPS2NRcWJkbjdmXzE3MjcxODIzMzc6MTcyNzE4NTkzN19WNA) |
+| ![img](image/air201_hd_1.PNG) | ![img](image/air201_hd_2.PNG) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-|                                                              |                                                              |
 
 ## 💡 客户成品展示
 
 ### 1. 定位工牌
 
-![img](image/work_card.png)
+| ![img](image/work_card_1.jpg) | ![img](image/work_card_2.jpg) |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 ### 2. 宠物定位
 
-![img](image/Pet_positioning.png)
+| ![img](image/Pet_positioning_1.png) | ![img](image/Pet_positioning_2.png) |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 ### 3. ### 腕式学生卡
 
-![img](image/Student_card.png)
+| ![img](image/student_card_1.png) | ![img](image/student_card_2.png) |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 ### 4. 车载定位
 
-![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=OTFkZjVhYjRmNDc4YjYwZGY2YWMwYzIzZTM3NjQzNjlfRjNhanpLTkFublVmVXROWGI2RW5YU3VLaUREdHBlcEVfVG9rZW46UDJMRWJXQnp4bzNZTTd4N2YzcGNGQ2pWbkllXzE3MjcxODIzMzc6MTcyNzE4NTkzN19WNA)
+![img](image/Vehicle_1.png)
 
 ### 5. 老人定位
 
@@ -138,7 +140,7 @@ BTB 外扩功能
 >
 > 连接牢固，方便安装
 
-![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=MTkwOTUxNjNkNWFjMzI4ZDJkNDBlZTdiYjg3ZjlhZTRfN2R2dTB1WXVUdk00MktoTDVDaVBSSjVvdngzbEhuc0pfVG9rZW46R0dzSmIyUnpDb2VUTmV4ZTNsWWNZYlFNblliXzE3MjcxODIzMzc6MTcyNzE4NTkzN19WNA)
+![img](image/air201__BTB.png)
 
 - 外扩功能：
   - 支持480*320 LCD 显示
@@ -158,7 +160,7 @@ BTB 外扩功能
 
 ### 2. 主 LTE 射频天线
 
-![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=NzQyM2FmMGY1YWM2ODE2YTMwNGU2M2JhZmU1OGQwNTlfTWpxWUNaQXRYVlB6SzMxbk5IMGpkTjl0MkFHT1FoMW1fVG9rZW46VWtGM2JRR3g3b0tPWUF4QTgyR2NyUjNnbndkXzE3MjcxODIzMzc6MTcyNzE4NTkzN19WNA)
+![img](image/air201_lte.PNG)
 
 客户根据外观 ID 可能选用不同电池容量的情况下，如果电池放在屏蔽罩上，用 FPC 天线需要在壳料上做台阶，保
 
@@ -166,35 +168,35 @@ BTB 外扩功能
 
 ### 3. GPS 天线
 
-![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=YjAyNjUyOGY4OTYxMjFhYmZlZjYxNmE3ZGMwMzU2NzVfZjYySGRMY082UUh6dHp0RFdOMnRDaDBXY29sQ05qNHRfVG9rZW46UmhrU2JzN1BLb3dVdVp4bmN1NGM5cG5ablBiXzE3MjcxODIzMzc6MTcyNzE4NTkzN19WNA)
+![img](image/air201_gps_1.png)
 
-![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=YTg3ZWI4MzY5NTg3Mjc4OTRlMmQ0OGYzNzlkNGJhNDNfb215ZDNsNmVValBQclFucThjWTNoVmVqSTFhZXFaRXVfVG9rZW46Q0ZDa2IwWVQ2bzN2SWF4RzFPTWNIbjV0bmFoXzE3MjcxODIzMzc6MTcyNzE4NTkzN19WNA)
+![img](image/air201_gps_2.png)
 
 ### 4. 贴片按键
 
-![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=YmNlNzI0NDUwMzFhOTAxZGRmM2U1ODQyZjM2ZmRiYjRfbTdmeW9neTdaVHVWTjJ1UngzNThRbmRnb0dOQ3I1N05fVG9rZW46Um1FcWJ4c1N3b25NaTF4QkZJbWN2UG1IbnVmXzE3MjcxODIzMzc6MTcyNzE4NTkzN19WNA)
+![img](image/air201_button.png)
 
 ### 5. BTB 连接器,24 PIN
 
-![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=YjQ1NGFlMzFkNzM5YmNiMDhmZDhjYmNhMmU0N2Y2NjhfYTBSWjM0QjJZdmNEc1ZOQkJVN2tsOEZpWlhGdFBUM0RfVG9rZW46WU93MWJzTldtb25mdVB4VnNXaWNDRm1rbk1oXzE3MjcxODIzMzc6MTcyNzE4NTkzN19WNA)
+![img](image/air201_btb_24pin.png)
 
 ### 6. SIM 卡座和防水 Type-C
 
-![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=Mjc3Y2Q3ZjZlM2EyZDUyMTc5YTY5YjgwYjlmYTg4MzFfbTNPZWtJVkdyaDNucTlyV0NLNGg0ZFNFcjZxNFR6eHhfVG9rZW46UUF5YmI0dDB4b2YzcHZ4RE5uT2M0eGxObnBmXzE3MjcxODIzMzc6MTcyNzE4NTkzN19WNA)
+![img](image/air201_sim_card.png)
 
 ### 7. 充电焊盘（磁吸或太阳能）
 
-![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=M2ViYmIxOWJlNDFiZjFlZDdkMDgzYTdhNzEyMDlkOThfZFY5UjhMYWZmZ25EQ3BqN3RTcXhyZm15Wk9xRnEzU2xfVG9rZW46U1NySmJ5WVFlb2dMV2p4UkVyWWNxT2tKbkdnXzE3MjcxODIzMzc6MTcyNzE4NTkzN19WNA)
+![img](image/air201_charge.png)
 
 ### 8. 震 动 + 计 步 传 感 器
 
 ### 9. 麦克风
 
-![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=ODI3YTYwN2FhMTg1NmZhZTI0NmNlOTBjM2UxM2FhODlfN2RrSzRURUpwRHBlcDZXZmp4YnNJN3p6Z3M0Umxra3FfVG9rZW46TThETWJzbVdmb2MzdWl4NDRmMmMyY2lPbjRnXzE3MjcxODIzMzc6MTcyNzE4NTkzN19WNA)
+![img](image/air201_mic.png)
 
 ### 10. 喇叭
 
-![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=NTM3ZWYyYjE4N2MzNjBjNTE1ZmNjMDUxZTQzNDZjNTZfYXJOdGJwVkFQalR4dlVpTnlKSThHY2xBUmxBRU5BNlRfVG9rZW46VmduV2JqcmVlb2NEd1F4em5VdmNxTEc2blpjXzE3MjcxODIzMzc6MTcyNzE4NTkzN19WNA)
+![img](image/air201_horn.png)
 
 ### 11. 其他
 
@@ -221,13 +223,11 @@ BTB 外扩功能
 
 ## 📝 功耗&待机时长计算
 
-### 您的电池可以用多久？
+### [您的电池可以用多久？](https://e3zt58hesn.feishu.cn/share/base/form/shrcnoi7m5H85T3yYyOlQ4W4Nja?iframeFrom=docx&ccm_open=iframe)
 
-### 您需要多大的电池？
+### [您需要多大的电池？](https://e3zt58hesn.feishu.cn/share/base/form/shrcnx7Z26k9l3Ma1cMLTZ2Gk8d?iframeFrom=docx&ccm_open=iframe)
 
-暂时无法在飞书文档外展示此内容
 
-暂时无法在飞书文档外展示此内容
 
 ## 💬 相关疑问
 
@@ -254,21 +254,21 @@ BTB 外扩功能
 
 ### 堆叠图
 
-暂时无法在飞书文档外展示此内容
+[HZ201P_ASM.stp](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/all/UAPmbWABqoNYYPxNx60cOr13n7e/?mount_node_token=J974dLHIdoNz62xirMHcAw2Lneg&mount_point=docx_file)
 
 ### BTB映射表
 
 #### 封装资料图
 
-   ​  C2880692_板对板与背板连接器_X0400FVS-24-LPV01_规格书_XKB+CONNECTIVITY(中国星坤)板对板连接器规格书.PDF
+  [C2880692_板对板与背板连接器_X0400FVS-24-LPV01_规格书_XKB+CONNECTIVITY(中国星坤)板对板连接器规格书.PDF](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/all/CJZKbeJCZowT3uxczzHcjxevnoe/?mount_node_token=NuS3dsSfPoPuzyx0Qotc0mIPnVh&mount_point=docx_file)
 
 #### 映射表
 
-    HZ201_6.24引脚映射表 (2).xlsx
+  [Air201_v1.3 gpio引脚映射表.xlsx](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/all/TGlQbdvIiopZZIxesUzcEGaVntb/?mount_node_token=YKUwdlNWIoiNAZxz6wOcd9dnnec&mount_point=docx_file)
 
 #### 框位图
 
-![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=MzAxOTRiYTY0OWZlZTE1OTlhMDUwM2I5N2MwNTFmNGJfemgxUWFGb2tXcVVaaERVUVRxdm9LeldNc3VYTWhKSnVfVG9rZW46TDFGUmJSOGhwb3lrU3F4eDFnd2NFa0c4blZkXzE3MjcxODIzMzc6MTcyNzE4NTkzN19WNA)
+![img](image/air201_btb.png)
 
 ## 认证证书
 
