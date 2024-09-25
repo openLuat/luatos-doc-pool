@@ -14,30 +14,30 @@
 
 事件上报：
 
-| 事件                                               | 解释                 |
-| -------------------------------------------------- | -------------------- |
-| +CGEV: NW PDN DEACT <cid>                          | 网络迫使上下文失效。 |
-| +CGEV: ME PDN DEACT <cid>[,< pdnReason >]          | MT迫使上下文失效。   |
-| +CGEV: ME PDN ACT <cid>[,< pdnReason >]            | ME激活了上下文。     |
-| +CGEV: NW MODIFY<cid>,<change_reason>,<event_type> | 网络修改了上下文。   |
-| +CGEV: ME MODIFY<cid>,<change_reason>,<event_type> | 所述MT修改了上下文。 |
+| 事件                                                 | 解释                 |
+| ---------------------------------------------------- | -------------------- |
+| `+CGEV: NW PDN DEACT <cid>`                          | 网络迫使上下文失效。 |
+| `+CGEV: ME PDN DEACT <cid>[,< pdnReason >]`          | MT迫使上下文失效。   |
+| `+CGEV: ME PDN ACT <cid>[,< pdnReason >]`            | ME激活了上下文。     |
+| `+CGEV: NW MODIFY<cid>,<change_reason>,<event_type>` | 网络修改了上下文。   |
+| `+CGEV: ME MODIFY<cid>,<change_reason>,<event_type>` | 所述MT修改了上下文。 |
 
  
 
 参数定义：
 
-| 参数                                  | 取值  | 对取值的说明                                                 |
-| ------------------------------------- | ----- | ------------------------------------------------------------ |
-| <cid>                                 |       | PDP 上下文标识                                               |
-| <pdnReason>                           | 0     | 仅允许IPV4                                                   |
-|                                       | 1     | 仅允许IPV6                                                   |
-|                                       | 2     | 仅允许单个地址承载                                           |
-|                                       | 3     | 仅允许单个地址承载，而激活的第二承载失败                     |
-| <change_reason>(整型，位对应某种改变) | Bit 1 | TFT 改变                                                     |
-|                                       | Bit 2 | Qos 改变                                                     |
-|                                       | Bit 3 | WLAN Offload 改变                                            |
-| <event_type>                          |       | 指示这是一个通知事件还是TE必须回复已收到(目前不支持)         |
-| <PDN>                                 |       | 上报里有PDN表示该激活或去激活的上下文是与LTE里PDN连接关联或者是与GMS/UMTS里的主要PDP上下文相关联 |
+| 参数                                    | 取值  | 对取值的说明                                                 |
+| --------------------------------------- | ----- | ------------------------------------------------------------ |
+| `<cid>`                                 |       | PDP 上下文标识                                               |
+| `<pdnReason>`                           | 0     | 仅允许IPV4                                                   |
+|                                         | 1     | 仅允许IPV6                                                   |
+|                                         | 2     | 仅允许单个地址承载                                           |
+|                                         | 3     | 仅允许单个地址承载，而激活的第二承载失败                     |
+| `<change_reason>`(整型，位对应某种改变) | Bit 1 | TFT 改变                                                     |
+|                                         | Bit 2 | Qos 改变                                                     |
+|                                         | Bit 3 | WLAN Offload 改变                                            |
+| `<event_type>`                          |       | 指示这是一个通知事件还是TE必须回复已收到(目前不支持)         |
+| `<PDN>`                                 |       | 上报里有PDN表示该激活或去激活的上下文是与LTE里PDN连接关联或者是与GMS/UMTS里的主要PDP上下文相关联 |
 
  
 
