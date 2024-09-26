@@ -42,6 +42,8 @@ def do_build(path, copy_product=False):
     if not path.startswith("air"):
         shutil.copytree("common/", root + "/docs/", dirs_exist_ok=True)
         shutil.copytree("../image", root + "/docs/image", dirs_exist_ok=True)
+    else:
+        shutil.copytree("common/", root + "/docs/", dirs_exist_ok=True, ignore="*.md")
 
     # 拷贝自定义主题文件
     shutil.copytree("custom_theme", root + "/custom_theme", dirs_exist_ok=True)
