@@ -1,5 +1,5 @@
 #!/usr/bin/python3
- # -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 import os, sys, re
 import json, shutil
