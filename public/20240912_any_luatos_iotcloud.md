@@ -16,3 +16,4 @@
 
 [IOT_CLOUD系列文档之中移阿里云物联网云平台](./20240920_any_luatos_iotcloud_aliyun.md)
 
+[IOT_CLOUD系列文档之中移华为云物联网云平台](./20240926_any_luatos_iotcloud_huawei.md)
