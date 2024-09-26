@@ -170,7 +170,7 @@ Air780E是合宙低功耗4G-Cat.1模组经典型号之一，累计出货数量20
     Air780E支持数据透传功能；无论AT指令，还是LuatOS，Air780E都可以方便的实现数据透传功能。
 
     如果您想更快速的实现设备上网功能，可以使用合宙的DTU模组或整机。
-    <font color="#E36C09">详见：[https://dtu.openluat.com](dtu.openluat.com)</font>
+    <font color="#E36C09">详见：[https://dtu.openluat.com](https://dtu.openluat.com)</font>
 
 4. **Air780EX与Air780E什么关系？**
 
