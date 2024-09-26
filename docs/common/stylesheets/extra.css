@@ -1,3 +1,5 @@
 .md-grid {
     max-width: initial;
+    display: flex;
+    justify-content: center;
   }
