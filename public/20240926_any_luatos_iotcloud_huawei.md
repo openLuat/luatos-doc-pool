@@ -131,7 +131,7 @@
 -- iotcloudc = iotcloud.new(iotcloud.HUAWEI,{produt_id = "xxx",endpoint = "xxx",device_name = "xxx",device_secret = "xxx"})
 ```
 
-​	第一个参数表示我们使用的是阿里云，第二个参数我们将上面得到的产品ID、endpoint、设备名和设备密钥，非常很简单~
+​	第一个参数表示我们使用的是华为云，第二个参数我们将上面得到的产品ID、endpoint、设备名和设备密钥，非常很简单~
 
 ### 云平台OTA
 
