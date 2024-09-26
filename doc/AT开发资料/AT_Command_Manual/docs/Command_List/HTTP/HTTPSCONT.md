@@ -8,14 +8,14 @@
 
 | 命令类型 | 语法          | 返回                                                         |
 | -------- | ------------- | ------------------------------------------------------------ |
-| 执行命令 | AT+HTTPSCONT  | +HTTPREAD: (list of supported <start_address>s),( list of supported<byte_size>s) <br>OK |
-| 查询命令 | AT+HTTPSCONT? | +HTTPSCONT:<mode><br>CID:<value><br>URL: <value><br>UA: <value><br>PROIP: <value><br>PROPORT: <value><br>REDIR: <value><br>BREAK: <value><br>BREAKEND: <value><br>USERDATA:<data> <br>OK |
+| 执行命令 | AT+HTTPSCONT  | `+HTTPREAD: (list of supported <start_address>s),( list of supported<byte_size>s) `<br>OK |
+| 查询命令 | AT+HTTPSCONT? | `+HTTPSCONT:<mode>`<br>`CID:<value>`<br>`URL: <value>`<br>`UA: <value>`<br>`PROIP: <value>`<br>`PROPORT: <value>`<br>`REDIR: <value>`<br>`BREAK: <value>`<br>`BREAKEND: <value>`<br>`USERDATA:<data> `<br>OK |
 
  
 
 参数定义：
 
-| 参数   | 定义               | 取值 | 对取值的说明       |
-| ------ | ------------------ | ---- | ------------------ |
-| <mode> | HTTP上下文保存模式 | 0    | 保存，值取自 NVRAM |
-|        |                    | 1    | 未保存，值取自 RAM |
+| 参数     | 定义               | 取值 | 对取值的说明       |
+| -------- | ------------------ | ---- | ------------------ |
+| `<mode>` | HTTP上下文保存模式 | 0    | 保存，值取自 NVRAM |
+|          |                    | 1    | 未保存，值取自 RAM |

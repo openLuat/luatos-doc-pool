@@ -1,8 +1,8 @@
-## HTTP错误码：ERROR：<err code>
+## HTTP错误码：ERROR：`<err code>`
 
-HTTP错误码会以ERROR:<err code>形式上报。
+HTTP错误码会以ERROR:`<err code>`形式上报。
 
-<err code>定义：
+`<err code>`定义：
 
 | 取值 | 英文说明                                    | 中文说明           |
 | ---- | ------------------------------------------- | ------------------ |
