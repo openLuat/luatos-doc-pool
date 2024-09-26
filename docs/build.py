@@ -94,6 +94,12 @@ def git_hook():
     # 然后还需要编译跟目录
     do_build("root")
 
+    # 调整site下所有文件的修改时间为固定值
+    for root, dirs, files in os.walk("/opt/docs/site/"):
+        for file in files:
+            filename = os.path.join(root, file)
+            os.utime(filename, (0, 0))
+
 if __name__ == '__main__':
     if len(sys.argv) > 1 :
         do_build(sys.argv[1])
