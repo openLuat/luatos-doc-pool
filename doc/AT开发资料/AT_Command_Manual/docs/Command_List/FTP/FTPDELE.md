@@ -7,5 +7,5 @@
 | 执行命令 | AT+FTPDELE                                 | OK                                                           |
 | 测试命令 | AT+FTPDELE=?                               | OK                                                           |
 | URC上报  | +FTPDELE:1,0                               | 表示删除成功。第一个参数1表示FTP会话打开                     |
-|          | +FTPDELE:1,<error>                         | 表示FTP文件删除失败。错误码<error>定义请参考AT+FTPGET 错误码<error>定义 |
+|          | `+FTPDELE:1,<error>`                       | 表示FTP文件删除失败。错误码`<error>`定义请参考AT+FTPGET 错误码`<error>`定义 |
 | 注意事项 | 文件由命令AT+FTPGETNAME和AT+FTPGETPATH指定 |                                                              |
