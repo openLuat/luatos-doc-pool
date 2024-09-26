@@ -38,11 +38,10 @@ def do_build(path, copy_product=False):
     if not os.path.exists(path) :
         return
     root = os.path.abspath(path)
-    # 拷贝产品手册的图片到当前目录
-    shutil.copytree("../image", root + "/docs/image", dirs_exist_ok=True)
-    # 拷贝产品手册的index到当前目录
+    # 拷贝产品指南手册的index到当前目录
     if not path.startswith("air"):
         shutil.copytree("common/", root + "/docs/", dirs_exist_ok=True)
+        shutil.copytree("../image", root + "/docs/image", dirs_exist_ok=True)
 
     # 拷贝自定义主题文件
     shutil.copytree("custom_theme", root + "/custom_theme", dirs_exist_ok=True)
