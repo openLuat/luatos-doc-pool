@@ -75,20 +75,20 @@ Air780E是合宙低功耗4G-Cat.1模组经典型号之一，累计出货数量20
 | ------------- | -------------------------------------- | -------- | -------- | ---------------- | --------- | -------- | ----------------------------- | -------- | ------------------------------------------------------------ |
 | 基础指令      | Y                                      | Y        | Y        | Y                | Y         | Y        | Y                             | Y        |                                                              |
 | TCP/UDP       | Y                                      | Y        | Y        | Y                | Y         | Y        | Y                             | Y        |                                                              |
-| HTTP          | Y                                      | Y        | Y        | Y                | Y         | Y        | Y                             | Y        |                                                              |
-| MQTT          | Y                                      | Y        | Y        | Y                | Y         | Y        | Y                             | Y        |                                                              |
-| FTP           | Y                                      | Y        | Y        | Y                | Y         | Y        | Y                             | Y        |                                                              |
+| HTTP          | Y                                      | N        | Y        | Y                | Y         | Y        | Y                             | Y        |                                                              |
+| MQTT          | Y                                      | N        | Y        | Y                | Y         | Y        | Y                             | Y        |                                                              |
+| FTP           | Y                                      | N        | Y        | Y                | Y         | Y        | Y                             | Y        |                                                              |
 | NTP           | Y                                      | Y        | Y        | Y                | Y         | Y        | Y                             | Y        | NetworkTimeProtocol,网络时间协议                             |
 | SSL           | Y                                      | Y        | Y        | Y                | Y         | Y        | Y                             | Y        | TLS/SSL配置                                                  |
-| FS            | Y                                      | Y        | Y        | Y                | Y         | Y        | Y                             | Y        | 建立文件,枚举文件,传输TLS/SSL证书                            |
-| SMS           | Y                                      | Y        | Y        | Y                | Y         | Y        | Y                             | Y        | 短信功能，Air724UG支持移动联通电信， 其余型号仅支持移动联通，电信不支持 |
-| WiFiScan      | Y                                      | Y        | Y        | Y                | Y         | Y        | Y                             | Y        | WiFi扫描,用于定位                                            |
-| LBS           | Y                                      | Y        | Y        | Y                | Y         | Y        | Y                             | Y        | 基站定位                                                     |
+| FS            | Y                                      | N        | Y        | Y                | Y         | Y        | Y                             | Y        | 建立文件,枚举文件,传输TLS/SSL证书                            |
+| SMS           | Y                                      | N        | Y        | Y                | Y         | Y        | Y                             | Y        | 短信功能，Air724UG支持移动联通电信， 其余型号仅支持移动联通，电信不支持 |
+| WiFiScan      | Y                                      | N        | Y        | Y                | Y         | Y        | Y                             | Y        | WiFi扫描,用于定位                                            |
+| LBS           | Y                                      | N        | Y        | Y                | Y         | Y        | Y                             | Y        | 基站定位                                                     |
 | GPS           | N                                      | N        | N        | N                | N         | N        | N                             | Y        | 定位功能                                                     |
 | TTS           | N                                      | N        | N        | N                | N         | Y        | N                             | N        | Text To Speech                                               |
 | VoTLE         | N                                      | N        | N        | N                | N         | Y        | N                             | N        | 语音通话                                                     |
-| PPP           | N                                      | Y        | N        | N                | N         | N        | N                             | N        | PPP拨号上网                                                  |
-| USB_RNDIS_ECM | N                                      | Y        | N        | N                | N         | N        | N                             | N        | USB网络驱动                                                  |
+| PPP           | N                                      | Y        | N        | Y                | N         | Y        | Y                             | Y        | PPP拨号上网                                                  |
+| USB_RNDIS_ECM | N                                      | Y        | N        | Y                | N         | Y        | Y                             | Y        | USB网络驱动                                                  |
 
 ### 四、Air780E之LuatOS
 
