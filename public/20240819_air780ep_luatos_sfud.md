@@ -24,6 +24,20 @@
 
 ![image-20240730164124181](./image/LuatOS_sfud_w25q.jpg)
 
+### 接线
+
+```lua
+--[[
+	W25Q		780EP使用小板,看板子上的丝印找到如下引脚
+	CS			SPI_CS（GPIO8）
+	DO			SPI_MISO（GPIO10）
+	CLK			SPI_SCLK（GPIO11）
+	DI			SPI_MOSI（GPIO9）
+]]
+```
+
+
+
 ## 程序介绍
 
 ### API说明
@@ -283,18 +297,6 @@ os.time(mytime)
 | return     | 时间戳          |
 
 ### 程序demo讲解
-
-#### 接线
-
-```lua
---[[
-	W25Q		780EP
-	CS			SPI_CS
-	DO			SPI_MISO
-	CLK			SPI_SCLK
-	DI			SPI_MOSI
-]]
-```
 
 #### 1、初始化
 
