@@ -5,7 +5,7 @@
 | 命令类型 | 语法                  | 返回                               |
 | -------- | --------------------- | ---------------------------------- |
 | 设置命令 | AT+CGNSSEQ=＂ｓｔｒ＂ | OK                                 |
-|          |                       | +CME ERROR:<err>                   |
+|          |                       | `+CME ERROR:<err>`                 |
 | 查询命令 | AT+CGNSSEQ?           | +CGNSSEQ: %s <br>OK                |
 | 测试命令 | AT+CGNSSEQ=?          | +CGNSSEQ: (GGA,GSA,RMC,GSV) <br>OK |
 
