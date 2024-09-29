@@ -7,7 +7,7 @@ meta:
 nav:
   - 必看资料: 
     - 选型指南: product.md
-    - Luatools教程和下载: luatools.md
+    - Luatools教程和下载: Luatools.md
     - 各个型号功耗对比:  powercompare.md
     - LuatOS 入门教程:  
       - Lua语法基础教程: lua_lesson.md
