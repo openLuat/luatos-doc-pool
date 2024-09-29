@@ -11,3 +11,5 @@
 
 - 不支持 Mac和 Linux。
 
+
+                         **[二、支持的模组型号](https://docs.openluat.com/Luatools_2/)**
