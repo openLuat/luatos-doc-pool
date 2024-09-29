@@ -8,14 +8,12 @@ nav:
   - 必看资料: 
     - 选型指南: product.md
     - Luatools教程和下载: 
-      - 1，运行环境要求: Luatools_1.md
-      - 2，支持的模组型号: Luatools_2.md
-      - 3，下载与安装: Luatools_3.md      
-      - 4，主要功能介绍: Luatools_4.md
-      - 5，日志查看: Luatools_5.md
-      - 6，项目管理: Luatools_6.md      
-      - 7，USB固件烧录: Luatools_7.md
-      - 8，串口固件烧录: Luatools_8.md      
+      - 1，下载与安装: Luatools_1.md
+      - 2，主要文件夹介绍: Luatools_2.md
+      - 3，菜单和界面介绍: Luatools_3.md      
+      - 4，日志查看: Luatools_4.md
+      - 5，项目管理: Luatools_5.md
+      - 6，固件烧录: Luatools_6.md          
     - 各个型号功耗对比:  powercompare.md
     - LuatOS 入门教程:  
       - Lua语法基础教程: lua_lesson.md
