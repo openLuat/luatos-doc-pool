@@ -4,27 +4,27 @@
 >
 >此工具适用于合宙所有 4G 模组， 4G + GNSS 模组。
 
-# 运行环境要求
+# 一、运行环境要求
 
 - 此工具运行于win7及以上系统;
 
 - 不支持 Mac和 Linux。
 
-# 支持的模组型号
+# 二、支持的模组型号
 
 - Air724, 
 - 所有的 Air780 系列模组；
 - 所有的 Air700 系列模组；
 - Air201 系列模组；
 
-# 下载与安装
+# 三、下载与安装
 
-## Luatools下载
+## （一）Luatools下载
 
  点击下载：[Luatools v3 下载调试工具](https://luatos.com/luatools/download/last "Luatools v3下载")
 
 
-## Luatools安装
+## （二）Luatools安装
 
 1. 工具下载后的文件名为：Luatools_v3.exe
 
@@ -45,19 +45,19 @@
 
 ![Luatools v3 生成的新文件夹](image/luatools_v3_dirlist.png)
 
-# 功能介绍
+# 三、功能介绍
 
-## 文件夹功能介绍
+## （一）文件夹功能介绍
 
-1. _temp 文件夹：临时文件
+### 1， _temp 文件夹：临时文件
 
 ![Luatools v3 临时文件夹](image/luatools_v3_dirtemp.png)
 
-2. config 文件夹：对 Luatools_v3 进行的一些配置会存放到这个文件夹
+### 2. config 文件夹：对 Luatools_v3 进行的一些配置会存放到这个文件夹
 
 ![Luatools v3 配置文件夹](image/luatools_v3_dirconfig.png)
 
-3. log 文件夹：里面存放有模块输出的各种日志信息，当模块出现问题需要向合宙技术人员寻求技术支持的时候，就需要提交这个目录下的文件
+### 3. log 文件夹：里面存放有模块输出的各种日志信息，当模块出现问题需要向合宙技术人员寻求技术支持的时候，就需要提交这个目录下的文件
    - 4gdiag 文件夹：ap和cp日志
    - ramdump 文件夹：死机dump文件
    - main_xxxxxx：模块输出的调试日志
@@ -65,7 +65,7 @@
 
 ![Luatools v3 Log文件夹](image/luatools_v3_dirlog.png)
 
-4. resource 文件夹：合宙模块相关的AT固件，LuaTask开发的Core底层固件，Lib库和demo脚本
+### 4. resource 文件夹：合宙模块相关的AT固件，LuaTask开发的Core底层固件，Lib库和demo脚本
    - aa_bb_lod 文件夹：aa表示芯片平台，bb表示开发方式（at / lua）,比如 LuatOS_Air780E, AT_Air780EQ
    - 8910_script 文件夹：Air724 模块的demo和Lib
    - soc_script 文件夹：gitee Luatos 主仓库更新的demo和Lib
@@ -73,13 +73,13 @@
 
 ![Luatools v3 resource文件夹](image/luatools_v3_dirresource.png)
 
-5. project 文件夹：使用项目管理后会自动生成这个目录，用于管理下载项目
+### 5. project 文件夹：使用项目管理后会自动生成这个目录，用于管理下载项目
 
 ![Luatools v3 project文件夹](image/luatools_v3_dirproject.png)
 
-## 主界面介绍
+## （二）主界面介绍
 
-1. 账户
+### 1. 账户
    - 登录：使用购买时销售为你自动创建的erp账号登陆，可以在合宙技术人员远程支持客户时协助抓取本机log
    ![账号登陆](image/luatools_v3_login.png)
    - 工具配置:点击Log，当配合技术人员抓取bug日志时在此页面打开log功能，例如AP与CP日志，若使用工具经常遇到蓝屏，可先关闭底层日志的抓取
@@ -87,8 +87,7 @@
    - Exit：退出工具
 
 
-
-2. LuatOS
+### 2. LuatOS
   - 2.1 代码调试
     对应各个模块的DEMO的gitee路径
     Air780E模块gitee路径： [Air780E](https://gitee.com/openLuat/LuatOS-Air780E "Air780E代码仓库")
@@ -117,7 +116,7 @@
        ![固件合并工具](image/luatools_v3_firmcombo.png)
        
 
-3， AT指令
+### 3，AT指令
    - 固件烧录
    - 调试工具
 
