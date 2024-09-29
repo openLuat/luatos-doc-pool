@@ -45,7 +45,7 @@
 
 ![Luatools v3 生成的新文件夹](image/luatools_v3_dirlist.png)
 
-# 三、功能介绍
+# 三、主要功能介绍
 
 ## （一）文件夹功能介绍
 
