@@ -5,7 +5,18 @@ meta:
   author: 上海合宙通信科技有限公司
 
 nav:
-  - 选型指南: product.md
+  - 必看资料: 
+    - 选型指南: product.md
+    - Luatools教程和下载: luatools.md
+    - 各个型号功耗对比:  powercompare.md
+    - LuatOS 入门教程:  
+      - Lua语法基础教程: lua_lesson.md
+      - LuatOS基础教程: luatOS.md
+      - LuatOS-Air教程: luatOS_Air.md
+    - 模组底层日志调试教程:  epat_lesson.md
+    - 量产多路下载工具介绍:  multi_download.md
+    - TCPUDP_Web测试工具:   TCPUDP_Test.md
+    - 远程固件升级服务:   fota_lesson.md
   - Air780E:
     - 简介: air780e/index.md
     - 产品手册: air780e/product/index.md
