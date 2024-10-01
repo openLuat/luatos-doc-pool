@@ -238,7 +238,7 @@ end
 # OTA升级
 
 1. 建立项目并接入阿里云
-2. 制作差分升级文件包 [生成差分包详细步骤](https://doc.openluat.com/wiki/21?wiki_page_id=6078)
+2. 制作差分升级文件包 [生成差分包详细步骤](https://doc.openluat.com/wiki/21?wiki_page_id=6078)，参考第三章第四节内容
 3. 阿里云平台上传差分包
 
 ![image-20240722141443183](image/image-20240722141443183.png)
