@@ -9,7 +9,8 @@ meta:
 
 nav:
   #- 首页: index.md
-  - 快速入门: quick_start.md
+  - 快速入门:
+    - 介绍: quick_start/index.md
   - AT指令:
     - AT介绍: 
       - 完整指令手册: at_command.md
