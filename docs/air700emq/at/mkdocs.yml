@@ -27,7 +27,7 @@ nav:
     - 常见异常:
       - 网络异常类: error/network.md
       - 通信异常类: error/error.md
-  - 固件下载: firmware.md
+  - 固件版本: firmware.md
   - 常见问题: faq.md
   - 卫星定位模组: https://docs.openluat.com/gnss/
   - DTU: https://docs.openluat.com/dtu/
