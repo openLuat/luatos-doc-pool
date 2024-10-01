@@ -11,9 +11,9 @@ nav:
   #- 首页: index.md
   - 快速入门:
     - 介绍: quick_start/index.md
-    - TCP教程:
-    - MQTT教程:
-    - HTTP教程:
+    - TCP教程: quick_start/tcp.md
+    - MQTT教程: quick_start/mqtt.md
+    - HTTP教程: quick_start/http.md
   - 软件demo:
     - 介绍: app/index.md
     - AT指令手册: app/at_command.md
