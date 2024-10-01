@@ -33,7 +33,7 @@ nav:
   - 硬件demo:
     - 典型硬件设计指南:
       - 简介: hardware/design/index.md
-      - 常见供电电路: ../luatos/hardware/design/power.md
+      - 常见供电电路: ../luatos/docs/hardware/design/power.md
       - 常见充电电路: hardware/design/charge.md
       - 常见开机电路: hardware/design/poweron.md
       - 常见关机电路: hardware/design/poweroff.md
