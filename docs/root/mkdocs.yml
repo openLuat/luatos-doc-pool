@@ -6,7 +6,9 @@ meta:
 
 nav:
   - 必看资料: 
-    - 选型指南: product.md
+    - 4G模组该怎么用？: module_intro.md
+    - 合宙模组选型指南: product.md
+    - 本文讲清楚USB驱动问题: usb_drv.md
     - Luatools教程和下载: 
       - 1，下载与安装: Luatools_1.md
       - 2，主要文件夹介绍: Luatools_2.md
