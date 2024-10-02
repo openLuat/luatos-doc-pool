@@ -1,6 +1,6 @@
 
 # 一、本文的讨论边界
-    本文涉及的内容， 都是基于 windows系统， 并且都是不低于windows10 的版本。
+    本文涉及的内容， 都是基于 windows系统， 并且都是不低于windows7 的版本。
     Linux，Mac，UNIX，低版本的 windows，都不在本文涉及范围之内。 
 
 # 二、哪几个模组需要安装 USB 驱动？
