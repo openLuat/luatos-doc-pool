@@ -16,7 +16,7 @@ nav:
       - 6，固件烧录: Luatools_6.md          
     - 各个型号功耗对比:
       - 1，实时在线的各模组功耗数据: tcppower.md
-      - 2，低频次的各模组功耗数据:   psmpower.md
+      - 2，低频次通信的各模组功耗数据:   psmpower.md
     - LuatOS 入门教程:  
       - Lua语法基础教程: lua_lesson.md
       - LuatOS基础教程: luatOS.md
