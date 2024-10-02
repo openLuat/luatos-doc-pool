@@ -28,7 +28,8 @@
 
     通过 Luatools 的日志查看界面， 就可以非常方便的查看， 保存，分析业务日志。
 
-    使用 Luatools 查看日志的详细资料，可以查看：    [Luatools教程和下载](https://docs.openluat.com/Luatools_1/ "Luatools详细教程")
+    使用 Luatools 查看日志的详细资料，可以查看：    
+[Luatools教程和下载](https://docs.openluat.com/Luatools_1/ "Luatools详细教程")
 
 
 
@@ -39,4 +40,4 @@
    交给合宙的技术同事分析问题。
 
    无论是 AT 指令方式的开发，还是在模组内部做二次开发，都可以抓取底层日志。
-   
+
