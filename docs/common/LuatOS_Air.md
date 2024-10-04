@@ -1,15 +1,18 @@
 
-# LuatOS 概述
+# LuatOS_Air 概述
 
-   LuatOS 系统，通过 Lua 虚拟机，支持 Lua 脚本在 4G 模组的的运行。
-   LuatOS 系统，还实现了一套多任务的机制，这套机制是在 sys 库实现的。
+   LuatOS_Air 系统，是 LuatOS 系统的前身。
+   LuatOS_Air 也是通过 Lua 虚拟机，支持 Lua 脚本在 4G 模组的的运行。
+   和 LuatOS 不同的是， LuatOS_Air 需要消耗更多的 RAM，所以只适合在 
+   Air724， Air722，Air720， Air795 等 RAM 更大的模组应用。
+   LuatOS_Air 系统，同样是实现了一套多任务的机制，这套机制是在 sys 库实现的。
 
 # LuatOS_Air 支持的模组型号
 
-    - Air780E, 780EX，780EP，780EPS，780EQ，780EG
-    - Air700ECQ，700EAQ，700EMQ
-    - Air201
-
+    - Air724
+    - Air722
+    - Air720
+    - Air795
 
 # LuatOS 的 sys 模块介绍
 
