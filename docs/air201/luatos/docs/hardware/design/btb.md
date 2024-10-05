@@ -17,9 +17,6 @@
 
 [Air201_BTB扩展板_装配图v1.0.pdf](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/all/Trdub8xPiox72mxTVPEcOJrunui/?mount_node_token=ARtkdVNBvogt3WxnNe5cDye0nXf&mount_point=docx_file)
 
-**原理图：**
-
-[Air201_BTB扩展板_原理图v1.0.pdf](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/all/TZagbBxRGoTIm2xn8P4cVQOIn5b/?mount_node_token=DduCdoZLyoyoegxtAT4cjZRsnJg&mount_point=docx_file)
 
 ## LCD 扩展
 
