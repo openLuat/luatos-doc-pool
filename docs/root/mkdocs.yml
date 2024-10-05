@@ -11,10 +11,9 @@ nav:
     - 彻底讲清楚USB驱动问题: usb_drv.md
     - Luatools下载和使用教程: Luatools.md        
     - 合宙不同模组功耗对比: airpower.md
-    - LuatOS 入门教程:  
-      - Lua语法基础教程: lua_lesson.md
-      - LuatOS基础教程: LuatOS.md
-      - LuatOS-Air教程: LuatOS_Air.md
+    - Lua语法基础教程: lua_lesson.md
+    - LuatOS基础教程: LuatOS.md
+    - LuatOS-Air教程: LuatOS_Air.md
     - 模组日志总体介绍:  howtouselog.md
     - 量产多路下载工具介绍:  multi_download.md
     - TCPUDP_Web测试工具:   TCPUDP_Test.md
