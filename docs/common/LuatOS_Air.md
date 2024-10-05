@@ -1,5 +1,6 @@
+# LuatOS_Air 介绍
 
-# LuatOS_Air 概述
+## LuatOS_Air 概述
 
    LuatOS_Air 系统，是 LuatOS 系统的前身。
    LuatOS_Air 也是通过 Lua 虚拟机，支持 Lua 脚本在 4G 模组的的运行。
@@ -7,16 +8,16 @@
    Air724， Air722，Air720， Air795 等 RAM 更大的模组应用。
    LuatOS_Air 系统，同样是实现了一套多任务的机制，这套机制是在 sys 库实现的。
 
-# LuatOS_Air 支持的模组型号
+## LuatOS_Air 支持的模组型号
 
     - Air724
     - Air722
     - Air720
     - Air795
 
-# LuatOS 的 sys 模块介绍
+## LuatOS 的 sys 模块介绍
 
-## sys 模块简述
+### sys 模块简述
 
 sys 模块利用了 Lua 语言的协程机制，实现了实时多任务的调度。
 
@@ -25,9 +26,9 @@ sys 模块利用了 Lua 语言的协程机制，实现了实时多任务的调�
 在开发 LuatOS 业务代码时，需要在代码中引用`sys`库（`_G.sys=require("sys")`），
 并且在代码的最后一行，调用`sys.run()`以启动主程序，使得框架内的任务代码会在`sys.run()`中运行。
 
-## sys 模块的实时多任务机制详解
+### sys 模块的实时多任务机制详解
 
-### 创建多个并行的任务
+#### 创建多个并行的任务
 
 如下代码，创建了两个任务，每个任务都是一个循环，只要循环不结束，任务就一直在运行：
 
@@ -52,7 +53,7 @@ end)
 sys.run()
 ```
 
-### 多任务之间互相等待
+#### 多任务之间互相等待
 
 通过 sys 模块的 publish 和 waitUntil 调用，实现多个任务之间的同步。
 
@@ -91,7 +92,7 @@ end)
 sys.run()
 ```
 
-### 多任务之间互相等待并传递数据
+#### 多任务之间互相等待并传递数据
 
 ```lua
 sys = require("sys")
@@ -128,7 +129,7 @@ end)
 sys.run()
 ```
 
-### 传统定时器
+#### 传统定时器
 
 ```lua
 sys = require("sys")
@@ -162,9 +163,9 @@ window.onload = function(){
 </script>
 
 
-## sys库接口文档
+### sys库接口文档
 
-### sys.wait(ms)
+#### sys.wait(ms)
 
 Task任务延时函数，只能用于任务函数中
 
@@ -186,7 +187,7 @@ sys.wait(30)
 
 ---
 
-### sys.waitUntil(id, ms)
+#### sys.waitUntil(id, ms)
 
 Task任务的条件等待函数（包括事件消息和定时器消息等条件），只能用于任务函数中。
 
@@ -210,7 +211,7 @@ result, data = sys.waitUntil("SIM_IND", 120000)
 
 ---
 
-### sys.waitUntilExt(id, ms)
+#### sys.waitUntilExt(id, ms)
 
 Task任务的条件等待函数扩展（包括事件消息和定时器消息等条件），只能用于任务函数中。
 
@@ -234,7 +235,7 @@ result, data = sys.waitUntilExt("SIM_IND", 120000)
 
 ---
 
-### sys.taskInit(fun, ...)
+#### sys.taskInit(fun, ...)
 
 创建一个任务线程,在模块最末行调用该函数并注册模块中的任务函数，main.lua导入该模块即可
 
@@ -257,7 +258,7 @@ sys.taskInit(task1,'a','b')
 
 ---
 
-### sys.timerStop(val, ...)
+#### sys.timerStop(val, ...)
 
 关闭定时器
 
@@ -280,7 +281,7 @@ timerStop(1)
 
 ---
 
-### sys.timerStopAll(fnc)
+#### sys.timerStopAll(fnc)
 
 关闭同一回调函数的所有定时器
 
@@ -302,7 +303,7 @@ timerStopAll(cbFnc)
 
 ---
 
-### sys.timerStart(fnc, ms, ...)
+#### sys.timerStart(fnc, ms, ...)
 
 开启一个定时器
 
@@ -324,7 +325,7 @@ number 定时器ID，如果失败，返回nil
 
 ---
 
-### sys.timerLoopStart(fnc, ms, ...)
+#### sys.timerLoopStart(fnc, ms, ...)
 
 开启一个循环定时器
 
@@ -346,7 +347,7 @@ number 定时器ID，如果失败，返回nil
 
 ---
 
-### sys.timerIsActive(val, ...)
+#### sys.timerIsActive(val, ...)
 
 判断某个定时器是否处于开启状态
 
@@ -367,7 +368,7 @@ number 开启状态返回true，否则nil
 
 ---
 
-### sys.subscribe(id, callback)
+#### sys.subscribe(id, callback)
 
 订阅消息
 
@@ -390,7 +391,7 @@ subscribe("NET_STATUS_IND", callback)
 
 ---
 
-### sys.unsubscribe(id, callback)
+#### sys.unsubscribe(id, callback)
 
 取消订阅消息
 
@@ -413,7 +414,7 @@ unsubscribe("NET_STATUS_IND", callback)
 
 ---
 
-### sys.publish(...)
+#### sys.publish(...)
 
 发布内部消息，存储在内部消息队列中
 
@@ -435,7 +436,7 @@ publish("NET_STATUS_IND")
 
 ---
 
-### sys.run()
+#### sys.run()
 
 run()从底层获取core消息并及时处理相关消息，查询定时器并调度各注册成功的任务线程运行和挂起
 
