@@ -6,7 +6,13 @@ meta:
   model: "air700emq"
   doctp : "luatos"
 nav:
-  - 快速入门: quickstart/index.md
+  - 快速入门:
+    - 介绍: quick_start/index.md
+  - 软件demo:
+    - 介绍: app/index.md
+  - 硬件demo:
+    - 典型硬件设计指南:
+      - 简介: hardware/design/index.md
   - 固件版本: firmware.md
   - 常见问题: faq.md
   - 卫星定位模组: https://docs.openluat.com/gnss/
