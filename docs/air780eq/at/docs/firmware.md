@@ -1,2 +1,2 @@
-# air780eq AT固件下载
+# Air700EQ AT固件版本
 
