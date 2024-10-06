@@ -9,24 +9,30 @@ meta:
 
 nav:
   #- 首页: index.md
-  - 快速入门: quick_start.md
-  - AT指令:
-    - AT介绍: 
-      - 完整指令手册: at_command.md
+  - 快速入门:
+    - 介绍: quick_start/index.md
+    - TCP快速入门: quick_start/tcp.md
+    - MQTT快速入门: quick_start/mqtt.md
+    - HTTP快速入门: quick_start/http.md
+  - 软件demo:
+    - 介绍: app/index.md
+    - AT指令手册: app/at_command.md
     - 应用实例:
-      - 连接TCP服务器: app/tcp.md
-      - 连接MQTT服务器: app/mqtt.md
-      - 访问HTTP地址: app/http.md
-    - MCU实例代码:
-      - STM32演示代码: mcu/stm32.md
-      - Air32演示代码: mcu/air32.md
+      - TCP应用实例: app/command/tcp.md
+      - MQTT应用实例: app/command/mqtt.md
+      - HTTP应用实例: app/command/http.md
     - 常用状态机:
-      - TCP状态机: state/tcp.md
-      - MQTT状态机: state/mqtt.md
-      - 网络状态机: state/network.md
+      - 网络状态机: app/state/network.md
+      - TCP状态机: app/state/tcp.md
+      - MQTT状态机: app/state/mqtt.md
     - 常见异常:
-      - 网络异常类: error/network.md
-      - 通信异常类: error/error.md
+      - 网络异常类: app/error/network.md
+      - 通信异常类: app/error/error.md
+    - MCU实例代码:
+      - STM32演示代码: app/mcu/stm32.md
+  - 硬件demo:
+    - 典型硬件设计指南:
+      - 简介: hardware/design/index.md
   - 固件版本: firmware.md
   - 常见问题: faq.md
   - 卫星定位模组: https://docs.openluat.com/gnss/
