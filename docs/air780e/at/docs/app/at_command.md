@@ -2,7 +2,7 @@
 
 ## 基本命令
 
-- [`AT+CGMI`查询制造商名称](./Command_List/Base/CGMI.md)
+- [`AT+CGMI`查询制造商名称](../Command_List/Base/CGMI.md)
 - [`AT+CGMM`查询模块型号](./Command_List/Base/CGMM.md)
 - [`AT+CGMR`查询模块版本信息](./Command_List/Base/CGMR.md)
 - [`AT+CGSN`查询IMEI](./Command_List/Base/CGSN.md)
