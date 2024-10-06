@@ -1,6 +1,6 @@
 # Air780EPS快速入门指南
 
-本章将带你快速入门Air780EAQ，并开始你的第一个项目。
+本章将带你快速入门Air780EPS，并开始你的第一个项目。
 
 - [HelloWorld教程](./hello/index.md)
 - [本地脚本控制灯的亮和灭](./led/index.md)
