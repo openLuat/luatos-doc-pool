@@ -1,2 +1,2 @@
-# air780ex LuatOS固件下载
+# Air700EX LuatOS固件下载
 

@@ -1,2 +1,2 @@
-# air780ep AT固件下载
+# Air700EP AT固件版本
 
