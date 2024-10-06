@@ -6,22 +6,15 @@ meta:
 
 nav:
   - 必看资料: 
-    - 选型指南: product.md
-    - Luatools教程和下载: 
-      - 1，下载与安装: Luatools_1.md
-      - 2，主要文件夹介绍: Luatools_2.md
-      - 3，菜单和界面介绍: Luatools_3.md      
-      - 4，日志查看: Luatools_4.md
-      - 5，项目管理: Luatools_5.md
-      - 6，固件烧录: Luatools_6.md          
-    - 各个型号功耗对比:
-      - 1，实时在线的各模组功耗数据: tcppower.md
-      - 2，低频次的各模组功耗数据:   psmpower.md
-    - LuatOS 入门教程:  
-      - Lua语法基础教程: lua_lesson.md
-      - LuatOS基础教程: luatOS.md
-      - LuatOS-Air教程: luatOS_Air.md
-    - 模组底层日志调试教程:  epat_lesson.md
+    - 4G模组该怎么用？: module_intro.md
+    - 合宙模组选型指南: product.md
+    - 彻底讲清楚USB驱动问题: usb_drv.md
+    - Luatools下载和使用教程: Luatools.md        
+    - 合宙不同模组功耗对比: airpower.md
+    - Lua语法基础教程: lua_lesson.md
+    - LuatOS基础教程: LuatOS.md
+    - LuatOS-Air教程: LuatOS_Air.md
+    - 模组日志总体介绍:  howtouselog.md
     - 量产多路下载工具介绍:  multi_download.md
     - TCPUDP_Web测试工具:   TCPUDP_Test.md
     - 远程固件升级服务:   fota_lesson.md
