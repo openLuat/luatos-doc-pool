@@ -11,16 +11,16 @@ nav:
   #- 首页: index.md
   - 快速入门:
     - 介绍: quick_start/index.md
-    - TCP教程: quick_start/tcp.md
-    - MQTT教程: quick_start/mqtt.md
-    - HTTP教程: quick_start/http.md
+    - TCP快速入门: quick_start/tcp.md
+    - MQTT快速入门: quick_start/mqtt.md
+    - HTTP快速入门: quick_start/http.md
   - 软件demo:
     - 介绍: app/index.md
     - AT指令手册: app/at_command.md
     - 应用实例:
-      - 连接TCP服务器: app/command/tcp.md
-      - 连接MQTT服务器: app/command/mqtt.md
-      - 访问HTTP地址: app/command/http.md
+      - TCP应用实例: app/command/tcp.md
+      - MQTT应用实例: app/command/mqtt.md
+      - HTTP应用实例: app/command/http.md
     - 常用状态机:
       - 网络状态机: app/state/network.md
       - TCP状态机: app/state/tcp.md
