@@ -1,2 +1,2 @@
-# air780e LuatOS固件下载
+# Air780E LuatOS固件版本
 

@@ -1,2 +1,2 @@
-# Air700EG LuatOS固件下载
+# Air780EG LuatOS固件版本
 

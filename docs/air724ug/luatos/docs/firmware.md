@@ -1,2 +1,2 @@
-# air724ug LuatOS固件下载
+# Air724UG LuatOS固件版本
 

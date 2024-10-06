@@ -1,2 +1,2 @@
-# air724ug AT固件下载
+# Air724UG AT固件版本
 

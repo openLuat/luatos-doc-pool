@@ -1,2 +1,2 @@
-# Air700EG AT固件版本
+# Air780EG AT固件版本
 

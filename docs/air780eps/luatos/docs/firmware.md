@@ -1,2 +1,2 @@
-# Air700EPS LuatOS固件下载
+# Air780EPS LuatOS固件版本
 

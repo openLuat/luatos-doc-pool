@@ -1,4 +1,4 @@
-# Air780ECQ模块AT指令手册
+# Air700ECQ模块AT指令手册
 
 ## 基本命令
 
@@ -177,7 +177,7 @@
 - [`AT+CIPCCFG`配置透明传输模式](./Command_List/TCPIP/CIPCCFG.md)
 - [`AT+CIPSEND`发送数据](./Command_List/TCPIP/CIPSEND.md)
 - [`AT+CIPATS`设置自动发送数据前的定时时间](./Command_List/TCPIP/CIPATS.md)
-- [`AT+CIPSPRT`设置发送数据时是否显示‘>’和发送情况提示](./Command_List/TCPIP/CIPSPRT.md)
+- [`AT+CIPSPRT`设置发送数据时是否显示‘&gt;’和发送情况提示](./Command_List/TCPIP/CIPSPRT.md)
 - [`AT+CIPSTATUS`查询当前连接状态](./Command_List/TCPIP/CIPSTATUS.md)
 - [`AT+CIPACK`查询已连接数据传输状态](./Command_List/TCPIP/CIPACK.md)
 - [`AT+CIPCSGP`设置为 CSD 或 GPRS 连接模式](./Command_List/TCPIP/CIPCSGP.md)
@@ -284,4 +284,3 @@
 - [`AT+CGNSAID`设置辅助定位]()
 - [`AT+CGNSDEL`删除 EPO 文件]()
 - [`AT+CGNSSEQ`定义 NMEA 解析]()
-
