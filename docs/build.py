@@ -50,7 +50,7 @@ def do_build(path, copy_product=False):
     # 如果是AT文档,且不是Air724UG系列,那就拷贝一下AT手册
     if str(path).endswith("at") or str(path).endswith("at/") :
         if "air724ug" not in path:
-            shutil.copytree("../doc/AT开发资料/AT_Command_Manual/docs/Command_List", root + "/docs/Command_List", dirs_exist_ok=True)
+            shutil.copytree("../doc/AT开发资料/AT_Command_Manual/docs/Command_List", root + "/docs/app/Command_List", dirs_exist_ok=True)
     
     # if copy_product and os.path.exists(copy_product) :
     #     if os.path.exists(root + "/docs/product/") :
