@@ -39,7 +39,7 @@
 
 ![image.png](image/netlab_disconnect.png)
 
-### UCP 测试
+### UDP 测试
 
     UDP 的测试，和 TCP 相同， 点击 "打开UDP"按钮即可开始测试。
 
@@ -58,4 +58,3 @@
    -- 3， 支持16进制显示消息日志
 
     点击左下角的16进制显示按钮后，同时显示 ascii 和 16进制的消息日志。
-    
