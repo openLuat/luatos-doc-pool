@@ -1,2 +1,2 @@
-# air700eaq AT固件版本
+# Air700EAQ AT固件版本
 

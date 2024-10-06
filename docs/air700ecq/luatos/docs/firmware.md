@@ -1,2 +1,2 @@
-# air700ecq LuatOS固件下载
+# Air700ECQ LuatOS固件下载
 

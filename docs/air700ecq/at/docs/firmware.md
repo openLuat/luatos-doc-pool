@@ -1,2 +1,2 @@
-# air700ecq AT固件下载
+# Air700ECQ AT固件版本
 

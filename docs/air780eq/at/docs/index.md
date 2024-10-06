@@ -2,11 +2,10 @@
 
 本资料中心包含Air780EQ使用AT开发的所有资料
 
-
 <script>
 var tmp = window.location.pathname.split("/").filter(part => part.length > 0);
 console.log(tmp)
-var redirectUrl = 'quickstart/';
+var redirectUrl = 'quick_start/';
 if (tmp.length == 0 || (tmp.length == 2 && window.location.pathname.endsWith("/"))) {
     // 如果符合，跳转到指定URL
     window.location.href = window.location.pathname + redirectUrl;
