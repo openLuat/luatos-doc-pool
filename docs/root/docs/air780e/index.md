@@ -135,7 +135,7 @@
 
 ### Air780E常见咨询
 
-1. Air780E支持C-SDK开发吗？
+1. **Air780E支持C-SDK开发吗？**
 
    Air780E不支持C-SDK开发，推荐您使用LuatOS开发方式；
 
@@ -143,7 +143,7 @@
 
    LuatOS专用调试工具LuaTools，具备项目代码维护、软件下载、查看运行Trace，快速定位问题等功能；
 
-2. Air780E支持FOTA功能吗？
+2. **Air780E支持FOTA功能吗？**
 
    Air780E支持FOTA功能；
 
@@ -151,7 +151,7 @@
 
    Air780E支持差分升级，无论AT软件，还是LuatOS软件，都可以通过合宙IoT后台进行FOTA升级；
 
-3. Air780E支持数据透传吗？
+3. **Air780E支持数据透传吗？**
 
    Air780E支持数据透传功能；
 
@@ -159,7 +159,7 @@
 
    如果您想更快速的实现设备上网功能，可以使用合宙的DTU模组或整机，详见[DTU.OPENLUAT.COM](DTU.OPENLUAT.COM)；
 
-4. Air780EX与Air780E什么关系？
+4. **Air780EX与Air780E什么关系？**
 
    Air780EX与Air780E封装尺寸完全相同；
 
@@ -167,7 +167,7 @@
 
    Air780EX与Air780E软件完全通用，但由于Air780EX只有外围一圈硬件管脚，所以Air780EX的硬件管脚相对Air780E较少，且在管脚排列布局上稍有不同，产品设计时请注意这一点；
 
-5. Air780EQ/Air780EP/Air780EPS与Air780E什么关系？
+5. **Air780EQ/Air780EP/Air780EPS与Air780E什么关系？**
 
    Air780EQ/Air780EP/Air780EPS与Air780E封装尺寸完全相同；
 
@@ -175,15 +175,15 @@
 
    就LuatOS二次开发来讲，Air780EQ/Air780EP/Air780EPS与Air780E之间除了功耗表现有差异外，个别功能和个别管脚上也存在区别，但大部分相同，需详细阅读硬件资料进行选择；
 
-6. Air780ER与Air780E有什么关系？
+6. **Air780ER与Air780E有什么关系？**
 
    Air780ER与Air780E封装尺寸完全相同；
 
    Air780ER与Air780E在产品功能定义上不同，Air780E主打AT和LuatOS，Air780ER主打USB上网功能；
 
    配合Windows/Linux/Android操作系统，结合Air780ER的RNDIS/PPP功能，可快速实现USB上网功能；
-   
-7. Air780E可以支持海外市场吗？
+
+7. **Air780E可以支持海外市场吗？**
 
    Air780E的频段(FDD:B1/3/5/8;TDD:B34/38/39/40/41)可以支持中国移动、电信、联通三大运营商；
 
