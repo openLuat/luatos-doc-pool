@@ -6,13 +6,12 @@
 
 ## 💡 相关资料
 
-### 1. [Air201 的 LuatOS快速入门](https://e3zt58hesn.feishu.cn/wiki/DfMMw2ZFziqPIikh1BMcZDwHnCb)
+### 1. [Air201 的 LuatOS快速入门](https://docs.openluat.com/air201/product/)
+
 
 ### 2. [Air201 硬件手册](https://docs.openluat.com/air201/luatos/hardware/)
 
 如需了解更多，可添加微信
-
-15055190176:   梁健
 
 15989666845： 谢萧辉 
 
