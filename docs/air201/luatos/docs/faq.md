@@ -17,7 +17,7 @@ Air201资产定位模组,集成了 4G,数传,定位，通话，录音，播放�
 5，项目周期紧张，对交付周期和质量要求
 
 Air201 如下所示：
-![image](image/wps28.jpg) 
+![image](image/air201.png) 
  
 
 **1.2，Air201 有那些行业可以用**
@@ -293,7 +293,8 @@ Air201 考虑到这一点，所以做的很小，体积和1元硬币类似，适
 
   可以使用FPC 连接器（超薄，外形可定制），插入BTB(24pin )作为小板实现扩展方案
 
-![img](file:///C:## Users## 梁健## AppData## Local## Temp## ksohtml21480## wps30.jpg) 
+![image](image/air201_外扩.png) 
+ 
 
 ## 9. **功耗相关**
 
