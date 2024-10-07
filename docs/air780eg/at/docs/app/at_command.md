@@ -1,5 +1,9 @@
 # Air780EG模块AT指令手册
 
+## AT指令手册PDF版本
+
+[上海合宙Cat.1模组(移芯EC618&EC716&EC718平台系列)AT命令手册V1.6.2.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240829164913138_上海合宙Cat.1模组(移芯EC618&EC716&EC718平台系列)AT命令手册V1.6.2.pdf)
+
 ## 基本命令
 
 - [`AT+CGMI`查询制造商名称](./Command_List/Base/CGMI.md)
