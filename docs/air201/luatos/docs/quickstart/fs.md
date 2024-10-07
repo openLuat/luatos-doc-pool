@@ -128,7 +128,7 @@ log.info("fsstat", fs.fsstat("/"))
 
 ###  1.1 创建项目
 
-![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=NWYyZDAxOWQ3OGYzODhhNzdjNzQ3ZGQ1NDU5MDAwNzFfaVg1bG5VTEU3eXZpQW45ck9rVGk0RmtsYjNNMXRuUXFfVG9rZW46S2Vxa2I4YWFob01FN3Z4V0JramNRdGU0bkNlXzE3MjgxMzY5ODE6MTcyODE0MDU4MV9WNA)
+![image](image/fs_new.png)
 
 ## 2，编写代码
 
@@ -220,7 +220,7 @@ end
 
 运行这段代码得到的结果如下图打印
 
-![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=Njk0ZTY1NzA0NmQ0N2RlNzQzZDUxNzFmZGFjM2M4NDJfM3RvOUdJRk02djVsdmpyaTZaWHAxR0hnUDNkV3dhM2JfVG9rZW46QUlKcGJtZEJMb3FRR1F4bHFxOGM2cGM3bnBkXzE3MjgxMzY5ODE6MTcyODE0MDU4MV9WNA)
+![image](image/fs_log1.png)
 
 ### 2.4 文件seek操作
 
@@ -248,7 +248,8 @@ end
 
 如果没有加入seek的操作，这段代码运行结果应该是"ABCDEFG12345hello"，但是因为seek将文件指针移动，导致结果输出不同
 
-![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=ODljMmExZDQwNWJjMWRhNTVjMjY4YmRlMTBmM2Y5MzJfWDBVMTIxNjg5akh2T2lJOGZkSWZyQkpvdWhFcnZHWnZfVG9rZW46Tll6aGJIREowb0NLNkR4b3JaY2NKNjVXbmxkXzE3MjgxMzY5ODE6MTcyODE0MDU4MV9WNA)
+
+![image](image/fs_log2.png)
 
 ## 3，课后习题
 
