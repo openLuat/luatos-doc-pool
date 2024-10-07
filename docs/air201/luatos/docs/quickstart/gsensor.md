@@ -10,6 +10,7 @@ Air201开发板一块即可。
 2，编写代码
 2.1 main.lua文件说明
 除了常规配置外，就增加了打开gsensor传感器的供电引脚和添加了da267库。
+ ```Lua 
 -- LuaTools需要PROJECT和VERSION这两个信息
 PROJECT = "Air201_da267"
 VERSION = "1.0.0"
@@ -33,9 +34,10 @@ end)
 -- 用户代码已结束---------------------------------------------
 -- 结尾总是这一句
 sys.run()
+ ```
 2.2 da267.lua文件说明
 初始化da267，通过给它发指令来设置它的i2c配置，测量分辨率、范围、模式和中断配置等。然后根据中断引脚来读取数据。
-
+ ```Lua 
 local da267 = {}
 
 local i2cId = 1
@@ -136,6 +138,6 @@ function da267.da267Data()
 end
 
 return da267
-
+ ```
 3，示例效果
-[图片]ltEojZUZxiHbGcaa5Fn9c" data-lark-video-mime="video/mp4" data-lark-video-size="5145384" data-lark-video-duration="0" data-lark-video-name="d3e50ea050fdf61bb8d688242b1e10d6.mp4" data-lark-video-width="720" data-lark-video-height="1280"></video>
+![image](image/gsener_1.png) 
