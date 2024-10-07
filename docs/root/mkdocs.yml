@@ -27,10 +27,10 @@ nav:
   - Air700:
     - 简介: air700/index.md
     - Air700ECQ资料:
-      - 简介: air700ecq/index.md
-      - 产品手册: air700ecq/product/index.md
-      - LuatOS资料: https://docs.openluat.com/air700ecq/luatos/
-      - AT资料: https://docs.openluat.com/air700ecq/at/
+        - 简介: air700ecq/index.md
+        - 产品手册: air700ecq/product/index.md
+        - LuatOS资料: https://docs.openluat.com/air700ecq/luatos/
+        - AT资料: https://docs.openluat.com/air700ecq/at/
     - Air700EMQ资料:
       - 简介: air700emq/index.md
       - 产品手册: air700emq/product/index.md
