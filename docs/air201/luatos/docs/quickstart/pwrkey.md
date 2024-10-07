@@ -5,11 +5,11 @@ PWRKEY为Air201的开关机控制管脚，关机状态下将PWRKEY管脚拉低1.
 
 ## 1, 搭建环境
 
-**1.****1** **准备一个201开发板、一根type-c数据线**
+**1.1** **准备一个201开发板、一根type-c数据线**
 
 **1.****2** **下载****[Luatools烧录调试工具](https://gitee.com/openLuat/luatos-doc-pool/blob/master/doc/开发工具及使用说明/Luatools下载调试工具.md)**
 
-**1.****3** **代码下载**
+**1.3** **代码下载**
 
    选择对应固件 链接：https://gitee.com/openLuat/LuatOS-Air201/tree/master/core
 
@@ -73,14 +73,16 @@ sys.run()
 
 开始下载
 
-![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=N2UwZGNkYzE1OGFjM2U5ODM1N2NhZGRiYTcwNzBhMTRfZERvNUFxdjR2NU0yazdjWGUyTG9FU2JYR3UzQ2hVa2VfVG9rZW46RGF1cGJxeGE5b2JsME94WlFJUGNwZXVsblhnXzE3MjgxMzY4OTA6MTcyODE0MDQ5MF9WNA)
+![image](image/powerkey_1.png) 
+
 
 ## 4, 展示效果
 
 ### 4.**1** **长按五秒关机功能**
 
-![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=NjIxZmJlNTQzMWNlMDYyMDU0Yzk0ODRjZTI3OTE4ZTJfRGJDeklUVnpnMGZoUWRuYTZHSW5SYWZBNWpqNU5YMFZfVG9rZW46RDJHUmJ4aFZ3b3BrY1J4ZkFKRmNzRjFLbktoXzE3MjgxMzY4OTA6MTcyODE0MDQ5MF9WNA)
+![image](image/powerkey_2.png) 
+
 
 ### 4.**2** **五秒内短按三次关机功能**
 
-![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=ODJmMzQ1Y2IwNDRmMWNhZDdhOTZlMTdjMzhiY2VjZjVfRnNXTDlFeTM5cEpVemdKME9Qekx5bDlGcmRJNXMzZURfVG9rZW46WTJ5T2JlUGwwb2FHcjN4WWpNbGNIcDUwbnNiXzE3MjgxMzY4OTA6MTcyODE0MDQ5MF9WNA)
+![image](image/powerkey_3.png) 
