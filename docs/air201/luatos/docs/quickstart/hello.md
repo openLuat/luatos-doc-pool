@@ -152,7 +152,7 @@ sys.run()
 这个代码， 第12行打印了 “hi, LuatOS”， 而不是 hello world， 这就给你留下了发挥的空间。
 
 你把这段代码稍作修改后，改为这样：
- ```Lua 
+```Lua 
 -- LuaTools需要PROJECT和VERSION这两个信息
 PROJECT = "helloworld"
 VERSION = "1.0.0"
