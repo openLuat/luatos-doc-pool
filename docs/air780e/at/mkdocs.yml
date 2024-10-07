@@ -11,7 +11,7 @@ nav:
   #- 首页: index.md
   - 快速入门:
     - 介绍: quick_start/index.md
-    - TCP快速入门: quick_start/tcp.md
+    - TCP快速入门: quick_start/tcp/tcp.md
     - MQTT快速入门: quick_start/mqtt.md
     - HTTP快速入门: quick_start/http.md
   - 软件demo:
