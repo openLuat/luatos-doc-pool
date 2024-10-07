@@ -21,7 +21,7 @@ nav:
     - 远程固件升级服务:   fota_lesson.md
   - 国内模组:
     - Air780E:
-      - 简介: air780e/index.md
+      - 简介: ../root/air780e/index.md
       - 产品手册: air780e/product/index.md
       - LuatOS资料: https://docs.openluat.com/air780e/luatos/
       - AT资料: https://docs.openluat.com/air780e/at/
