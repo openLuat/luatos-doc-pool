@@ -5,7 +5,7 @@
 
 或者在原有项目的基础上，不更换CORE，将原来的脚本删除，添加为demo/gps_lbs_wifi的脚本。
 
-![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps25.jpg) 
+![image](image/wps25.jpg) 
 
 **2, 定位介绍**
 
@@ -43,7 +43,7 @@ Lua local function doAgps()   -- 首先, 发起位置查询   local lat, lng   i
 
 定位成功后，获取位置字符串。
 
-![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps26.png) 
+![image](image/wps26.png) 
 
 **4, LBS+wifi定位**
 
@@ -67,7 +67,7 @@ Lua -- 功能:获取基站对应的经纬度后的回调函数 -- 参数:-- resu
 
 基站定位成功后，会返回经纬度和服务器返回时间
 
-![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps27.png) 
+![image](image/wps27.png) 
 
 **5, 课后习题**
 

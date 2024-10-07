@@ -7,13 +7,13 @@
 
 请先打开网页https://netlab.luatos.com/
 
-| ![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps19.jpg) 打开远程服务器 | ![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps20.jpg) 打开远程服务器成功，出现IP 地址，以及端口号      （注意端口号，等会要用） |
+| ![image](image/wps19.jpg) 打开远程服务器 | ![image](image/wps20.jpg) 打开远程服务器成功，出现IP 地址，以及端口号      （注意端口号，等会要用） |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 |                                                              |                                                              |
 
 **1.2 创建项目**
 
-![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps21.jpg) 
+![image](image/wps21.jpg) 
 
 **2, 写代码**
 
@@ -53,15 +53,15 @@ SQL sys.taskInit(function()   sys.wait(5000)   while 1 do     sys.publish("sc_tx
 
 如果显示下图，则表示链接成功，并且一直上报数据
 
-![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps22.jpg) 
+![image](image/wps22.jpg) 
 
 **3.3  下发指令**
 
-![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps23.jpg) 
+![image](image/wps23.jpg) 
 
 **3.4  Air201 展示效果**
 
-![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps24.png) 
+![image](image/wps24.png) 
 
 **4, 课后习题**
 
