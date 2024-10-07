@@ -81,6 +81,22 @@ nav:
       - LuatOS资料: https://docs.openluat.com/air780eg/luatos/
       - AT资料: https://docs.openluat.com/air780eg/at/
     - 卫星定位模组: gnss.md
+  - 海外模组:
+    - Air780EEN:
+      - 简介: air780een/index.md
+      - 产品手册: air780een/product/index.md
+      - LuatOS资料: https://docs.openluat.com/air780een/luatos/
+      - AT资料: https://docs.openluat.com/air780een/at/
+    - Air780EEU:
+      - 简介: air780eeu/index.md
+      - 产品手册: air780eeu/product/index.md
+      - LuatOS资料: https://docs.openluat.com/air780eeu/luatos/
+      - AT资料: https://docs.openluat.com/air780eeu/at/ 
+    - Air780EEJ:
+      - 简介: air780eej/index.md
+      - 产品手册: air780eej/product/index.md
+      - LuatOS资料: https://docs.openluat.com/air780eej/luatos/
+      - AT资料: https://docs.openluat.com/air780eej/at/ 
   - DTU: https://docs.openluat.com/dtu/
   - 增值服务: web.md
   - 技术博客: https://docs.openluat.com/blog/
