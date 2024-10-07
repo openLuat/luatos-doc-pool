@@ -1,14 +1,14 @@
 # Air201的gsensor传感器
-1, 搭建环境
+## 1, 搭建环境
 此时也可以在Luatools项目管理中新建一个项目，重新选择底层CORE和脚本
 或者在原有项目的基础上，不更换CORE，将原来的脚本删除，添加为demo/da267的脚本。
-1.1 软件资料
+### 1.1 软件资料
    固件链接：https://gitee.com/openLuat/LuatOS-Air201/tree/master/core
    源码脚本链接：https://gitee.com/openLuat/LuatOS-Air201/tree/master/demo/da267
-1.2硬件资料
+### 1.2硬件资料
 Air201开发板一块即可。
-2，编写代码
-2.1 main.lua文件说明
+## 2，编写代码
+### 2.1 main.lua文件说明
 除了常规配置外，就增加了打开gsensor传感器的供电引脚和添加了da267库。
  ```Lua 
 -- LuaTools需要PROJECT和VERSION这两个信息
@@ -35,7 +35,7 @@ end)
 -- 结尾总是这一句
 sys.run()
  ```
-2.2 da267.lua文件说明
+### 2.2 da267.lua文件说明
 初始化da267，通过给它发指令来设置它的i2c配置，测量分辨率、范围、模式和中断配置等。然后根据中断引脚来读取数据。
  ```Lua 
 local da267 = {}
@@ -139,5 +139,5 @@ end
 
 return da267
  ```
-3，示例效果
+## 3，示例效果
 ![image](image/gsener_1.png) 

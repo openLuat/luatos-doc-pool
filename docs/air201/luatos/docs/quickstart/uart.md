@@ -1,6 +1,6 @@
 # Air201的uart使用方法
-UART介绍
-[图片]
+## 1.UART介绍
+![image](image/uart_1.gif) 
 UART（通用异步接收器/发送器）是一种串行通信协议，因其多功能性和简单性而被广泛使用。与 I2C 和 SPI 不同，UART 只需要两条线即可运行：TX（发送）和 RX（接收）。该协议允许异步通信，也就是说发送器和接收器之间无需共享时钟。数据被组织成数据包，每个数据包包含一个起始位、5 到 9 个数据位、一个可选的奇偶校验位和一个或两个停止位。
 优点：
 - 简单：UART通信协议相对简单，易于实现和调试。
@@ -11,33 +11,33 @@ UART（通用异步接收器/发送器）是一种串行通信协议，因其多
 - 双工：UART通信是双工的，可以进行低速双工传输数据，进行数据的发送和接收。
 - 不可靠：由于UART是异步通信，可能会受到噪声和干扰的影响，导致数据传输不可靠。
 参考原文：逼真动画展示I2C、SPI、UART的通信过程
-1, 搭建环境
+## 2, 搭建环境
 此时也可以在Luatools项目管理中新建一个项目，重新选择底层CORE和脚本
 或者在原有项目的基础上，不更换CORE，将原来的脚本删除，添加为demo/uart的脚本。
 注：本文内容使用main_uart进行交互
-[图片]
+![image](image/uart_2.png) 
 如上图所示，如果直接使用201上的main_uart串口，需要在圈起来的4G_UART1_RXD和4G_UART1_TXD处引出来线
 也可以连接扩展板，直接接入板子上的main_uart串口
-[图片]
-
-[图片]
-[图片]
-1.1 软件资料
+![image](image/uart_3.png) 
+![image](image/uart_4.png) 
+![image](image/uart_5.png) 
+### 2.1 软件资料
    固件链接：https://gitee.com/openLuat/LuatOS-Air201/tree/master/core
    源码脚本链接：https://gitee.com/openLuat/LuatOS-Air201/tree/master/demo/uart/uart
-1.2 硬件资料
+### 2.2 硬件资料
 Air201开发板一块即可。
-2, 调试代码
+## 3, 调试代码
 使用克隆的代码中 LuatOS-Air201\demo\uart\uart 的代码测试
- 2.1 初始化uart
+3.1 初始化uart
 使用MAIN_UART(uart1)串口
-[图片]
-2.2 注册接收数据的回调函数
-[图片]
-2.3 发送数据
+![image](image/uart_6.png) 
+3.2 注册接收数据的回调函数
+![image](image/uart_7.png) 
+3.3 发送数据
 循环发送字符串"test"
-[图片]
-2.4 完整例程展示
+![image](image/uart_8.png) 
+3.4 完整例程展示
+```Lua
 -- LuaTools需要PROJECT和VERSION这两个信息
 PROJECT = "uart_irq"
 VERSION = "1.0.0"
@@ -96,13 +96,13 @@ end)
 -- 结尾总是这一句
 sys.run()
 -- sys.run()之后后面不要加任何语句!!!!!
+```
 
-3，烧录程序
+## 4，烧录程序
 开始下载
-[图片]
-4，展示效果
-4.1 串口接收展示
-[图片]
-4.2 串口发送展示
-[图片]
-[图片]
+![image](image/uart_9.png) 
+## 5，展示效果
+### 5.1 串口接收展示
+![image](image/uart_10.png) 
+### 5.2 串口发送展示
+![image](image/uart_11.png) 

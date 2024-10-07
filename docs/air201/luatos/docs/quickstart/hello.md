@@ -124,7 +124,7 @@ https://gitee.com/openluat
    打开main.lua， 是这个样子的代码：
 
 
- ```Lua 
+```Lua 
 -- LuaTools需要PROJECT和VERSION这两个信息
 PROJECT = "helloworld"
 VERSION = "1.0.0"
@@ -152,7 +152,8 @@ sys.run()
 这个代码， 第12行打印了 “hi, LuatOS”， 而不是 hello world， 这就给你留下了发挥的空间。
 
 你把这段代码稍作修改后，改为这样：
- ```Lua 
+
+```Lua 
 -- LuaTools需要PROJECT和VERSION这两个信息
 PROJECT = "helloworld"
 VERSION = "1.0.0"
@@ -173,7 +174,8 @@ end, 3000)
 -- 结尾总是这一句
 sys.run()
 -- sys.run()之后后面不要加任何语句!!!!!
- ```
+```
+
 然后保存，代码修改工作就大功告成了！
 
 是不是炒鸡简单？
@@ -282,4 +284,4 @@ Luatools会自动抓取应用日志和系统日志，并且在主界面解析显
 
 从打印的日志可以看到，这个4G开发板，在不断的打印 hello world。
 
-你太棒了！ 你成功了！
+你太棒了！ 你成功了  ！
