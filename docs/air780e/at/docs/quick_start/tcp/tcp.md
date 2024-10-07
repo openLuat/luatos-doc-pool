@@ -269,6 +269,8 @@ AT+CIFSR表示查询是否激活成功，如果返回一个ip地址，表示激�
 
 ![](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=MzE1NTZjYTNiZmRjODYzM2JhNjM2OTEzZmMyMmM0MjVfT0dQVE5XS3lvU2p5MWpBNEtiRHJrZXJvaVZvT0FQNUVfVG9rZW46Sm1WYmJNTmYzb05nRTJ4WTV3NGNrbjBhbkVmXzE3MjgzMTA3NDY6MTcyODMxNDM0Nl9WNA)
 
+注意：此步骤中的三个AT指令不是必须的，这三个指令要么一起使用，要么一起不用；
+
 ### 7.5 连接TCP服务器
 
 使用AT+CIPSTART命令连接WEB测试工具启动的TCP服务器，返回CONNECT OK表示连接成功；
