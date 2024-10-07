@@ -13,13 +13,16 @@ Air201可以支持本地的录音功能，并且将录音保存的数据进行�
 
    脚本链接：https://gitee.com/openLuat/LuatOS-Air201/tree/master/demo/record
 
-![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=NDQ3YzkyMDg0NmQ5Mjk5YmMyYzQ4Y2QxY2FkZmMxZDlfbERrVXFjUGNGM2dmU2Z4UHFMSHBoa0RsdElEMTNFYmRfVG9rZW46R1FaUWJaOHRIb1NycXR4Mjl0QmN3NGx6bmxmXzE3MjgxMzcwMzM6MTcyODE0MDYzM19WNA)
+![image](image/record_1.png) 
+
 
 ### 1.2 连接喇叭
 
-![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=MjhhMjQ0YWFmNTUxZDE3ZjQyMjZmMzgxNmVhZWQ4MDZfZHVYbWJQSFgwV2dSN05Zb0ZSV0tvU0NqQ3hPemdQY3ZfVG9rZW46STlmMWJmWTdIb1JUbXh4ekd6UGN0ZDJtbkNiXzE3MjgxMzcwMzM6MTcyODE0MDYzM19WNA)
+![image](image/record_2.png) 
 
-![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=Mjk5M2Y0YmIzZTI2YzQ1ZTA1YWIzNWFkYThmZGQxNmZfVFR1VkJkRHNQcUpYODdOZmpHWTlhMW8xaW14dEZYQlNfVG9rZW46QTc2UmI0RDhCb0RTMDB4eFhsc2M2RHZXbjNpXzE3MjgxMzcwMzM6MTcyODE0MDYzM19WNA)![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=Zjk0OTE0NWUyMTQwYTZmYjM4NGUxMDAyMTA0Y2UwOTNfTWlTbzFYM0Z3QkdGaHFMb2VmUmdUMEhTWldFdkNOeDBfVG9rZW46U3R5NWI1V3R6b0hrWVd4N2NoSmNxOW83bkZnXzE3MjgxMzcwMzM6MTcyODE0MDYzM19WNA)
+![image](image/record_3.png) 
+![image](image/record_4.png) 
+
 
 ## 2, 调试代码
 
@@ -137,8 +140,6 @@ audio.pm(0, audio.POWEROFF) -- 断电模式，工作结束后就休息，节省�
 
 将demo烧录至Air201开机后，等待蓝灯亮起后对着mic麦克说话
 
-![img](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=MTU3YmMxZjM3OTgwZmQ5NTljOTk0MjA1YWJmZWRiMDZfa0JmUjZQeklHeUVkYmlmY2wzWTRHRTU3Y1c5b24zTlVfVG9rZW46VE5MU2JJMGJ2b1g3Nzl4bUpaRWNmRjhMblRmXzE3MjgxMzcwMzM6MTcyODE0MDYzM19WNA)
+![image](image/record_4.png) 
 
 经过5s后，蓝灯灭掉，会自动结束录音。随后间隔2s，红灯亮起，开始播放录音文件。
-
-<video data-lark-video-uri="drivetoken://B8nTb4ltEojZUZxiHbGcaa5Fn9c" data-lark-video-mime="video/mp4" data-lark-video-size="5145384" data-lark-video-duration="0" data-lark-video-name="d3e50ea050fdf61bb8d688242b1e10d6.mp4" data-lark-video-width="720" data-lark-video-height="1280"></video>
