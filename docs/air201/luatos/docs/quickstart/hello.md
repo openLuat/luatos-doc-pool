@@ -123,16 +123,57 @@ https://gitee.com/openluat
 
    打开main.lua， 是这个样子的代码：
 
-Lua -- LuaTools需要PROJECT和VERSION这两个信息 PROJECT = "helloworld" VERSION = "1.0.0"  -- 引入必要的库文件(lua编写), 内部库不需要require sys = require("sys")   print(_VERSION)  sys.timerLoopStart(function()   print("hi, LuatOS")   --  此处打印日志   print("mem.lua", rtos.meminfo())    --  打印lua 剩余空间   print("mem.sys", rtos.meminfo("sys"))  --  打印sys 剩余空间  end, 3000)   -- 用户代码已结束--------------------------------------------- -- 结尾总是这一句 sys.run() -- sys.run()之后后面不要加任何语句!!!!!
 
- 
+ ```Lua 
+-- LuaTools需要PROJECT和VERSION这两个信息
+PROJECT = "helloworld"
+VERSION = "1.0.0"
+
+-- 引入必要的库文件(lua编写), 内部库不需要require
+sys = require("sys")
+
+
+print(_VERSION)
+
+sys.timerLoopStart(function()
+    print("hi, LuatOS")    --  此处打印日志
+    print("mem.lua", rtos.meminfo())       --  打印lua 剩余空间
+    print("mem.sys", rtos.meminfo("sys"))  --  打印sys 剩余空间 
+end, 3000)
+
+
+-- 用户代码已结束---------------------------------------------
+-- 结尾总是这一句
+sys.run()
+-- sys.run()之后后面不要加任何语句!!!!!
+
+ ```
 
 这个代码， 第12行打印了 “hi, LuatOS”， 而不是 hello world， 这就给你留下了发挥的空间。
 
 你把这段代码稍作修改后，改为这样：
+ ```Lua 
+-- LuaTools需要PROJECT和VERSION这两个信息
+PROJECT = "helloworld"
+VERSION = "1.0.0"
 
-Lua -- LuaTools需要PROJECT和VERSION这两个信息 PROJECT = "helloworld" VERSION = "1.0.0"  -- 引入必要的库文件(lua编写), 内部库不需要require sys = require("sys")  print(_VERSION)  sys.timerLoopStart(function()   print("hello world")   print("mem.lua", rtos.meminfo())   print("mem.sys", rtos.meminfo("sys")) end, 3000)   -- 用户代码已结束--------------------------------------------- -- 结尾总是这一句 sys.run() -- sys.run()之后后面不要加任何语句!!!!! 
+-- 引入必要的库文件(lua编写), 内部库不需要require
+sys = require("sys")
 
+print(_VERSION)
+
+sys.timerLoopStart(function()
+    print("hello world")
+    print("mem.lua", rtos.meminfo())
+    print("mem.sys", rtos.meminfo("sys"))
+end, 3000)
+
+
+-- 用户代码已结束---------------------------------------------
+-- 结尾总是这一句
+sys.run()
+-- sys.run()之后后面不要加任何语句!!!!!
+ ```
 然后保存，代码修改工作就大功告成了！
 
 是不是炒鸡简单？
