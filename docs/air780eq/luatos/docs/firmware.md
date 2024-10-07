@@ -6,7 +6,9 @@
 
 [LuatOS-SoC_V2001_Air780EQ](https://gitee.com/openLuat/LuatOS/releases/download/v2001.ec7xx.release/LuatOS-SoC_V2001_Air780EQ.soc)
 
+
 历史版本
+
 
 ## LuatOS固件版本更新说明
 

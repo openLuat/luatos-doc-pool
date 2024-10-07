@@ -1,2 +1,1 @@
-# Air780EP AT固件版本
-
+# Air780EP AT固件版本## AT固件版本下载地址最新版本[AirM2M_780EP_V1008_LTE_AT](https://cdn.openluat-erp.openluat.com/erp_site_file/product_file/sw_file_20240823235016_AirM2M_780EP_V1008_LTE_AT.zip)历史版本[AirM2M_780EP_V1007_LTE_AT](https://cdn.openluat-erp.openluat.com/erp_site_file/product_file/sw_file_20240422190620_AirM2M_780EP_V1007_LTE_AT.zip)## AT固件版本更新说明**AirM2M_780EP_V1008_LTE_AT** 2024-09-04解决i2c和es8311通信超时导致播tts时有概率没声音和死机的问题**AirM2M_780EP_V1007_LTE_AT** 2024-04-25解决缺少生产AT指令的问题## [Luatools工具使用教程（点击此处，跳转阅读）](https://docs.openluat.com/Luatools/)## [量产多路下载工具使用教程（点击此处，跳转阅读）](https://docs.openluat.com/multi_download/)
