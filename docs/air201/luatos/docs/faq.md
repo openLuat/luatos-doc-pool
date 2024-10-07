@@ -308,6 +308,6 @@ Air201 考虑到这一点，所以做的很小，体积和1元硬币类似，适
 
 **11.1 提供一些测试程序（如录音、播放、按键操作、数据上报等）** 
 
-请看 [Air201 的 LuatOS快速入门](https://e3zt58hesn.feishu.cn/wiki/DfMMw2ZFziqPIikh1BMcZDwHnCb)
+请看 [Air201 的 LuatOS快速入门](https://docs.openluat.com/air201/luatos/quickstart/)
 
  
