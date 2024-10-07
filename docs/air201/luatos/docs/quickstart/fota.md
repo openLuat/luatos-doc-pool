@@ -29,7 +29,7 @@
 ![image](image/wps34.png)
 
 ###  2.4 使用Luatools工具生成bin文件差分包注意：只有Luatools版本2.1.89以上支持生成bin文件差分包，低版本仅支持生成sota文件只升级脚本时的差分包制作流程   修改好main.lua后，根据下方图示生成量产文件，其中就包含了bin文件差分包!
-![image](image/wps35.png)
+
 点击生成量产文件后，Luatools工具会根据你选择的目录下自动创建`\SOC量产及远程升级文件\Air201` ，bin文件差分包便在此文件夹里面。![image](image/wps36.png)
   如果你是只打算进行脚本升级，那么下方固件升级便不用再看了，直接跳转到2.5节即可。需要升级底层固件的差分包制作教程生成新版本的量产固件![image](image/wps37.png)
 根据新旧固件生成bin文件差分包![image](image/wps38.png)    箭头所指即为生成的bin文件差分包![image](image/wps39.png)
