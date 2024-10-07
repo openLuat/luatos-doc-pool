@@ -61,6 +61,10 @@ nav:
     - 产品手册: air780ex/product/index.md
     - LuatOS资料: https://docs.openluat.com/air780ex/luatos/
     - AT资料: https://docs.openluat.com/air780ex/at/
+  - Air780ER:
+    - 简介: air780er/index.md
+    - 产品手册: air780er/product/index.md
+    - AT资料: https://docs.openluat.com/air780er/at/
   - Air724UG:
     - 简介: air724ug/index.md
     - 产品手册: air724ug/product/index.md

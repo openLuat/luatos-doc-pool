@@ -57,7 +57,7 @@ https://gitee.com/openluat
 
 进入这个网址后，你看到如下的以 LuatOS 开头的代码仓库，就是可以支持LuatOS 开发的型号：
 
-![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps1.jpg) 
+![image](image/wps1.jpg) 
 
 如上图， Air201P，Air780E，都是能够运行LuatOS 的模组型号。
 
@@ -71,7 +71,7 @@ https://gitee.com/openluat
 
 所以，我已经事先准备好了 Air201 开发板，你准备好了吗？
 
-| ![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps2.png) Air201 整机形态，也可以直接用Air201 PCBA 调试 | ![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps3.png) USB2.0 转  typec 线，用于调试 |
+| ![image](image/wps2.png) Air201 整机形态，也可以直接用Air201 PCBA 调试 | ![image](image/wps3.png) USB2.0 转  typec 线，用于调试 |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 |                                                              |                                                              |
 
@@ -93,13 +93,13 @@ https://gitee.com/openluat
 
   一路默认安装
 
-![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps4.jpg) 
+![image](image/wps4.jpg) 
 
 此处填写第一步在gitee 上注册的名称，和email
 
   **4. 下拉代码**
 
-| ![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps5.jpg) 1.在桌面空白处右击鼠标选择更多选项   选择Git Clone | ![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps6.jpg) 2.下载对应的仓库（https://gitee.com/openLuat/LuatOS-Air201.git） | ![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps7.jpg) 3.下拉代码成功 |
+| ![image](image/wps5.jpg) 1.在桌面空白处右击鼠标选择更多选项   选择Git Clone | ![image](image/wps6.jpg) 2.下载对应的仓库（https://gitee.com/openLuat/LuatOS-Air201.git） | ![image](image/wps7.jpg) 3.下拉代码成功 |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
 |                                                              |                                                              |                                                              |
 
@@ -111,7 +111,7 @@ https://gitee.com/openluat
 
    用编辑器**打开**你下载下来的 **LuatOS-Air201/demo/hello_world/main.lua** 文件。
 
-![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps8.jpg) 
+![image](image/wps8.jpg) 
 
    我是习惯用 vscode，后面的例子都用 vscode 做演示了。
 
@@ -177,7 +177,7 @@ https://doc.openluat.com/wiki/52?wiki_page_id=5071
 
 LuaTools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools_v2.exe 运行，出现如下界面，就代表 LuaTools 安装成功了：
 
-![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps9.png) 
+![image](image/wps9.png) 
 
  
 
@@ -195,27 +195,27 @@ LuaTools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools
 
   在 LuaTools 的左上角上有版本显示的，如图所示：
 
-![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps10.jpg) 
+![image](image/wps10.jpg) 
 
 LuaTools 版本没问题的话， 就点击 LuaTools 右上角的“项目管理测试”按钮，如下图所示：
 
-![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps11.jpg) 
+![image](image/wps11.jpg) 
 
  
 
 这时会弹出项目管理和烧录管理的对话框，如下图：
 
-![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps12.jpg) 
+![image](image/wps12.jpg) 
 
 ​          下载过程如果出现找不到端口,注意看下线链接的是否有问题
 
-![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps13.jpg) 
+![image](image/wps13.jpg) 
 
  
 
 **（4)开始烧录**
 
-![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps14.jpg) 
+![image](image/wps14.jpg) 
 
 **3，烧录问题排查**
 
@@ -233,11 +233,11 @@ LuaTools 版本没问题的话， 就点击 LuaTools 右上角的“项目管理
 
 烧录完成后，会自动开机，此时电脑的设备管理器中会虚拟出三个端口表示正常开机
 
-![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps15.jpg) 
+![image](image/wps15.jpg) 
 
 Luatools会自动抓取应用日志和系统日志，并且在主界面解析显示应用日志，如下图所示
 
-![img](file:///C:\Users\梁健\AppData\Local\Temp\ksohtml21480\wps16.jpg) 
+![image](image/wps16.jpg) 
 
 从打印的日志可以看到，这个4G开发板，在不断的打印 hello world。
 
