@@ -268,8 +268,7 @@ Air201 考虑到这一点，所以做的很小，体积和1元硬币类似，适
 
 可以使用外扩磁吸拓展方案，如图所示
 
-![img](file:///C:## Users## 梁健## AppData## Local## Temp## ksohtml21480## wps29.jpg) 
-
+![image](image/air201_磁吸.png) 
  
 
 3， 外壳很小，Air201 无法防止在内
