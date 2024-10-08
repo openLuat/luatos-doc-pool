@@ -1,0 +1,29 @@
+INHERIT: ../../base.yml
+site_name: "合宙文档中心"
+
+site_url: https://docs.openluat.com/air530z/at/
+
+meta:
+  model: "air530z"
+  doctp : "at"
+
+nav:
+  #- 首页: index.md
+  - 快速入门:
+    - 介绍: quick_start/index.md
+    - 控制入门: quick_start/intro.md
+  - 软件demo:
+    - 介绍: app/index.md
+    - AT指令手册: app/at_command.md
+    - 应用实例:
+      - 切换定位系统: app/command/switch_sys.md
+  - 硬件demo:
+    - 典型硬件设计指南:
+      - 简介: hardware/design/index.md
+      - 常见供电电路: hardware/design/power.md
+      - Reset电路: hardware/design/reset.md
+  - 常见问题: faq.md
+  - DTU: https://docs.openluat.com/dtu/
+  - 增值服务: https://docs.openluat.com/web/
+  - 问答中心: https://chat.openluat.com/
+  - 合宙官网: https://www.openluat.com/

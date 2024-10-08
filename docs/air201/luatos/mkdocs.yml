@@ -37,7 +37,6 @@ nav:
       - 调试音频方法: hardware/design/audio_debug.md
   - 固件版本: firmware.md
   - 常见问题: faq.md
-  - 卫星定位模组: https://docs.openluat.com/gnss/
   - DTU: https://docs.openluat.com/dtu/
   - 增值服务: https://docs.openluat.com/web/
   - 问答中心: https://chat.openluat.com/

@@ -19,68 +19,88 @@ nav:
     - 量产多路下载工具介绍:  multi_download.md
     - TCPUDP_Web测试工具:   TCPUDP_Test.md
     - 远程固件升级服务:   fota_lesson.md
-  - Air780E:
-    - 简介: air780e/index.md
-    - 产品手册: air780e/product/index.md
-    - LuatOS资料: https://docs.openluat.com/air780e/luatos/
-    - AT资料: https://docs.openluat.com/air780e/at/
-  - Air700:
-    - 简介: air700/index.md
-    - Air700ECQ资料:
+  - 国内模组:
+    - Air780E:
+      - 简介: air780e/index.md
+      - 产品手册: air780e/product/index.md
+      - LuatOS资料: https://docs.openluat.com/air780e/luatos/
+      - AT资料: https://docs.openluat.com/air780e/at/
+    - Air700ECQ:
       - 简介: air700ecq/index.md
       - 产品手册: air700ecq/product/index.md
       - LuatOS资料: https://docs.openluat.com/air700ecq/luatos/
       - AT资料: https://docs.openluat.com/air700ecq/at/
-    - Air700EMQ资料:
+    - Air700EMQ:
       - 简介: air700emq/index.md
       - 产品手册: air700emq/product/index.md
       - LuatOS资料: https://docs.openluat.com/air700emq/luatos/
       - AT资料: https://docs.openluat.com/air700emq/at/
-    - Air700EAQ资料:
+    - Air700EAQ:
       - 简介: air700eaq/index.md
       - 产品手册: air700eaq/product/index.md
       - LuatOS资料: https://docs.openluat.com/air700eaq/luatos/
       - AT资料: https://docs.openluat.com/air700eaq/at/
-  - Air780EQ:
-    - 简介: air780eq/index.md
-    - 产品手册: air780eq/product/index.md
-    - LuatOS资料: https://docs.openluat.com/air780eq/luatos/
-    - AT资料: https://docs.openluat.com/air780eq/at/
-  - Air780EP:
-    - 简介: air780ep/index.md
-    - 产品手册: air780ep/product/index.md
-    - LuatOS资料: https://docs.openluat.com/air780ep/luatos/
-    - AT资料: https://docs.openluat.com/air780ep/at/
-  - Air780EPS:
-    - 简介: air780eps/index.md
-    - 产品手册: air780eps/product/index.md
-    - LuatOS资料: https://docs.openluat.com/air780eps/luatos/
-    - AT资料: https://docs.openluat.com/air780eps/at/
-  - Air780EX:
-    - 简介: air780ex/index.md
-    - 产品手册: air780ex/product/index.md
-    - LuatOS资料: https://docs.openluat.com/air780ex/luatos/
-    - AT资料: https://docs.openluat.com/air780ex/at/
-  - Air780ER:
-    - 简介: air780er/index.md
-    - 产品手册: air780er/product/index.md
-    - AT资料: https://docs.openluat.com/air780er/at/
-  - Air724UG:
-    - 简介: air724ug/index.md
-    - 产品手册: air724ug/product/index.md
-    - LuatOS资料: https://docs.openluat.com/air724ug/luatos/
-    - AT资料: https://docs.openluat.com/air724ug/at/
-    - USB驱动安装: https://docs.openluat.com/air724ug/driver/
-  - Air201:
-    - 简介: air201/index.md
-    - 产品手册: air201/product/index.md
-    - LuatOS资料: https://docs.openluat.com/air201/luatos/
-  - Air780EG:
-    - 简介: air780eg/index.md
-    - 产品手册: air780eg/product/index.md
-    - LuatOS资料: https://docs.openluat.com/air780eg/luatos/
-    - AT资料: https://docs.openluat.com/air780eg/at/
-  - 卫星定位模组: gnss.md
+    - Air780EQ:
+      - 简介: air780eq/index.md
+      - 产品手册: air780eq/product/index.md
+      - LuatOS资料: https://docs.openluat.com/air780eq/luatos/
+      - AT资料: https://docs.openluat.com/air780eq/at/
+    - Air780EP:
+      - 简介: air780ep/index.md
+      - 产品手册: air780ep/product/index.md
+      - LuatOS资料: https://docs.openluat.com/air780ep/luatos/
+      - AT资料: https://docs.openluat.com/air780ep/at/
+    - Air780EPS:
+      - 简介: air780eps/index.md
+      - 产品手册: air780eps/product/index.md
+      - LuatOS资料: https://docs.openluat.com/air780eps/luatos/
+      - AT资料: https://docs.openluat.com/air780eps/at/
+    - Air780EX:
+      - 简介: air780ex/index.md
+      - 产品手册: air780ex/product/index.md
+      - LuatOS资料: https://docs.openluat.com/air780ex/luatos/
+      - AT资料: https://docs.openluat.com/air780ex/at/
+    - Air780ER:
+      - 简介: air780er/index.md
+      - 产品手册: air780er/product/index.md
+      - AT资料: https://docs.openluat.com/air780er/at/
+    - Air724UG:
+      - 简介: air724ug/index.md
+      - 产品手册: air724ug/product/index.md
+      - LuatOS资料: https://docs.openluat.com/air724ug/luatos/
+      - AT资料: https://docs.openluat.com/air724ug/at/
+      - USB驱动安装: https://docs.openluat.com/air724ug/driver/
+  - 定位方案:
+    - Air201:
+      - 简介: air201/index.md
+      - 产品手册: air201/product/index.md
+      - LuatOS资料: https://docs.openluat.com/air201/luatos/
+    - Air780EG:
+      - 简介: air780eg/index.md
+      - 产品手册: air780eg/product/index.md
+      - LuatOS资料: https://docs.openluat.com/air780eg/luatos/
+      - AT资料: https://docs.openluat.com/air780eg/at/
+    - Air510U:
+      - 简介: air510u/index.md
+      - 产品手册: air510u/product/index.md
+      - AT资料: https://docs.openluat.com/air510u/at/
+    - Air530Z:
+      - 简介: air530z/index.md
+      - 产品手册: air530z/product/index.md
+      - AT资料: https://docs.openluat.com/air530z/at/
+  - 海外模组:
+    - Air780EEN:
+      - 简介: air780een/index.md
+      - 产品手册: air780een/product/index.md
+      - AT资料: https://docs.openluat.com/air780een/at/
+    - Air780EEU:
+      - 简介: air780eeu/index.md
+      - 产品手册: air780eeu/product/index.md
+      - AT资料: https://docs.openluat.com/air780eeu/at/ 
+    - Air780EEJ:
+      - 简介: air780eej/index.md
+      - 产品手册: air780eej/product/index.md
+      - AT资料: https://docs.openluat.com/air780eej/at/ 
   - DTU: https://docs.openluat.com/dtu/
   - 增值服务: web.md
   - 技术博客: https://docs.openluat.com/blog/

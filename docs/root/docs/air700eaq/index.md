@@ -150,7 +150,7 @@
 
    Air700ECQ支持FOTA功能；
 
-   合宙IoT平台([IOT.OPENLUAT.COM](IOT.OPENLUAT.COM))可以对个人账号下的每一片模组进行FOTA管理；
+   [合宙IoT平台](https://iot.openluat.com)可以对个人账号下的每一片模组进行FOTA管理；
 
    Air700ECQ支持差分升级，无论AT软件，还是LuatOS软件，都可以通过合宙IoT后台进行FOTA升级；
 
@@ -160,7 +160,7 @@
 
    无论AT指令，还是LuatOS，Air700ECQ都可以方便的实现数据透传功能；
 
-   如果您想更快速的实现设备上网功能，可以使用合宙的DTU模组或整机，详见[DTU.OPENLUAT.COM](DTU.OPENLUAT.COM)；
+   如果您想更快速的实现设备上网功能，可以使用合宙的DTU模组或整机，详见[合宙dtu平台](https://dtu.openluat.com)
 
 4. **Air700ECQ与Air780EQ什么关系？**
 
@@ -198,10 +198,10 @@
 
 ### 合宙模组更多资料
 
-官网 [www.openluat.com](www.openluat.com)
+官网 [www.openluat.com](https://www.openluat.com)
 
-资料 [docs.openluat.com](docs.openluat.com)
+资料 [docs.openluat.com](https://docs.openluat.com)
 
-样品 [luat.taobao.com](luat.taobao.com)
+样品 [luat.taobao.com](https://luat.taobao.com)
 
 公众号 HelloLuatOS
