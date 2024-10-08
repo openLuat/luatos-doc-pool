@@ -6,7 +6,18 @@ meta:
   model: "air724ug"
   doctp : "luatos"
 nav:
-  - 快速入门: quickstart/index.md
+  - 快速入门:
+    - 介绍: quick_start/index.md
+    - HelloWorld教程:
+      - 介绍: quick_start/hello/index.md
+
+  - 软件demo:
+    - 介绍: app/index.md
+    
+  - 硬件demo:
+    - 典型硬件设计指南:
+      - 简介: hardware/design/index.md
+
   - 固件版本: firmware.md
   - 常见问题: faq.md
   - DTU: https://docs.openluat.com/dtu/
