@@ -44,7 +44,7 @@ MQTTX配置已经完成，现在开始正式学习，学成之后便可通过MQT
  在main.lua中我们需要调用single_mqtt，代码参考如下：
 
 ```Lua
--- LuaTools需要PROJECT和VERSION这两个信息
+-- Luatools需要PROJECT和VERSION这两个信息
 PROJECT = "mqttdemo"
 VERSION = "1.0.0"
 
@@ -238,7 +238,7 @@ end)
  在main.lua中我们需要调用multilink_mqtt，代码参考如下：
 
 ```Lua
--- LuaTools需要PROJECT和VERSION这两个信息
+-- Luatools需要PROJECT和VERSION这两个信息
 PROJECT = "mqttdemo"
 VERSION = "1.0.0"
 
@@ -466,7 +466,7 @@ Client 2：
  在main.lua中我们需要调用ssl_mqtt，代码参考如下：
 
 ```Lua
--- LuaTools需要PROJECT和VERSION这两个信息
+-- Luatools需要PROJECT和VERSION这两个信息
 PROJECT = "mqttdemo"
 VERSION = "1.0.0"
 
@@ -531,7 +531,7 @@ sys.run()
  在main.lua中我们依旧是需要调用ssl_mqtt，代码参考如下：
 
 ```Lua
--- LuaTools需要PROJECT和VERSION这两个信息
+-- Luatools需要PROJECT和VERSION这两个信息
 PROJECT = "mqttdemo"
 VERSION = "1.0.0"
 

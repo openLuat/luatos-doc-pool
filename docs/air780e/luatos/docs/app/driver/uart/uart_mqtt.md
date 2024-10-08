@@ -138,7 +138,7 @@ end)
 ## 完整实例
 
 ~~~lua
--- LuaTools需要PROJECT和VERSION这两个信息
+-- Luatools需要PROJECT和VERSION这两个信息
 PROJECT = "uart_mqtt"
 VERSION = "1.0.0"
 

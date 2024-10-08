@@ -46,7 +46,7 @@
 ![开始更新](image/luatools_v3_run.png)
 
 
-### 5. 更新完成后，LuaTools文件夹内，会生成几个新文件夹：
+### 5. 更新完成后，Luatools文件夹内，会生成几个新文件夹：
 
 ![Luatools v3 生成的新文件夹](image/luatools_v3_dirlist.png)
 

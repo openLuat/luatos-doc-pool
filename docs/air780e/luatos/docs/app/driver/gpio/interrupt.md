@@ -60,7 +60,7 @@ demo内容如下
 
 ```lua
 
--- LuaTools需要PROJECT和VERSION这两个信息
+-- Luatools需要PROJECT和VERSION这两个信息
 PROJECT = "gpio2demo"
 VERSION = "1.0.0"
 

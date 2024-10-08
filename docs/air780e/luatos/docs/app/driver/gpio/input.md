@@ -12,7 +12,7 @@ GPIO的输入模式是指将GPIO配置为接收外部信号的模式。
 
 ```lua
 
--- LuaTools需要PROJECT和VERSION这两个信息
+-- Luatools需要PROJECT和VERSION这两个信息
 PROJECT = "gpio2demo"
 VERSION = "1.0.0"
 

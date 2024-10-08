@@ -139,7 +139,7 @@ log.info("fsstat", fs.fsstat("/"))
 以下这段代码对脚本做了命名、添加使用库、创建任务线程等操作：
 
 ```Lua
--- LuaTools需要PROJECT和VERSION这两个信息
+-- Luatools需要PROJECT和VERSION这两个信息
 PROJECT = "fsdemo"
 VERSION = "1.0.0"
 

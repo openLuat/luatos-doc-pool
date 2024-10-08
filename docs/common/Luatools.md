@@ -46,7 +46,7 @@
 ![开始更新](image/luatools_v3_run.png)
 
 
-   - 5. 更新完成后，LuaTools文件夹内，会生成几个新文件夹：
+   - 5. 更新完成后，Luatools文件夹内，会生成几个新文件夹：
 
 ![Luatools v3 生成的新文件夹](image/luatools_v3_dirlist.png)
 
@@ -279,9 +279,9 @@
 
 ### （二）使用文本编辑器直接查看log日志
 
-- LuaTools 的日志是 USB-TTL 或者 USB-VCOM 提供的，因此可能会独占串口
+- Luatools 的日志是 USB-TTL 或者 USB-VCOM 提供的，因此可能会独占串口
 
-- 用文本编辑器打开 log的时候，注意生成的 Log 文件时间，必要时，先关闭 LuaTools 再使用文本编辑器查看日志
+- 用文本编辑器打开 log的时候，注意生成的 Log 文件时间，必要时，先关闭 Luatools 再使用文本编辑器查看日志
 
 ![本地查看日志](image/luatools_v3_locallog.png)
 ![记事本看日志](image/luatools_v3_notepadlog.png)

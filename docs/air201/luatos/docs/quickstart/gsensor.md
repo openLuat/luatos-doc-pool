@@ -11,7 +11,7 @@ Air201开发板一块即可。
 ### 2.1 main.lua文件说明
 除了常规配置外，就增加了打开gsensor传感器的供电引脚和添加了da267库。
  ```Lua 
--- LuaTools需要PROJECT和VERSION这两个信息
+-- Luatools需要PROJECT和VERSION这两个信息
 PROJECT = "Air201_da267"
 VERSION = "1.0.0"
 log.info("main", PROJECT, VERSION)
