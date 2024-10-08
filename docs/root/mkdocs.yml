@@ -80,7 +80,14 @@ nav:
       - 产品手册: air780eg/product/index.md
       - LuatOS资料: https://docs.openluat.com/air780eg/luatos/
       - AT资料: https://docs.openluat.com/air780eg/at/
-    - 卫星定位模组: gnss.md
+    - Air510U:
+      - 简介: air510u/index.md
+      - 产品手册: air510u/product/index.md
+      - AT资料: https://docs.openluat.com/air510u/at/
+    - Air530Z:
+      - 简介: air530z/index.md
+      - 产品手册: air530z/product/index.md
+      - AT资料: https://docs.openluat.com/air530z/at/
   - 海外模组:
     - Air780EEN:
       - 简介: air780een/index.md
