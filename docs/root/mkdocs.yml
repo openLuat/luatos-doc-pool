@@ -40,7 +40,7 @@ nav:
       - 产品手册: air700eaq/product/index.md
       - LuatOS资料: https://docs.openluat.com/air700eaq/luatos/
       - AT资料: https://docs.openluat.com/air700eaq/at/
-    - Air780EQ: air780eq/index.md
+    - Air780EQ:
       - 简介: air780eq/index.md
       - 产品手册: air780eq/product/index.md
       - LuatOS资料: https://docs.openluat.com/air780eq/luatos/
