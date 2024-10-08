@@ -149,7 +149,7 @@
 
    Air780EPS支持FOTA功能；
 
-   合宙IoT平台([IOT.OPENLUAT.COM](IOT.OPENLUAT.COM))可以对个人账号下的每一片模组进行FOTA管理；
+   [合宙IoT平台](https://iot.openluat.com)可以对个人账号下的每一片模组进行FOTA管理；
 
    Air780EPS支持差分升级，无论AT软件，还是LuatOS软件，都可以通过合宙IoT后台进行FOTA升级；
 
@@ -199,7 +199,7 @@
 
 官网 [www.openluat.com](www.openluat.com)
 
-资料 [docs.openluat.com](docs.openluat.com)
+资料 [docs.openluat.com](https://docs.openluat.com)
 
 样品 [luat.taobao.com](luat.taobao.com)
 

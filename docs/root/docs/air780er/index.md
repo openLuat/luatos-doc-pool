@@ -128,7 +128,7 @@
 
 官网 [www.openluat.com](www.openluat.com)
 
-资料 [docs.openluat.com](docs.openluat.com)
+资料 [docs.openluat.com](https://docs.openluat.com)
 
 样品 [luat.taobao.com](luat.taobao.com)
 
