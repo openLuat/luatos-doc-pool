@@ -22,20 +22,18 @@ UART（通用异步接收器/发送器）是一种串行通信协议，因其多
 
 780E模块上有2个通用串口，和1个输出DBG日志串口，本文内容包含对main_uart和aux_uart，这2个通用串口的使用方式。
 
-| 模块引脚  |      模块      | 连接mcu或串口线  |
-|----------|----------------|----------------|
-|   18     |  main_uart_tx  |    uart_rx     |
-|   17     |  main_uart_rx  |    uart_tx     |
-|   29     |  aux_uart_tx   |    uart_rx     |
-|   28     |  aux_uart_rx   |    uart_tx     |
-
-
+| 模块引脚 | 模块         | 连接mcu或串口线 |
+| -------- | ------------ | --------------- |
+| 18       | main_uart_tx | uart_rx         |
+| 17       | main_uart_rx | uart_tx         |
+| 29       | aux_uart_tx  | uart_rx         |
+| 28       | aux_uart_rx  | uart_tx         |
 
 ## 一、初始化uart
 
 ### 1.1 使用MAIN_UART(uart1)串口
 
-~~~lua
+```lua
 local uartid = 1 -- 使用uart1，可根据实际设备选取不同的uartid
 
 --初始化 参数都可以根据实施情况修改
@@ -45,11 +43,11 @@ uart.setup(
     8,--数据位
     1--停止位
 )
-~~~
+```
 
 ### 1.2 使用AUX_UART(uart2)串口
 
-~~~lua
+```lua
 local uartid = 2 -- 使用uart2
 
 --初始化 参数都可以根据实施情况修改
@@ -59,11 +57,11 @@ uart.setup(
     8,--数据位
     1--停止位
 )
-~~~
+```
 
 ## 二、注册接收数据的回调函数
 
-~~~lua
+```lua
 -- 收取数据会触发回调, 这里的"receive" 是固定值不要修改。
 uart.on(uartid, "receive", function(id, len)
     local s = ""
@@ -76,33 +74,33 @@ uart.on(uartid, "receive", function(id, len)
         end
     until s == ""
 end)
-~~~
+```
 
 ## 三、发送数据
 
 ### 发送普通字符串
 
-~~~lua
+```lua
 uart.write(uartid, "\r\nRDY\r\n模块型号：" .. hmeta.model())
-~~~
+```
 
 ### 发送十六进制的数据串
 
-~~~lua
+```lua
 uart.write(uartid, string.char(0x55,0xAA,0x4B,0x03,0x86))
-~~~
+```
 
 ### 通过zbuff的方式发送数据
 
-~~~lua
+```lua
 local buff = zbuff.create(1024)
 buff:copy(0, "aa:bb:cc:dd, zbuff!")
 uart.tx(uartid, buff)
-~~~
+```
 
 ### 发送json格式的数据
 
-~~~lua
+```lua
 local data =
 {
     host = "abcdefg.com",
@@ -115,11 +113,11 @@ local data =
 
 local jsondata = json.encode(data)
 uart.write(uartid, jsondata)
-~~~
+```
 
 ## 四、完整例程
 
-~~~lua
+```lua
 -- LuaTools需要PROJECT和VERSION这两个信息
 PROJECT = "uart"
 VERSION = "1.0.0"
@@ -171,9 +169,9 @@ end)
 -- 用户代码已结束---------------------------------------------
 sys.run()
 -- sys.run()之后后面不要加任何语句!!!!!
-~~~
+```
 
-</br>
+<br />
 
 **代码运行结果**：
 
