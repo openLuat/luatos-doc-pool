@@ -272,6 +272,9 @@
 
 ### （一）使用Luatools文本区查看日志
 
+   - Luatools 会自动识别USB的虚拟端口，并打开虚拟端口，读取日志，并显示出来；
+   - 当使用 USB 物理连接的话，务必要勾选 “4G模块USB打印”。
+
 ![查看日志](image/luatools_v3_logcheck.png)
 
 ### （二）使用文本编辑器直接查看log日志
@@ -404,3 +407,30 @@
 ![LuatOS串口烧录](image/luatools_v3_luatosuartdownload.png)
 ![LuatOS串口烧录](image/luatools_v3_luatosuartfile.png)
 
+## 七、AT 指令交互
+
+### 打开 AT 交互工具
+
+   Luatools 集成了一个精简的 AT 指令交互工具。
+
+   点击 "2，AT指令"菜单，选择 “2.2 调试工具->2.2.1 内置串口调试工具(简约)”
+
+   即可打开串口交互工具。
+   
+   如果模组里面是 AT 的标准固件的话， Luatools 会自动打开模组的 AT 命令的串口，
+   
+   并发送几条查询指令给模组，如图：
+
+![串口交互工具](image/luatools_v3_attool.png)
+
+### AT 命令交互
+
+   在弹出的串口工具编辑框，可以输入 AT 指令， 勾选 “增加换行”，点击发送，
+
+   可以在 trace 界面，看到交互的 AT 命令的发送和返回内容，如图：
+
+![串口交互工具](image/luatools_v3_atrecv.png)
+
+
+
+   

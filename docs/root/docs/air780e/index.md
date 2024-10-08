@@ -157,7 +157,7 @@
 
    无论AT指令，还是LuatOS，Air780E都可以方便的实现数据透传功能；
 
-   如果您想更快速的实现设备上网功能，可以使用合宙的DTU模组或整机，详见[DTU.OPENLUAT.COM](DTU.OPENLUAT.COM)；
+   如果您想更快速的实现设备上网功能，可以使用合宙的DTU模组或整机，详见[合宙dtu管理平台](https://dtu.openluat.com)；
 
 4. **Air780EX与Air780E什么关系？**
 
@@ -201,7 +201,7 @@
 
 ### 合宙模组更多资料
 
-官网 [www.openluat.com]([www.openluat.com]())
+官网 [www.openluat.com](https://www.openluat.com)
 
 资料 [docs.openluat.com](https://docs.openluat.com)
 

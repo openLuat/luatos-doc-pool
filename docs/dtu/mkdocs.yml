@@ -69,7 +69,6 @@ nav:
       - 产品手册: https://docs.openluat.com/air724ug/product/
       - LuatOS资料: https://docs.openluat.com/air724ug/luatos/
       - AT资料: https://docs.openluat.com/air724ug/at/
-      - USB驱动安装: https://docs.openluat.com/air724ug/driver/
   - 定位方案:
     - Air201:
       - 简介: https://docs.openluat.com/air201/
@@ -105,4 +104,5 @@ nav:
   - 增值服务: https://docs.openluat.com/web/ 
   - 技术博客: https://docs.openluat.com/blog/
   - 问答中心: https://chat.openluat.com/
-  - 官网: https://www.openluat.com/
+  - 合宙官网: https://www.openluat.com/
+  - 文档共建: https://docs.openluat.com/askforhelp/
