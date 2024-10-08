@@ -1,9 +1,6 @@
 
 # 合宙DTU资料中心
 
-TODO
-# IRTU 固件参考手册 -- V3.9
-
 ## 一 、DTU 常见问题
 
 - 1.1、 DTU版本默认上电是透传模式还是非透传模式，两个模式间如何转换?
@@ -85,13 +82,7 @@ AIR202U 是上海合宙出品的一款功能强大使用极其简单的DTU模块
 - [x] 支持 获取网络时间
 - [x] 支持 获取基站定位返回的当前模块坐标
 
-
-
-
-
-
-
-## 四、发送数据说明：
+## 四、发送数据说明
 
 ### 4.1、透传通道报文
 
@@ -102,7 +93,6 @@ AIR202U 是上海合宙出品的一款功能强大使用极其简单的DTU模块
 - cmd ："send,id,data"
 
 - code："send,1,data"
-
 
 | 字段 | 值     | 含义                                            |
 | ---- | ------ | ----------------------------------------------- |
@@ -127,7 +117,7 @@ AIR202U 是上海合宙出品的一款功能强大使用极其简单的DTU模块
 | BASIC   | usr:pwd   | HTTP的BASIC验证,注意账号密码之间用:连接         |
 | HEAD    | string    | 自定义head部分, urlencode后的字符串             |
 
-返回:	HTTP服务器返回的正文(body)透传该指令串口 
+返回:	HTTP服务器返回的正文(body)透传该指令串口
 
 ### 4.4、单次 SOCKET 指令
 
@@ -178,9 +168,10 @@ AIR202U 是上海合宙出品的一款功能强大使用极其简单的DTU模块
 - 发送："rrpc,getreallocation"
 - 返回："rrpc,getreallocation,lat,lng"
 - 失败： ”rrpc,getreallocation,error"
-### 5.3、NTP 对时功能：
 
-​	此功能远程不可用
+### 5.3、NTP 对时功能
+
+​此功能远程不可用
 
 - 发送： "rrpc,gettime"
 - 返回： "rrpc,nettime,year,month,day,hour,min,sec"
@@ -206,8 +197,8 @@ AIR202U 是上海合宙出品的一款功能强大使用极其简单的DTU模块
 
 ### 5,7、获取ADC的值
 
-- 发送： "rrpc,getadc,id" 
-- 例子： "rrpc,getadc,0" 
+- 发送： "rrpc,getadc,id"
+- 例子： "rrpc,getadc,0"
 - 返回： "rrpc,getadc,1848"
 - 失败： "ERROR"
 
@@ -299,48 +290,54 @@ AIR202U 是上海合宙出品的一款功能强大使用极其简单的DTU模块
 - 注释：返回1 表示与服务器连接成功，返回2表示与服务器连接断开
 
 ### 5.22、获取固件完整版本号(固件名称)
+
 - 发送： "rrpc,getfwver"
 - 返回： "rrpc,getver,iRTU_1.8.16_Luat_V0032_ASR1802_FLOAT_720"
 
 ### 5.23、获取当前4G网络状态
+
 - 发送： "rrpc,getnetmode"
 - 返回： "rrpc,getnetmode,"
 - 返回值解释：
-    - 0：未注册
-    - 1：2G GSM网络
-    - 2：2.5G EDGE数据网络
-    - 3：3G TD网络
-    - 4：4G LTE网络
-    - 5：3G WCDMA网络
+  - 0：未注册
+  - 1：2G GSM网络
+  - 2：2.5G EDGE数据网络
+  - 3：3G TD网络
+  - 4：4G LTE网络
+  - 5：3G WCDMA网络
 
-    EC618和EC718的返回内容为：
-    - 0：未注册
-    - 1：网络已注册
-    - 2：正在搜网中
-    - 3：网络注册被拒绝
-
+EC618和EC718的返回内容为：
+  - 0：未注册
+  - 1：网络已注册
+  - 2：正在搜网中
+  - 3：网络注册被拒绝
 
 ### 5.24、查询与多个服务器的链接状态
+
 - 发送 "rrpc,netstatus,1"
 - 返回1： "rrpc,netstatus,RDY" 
 - 返回2： "rrpc,netstatus,NORDY"
 
 ### 5.25、查询当前设备SN号
+
 - 发送： "rrpc,getSN"
 - 返回： "rrpc,getSN,123"
 - 返回值解释： 123为设备的SN号
 
 ### 5.26、设置SN号
+
 - 发送： "rrpc,setSN"
 - 返回： "OK"
 - 返回值解释：
 
 ### 5.27、关闭GPS
+
 - 发送： "rrpc,gps_close" 
 - 返回："rrpc,gps_close,ok"
 - 返回值解释：
 
 ### 5.28、设置RNDIS状态
+
 - 发送： "rrpc,setRNDIS,1"
 - 1是打开，0是关闭
 - 返回："OK"
@@ -348,18 +345,21 @@ AIR202U 是上海合宙出品的一款功能强大使用极其简单的DTU模块
 - 注意：780e系列不支持该命令
 
 ### 5.29、设置守护机制状态
+
 - 发送： "rrpc,setchannel,1,2,3,4,5,6,7"
 - 需要守护几路就填几路，守护全部可以直接rrpc,setchannel,all
 - 返回："rrpc,setchannel,OK"
 - 返回值解释：
 
 ### 5.30、切换SIM卡
+
 - 发送： "rrpc,simcross,1"
 - SIM卡为0就填0为1就填1，填2自动切换，该命令重启生效
 - 返回："rrpc,setchannel,OK"
 - 返回值解释：OK为正常，error为错误
 
 ### 5.31、发送短信
+
 - 发送： "rrpc,sms_send,你好"
 - 输入内容是发送信息内容
 - 返回："ok"
@@ -367,6 +367,7 @@ AIR202U 是上海合宙出品的一款功能强大使用极其简单的DTU模块
 - 注意：780e系列不支持该命令
 
 ### 5.32、关闭i2c
+
 - 发送： "rrpc,iic_close,1"
 - 1是i2c的接口id
 - 返回："iic_close,ok,1"
@@ -374,6 +375,7 @@ AIR202U 是上海合宙出品的一款功能强大使用极其简单的DTU模块
 - 注意：780e系列不支持该命令
 
 ### 5.32、打开i2c
+
 - 发送： "rrpc,iic_open,1,10000,0,1,1"
 - 内容解释：1：i2c接口id,10000:时钟频率,0:可选,i2c外设地址,1:可选自定义波特率开关 0/1-关闭/开启,1：双字节寄存器配置开关 0/1-关闭/开启
 - 返回："iic_open,ok,1"
@@ -391,12 +393,15 @@ AIR202U 是上海合宙出品的一款功能强大使用极其简单的DTU模块
 #### 6.2.1、实时查询基站定位
 
 - local lat,lng = create.getRealLocation()
+
 #### 6.2.2、获取纬度
 
 - local lat = create.getLat()
+
 #### 6.2.3、获取经度
 
 - local lng = create.getLng()
+
 #### 6.2.4、获取ADC的电压值
 
 - local val = create.getADC(adcid)
@@ -407,6 +412,7 @@ AIR202U 是上海合宙出品的一款功能强大使用极其简单的DTU模块
 
 - local str = tracker.locateMessage(format)
 - format 为“json” or "hex"
+
 #### 6.3.2、获取GPS设备信息
 
 - local str = tracker.deviceMessage(format)
@@ -459,8 +465,8 @@ AIR202U 是上海合宙出品的一款功能强大使用极其简单的DTU模块
 - 网络连接通知：
   - RDY —— PIN5 （GPIO_65）
 
-
 ### 780E-GPIO
+
 - NET_LED：
   - NET_LED —— 16脚 ( GPIO_27 )
 
