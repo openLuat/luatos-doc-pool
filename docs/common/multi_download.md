@@ -27,7 +27,7 @@
 
 点击如下地址直接下载：
 
-[Air780&Air700量产多路烧录工具](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240711135533529_MulDownloaderV4.1.9_240511F.zip)
+[Air780&Air700量产多路烧录工具](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240929093733731_MulDownloaderV4.1.9_240511F.7z)
 
 注意：V4.1.9版本前的量产工具，可能无法下载最新**luatos_soc_2024**仓库编译的csdk固件。请下载最新的版本，所以务必使用 4.1.9 版本的多路量产下载工具！
 
