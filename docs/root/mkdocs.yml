@@ -74,7 +74,7 @@ nav:
     - Air201:
       - 简介: air201/index.md
       - 产品手册: air201/product/index.md
-      - LuatOS资料: https://docs.openluat.com/air201/luatos/
+      - 开发资料: https://docs.openluat.com/air201/luatos/
     - Air780EG:
       - 简介: air780eg/index.md
       - 产品手册: air780eg/product/index.md
