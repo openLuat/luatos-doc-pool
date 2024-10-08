@@ -1,6 +1,6 @@
 # Air780E AT TCP 快速入门教程
 
-# 一、AT 命令概述
+## 一、AT 命令概述
 
 AT 命令是一种古老的使用方式，从有线通信就开始使用了。
 
@@ -35,7 +35,7 @@ AT 命令发展到今天， 功能日趋完善。
 
 尽管 AT 指令有这些缺点， 但是由于 AT 指令有庞大的用户群， 基于使用的惯性， AT 指令在今天仍然有非常大的使用比例。
 
-# 二、本教程实现的功能概述
+## 二、本教程实现的功能概述
 
 本文教你怎么使用 AT 命令，通过几个简单的步骤，就可以让合宙 4G 模组连接上一个 TCP 服务器，并且模组和服务器之间实现数据的双向传输！
 
@@ -46,11 +46,11 @@ AT 命令发展到今天， 功能日趋完善。
 3. 4G 模组向 TCP 服务器发送 `data from 4G module`，服务器可以收到数据并且在网页端显示；
 4. TCP 服务器网页端向 4G 模组发送 `data from tcp server`，4G 模组可以收到数据并且通过串口输出显示；
 
-# 三、准备硬件环境
+## 三、准备硬件环境
 
 工欲善其事，必先利其器。在正式介绍本功能示例之前，需要先准备好以下硬件环境。
 
-## 3.1 Air780E 开发板
+### 3.1 Air780E 开发板
 
 准备一块开发板，有两种开发板可以使用，二选一即可；
 
@@ -72,19 +72,19 @@ AT 命令发展到今天， 功能日趋完善。
 
 在本教程中，使用的是第一种 Air780E 核心板。
 
-## 3.2 SIM 卡
+### 3.2 SIM 卡
 
 准备一张可以上网的 SIM 卡，可以是物联网卡，也可以是自己的手机卡；
 
 注意：SIM 卡不能欠费，可以正常上网！！！
 
-## 3.3 PC 电脑
+### 3.3 PC 电脑
 
 准备一台电脑；
 
 注意：电脑有 USB 口，并且可以正常上网！！！
 
-## 3.4 数据通信线
+### 3.4 数据通信线
 
 准备一根数据线，此数据线的作用是，连接 Air780E 开发板和 PC 电脑，通过 AT 命令完成业务逻辑的控制和交互；
 
@@ -102,7 +102,7 @@ AT 命令发展到今天， 功能日趋完善。
 
 在本教程中，使用的是第一种 USB 数据线。
 
-## 3.5 组装硬件环境
+### 3.5 组装硬件环境
 
 按照 SIM 卡槽上的插入方向，插入 SIM 卡，注意不要插反！
 
@@ -115,17 +115,17 @@ USB 数据线，连接电脑和 Air780E 开发板，如下图所示：
 
 ![](image/DIl4b9d5BoikT2xxkQucnM0jnfd.png)
 
-# 四、准备软件环境
+## 四、准备软件环境
 
 工欲善其事，必先利其器。在正式介绍本功能示例之前，需要先准备好以下软件环境。
 
-## 4.1 Luatools 工具
+### 4.1 Luatools 工具
 
 要想烧录 AT 固件到 4G 模组中，需要用到合宙的强大的调试工具：Luatools；
 
 详细使用说明参考：[Luatools 工具使用说明](https://docs.openluat.com/Luatools/) 。
 
-## 4.2 AT 固件
+### 4.2 AT 固件
 
 4G 模组中必须烧录正确的 AT 固件才能支持 AT 命令功能；
 
@@ -139,13 +139,13 @@ USB 数据线，连接电脑和 Air780E 开发板，如下图所示：
 
 第二种方式是访问：[Air780E 固件版本](https://docs.openluat.com/air780e/at/firmware/) ，找到最新版本的固件即可。
 
-## 4.3 合宙 TCP/UDP web 测试工具
+### 4.3 合宙 TCP/UDP web 测试工具
 
 为了方便测试，合宙提供了免费的不可商用的 TCP/UDP web 测试工具；
 
 详细使用说明参考：[合宙 TCP/UDP web 测试工具使用说明](https://docs.openluat.com/TCPUDP_Test/) 。
 
-## 4.4 PC 端串口工具
+### 4.4 PC 端串口工具
 
 在量产的项目硬件设计中，一般都是由主控 MCU 通过 UART 给 4G 模组发送命令实现具体的业务逻辑；
 
@@ -155,9 +155,9 @@ USB 数据线，连接电脑和 Air780E 开发板，如下图所示：
 
 LLCOM 的下载链接：[LLCOM](https://llcom.papapoi.com/index.html) ，详细使用说明可以直接参考下载网站。
 
-# 五、开发板开机，确认固件正确
+## 五、开发板开机，确认固件正确
 
-## 5.1 开发板开机
+### 5.1 开发板开机
 
 打开 Luatools 工具，用来监控 Air780E 的运行状态；
 
@@ -167,13 +167,13 @@ LLCOM 的下载链接：[LLCOM](https://llcom.papapoi.com/index.html) ，详细�
 
 ![](image/S9nxbS3QcotLgGx3Yz2c1fEBnKb.png)
 
-## 5.2 如何判断开发板中运行的是正确的 AT 固件
+### 5.2 如何判断开发板中运行的是正确的 AT 固件
 
 此时再观察 Luatools 的主界面，如果有以下典型的日志信息，则表示 Air780E 模组中为 AT 版本的固件，是本教程期望的固件：
 
 ![](image/MnPjb5L7Co2iwKxhDfAcQ64mnWd.png)
 
-## 5.3 如何给开发板中烧录正确的 AT 固件
+### 5.3 如何给开发板中烧录正确的 AT 固件
 
 如果 Luatools 显示不是 AT 固件，则需要手动烧录正确的 AT 固件，烧录方法如下：
 
@@ -205,9 +205,9 @@ LLCOM 的下载链接：[LLCOM](https://llcom.papapoi.com/index.html) ，详细�
 
 ![](image/VQ81b5nGCoNhJcx8vxeclqxMnBf.png)
 
-# 六、打开 LLCOM 和 WEB 测试工具
+## 六、打开 LLCOM 和 WEB 测试工具
 
-## 6.1 打开 LLCOM 并且配置正确
+### 6.1 打开 LLCOM 并且配置正确
 
 此时需要关闭 Luatools 工具，因为 Luatools 会占用 AT 命令端口！！！
 
@@ -215,7 +215,7 @@ LLCOM 的下载链接：[LLCOM](https://llcom.papapoi.com/index.html) ，详细�
 
 ![](image/EegKb6vNyoXY6jxe0VKcaYCenCb.png)
 
-## 6.2 打开 WEB 测试工具，启动一个 TCP 服务器
+### 6.2 打开 WEB 测试工具，启动一个 TCP 服务器
 
 访问 [WEB 测试工具](https://netlab.luatos.com/) ，启动一个 TCP 服务器，如下图所示：
 
@@ -223,9 +223,9 @@ LLCOM 的下载链接：[LLCOM](https://llcom.papapoi.com/index.html) ，详细�
 
 ![](image/CBIkbFoPFo0wzwxmNm0cDGpunmd.png)
 
-# 七、AT 命令控制实现具体的业务逻辑
+## 七、AT 命令控制实现具体的业务逻辑
 
-## 7.1 查询 SIM 卡状态
+### 7.1 查询 SIM 卡状态
 
 每隔 1 秒发送 AT+CPIN?查询 SIM 卡状态，直到收到 +CPIN: READY 表示正常识别的 SIM 卡；
 
@@ -237,7 +237,7 @@ LLCOM 的下载链接：[LLCOM](https://llcom.papapoi.com/index.html) ，详细�
 
 ![](image/VYqcbvPcIo1ApGxlxG5cSNRmnOf.png)
 
-## 7.2 查询模组信号强度
+### 7.2 查询模组信号强度
 
 每隔 1 秒发送 AT+CSQ 查询信号强度，直到信号强度正常；
 
@@ -251,7 +251,7 @@ LLCOM 的下载链接：[LLCOM](https://llcom.papapoi.com/index.html) ，详细�
 
 ![](image/X6tHb4l8kofIxlxlL9nc6wjWnDh.png)
 
-## 7.3 查询网络注册情况
+### 7.3 查询网络注册情况
 
 每隔 1 秒发送 AT+CGATT?查询是否成功注册网络，直到收到 +CGATT: 1；
 
@@ -263,7 +263,7 @@ LLCOM 的下载链接：[LLCOM](https://llcom.papapoi.com/index.html) ，详细�
 
 ![](image/EDejbdaYZoTplox10jtcKjoEnTL.png)
 
-## 7.4 激活数据网络
+### 7.4 激活数据网络
 
 AT+CSTT 命令表示配置数据网络；
 
@@ -275,7 +275,7 @@ AT+CIFSR 表示查询是否激活成功，如果返回一个 ip 地址，表示�
 
 ![](image/JmVbbMNf3oNgE2xY5w4ckn0anEf.png)
 
-## 7.5 连接 TCP 服务器
+### 7.5 连接 TCP 服务器
 
 使用 AT+CIPSTART 命令连接 WEB 测试工具启动的 TCP 服务器，返回 CONNECT OK 表示连接成功；
 
@@ -283,7 +283,7 @@ AT+CIFSR 表示查询是否激活成功，如果返回一个 ip 地址，表示�
 
 ![](image/LGpXbNATho7gXGxfAoBce1Nxnld.png)
 
-## 7.6 4G 模组发送数据给 TCP 服务器
+### 7.6 4G 模组发送数据给 TCP 服务器
 
 AT+CIPSEND 命令可以发送指定长度的数据给服务器；
 
@@ -297,7 +297,7 @@ AT+CIPSEND 命令可以发送指定长度的数据给服务器；
 
 ![](image/TGabboiheo87duxp4dHcDjrInSf.png)
 
-## 7.6 TCP 服务器发送数据给 4G 模组
+### 7.6 TCP 服务器发送数据给 4G 模组
 
 在 WEB 测试工具网页端，输入 `data from tcp server`，然后点击发送按钮，如下图所示：
 
