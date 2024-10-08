@@ -13,6 +13,8 @@
     - 准备一套合宙任意模组的开发板，windows电脑，串口PC工具；
 
     - 打开合宙的 TCP/UDP web 测试工具。
+    
+      合宙web测试工具的详细使用方法参见： [合宙TCP/UDP web测试工具](https://docs.openluat.com/TCPUDP_Test/)
 
 
 ## 三、查询终端状态
@@ -49,10 +51,6 @@
     - 2，打开 TCP 服务器，开始监听
       这里使用合宙的 TCP/UDP web测试网站： netlab.Luatos.com, 如图：
 ![打开TCP端口](image/at_opentcp.png)
-
-
-      该web测试工具的详细使用方法参见：
-[合宙TCP/UDP web测试工具](https://docs.openluat.com/TCPUDP_Test/)
 
     
     - 3， 连接服务器，建立 socket
