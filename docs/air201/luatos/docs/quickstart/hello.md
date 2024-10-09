@@ -1,7 +1,7 @@
 # hello world教程
 本章节教你怎么用简单的几个步骤，就可以完成一个helloworld项目，让合宙的4G模组，轻松打印hello world！
 
-要达到这个目标， 你只需要学会用一个名字叫做 Luatools 的PC工具，往模组烧录固件和脚本，并用这个同样的 LuaTools， 可以查看模组的打印日志。
+要达到这个目标， 你只需要学会用一个名字叫做 Luatools 的PC工具，往模组烧录固件和脚本，并用这个同样的 Luatools， 可以查看模组的打印日志。
 
  
 
@@ -29,7 +29,7 @@
 
 你只需要用 Lua 脚本改写 main 入口函数，并把这个脚本烧录到模组的正确位置，就可以正确运行脚本的代码。
 
-幸运的是， 你只需要用合宙的 LuaTools 工具烧录脚本， 就一定能保证脚本烧录到正确的位置。
+幸运的是， 你只需要用合宙的 Luatools 工具烧录脚本， 就一定能保证脚本烧录到正确的位置。
 
  
 
@@ -125,7 +125,7 @@ https://gitee.com/openluat
 
 
 ```Lua 
--- LuaTools需要PROJECT和VERSION这两个信息
+-- Luatools需要PROJECT和VERSION这两个信息
 PROJECT = "helloworld"
 VERSION = "1.0.0"
 
@@ -154,7 +154,7 @@ sys.run()
 你把这段代码稍作修改后，改为这样：
 
 ```Lua 
--- LuaTools需要PROJECT和VERSION这两个信息
+-- Luatools需要PROJECT和VERSION这两个信息
 PROJECT = "helloworld"
 VERSION = "1.0.0"
 
@@ -190,13 +190,13 @@ sys.run()
 
 **1， 下载和安装合宙调试工具 LuatTools（需要升级到最新版本）**
 
-   要想烧录代码， 先要下载合宙的强大的调试工具： LuaTools。
+   要想烧录代码， 先要下载合宙的强大的调试工具： Luatools。
 
-   如果你已经安装使用过 LuaTools， 可以直接跳到下个小节： 烧录代码。
+   如果你已经安装使用过 Luatools， 可以直接跳到下个小节： 烧录代码。
 
  
 
-   LuaTools 的最新版本的工具介绍和下载地址为：
+   Luatools 的最新版本的工具介绍和下载地址为：
 
 https://doc.openluat.com/wiki/52?wiki_page_id=5071
 
@@ -206,7 +206,7 @@ https://doc.openluat.com/wiki/52?wiki_page_id=5071
 
  
 
-  LuaTools 工具主要有如下几个功能：
+  Luatools 工具主要有如下几个功能：
 
   （1）自动从合宙服务器获取最新的合宙模组固件；
 
@@ -218,7 +218,7 @@ https://doc.openluat.com/wiki/52?wiki_page_id=5071
 
   
 
-LuaTools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools_v2.exe 运行，出现如下界面，就代表 LuaTools 安装成功了：
+Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools_v2.exe 运行，出现如下界面，就代表 Luatools 安装成功了：
 
 ![image](image/wps9.png) 
 
@@ -234,13 +234,13 @@ LuaTools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools
 
 **（2）新建项目**
 
-  首先，确保你的 LuaTools 的版本，上大于 3.0.0 版本的()。
+  首先，确保你的 Luatools 的版本，上大于 3.0.0 版本的()。
 
-  在 LuaTools 的左上角上有版本显示的，如图所示：
+  在 Luatools 的左上角上有版本显示的，如图所示：
 
 ![image](image/wps10.jpg) 
 
-LuaTools 版本没问题的话， 就点击 LuaTools 右上角的“项目管理测试”按钮，如下图所示：
+Luatools 版本没问题的话， 就点击 Luatools 右上角的“项目管理测试”按钮，如下图所示：
 
 ![image](image/wps11.jpg) 
 

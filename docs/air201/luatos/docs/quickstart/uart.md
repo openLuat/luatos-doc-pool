@@ -38,7 +38,7 @@ Air201开发板一块即可。
 ![image](image/uart_8.png) 
 3.4 完整例程展示
 ```Lua
--- LuaTools需要PROJECT和VERSION这两个信息
+-- Luatools需要PROJECT和VERSION这两个信息
 PROJECT = "uart_irq"
 VERSION = "1.0.0"
 

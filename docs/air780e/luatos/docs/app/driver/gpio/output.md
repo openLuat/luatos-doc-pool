@@ -11,7 +11,7 @@ GPIO的输出模式是指将GPIO配置为向外界输出高低电平的模式。
 这里粘贴的代码相比较demo中删减了一些判断板子型号的功能，更加精简，最终效果还是一样的。
 
 ```lua
--- LuaTools需要PROJECT和VERSION这两个信息
+-- Luatools需要PROJECT和VERSION这两个信息
 PROJECT = "gpiodemo"
 VERSION = "1.0.1"
 

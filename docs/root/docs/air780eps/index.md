@@ -1,7 +1,8 @@
 # 合宙Air780EPS模组资料中心
 
-- [合宙Air780EPS模组AT资料中心](https://docs.openluat.com/air780eps/at/)
+- [合宙Air780EPS模组产品手册](https://docs.openluat.com/air780eps/product/)
 - [合宙Air780EPS模组LuatOS资料中心](https://docs.openluat.com/air780eps/luatos/)
+- [合宙Air780EPS模组AT资料中心](https://docs.openluat.com/air780eps/at/)
 
 
 ## 选型Air780EPS时，我应该注意什么？
@@ -143,7 +144,7 @@
 
    LuatOS基于Lua脚本语言开发，Demo功能库齐全，文档丰富，用户只需定义好业务逻辑便可快速开发；
 
-   LuatOS专用调试工具LuaTools，具备项目代码维护、软件下载、查看运行Trace，快速定位问题等功能；
+   LuatOS专用调试工具Luatools，具备项目代码维护、软件下载、查看运行Trace，快速定位问题等功能；
 
 2. **Air780EPS支持FOTA功能吗？**
 

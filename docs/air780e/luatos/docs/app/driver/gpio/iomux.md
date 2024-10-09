@@ -51,7 +51,7 @@ mcu.iomux(mcu.I2C, 1, 1)    -- Air780E的I2C1复用到gpio4和gpio5
 本示例展示了将UART2复用到IO6和IO7.
 
 ```lua
--- LuaTools需要PROJECT和VERSION这两个信息
+-- Luatools需要PROJECT和VERSION这两个信息
 PROJECT = "iomuxdemo"
 VERSION = "1.0.0"
 

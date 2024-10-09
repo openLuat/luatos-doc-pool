@@ -18,7 +18,7 @@ PWRKEY为Air201的开关机控制管脚，关机状态下将PWRKEY管脚拉低1.
 ## 2, 代码展示
 
 ```Lua
--- LuaTools需要PROJECT和VERSION这两个信息
+-- Luatools需要PROJECT和VERSION这两个信息
 PROJECT = "pwrkey_demo"
 VERSION = "1.0.0"
 

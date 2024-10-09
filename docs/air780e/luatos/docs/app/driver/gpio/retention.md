@@ -15,7 +15,7 @@
         该示例可以对比进入休眠模式前后，普通GPIO和AGPIO的区别。
 
 ```lua
--- LuaTools需要PROJECT和VERSION这两个信息
+-- Luatools需要PROJECT和VERSION这两个信息
 PROJECT = "gpio2demo"
 VERSION = "1.0.0"
 
