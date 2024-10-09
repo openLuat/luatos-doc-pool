@@ -195,21 +195,25 @@ ing。。。
 
 ### 堆叠图
 
-[HZ201P_ASM.stp](https://internal-api-drive-stream.feishu.cn/
+- [堆叠图.pdf](https://docs.openluat.com/air201/luatos/hardware/design/file/HZ201P_10.8.wrl)
 
 ### BTB映射表
 
+
 #### 封装资料图
 
-  [C2880692_板对板与背板连接器_X0400FVS-24-LPV01_规格书_XKB+CONNECTIVITY(中国星坤)板对板连接器规格书.PDF](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/all/CJZKbeJCZowT3uxczzHcjxevnoe/?mount_node_token=NuS3dsSfPoPuzyx0Qotc0mIPnVh&mount_point=docx_file)
+
+- [btb连接器](file/C2880692_datasheet.pdf)
 
 #### 映射表
+- [GPIO映射表.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221129105209534_Air780E_CCC%E4%B8%AD%E6%96%87%E8%AF%81%E4%B9%A6.pdf)
 
  
 
 #### 框位图
 
-![img](image/air201_btb.png)
+- ![img](image/air201_btb_ext.png)
+
 
 ## 认证证书
 
