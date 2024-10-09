@@ -10,7 +10,7 @@ nav:
     - 合宙模组选型指南: product.md
     - 彻底讲清楚USB驱动问题: usb_drv.md
     - Luatools下载和使用教程: Luatools.md        
-    - 合宙不同模组功耗对比: airpower.md
+    - 合宙模组功耗的详细说明: airpower.md
     - Lua语法基础教程: lua_lesson.md
     - LuatOS基础教程: LuatOS.md
     - LuatOS-Air教程: LuatOS_Air.md
