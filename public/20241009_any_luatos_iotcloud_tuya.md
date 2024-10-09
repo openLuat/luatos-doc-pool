@@ -1,4 +1,4 @@
-# 一库打通所有云平台--IOT_CLOUD系列文档之华为云物联网云平台
+# 一库打通所有云平台--IOT_CLOUD系列文档之涂鸦云物联网云平台
 
 ## 系列链接
 
@@ -16,39 +16,25 @@
 
 ​	iotcloud库本质就是上层设计一套通用的API，库来进行每个平台功能的对接。目前已经实现了各个平台的所有注册方式，其中自动注册会将相关验证信息保存kv，随后使用此验证信息进行连接，通知针对每个平台添加了特有系统实现，比如设备上线通知，设备版本号上传，ota功能等，用户无需管理这些只需要注意相关下发消息做应用逻辑即可
 
-## 华为云物联网介绍
+## 涂鸦云物联网介绍
 
-​	华为云物联网平台设备接入云服务（IoTDA）提供海量设备的接入和管理能力，将物理设备联接到云，支撑设备数据采集上云和云端下发命令给设备进行远程控制，配合华为云其他产品，帮助您快速构筑物联网解决方案。
+​	涂鸦开发者平台致力于打造互联互通的开发标准，连接品牌、OEM 厂商、开发者、零售商和各行业的智能化需求。基于全球公有云，涂鸦开发者平台实现了智慧场景和智能设备的互联互通，承载着每日数以亿计的设备请求交互。平台服务涵盖硬件开发工具、物联网云服务、智慧行业开发三方面，打造一站式产品智能化和物联网应用开发体验，为开发者提供从技术到营销渠道的全面支撑
 
-​	**官网地址：**[设备接入-控制台 (huaweicloud.com)](https://console.huaweicloud.com/iotdm/?region=cn-north-4#/dm-portal/instance)
+​	**官网地址：**[涂鸦开发者平台 (tuya.com)](https://platform.tuya.com/)
 
-​	**注意:注意区分账号，华为的账号分为华为账号 华为云账号，IAM账号，注意区别**
+​	**特别注意: 涂鸦云支持一机一密，一型一密，X.509 证书三种认证方式，但涂鸦云只对外开放一机一密认证方式，另两种方式请自行联系涂鸦云**
 
 ## 前期准备
 
 ### 云平台准备
 
-​	需要登录官网[设备接入-控制台 (huaweicloud.com)](https://console.huaweicloud.com/iotdm/?region=cn-north-4#/dm-portal/instance)注册华为云账号开通物联网平台
+​	需要登录官网[涂鸦开发者平台 (tuya.com)](https://platform.tuya.com/)注册涂鸦云账号开通物联网平台
 
-​	**注意:要使用华为云账号而不是华为账号，我们需要的是IAM账户，这里有点麻烦，关于IAM账户介绍请看 [基本概念_统一身份认证服务 IAM_华为云 (huaweicloud.com)](https://support.huaweicloud.com/productdesc-iam/iam_01_0023.html#section2)  和 [成长地图_统一身份认证服务 IAM_华为云 (huaweicloud.com)](https://support.huaweicloud.com/iam/index.html) 如果不搞这部分，自动注册将无法使用，只能手动注册** 
+​	开通后我们点击创建产品
+
+![iot_cloud_1](./image/iot_cloud/tuya/iot_cloud_1.png)
 
 
-
-​	开通IoTDA实例后，我们点击详情
-
-![iot_cloud_1](./image/iot_cloud/huawei/iot_cloud_1.png)
-
-​	![iot_cloud_2](./image/iot_cloud/huawei/iot_cloud_2.png)
-
-​	**接入地址中.iotda前为endpoint(即打码部分)，我们需要记录下来，后面会用**
-
-​	随后创建一个产品，后面我们会在此项目中进行演示
-
-![iot_cloud_3](./image/iot_cloud/huawei/iot_cloud_3.png)
-
-​	创建完成后我们要记住产品ID，后面会用到
-
-![iot_cloud_4](./image/iot_cloud/huawei/iot_cloud_4.png)
 
 ### 硬件准备
 
@@ -86,52 +72,31 @@
 
 #### 设备注册分类
 
-​	华为云支持两种注册方式:自动注册(免预注册) 和 手动注册(预注册)。
+​	涂鸦云支持一机一密，一型一密，X.509 证书三种认证方式，但涂鸦云只对外开放一机一密认证方式，另两种方式请自行联系涂鸦云
 
-1. **自动注册(免预注册)**
+1. **一机一密**
 
-   ​	此方无需创建设备，他可以实现统一代码使用时动态进行设备注册，但比较繁琐，需要六个参数，产品ID，项目ID，endpoint，IAM用户名，IAM密码，iam_domain，会自动用imei作为设备名进行设备注册
+   ​	我们点击产品->设备管理->注册设备	
 
-   ​	点击 我的凭证
+   ![iot_cloud_5](./image/iot_cloud/tuya/iot_cloud_2.png)
 
-   ![iot_cloud_5](./image/iot_cloud/huawei/iot_cloud_5.png)
-   
    ​	
    
-   ![iot_cloud_5](https://support.huaweicloud.com/api-iam/zh-cn_image_0000001467559457.png)
+   ![iot_cloud_5](./image/iot_cloud/tuya/iot_cloud_3.png)
    
-   ​	记录下对应值
+   ​	![iot_cloud_5](./image/iot_cloud/tuya/iot_cloud_4.png)
    
-   ​	接下来我们再来看下代码具体怎么用
+   创建完成后我们记录下DeviceID和DeviceSecret
+   
+   接下来我们再来看下代码具体怎么用
 
 ```lua
--- 动态注册(免预注册)
--- iotcloudc = iotcloud.new(iotcloud.HUAWEI,{produt_id = "xxx",project_id = "xxx",endpoint = "xxx",
-    --                         iam_username="xxx",iam_password="xxx",iam_domain="xxx"})
+    -- 涂鸦云 
+    -- iotcloudc = iotcloud.new(iotcloud.TUYA,{device_name = "xxx",device_secret = "xxx"})
+
 ```
 
-​	第一个参数表示我们使用的是华为云，第二个参数我们将上面得到数据写入即可，此方法账户权限偏繁琐！
-
-2. **一机一密(预注册)**
-
-​	此方法需要手动预注册，但是流程极为简单，我们直接创建设备
-
-![iot_cloud_6](./image/iot_cloud/huawei/iot_cloud_6.png)
-
-​	记住设备名和设备密钥
-
-​	接下来我们再来看下代码具体怎么用
-
-```lua
--- 手动注册(预注册)
--- iotcloudc = iotcloud.new(iotcloud.HUAWEI,{produt_id = "xxx",endpoint = "xxx",device_name = "xxx",device_secret = "xxx"})
-```
-
-​	第一个参数表示我们使用的是华为云，第二个参数我们将上面得到的产品ID、endpoint、设备名和设备密钥，非常很简单~
-
-### 云平台OTA
-
-​	iotcloud还支持了华为云平台的ota功能，可以直接进行ota，所有流程iotcloud库都进行了支持，做到了用户无感，用户在订阅`"iotcloud"`消息中会有`iotcloud.OTA`事件，此事件即为ota完成的通知，我们选择时间进行设备重启即可
+​	第一个参数表示我们使用的是涂鸦云，第二个参数我们将上面得到数据写入即可！
 
 ## 效果演示
 
@@ -157,12 +122,8 @@ sys.taskInit(function()
 
     --------    以下接入方式根据自己需要修改,相关参数修改为自己的    ---------
 
-    -- 华为云
-    -- 动态注册(免预注册)
-    -- iotcloudc = iotcloud.new(iotcloud.HUAWEI,{produt_id = "xxx",project_id = "xxx",endpoint = "xxx",
-    --                         iam_username="xxx",iam_password="xxx",iam_domain="xxx"})
-    -- 手动注册(预注册)
-    iotcloudc = iotcloud.new(iotcloud.HUAWEI,{produt_id = "xxx",endpoint = "xxx",device_name = "xxx",device_secret = "xxx"})
+    -- 涂鸦云 
+    iotcloudc = iotcloud.new(iotcloud.TUYA,{device_name = "xxx",device_secret = "xxx"})
 
     if iotcloudc then
         iotcloudc:connect()
@@ -195,13 +156,13 @@ sys.run()
 
 ### 设备日志：
 
-![iot_cloud_7](./image/iot_cloud/huawei/iot_cloud_7.png)
+![iot_cloud_7](./image/iot_cloud/tuya/iot_cloud_5.png)
 
 ​	可以看到我们的设备打印了连接成功，证明自动注册+连接流程已经完成
 
 ### 云平台效果：
 
-![iot_cloud_8](./image/iot_cloud/huawei/iot_cloud_8.png)
+![iot_cloud_8](./image/iot_cloud/tuya/iot_cloud_6.png)
 
 ​	设备已经自动注册并且在线
 
