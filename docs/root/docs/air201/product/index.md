@@ -201,18 +201,17 @@ ing。。。
 
 
 #### 封装资料图
+- [btb连接器](./file/C2880692_datasheet.pdf)
 
-
-- [btb连接器](file/C2880692_datasheet.pdf)
 
 #### 映射表
-- [GPIO映射表.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221129105209534_Air780E_CCC%E4%B8%AD%E6%96%87%E8%AF%81%E4%B9%A6.pdf)
+- [GPIO映射表.pdf](https://docs.openluat.com/air201/luatos/hardware/design/file/Air201_gpio_config.xlsx)
 
  
 
 #### 框位图
 
-- ![img](image/air201_btb_ext.png)
+- ![img](./image/air201_btb_ext.png)
 
 
 ## 认证证书
