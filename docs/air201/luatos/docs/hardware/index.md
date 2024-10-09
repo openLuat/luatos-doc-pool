@@ -14,8 +14,11 @@
 
 ## 四、板对板连接器资料
 
-[板对板连接器](./design/file/Air201_gpio_config.xlsx)
+[板对板连接器](./design/file/C2880692_datasheet.pdf)
 
 
 ## 五、测试点介绍
+![image](./design/image/air201_v1.3_测试点_正面.png) 
+![image](./design/image/air201_v1.3_测试点_反面.png) 
+
 
