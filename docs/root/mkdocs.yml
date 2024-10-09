@@ -19,6 +19,7 @@ nav:
     - 量产多路下载工具介绍:  multi_download.md
     - TCPUDP_Web测试工具:   TCPUDP_Test.md
     - 远程固件升级服务:   fota_lesson.md
+    - 调试工具集合:     air_tools.md
   - 国内模组:
     - Air780E:
       - 简介: air780e/index.md
