@@ -139,7 +139,7 @@ tx_buff:del()
 ~~~lua
 -- main.lua文件
 
--- LuaTools需要PROJECT和VERSION这两个信息
+-- Luatools需要PROJECT和VERSION这两个信息
 PROJECT = "uart_udp"
 VERSION = "1.0.0"
 
@@ -278,7 +278,7 @@ sys.run()
 -- sys.run()之后后面不要加任何语句!!!!!
 ~~~
 
-</br>
+<br />
 
 **代码运行结果**：
 

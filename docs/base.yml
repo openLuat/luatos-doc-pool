@@ -21,20 +21,20 @@ theme:
     #- header.autohide
     #- navigation.expand
     #- navigation.footer
-    # - navigation.indexes
+    - navigation.indexes
     # - navigation.instant
     # - navigation.instant.prefetch
     # - navigation.instant.progress
     # - navigation.prune
-    - navigation.sections
+    # - navigation.sections
     - navigation.tabs
     # - navigation.tabs.sticky
     - navigation.top
     # - navigation.tracking
     # - navigation.path
-    #- search.highlight
-    #- search.share
-    #- search.suggest
+    - search.highlight
+    - search.share
+    - search.suggest
     #- toc.follow
     #- toc.integrate
 

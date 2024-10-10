@@ -1,6 +1,6 @@
 # 典型功能介绍
 
-本章着重介绍Air780E支持各种功能，以及如何使用这些功能。
+本章着重介绍Air780E支持的各种功能，以及如何使用这些功能。
 
 - [硬件驱动](./driver/index.md) 包括UART、I2C、SPI等
 - [网络驱动](./socket/index.md) 包括TCP/UDP/MQTT/HTTP等

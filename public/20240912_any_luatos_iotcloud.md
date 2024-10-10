@@ -14,6 +14,8 @@
 
 [IOT_CLOUD系列文档之中移ONENET物联网云平台](./20240912_any_luatos_iotcloud_onenet.md)
 
-[IOT_CLOUD系列文档之中移阿里云物联网云平台](./20240920_any_luatos_iotcloud_aliyun.md)
+[IOT_CLOUD系列文档之阿里云物联网云平台](./20240920_any_luatos_iotcloud_aliyun.md)
 
-[IOT_CLOUD系列文档之中移华为云物联网云平台](./20240926_any_luatos_iotcloud_huawei.md)
+[IOT_CLOUD系列文档之华为云物联网云平台](./20240926_any_luatos_iotcloud_huawei.md)
+
+[IOT_CLOUD系列文档之涂鸦云物联网云平台](./20241009_any_luatos_iotcloud_tuya.md)

@@ -33,7 +33,7 @@ mcu.iomux(mcu.UART, 2, 2)       -- Air780E的UART2复用到gpio6(55脚_RX)和gpi
 ## 完整实例
 
 ~~~lua
--- LuaTools需要PROJECT和VERSION这两个信息
+-- Luatools需要PROJECT和VERSION这两个信息
 PROJECT = "uart_mux"
 VERSION = "1.0.0"
 

@@ -1,3 +1,4 @@
 # 合宙Air510U系列模组资料中心
 
-[当前资料点我](https://air510u.cn/)
+- [合宙Air510U模组产品手册](https://docs.openluat.com/air510u/product/)
+- [合宙Air510U模组AT资料中心](https://docs.openluat.com/air510u/at/)

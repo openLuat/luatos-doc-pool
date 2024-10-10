@@ -1,0 +1,64 @@
+INHERIT: ../../base.yml
+site_name: "合宙文档中心"
+
+site_url: https://docs.openluat.com/air780een/at/
+
+meta:
+  model: "air780een"
+  doctp : "at"
+
+nav:
+  #- 首页: index.md
+  - 快速入门:
+    - 介绍: quick_start/index.md
+    - TCP快速入门: quick_start/tcp.md
+    - MQTT快速入门: quick_start/mqtt.md
+    - HTTP快速入门: quick_start/http.md
+  - 软件demo:
+    - 介绍: app/index.md
+    - AT指令手册: app/at_command.md
+    - 应用实例:
+      - TCP应用实例: app/command/tcp.md
+      - MQTT应用实例: app/command/mqtt.md
+      - HTTP应用实例: app/command/http.md
+    - 常用状态机:
+      - 网络状态机: app/state/network.md
+      - TCP状态机: app/state/tcp.md
+      - MQTT状态机: app/state/mqtt.md
+    - 常见异常:
+      - 网络异常类: app/error/network.md
+      - 通信异常类: app/error/error.md
+    - MCU实例代码:
+      - STM32演示代码: app/mcu/stm32.md
+  - 硬件demo:
+    - 典型硬件设计指南:
+      - 简介: hardware/design/index.md
+      #- 常见供电电路: ../luatos/hardware/design/power 直接引用存在一个问题，左边导航栏会跳转到LuatOS资料中心，阅读体验很差
+      - 常见供电电路: hardware/design/power.md
+      - 常见充电电路: hardware/design/charge.md
+      - 常见开机电路: hardware/design/poweron.md
+      - 常见关机电路: hardware/design/poweroff.md
+      - Reset电路: hardware/design/reset.md
+      - 看门狗电路: hardware/design/wdt.md
+      - SIM卡电路: hardware/design/sim.md
+      - 天线电路: hardware/design/ant.md
+      - UART 0调试电路: hardware/design/uart0.md
+      - UART 1通信电路: hardware/design/uart1.md
+      - UART 2通信电路: hardware/design/uart2.md
+      - USB通信电路: hardware/design/usb.md
+      - LED状态灯电路: hardware/design/led.md
+      - 模组休眠唤醒电路: hardware/design/sleep.md
+      - 模组唤醒休眠状态下的主控电路: hardware/design/wakeup.md
+      - 模组控制外设的电路: hardware/design/ctrl.md
+      - 外设触发模组中断的电路: hardware/design/int.md
+      - 测试点电路: hardware/design/check_point.md
+      - 温湿度传感器参考电路: hardware/design/sensor.md
+      - 远程空开参考电路: hardware/design/remote.md
+  - 固件版本: firmware.md
+  - 常见问题: faq.md
+  - DTU: https://docs.openluat.com/dtu/
+  - 增值服务: https://docs.openluat.com/web/
+  - 技术博客: https://docs.openluat.com/blog/
+  - 问答中心: https://chat.openluat.com/
+  - 合宙官网: https://www.openluat.com/
+  - 文档共建: https://docs.openluat.com/askforhelp/

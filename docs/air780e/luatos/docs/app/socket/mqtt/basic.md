@@ -38,7 +38,7 @@ main.lua
 主要定义项目名称和版本信息，以及require对应的模块，这里将以MQTT单链接进行演示说明，详细说明见下面说明：
 
 ``` lua
--- LuaTools需要PROJECT和VERSION这两个信息
+-- Luatools需要PROJECT和VERSION这两个信息
 PROJECT = "mqttdemo"
 VERSION = "1.0.0"
 

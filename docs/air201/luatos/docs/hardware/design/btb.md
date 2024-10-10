@@ -3,6 +3,38 @@
 通过BTB连接器，可以扩展使用 pwrkey引脚控制开关机，一路UART1串口接口连接外设，4路模拟IO口，2路带唤醒功能的wakeup引脚，一路I2C接口。同时CAM_SCK、CAM_XCLK、I2C1_SCL、I2C1_SDA于模组的SPI接口复用，支持Flash等SPI外设，另外引出2路电压一路电池电压、一路USB电压。
 
 ![img](image/air201_btb_ext.png)
+## BTB扩展接口
+[扩展IO的功能映射表](./file/Air201_gpio_config.xlsx)
+
+注意事项：											
+- 1	休眠情况下，中断可唤醒的IO 有**4**个，另外还支持UART 数据唤醒										
+- 2	休眠情况下，可对外输出的IO口总计**3**个										
+- 3	USP 支持复用I2S,LCD_SPI,CAMER_SPI 三种通讯接口，详情请看本表格USP部分工作表部分										
+- 4	AONGPIO(5,11,15)管脚休眠模式下可保持，保持高或低。										
+- 5	输出高电平，只支持**1.8V**，如果要驱动外部3.3V 外设，需要搭个电平转换电路										
+- 6	WAKEUP(11,15,23)管脚固定电平1.8V，由于内部分压，内部上拉电平测量在1.1V左右										
+- 7	WAKEUP(11,15,23)管脚内部上下拉非常弱，驱动能力<30uA.										
+- 8	系统休眠后外部只能通过WAKEUP(11,15,23)管脚或者LPUART(7,9)串口唤醒，AONGPIO(5,11,15)虽然在休眠下不掉电，但是无法触发中断。										
+- 9	普通GPIO在休眠后均会处于高阻状态。										
+- 10	"板载的DBG_TX、DBG_RX默认功能为系统底层日志口，进行模块硬件设计时，在剩余功能引脚充足的前提下，避免使用DBG_TX和DBG_RX。
+如果将此引脚复用为其他功能，则无法从DBG_TX和DBG_RX抓取系统日志。
+在某些场景下，如果模块出现异常，无法抓到问题日志，只能通过硬件改版，引出DBG_TX、DBG_RX，抓取日志再进行分析。
+包括但不限于以下两种场景：
+
+    **1、低功耗场景：**
+
+    在低功耗场景下，USB无法使用，只能通过DBG_TX、DBG_RX来抓取日志。
+
+    **2、非低功耗场景：**
+
+    模块接入USB时，工作正常，未接入USB时，工作异常的情况，只能通过DBG_TX、DBG_RX来抓取日志。"		
+
+- 11	"所有GPIO和wakeuppad都支持双边沿中断；
+可以复用为wakeup的io，休眠以及唤醒状态下都能使用；
+其余io唤醒状态下可用，休眠状态下不能使用；
+wakeup io可以唤醒休眠，其余GPIO都不可以。"										
+
+- 12	Air201 的BTB 连接器上的**23**管脚，可以当作中断唤醒脚，也可以外部输入5v,给23管脚,通过充电ic再给电池充电。
 
 ## BTB扩展板
 
@@ -17,9 +49,6 @@
 
 [Air201_BTB扩展板_装配图v1.0.pdf](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/all/Trdub8xPiox72mxTVPEcOJrunui/?mount_node_token=ARtkdVNBvogt3WxnNe5cDye0nXf&mount_point=docx_file)
 
-**原理图：**
-
-[Air201_BTB扩展板_原理图v1.0.pdf](https://internal-api-drive-stream.feishu.cn/space/api/box/stream/download/all/TZagbBxRGoTIm2xn8P4cVQOIn5b/?mount_node_token=DduCdoZLyoyoegxtAT4cjZRsnJg&mount_point=docx_file)
 
 ## LCD 扩展
 
@@ -195,11 +224,13 @@ I2C管脚预留位置在BTB扩展接口上面，详细位置看下图（蓝色�
 
 **管脚定义（"/"后面的管脚号是指模块对应的****PIN脚****）：**
 
-| **管脚名** | **管脚** | **I/O** | **管脚描述**                          |
+|  **管脚**| **管脚名** | **I/O** | **管脚描述**                          |
 | ---------- | -------- | ------- | ------------------------------------- |
-| AGPIOWU1   | 11/107   | GPIO20  | 休眠电平保持，可作为唤醒脚（WAKEUP3） |
-| AGPIOWU2   | 15/19    | GPIO21  | 休眠电平保持，可作为唤醒脚（WAKEUP4） |
-
+| 11   |  AGPIOWU1  | GPIO20  | 休眠电平保持，可作为唤醒脚（WAKEUP3） |
+| 15   |   AGPIOWU2  | GPIO21  | 休眠电平保持，可作为唤醒脚（WAKEUP4） |
+| 3   |  POWERKEY  | 无  | 不可作为GPIO使用，可作为唤醒脚（powerkey） |
+| 23   | vbus(WAKEUP1)    | 无  | 不可作为GPIO使用，可作为唤醒脚（WAKEUP1）,可对电池进行充电 |
+- 7，9 管脚，可以作为UART 数据唤醒
 - AGPIO虽然在休眠下不掉电，但是无法触发中断，系统休眠后外部只能通过WAKEUP管脚或者LPUART串口唤醒。
 
 ## 注意事项

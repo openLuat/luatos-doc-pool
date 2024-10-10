@@ -22,3 +22,9 @@ Air201板子设计精致小巧，整板大小只有33mm×16.5mm，厚度0.8mm，
 ![img](image/air201_v1.3_%E6%B5%8B%E8%AF%95%E7%82%B9_%E6%AD%A3%E9%9D%A2.png)
 
 ![img](image/air201_v1.3_%E6%B5%8B%E8%AF%95%E7%82%B9_%E5%8F%8D%E9%9D%A2.png)
+
+## 堆叠图
+
+[堆叠图](./file/HZ201P_10.8.wrl)
+
+
