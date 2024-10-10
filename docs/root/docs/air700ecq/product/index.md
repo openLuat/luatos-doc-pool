@@ -12,3 +12,10 @@
 | 原理图及PCB封装  | [Air700ECQ封装.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20231225171117125_Air700EL&700EY封装.zip)<br />[EVB_Air700ECQ_All_Func.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240816170227359_EVB_Air700EX_All_Func.pdf)                                                                                                                                                                                                                                                                                                                                                    |
 | 参考设计原理图   | [Air700ECQ_硬件参考设计.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240228162252366_Air700EL_硬件参考设计.pdf)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | 开发板相关资料   | [开发板EVB-Air700ECQ-IO使用手册V1.0.0.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240816172628952_开发板EVB-Air700ECQ-IO使用手册V1.0.0.pdf)<br />[EVB_700ECQ_V1.0_SCH.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230308153627280_EVB_Air700E_V1.0_SCH.zip)<br />[EVB_700ECQ_V1.0_bom.XLS](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230331111453962_EVB_Air700E_V1.0_bom.XLS)<br />[EVB_700ECQ开发板ad.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230510094340802_EVB_Air700E开发板ad.zip)（kicad转出的 有些地方不兼容仅供参考） |
+
+## 模块外形
+
+| 正面                        | 反面                          |
+| --------------------------- | ----------------------------- |
+| ![](./image/700ECQ正面.png) | ![](./image/700E系列反面.png) |
+
