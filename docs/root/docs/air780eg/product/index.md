@@ -15,3 +15,11 @@
 | 开发板相关资料   | [开发板Core_Air780EG使用说明V1.0.1.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230331173112806_开发板Core_Air780EG使用说明V1.0.1.pdf)<br />[EVB_Air780X_V1.7.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221221141751177_EVB_Air780X_V1.7.zip)<br />[EVB_Air780X_V1.8.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20231222160117780_EVB_Air780X_V1.8.pdf)<br />[EVB_Air780X_V1.8.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230329163731051_EVB_Air780X_V1.8.zip)（兼容780EX，780EG,780E模块） |
 | 轨迹展示小工具   | [定位展示小工具使用介绍](https://doc.openluat.com/article/4980 "DOC社区定位展示小工具使用介绍")                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | GPS调试工具      | [iNavTool-V4020.7z](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240816143801749_iNavTool-V4020.7z)                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+
+## 模块外形
+
+| 正面                   | 反面                          |
+| ---------------------- | ----------------------------- |
+| ![](./image/780EG.png) | ![](./image/780E系列反面.png) |
+
+## 
