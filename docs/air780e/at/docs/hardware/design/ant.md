@@ -28,7 +28,7 @@
 
 吸盘天线一般长这样；
 
-![](image/AAQTb1XxDovc1QxZXHac7ei2nlf.png)
+![](image/AAQTb1XxDovc1QxZXHac7ei2nlf.png) 
 
 吸盘，吸，是指磁吸的意思；盘，是指磁吸物的形状是圆的；
 
