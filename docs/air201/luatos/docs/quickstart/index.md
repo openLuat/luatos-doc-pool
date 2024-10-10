@@ -13,5 +13,6 @@
 - [g-sensor传感器使用方法](gsensor.md)
 - [RTC使用方法](rtc.md)
 - [UART使用方法](uart.md)
+- [拍照功能使用方法](camera.md)
 
 
