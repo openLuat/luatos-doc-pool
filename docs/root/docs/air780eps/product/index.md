@@ -12,3 +12,11 @@
 | 硬件设计相关手册 | [Air780EPS_硬件设计手册_V1.0.0.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240719102529977_Air780EPS_硬件设计手册_V1.0.0.pdf)<br />  [Air780EPS_GPIO_table_20240920.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240920181658330_Air780EP&Air780EPS_GPIO_table_20240920.pdf) |
 | 原理图及PCB封装  | [Air780EPS_PADS.pcb](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240304174515360_Air780EP_PADS.pcb)<br />[Air780EPS_PADS.sch](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240304174548538_Air780EP_PADS.sch)<br />[780EPS_ad格式.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240424170844720_780ep_ad格式.zip) |
 | 开发板相关资料   | [开发板Core_Air780EPS使用说明V1.0.0.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240819094210124_开发板Core_Air780EPS使用说明V1.0.0.pdf) |
+
+## 模块外形
+
+| 正面                    | 反面                          |
+| ----------------------- | ----------------------------- |
+| ![](./image/780EPS.png) | ![](./image/780E系列反面.png) |
+
+## 

@@ -14,6 +14,14 @@
 | 开发板相关资料     | [开发板Core_Air780E使用说明V1.0.5.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240419155721583_开发板Core_Air780E使用说明V1.0.5.pdf)<br />[Air780E开发板原理图和PCB(立创EDA)](https://oshwhub.com/luat/evb_air780x_v1-6 "780X开发板原理图和PCB(立创EDA)")<br />[EVB_Air780X_V1.5_SCH.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230705082334351_EVB_Air780X_V1.5_SCH.pdf)<br />[EVB_Air780X_V1.5.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230705082416943_EVB_Air780X_V1.5.zip)<br />[EVB_Air780X_V1.6.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240513100446379_EVB_Air780X_V1.6.zip)<br />[EVB_Air780X_V1.8.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20231222160117780_EVB_Air780X_V1.8.pdf)<br />[EVB_Air780X_V1.8.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230329163731051_EVB_Air780X_V1.8.zip)（兼容780EX，780EG,780E模块） |
 | 低功耗全功能开发板 | [Air780E_IO_V2.1.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240913104512513_Air780E_IO_V2.1.pdf)<br />[开发板EVB-Air780E-IO使用说明V1.2.0.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20231009103600243_开发板EVB-Air780E-IO使用说明V1.2.0.pdf)<br />[Air780F_IO_V2.1_设计文件_20240521.rar](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240913104648422_Air780F_IO_V2.1_设计文件_20240521.rar) |
 
+## 模块外形
+
+| 正面                   | 反面                       |
+| ---------------------- | -------------------------- |
+| ![](./image/780EX.png) | ![](./image/780EX反面.png) |
+
+## 
+
 ## 认证证书
 
 ### CCC 证书
