@@ -21,6 +21,7 @@ nav:
     - g-sensor传感器: quickstart/gsensor.md
     - RTC: quickstart/rtc.md
     - uart: quickstart/uart.md
+    - camera: quickstart/camera.md
   - 硬件资料: 
     - 产品介绍: hardware/index.md
     - 模块及芯片: hardware/module.md
