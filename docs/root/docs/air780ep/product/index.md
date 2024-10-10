@@ -13,3 +13,11 @@
 | 原理图及PCB封装  | [Air780EP_PADS.pcb](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240304174515360_Air780EP_PADS.pcb)<br />[Air780EP_PADS.sch](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240304174548538_Air780EP_PADS.sch)<br />[780EP_ad格式.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240424170844720_780ep_ad格式.zip)                                                                                                                                                                                                                                                                                                                                                                |
 | 开发板相关资料   | [开发板Core_Air780EP使用说明V1.0.0.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240920105929207_开发板Core_Air780EP使用说明V1.0.0.pdf) <br /> [EVB_Ai780EP_V1.0-KiCad工程.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240105140550562_EVB_Air780EP_V1.0-KiCad工程.zip)<br /> [EVB_Air780EP_V1.0-原理图.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240105140616346_EVB_Air780EP_V1.0-原理图.pdf)<br />[开发板Core_Air780EP使用说明](https://doc.openluat.com/share_article/ekP9pxVv5b0m8 "开发板Core_Air780EP使用说明")                                                                                                                                               |
 | 模组使用手册     | [合宙Air780EP模组使用手册-V1.0.6.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240703171742337_合宙Air780EP模组使用手册-V1.0.6.pdf)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+
+## 模块外形
+
+| 正面                   | 反面                          |
+| ---------------------- | ----------------------------- |
+| ![](./image/780EP.png) | ![](./image/780E系列反面.png) |
+
+## 
