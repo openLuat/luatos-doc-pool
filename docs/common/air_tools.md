@@ -8,7 +8,7 @@
 
 ## 2, 合宙 TCP/UDP web测试工具
 
-[合宙 TCP/UDP web测试工具](https://netlab.luatos.com/)
+[合宙 TCP/UDP web测试工具](https://docs.openluat.com/TCPUDP_Test/)
 
 ## 3, PDU 编解码工具
 
