@@ -3,3 +3,8 @@
     display: flex;
     justify-content: center;
   }
+
+.md-typeset h1,.md-typeset h2 {
+    font-weight: 700;
+    letter-spacing: -.01em
+}
