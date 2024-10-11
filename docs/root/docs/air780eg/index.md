@@ -15,13 +15,13 @@
 
 ### Air780EG核心信息描述
 
-正反照片
+Air780EG用于AT开发方式时的管脚图
 
-![](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=ZDFkODRmOTc5NTBiNmU1OGZjNTgxYmNlYTNlNTUyYjhfbVFIUVRDWDc5TTM4QmI5ejlraGM2ZWF1YkdDRDd3THZfVG9rZW46U2dwSWJFU2pLb2NtQ0x4ZnB1dWNmZEowblBoXzE3MjgyODk3MzE6MTcyODI5MzMzMV9WNA)
+![](./image/Air780EG_AT_2410.jpg)
 
-管脚透视图
+Air780EG用于LuatOS开发方式时的管脚图
 
-![](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=MGZmYzIzMGVjZjkyOTU0ZjgxZjk0NTU5NTQ1YWMzNzVfY05RdEh6MW5tM0V4QzdUa3VPaVpYcFhjRHU5QzBXRjFfVG9rZW46RkwxWmJnZldUb2ZwUkJ4WlpiV2NkUzd0bnhnXzE3MjgyODk3MzE6MTcyODI5MzMzMV9WNA)
+![](./image/Air780EG_LuatOS_2410.jpg)
 
 1. Air780EG是一款面向国内的通信定位二合一模组，通信上支持移动、电信、联通三大运营商，定位上支持GPS/北斗双模；
 2. Air780EG封装尺寸是16\*18\*2.3mm，与合宙Air780E/Air780EQ/Air780EP/Air780EPS等合宙Air780E系列模组封装大小一样；
