@@ -15,13 +15,13 @@
 
 ### Air780E核心信息描述
 
-正反照片
+Air780E用于AT开发方式时的管脚图
 
-![](./image/780e.png)
+![](./image/Air780E_AT_2410.jpg)
 
-管脚透视图
+Air780E用于LuatOS开发方式时的管脚图
 
-![](./image/780e管脚图.png)
+![](./image/Air780E_LuatOS_2410.jpg)
 
 1. Air780E是一款面向国内的全网通模组，支持移动、电信、联通三大运营商；
 2. Air780E封装尺寸是16\*18\*2.3mm，仅比合宙Air700ECQ/Air700EAQ/Air700EMQ相对大一些；
