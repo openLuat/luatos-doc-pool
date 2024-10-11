@@ -16,13 +16,13 @@
 
 ### Air700ECQ核心信息描述
 
-照片
+Air700ECQ/EAQ/EMQ用于AT开发时的管脚图
 
-![](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=OTViODdmZDE3MWI0YTA2Nzg2OTdhZjFiYzY1Y2EzMzBfMHhXbjFHRXRyUXIxUTFzZVdJVUZBcDBNTjczNUlrbUJfVG9rZW46TEtKdWJwT0ZTbzFjUXh4VXdUYmN2c1drbjJnXzE3MjgyOTA1NDg6MTcyODI5NDE0OF9WNA)
+![](./image/Air700ECQEAQEMQ_AT_2410.jpg)
 
-管脚透视图
+Air700ECQ/EAQ/EMQ用于LuatOS开发时的管脚图
 
-![](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=NGI1NDZmYmY1MThmNmQzNjRmODljYTMzZGY2ZTJlNDVfR2luZTdoOVYwWmtja2JPNUdFV2JjTG5MMHc2UHdBUE5fVG9rZW46RHNxd2J6ZVkyb3RQV1l4bE1pSGM2RUV5bnhnXzE3MjgyOTA1NDg6MTcyODI5NDE0OF9WNA)
+![](./image/Air700ECQEAQEMQ_LuatOS_2410.jpg)
 
 1. Air700ECQ的主打卖点超小超薄，大小仅为10\*13\*1.7mm，不仅小，而且薄，尺寸受限的产品可以选择；
 2. Air700ECQ因为设计取向为尺寸超小，所以无法在硬件上同时支持移动、电信和联通，三大运营商要分三个不同的版本，其中，Air700ECQ为移动版本，Air700EAQ为电信版本，Air700EMQ为联通版本；

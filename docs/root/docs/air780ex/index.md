@@ -20,7 +20,7 @@ Air780EX用于AT开发方式时的管脚图
 
 Air780EX用于LuatOS开发方式时的管脚图
 
-![](./image/Air780EX_AT_2410.jpg)
+![](./image/Air780EX_LuatOS_2410.jpg)
 
 1. Air780EX是一款面向国内的全网通模组，支持移动、电信、联通三大运营商；
 2. Air780EX尺寸是16\*18\*2.3mm，LCC邮票孔封装，与合宙Air780E/Air780EQ/Air780EP/Air780EPS等合宙Air780E系列模组封装大小一样；
