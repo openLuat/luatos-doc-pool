@@ -15,13 +15,13 @@
 
 ### Air780EQ核心信息描述
 
-照片
+Air780EQ用于AT开发方式时的管脚图
 
-![](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=ODZjYTNkZjZlMTVkYzRjN2U0ZWVmYTcyNGE2MmUzOWNfczlRdEZqYXJJMDF5b3RWY2E5alBUU3F3TTRqZmJ4S0RfVG9rZW46WDdjdWJJUDJqb0FIeXR4aXJjUGNueFBkbmNiXzE3MjgyOTAxMjY6MTcyODI5MzcyNl9WNA)
+![](./image/Air780EQ_AT_2410.jpg)
 
-管脚透视图
+Air780EQ用于LuatOS开发方式时的管脚图
 
-![](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=MDc4Yjk3MmYxZTgzYTYwYTMwOWEwNzZlMDg0MWIxMWFfNDBrdFg0Yk5XYmlwTUVzT2lVTVoyOG5SdUZrM3VzS2ZfVG9rZW46Qmpud2I1RFZTb0l1UHl4UUFNM2NES1ZublZkXzE3MjgyOTAxMjY6MTcyODI5MzcyNl9WNA)
+![](./image/Air780EQ_LuatOS_2410.jpg)
 
 1. Air780EQ是一款面向国内的全网通模组，支持移动、电信、联通三大运营商；
 2. Air780EQ封装尺寸是16\*18\*2.3mm，仅比合宙Air700ECQ/Air700EAQ/Air700EMQ相对大一些；
