@@ -25,7 +25,7 @@ Air780EPS用于LuatOS开发方式时的管脚图
 
 1. Air780EPS是合宙迄今为止功耗表现最为优秀的模组型号，低功耗模式下0.3mA，是业内低功耗指标天花板般的存在；
 2. Air780EPS是一款面向国内的全网通模组，支持移动、电信、联通三大运营商；
-3. Air780EPS封装尺寸是16\*18\*2.3mm，仅比合宙Air700ECQ/Air700EAQ/Air700EMQ相对大一些；
+3. Air780EPS封装尺寸是16\*18\*1.7mm，仅比合宙Air700ECQ/Air700EAQ/Air700EMQ相对大一些；
 4. Air780EPS软件上既支持传统的AT指令，也支持合宙基于Lua脚本开发的嵌入操作系统LuatOS；
 5. Air780EPS硬件上支持丰富的外设管脚，比如USB、UART、SPI、I2C、PWM、GPIO等；
 6. Air780EPS支持丰富的网络协议，比如TCP/UDP、TCP-SSL/TCP-TLS、MQTT、HTTP、WEBSOCKET、NTP等；
