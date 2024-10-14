@@ -8,7 +8,7 @@
 
 历史版本
 
-## Luat上层脚本库
+## 脚本demo
 
 [LuatOS-Air780EPS](https://gitee.com/openLuat/LuatOS-Air780EPS)
 

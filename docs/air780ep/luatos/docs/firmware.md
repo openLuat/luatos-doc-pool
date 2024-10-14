@@ -15,7 +15,7 @@
 
 [core_V1001](https://gitee.com/openLuat/LuatOS/releases/download/v1001.ec7xx.release/core_V1001.zip)
 
-## Luat上层脚本库
+## 脚本demo
 
 [LuatOS-Air780EP](https://gitee.com/openLuat/LuatOS-Air780EP)
 
