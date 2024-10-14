@@ -1,17 +1,17 @@
 # Air724UG产品手册
 
-| 模块名称 | 适用区域         | 频段                                            | 封装尺寸   |
-| -------- | ---------------- | ----------------------------------------------- | ---------- |
-| Air724UG | 中国/印度/东南亚 | TDD：B34/B38/B39/B40/B41 <br />FDD：B1/B3/B5/B8 | 42\*46\*12 |
+| 模块名称 | 适用区域         | 频段                                            | 封装尺寸     |
+| -------- | ---------------- | ----------------------------------------------- | ------------ |
+| Air724UG | 中国/印度/东南亚 | TDD：B34/B38/B39/B40/B41 <br />FDD：B1/B3/B5/B8 | 42\*46\*12mm |
 
 ## 模块硬件资料
 
-| 资料简介                                               | 相关链接                                                                                                                                                                               |
-| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 规格书                                                 | [Core_Air724UG规格书.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210916162251585_Core_Air724UG规格书.pdf)                                                           |
-| 硬件设计手册                                           | [Air724UG模块硬件设计手册](https://doc.openluat.com/article/383/0)                                                                                                                        |
+| 资料简介                                             | 相关链接                                                     |
+| ---------------------------------------------------- | ------------------------------------------------------------ |
+| 规格书                                               | [Air724UG_模块产品规格书.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20211018134348625_Air724UG_%E6%A8%A1%E5%9D%97%E4%BA%A7%E5%93%81%E8%A7%84%E6%A0%BC%E4%B9%A6-v3.0.pdf) |
+| 硬件设计手册                                         | [Air724UG模块硬件设计手册](https://doc.openluat.com/article/383/0) |
 | 原理图及PCB封装<br />（AD、PADS ASCII、PADS9.5格式） | [Air724UG模块原理图&amp;PCB封装.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20201224150449929_Air724UG_Air723UG_%E5%8E%9F%E7%90%86%E5%9B%BEPCB%E5%B0%81%E8%A3%85.zip) |
-| 参考设计原理图<br />（AD、PADS9.5、PDF）             | [Air724UG_参考设计.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210225095151349_Air724UG_Reference_Design_V1.0.zip)                                                  |
+| 参考设计原理图<br />（AD、PADS9.5、PDF）             | [Air724UG_参考设计.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210225095151349_Air724UG_Reference_Design_V1.0.zip) |
 
 ## 模块外形
 

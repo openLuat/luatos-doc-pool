@@ -13,13 +13,9 @@
 
 ### Air780ER核心信息描述
 
-正反照片
+Air780ER用于USB上网时的管脚图
 
-![](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTQ2M2JkMGQ5N2Q5YTE0NWQ2MTU0OWM4ZmY1N2UxZmFfdG1JSGxPNTJxVjVIWFp4Z2trdFdtblRPYVlnUnpuYVNfVG9rZW46UlVYeWJ3Z2p4b2Zkc1Z4aXR4QWNhQlhLbnNlXzE3MjgyOTIyMjY6MTcyODI5NTgyNl9WNA)
-
-管脚透视图
-
-![](https://e3zt58hesn.feishu.cn/space/api/box/stream/download/asynccode/?code=M2QyZWI5NDA1NjNlZTUyYTNjZmIzZjBmOGJkMjc1NTdfbVlKTmxLUUltYUFWYjdTVlNyTGhpeEJuYVFYREMyRGpfVG9rZW46V2tSdWI4Yng5b0R3RG94a1kzYWM0bnBibjBlXzE3MjgyOTIyMjY6MTcyODI5NTgyNl9WNA)
+![](./image/Air780ER_RNDIS&PPP.jpg)
 
 1. Air780ER是合宙推出的一款专门面向USB上网场景的4G Cat.1模组，支持RNDIS/PPP协议，可搭配Windows/Linux/Android使用；
 2. Air780ER封装尺寸16\*18\*2.3mm，是一款面向国内的全网通模组，支持移动、电信、联通三大运营商；
