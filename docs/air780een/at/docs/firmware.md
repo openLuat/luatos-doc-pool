@@ -8,6 +8,8 @@
 
 历史版本
 
+[AirM2M_780EEN_V2014_LTE_AT_VSIM](https://cdn.openluat-erp.openluat.com/erp_site_file/product_file/sw_file_20240919014616_AirM2M_780EEN_V2014_LTE_AT_VSIM.zip)
+
 ## AT固件版本更新说明
 
 **AirM2M_780EEN_V2015_LTE_AT_VSIM** 2024-09-30
