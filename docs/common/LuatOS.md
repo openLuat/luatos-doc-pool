@@ -5,7 +5,7 @@
    LuatOS 系统，通过 Lua 虚拟机，支持 Lua 脚本在 4G 模组的的运行。
    LuatOS 系统，还实现了一套多任务的机制，这套机制是在 sys 库实现的。
 
-## LuatOS_Air 支持的模组型号
+## LuatOS 支持的模组型号
 
     - Air780E, 780EX，780EP，780EPS，780EQ，780EG
     - Air700ECQ，700EAQ，700EMQ
