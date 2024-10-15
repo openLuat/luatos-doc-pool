@@ -143,6 +143,7 @@ nav:
         - 总结: app/driver/gpio/summary.md
         - 常见问题: app/driver/gpio/faq.md
         - 扩展: app/driver/gpio/ext.md
+      - SPI: app/driver/spi/spi.md
     - 网络驱动(Socket):
       - 简介: app/socket/index.md
       - TCP通信:
