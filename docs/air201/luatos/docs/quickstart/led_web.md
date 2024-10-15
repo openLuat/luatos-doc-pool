@@ -1,7 +1,7 @@
 # 用电脑浏览器通过Air201控制灯的亮和灭
-**1, 搭建环境**
+## 1, 搭建环境
 
-**1.1 建立远程服务**
+### 1.1 建立远程服务
 
 为了客户调试方便，我们制作了一个远程测试网页
 
@@ -11,13 +11,14 @@
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 |                                                              |                                                              |
 
-**1.2 创建项目**
+### 1.2 创建项目
 
 ![image](image/wps21.jpg) 
 
-**2, 写代码**
+## 2, 写代码
 
-**2.1 初始化Led**
+### 2.1 初始化Led
+
 ```Lua
 -- 初始化GPIO
 local blueLedPin = 1
@@ -27,7 +28,7 @@ local redLedPin = 16
 local blueLed = gpio.setup(blueLedPin, 0)
 local redLed = gpio.setup(redLedPin, 0)
 ```
-**2.2 通过字符串控制Led**
+### 2.2 通过字符串控制Led
 
 这里，我们简单通过 blue on，blue off,redLed on,redLed on, 来控制蓝灯，红灯的亮灭
 ```Lua
@@ -45,7 +46,8 @@ local function LEDSet(s)    -- Led 灯设置
 end
 ```
 
-**2.3 设置服务器接口**
+### 2.3 设置服务器接口
+
 ```Lua
 -- 测试网站 https://netlab.luatos.com/ 点击 打开TCP 获取测试端口号
 -- 要按实际情况修改
@@ -56,7 +58,8 @@ local is_tls = false        -- 加密与否, 要看服务器的实际情况
 ```
 注意： **port 需要修改**，根据建立远程服务器时候产生的Port 修改，如果连不上服务器，多关注这个参数
 
-**2.4  链接服务器**
+### 2.4  链接服务器
+
 ```Lua
 -- 演示task
 local function sockettest()
@@ -94,7 +97,7 @@ function sockettask(d1Name, txqueue, rxtopic)
 end
 sys.taskInit(sockettest)   -- 初始化sockettest task
 ```
-**2.5 增加定时上报消息到服务器**
+### 2.5 增加定时上报消息到服务器
 
 一直上报时间，增加上行互动
 ```Lua
@@ -106,27 +109,27 @@ sys.taskInit(function()
     end
 end)
 ```
-**3, 调试代码**
+## 3, 调试代码
 
-**3.1  下载**
+### 3.1  下载
 
  直接下载demo 到air201
 
-**3.2  网页显示**
+### 3.2  网页显示
 
 如果显示下图，则表示链接成功，并且一直上报数据
 
 ![image](image/wps22.jpg) 
 
-**3.3  下发指令**
+### 3.3  下发指令
 
 ![image](image/wps23.jpg) 
 
-**3.4  Air201 展示效果**
+### 3.4  Air201 展示效果
 
 ![image](image/wps24.png) 
 
-**4, 课后习题**
+## 4, 课后习题
 
 *好，留给您一个课后习题：怎么远程关闭红灯尼？*
 

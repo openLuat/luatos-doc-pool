@@ -1,27 +1,27 @@
 # 使用Air201的定位功能
-**1, 搭建环境**
+## 1, 搭建环境
 
 和上面的教程步骤一样，可以在Luatools项目管理中新建一个项目，重新选择底层CORE和脚本
 
 或者在原有项目的基础上，不更换CORE，将原来的脚本删除，添加为demo/gps_lbs_wifi的脚本。
+源码demo：[合宙Luat/LuatOS-Air201/gps_lbs_wifi](https://gitee.com/openLuat/LuatOS-Air201/tree/master/demo/gps_lbs_wifi)
 
 ![image](image/wps25.jpg) 
 
-**2, 定位介绍**
+## 2, 定位介绍
 
 Air201支持三种定位，分别是LBS定位，WIFI定位，GPS定位
 
-源码demo：[合宙Luat/LuatOS-Air201/gps_lbs_wifi](https://gitee.com/openLuat/LuatOS-Air201/tree/master/demo/gps_lbs_wifi)
 
-**3, GPS定位**
+## 3, GPS定位
 
- **3.1 搭建环境**
+###  3.1 搭建环境
 
 使用Air201开发板和一个开通有流量的sim卡。
 
 注意：室内没有信号，无法成功定位！！！
 
- **3.2 写代码**
+###  3.2 写代码
 
 （1） 打开gps的供电和复位引脚
 ```Lua
@@ -185,19 +185,15 @@ function gnss.agps()
 end
 ```
 
-
-
-
-
- **3.3 展示效果**
+###  3.3 展示效果
 
 定位成功后，获取位置字符串。
 
 ![image](image/wps26.png) 
 
-**4, LBS+wifi定位**
+## 4, LBS+wifi定位
 
- **4.1 初始化**
+###  4.1 初始化
 
 等待联网，初始化wlan，查询基站信息，等待基站数据更新，扫码wifi频段
 
@@ -216,7 +212,7 @@ sys.taskInit(function()
     end
 end)
 ```
- **4.2 wifi定位**
+###  4.2 wifi定位
 
  ```Lua 
 -- 注意, 免费版的基站+wifi混合定位,大部分情况下只会返回基站定位的结果
@@ -242,8 +238,9 @@ sys.subscribe("WLAN_SCAN_DONE", function ()
         lbsLoc.request(getLocCb) 
     end
 end)
-```
- **4.3 基站定位**
+ ```
+###  4.3 基站定位
+
  ```Lua 
 -- 功能:获取基站对应的经纬度后的回调函数
 -- 参数:-- result：number类型，0表示成功，1表示网络环境尚未就绪，2表示连接服务器失败，3表示发送数据失败，4表示接收服务器应答超时，5表示服务器返回查询失败；为0时，后面的5个参数才有意义
@@ -268,8 +265,8 @@ local function getLocCb(result, lat, lng, addr, time, locType)
     -- 广播给其他需要定位数据的task
     -- sys.publish("lbsloc_result", result, lat, lng)
 end
-```
- **4.4 展示效果**
+ ```
+###  4.4 展示效果
 
 因为使用的免费版，所以只返回的基站定位结果，
 
@@ -277,7 +274,7 @@ end
 
 ![image](image/wps27.png) 
 
-**5, 课后习题**
+## 5, 课后习题
 
 好，给您留一个课后习题：怎么将定位的数据，通过TCP上传到服务器呢？
 
