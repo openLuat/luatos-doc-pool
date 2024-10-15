@@ -22,6 +22,6 @@
 
 ## 模块固件版本
 
-[AT固件版本](https://docs.openluat.com/air780emq/at/firmware/)
+[AT固件版本](https://docs.openluat.com/air700emq/at/firmware/)
 
-[LuatOS固件版本](https://docs.openluat.com/air780emq/luatos/firmware/)
+[LuatOS固件版本](https://docs.openluat.com/air700emq/luatos/firmware/)
