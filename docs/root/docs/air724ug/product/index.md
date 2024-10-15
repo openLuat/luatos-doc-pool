@@ -65,3 +65,9 @@
 | 核心板使用说明             | [Core_Air724UG核心板使用说明V1.0.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210807140238026_Core_Air724UG核心板使用说明V1.0.pdf)                                                              |
 
 ![image.png](https://cdn.openluat-luatcommunity.openluat.com/images/20220617163652220_image.png)
+
+## 模块固件版本
+
+[AT固件版本](https://docs.openluat.com/air724ug/at/firmware/)
+
+[LuatOS固件版本](https://docs.openluat.com/air724ug/luatos/firmware/)
