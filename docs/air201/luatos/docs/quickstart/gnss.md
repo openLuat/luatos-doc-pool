@@ -4,6 +4,7 @@
 和上面的教程步骤一样，可以在Luatools项目管理中新建一个项目，重新选择底层CORE和脚本
 
 或者在原有项目的基础上，不更换CORE，将原来的脚本删除，添加为demo/gps_lbs_wifi的脚本。
+源码demo：[合宙Luat/LuatOS-Air201/gps_lbs_wifi](https://gitee.com/openLuat/LuatOS-Air201/tree/master/demo/gps_lbs_wifi)
 
 ![image](image/wps25.jpg) 
 
@@ -11,7 +12,6 @@
 
 Air201支持三种定位，分别是LBS定位，WIFI定位，GPS定位
 
-源码demo：[合宙Luat/LuatOS-Air201/gps_lbs_wifi](https://gitee.com/openLuat/LuatOS-Air201/tree/master/demo/gps_lbs_wifi)
 
 **3, GPS定位**
 
