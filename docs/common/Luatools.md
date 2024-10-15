@@ -161,7 +161,22 @@
       对 Air724 模组：  使用 xxx.pac
 
       ![固件合并工具](image/luatools_v3_firmcombo.png)
+
+      主要用途：
+
+      需要往固件里预置数据时要用，csdk和luatos都会用到
+
+      放文件，放kv
+
+      预置文件在PC上合成文件系统镜像，合入固件，烧录到模块，模块首次上就能从文件系统里读出需要的文件
+
+      kv同样的道理，只是要放在另一个区域
+
+      https://gitee.com/openLuat/luatos-soc-2024/tree/master/project/example_flash
        
+      命令里面的288，是指288k字节吗？
+
+
 
 ### 3，AT指令
 #### 3.1 固件烧录
