@@ -33,6 +33,12 @@
 | ------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
 | ![undefined](https://cdn.openluat-luatcommunity.openluat.com/images/20230509102332246_Air780E面图.PNG "undefined") | ![undefined](https://cdn.openluat-luatcommunity.openluat.com/images/20230509102406420_Air780E背面图.PNG "undefined") |
 
+## 模块固件版本
+
+[AT固件版本](https://docs.openluat.com/air780e/at/firmware/)
+
+[LuatOS固件版本](https://docs.openluat.com/air780e/luatos/firmware/)
+
 ## 认证证书
 
 ### CCC 证书

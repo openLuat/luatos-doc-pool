@@ -19,3 +19,9 @@
 | 正面                        | 反面                          |
 | --------------------------- | ----------------------------- |
 | ![](./image/700EMQ正面.png) | ![](./image/700E系列反面.png) |
+
+## 模块固件版本
+
+[AT固件版本](https://docs.openluat.com/air700emq/at/firmware/)
+
+[LuatOS固件版本](https://docs.openluat.com/air700emq/luatos/firmware/)

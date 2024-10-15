@@ -22,4 +22,8 @@
 | ---------------------- | ----------------------------- |
 | ![](./image/780EG.png) | ![](./image/780E系列反面.png) |
 
-## 
+## 模块固件版本
+
+[AT固件版本](https://docs.openluat.com/air780eg/at/firmware/)
+
+[LuatOS固件版本](https://docs.openluat.com/air780eg/luatos/firmware/)
