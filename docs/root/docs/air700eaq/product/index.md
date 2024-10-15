@@ -19,3 +19,9 @@
 | 正面                        | 反面                          |
 | --------------------------- | ----------------------------- |
 | ![](./image/700EAQ正面.png) | ![](./image/700E系列反面.png) |
+
+## 模块固件版本
+
+[AT固件版本](https://docs.openluat.com/air780eaq/at/firmware/)
+
+[LuatOS固件版本](https://docs.openluat.com/air780eaq/luatos/firmware/)
