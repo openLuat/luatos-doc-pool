@@ -151,6 +151,7 @@ nav:
       - HTTP通信: app/socket/http/index.md
       - MQTT通信: app/socket/mqtt/index.md
       - WebSocket通信: app/socket/websocket/index.md
+      - FTP通信: app/socket/ftp/index.md
     #   - TCP通信:
     #     - 简介: app/socket/tcp/index.md
     #     - 硬件准备: app/socket/tcp/01.md
