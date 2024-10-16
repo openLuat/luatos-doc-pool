@@ -33,6 +33,56 @@ def build_blog():
     with open("blog/docs/index.md", "w", encoding="utf-8") as f:
         f.write(tmpl)
 
+
+def do_api_doc(path):
+    jpath = os.path.join(path, "api.json")
+    if not os.path.exists(jpath) :
+        return
+    with open(jpath, "r", encoding="utf-8") as f:
+        jdata = json.load(f)
+    wiki_root = os.path.join("..", "..", "luatos-wiki")
+    if not os.path.exists(os.path.join(path, "docs", "api", "core")):
+        os.makedirs(os.path.join(path, "docs", "api", "core"))
+    if not os.path.exists(os.path.join(path, "docs", "api", "ext")):
+        os.makedirs(os.path.join(path, "docs", "api", "ext"))
+    ifile = open(os.path.join(path, "docs", "api", "index.md"), "w", encoding="utf-8")
+    ifile.write("# LuatOS API索引\n\n")
+    def copy_md(tp):
+        tlist = []
+        jdata[tp].sort()
+        for k in jdata[tp]:
+            if tp == "core" :
+                tpath = os.path.join(wiki_root, "api", k + ".md")
+                dpath = os.path.join(path, "docs", "api", "core", k + ".md")
+            else:
+                tpath = os.path.join(wiki_root, "api", "libs", k + ".md")
+                dpath = os.path.join(path, "docs", "api", "ext", k + ".md")
+            if not os.path.exists(tpath) :
+                print("API文档不存在!!!", tpath)
+                continue
+            with open(tpath, encoding="utf-8") as f :
+                line = f.readline().strip()[1:].strip()
+                tlist.append([k, line])
+
+            shutil.copy(tpath, dpath)
+            # TODO 清理wiki中不支持的语法
+
+        # 写入index.md
+        with open(os.path.join(path, "docs", "api", tp, "index.md"), "w", encoding="utf-8") as f:
+            if tp == "core" :
+                f.write("# LuatOS 核心库API索引\n\n")
+                ifile.write("## 核心库API索引\n\n")
+            else:
+                f.write("# LuatOS 扩展库API索引\n\n")
+                ifile.write("\n## 扩展库API索引\n\n")
+            for k in tlist:
+                f.write("* [%s](%s)\n" % (k[1], k[0] + ".md"))
+                ifile.write("* [%s](%s/%s)\n" % (k[1], tp, k[0] + ".md"))
+
+    copy_md("core")
+    copy_md("ext")
+    ifile.close()
+
 def do_build(path, copy_product=False):
     # 读取mkdocs文件
     if not os.path.exists(path) :
@@ -56,6 +106,10 @@ def do_build(path, copy_product=False):
     #     if os.path.exists(root + "/docs/product/") :
     #         shutil.rmtree(root + "/docs/product/")
     #     shutil.copytree(copy_product, root + "/docs/product/", dirs_exist_ok=True)
+
+    # 拷贝luatos的API文档
+    if "luatos" in path:
+        do_api_doc(path)
 
     gitroot = os.path.abspath("../../")
     cmd = "docker run --rm -v {}:/opt/docs/ -w /opt/docs/luatos-doc-pool/docs/{} registry.cn-beijing.aliyuncs.com/wendal/mkdocs-material build"
@@ -82,6 +136,7 @@ def do_build(path, copy_product=False):
 
 def git_hook():
     subprocess.check_call(["git", "pull"])
+    subprocess.check_call(["git", "pull"], cwd=os.path.join("..", "..", "luatos-wiki"))
     # 构建简易博客
     build_blog()
     do_build("blog")
