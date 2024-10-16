@@ -429,6 +429,10 @@ nav:
       - 温湿度传感器参考电路: hardware/design/sensor.md
       - 远程空开参考电路: hardware/design/remote.md
   - 固件版本: firmware.md
+  - API文档:
+    - 索引页: api/index.md
+    - 核心库: api/core/index.md
+    - 扩展库: api/ext/index.md
   - 常见问题: faq.md
   - DTU: https://docs.openluat.com/dtu/
   - 增值服务: https://docs.openluat.com/web/

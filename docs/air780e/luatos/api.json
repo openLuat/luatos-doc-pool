@@ -1,0 +1,4 @@
+{
+    "core": ["gpio", "i2c", "spi", "zbuff", "json", "pack", "pwm", "uart"],
+    "ext" : ["libfota", "lbsLoc"]
+}
