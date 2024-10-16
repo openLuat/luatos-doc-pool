@@ -24,4 +24,4 @@
 
 [AT固件版本](https://docs.openluat.com/air700emq/at/firmware/)
 
-[LuatOS固件版本](https://docs.openluat.com/air700emq/luatos/firmware/)
+[LuatOS二次开发sdk和demo](https://docs.openluat.com/air700emq/luatos/firmware/)

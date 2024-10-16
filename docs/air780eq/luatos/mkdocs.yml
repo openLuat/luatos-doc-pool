@@ -14,7 +14,7 @@ nav:
   - 硬件demo:
     - 典型硬件设计指南:
       - 简介: hardware/design/index.md
-  - 固件版本: firmware.md
+  - sdk&demo: firmware.md
   - 常见问题: faq.md
   - DTU: https://docs.openluat.com/dtu/
   - 增值服务: https://docs.openluat.com/web/

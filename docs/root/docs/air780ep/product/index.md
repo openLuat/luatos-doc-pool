@@ -24,7 +24,7 @@
 
 [AT固件版本](https://docs.openluat.com/air780ep/at/firmware/)
 
-[LuatOS固件版本](https://docs.openluat.com/air780ep/luatos/firmware/)
+[LuatOS二次开发sdk和demo](https://docs.openluat.com/air780ep/luatos/firmware/)
 
 ## 相关证书
 ### CCC 证书

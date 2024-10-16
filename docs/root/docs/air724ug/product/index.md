@@ -70,4 +70,4 @@
 
 [AT固件版本](https://docs.openluat.com/air724ug/at/firmware/)
 
-[LuatOS固件版本](https://docs.openluat.com/air724ug/luatos/firmware/)
+[LuatOS二次开发sdk和demo](https://docs.openluat.com/air724ug/luatos/firmware/)
