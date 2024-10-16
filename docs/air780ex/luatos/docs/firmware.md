@@ -17,7 +17,7 @@
 
 [core_V1108](https://gitee.com/openLuat/LuatOS/releases/download/v1108.ec618.release/core_V1108.zip)
 
-## 脚本demo
+## 二次开发demo
 
 [LuatOS-Air780EX](https://gitee.com/openLuat/LuatOS-Air780EX)
 
