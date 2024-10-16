@@ -19,3 +19,6 @@
 [IOT_CLOUD系列文档之华为云物联网云平台](./20240926_any_luatos_iotcloud_huawei.md)
 
 [IOT_CLOUD系列文档之涂鸦云物联网云平台](./20241009_any_luatos_iotcloud_tuya.md)
+
+[IOT_CLOUD系列文档之百度云物联网云平台](./20241016_any_luatos_iotcloud_baidu.md)
+
