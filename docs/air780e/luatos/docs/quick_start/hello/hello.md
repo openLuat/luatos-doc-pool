@@ -88,7 +88,7 @@ https://gitee.com/openLuat
 
 ![1a](./image/git1zhijiexiazai1.PNG)
 
-![1b](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/git1zhijiexiazai2.PNG)
+![1b](./image/git1zhijiexiazai2.PNG)
 
 ### 2、使用git工具下载
 
@@ -149,7 +149,7 @@ cat ~/.ssh/id_rsa.pub #查看公钥
 
 ![2a](./image/git2tu09.png)
 
-![2a](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/git2tu10.png)
+![2a](./image/git2tu10.png)
 
 5、将公钥添加到gitee仓库
 
@@ -252,7 +252,7 @@ Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools
 
 ​     判断是否进入BOOT模式：模块上电，此时在电脑的设备管理器中，查看串口设备， 会出现一个端口表示进入了boot下载模式，如下图所示：
 
-![识别boot端口11](./image/image/boot11.png)
+![识别boot端口11](./image/boot11.png)
 
 ​    当设备管理器出现了3个连续数字的com端口，并且每个数字都大于4，这时候， 硬件连接上就绪状态，恭喜你，可以进行烧录了！
 
