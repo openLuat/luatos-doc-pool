@@ -158,17 +158,19 @@ sys.run()
 
   烧录代码， 需要进行如下几步：
 
-### 4.1 下载和安装合宙调试工具 LuatTools（需要升级到最新版本）
+### 4.1 下载和安装合宙调试工具 
 
-   要想烧录代码， 先要下载合宙的强大的调试工具： Luatools。
+  LuatTools（需要升级到最新版本）
 
-   如果你已经安装使用过 Luatools， 可以直接跳到下个小节： 烧录代码。
+  要想烧录代码， 先要下载合宙的强大的调试工具： Luatools。
 
-   Luatools 的最新版本的工具介绍和下载地址为：
+  如果你已经安装使用过 Luatools， 可以直接跳到下个小节： 烧录代码。
 
-https://doc.openluat.com/wiki/52?wiki_page_id=5071
+  Luatools 的最新版本的工具介绍和下载地址为：
 
-或者可以直接下载下面的工具
+  https://doc.openluat.com/wiki/52?wiki_page_id=5071
+
+  或者可以直接下载下面的工具
 
 **[Luatools_v2.exe]**
 

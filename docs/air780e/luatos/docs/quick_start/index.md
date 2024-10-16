@@ -2,7 +2,7 @@
 
 本章将带你快速入门Air780E，并开始你的第一个项目。
 
-- [HelloWorld教程](./hello/index.md)
+- [HelloWorld教程](./hello/hello.md)
 - [本地脚本控制灯的亮和灭](./led/index.md)
 - [电脑浏览器通过Air780E控制灯的亮和灭](./netled/index.md)
 - [采集温湿度数据并上传到网页查看](./nettemp/index.md)
