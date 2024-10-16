@@ -8,19 +8,19 @@ meta:
 nav:
   - 快速入门:
     - 介绍: quick_start/index.md
-    - HelloWorld教程: quick_start/hello/hello.md
-    - 本地脚本控制灯的亮和灭: quick_start/led/led.md
+    - HelloWorld教程: quick_start/hello/index.md
+    - 本地脚本控制灯的亮和灭: quick_start/led/index.md
     #  - 编写脚本: quick_start/led/01.md
     #  - 烧录代码到硬件: quick_start/led/02.md
     #  - 验证功能: quick_start/led/03.md
     #  - 总结: quick_start/led/summary.md
     #  - 扩展: quick_start/led/ext.md
-    - 电脑浏览器通过Air780E控制灯的亮和灭:
-      - 介绍: quick_start/netled/index.md
-      - 编写脚本: quick_start/netled/01.md
-      - 烧录代码到硬件: quick_start/netled/02.md
-      - 验证功能: quick_start/netled/03.md
-      - 总结: quick_start/netled/summary.md
+    - 电脑浏览器通过Air780E控制灯的亮和灭: quick_start/netled/index.md
+    #  - 介绍: quick_start/netled/index.md
+    #  - 编写脚本: quick_start/netled/01.md
+    #  - 烧录代码到硬件: quick_start/netled/02.md
+    #  - 验证功能: quick_start/netled/03.md
+    #  - 总结: quick_start/netled/summary.md
     - 采集温湿度数据并上传到网页查看:
       - 介绍: quick_start/nettemp/index.md
       - 硬件准备: quick_start/nettemp/01.md
