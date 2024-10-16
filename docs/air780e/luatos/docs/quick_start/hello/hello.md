@@ -64,7 +64,7 @@ https://gitee.com/openLuat
 
 [780E开发板软硬件资料](https://doc.openluat.com/wiki/21?wiki_page_id=6036)
 
-![780E开发板普版](D:\project\doc-pool\luatos-doc-pool\docs\air780e\luatos\docs\quick_start\hello\image\780Eboard.png)
+![780E开发板普版](./image/780Eboard.png)
 
 如果您使用的是780E核心板:
 
@@ -86,7 +86,7 @@ https://gitee.com/openLuat
 
 直接进入仓库，点击下载仓库文件
 
-![1a](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/git1zhijiexiazai1.PNG)
+![1a](./image/git1zhijiexiazai1.PNG)
 
 ![1b](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/git1zhijiexiazai2.PNG)
 
@@ -96,22 +96,22 @@ git工具下载地址：[Git - Downloading Package](https://git-scm.com/download
 
 1、进入下载地址后，下载对应的工具
 
-![2a](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/git2tu01.jpg)
+![2a](./image/git2tu01.jpg)
 
 2、双击安装工具
 
-![2a](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/git2tu02.jpg)
+![2a](./image/git2tu02.jpg)
 
 3、双击后，直接下一步安装即可
 中途都是一些配置选项，一般使用默认选项即可。
 
-![2a](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/git2tu03.jpg)
+![2a](./image/git2tu03.jpg)
 
 git下载好之后。。。
 
 1、新建一个文件夹，右键打开操作面板
 
-![2a](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/git2tu04.jpg)
+![2a](./image/git2tu04.jpg)
 
 2、设置用户签名：
 
@@ -122,7 +122,7 @@ git下载好之后。。。
   git config --global user.email "邮箱"(不需要真实存在，看情况随便写)
 ```
 
-![2a](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/git2tu05.png)
+![2a](./image/git2tu05.png)
 
 3、初始化本地库，输入以下命令
 
@@ -130,11 +130,11 @@ git下载好之后。。。
   git init
 ```
 
-![2a](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/git2tu06.png)
+![2a](./image/git2tu06.png)
 
 输入这个命令后，可以在当前目录下看到一个.git文件。只有.git文件是用git init命令生成的。其他的没关系。有了.git文件后，当前文件夹就是一个git仓库了，可以与远程的仓库进行连接。
 
-![2a](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/git2tu07.png)
+![2a](./image/git2tu07.png)
 
 4、从远程仓库下载一个公钥，为了让远程仓库验证自己的身份。输入以下命令
 
@@ -143,11 +143,11 @@ ssh-keygen -t rsa #产生公钥
 cat ~/.ssh/id_rsa.pub #查看公钥
 ```
 
-![2a](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/git2tu08.png)
+![2a](./image/git2tu08.png)
 
 生成的公钥可以在C:/User/用户/.ssh下看到
 
-![2a](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/git2tu09.png)
+![2a](./image/git2tu09.png)
 
 ![2a](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/git2tu10.png)
 
@@ -157,15 +157,15 @@ gitee:[Gitee - 基于 Git 的代码托管和研发协作平台](https://gitee.co
 
 在gitee找到账号设置，然后找到SSH公钥，再添加公钥。
 
-![2a](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/git2tu11.png)
+![2a](./image/git2tu11.png)
 
 6、克隆仓库到本地，输入以下命令
 
-![2a](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/git2tu12.png)
+![2a](./image/git2tu12.png)
 
-![2a](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/git2tu13.png)
+![2a](./image/git2tu13.png)
 
-![2a](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/git2tu14.png)
+![2a](./image/git2tu14.png)
 
 此时在资源管理器中可以看到git下来的仓库文件
 
@@ -183,7 +183,7 @@ gitee:[Gitee - 基于 Git 的代码托管和研发协作平台](https://gitee.co
 
 你把这段代码稍作修改后，改为这样：
 
-![hello程序截图](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/hellocode.png)
+![hello程序截图](./image/hellocode.png)
 
 然后保存，代码修改工作就大功告成了！
 
@@ -218,7 +218,7 @@ Luatools 工具主要有如下几个功能：
 
 Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools_v2.exe 运行，出现如下界面，就代表 Luatools 安装成功了：
 
-![luatools下载成功](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/luatoolsdown.jpg)
+![luatools下载成功](./image/luatoolsdown.jpg)
 
 ### 2 烧录代码
 
@@ -230,7 +230,7 @@ Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools
 
  或者去官网下载。底层core下载地址：[LuatOS底层core](https://gitee.com/openLuat/LuatOS/releases)
 
-![luatOS的core](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/luatOScore.png)
+![luatOS的core](./image/luatOScore.png)
 
 #### （2）正确连接电脑和4G模组电路板
 
@@ -246,13 +246,13 @@ Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools
 
 2、当我们模块开机时，按着BOOT键然后点按重启键即可。
 
-![板子开机11](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/powkey11.png)
+![板子开机11](./image/powkey11.png)
 
 #### （4）识别电脑的正确端口
 
 ​     判断是否进入BOOT模式：模块上电，此时在电脑的设备管理器中，查看串口设备， 会出现一个端口表示进入了boot下载模式，如下图所示：
 
-![识别boot端口11](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/boot11.png)
+![识别boot端口11](./image/image/boot11.png)
 
 ​    当设备管理器出现了3个连续数字的com端口，并且每个数字都大于4，这时候， 硬件连接上就绪状态，恭喜你，可以进行烧录了！
 
@@ -262,29 +262,29 @@ Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools
 
 ​    在 Luatools 的左上角上有版本显示的，如图所示：
 
-![luatools版本111](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/luatoolsversion111.png)
+![luatools版本111](./image/luatoolsversion111.png)
 
 Luatools 版本没问题的话， 就点击 LuaTOols 右上角的“项目管理测试”按钮，如下图所示：
 
-![luatools下载1](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/luatoolsdown1.png)
+![luatools下载1](./image/luatoolsdown1.png)
 
  这时会弹出项目管理和烧录管理的对话框，如下图：
 
  1、新建一个项目
 
-![luatools下载2](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/luatoolsdown2.png)
+![luatools下载2](./image/luatoolsdown2.png)
 
 #### （6） 开始烧录
 
 选择780E板子对应的底层core和刚改的main.lua脚本文件。下载到板子中。
 
-![luatools下载3](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/luatoolsdown3.png)
+![luatools下载3](./image/luatoolsdown3.png)
 
-![luatools下载4](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/luatoolsdown4.png)
+![luatools下载4](./image/luatoolsdown4.png)
 
 点击下载后，我们需要进入boot模式才能正常下载，在(3)(4)小节已经介绍了如何进入boot模式。
 
-![luatools下载5](D:/project/doc-pool/luatos-doc-pool/docs/air780e/luatos/docs/quick_start/hello/image/luatoolsdown5.png)
+![luatools下载5](./image/luatoolsdown5.png)
 
 ### 3 烧录问题排查
 
