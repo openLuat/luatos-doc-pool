@@ -36,7 +36,7 @@ nav:
       - GNSS天线调试: hardware/design/gnss_ant.md
       - 设计音频注意事项: hardware/design/audio.md
       - 调试音频方法: hardware/design/audio_debug.md
-  - sdk&demo: firmware.md
+  - SDK&Demo: firmware.md
   - 常见问题: faq.md
   - DTU: https://docs.openluat.com/dtu/
   - 增值服务: https://docs.openluat.com/web/

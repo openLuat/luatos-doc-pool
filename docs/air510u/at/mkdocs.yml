@@ -12,16 +12,16 @@ nav:
   - 快速入门:
     - 介绍: quick_start/index.md
     - 控制入门: quick_start/intro.md
-  - 软件demo:
-    - 介绍: app/index.md
-    - AT指令手册: app/at_command.md
-    - 应用实例:
-      - 切换定位系统: app/command/switch_sys.md
-  - 硬件demo:
+  - 硬件指南:
     - 典型硬件设计指南:
       - 简介: hardware/design/index.md
       - 常见供电电路: hardware/design/power.md
       - Reset电路: hardware/design/reset.md
+  - 软件指南:
+    - 介绍: app/index.md
+    - AT指令手册: app/at_command.md
+    - 应用实例:
+      - 切换定位系统: app/command/switch_sys.md
   - 常见问题: faq.md
   - DTU: https://docs.openluat.com/dtu/
   - 增值服务: https://docs.openluat.com/web/
