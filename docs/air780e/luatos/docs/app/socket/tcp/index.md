@@ -31,7 +31,7 @@ TCP（Transmission Control Protocol，传输控制协议）是一种面向连接
 
 第一种开发板是 Air780E 核心板，如下图所示：
 
-![](image/UooUb2HB2oxvCDxlq1Ec1qZZnqb.png)
+![](image/F21IbaEmIoa6HCx9FsycNc82nfc.png)
 
 点击链接购买：[Air780E 核心板淘宝购买链接](https://item.taobao.com/item.htm?id=693774140934&pisk=f1eiwOqL25l1_HYiV6D1ize3wN5d5FMjRrpxkx3VT2uIHCCskWm4kysffAEqor4KRRIskGT0ooqi_coq7DWE000qbVr2mmzKQjNtkV3mnoalvaBRelZshA7RyTFdpD4xQco2_VS2Tcnvc89h5lZshq-pu_FUfEDVVdOmgrkET0ir3mkq_MDEmmM2QjJaY2uI0UGAoNueWRjiw4YTC-_opNr-zluaXleFpfR_X2fhTJVn94W--KJ4KcqQreCDEs3zNVh-DyWpIxqEmyc8savgoor7gX2D7GUzmW4jBJS2_4PTWjestFRZqA0iaRlwjdkIgW2nBR7XNkEn7bDL96_tMA4gN4GNOwa0xVU4IX8G4iReapZyhDSYLIOj_DinyhbSB2IHjbEhxMA51foIXaIhxItMPKJlyMjHNEGZAcQR.&spm=a1z10.5-c-s.w4002-24045920841.33.639f1fd1YrS4b6&skuId=5098266470883) ；
 
@@ -53,13 +53,13 @@ TCP（Transmission Control Protocol，传输控制协议）是一种面向连接
 
 - USB 数据线（其一端为 Type-C 接口，用于连接 Air780E 开发板）。通常，这种数据线的外观如下示意图所示：
 
-![](image/JnLnbL4Jro80lMxd0NQcSPbNnUe.png)
+![](image/M0v1bBkeCo8rxrxcNWQcgoGfnac.png)
 
 普通的手机 USB 数据线一般都可以直接使用；
 
 - 数据线是 USB 转 TTL 串口线。通常，这种数据线的外观如下示意图所示：
 
-![](image/KdZfb1mjxoajM4xjojic3FSYnub.png)
+![](image/GswnbC3ImouZp9xE4HFcxc8mnOd.png)
 
 在本教程中，我们将采用以下数据线配置进行测试和数据查看：
 
@@ -75,12 +75,12 @@ TCP（Transmission Control Protocol，传输控制协议）是一种面向连接
 - 将 SIM 卡的金属接触面朝下，对准卡槽的开口。
 - 用力平稳地将 SIM 卡推入卡槽，直至听到“咔嚓”一声，表示 SIM 卡已正确安装到位。
 
-![](image/BktRbUIwkoo9xRx1ZDlcvJbOn6b.png)
-![](image/OyhLbT8zIowJMgxCryYcRHC4nyf.png)
+![](image/JyRLb0atboBnxGxrXFFciIwCn4b.png)
+![](image/JpRxbtABRonIzGxKDtMc29z3nXf.png)
 
 #### 2.5.2 USB 数据线，连接电脑和 Air780E 开发板，如下图所示：
 
-![](image/SsGPb5rnBopkzwxxt4dcy2qNnQb.png)
+![](image/Szcpbs0zKogo5hx6sNOcPTBZnJb.png)
 
 ## 三、准备软件环境
 
@@ -101,36 +101,37 @@ Luatools 工具集具备以下几大核心功能：
 
 Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools_v3.exe 运行，出现如下界面，就代表 Luatools 安装成功了：
 
-![](image/AdbebbCvRowcNixJ1l8cTEU9nub.png)
+![](image/DF7CbXc71oF7r6xryijc8fPynEe.png)
 
 ### 3.2 烧录代码
 
 首先要说明一点： 脚本代码， 要和固件的 LuatOS-SoC_V1112_EC618_FULL.soc 文件一起烧录。
 
-整体压缩文件：内含有 文件一：**Core 固件** 和 文件二：**TCP-UART 脚本文件** 文件三：**TCP 单向认证脚本文件**
+**整体压缩文件：内含有 文件一：Core 固件 和 文件一：TCP-UART 脚本文件 文件二：TCP 单向认证脚本文件**
 
-文件四：**TCP 断链续连 ，如下图所示。**
+**文件三：TCP 断链续连 ，如下图所示。**
 
-![](image/RYHmbt6xtoWWB6xbfTAccGUpn0g.png)
+![](image/XmS9b7RbHogdmRxgONoc57qXn5d.png)
 
 #### 3.2.1 **压缩文件：完整文件包**
 
+[右键点我,另存为,下载完整压缩文件包](https://docs.openluat.com/file/Test_Code_TCP.zip){:target="_blank"}
 
 #### 3.2.2 压缩包内部文件
 
-**文件一：****Core 固件**
+**文件一：Core 固件**
 
-**文件二：****TCP-UART 脚本文件**
+**文件二：TCP-UART 脚本文件**
 
-**文件三：****TCP 单向认证 脚本文件**
+**文件三：TCP 单向认证 脚本文件**
 
-**文件四：****TCP 断链续连 脚本文件**
+**文件四：TCP 断链续连 脚本文件**
 
 #### 3.2.3 **找到烧录的固件文件**
 
-官网下载,底层 core 下载地址：[LuatOS 底层 core](https://gitee.com/openLuat/LuatOS/releases)     **注：**下滑找到 EC618V1112 -----**要支持 Air780E**
+官网下载,底层 core 下载地址：[LuatOS 底层 core](https://docs.openluat.com/air780e/luatos/firmware/)     **注：**本 demo 使用如图所示固件
 
-![](image/YyVrbs3gFo3HJmxPGGRcGJElnD6.png)
+![](image/Uk12bWPxboYiH9xPTKkcrUqAnab.png)
 
 #### 3.2.4 **正确连接电脑和 4G 模组电路板**
 
@@ -146,13 +147,13 @@ Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools
 
 2、当我们模块开机时，按着 BOOT 键然后点按重启键即可。
 
-![](image/Ek3DbIVMOoS7QhxNvPXcuFBXn5d.png)
+![](image/FxtSb4YUzoSeymxmjPick4lrnpq.png)
 
 #### 3.2.6 **识别电脑的正确端口**
 
 判断是否进入 BOOT 模式：模块上电，此时在电脑的设备管理器中，查看串口设备， 会出现一个端口表示进入了 boot 下载模式，如下图所示：
 
-![](image/XI8KbHRGhoBoZbxJAoTchjDTnc4.png)
+![](image/J8GCbSKuHoscK2xmmEScJHalnUg.png)
 
 当设备管理器出现了 3 个连续数字的 com 端口，并且每个数字都大于 4，这时候， 硬件连接上就绪状态，恭喜你，可以进行烧录了！
 
@@ -162,27 +163,27 @@ Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools
 
 在 Luatools 的左上角上有版本显示的，如图所示：
 
-![](image/K33Sb0DO4oWFnsxuvu6cl2iAnsg.png)
+![](image/PaSQbp2lRokTo9x2nOzcsWjEniX.png)
 
 Luatools 版本没问题的话， 就点击 Luatools 右上角的“项目管理测试”按钮，如下图所示：
 
-![](image/HxMMbzSxDoRf70xSyrScv5yFnlh.png)
+![](image/BlVYbpC2ooWEHixGNCycGhTPnyh.png)
 
 这时会弹出项目管理和烧录管理的对话框，如下图：
 
-![](image/BEpBb6VvCo1aCmx6Vt4chy1rnZe.png)
+![](image/RlfXbTHxQonMmTxvcSic20DInWc.png)
 
 #### 3.2.8 **开始烧录**
 
 选择 780E 板子对应的底层 core 和刚改的 main.lua 脚本文件。下载到板子中。
 
-![](image/Q68Fbszmfo0jNDxHrzLc1zaPnYg.png)
+![](image/QaMHb2UhwoP7rdx74daceIjjnqd.png)
 
-![](image/WWqcb0FxIo7oTlxPAh0cAZvVnEg.png)
+![](image/VjcQbDmwoonOJVxLuHkcdYQ5nvd.png)
 
 点击下载后，我们需要进入 boot 模式才能正常下载。
 
-![](image/XfwYb1OvYof8z7xiS6pcB7fSnIb.png)
+![](image/ANuob0I4Yolg6sxXQ4GcR1LGnNd.png)
 
 ### 3.3 合宙 TCP/UDP web 测试工具
 
@@ -190,9 +191,9 @@ Luatools 版本没问题的话， 就点击 Luatools 右上角的“项目管理
 
 详细使用说明参考：[合宙 TCP/UDP web 测试工具使用说明](https://docs.openluat.com/TCPUDP_Test/) 。
 
-![](image/G1CVbfeqmoLMxFx4Dw5cgGflnoe.png)
+![](image/LKGubUePKoJZQKxk3AecOGO0nFf.png)
 
-![](image/LR3PbU4DGoyV5jxk66WclV15n7e.png)
+![](image/C1N7b5nsHoiMGrx1xDtcdEIenPg.png)
 
 ### 3.4 PC 端串口工具
 
@@ -206,7 +207,7 @@ LLCOM 的下载链接：[LLCOM](https://llcom.papapoi.com/index.html) ，详细�
 
 **DBG_UART：**用于输出调试信息
 
-![](image/ZiA5b3Po1oSj4mxHG97crT6Oncb.png)
+![](image/LxLnbqc3hoeROOxtTo9cXXYyned.png)
 
 **注意：**
 
@@ -216,30 +217,35 @@ LLCOM 的下载链接：[LLCOM](https://llcom.papapoi.com/index.html) ，详细�
 
 #### 3.4.1 LLC**OM 工具设置：初始配置**
 
-![](image/CEfWbIN9QoJeXMxUMZmcKUpGngh.png)
+![](image/LXsvbSVqQowpFZxvqM2crOp7nDb.png)
 
 #### 3.4.2 **数据发送前的配置**
 
-![](image/OkiHbcX8Oo3cQPx0ZSyccNoWnA5.png)
+![](image/JxX9bGsCZowf6xxWfTocvArbnuh.png)
 
 ## 四、TCP-UART 透传实现的概述
 
 本小节教你怎么使用 luatos 脚本语言，就可以让合宙 4G 模组连接上一个 TCP 服务器，并且模组和服务器之间实现数据的双向传输！
 
-### 本教程实现的功能定义是：
+### 4.1 本教程实现的功能定义：
 
 - 通过网页端启动一个 TCP 服务器；
 - 4G 模组插卡开机后，连接上 TCP 服务器；
-- 4G 模组向 TCP  服务器发送**"TCP  CONNECT"**，服务器可以收到数据并且在网页端显示；
+- 4G 模组向 TCP  服务器发送** ****"TCP  CONNECT"**，服务器可以收到数据并且在网页端显示；
 - TCP 服务器网页端向 4G 模组发送 `data from TCP  server`，4G 模组可以收到数据并且通过串口输出显示；
 
-### 4.1 核心脚本代码详解
+### 4.2 文章内容引用
 
-#### 4.1.1 **串口初始化**
+- 780E 开发板软硬件资料 ： [Air780E 产品手册 ](https://docs.openluat.com/air780e/product/)
+- 以上接口函数不做详细介绍，可通过此链接查看具体介绍：`<u>`socket - 网络接口 - LuatOS 文档 `</u>`
+
+### 4.3 核心脚本代码详解
+
+#### 4.3.1 **串口初始化**
 
 **本文示例**：串口使用 MAIN_UART(uart1)
 
-```sql
+```lua
 --初始化  
 local uartid = 1 -- 根据实际设备选取不同的uartid
 uart.setup(
@@ -250,11 +256,11 @@ uart.setup(
 )
 ```
 
-#### 4.1.2 **数据接收回调：搭建响应桥梁**
+#### 4.3.2 **数据接收回调：搭建响应桥梁**
 
 这里使用 uart.rx 接口，和以 zbuff 的方式存储从 uart1 外部串口收到的数据 -- 收取数据会触发回调, 这里的"receive" 是固定值不要修改。。
 
-```sql
+```lua
 uart.on(uartid, "receive", function(id, len)
      while true do
 -- 接收串口收到的数据，并赋值到uart_rx_buff
@@ -270,9 +276,9 @@ uart.on(uartid, "receive", function(id, len)
   end)
 ```
 
-#### 4.1.3 **TCP 网络配置：铺就数据通道**
+#### 4.3.3 **TCP 网络配置：铺就数据通道**
 
-```sql
+```lua
 ----------------------------------------------网络配置-------------------------------------------------
 local libnet = require "libnet"  -- libnet库，支持tcp、udp协议所用的同步阻塞接口
 local ip = "112.125.89.8"         -- 连接TCP服务器的ip地址
@@ -289,9 +295,9 @@ sys.waitUntil("IP_READY")                -- 等待联网成功
  socket.config(netCB, nil, protocol, ssl)      -- 此配置为TCP连接，无SSL加密
 ```
 
-#### 4.1.4 **TCP 至串口透传：数据无缝流转**
+#### 4.3.4 **TCP 至串口透传：数据无缝流转**
 
-```sql
+```lua
 succ, param, _, _ = socket.rx(netCB, rx_buff)   -- 接收数据
   if not succ then
      log.info("服务器断开了", succ, param, ip, port)
@@ -304,9 +310,9 @@ succ, param, _, _ = socket.rx(netCB, rx_buff)   -- 接收数据
   end
 ```
 
-#### 4.1.5 **串口至 TCP 反透传：信息双向传递**
+#### 4.3.5 **串口至 TCP 反透传：信息双向传递**
 
-```sql
+```lua
 tx_buff:copy(nil, uart_rx_buff)         -- 将串口数据赋值给TCP待发送数据的buff中
 uart_rx_buff:del()                      -- 清除串口buff的数据长度
  if tx_buff:used() > 0 then
@@ -320,17 +326,19 @@ end
 tx_buff:del()
 ```
 
-### 4.2 **成果演示与深度解析：视频 + 图文全面展示**
+### 4.4 **成果演示与深度解析：视频 + 图文全面展示**
 
-#### 4.2.1 **成果运行精彩呈现**
+#### 4.4.1 **成果运行精彩呈现**
 
-![](image/QuhjbohCAoZxZYxaiRCcpYO1nrI.png)
+![](image/MHYZb13iToCvhDxUXyhc8UR8nfd.png)
 
-#### 4.2.2 **演示视频生动展示**
+#### 4.4.2 **演示视频生动展示**
 
-#### 4.2.3 **完整实例深度剖析**
+<video controls src="file/TCP-UART.mp4"></video>
 
-```sql
+#### 4.4.3 **完整实例深度剖析**
+
+```lua
 -- LuaTools需要PROJECT和VERSION这两个信息
 PROJECT = "uart_tcp"
 VERSION = "1.0.0"
@@ -471,22 +479,27 @@ sys.run()
 
 TCP（Transmission Control Protocol，传输控制协议）本身是一种面向连接的、可靠的、基于字节流的传输层通信协议，它并不直接涉及认证过程。然而，在 TCP 连接的基础上，可以实现各种安全机制，其中包括认证。在网络通信中，“单向认证”指的是只对通信某一方的身份合法性进行认证。
 
-本小节教你怎么使用 luatos 脚本语言，就可以让合宙 4G 模组和 TCP 服务器进行单向认证
+**本小节教你怎么使用 luatos 脚本语言，就可以让合宙 4G 模组和 TCP 服务器进行单向认证**
 
-### 本教程实现的功能定义是：
+### 5.1 本教程实现的功能定义：
 
 - 通过网页端启动一个 TCP 服务器；
 - 4G 模组插卡开机后，连接上 TCP 服务器；
-- 4G 模组向 TCP  服务器发送**"TCP  CONNECT"**，服务器可以收到数据并且在网页端显示；
+- 4G 模组向 TCP  服务器发送** ****"TCP  CONNECT"**，服务器可以收到数据并且在网页端显示；
 - TCP 服务器网页端向 4G 模组发送 `data from TCP  server`，4G 模组可以收到数据并且通过串口输出显示；
 
-### 5.1 核心脚本代码详解
+### 5.2 文章内容引用
 
-#### 5.1.1 **串口初始化**
+- 780E 开发板软硬件资料 ： [Air780E 产品手册 ](https://docs.openluat.com/air780e/product/)
+- 以上接口函数不做详细介绍，可通过此链接查看具体介绍：`<u>`socket - 网络接口 - LuatOS 文档 `</u>`
+
+### 5.3 核心脚本代码详解
+
+#### 5.3.1 **串口初始化**
 
 **本文示例**：串口使用 MAIN_UART(uart1)
 
-```sql
+```lua
 --初始化  
 local uartid = 1 -- 根据实际设备选取不同的uartid
 uart.setup(
@@ -497,11 +510,11 @@ uart.setup(
 )
 ```
 
-#### 5.1.2 **数据接收回调：搭建响应桥梁**
+#### 5.3.2 **数据接收回调：搭建响应桥梁**
 
-这里使用 uart.rx 接口，和以 zbuff 的方式存储从 uart1 外部串口收到的数据 -- 收取数据会触发回调, 这里的"receive" 是固定值不要修改。。
+这里使用 uart.rx 接口，和以 zbuff 的方式存储从 uart1 外部串口收到的数据 -- 收取数据会触发回调, 这里的"receive" 是固定值不要修改。
 
-```sql
+```lua
 uart.on(uartid, "receive", function(id, len)
      while true do
 -- 接收串口收到的数据，并赋值到uart_rx_buff
@@ -517,9 +530,9 @@ uart.on(uartid, "receive", function(id, len)
   end)
 ```
 
-#### 5.1.3 **TCP 网络配置：铺就数据通道--------注：SSL 填写 ****true**
+#### 5.3.3 **TCP 网络配置：铺就数据通道--------注：SSL 填写 true**
 
-```sql
+```lua
 ----------------------------------------------网络配置-------------------------------------------------
 local libnet = require "libnet"  -- libnet库，支持tcp、udp协议所用的同步阻塞接口
 local ip = "112.125.89.8"         -- 连接TCP服务器的ip地址
@@ -527,7 +540,7 @@ local port = 46244               -- 连接TCP服务器的端口
 local netCB = nil                  -- socket服务的回调函数
 local connect_state = false         -- 连接状态 true:已连接   false:未连接
 local protocol = false             -- 通讯协议 true:UDP协议  false:TCP协议
-local ssl = **true **                -- 加密传输 true:加密     false:不加密
+local ssl = true**   **             -- 加密传输 true:加密     false:不加密
 local tx_buff = zbuff.create(1024)  -- 发送至TCP服务器的数据
 =======================================================
 sys.waitUntil("IP_READY")                -- 等待联网成功
@@ -536,9 +549,9 @@ sys.waitUntil("IP_READY")                -- 等待联网成功
  socket.config(netCB, nil, protocol, ssl)      -- 此配置为TCP连接，无SSL加密
 ```
 
-#### 5.1.4 **TCP 至串口透传：数据无缝流转**
+#### 5.3.4 **TCP 至串口透传：数据无缝流转**
 
-```sql
+```lua
 succ, param, _, _ = socket.rx(netCB, rx_buff)   -- 接收数据
   if not succ then
      log.info("服务器断开了", succ, param, ip, port)
@@ -551,9 +564,9 @@ succ, param, _, _ = socket.rx(netCB, rx_buff)   -- 接收数据
   end
 ```
 
-#### 5.1.5 **串口至 TCP 反透传：信息双向传递**
+#### 5.3.5 **串口至 TCP 反透传：信息双向传递**
 
-```sql
+```lua
 tx_buff:copy(nil, uart_rx_buff)         -- 将串口数据赋值给TCP待发送数据的buff中
 uart_rx_buff:del()                      -- 清除串口buff的数据长度
  if tx_buff:used() > 0 then
@@ -567,21 +580,21 @@ end
 tx_buff:del()
 ```
 
-### 5.2 **成果演示与深度解析：视频 + 图文全面展示**
+### 5.4 **成果演示与深度解析：视频 + 图文全面展示**
 
-#### 5.2.1 **成果运行精彩呈现**
+#### 5.4.1 **成果运行精彩呈现**
 
-![](image/IX6lbA7IgoVo0FxZZw0cTYhFnbc.png)
+![](image/By7zbN2XuoE1POxY1yOcu4e0nCd.png)
 
-#### 5.2.2 **串口数据展示**
+#### 5.4.2 **串口数据展示**
 
-![](image/O19fbzJyFop16nxqaIEcgiw5n9g.png)
+![](image/L2KvbQgGaoqx1HxoPzlcMcHgnHR.png)
 
-#### 5.2.3 **演示视频生动展示**
+#### 5.4.3 **演示视频生动展示**
 
-#### 5.2.4 **完整实例深度剖析**
+#### 5.4.4 **完整实例深度剖析**
 
-```sql
+```lua
 -- main.lua文件
 
 -- LuaTools需要PROJECT和VERSION这两个信息
@@ -731,6 +744,8 @@ sys.run()
 
 TCP（传输控制协议）确保数据在网络中可靠传输。当 TCP 连接因网络问题、设备故障等原因断开时，需要重新建立连接以继续数据传输。
 
+### 7.1 本教程实现的功能定义：
+
 断链：TCP 连接断开，可能由于网络不稳定、设备故障等。
 
 续连：重新建立 TCP 连接。通常通过“三次握手”过程：
@@ -739,13 +754,18 @@ TCP（传输控制协议）确保数据在网络中可靠传输。当 TCP 连接
 - 服务器响应并同意连接。
 - 客户端确认连接建立。
 
-### 7.1 核心脚本代码详解
+### 7.2 文章内容引用
 
-#### 7.1.1 **串口初始化**
+- 780E 开发板软硬件资料 ： [Air780E 产品手册 ](https://docs.openluat.com/air780e/product/)
+- 以上接口函数不做详细介绍，可通过此链接查看具体介绍：`<u>`socket - 网络接口 - LuatOS 文档 `</u>`
+
+### 7.3 核心脚本代码详解
+
+#### 7.3.1 **串口初始化**
 
 **本文示例**：串口使用 MAIN_UART(uart1)
 
-```sql
+```lua
 --初始化  
 local uartid = 1 -- 根据实际设备选取不同的uartid
 uart.setup(
@@ -756,11 +776,11 @@ uart.setup(
 )
 ```
 
-#### 7.1.2 **数据接收回调：搭建响应桥梁**
+#### 7.3.2 **数据接收回调：搭建响应桥梁**
 
-这里使用 uart.rx 接口，和以 zbuff 的方式存储从 uart1 外部串口收到的数据 -- 收取数据会触发回调, 这里的"receive" 是固定值不要修改。。
+这里使用 uart.rx 接口，和以 zbuff 的方式存储从 uart1 外部串口收到的数据 -- 收取数据会触发回调, 这里的"receive" 是固定值不要修改。
 
-```sql
+```lua
 uart.on(uartid, "receive", function(id, len)
      while true do
 -- 接收串口收到的数据，并赋值到uart_rx_buff
@@ -776,9 +796,9 @@ uart.on(uartid, "receive", function(id, len)
   end)
 ```
 
-#### 7.1.3 **TCP 网络配置：铺就数据通道--------注：需要认证 SSL 填写：**true，**不需要 填写：** false。
+#### 7.3.3 **TCP 网络配置：铺就数据通道--------注：需要认证 SSL 填写：true，不需要 填写： false。**
 
-```sql
+```lua
 ----------------------------------------------网络配置-------------------------------------------------
 local libnet = require "libnet"  -- libnet库，支持tcp、udp协议所用的同步阻塞接口
 local ip = "112.125.89.8"         -- 连接TCP服务器的ip地址
@@ -786,7 +806,7 @@ local port = 46244               -- 连接TCP服务器的端口
 local netCB = nil                  -- socket服务的回调函数
 local connect_state = false         -- 连接状态 true:已连接   false:未连接
 local protocol = false             -- 通讯协议 true:UDP协议  false:TCP协议
-local ssl = **true **                -- 加密传输 true:加密     false:不加密
+local ssl = true** **                -- 加密传输 true:加密     false:不加密
 local tx_buff = zbuff.create(1024)  -- 发送至TCP服务器的数据
 =======================================================
 sys.waitUntil("IP_READY")                -- 等待联网成功
@@ -795,9 +815,9 @@ sys.waitUntil("IP_READY")                -- 等待联网成功
  socket.config(netCB, nil, protocol, ssl)      -- 此配置为TCP连接，无SSL加密
 ```
 
-#### 7.1.4 **TCP 至串口透传：数据无缝流转**
+#### 7.3.4 **TCP 至串口透传：数据无缝流转**
 
-```sql
+```lua
 succ, param, _, _ = socket.rx(netCB, rx_buff)   -- 接收数据
   if not succ then
      log.info("服务器断开了", succ, param, ip, port)
@@ -810,9 +830,9 @@ succ, param, _, _ = socket.rx(netCB, rx_buff)   -- 接收数据
   end
 ```
 
-#### 7.1.5 **串口至 TCP 反透传：信息双向传递**
+#### 7.3.5 **串口至 TCP 反透传：信息双向传递**
 
-```sql
+```lua
 tx_buff:copy(nil, uart_rx_buff)         -- 将串口数据赋值给TCP待发送数据的buff中
 uart_rx_buff:del()                      -- 清除串口buff的数据长度
  if tx_buff:used() > 0 then
@@ -826,9 +846,9 @@ end
 tx_buff:del()
 ```
 
-#### 7.1.6 断链续连
+#### 7.3.6 断链续连
 
-```sql
+```lua
 while true do
         -- 连接服务器，返回是否连接成功
         result = libnet.connect(taskName, 15000, netCB, ip, port)
@@ -896,17 +916,17 @@ while true do
   -- 服务器断开后的行动，由于while true的影响，所以会再次重新执行进行 重新连接。
 ```
 
-### 7.2 **成果演示与深度解析：视频 + 图文全**
+### 7.4 **成果演示与深度解析：视频 + 图文全**
 
-#### 7.2.1 **成果运行精彩呈现**
+#### 7.4.1 **成果运行精彩呈现**
 
-![](image/DuyXbAfwNoTVlvxtxNpc0DtknY7.png)
+![](image/DuBhb7vEwoPao7xjSUlci9e8n9b.png)
 
-#### 7.2.2 **演示视频生动展示**
+#### 7.4.2 **演示视频生动展示**
 
-#### 7.2.3 **完整实例深度剖析**
+#### 7.4.3 **完整实例深度剖析**
 
-```sql
+```lua
 -- main.lua文件
 
 -- LuaTools需要PROJECT和VERSION这两个信息
@@ -1058,7 +1078,7 @@ TCP（传输控制协议）和 UDP（用户数据报协议）是 OSI 模型中�
 
 ## 十、常见问题
 
-**sys.waitUntil**("IP_READY")     -- 等待联网成功
+** sys.waitUntil**("IP_READY")     -- 等待联网成功
 
 好多新入手的可能看到此函数 不理解 在整个脚本里面没有发布此事件 sys.publish（"IP_READY"）   为什么 后面还联网成功了？
 
@@ -1086,7 +1106,7 @@ TCP（传输控制协议）和 UDP（用户数据报协议）是 OSI 模型中�
 2. 调用 `mobile.connect()` 函数来激活网络连接。
 3. 使用 `mobile.getIp()` 函数来查询设备的 IP 地址，确认连接状态
 
-```sql
+```lua
 mobile.apn(index, cid, new_apn_name, user_name, password, ip_type, protocol)
 获取或设置APN，设置APN必须在入网前就设置好，比如在SIM卡识别完成前就设置好
 **参数**
@@ -1115,7 +1135,16 @@ string                获取到的默认APN值,失败返回nil
 mobile.apn(0,1,"cmiot","","",nil,0) -- 移动公网卡设置APN为cmiot,一般不用设置mobile.apn(0,1,"name","user","password",nil,3) -- 专网卡设置的demo，name，user，password联系卡商获取
 ```
 
-## 十二、参考
+## 给读者的话
 
-- **780E 开发板软硬件资料：**[LuatOS 底层 core](https://docs.openluat.com/air780e/product/)
-- **以上接口函数不做详细介绍，可通过此链接查看具体介绍：**[网络接口](https://wiki.luatos.com/api/socket.html)
+> 本篇文章由`永仔`开发；
+>
+> 本篇文章描述的内容，如果有错误、细节缺失、细节不清晰或者其他任何问题，总之就是无法解决您遇到的问题；
+>
+> 请登录[合宙技术交流论坛](https://chat.openluat.com/)，点击[文档找错赢奖金-Air780E-LuatOS-TCP通信](https://chat.openluat.com/#/page/matter?125=1846214486504112129&126=%E6%96%87%E6%A1%A3%E6%89%BE%E9%94%99%E8%B5%A2%E5%A5%96%E9%87%91-Air780E-LuatOS-%E8%BD%AF%E4%BB%B6demo-%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8-TCP%E9%80%9A%E4%BF%A1&askid=1846214486504112129)；
+>
+> 用截图标注+文字描述的方式跟帖回复，记录清楚您发现的问题；
+>
+> 我们会迅速核实并且修改文档；
+>
+> 同时也会为您累计找错积分，您还可能赢取月度找错奖金！

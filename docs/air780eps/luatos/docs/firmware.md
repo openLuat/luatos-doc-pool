@@ -8,7 +8,7 @@
 
 历史版本
 
-## 脚本demo
+## 二次开发demo
 
 [LuatOS-Air780EPS](https://gitee.com/openLuat/LuatOS-Air780EPS)
 
