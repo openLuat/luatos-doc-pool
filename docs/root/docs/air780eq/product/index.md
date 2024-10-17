@@ -23,4 +23,18 @@
 
 [AT固件版本](https://docs.openluat.com/air780eq/at/firmware/)
 
-[LuatOS固件版本](https://docs.openluat.com/air780eq/luatos/firmware/) 
+[LuatOS二次开发sdk和demo](https://docs.openluat.com/air780eq/luatos/firmware/) 
+
+## 相关证书
+### CCC 证书
+[Air780E_CCC中文证书.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221129105209534_Air780E_CCC中文证书.pdf)
+[Air780E_CCC英文证书.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221129105227474_Air780E_CCC英文证书.pdf)
+
+### 入网许可证
+[Air780E入网许可证.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230130113321541_Air780E入网许可证.pdf)
+
+### SRRC 证书
+[Air780E型号核准证.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230221104159741_Air780E型号核准证.pdf)
+
+### ROHS 证书
+[Air780E-ROHS证书.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230313092434185_Air780E-ROHS证书.pdf)

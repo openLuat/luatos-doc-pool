@@ -14,7 +14,10 @@ nav:
     - TCP快速入门: quick_start/tcp.md
     - MQTT快速入门: quick_start/mqtt.md
     - HTTP快速入门: quick_start/http.md
-  - 软件demo:
+  - 硬件指南:
+    - 典型硬件设计指南:
+      - 简介: hardware/design/index.md
+  - 软件指南:
     - 介绍: app/index.md
     - AT指令手册: app/at_command.md
     - 应用实例:
@@ -30,9 +33,6 @@ nav:
       - 通信异常类: app/error/error.md
     - MCU实例代码:
       - STM32演示代码: app/mcu/stm32.md
-  - 硬件demo:
-    - 典型硬件设计指南:
-      - 简介: hardware/design/index.md
   - 固件版本: firmware.md
   - 常见问题: faq.md
   - DTU: https://docs.openluat.com/dtu/

@@ -1,7 +1,90 @@
 # Air724UG LuatOS固件版本
 
+## 最新版本SDK&Demo
 
-- **空间说明**
+### 1.3底层core下载地址
+
+- [CORE_V4030](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240925115323601_CORE_V4030.rar)
+
+### 1.2底层core下载地址
+
+- [CORE_V0034](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210906161937203_CORE_V0034.rar)
+
+### Luat上层脚本包
+
+- [上层软件LuaTask_V2.4.4（demo+lib）](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230911174858333_script_LuaTask_V2.4.4.zip)
+
+### 1.3底层core固件更新说明（最新V4030）
+
+- **V4030底层固件更新说明**
+  1：修复℃字符ut8转gb2312不正确
+  2：新增外挂flash挂载u盘功能
+  3：rtos.set_trace可修改波特率:
+  4：保存图片接口增加裁剪图片功能
+
+### 1.2底层core固件更新说明（最新V0034）
+
+- **0034底层固件更新说明**
+  1：解决特殊国外卡开机后一段时间死机的问题
+  【问题原因】:在中断服务程序中调用了rpc的接口
+  2：解决DNS查询多次失败的问题
+  【问题原因】:原始UDP包的checksum为0，但是还去校验
+  3：解决查询空电话本死机的问题
+  【问题原因】:log打印访问空指针
+  4：解决空中升级大脚本失败问题
+  【问题原因】:MD5校验脚本一次性申请空间太多
+  5：解决模块循环连接服务器，服务器一直踢掉模块情况下，几十秒就会死机的问题
+  【问题原因】:脚本循环连接一个服务器，服务器会不断地踢掉模块，会在短时间内创建大量定时器，触发定时器最大50个的阈值，导致死机
+
+### 上层脚本更新说明（最新V2.4.4）
+
+- **2.4.4上层脚本更新说明**
+  发布时间：2023/8/18 18:01:30
+  修改记录
+  一：lib脚本修改
+  lib脚本版本号：2.4.4
+  新增
+  （1）gpsHxxt.lua
+  510U快速定位（2）gpsZkw.lua
+  530Z快速定位                                         
+  （3）aliyun.lua
+  阿里云自定义rrpc主题（4）errdump.lua
+  支持向https服务器发送错误日志（5）socket.lua：
+  从lib简单统计数据流量的接口ssl校验时，是否上报域名的参数
+  （6）socketESP8266.lua
+  外接esp8266 socket框架（7）update.lua
+  设置升级包下载进度通知回调
+  （8）nvm.lua
+  出现异常后、自恢复机制
+  修复
+  （1）update.lua：
+  校验失败的情况下还重启的问题（2）socketCH395.lua :
+  连接不存在的服务器会显示连接成功的问题使用异步收发时，无法发出数据的问题（3）audio.lua:
+  无法播放wav格式的音频的问题（4）aliyun.lua :当同时启用阿里云OTA和其他方式OTA时，阿里云消息会打断正常升级的问题
+  （5）http.lua:
+  http重定向丢失端口信息的问题（6）websocket.lua:
+  一帧数据过长时，无法接收到完整的数据的问题连接成功后没有立即执行连接成功的回调的问题二：demo脚本修改
+  新增
+  （1）gps:
+  外接Air510U（2）mqtt全双工对讲（3）ui：
+  SH1108单色屏驱动
+  ST7735S屏幕驱动（4）peripheral
+  CH395添加Server端演示
+  串口外接esp8266 socket演示（5）camera
+  gc032a摄像头驱动（配合版本号>=4020的底层使用）
+  （6）nvm
+  nvm.sett的演示
+  （7）阿里云微消息队列MQTT
+  修复
+  （1）record
+  缺少录音质量参数的问题
+  （4）peripheral
+  sht30，crc等于100的时候被忽略的问题
+  （1）qspi修改对io.mount返回值的判断
+  （4）
+  autoGps  当Air820匹配到国科微芯片时，无法工作的问题
+
+## 空间说明
 
 ```
 Luat二次开发使用的Flash空间有两部分：脚本区和文件系统区
@@ -27,7 +110,7 @@ Luat二次开发可用的ram空间，通用底层固件和定制固件有所不�
 定制固件可用内存空间以定制系统说明为准，剩余可用空间为：AT^HEAPINFO查询结果的第3个值
 ```
 
-- **底层固件功能列表**
+## 底层固件功能列表
 
 | 1.2基线                        | LCD  | 字库 | 图片 | 扫码   | 二维码生成 | 摄像头 | TTS    | WIFI Scan | 蓝牙   | SD卡   | littleVGL | VOLTE  | 脚本文件 | 文件系统空间 | RAM空间 |
 | ------------------------------ | ---- | ---- | ---- | ------ | ---------- | ------ | ------ | --------- | ------ | ------ | --------- | ------ | -------- | ------------ | ------- |
@@ -58,58 +141,51 @@ A:   V1.3完全兼容V1.2，故V1.2的版本可以升级到V1.3的版本。（�
 A:   V1.2版本不支持V1.3版本的校准参数，故V1.3的版本不能降级到V1.2的版本,否则会开不了机。
 首推1.3基线版本，支持相同基线版本之间空中升级，不支持跨基线版本间空中升级
 
-### 1.3底层core下载地址
-
-- 最新版本：
-  - [CORE_V4030](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240925115323601_CORE_V4030.rar)
-- 历史版本：
-  - [CORE_V4029](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240925115248809_CORE_V4029.rar)
-  - [CORE_V4028](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240123153445684_CORE_V4028.rar)
-  - [CORE_V4027](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240123152853483_CORE_V4027.rar)
-  - [CORE_V4026](https://cdn.openluat-luatcommunity.openluat.com/attachment/20231218154303212_CORE_V4026.rar)
-  - [CORE_V4025](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230911173607889_CORE_4025.rar)
-  - [CORE_V4023](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230720134926678_CORE_4023.rar)
-  - [CORE_V4022](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230601114442637_CORE_V4022.rar)
-  - [CORE_V4021](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230206170442898_CORE_V4021.rar)
-  - [CORE_V4020](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230106110259573_CORE_V4020.rar)
-  - [CORE_V4018](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221025113556425_CORE_V4018.rar)
-  - [CORE_V4017](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220920105910726_CORE_V4017.rar)
-  - [CORE_V4013](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220813150712187_CORE_V4013.rar)
-  - [CORE_V4003](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220509135412413_LuatOS-Air_V4003_RDA8910.rar)
-  - [CORE_V4002](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220412224322254_LuatOS-Air_V4002_RDA8910.rar)
-  - [CORE_V3211](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220224105019684_CORE_V3211.rar)
-  - [CORE_V3209](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220118195139532_CORE_V3209.rar)
-  - [CORE_V3205](https://cdn.openluat-luatcommunity.openluat.com/attachment/20211202121015424_CORE_V3205.rar)
-  - [CORE_V3105](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210924175954802_LuatOS-Air_V3105.rar)
-  - [CORE_V3037](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210702115356609_V3037.rar)
-  - [CORE_V3035](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210609131505703_Luat_V3035_RDA8910.rar)
-  - [CORE_V3032](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220623154957177_CORE_V3032.rar)
-  - [CORE_V3029](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210326091852273_V3029.zip)
-  - [CORE_V3028](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210316145120070_V3028.rar)
-  - [CORE_V3027](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210422171412263_Luat_3027.rar)
-
-### 1.2底层core下载地址
-
-- 最新版本：
-  - [CORE_V0034](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210906161937203_CORE_V0034.rar)
-- 历史版本：
-  - [CORE_V0032](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210624191326612_V0032.rar)
-  - [CORE_V0031](http://openluat-erp.oss-cn-hangzhou.aliyuncs.com/erp_site_file/product_file/CORE_V0031.zip)
-  - [CORE_V0030](http://openluat-erp.oss-cn-hangzhou.aliyuncs.com/erp_site_file/product_file/CORE_V0030.zip)
-  - [CORE_V0022](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210223114918666_CORE_V0022.rar)
-  - [CORE_V0019](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210113175605790_CORE_V0019.rar)
-
 ### Luat固件在线编译说明
 
 [Luat固件定制系统](https://doc.openluat.com/shareArticle/Vf34iUQh9em7c "Luat固件定制系统")
 针对客户不同功能使用场景，提供免费在线定制固件服务。满足客户功能定制化需求，同时也能最大化保留Lua运行和存储空间
 `注：  .pac后缀的是本地烧录固件； .bin后缀的是空中升级文件`
 
+## 历史版本SDK&Demo
+
+### 1.3底层core下载地址
+
+- [CORE_V4029](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240925115248809_CORE_V4029.rar)
+- [CORE_V4028](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240123153445684_CORE_V4028.rar)
+- [CORE_V4027](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240123152853483_CORE_V4027.rar)
+- [CORE_V4026](https://cdn.openluat-luatcommunity.openluat.com/attachment/20231218154303212_CORE_V4026.rar)
+- [CORE_V4025](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230911173607889_CORE_4025.rar)
+- [CORE_V4023](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230720134926678_CORE_4023.rar)
+- [CORE_V4022](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230601114442637_CORE_V4022.rar)
+- [CORE_V4021](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230206170442898_CORE_V4021.rar)
+- [CORE_V4020](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230106110259573_CORE_V4020.rar)
+- [CORE_V4018](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221025113556425_CORE_V4018.rar)
+- [CORE_V4017](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220920105910726_CORE_V4017.rar)
+- [CORE_V4013](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220813150712187_CORE_V4013.rar)
+- [CORE_V4003](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220509135412413_LuatOS-Air_V4003_RDA8910.rar)
+- [CORE_V4002](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220412224322254_LuatOS-Air_V4002_RDA8910.rar)
+- [CORE_V3211](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220224105019684_CORE_V3211.rar)
+- [CORE_V3209](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220118195139532_CORE_V3209.rar)
+- [CORE_V3205](https://cdn.openluat-luatcommunity.openluat.com/attachment/20211202121015424_CORE_V3205.rar)
+- [CORE_V3105](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210924175954802_LuatOS-Air_V3105.rar)
+- [CORE_V3037](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210702115356609_V3037.rar)
+- [CORE_V3035](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210609131505703_Luat_V3035_RDA8910.rar)
+- [CORE_V3032](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220623154957177_CORE_V3032.rar)
+- [CORE_V3029](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210326091852273_V3029.zip)
+- [CORE_V3028](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210316145120070_V3028.rar)
+- [CORE_V3027](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210422171412263_Luat_3027.rar)
+
+### 1.2底层core下载地址
+
+- [CORE_V0032](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210624191326612_V0032.rar)
+- [CORE_V0031](http://openluat-erp.oss-cn-hangzhou.aliyuncs.com/erp_site_file/product_file/CORE_V0031.zip)
+- [CORE_V0030](http://openluat-erp.oss-cn-hangzhou.aliyuncs.com/erp_site_file/product_file/CORE_V0030.zip)
+- [CORE_V0022](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210223114918666_CORE_V0022.rar)
+- [CORE_V0019](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210113175605790_CORE_V0019.rar)
+
 ### Luat上层脚本包
 
-- 最新版本：
-- [上层软件LuaTask_V2.4.4（demo+lib）](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230911174858333_script_LuaTask_V2.4.4.zip)
-- 历史版本：
 - [上层软件LuaTask_V2.4.3（demo+lib）](https://cdn.openluat-luatcommunity.openluat.com/attachment/20220513211301955_script_LuaTask_V2.4.3.zip)
 - [上层软件LuaTask_V2.4.2（demo+lib）](https://cdn.openluat-luatcommunity.openluat.com/attachment/20211211144532571_script_LuaTask_V2.4.2.zip)
 - [上层软件LuaTask_V2.4.0（demo+lib)](https://cdn.openluat-luatcommunity.openluat.com/attachment/20210816193152252_script_LuaTask_V2.4.0.zip)
@@ -122,13 +198,8 @@ A:   V1.2版本不支持V1.3版本的校准参数，故V1.3的版本不能降级
 
 ---
 
-### 1.3底层core固件更新说明（最新V4030）
+### 1.3底层core固件更新说明（历史版本）
 
-- **V4030底层固件更新说明**
-  1：修复℃字符ut8转gb2312不正确
-  2：新增外挂flash挂载u盘功能
-  3：rtos.set_trace可修改波特率:
-  4：保存图片接口增加裁剪图片功能
 - **V4029底层固件更新说明**
   1：全双工对讲audiocore.pocstreamplay增加判断流录音播放结束的标志
   2：增加CRC7算法
@@ -382,19 +453,8 @@ A:   V1.2版本不支持V1.3版本的校准参数，故V1.3的版本不能降级
   3.SIM卡自动切换
   4.LUA: 增加部分固件的大ram 和大文件系统
 
-### 1.2底层core固件更新说明（最新V0034）
+### 1.2底层core固件更新说明（历史版本）
 
-- **0034底层固件更新说明**
-  1：解决特殊国外卡开机后一段时间死机的问题
-  【问题原因】:在中断服务程序中调用了rpc的接口
-  2：解决DNS查询多次失败的问题
-  【问题原因】:原始UDP包的checksum为0，但是还去校验
-  3：解决查询空电话本死机的问题
-  【问题原因】:log打印访问空指针
-  4：解决空中升级大脚本失败问题
-  【问题原因】:MD5校验脚本一次性申请空间太多
-  5：解决模块循环连接服务器，服务器一直踢掉模块情况下，几十秒就会死机的问题
-  【问题原因】:脚本循环连接一个服务器，服务器会不断地踢掉模块，会在短时间内创建大量定时器，触发定时器最大50个的阈值，导致死机
 - **0032底层固件更新说明**
   1：修改播放音乐时切换音频通道会出现耳机和喇叭同时放音的问题
   2：优化部分城市类似“电子围栏的小区，公安系统布的网络”引起的掉线问题（普通的sim卡无法使用）
@@ -475,53 +535,8 @@ A:   V1.2版本不支持V1.3版本的校准参数，故V1.3的版本不能降级
 
 ---
 
-### 上层脚本更新说明
+### 上层脚本更新说明（历史版本）
 
-- **2.4.4上层脚本更新说明**
-  发布时间：2023/8/18 18:01:30
-  修改记录
-  一：lib脚本修改
-  lib脚本版本号：2.4.4
-  新增
-  （1）gpsHxxt.lua
-  510U快速定位（2）gpsZkw.lua
-  530Z快速定位                                         
-  （3）aliyun.lua
-  阿里云自定义rrpc主题（4）errdump.lua
-  支持向https服务器发送错误日志（5）socket.lua：
-  从lib简单统计数据流量的接口ssl校验时，是否上报域名的参数
-  （6）socketESP8266.lua
-  外接esp8266 socket框架（7）update.lua
-  设置升级包下载进度通知回调
-  （8）nvm.lua
-  出现异常后、自恢复机制
-  修复
-  （1）update.lua：
-  校验失败的情况下还重启的问题（2）socketCH395.lua :
-  连接不存在的服务器会显示连接成功的问题使用异步收发时，无法发出数据的问题（3）audio.lua:
-  无法播放wav格式的音频的问题（4）aliyun.lua :当同时启用阿里云OTA和其他方式OTA时，阿里云消息会打断正常升级的问题
-  （5）http.lua:
-  http重定向丢失端口信息的问题（6）websocket.lua:
-  一帧数据过长时，无法接收到完整的数据的问题连接成功后没有立即执行连接成功的回调的问题二：demo脚本修改
-  新增
-  （1）gps:
-  外接Air510U（2）mqtt全双工对讲（3）ui：
-  SH1108单色屏驱动
-  ST7735S屏幕驱动（4）peripheral
-  CH395添加Server端演示
-  串口外接esp8266 socket演示（5）camera
-  gc032a摄像头驱动（配合版本号>=4020的底层使用）
-  （6）nvm
-  nvm.sett的演示
-  （7）阿里云微消息队列MQTT
-  修复
-  （1）record
-  缺少录音质量参数的问题
-  （4）peripheral
-  sht30，crc等于100的时候被忽略的问题
-  （1）qspi修改对io.mount返回值的判断
-  （4）
-  autoGps  当Air820匹配到国科微芯片时，无法工作的问题
 - **2.4.3上层脚本更新说明**
   发布时间：2022/2/17 13:17:00
   修改记录：
