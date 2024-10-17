@@ -47,7 +47,7 @@ nav:
     #  - 总结: quick_start/mqtt/summary.md
     #  - 常见问题: quick_start/mqtt/faq.md
     #  - 扩展: quick_start/mqtt/ext.md
-    - 驱动SPI小屏幕的详细讲解: quick_start/lcd/index.md
+    #- 驱动SPI小屏幕的详细讲解: quick_start/lcd/index.md
     #  - 介绍: quick_start/lcd/index.md
     #  - 硬件准备: quick_start/lcd/01.md
     #  - 编写脚本: quick_start/lcd/02.md
