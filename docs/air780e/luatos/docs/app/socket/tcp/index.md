@@ -115,7 +115,7 @@ Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools
 
 #### 3.2.1 **压缩文件：完整文件包**
 
-[右键点我,另存为,下载完整压缩文件包](https://docs.openluat.com/file/Test_Code_TCP.zip){:target="_blank"}
+[右键点我,另存为,下载完整压缩文件包](file/Test_Code_TCP.zip){:target="_blank"}
 
 #### 3.2.2 压缩包内部文件
 
