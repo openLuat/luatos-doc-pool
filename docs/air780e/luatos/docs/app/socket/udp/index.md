@@ -332,8 +332,7 @@ tx_buff:del()
 ---
 
 #### 4.4.2 **演示视频生动展示**
-<video src="file/UDP-UART.mp4"></video>
-
+<video controls src="file/UDP-UART.mp4"></video>
 #### 4.4.3 **完整实例深度剖析**
 
 ```lua
