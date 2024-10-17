@@ -34,7 +34,7 @@
 
 [LuatOS-Air780E](https://gitee.com/openLuat/LuatOS-Air780E)
 
-## LuatOS固件版本更新说明（历史版本）
+### LuatOS固件版本更新说明（历史版本）
 
 **core_V1111** 2024-08-27
 

@@ -24,7 +24,7 @@
 
 [LuatOS-Air700EMQ](https://gitee.com/openLuat/LuatOS-Air700EMQ)
 
-## LuatOS固件版本更新说明（历史版本）
+### LuatOS固件版本更新说明（历史版本）
 
 ## [Luatools工具使用教程（点击此处，跳转阅读）](https://docs.openluat.com/Luatools/)
 

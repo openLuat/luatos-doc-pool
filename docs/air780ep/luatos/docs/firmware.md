@@ -48,7 +48,7 @@ update：RRC快速释放的优化选项
 
 ## 历史版本SDK&Demo
 
-## LuatOS固件版本下载地址
+### LuatOS固件版本下载地址
 
 [core_V1003](https://gitee.com/openLuat/LuatOS/releases/download/v1003.ec7xx.release/core_V1003.zip)
 
@@ -61,7 +61,7 @@ update：RRC快速释放的优化选项
 [LuatOS-Air780EP](https://gitee.com/openLuat/LuatOS-Air780EP)
 
 
-## LuatOS固件版本更新说明（历史版本）
+### LuatOS固件版本更新说明（历史版本）
 
 
 **core_V1002** 2024-07-04

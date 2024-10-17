@@ -6,8 +6,6 @@
 
 [LuatOS-SoC_V2001_Air780EPS](https://gitee.com/openLuat/LuatOS/releases/download/v2001.ec7xx.release/LuatOS-SoC_V2001_Air780EPS.soc)
 
-历史版本
-
 ### 二次开发demo
 
 [LuatOS-Air780EPS](https://gitee.com/openLuat/LuatOS-Air780EPS)
