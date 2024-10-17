@@ -591,7 +591,7 @@ tx_buff:del()
 ![](image/L2KvbQgGaoqx1HxoPzlcMcHgnHR.png)
 
 #### 5.4.3 **演示视频生动展示**
-
+<video controls src="file/TCP单向认证.mp4"></video>
 #### 5.4.4 **完整实例深度剖析**
 
 ```lua
@@ -923,7 +923,7 @@ while true do
 ![](image/DuBhb7vEwoPao7xjSUlci9e8n9b.png)
 
 #### 7.4.2 **演示视频生动展示**
-
+<video controls src="file/TCP断链续连.mp4"></video>
 #### 7.4.3 **完整实例深度剖析**
 
 ```lua
