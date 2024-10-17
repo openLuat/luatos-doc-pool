@@ -1,4 +1,4 @@
-NHERIT: ../../base.yml
+INHERIT: ../../base.yml
 site_name: "合宙文档中心"
 site_url: https://docs.openluat.com/air780ex/luatos/
 
