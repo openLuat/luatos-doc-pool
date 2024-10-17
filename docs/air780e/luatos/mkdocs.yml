@@ -158,15 +158,25 @@ nav:
         - 总结: app/driver/gpio/summary.md
         - 常见问题: app/driver/gpio/faq.md
         - 扩展: app/driver/gpio/ext.md
+      - I2C: app/driver/i2c/index.md
       - SPI: app/driver/spi/index.md
     - 网络驱动(Socket):
-      - 简介: app/socket/index.md
+      - 简介: app/netapp/index.md
       - TCP通信: app/socket/tcp/index.md
       - UDP通信: app/socket/udp/index.md
       - HTTP通信: app/socket/http/index.md
       - MQTT通信: app/socket/mqtt/index.md
       - WebSocket通信: app/socket/websocket/index.md
       - FTP通信: app/socket/ftp/index.md
+      - NTP通信: app/socket/ntp/index.md
+    - 网络应用:
+      - 简介: app/netapp/index.md
+      - 阿里云: app/netapp/aliiot/index.md
+      - 腾讯云: app/netapp/tencentiot/index.md
+      - 百度云: app/netapp/baiduiot/index.md
+      - 华为云: app/netapp/huaweiiot/index.md
+      - 涂鸦云: app/netapp/tuyaiot/index.md
+      - errDump: app/netapp/errdump/index.md
     #   - TCP通信:
     #     - 简介: app/socket/tcp/index.md
     #     - 硬件准备: app/socket/tcp/01.md
@@ -305,18 +315,20 @@ nav:
         - 常见问题: app/service/module/faq.md
     - 4G通信:
       - 简介: app/mobile/index.md
-      - 通信信息(mobile):
-        - 简介: app/mobile/info/index.md
-        - IMEI获取: app/mobile/info/imei.md
-        - IMSI获取: app/mobile/info/imsi.md
-        - ICCID获取: app/mobile/info/iccid.md
-        - 信号强度: app/mobile/info/rssi.md
-        - 运营商信息: app/mobile/info/operator.md
-        - 切换SIM卡: app/mobile/info/sim.md
-        - 切换网络: app/mobile/info/net.md
-        - 设置APN: app/mobile/info/apn.md
-        - 获取网络状态: app/mobile/info/net_status.md
-        - 获取网络类型: app/mobile/info/net_type.md
+      - 通信信息(mobile): app/mobile/info/index.md
+      - 短消息(sms): app/mobile/sms/index.md
+      # - 通信信息(mobile):
+      #   - 简介: app/mobile/info/index.md
+      #   - IMEI获取: app/mobile/info/imei.md
+      #   - IMSI获取: app/mobile/info/imsi.md
+      #   - ICCID获取: app/mobile/info/iccid.md
+      #   - 信号强度: app/mobile/info/rssi.md
+      #   - 运营商信息: app/mobile/info/operator.md
+      #   - 切换SIM卡: app/mobile/info/sim.md
+      #   - 切换网络: app/mobile/info/net.md
+      #   - 设置APN: app/mobile/info/apn.md
+      #   - 获取网络状态: app/mobile/info/net_status.md
+      #   - 获取网络类型: app/mobile/info/net_type.md
       - 物联网卡专讲(iot):
         - 简介: app/mobile/iot/index.md
         - 硬件准备: app/mobile/iot/01.md
