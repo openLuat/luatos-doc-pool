@@ -284,19 +284,19 @@ Luatools 版本没问题的话， 就点击 LuaTOols 右上角的“项目管理
 
 1、低功耗PMS+模式功耗
 
-![f](./image/xiaoguozhanshi1.jpg)
+![f](./image/pms.jpg)
 
 2、wakeup0引脚唤醒并向服务器发送数据的功耗状态
 
-![f](./image/xiaoguozhanshi2wakeup.jpg)
+![f](./image/pms_wakeup0.jpg)
 
 3、串口唤醒并向服务器发送数据的功耗状态
 
-![ff](./image/xiaoguozhanshiuart.jpg)
+![ff](./image/pms_uart.jpg)
 
 4、定时器唤醒并向服务器发送数据的功耗状态
 
-![dd](./image/xiaoguozhanshitimer.jpg)
+![dd](./image/pms_timer.jpg)
 
 ## 扩展
 
