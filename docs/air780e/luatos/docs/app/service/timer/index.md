@@ -1,4 +1,3 @@
-# 006：Air780E-LuatOS-软件 demo-基础服务-定时器(timer)
 
 ## 一、定时器(timer)**的概述**
 
