@@ -117,7 +117,7 @@ Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools
 ![](image/B6EVbT6XroYDYkxF9IQczpcPnnc.png)
 
 #### 3.2.1 **压缩文件：完整文件包**
-[右键点我,另存为,下载完整压缩文件包](https://docs.openluat.com/file/Test_Code_UDP.zip){:target="_blank"}
+[右键点我,另存为,下载完整压缩文件包](file/Test_Code_UDP.zip){:target="_blank"}
 
 #### 3.2.2 压缩包内部文件
 
@@ -332,7 +332,7 @@ tx_buff:del()
 ---
 
 #### 4.4.2 **演示视频生动展示**
-<video src="https://docs.openluat.com/file/UDP-UART.mp4"></video>
+<video src="file/UDP-UART.mp4"></video>
 
 #### 4.4.3 **完整实例深度剖析**
 
