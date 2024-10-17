@@ -237,7 +237,7 @@ LLCOM 的下载链接：[LLCOM](https://llcom.papapoi.com/index.html) ，详细�
 ### 4.2 文章内容引用
 
 - 780E 开发板软硬件资料 ： [Air780E 产品手册 ](https://docs.openluat.com/air780e/product/)
-- 以上接口函数不做详细介绍，可通过此链接查看具体介绍：`<u>`socket - 网络接口 - LuatOS 文档 `</u>`
+- 以上接口函数不做详细介绍，可通过此链接查看具体介绍：[socket - 网络接口 - LuatOS 文档](https://wiki.luatos.com/api/socket.html)
 
 ### 4.3 核心脚本代码详解
 
@@ -491,7 +491,7 @@ TCP（Transmission Control Protocol，传输控制协议）本身是一种面向
 ### 5.2 文章内容引用
 
 - 780E 开发板软硬件资料 ： [Air780E 产品手册 ](https://docs.openluat.com/air780e/product/)
-- 以上接口函数不做详细介绍，可通过此链接查看具体介绍：`<u>`socket - 网络接口 - LuatOS 文档 `</u>`
+- 以上接口函数不做详细介绍，可通过此链接查看具体介绍：[socket - 网络接口 - LuatOS 文档](https://wiki.luatos.com/api/socket.html)
 
 ### 5.3 核心脚本代码详解
 
@@ -757,7 +757,7 @@ TCP（传输控制协议）确保数据在网络中可靠传输。当 TCP 连接
 ### 7.2 文章内容引用
 
 - 780E 开发板软硬件资料 ： [Air780E 产品手册 ](https://docs.openluat.com/air780e/product/)
-- 以上接口函数不做详细介绍，可通过此链接查看具体介绍：`<u>`socket - 网络接口 - LuatOS 文档 `</u>`
+- 以上接口函数不做详细介绍，可通过此链接查看具体介绍：[socket - 网络接口 - LuatOS 文档](https://wiki.luatos.com/api/socket.html)
 
 ### 7.3 核心脚本代码详解
 
