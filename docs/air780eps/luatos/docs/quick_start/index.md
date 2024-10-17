@@ -8,7 +8,6 @@
 - [采集温湿度数据并上传到网页查看](./nettemp/index.md)
 - [固件的远程升级](./upgrade/index.md)
 - [通过MQTT连接实现远程控制](./mqtt/index.md)
-- [驱动SPI小屏幕的详细讲解](./lcd/index.md)
 - [使用文件系统存储温湿度数据](./file/index.md)
 - [500毫安的电池让Air780EPS续航10年](./battery/index.md)
 - [Air780EPS 跟服务器之间的加密通信](./ssl/index.md)

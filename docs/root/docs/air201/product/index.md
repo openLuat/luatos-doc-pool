@@ -4,12 +4,11 @@
 
 ### 1. [Air201 的 LuatOS快速入门](https://docs.openluat.com/air201/luatos/quickstart/)
 
-
 ### 2. [Air201 硬件手册](https://docs.openluat.com/air201/luatos/hardware/)
 
 如需了解更多，可添加微信
 
-15989666845： 谢萧辉 
+15989666845： 谢萧辉
 
 进一步沟通；
 
@@ -19,26 +18,26 @@
 
 **4G 通信模块（780EPS）超低功耗:**
 
-![image](image/4g.png) 
+![image](image/4g.png)
 
 ### 2. GPS
-![image](image/gps.png) 
+
+![image](image/gps.png)
 
 ### 3. 音频
-![image](image/recode.png) 
+
+![image](image/recode.png)
 
 
 ### 4. 计步&加速度传感器
 
 **计步&三轴加速度计**
 
-![image](image/gsener.png) 
+![image](image/gsener.png)
 
 ### 5. BTB 外扩功能
 
-
-![image](image/btb.png) 
-
+![image](image/btb.png)
 
 ## ✅**MD**设计阶段  
 
@@ -105,7 +104,7 @@
    2. 我司提供 pcba，嵌入式软件，后台，小程序
    3. 需经过评审
 
-### 3. PCBA 
+### 3. PCBA
 
    1. 我司提供 pcba
    2. 提供板载驱动演示代码
@@ -116,8 +115,6 @@
 ### [您的电池可以用多久？](https://e3zt58hesn.feishu.cn/share/base/form/shrcnoi7m5H85T3yYyOlQ4W4Nja?iframeFrom=docx&ccm_open=iframe)
 
 ### [您需要多大的电池？](https://e3zt58hesn.feishu.cn/share/base/form/shrcnx7Z26k9l3Ma1cMLTZ2Gk8d?iframeFrom=docx&ccm_open=iframe)
-
-
 
 ## 💬 相关疑问
 
@@ -144,40 +141,37 @@
 
 ### 堆叠图
 
-- [堆叠图.pdf](https://docs.openluat.com/air201/luatos/hardware/design/file/HZ201P_10.8.wrl)
+- [堆叠图](https://docs.openluat.com/air201/luatos/hardware/design/file/HZ201P_10.8.wrl){:target="_blank"}
 
 ### BTB映射表
 
-
 #### 封装资料图
-- [btb连接器](./file/C2880692_datasheet.pdf)
 
+- [btb连接器](./file/c2880692_datasheet_airm2m.pdf){:target="_blank"}
 
 #### 映射表
-- [GPIO映射表.pdf](https://docs.openluat.com/air201/luatos/hardware/design/file/Air201_gpio_config.xlsx)
 
- 
+- [GPIO映射表.pdf](https://docs.openluat.com/air201/luatos/hardware/design/file/Air201_gpio_config.xlsx){:target="_blank"}
 
 #### 框位图
 
 - ![img](./image/air201_btb_ext.png)
 
-
 ## 认证证书
 
 ### CCC 证书
 
-- [Air780E_CCC中文证书.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221129105209534_Air780E_CCC%E4%B8%AD%E6%96%87%E8%AF%81%E4%B9%A6.pdf)
-- [Air780E_CCC英文证书.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221129105227474_Air780E_CCC%E8%8B%B1%E6%96%87%E8%AF%81%E4%B9%A6.pdf)
+- [Air780E_CCC中文证书.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221129105209534_Air780E_CCC%E4%B8%AD%E6%96%87%E8%AF%81%E4%B9%A6.pdf){:target="_blank"}
+- [Air780E_CCC英文证书.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221129105227474_Air780E_CCC%E8%8B%B1%E6%96%87%E8%AF%81%E4%B9%A6.pdf){:target="_blank"}
 
 ### 入网许可证
 
-- [Air780E入网许可证.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230130113321541_Air780E%E5%85%A5%E7%BD%91%E8%AE%B8%E5%8F%AF%E8%AF%81.pdf)
+- [Air780E入网许可证.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230130113321541_Air780E%E5%85%A5%E7%BD%91%E8%AE%B8%E5%8F%AF%E8%AF%81.pdf){:target="_blank"}
 
 ### SRRC 证书
 
-- [Air780E型号核准证.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230221104159741_Air780E%E5%9E%8B%E5%8F%B7%E6%A0%B8%E5%87%86%E8%AF%81.pdf)
+- [Air780E型号核准证.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230221104159741_Air780E%E5%9E%8B%E5%8F%B7%E6%A0%B8%E5%87%86%E8%AF%81.pdf){:target="_blank"}
 
 ### ROHS 证书
 
-- [Air780E-ROHS证书.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230313092434185_Air780E-ROHS%E8%AF%81%E4%B9%A6.pdf)
+- [Air780E-ROHS证书.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230313092434185_Air780E-ROHS%E8%AF%81%E4%B9%A6.pdf){:target="_blank"}

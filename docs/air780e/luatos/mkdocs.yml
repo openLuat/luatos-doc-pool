@@ -47,7 +47,7 @@ nav:
     #  - 总结: quick_start/mqtt/summary.md
     #  - 常见问题: quick_start/mqtt/faq.md
     #  - 扩展: quick_start/mqtt/ext.md
-    - 驱动SPI小屏幕的详细讲解: quick_start/lcd/index.md
+    #- 驱动SPI小屏幕的详细讲解: quick_start/lcd/index.md
     #  - 介绍: quick_start/lcd/index.md
     #  - 硬件准备: quick_start/lcd/01.md
     #  - 编写脚本: quick_start/lcd/02.md
@@ -230,29 +230,31 @@ nav:
     #     - 参考: app/socket/websocket/ref.md
     - 基础服务:
       - 简介: app/service/index.md
-      - 文件系统(io):
-        - 简介: app/service/fs/index.md
-        - 硬件准备: app/service/fs/01.md
-        - 基本用法: app/service/fs/basic.md
-        - 文件追加: app/service/fs/append.md
-        - 文件删除: app/service/fs/delete.md
-        - 文件重命名: app/service/fs/rename.md
-        - 文件拷贝: app/service/fs/copy.md
-        - 文件移动: app/service/fs/move.md
-        - 文件大小: app/service/fs/size.md
-        - 文件枚举: app/service/fs/lsdir.md
-        - 总结: app/service/fs/summary.md
-        - 常见问题: app/service/fs/faq.md
-        - 扩展: app/service/fs/ext.md
-        - 参考: app/service/fs/ref.md
-      - 定时器(timer):
-        - 简介: app/service/timer/index.md
-        - 硬件准备: app/service/timer/01.md
-        - 基本用法: app/service/timer/basic.md
-        - 总结: app/service/timer/summary.md
-        - 常见问题: app/service/timer/faq.md
-        - 扩展: app/service/timer/ext.md
-        - 参考: app/service/timer/ref.md
+      - 文件系统(io): app/service/fs/index.md
+      # - 文件系统(io):
+      #   - 简介: app/service/fs/index.md
+      #   - 硬件准备: app/service/fs/01.md
+      #   - 基本用法: app/service/fs/basic.md
+      #   - 文件追加: app/service/fs/append.md
+      #   - 文件删除: app/service/fs/delete.md
+      #   - 文件重命名: app/service/fs/rename.md
+      #   - 文件拷贝: app/service/fs/copy.md
+      #   - 文件移动: app/service/fs/move.md
+      #   - 文件大小: app/service/fs/size.md
+      #   - 文件枚举: app/service/fs/lsdir.md
+      #   - 总结: app/service/fs/summary.md
+      #   - 常见问题: app/service/fs/faq.md
+      #   - 扩展: app/service/fs/ext.md
+      #   - 参考: app/service/fs/ref.md
+      - 定时器(timer): app/service/timer/index.md
+      # - 定时器(timer):
+      #   - 简介: app/service/timer/index.md
+      #   - 硬件准备: app/service/timer/01.md
+      #   - 基本用法: app/service/timer/basic.md
+      #   - 总结: app/service/timer/summary.md
+      #   - 常见问题: app/service/timer/faq.md
+      #   - 扩展: app/service/timer/ext.md
+      #   - 参考: app/service/timer/ref.md
       - 任务机制(task):
         - 简介: app/service/task/index.md
         - 硬件准备: app/service/task/01.md

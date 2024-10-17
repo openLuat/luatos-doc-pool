@@ -149,10 +149,7 @@ sys.taskInit(function()
 
     -- 百度云 
     iotcloudc = iotcloud.new(iotcloud.BAIDU,{produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})
-    -- iotcloudc = iotcloud.new(iotcloud.BAIDU,{produt_id = "xxx",device_name = "xxx"},
-    {tls={server_cert=io.readFile("/luadb/GlobalSign.crt"),
-    client_cert=io.readFile("/luadb/client_cert"),
-    client_key=io.readFile("/luadb/client_private_key")}})
+    -- iotcloudc = iotcloud.new(iotcloud.BAIDU,{produt_id = "xxx",device_name = "xxx"}, {tls={server_cert=io.readFile("/luadb/GlobalSign.crt"), client_cert=io.readFile("/luadb/client_cert"), client_key=io.readFile("/luadb/client_private_key")}})
 
     if iotcloudc then
         iotcloudc:connect()
