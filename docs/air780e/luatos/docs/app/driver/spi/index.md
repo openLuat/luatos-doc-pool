@@ -1,31 +1,3 @@
-# 003：Air780E-LuatOS-软件 demo-硬件驱动-SPI
-
-> [!TIP]
-> ！！！不要删除这个高亮块中的内容！！！
-
-每次版本迭代时，重新复制之前最近的一份文章内容，放到本文档最上面，然后修改；
-
-必读文章：
-[docs.openluat.com 文档开发过程（新人必看）](https://e3zt58hesn.feishu.cn/wiki/BJWIwMWI0ijF2zkiamUcI0s7nwd)
-[docs 文章基本要求（大家仔细阅读，严格遵守）](https://e3zt58hesn.feishu.cn/docx/UplIdAaKso4k09xZSG4cMBGfn6e)
-
-写本篇文章时，文章内容可以参考的一些合宙内部的资料（有些资料可能不是 Air780E 的，仅供参考）：
-
-- **基于 LuatOS 代码仓库中的 spi 有关的 demo 来写，要有很方便可以买到的 spi 外设可以验证，选好 spi 外设后，在群里面讨论，确定外设合适之后，再开始写文章；**
-- 如果 demo 实现的功能不足以支撑编写本文章，例如功能不完整或者有错误，及时提出来，编写文档的同时完善 demo；
-- [Air780E 简介](https://docs.openluat.com/air780e/)
-- [Air780E 产品手册](https://docs.openluat.com/air780e/product/)
-- [https://doc.openluat.com/wiki/21?wiki_page_id=1937](https://doc.openluat.com/wiki/21?wiki_page_id=1937)
-- [https://doc.openluat.com/wiki/21?wiki_page_id=2032](https://doc.openluat.com/wiki/21?wiki_page_id=2032)
-
-写本篇文章时，文章目录结构可以参考一下文章：
-
-- [Air780E LuatOS 快速入门示例 HelloWorld](https://docs.openluat.com/air780e/luatos/quick_start/hello/)
-- [合宙 DTU 整机产品线文档中心](https://e3zt58hesn.feishu.cn/wiki/CFgkw6I66idUVnkAeaQcGpL4nfe?chunked=false)
-- [Air780E AT 快速入门示例 TCP 通信](https://docs.openluat.com/air780e/at/quick_start/tcp/tcp/)
-
-# 2024-10-14 第一版
-
 ## 一、SPI 概述
 
 SPI（Serial Peripheral Interface）是一种同步串行通信协议，广泛应用于微控制器和外围设备之间的数据传输。它由摩托罗拉公司开发，具有全双工通信能力，即可以同时进行数据的发送和接收。
@@ -45,51 +17,103 @@ SPI 的优点包括简单的硬件连接、高速数据传输和全双工通信�
 
 ## 三、准备硬件环境
 
+### 3.1 AIR780E 开发板
+
+![](image/EvqKb5cGiolJX2xBG4Wcmo53nke.png)
+
+[购买链接（数量：1，注意：需要配套采购 4G 物联网卡！）](https://item.taobao.com/item.htm?id=693774140934&pisk=fhpqwk6HuxH4KGubOZWNYNN42s6AH93Cod_1jhxGcZbD5i6Nja-nDZGtMFRySUCfoqhAjR8HyGZXmsVlrMI4nSXGiaAykHfX7hnAjNYM7NOjNvtvDOBiROkIdnLlWvxH7sbDqzxRA-4062417OBiRVP7IsHFBedNnUSNZ0S1fRjMS1xlraINjRYGo_4lXGBGSbuCaJDS6s0HvaA15B4hHrX5zR2Uvi50onP_QRkNmsbhZw2MVLSVgwxDhJaPbgvWU617f46kvQTc49k4JiRkYtjwBDVN71JAUa8EKRIJiEJl_Lits3JNo6JcaVwwYt-lsL53YJ7Wai6knBrgI3WVSesAgruP-KKkpTfSKD-keEtvUhZiIgTCrnpcQvmd3tbcUgWaWg2F7dd4S55c2g7I40lKbcr6leOTt5FOZ9IPRmsbs54dORN2LJVT6_bd4wibK&skuId=5098266470883&spm=a1z10.5-c-s.w4002-24045920841.33.75b21fd1Su4B3X)
+
+### 3.2 TYPE-C 线快充线
+
+![](image/PXvTbWhacokCVtxbJyLcYrjNnLd.png)
+
+[购买链接（数量1，注意：必须是快充线！）](https://item.taobao.com/item.htm?id=693774140934&pisk=fhpqwk6HuxH4KGubOZWNYNN42s6AH93Cod_1jhxGcZbD5i6Nja-nDZGtMFRySUCfoqhAjR8HyGZXmsVlrMI4nSXGiaAykHfX7hnAjNYM7NOjNvtvDOBiROkIdnLlWvxH7sbDqzxRA-4062417OBiRVP7IsHFBedNnUSNZ0S1fRjMS1xlraINjRYGo_4lXGBGSbuCaJDS6s0HvaA15B4hHrX5zR2Uvi50onP_QRkNmsbhZw2MVLSVgwxDhJaPbgvWU617f46kvQTc49k4JiRkYtjwBDVN71JAUa8EKRIJiEJl_Lits3JNo6JcaVwwYt-lsL53YJ7Wai6knBrgI3WVSesAgruP-KKkpTfSKD-keEtvUhZiIgTCrnpcQvmd3tbcUgWaWg2F7dd4S55c2g7I40lKbcr6leOTt5FOZ9IPRmsbs54dORN2LJVT6_bd4wibK&skuId=5098266470883&spm=a1z10.5-c-s.w4002-24045920841.33.75b21fd1Su4B3X)
+
+### 3.3 16 针 2.54MM 间距排针
+
+![](image/AQiEbah0no9UY6x6TWschbIanFG.png)
+
+[购买链接（数量：2）](https://item.szlcsc.com/8582483.html?fromZone=s_s__%2522%25E5%258D%2595%25E6%258E%2592%25E9%2592%2588%252016%2522)
+
+### 3.4 杜邦线
+
+![](image/PjMXb8QUco4h6dxvcTHcIb62noh.png)
+
+[购买链接（数量：6）](https://item.szlcsc.com/342967.html?mro=1&fromZone=s_s__%2522%25E6%259D%259C%25E9%2582%25A6%25E7%25BA%25BF%2522)
+
+### 3.5 USB 延长线
+
+![](image/SpDQb3G5foXmgQxSmi8cQOnanih.png)
+
+[购买链接（数量：1）](https://detail.tmall.com/item.htm?id=42429259292&ns=1&pisk=g3qELVm0TMIULVIjCAnr3bG50InKqDffYuGSE82odXcnO8Do45V5pXwl97rrs8UCp41pUpEag3tC9wek40ilGssfcJBK20fXPmTmVBHoKYjSZ3mgp2vOCGsfcJewdvXbIiZBJVBinUxuZ20ijvhiKvDnqOoidxnkx4xHSCctE0mor3DMSxDoK3cnqOkiUxDkK4DhjVDIF0cuZ0DJ0J2kbxghhD4UZsdEb2l0Kf-4Blk3eeeE_61LbPuEinGwq3qZLRnjc6KVPj4xOqg4sGtE4RDz_qaFgHPzE-Uo7uRhdSVgz7DTW_8rgz2Qky3NKMyiYXrjJqJluJoiZ4r3fsjYgDProk0wEHoTdfoZIoXWkfZZO7qESttqPcqjoD41W6gSYxPuvWJyqS2_hk3T4sRiwyMxjYrRnUlrrguJwAxqauUeZUunBAlfQO7AUTJ7yJRpAUL-SmHZG9MBrUAxl3TU0nYJyVcxQj6Bm&priceTId=2147807c17284635424824087edfb8&skuId=4882986072551&spm=a21n57.1.item.1.1c1c523c7u0T17&utparam=%7B%22aplus_abtest%22%3A%229e541584a7db6bbefdaae1043680670d%22%7D&xxc=ad_ztc)
+
+### 3.6 FLASH 模块
+
+![](image/Vyskbp1ZGoawLOxCtrVcDeYDnQg.png)
+
+[购买链接（数量：1，注意，一定要选 W25Q64 型号）](https://detail.tmall.com/item.htm?id=643974264651&ns=1&pisk=g8DmL7bXIjPjMt1753yXsKYRlmA8liw_GVBTWRUwazz5H5z9GVViW4NZH-nxrPuKSlHxBAc5IDisHnw9c-ibCR8pJp3icmw_z-jyhx4r4loPQNWwpEn4BiTpJppMggyMoe3xS2s34kqUQoPa_0-uckb4QS54z3qaXZ5N3VoyqzZg7tPau85zjlZ4QlzazLrUYl5a7lWzUzZaQPkJDOznQYMylC5bPPltSYq0iyokOOWgn9F48uzPQFHumeaE0zXNIrNjRFnoDEXI2-iE-k3vUt0nbDGaZAby-PMo4xlZVZxzK0c-9SckuO4-HoFUQ7SGI0cjD7kq3MWiY8zmd7yRusr3nrVE3WJOImVZZY2x3F1I2044t8hJNEFTnqcQRSRWPVmukVk0aZY8WXn-370eyT0_sfkYUx8yKgROa67a0OZyXY511Sr7qyIDR-U-vVubd3xlOIN4VoLKB3fwHw6NKetkq6sbguZxg&priceTId=213e380c17288920622578631e1b9d&skuId=5191497195584&spm=a21n57.1.item.1.16e5523c4grZfj&utparam=%7B%22aplus_abtest%22%3A%2241e8cdb61f1d508bfa2e5d6fa0309065%22%7D&xxc=ad_ztc)
+
 ## 四、准备软件环境
 
 注：以下软件下载链接，请复制后，粘贴到浏览器 URL 地址栏进行下载；
 
-### 4.1 相关软件
+### 4.1 Luatools
+
+[Luatools 日志打印与程序烧录软件下载](https://doc.openluat.com/wiki/52?wiki_page_id=5071)
 
 ### 4.2 core 固件和源码脚本
 
 注：core 固件，是基础环境，该固件由合宙官方提供，用户不可修改；源码脚本，为应用程序，可由客户自行修改；
 
+[core 固件和源码脚本下载链接](http://airtest.openluat.com:2900/download/core%E5%9B%BA%E4%BB%B6%E5%92%8C%E6%BA%90%E7%A0%81%E8%84%9A%E6%9C%AC.zip)
+
 ## 五、软硬件资料
 
 1、AIR708E 开发板原理图，打开 [Air780E 产品手册](https://docs.openluat.com/air780e/product/) ，访问页面中的 《[EVB_Air780X_V1.6.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240513100446379_EVB_Air780X_V1.6.zip)》
 
-2、[API 使用介绍说明](https://wiki.luatos.com/api/index.html)
+2、[API 使用介绍说明](https://wiki.luatos.com/api/spi.html)
 
 3、AIR708E 开发板使用说明，打开 [Air780E 产品手册](https://docs.openluat.com/air780e/product/) ，访问页面中的 《Core_Air780E 使用说明 V1.0.5.pdf》
 
 ### 5.1 开发板按钮与指示灯图示与说明
 
-![](static/XogobCMFeom3wNxO8RxcZSNEnXc.png)
+BOOT 按钮：启动引导，主要用于进入程序下载模式；
+
+复位按钮：系统复位；
+
+开机按钮：冷起动，用于给 4G 模块开机；
+
+电源指示：供电后常亮，红色；
+
+网络行指示：入网后常亮，翠绿色；
+
+![](image/XogobCMFeom3wNxO8RxcZSNEnXc.png)
 
 ### 5.2 硬件安装与连接
 
 #### 5.2.1 SIM 卡安装
 
-![](static/N5qwbT7a8ouqIixnyOccztvanNb.png)
+![](image/N5qwbT7a8ouqIixnyOccztvanNb.png)
 
 #### 5.2.2 实物连接图
 
 ##### 5.2.2.1 线序定义与颜色对应
 
+![](image/DDjab5R3yosbT7xCZ9iclC9snIf.png)
+
 ##### 5.2.2.2 FLASH 端
 
-![](static/YbZRbyII0obt0tx1Lx8c925En5b.png)
+![](image/YbZRbyII0obt0tx1Lx8c925En5b.png)
 
 ##### 5.2.2.3 开发板端
 
-![](static/RCVObl9Rfobr5dxbfSTcr4RQned.png)
+![](image/RCVObl9Rfobr5dxbfSTcr4RQned.png)
 
 ## 六、代码示例介绍
 
 ### 6.1 程序流程图
 
-![](static/QuJtbKO6qoFzZGxCNVvc11cVnpg.png)
+![](image/QuJtbKO6qoFzZGxCNVvc11cVnpg.png)
 
 ### 6.2 完整程序清单
 
@@ -204,36 +228,50 @@ sys.run()
 
 按图 1 进行连接无误后，开发板电源指示红灯常亮，网络指示灯灭，此时按下开机键，约 2 秒后释放，等待几秒网络指示绿灯常亮，即开机成功，如下图：
 
-![](static/TwnYbjERVoc0N4xocsDcqNdrnXc.jpeg)
+![](image/TwnYbjERVoc0N4xocsDcqNdrnXc.jpeg)
 
 ### 7.2 打开 Luatool 软件工具并进入项目管理测试页面
 
-![](static/NKmabILzZogST9x7hs3cCLZxn1g.png)
+![](image/NKmabILzZogST9x7hs3cCLZxn1g.png)
 
 ### 7.3 按序号步骤创建项目
 
-![](static/MmVEbbhp4oqzw1xLKY0c5YpNnyf.png)
+![](image/MmVEbbhp4oqzw1xLKY0c5YpNnyf.png)
 
-![](static/MieBbq92boNzrhxdxtgcA12Fn2c.png)
+![](image/MieBbq92boNzrhxdxtgcA12Fn2c.png)
 
 ### 7.4 按如下步骤进行程序烧录
 
-![](static/Ry1SbtPu2oVymixd1d8cERjwnfe.png)
+![](image/Ry1SbtPu2oVymixd1d8cERjwnfe.png)
 
-![](static/Y7oBbOePPoFE9pxCvXycstoBnjd.png)
+![](image/Y7oBbOePPoFE9pxCvXycstoBnjd.png)
 
-![](static/AaMjbMkDio5CKVxqZxQc2Hw9n9e.png)
+![](image/AaMjbMkDio5CKVxqZxQc2Hw9n9e.png)
 
 ### 7.5 观察下载过程后确认烧录结果
 
-![](static/EJJYbKeYEoozNWxPrDic1IrXnrb.png)
+![](image/EJJYbKeYEoozNWxPrDic1IrXnrb.png)
 
-![](static/AjMwbk1bFopMRsxcXVQcy0hQnec.png)
+![](image/AjMwbk1bFopMRsxcXVQcy0hQnec.png)
 
 ### 7.6 关闭下载页面回到查看日志页面
 
-![](static/O3dCbT0A9ox4Z1xPZvLccruLnzC.png)
+![](image/O3dCbT0A9ox4Z1xPZvLccruLnzC.png)
 
 ## 八、总结
 
 至此，我们已使用 AIR708E 开发板的 SPI 接口完成了对 W25Q64 读写操作。
+
+## 给读者的话
+
+> 本篇文章由`肇朔`开发；
+>
+> 本篇文章描述的内容，如果有错误、细节缺失、细节不清晰或者其他任何问题，总之就是无法解决您遇到的问题；
+>
+> 请登录[合宙技术交流论坛](https://chat.openluat.com/)，点击[文档找错赢奖金-Air780E-LuatOS-软件指南-硬件驱动-SPI](https://chat.openluat.com/#/page/matter?125=1846742035952959490&126=%E6%96%87%E6%A1%A3%E6%89%BE%E9%94%99%E8%B5%A2%E5%A5%96%E9%87%91-Air780E-LuatOS-%E8%BD%AF%E4%BB%B6%E6%8C%87%E5%8D%97-%E7%A1%AC%E4%BB%B6%E9%A9%B1%E5%8A%A8-SPI&askid=1846742035952959490)
+> 
+> 用截图标注+文字描述的方式跟帖回复，记录清楚您发现的问题；
+>
+> 我们会迅速核实并且修改文档；
+>
+> 同时也会为您累计找错积分，您还可能赢取月度找错奖金！

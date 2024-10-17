@@ -1,10 +1,3 @@
-# 002：Air780E-LuatOS-软件 demo-网络驱动-MQTT 通信
-
-> [!TIP]
-> 每次版本迭代时，重新复制之前最近的一份文章内容，放到本文档最上面，然后修改
-
-# 2024-10-11 第一版
-
 ## 一、MQTT 介绍
 
 MQTT 是一种低开销、低带宽占用的即时通讯协议，可以用极少的代码和带宽为远程设备提供实时可靠的消息服务。它适用于硬件性能低下的设备以及网络状况不佳的环境，因此在物联网（IoT）小型设备和移动应用等方面有广泛应用。
@@ -19,39 +12,57 @@ MQTT 的消息传递质量分为三种：最多一次（QoS 0）不保证交付�
 
 ## 三、准备硬件环境
 
+### 3.1 AIR780E 开发板
+
+![](image/ZIoyb0n55oAqLyxbacGcqLWWnon.png)
+[购买链接（注意：需要配套采购 4G 物联网卡！）](https://item.taobao.com/item.htm?id=693774140934&pisk=fhpqwk6HuxH4KGubOZWNYNN42s6AH93Cod_1jhxGcZbD5i6Nja-nDZGtMFRySUCfoqhAjR8HyGZXmsVlrMI4nSXGiaAykHfX7hnAjNYM7NOjNvtvDOBiROkIdnLlWvxH7sbDqzxRA-4062417OBiRVP7IsHFBedNnUSNZ0S1fRjMS1xlraINjRYGo_4lXGBGSbuCaJDS6s0HvaA15B4hHrX5zR2Uvi50onP_QRkNmsbhZw2MVLSVgwxDhJaPbgvWU617f46kvQTc49k4JiRkYtjwBDVN71JAUa8EKRIJiEJl_Lits3JNo6JcaVwwYt-lsL53YJ7Wai6knBrgI3WVSesAgruP-KKkpTfSKD-keEtvUhZiIgTCrnpcQvmd3tbcUgWaWg2F7dd4S55c2g7I40lKbcr6leOTt5FOZ9IPRmsbs54dORN2LJVT6_bd4wibK&skuId=5098266470883&spm=a1z10.5-c-s.w4002-24045920841.33.75b21fd1Su4B3X)
+
+### 3.2 TYPE-C 线快充线
+
+![](image/Laf9bqpXNo9oTMxX0eMc5hHWnEf.png)
+[购买链接（注意：必须是快充线！）](https://item.taobao.com/item.htm?id=693774140934&pisk=fhpqwk6HuxH4KGubOZWNYNN42s6AH93Cod_1jhxGcZbD5i6Nja-nDZGtMFRySUCfoqhAjR8HyGZXmsVlrMI4nSXGiaAykHfX7hnAjNYM7NOjNvtvDOBiROkIdnLlWvxH7sbDqzxRA-4062417OBiRVP7IsHFBedNnUSNZ0S1fRjMS1xlraINjRYGo_4lXGBGSbuCaJDS6s0HvaA15B4hHrX5zR2Uvi50onP_QRkNmsbhZw2MVLSVgwxDhJaPbgvWU617f46kvQTc49k4JiRkYtjwBDVN71JAUa8EKRIJiEJl_Lits3JNo6JcaVwwYt-lsL53YJ7Wai6knBrgI3WVSesAgruP-KKkpTfSKD-keEtvUhZiIgTCrnpcQvmd3tbcUgWaWg2F7dd4S55c2g7I40lKbcr6leOTt5FOZ9IPRmsbs54dORN2LJVT6_bd4wibK&skuId=5098266470883&spm=a1z10.5-c-s.w4002-24045920841.33.75b21fd1Su4B3X)
+
 ## 四、准备软件环境
 
 注：以下软件下载链接，请复制后，粘贴到浏览器 URL 地址栏进行下载；
 
-### 4.1 相关软件
+### 4.1 MQTT.fx
 
-![](static/Vl2XbjSjroDB0lx5ZxQcM5MFn1b.png)
+[MQTT 客户端软件下载](http://airtest.openluat.com:2900/download/mqttfx-1.7.1-windows-x64.zip)
 
-### 4.2 core 固件和源码脚本
+### 4.2 Luatools
+
+[Luatools 日志打印与程序烧录软件下载](https://doc.openluat.com/wiki/52?wiki_page_id=5071)
+
+### 4.3 core 固件和源码脚本
 
 注：core 固件，是基础环境，该固件由合宙官方提供，用户不可修改；源码脚本，为应用程序，可由客户自行修改；
+
+[core 固件和源码脚本下载链接](http://airtest.openluat.com:2900/download/002%EF%BC%9AAir780E-LuatOS-%E8%BD%AF%E4%BB%B6demo-%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8-MQTT%E9%80%9A%E4%BF%A1.zip)
 
 ## 五、软硬件资料
 
 1、AIR708E 开发板原理图，打开 [Air780E 产品手册](https://docs.openluat.com/air780e/product/) ，访问页面中的 《[EVB_Air780X_V1.6.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240513100446379_EVB_Air780X_V1.6.zip)》
 
-2、[API 使用介绍说明](https://wiki.luatos.com/api/index.html)
+2、[API 使用介绍说明](https://wiki.luatos.com/api/mqtt.html)
 
 3、AIR708E 开发板使用说明，打开 [Air780E 产品手册](https://docs.openluat.com/air780e/product/) ，访问页面中的 《Core_Air780E 使用说明 V1.0.5.pdf》
 
 ### 5.1 开发板按钮与指示灯图示与说明
 
-![](static/Rkd7bDgo1oMJURxLKvIcbBXKnAf.png)
+![](image/BrJHboj1golC6MxiKgDciVCTnpM.png)
+
+![](image/Rkd7bDgo1oMJURxLKvIcbBXKnAf.png)
 
 ### 5.2 硬件安装与连接
 
 #### 5.2.1 SIM 卡安装
 
-![](static/SXGabmCHmoSrXmxSanNcqxU9nAU.png)
+![](image/SXGabmCHmoSrXmxSanNcqxU9nAU.png)
 
 #### 5.2.2 实物连接图
 
-![](static/YGKNbGxeEowL2sxZJ5RcbGGjnpb.png)
+![](image/YGKNbGxeEowL2sxZJ5RcbGGjnpb.png)
 
 注：开发板与电脑通过 TYPE-C 线连接，用于通信与供电，所以必须使用“支持快充”的 TYPE-C 线才可以；
 
@@ -59,7 +70,7 @@ MQTT 的消息传递质量分为三种：最多一次（QoS 0）不保证交付�
 
 ### 6.1 DEMO 软件流程图
 
-![](static/BegPbRnkfoMifuxBV5lcuqIQn8D.png)
+![](image/BegPbRnkfoMifuxBV5lcuqIQn8D.png)
 
 ### 6.2 配置
 
@@ -222,60 +233,91 @@ sys.run()
 
 按图 1 所示通过 TYPE-C 线将开发板与电脑连接无误后，开发板电源指示红灯常亮，网络指示灯灭，如下图：
 
-![](static/YGJXb8LwuoNz2xxFXSvcMl2bnle.png)
+![](image/YGJXb8LwuoNz2xxFXSvcMl2bnle.png)
 
 此时按下开机键，约 2 秒后释放，等待几秒网络指示绿灯常亮，即开机成功，如下图：
 
-![](static/AVITboRH6oxy6YxTjNnc8qWQnno.png)
+![](image/AVITboRH6oxy6YxTjNnc8qWQnno.png)
 
 此时电脑设备管理器中会发现下图所示几个设备，即代表开机成功！
 
-![](static/Zo0lbSTUeonC7axSGq3cluApnVb.png)
+![](image/Zo0lbSTUeonC7axSGq3cluApnVb.png)
 
 ### 7.2 打开 Luatool 软件工具并进入项目管理测试页面
 
-![](static/T8Pwb4rxlouhHTxuaH8cgT3Dncd.png)
+![](image/T8Pwb4rxlouhHTxuaH8cgT3Dncd.png)
 
 图 4
 
 ### 7.3 按序号步骤创建项目
 
-![](static/Pn2sbCEzKobg77xu5Apcup2inre.png)
+![](image/Pn2sbCEzKobg77xu5Apcup2inre.png)
 
-![](static/AqC9bjwLkomcN3xhHnvclS88nYd.png)
+![](image/AqC9bjwLkomcN3xhHnvclS88nYd.png)
 
 ### 7.4 按如下步骤进行程序烧录
 
-![](static/GnySblVvkoDyqoxNsYOcauhGnzh.png)
+![](image/GnySblVvkoDyqoxNsYOcauhGnzh.png)
 
-![](static/UkPcb8eLPo7xycxSVMwcY4DRnhd.png)
+![](image/UkPcb8eLPo7xycxSVMwcY4DRnhd.png)
 
 ### 7.5 观察下载过程后确认烧录结果
 
-![](static/GWROb7b4Wowql5xOnHCcIy6bnKd.png)
+![](image/GWROb7b4Wowql5xOnHCcIy6bnKd.png)
 
-![](static/CdtdbidmboLMPyx5LaGcZmx3nfa.png)
+![](image/CdtdbidmboLMPyx5LaGcZmx3nfa.png)
 
 ### 7.6 查看调试日志，获取设备发布与订阅主题
 
-![](static/BEimboBssoig7hxozgBc2mJ2n4g.png)
+![](image/BEimboBssoig7hxozgBc2mJ2n4g.png)
 
 ### 7.7 打开 MQTT 客户端 MQTT.fx 应用程序并配置
 
-![](static/CLgSbtLWVoUpBYxWTF1cyONxnAb.png)
+#### 7.7.1 MQTT 客户端基本配置
+
+ProfileName：合宙（可修改为你想要的名称）
+
+BrokerAddress：[http://lbsmqtt.airm2m.com](http://lbsmqtt.airm2m.com) （合宙提供的免费测试服务器，也可修改为自己的服务器）
+
+BrokerPort：1883 （端口号）
+
+UserName：user
+
+Password：password
+
+#### 7.7.2 两个重要主题
+
+设备发布主题：861959068926349/up （设备向服务器发送数据使用）
+
+设备订阅主题：861959068926349/down （接收服务器数据主题）
+
+![](image/CLgSbtLWVoUpBYxWTF1cyONxnAb.png)
 
 ### 7.8 订阅设备主题
 
-![](static/GaLCbgXtRosNjNxDL3ScTaG8npd.png)
+![](image/GaLCbgXtRosNjNxDL3ScTaG8npd.png)
 
 ### 7.9 MQTT 客户端给开发板发送数据
 
-![](static/YuSWbMgSlokYzUx8cHsc5nyMnse.png)
+![](image/YuSWbMgSlokYzUx8cHsc5nyMnse.png)
 
 ### 7.10 查 MQTT 客户端订阅的设备数据
 
-![](static/APRnbJ60ioErcyx7L0lcBqaGnIg.png)
+![](image/APRnbJ60ioErcyx7L0lcBqaGnIg.png)
 
 ## 总结
 
 至此，我们已使用 AIR708E 开发板完成了 MQTT 通信的基本功能。
+## 给读者的话
+
+> 本篇文章由`肇朔`开发；
+>
+> 本篇文章描述的内容，如果有错误、细节缺失、细节不清晰或者其他任何问题，总之就是无法解决您遇到的问题；
+>
+> 请登录[合宙技术交流论坛](https://chat.openluat.com/)，点击[文档找错赢奖金-Air780E-LuatOS-软件指南-网络驱动-MQTT通信](https://chat.openluat.com/#/page/matter?125=1846736934202900482&126=%E6%96%87%E6%A1%A3%E6%89%BE%E9%94%99%E8%B5%A2%E5%A5%96%E9%87%91-Air780E-LuatOS-%E8%BD%AF%E4%BB%B6%E6%8C%87%E5%8D%97-%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8-MQTT%E9%80%9A%E4%BF%A1&askid=1846736934202900482)
+> 
+> 用截图标注+文字描述的方式跟帖回复，记录清楚您发现的问题；
+>
+> 我们会迅速核实并且修改文档；
+>
+> 同时也会为您累计找错积分，您还可能赢取月度找错奖金！
