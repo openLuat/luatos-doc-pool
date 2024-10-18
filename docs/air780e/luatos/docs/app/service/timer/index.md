@@ -9,9 +9,7 @@
 
 ### 2.1 Air780E 开发板
 
-准备一块开发板，有两种开发板可以使用，二选一即可；
-
-第一种开发板是 Air780E 核心板，如下图所示：
+本demo使用的是 Air780E 核心板，如下图所示：
 
 ![](image/NWtBbFTBkoEzIxxLxG8c9gv6ndh.png)
 
