@@ -1,32 +1,3 @@
-# 003：Air780E-LuatOS-软件 demo-网络应用-errDump
-
-> [!TIP]
-> ！！！不要删除这个高亮块中的内容！！！
-
-每次版本迭代时，重新复制之前最近的一份文章内容，放到本文档最上面，然后修改；
-
-必读文章：
-[docs.openluat.com 文档开发过程（新人必看）](https://e3zt58hesn.feishu.cn/wiki/BJWIwMWI0ijF2zkiamUcI0s7nwd)
-[docs 文章基本要求（大家仔细阅读，严格遵守）](https://e3zt58hesn.feishu.cn/docx/UplIdAaKso4k09xZSG4cMBGfn6e)
-
-写本篇文章时，文章内容可以参考的一些合宙内部的资料（有些资料不是 Air780E 的，仅供参考）：
-
-- 基于 LuatOS 代码仓库中的 onenet 有关的 demo 来写；
-- 如果 demo 实现的功能不足以支撑编写本文章，例如功能不完整或者有错误，及时提出来，编写文档的同时完善 demo；
-- [Air780E 简介](https://docs.openluat.com/air780e/)
-- [Air780E 产品手册](https://docs.openluat.com/air780e/product/)
-- [https://docs.openluat.com/blog/pages/20240912_any_luatos_iotcloud_onenet/](https://docs.openluat.com/blog/pages/20240912_any_luatos_iotcloud_onenet/)
-- Air724UG（仅供参考）：[https://doc.openluat.com/wiki/21?wiki_page_id=1978](https://doc.openluat.com/wiki/21?wiki_page_id=1978)
-- Air724UG（仅供参考）：[https://doc.openluat.com/wiki/92?wiki_page_id=5948](https://doc.openluat.com/wiki/92?wiki_page_id=5948)
-
-写本篇文章时，文章目录结构可以参考一下文章：
-
-- [Air780E LuatOS 快速入门示例 HelloWorld](https://docs.openluat.com/air780e/luatos/quick_start/hello/)
-- [合宙 DTU 整机产品线文档中心](https://e3zt58hesn.feishu.cn/wiki/CFgkw6I66idUVnkAeaQcGpL4nfe?chunked=false)
-- [Air780E AT 快速入门示例 TCP 通信](https://docs.openluat.com/air780e/at/quick_start/tcp/tcp/)
-
-# 2024-10-14 第一版
-
 ## 一、errDump 功能概述
 
 LuatOS-Air 错误日志上报功能模块名叫：errDump，errDump 对“量产投放市场的设备，远程调试初步定位问题”至关重要， 强烈建议客户一定要使用此功能
@@ -47,7 +18,7 @@ errDump 就是将模块运行过程中产生的错误信息或者应用日志通
 
 此核心板的详细使用说明参考：[Air780E 产品手册](https://docs.openluat.com/air780e/product/) 中的 << 开发板 Core_Air780E 使用说明 V1.0.5.pdf>>。
 
-![](static/NvWQbA3O0oum6pxkFLtcWSKpngc.png)
+![](image/HwHIbALQuohZ8BxyRHmcy0vbn1b.png)
 
 ### 3.2 SIM 卡
 
@@ -80,6 +51,7 @@ WINDOWS 系统。
 - 将固件和脚本烧录到模块中，使用说明参考：[Luatools 下载和详细使用](https://docs.openluat.com/Luatools/)
 - 合宙云平台：[https://iot.openluat.com](https://iot.openluat.com)
 - 源码和固件已打包，如下所示：
+[右键点我,另存为,下载完整压缩文件包](file/完整文件包.zip){:target="_blank"}
 
 ### 5.2 本 demo 使用 api 介绍
 
@@ -148,21 +120,21 @@ WINDOWS 系统。
 
 ##### 6.1.1.1  打开 IoT 平台
 
-![](static/VkfWb4azAontpXx3gGScJViQn1b.png)
+![](image/EIB8bPUpeo80lDxnl2Cc90opnVV.png)
 
 ##### 6.1.1.2  新建一个项目
 
-![](static/SEDgb9EFtoeRTQxIJz1c4RvBn0d.png)
+![](image/HhsnbEd7sodHMrxNtQccCk6qn2A.png)
 
 ##### 6.1.1.3  将你自己建的项目 key 复制到 demo 中
 
-![](static/GkhFbWJQzog2Czx6tUKcI52rnih.png)
+![](image/OS1mbN90jobxF9xbtv5cHgBunJd.png)
 
 ##### 6.1.1.4 打开设备 DEBUG 开关
 
-![](static/TasUbNQNso5J4Lx2wj7cTIPlnVf.png)
+![](image/ML3lbuOXEoh3v6xUAvmczI48nhU.png)
 
-![](static/R6Aib4ZPBoJkBwxE1WvcLsVknGg.png)
+![](image/BJ9GbxcqcoZKG2xhHWKcmV76ndX.png)
 
 #### 6.1.2 demo 介绍
 
@@ -239,11 +211,11 @@ sys.run()
 
 ### 7.1 Luatools 日志打印
 
-![](static/PQIsbIsHZo9jbRx6Y7HcPivInuf.png)
+![](image/Sx8HbDQ9zoDmKUxNLODc4czwnfb.png)
 
 ### 7.2 云平台查看错误上报
 
-![](static/Z4nXbbZFWo5basxamy6cDFMjnYd.png)
+![](image/A9tSbg3pYo6sQAx0z2Wc9EDKnwe.png)
 
 ## 八、总结
 
@@ -252,20 +224,3 @@ sys.run()
 ## 扩展
 
 ## 常见问题
-
-
-
-## 给读者的话
-
-> 本篇文章由`孙晨龙`开发；
->
-> 本篇文章描述的内容，如果有错误、细节缺失、细节不清晰或者其他任何问题，总之就是无法解决您遇到的问题；
->
-> 请登录[合宙技术交流论坛](https://chat.openluat.com/)，点击[文档找错赢奖金-Air780E-LuatOS-软件指南-网络应用-errDump](https://chat.openluat.com/#/page/matter?125=1846802109790552065&126=%E6%96%87%E6%A1%A3%E6%89%BE%E9%94%99%E8%B5%A2%E5%A5%96%E9%87%91-Air780E-LuatOS-%E8%BD%AF%E4%BB%B6%E6%8C%87%E5%8D%97-%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8-errDump&askid=1846802109790552065)；
->
-> 用截图标注+文字描述的方式跟帖回复，记录清楚您发现的问题；
->
-> 我们会迅速核实并且修改文档；
->
-> 同时也会为您累计找错积分，您还可能赢取月度找错奖金！
-

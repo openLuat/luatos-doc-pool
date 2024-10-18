@@ -10,7 +10,7 @@
 
 [LuatOS-Air780EG](https://gitee.com/openLuat/LuatOS-Air780EG)
 
-## LuatOS固件版本更新说明（最新V1112）
+### LuatOS固件版本更新说明（最新V1112）
 
 **core_V1112** 2024-09-03
 
@@ -30,12 +30,12 @@
 
 [core_V1108](https://gitee.com/openLuat/LuatOS/releases/download/v1108.ec618.release/core_V1108.zip)
 
-## 二次开发demo
+### 二次开发demo
 
 [LuatOS-Air780EG](https://gitee.com/openLuat/LuatOS-Air780EG)
 
 
-## LuatOS固件版本更新说明（历史版本）
+### LuatOS固件版本更新说明（历史版本）
 
 **core_V1112** 2024-09-03
 
