@@ -1,32 +1,3 @@
-# 002：Air780E-LuatOS-软件 demo-网络驱动-NTP 通信
-
-> [!TIP]
-> ！！！不要删除这个高亮块中的内容！！！
-
-每次版本迭代时，重新复制之前最近的一份文章内容，放到本文档最上面，然后修改；
-
-必读文章：
-[docs.openluat.com 文档开发过程（新人必看）](https://e3zt58hesn.feishu.cn/wiki/BJWIwMWI0ijF2zkiamUcI0s7nwd)
-[docs 文章基本要求（大家仔细阅读，严格遵守）](https://e3zt58hesn.feishu.cn/docx/UplIdAaKso4k09xZSG4cMBGfn6e)
-
-写本篇文章时，文章内容可以参考的一些合宙内部的资料（有些资料可能不是 Air780E 的，仅供参考）：
-
-- 基于 LuatOS 代码仓库中的 NTP 有关的 demo 来写；
-- 如果 demo 实现的功能不足以支撑编写本文章，例如功能不完整或者有错误，及时提出来，编写文档的同时完善 demo；
-- [Air780E 简介](https://docs.openluat.com/air780e/)
-- [Air780E 产品手册](https://docs.openluat.com/air780e/product/)
-- [https://doc.openluat.com/wiki/21?wiki_page_id=2184](https://doc.openluat.com/wiki/21?wiki_page_id=2184)
-- [https://doc.openluat.com/wiki/21?wiki_page_id=1958](https://doc.openluat.com/wiki/21?wiki_page_id=1958)
-- [https://oldask.openluat.com/article/912](https://oldask.openluat.com/article/912)
-
-写本篇文章时，文章目录结构可以参考一下文章：
-
-- [Air780E LuatOS 快速入门示例 HelloWorld](https://docs.openluat.com/air780e/luatos/quick_start/hello/)
-- [合宙 DTU 整机产品线文档中心](https://e3zt58hesn.feishu.cn/wiki/CFgkw6I66idUVnkAeaQcGpL4nfe?chunked=false)
-- [Air780E AT 快速入门示例 TCP 通信](https://docs.openluat.com/air780e/at/quick_start/tcp/tcp/)
-
-# 2024-10-12 第一版
-
 ## 一、NTP 通信概述
 
 很多场景中，由于业务需要，模块需要保持正确的系统时钟，才能正常工作。但是模块上电后的初试时间戳是 946713600（即 2000/01/01,16:00:00），所以同步时钟成为了开发者要解决的重要问题。对于 Cat.1 模块, 移动/电信卡, 通常会下发基站时间,  那么 sntp 就不是必要的, 而联通卡通常不会下发, 就需要 sntp 了
@@ -49,13 +20,13 @@ NTP 和简化版的 SNTP（Simple Network Time Protocol）主要区别在于精�
 
 此核心板的详细使用说明参考：[Air780E 产品手册](https://docs.openluat.com/air780e/product/) 中的 << 开发板 Core_Air780E 使用说明 V1.0.5.pdf>>，X.X.X 指版本号；核心板使用过程中遇到任何问题，可以直接参考这份使用说明 pdf 文档。
 
-![](static/JbxLbdBgjorqpTxPKz1cY9tDn9L.png)
+![](image/JbxLbdBgjorqpTxPKz1cY9tDn9L.png)
 
 ### 3.2 SIM 卡
 
 请准备一张可正常上网的 SIM 卡，该卡可以是物联网卡或您的个人手机卡。
 
-**特别提****醒：**请确保 SIM 卡未欠费且网络功能正常，以便顺利进行后续操作。
+**特别提醒：**请确保 SIM 卡未欠费且网络功能正常，以便顺利进行后续操作。
 
 ### 3.3 数据通信线
 
@@ -79,6 +50,8 @@ WINDOWS 系统。
 - 本教程使用的 demo：[https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/sntp](https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/sntp)
 - 将固件和脚本烧录到模块中：[Luatools 下载和使用教程 - 合宙模组资料中心](https://docs.openluat.com/Luatools/)
 - 源码和固件已打包，如下所示：
+[右键点我,另存为,下载完整压缩文件包](file/完整文件包.zip){:target="_blank"}
+
 
 ### 5.2 demo 使用 api 介绍
 
@@ -222,7 +195,7 @@ end)
 
 ## 七、功能验证
 
-![](static/OMsDbr41EofxN3xxQxvcIwwwnld.png)
+![](image/OMsDbr41EofxN3xxQxvcIwwwnld.png)
 
 ## 八、总结
 
@@ -243,19 +216,3 @@ end)
 ### 3、这个函数 socket.sntp()后每次在程序中调用 os.time 也是实时时间了吗？
 
 是的，只要时间同步成功了，就是实时时间了。
-
-
-
-## 给读者的话
-
-> 本篇文章由`孙晨龙`开发；
->
-> 本篇文章描述的内容，如果有错误、细节缺失、细节不清晰或者其他任何问题，总之就是无法解决您遇到的问题；
->
-> 请登录[合宙技术交流论坛](https://chat.openluat.com/)，点击[文档找错赢奖金-Air780E-LuatOS-软件指南-网络驱动-NTP通信](https://chat.openluat.com/#/page/matter?125=1846800823045193730&126=%E6%96%87%E6%A1%A3%E6%89%BE%E9%94%99%E8%B5%A2%E5%A5%96%E9%87%91-Air780E-LuatOS-%E8%BD%AF%E4%BB%B6%E6%8C%87%E5%8D%97-%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8-NTP%E9%80%9A%E4%BF%A1&askid=1846800823045193730)；
->
-> 用截图标注+文字描述的方式跟帖回复，记录清楚您发现的问题；
->
-> 我们会迅速核实并且修改文档；
->
-> 同时也会为您累计找错积分，您还可能赢取月度找错奖金！

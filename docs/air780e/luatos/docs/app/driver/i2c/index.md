@@ -1,37 +1,8 @@
-# 001：Air780E-LuatOS-软件 demo-硬件驱动-I2C
-
-- 本篇文章的目标用户：第一次使用合宙对应模组产品的工程师用户；
-- 本篇文章的核心目标：详细，可操作，目标用户参考文章可以很方便的独立搭建环境，独立完成演示项目的开发和调试，这个过程不需要再咨询任何人提供任何技术支持服务；
-
-大家写文档时，事无巨细，都要写明白，包括但不限于以下举例说明的几种情况：
-
-1、我们认为的常识，用户大概率不知道，常识也要交代清楚；例如烧录使用的固件文件，要交代清楚从哪里获取文件；测试使用的开发板，要交代清楚从哪里购买开发板；
-
-2、写操作步骤或者业务逻辑时，要考虑各种情况，不能只写每一步正确无误的逻辑链条，要写出来每一步都可能出现哪些异常，出现异常了怎么处理；
-
-3、文档教程中测试使用的软硬件环境，例如测试使用的软件代码，要给出准确的下载路径，最好自己在文档中再放一份附件源码和打包好的可以直接用来烧录的附件固件文件；
-
-- 本篇文章内容可以参考的已有关键资料（有些资料不是 Air780E 的，仅供参考）：
-
-  - 基于 LuatOS 代码仓库中的 i2c 有关的 demo 来写，如果 demo 实现的功能不足以支撑编写本文章，例如功能不完整或者有错误，及时提出来，编写文档的同时完善 demo；
-  - 780E 硬件手册
-  - [docs 文档任务管理](https://e3zt58hesn.feishu.cn/wiki/De5jw9G9yiD9d4kynRWcq9non9b?table=tblO3vd2JU3ffbRZ&view=vewHtJ4Cmt)总表 I2C 子目录下定义的内容；
-  - [https://doc.openluat.com/wiki/21?wiki_page_id=1943](https://doc.openluat.com/wiki/21?wiki_page_id=1943)
-  - [https://doc.openluat.com/wiki/21?wiki_page_id=2027](https://doc.openluat.com/wiki/21?wiki_page_id=2027)
-  - [https://doc.openluat.com/wiki/21?wiki_page_id=2177](https://doc.openluat.com/wiki/21?wiki_page_id=2177)
-- 本篇文章目录结构可以参考以下文章：
-
-  - [https://docs.openluat.com/air780e/luatos/quick_start/hello/](https://docs.openluat.com/air780e/luatos/quick_start/hello/)
-  - [合宙 DTU 整机产品线文档中心](https://e3zt58hesn.feishu.cn/wiki/CFgkw6I66idUVnkAeaQcGpL4nfe?chunked=false)
-  - [https://docs.openluat.com/air780e/at/quick_start/tcp/tcp/](https://docs.openluat.com/air780e/at/quick_start/tcp/tcp/)
-
-# 2024-10-11 第一版（正文内容的第一级标题使用 H2 标题格式）
-
 ## 一、I2C 概述：
 
 Air780E 可支持 1 路 I2C 接口，如果复用的话最多有两路：
 
-![](static/B5eCbkNTDoBstFxWUzzcmr3pn02.png)
+![](image/PqlvbpZ5hox8wWxMyRvcnbTAn2b.png)
 
 I2C 配置：
 
@@ -52,11 +23,11 @@ I2C 配置：
 
 I2C 的参考电路如下：
 
-![](static/NbqxbuP5koBK8MxofYGcRmJQnss.png)
+![](image/XzlUb4uDuoUf9sxu3Hgch6Ljnvd.png)
 
 Air780E 的 I2C 接口电压是 1.8V/3.3V 可配置，通过 PIN100 IO_SEL 配置 IO 口电平，能够满足大部分外 设的直接需求，但是如果要和 5V 或者以上电平的外设通信，那就必须要加电平转换电路
 
-![](static/HgtrbarxHob2Z9xig5ZcfFwPnee.png)
+![](image/NACDbzA3coAqmkxRC6YcxLzXn4d.png)
 
 ## 二、演示功能概述
 
@@ -70,7 +41,7 @@ Air780E 的 I2C 接口电压是 1.8V/3.3V 可配置，通过 PIN100 IO_SEL 配�
 
 此核心板的详细使用说明参考：[Air780E 产品手册](https://docs.openluat.com/air780e/product/) 中的 << 开发板 Core_Air780E 使用说明 V1.0.5.pdf>>；核心板使用过程中遇到任何问题，可以直接参考这份使用说明 pdf 文档。
 
-![](static/RBmHb0iE7oOe8OxXkIEcoB7rnJe.png)
+![](image/GFB4bhx4io4F8Ox1faucKrDUn7f.png)
 
 ### 3.2 数据通信线
 
@@ -82,11 +53,11 @@ WINDOWS 系统。
 
 ### 3.4 sht20 温湿度传感器一个
 
-![](static/ZmHSbveyuoeM7qxEwaycOs6Inkd.jpg)
+![](image/W99DbWiRQoWip5xgrK5c5l6lnJh.jpg)
 
 ### 3.5 780E 与 sht20 接线图如下
 
-![](static/PnCEbek1AocNVqxpzZUcrS6QnMe.png)
+![](image/CteAbIbzNoPQX3xUJqvcN3wlnXg.png)
 
 ## 四、准备软件环境
 
@@ -102,6 +73,7 @@ WINDOWS 系统。
 - 本教程使用的 demo：[https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/sht20](https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/sht20)
 - 将固件和脚本烧录到模块中：[Luatools 下载和使用教程 - 合宙模组资料中心](https://docs.openluat.com/Luatools/)
 - 源码和固件已打包，如下所示：
+[右键点我,另存为,下载完整压缩文件包](file/完整文件包.zip){:target="_blank"}
 
 ### 5.2 demo 使用 api 介绍
 
@@ -262,7 +234,7 @@ sys.run()
 
 成功使用 I2C 协议读取到 sht20 传感器的温湿度数值。
 
-![](static/K5FCb9MImoPfJtxZJB2clu47n6b.png)
+![](image/H0vAbb5mso4LM0xhDc4cvxwTnRb.png)
 
 ## 八、总结
 
@@ -299,20 +271,3 @@ setup 之后，只要没有 close，就可以反复读写数据
 如果 i2c 外设手册中给的是 8bit 地址，需要把 8bit 地址右移 1 位，赋值给 i2c_addr 变量
 
 如果 i2c 外设手册中给的是 7bit 地址，直接把 7bit 地址赋值给 i2c_addr 变量即可
-
-
-
-## 给读者的话
-
-> 本篇文章由`孙晨龙`开发；
->
-> 本篇文章描述的内容，如果有错误、细节缺失、细节不清晰或者其他任何问题，总之就是无法解决您遇到的问题；
->
-> 请登录[合宙技术交流论坛](https://chat.openluat.com/)，点击[文档找错赢奖金-Air780E-LuatOS-软件指南-硬件驱动-I2C](https://chat.openluat.com/#/page/matter?125=1846799249380081665&126=%E6%96%87%E6%A1%A3%E6%89%BE%E9%94%99%E8%B5%A2%E5%A5%96%E9%87%91-Air780E-LuatOS-%E8%BD%AF%E4%BB%B6%E6%8C%87%E5%8D%97-%E7%A1%AC%E4%BB%B6%E9%A9%B1%E5%8A%A8-I2C&askid=1846799249380081665)
->
-> 用截图标注+文字描述的方式跟帖回复，记录清楚您发现的问题；
->
-> 我们会迅速核实并且修改文档；
->
-> 同时也会为您累计找错积分，您还可能赢取月度找错奖金！
-

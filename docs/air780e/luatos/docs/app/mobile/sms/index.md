@@ -1,29 +1,3 @@
-# 004：Air780E-LuatOS-软件 demo-4G 通信-短消息(sms)
-
-> [!TIP]
-> ！！！不要删除这个高亮块中的内容！！！
-
-每次版本迭代时，重新复制之前最近的一份文章内容，放到本文档最上面，然后修改；
-
-必读文章：
-[docs.openluat.com 文档开发过程（新人必看）](https://e3zt58hesn.feishu.cn/wiki/BJWIwMWI0ijF2zkiamUcI0s7nwd)
-[docs 文章基本要求（大家仔细阅读，严格遵守）](https://e3zt58hesn.feishu.cn/docx/UplIdAaKso4k09xZSG4cMBGfn6e)
-
-写本篇文章时，文章内容可以参考的一些合宙内部的资料（有些资料可能不是 Air780E 的，仅供参考）：
-
-- **基于 LuatOS 代码仓库中的短消息 sms 有关的 demo 来写；**
-- 如果 demo 实现的功能不足以支撑编写本文章，例如功能不完整或者有错误，及时提出来，编写文档的同时完善 demo；
-- [Air780E 简介](https://docs.openluat.com/air780e/)
-- [Air780E 产品手册](https://docs.openluat.com/air780e/product/)
-
-写本篇文章时，文章目录结构可以参考一下文章：
-
-- [Air780E LuatOS 快速入门示例 HelloWorld](https://docs.openluat.com/air780e/luatos/quick_start/hello/)
-- [合宙 DTU 整机产品线文档中心](https://e3zt58hesn.feishu.cn/wiki/CFgkw6I66idUVnkAeaQcGpL4nfe?chunked=false)
-- [Air780E AT 快速入门示例 TCP 通信](https://docs.openluat.com/air780e/at/quick_start/tcp/tcp/)
-
-# 2024-10-14 第一版
-
 ## 一、SMS 简介
 
 SMS（短消息服务，Short Message Service）功能主要用于在蜂窝网络中传输短消息。
@@ -46,7 +20,7 @@ SMS（短消息服务，Short Message Service）功能主要用于在蜂窝网�
 2. 合宙 780E 核心板购买链接([https://item.taobao.com/item.htm?id=693774140934](https://item.taobao.com/item.htm?id=693774140934))。
 3. 此核心板的详细使用说明参考：[Air780E 产品手册](https://docs.openluat.com/air780e/product/) 中的《开发板 Core_Air780E 使用说明 V1.0.5.pdf 》，核心板使用过程中遇到任何问题，可以直接参考这份使用说明 pdf 文档。
 
-![](static/HQ3FbVbFQoAxwFxbxkKcCRH4nun.png)
+![](image/GhlhbnhVNoPANGxY7pjcFwjCnrb.png)
 
 ### 3.2 数据通信线
 
@@ -75,7 +49,8 @@ Air780E 不支持电信卡的短信功能!!
 - 780E 模块使用固件：[SDK& Demo - 合宙文档中心](https://docs.openluat.com/air780e/luatos/firmware/)，本 demo 使用的固件版本是：LuatOS-SoC_V1112_EC618_FULL.soc
 - 本教程使用的 demo：[https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/sms](https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/sms)
 - 将固件和脚本烧录到模块中，使用说明参考：[Luatools 下载和详细使用](https://docs.openluat.com/Luatools/)
-  源码和固件已打包，如下所示：
+- 源码和固件已打包，如下所示：
+[右键点我,另存为,下载完整压缩文件包](file/完整文件包.zip){:target="_blank"}
 
 ### 5.3 本 demo 使用 api 简介
 
@@ -197,7 +172,7 @@ sys.run()
 
 成功发送短信。
 
-![](static/CLCQbkQJQokWpAxn8tCcrt7xnXf.png)
+![](image/TY9TbfgnQorDstxHK2gcPBQHnob.png)
 
 ## 八、总结
 
@@ -220,19 +195,3 @@ Air780E 不支持电信卡的短信功能!!
 ### 3、是否支持彩信功能
 
 不支持
-
-
-
-## 给读者的话
-
-> 本篇文章由`孙晨龙`开发；
->
-> 本篇文章描述的内容，如果有错误、细节缺失、细节不清晰或者其他任何问题，总之就是无法解决您遇到的问题；
->
-> 请登录[合宙技术交流论坛](https://chat.openluat.com/)，点击[文档找错赢奖金-Air780E-LuatOS-软件指南-4G通信-短消息(sms)](https://chat.openluat.com/#/page/matter?125=1846801689609371650&126=%E6%96%87%E6%A1%A3%E6%89%BE%E9%94%99%E8%B5%A2%E5%A5%96%E9%87%91-Air780E-LuatOS-%E8%BD%AF%E4%BB%B6%E6%8C%87%E5%8D%97-4G%E9%80%9A%E4%BF%A1-%E7%9F%AD%E6%B6%88%E6%81%AF(sms)&askid=1846801689609371650)；
->
-> 用截图标注+文字描述的方式跟帖回复，记录清楚您发现的问题；
->
-> 我们会迅速核实并且修改文档；
->
-> 同时也会为您累计找错积分，您还可能赢取月度找错奖金！
