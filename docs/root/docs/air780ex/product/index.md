@@ -24,7 +24,7 @@
 
 [AT固件版本](https://docs.openluat.com/air780ex/at/firmware/)
 
-[LuatOS固件版本](https://docs.openluat.com/air780ex/luatos/firmware/)
+[LuatOS二次开发sdk和demo](https://docs.openluat.com/air780ex/luatos/firmware/)
 
 ## 认证证书
 

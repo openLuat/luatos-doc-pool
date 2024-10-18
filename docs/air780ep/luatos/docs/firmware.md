@@ -1,26 +1,16 @@
 # Air780EP LuatOS固件版本
 
-## LuatOS固件版本下载地址
+## 最新版本SDK&Demo
 
-最新版本
+### LuatOS固件版本下载地址
 
 [LuatOS-SoC_V2001_Air780EP](https://gitee.com/openLuat/LuatOS/releases/download/v2001.ec7xx.release/LuatOS-SoC_V2001_Air780EP.soc)
 
-
-历史版本
-
-[core_V1003](https://gitee.com/openLuat/LuatOS/releases/download/v1003.ec7xx.release/core_V1003.zip)
-
-[core_V1002](https://gitee.com/openLuat/LuatOS/releases/download/v1002.ec7xx.release/core_V1002.zip)
-
-[core_V1001](https://gitee.com/openLuat/LuatOS/releases/download/v1001.ec7xx.release/core_V1001.zip)
-
-## 脚本demo
+### 二次开发demo
 
 [LuatOS-Air780EP](https://gitee.com/openLuat/LuatOS-Air780EP)
 
-
-## LuatOS固件版本更新说明
+## LuatOS固件版本更新说明（最新V1003）
 
 **core_V1003** 2024-09-02
 
@@ -55,6 +45,23 @@ update：已经释放过的socket ctrl，不再允许其他操作，防止异常
 update：兼容部分FTP服务器
 
 update：RRC快速释放的优化选项
+
+## 历史版本SDK&Demo
+
+### LuatOS固件版本下载地址
+
+[core_V1003](https://gitee.com/openLuat/LuatOS/releases/download/v1003.ec7xx.release/core_V1003.zip)
+
+[core_V1002](https://gitee.com/openLuat/LuatOS/releases/download/v1002.ec7xx.release/core_V1002.zip)
+
+[core_V1001](https://gitee.com/openLuat/LuatOS/releases/download/v1001.ec7xx.release/core_V1001.zip)
+
+### 二次开发demo
+
+[LuatOS-Air780EP](https://gitee.com/openLuat/LuatOS-Air780EP)
+
+
+### LuatOS固件版本更新说明（历史版本）
 
 
 **core_V1002** 2024-07-04

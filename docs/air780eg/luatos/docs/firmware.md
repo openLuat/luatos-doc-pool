@@ -1,13 +1,26 @@
 # Air780EG LuatOS固件版本
 
-## LuatOS固件版本下载地址
+## 最新版本SDK&Demo
 
-最新版本
+### LuatOS固件版本下载地址
 
 [core_V1112](https://gitee.com/openLuat/LuatOS/releases/download/v1112.ec618.release/core_V1112.zip)
 
+### 二次开发demo
 
-历史版本
+[LuatOS-Air780EG](https://gitee.com/openLuat/LuatOS-Air780EG)
+
+## LuatOS固件版本更新说明（最新V1112）
+
+**core_V1112** 2024-09-03
+
+缺陷修复
+
+1：从hib模式唤醒后死机
+
+## 历史版本SDK&Demo
+
+### LuatOS固件版本下载地址
 
 [core_V1111](https://gitee.com/openLuat/LuatOS/releases/download/v1111.ec618.release/core_V1111.zip)
 
@@ -17,12 +30,12 @@
 
 [core_V1108](https://gitee.com/openLuat/LuatOS/releases/download/v1108.ec618.release/core_V1108.zip)
 
-## 脚本demo
+## 二次开发demo
 
 [LuatOS-Air780EG](https://gitee.com/openLuat/LuatOS-Air780EG)
 
 
-## LuatOS固件版本更新说明
+## LuatOS固件版本更新说明（历史版本）
 
 **core_V1112** 2024-09-03
 

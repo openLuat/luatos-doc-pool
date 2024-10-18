@@ -21,7 +21,7 @@ Air201开发板一块，扩展板一个，30W摄像头一个(驱动芯片：GC03
 
 ## 2, 调试代码
 
-> **使用克隆的代码中 LuatOS-Air201\demo\record 的代码测试**
+> **使用克隆的代码中 LuatOS-Air201\demo\camera 的代码测试**
 
 ### 2.1 注册camera事件回调
 
@@ -138,21 +138,21 @@ end)
 
 ## 3、烧录程序
 开始下载
-![image](image/camera_1.png) 
+![image](image/camera_1.png)
 
 ## 4，展示效果
 > 本例展示拍照后将文件数据通过串口传到电脑，串口传送使用的UART1，故需要一个串口板连接扩展板的tX1、rX1,硬件连接见下图
 
-![image](image/camera_4.png) 
+![image](image/camera_4.png)
 
 > 同时还需找个能保存数据的串口工具保存成文件，本例使用的是SSCOM，默认保存文件到sscom文件夹内
 
-![image](image/camera_5.png) 
+![image](image/camera_5.png)
 
 > 烧录代码运行后，即可在sscom文件夹内看到拍的照片，记得将后缀改成.jpg
 
-![image](image/camera_6.png) 
+![image](image/camera_6.png)
 
 > 双击打开，效果如下
 
-![image](image/camera_7.jpg) 
+![image](image/camera_7.jpg)
