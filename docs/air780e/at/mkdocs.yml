@@ -42,6 +42,7 @@ nav:
     - 介绍: app/index.md
     - AT指令手册: app/at_command.md
     - 应用实例:
+      - 简介: app/command/index.md
       - TCP: app/command/tcp/index.md
       - UDP: app/command/udp/index.md
       - MQTT: app/command/mqtt/index.md
