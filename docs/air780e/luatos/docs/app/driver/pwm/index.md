@@ -75,12 +75,14 @@ WINDOWS 系统，其他暂无特别要求
 
 ### 4.2 源码及固件
 
-1. 底层 core 下载地址：[LuatOS 固件版本下载地址](https://docs.openluat.com/air780e/luatos/firmware/) ![](image/Nvw4bjusNox6JzxrtDrcknyGnzm.png)
+1. 底层 core 下载地址：[LuatOS 固件版本下载地址](https://docs.openluat.com/air780e/luatos/firmware/) ![](image/WZHxb6x4moGFL8xiqNScdQelnRe.png)
 本 demo 使用的固件是 core_V1112 压缩包内的 LuatOS-SoC_V1112_EC618_FULL.soc
 
 2. 本教程使用的 demo：[https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/pwm](https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/pwm)
 3. 源码和固件已打包，如下所示：
-> 注：压缩包中 core 文件夹存放固件，code 文件夹存放 demo
+   > 注：压缩包中 core 文件夹存放固件，code 文件夹存放 demo
+
+[右键点我,另存为,下载完整压缩文件包](pwm.zip){:target="_blank"}
 
 ## 五、PWM 软硬件资料
 
