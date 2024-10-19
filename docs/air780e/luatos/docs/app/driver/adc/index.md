@@ -69,18 +69,12 @@ WINDOWS 系统，其他暂无特别要求
 
 ### 4.2 源码及固件
 
-1. 底层 core 下载地址：[LuatOS 固件版本下载地址](https://docs.openluat.com/air780e/luatos/firmware/)
+1. 底层 core 下载地址：[LuatOS 固件版本下载地址](https://docs.openluat.com/air780e/luatos/firmware/)![](image/Ig95bLf3RokdWGxLsZsciFG0n54.png)本 demo 使用的固件是 core_V1112 压缩包内的 LuatOS-SoC_V1112_EC618_FULL.soc
 
-![](image/Ig95bLf3RokdWGxLsZsciFG0n54.png)
-
-本 demo 使用的固件是 core_V1112 压缩包内的 LuatOS-SoC_V1112_EC618_FULL.soc
-
-2. 本教程使用的 demo：
-
-[https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/adc](https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/adc)
+2. 本教程使用的 demo：[https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/adc](https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/adc)
 
 3. 源码和固件已打包，如下所示：
-> 注：压缩包中 core 文件夹存放固件，code 文件夹存放 demo
+   > 注：压缩包中 core 文件夹存放固件，code 文件夹存放 demo
 
 [右键点我,另存为,下载完整压缩文件包](adc.zip){:target="_blank"}
 
@@ -179,17 +173,14 @@ adc.close(adc.CH_CPU)
 ## 常见问题
 
 1. 为什么 ADC 输入 3V，读取模拟电压只有 1.1V？
-
-> 答：未启用分压时，量程最高只能到达 1.1V，若想测量 3V，需启用分压。
+   > 未启用分压时，量程最高只能到达 1.1V，若想测量 3V，需启用分压。
 
 2. ADC 测量电压来回跳变，为什么？
-
-> 答：看外部输入电压是否与模块共地，保持参考电压一致。
+   > 看外部输入电压是否与模块共地，保持参考电压一致。
 
 3. adc.read()和 adc.get()要用哪一个？
-
-> 答：adc.read()返回两个值，一个原始值,一般没用,可以直接抛弃；另一个是从原始值换算得出的实际值，通常单位是 mV。（仅作了解，不建议使用）
-> adc.get()返回的就是计算值，通常单位是 mV，推荐使用这个接口来获取电压值。
+   > adc.read()返回两个值，一个原始值,一般没用,可以直接抛弃；另一个是从原始值换算得出的实际值，通常单位是 mV。（仅作了解，不建议使用）
+   > adc.get()返回的就是计算值，通常单位是 mV，推荐使用这个接口来获取电压值。
 
 ## 给读者的话
 
