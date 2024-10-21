@@ -28,6 +28,7 @@
 ## 相关证书
 ### CCC 证书
 [Air700E_CCC英文证书(2024).pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240131103202782_Air700E_CCC英文证书(2024).pdf)
+
 [Air700E_CCC中文证书(2024).pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240131103156086_Air700E_CCC中文证书(2024).pdf)
 
 ### SRRC 证书
