@@ -23,6 +23,7 @@
 ![](image/EgafbKoE4okT10xGNSYcfTcwncg.png)
 
 淘宝购买链接：[Air780E 核心板淘宝购买链接](https://item.taobao.com/item.htm?id=693774140934&pisk=f1eiwOqL25l1_HYiV6D1ize3wN5d5FMjRrpxkx3VT2uIHCCskWm4kysffAEqor4KRRIskGT0ooqi_coq7DWE000qbVr2mmzKQjNtkV3mnoalvaBRelZshA7RyTFdpD4xQco2_VS2Tcnvc89h5lZshq-pu_FUfEDVVdOmgrkET0ir3mkq_MDEmmM2QjJaY2uI0UGAoNueWRjiw4YTC-_opNr-zluaXleFpfR_X2fhTJVn94W--KJ4KcqQreCDEs3zNVh-DyWpIxqEmyc8savgoor7gX2D7GUzmW4jBJS2_4PTWjestFRZqA0iaRlwjdkIgW2nBR7XNkEn7bDL96_tMA4gN4GNOwa0xVU4IX8G4iReapZyhDSYLIOj_DinyhbSB2IHjbEhxMA51foIXaIhxItMPKJlyMjHNEGZAcQR.&spm=a1z10.5-c-s.w4002-24045920841.33.639f1fd1YrS4b6&skuId=5098266470883) ；
+
 此核心板的详细使用说明参考：[Air780E 产品手册](https://docs.openluat.com/air780e/product/) 中的 << 开发板 Core_Air780E 使用说明 VX.X.X.pdf>>，写这篇文章时最新版本的使用说明为：<< 开发板 Core_Air780E 使用说明 V1.0.5.pdf>> ；核心板使用过程中遇到任何问题，可以直接参考这份使用说明 pdf 文档。
 
 ### 3.2 数据通信线
@@ -46,7 +47,7 @@ WINDOWS 系统，其他暂无特别要求
 3. 源码和固件已打包，如下所示：
    > 注：压缩包中 core 文件夹存放固件，code 文件夹存放 demo
 
-[右键点我,另存为,下载完整压缩文件包](华为云.zip){:target="_blank"}
+[右键点我,另存为,下载完整压缩文件包](file/华为云.zip){:target="_blank"}
 
 ## 五、华为云软硬件资料
 
@@ -271,7 +272,7 @@ iotcloud 库本质就是上层设计一套通用的 API 库来进行每个平台
 ### 7.3 运行结果展示
 
 消息内容选择{"switch":1}发送，即可控制开灯；{"switch":0}即可控制关灯，如视频中绿灯所示
-<video src="file/huawei_iot.mp4"></video>
+<video controls src="file/huawei_iot.mp4"></video>
 
 ## 八、总结
 
@@ -282,8 +283,7 @@ iotcloud 库本质就是上层设计一套通用的 API 库来进行每个平台
 ## 常见问题
 
 1. 华为云接入失败，怎么排查？
-
-答：先检查设备配置，确保设备的 ID,名称,密钥等配置信息正确无误；同时也要检查下网络连接，确保 SIM 卡是正常入网状态，若还是不行，请再仔细看下教程，看是否有哪个步骤有疏漏。
+   > 先检查设备配置，确保设备的 ID,名称,密钥等配置信息正确无误；同时也要检查下网络连接，确保 SIM 卡是正常入网状态，若还是不行，请再仔细看下教程，看是否有哪个步骤有疏漏。
 
 
 ## 给读者的话

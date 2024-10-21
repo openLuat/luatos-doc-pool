@@ -97,7 +97,7 @@ WINDOWS 系统，其他暂无特别要求
 3. 源码和固件已打包，如下所示：
    > 注：压缩包中 core 文件夹存放固件，code 文件夹存放 demo
 
-[右键点我,另存为,下载完整压缩文件包](pwm.zip){:target="_blank"}
+[右键点我,另存为,下载完整压缩文件包](file/pwm.zip){:target="_blank"}
 
 ## 五、PWM 软硬件资料
 
