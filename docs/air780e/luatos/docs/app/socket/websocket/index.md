@@ -170,7 +170,7 @@ LLCOM 的下载链接：[LLCOM](https://llcom.papapoi.com/index.html) ，详细�
 
 - **串口接线方式：Air780 提供三个 Uart.**
 
-**MAIN_UART：**通用串口，可用于 AT 命令和数据传输 最大波特率 921600bps，默认波特率自适应 9600-115200bps 支持硬件流控（RTS/CTS）
+**MAIN_UART：**通用串口，可用于 AT 命令和数据传输 最大波特率 921600bps，默认波特率自适应 9600-115200bps 支持硬件流控（RTS/CTS）
 
 **AUX_UART：**通用串口
 
@@ -639,7 +639,7 @@ sys.run()
 - websocket 服务器的连接地址,格式为 ws(或 wss)://xxx 开头
 - websocket 需要在任务中启动,带自动重连,支持心跳协议
 - websocket 心跳包，建议 180 秒
-- 注意 串口发送过去的数据是 demo 字符格式、  if uart_rx_buff_data == '"echo"'
+- 注意 串口发送过去的数据是 字符格式，这里进行对比时注意 echo的类型  if uart_rx_buff_data == '"echo"'
 
 ## 八、扩展
 
