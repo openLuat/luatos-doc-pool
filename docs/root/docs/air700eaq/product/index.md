@@ -24,4 +24,16 @@
 
 [AT固件版本](https://docs.openluat.com/air700eaq/at/firmware/)
 
-[LuatOS固件版本](https://docs.openluat.com/air700eaq/luatos/firmware/)
+[LuatOS二次开发sdk和demo](https://docs.openluat.com/air700eaq/luatos/firmware/)
+
+## 相关证书
+### CCC 证书
+[Air700E_CCC英文证书(2024).pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240131103202782_Air700E_CCC英文证书(2024).pdf)
+
+[Air700E_CCC中文证书(2024).pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240131103156086_Air700E_CCC中文证书(2024).pdf)
+
+### SRRC 证书
+[Air700E型号核准证.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240307110448672_Air700E型号核准证.pdf)
+
+### ROHS 证书
+[Air700E-Rohs-Report.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240701140430543_Air700E-Rohs-Report.pdf)

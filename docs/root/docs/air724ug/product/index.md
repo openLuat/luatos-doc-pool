@@ -70,4 +70,21 @@
 
 [AT固件版本](https://docs.openluat.com/air724ug/at/firmware/)
 
-[LuatOS固件版本](https://docs.openluat.com/air724ug/luatos/firmware/)
+[LuatOS二次开发sdk和demo](https://docs.openluat.com/air724ug/luatos/firmware/)
+
+## 相关证书
+### 入网证书
+
+[Air724UG入网许可证-2023](https://cdn.openluat-luatcommunity.openluat.com/attachment/20231213144643033_Air724UG入网许可证-2023.pdf)
+
+### SRRC 证书
+
+[Air724UG 型号核准证书](http://openluat-erp.oss-cn-hangzhou.aliyuncs.com/erp_site_file/product_file/pc_file_20200714173026_Air724UG%E5%9E%8B%E5%8F%B7%E6%A0%B8%E5%87%86%E8%AF%81-2020.pdf "1212")
+
+### Rohs 2.0 证书
+
+[Air724UG Rohs 2.0 证书](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221207173201831_Air724UG-Rohs2.0证书.pdf)
+
+### CCC 证书
+
+[Air724UG_CCC证书(2023).zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230601135805016_Air724UG_CCC证书(2023).zip)

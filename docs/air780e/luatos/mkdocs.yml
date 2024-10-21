@@ -8,96 +8,41 @@ meta:
 nav:
   - 快速入门:
     - 介绍: quick_start/index.md
-    - HelloWorld教程:
-      - 介绍: quick_start/hello/index.md
-      - 必须先要告诉你的一些废话: quick_start/hello/01.md
-      - 下载模组的示例代码: quick_start/hello/02.md
-      - 修改代码: quick_start/hello/03.md
-      - 烧录代码到硬件: quick_start/hello/04.md
-      - 验证功能: quick_start/hello/05.md
-      - 总结: quick_start/hello/summary.md
-    - 本地脚本控制灯的亮和灭: 
-      - 介绍: quick_start/led/index.md
-      - 编写脚本: quick_start/led/01.md
-      - 烧录代码到硬件: quick_start/led/02.md
-      - 验证功能: quick_start/led/03.md
-      - 总结: quick_start/led/summary.md
-      - 扩展: quick_start/led/ext.md
-    - 电脑浏览器通过Air780E控制灯的亮和灭:
-      - 介绍: quick_start/netled/index.md
-      - 编写脚本: quick_start/netled/01.md
-      - 烧录代码到硬件: quick_start/netled/02.md
-      - 验证功能: quick_start/netled/03.md
-      - 总结: quick_start/netled/summary.md
-    - 采集温湿度数据并上传到网页查看:
-      - 介绍: quick_start/nettemp/index.md
-      - 硬件准备: quick_start/nettemp/01.md
-      - 编写脚本: quick_start/nettemp/02.md
-      - 烧录代码到硬件: quick_start/nettemp/03.md
-      - 验证功能: quick_start/nettemp/04.md
-      - 总结: quick_start/nettemp/summary.md
-      - 扩展: quick_start/nettemp/ext.md
-    - 固件的远程升级:
-      - 介绍: quick_start/upgrade/index.md
-      - 生成差分包: quick_start/upgrade/01.md
-      - 云平台配置: quick_start/upgrade/02.md
-      - 编写脚本: quick_start/upgrade/03.md
-      - 烧录代码到硬件: quick_start/upgrade/04.md
-      - 验证功能: quick_start/upgrade/05.md
-      - 总结: quick_start/upgrade/summary.md
-      - 常见问题: quick_start/upgrade/faq.md
-      - 扩展: quick_start/upgrade/ext.md
-    - 通过MQTT连接实现远程控制:
-      - 介绍: quick_start/mqtt/index.md
-      - 编写脚本: quick_start/mqtt/01.md
-      - 烧录代码到硬件: quick_start/mqtt/02.md
-      - 验证功能: quick_start/mqtt/03.md
-      - 总结: quick_start/mqtt/summary.md
-      - 常见问题: quick_start/mqtt/faq.md
-      - 扩展: quick_start/mqtt/ext.md
-    - 驱动SPI小屏幕的详细讲解:
-      - 介绍: quick_start/lcd/index.md
-      - 硬件准备: quick_start/lcd/01.md
-      - 编写脚本: quick_start/lcd/02.md
-      - 烧录代码到硬件: quick_start/lcd/03.md
-      - 验证功能: quick_start/lcd/04.md
-      - 总结: quick_start/lcd/summary.md
-      - 常见问题: quick_start/lcd/faq.md
-      - 扩展: quick_start/lcd/ext.md
-    - 使用文件系统存储温湿度数据:
-      - 介绍: quick_start/file/index.md
-      - 编写脚本: quick_start/file/01.md
-      - 烧录代码到硬件: quick_start/file/02.md
-      - 验证功能: quick_start/file/03.md
-      - 总结: quick_start/file/summary.md
-      - 常见问题: quick_start/file/faq.md
-      - 扩展: quick_start/file/ext.md
-    - 500毫安的电池让Air780E续航10年:
-      - 介绍: quick_start/battery/index.md
-      - 准备资料: quick_start/battery/01.md
-      - 编写脚本: quick_start/battery/02.md
-      - 烧录代码到硬件: quick_start/battery/03.md
-      - 验证功能: quick_start/battery/04.md
-      - 总结: quick_start/battery/summary.md
-      - 常见问题: quick_start/battery/faq.md
-      - 扩展: quick_start/battery/ext.md
-    - Air780E 跟服务器之间的加密通信:
-      - 介绍: quick_start/ssl/index.md
-      - 编写脚本: quick_start/ssl/01.md
-      - 烧录代码到硬件: quick_start/ssl/02.md
-      - 验证功能: quick_start/ssl/03.md
-      - 总结: quick_start/ssl/summary.md
-      - 常见问题: quick_start/ssl/faq.md
-      - 扩展: quick_start/ssl/ext.md
-    - Air780E怎么获取精准的时钟:
-      - 介绍: quick_start/time/index.md
-      - 编写脚本: quick_start/time/01.md
-      - 烧录代码到硬件: quick_start/time/02.md
-      - 验证功能: quick_start/time/03.md
-      - 总结: quick_start/time/summary.md
-      - 常见问题: quick_start/time/faq.md
-      - 扩展: quick_start/time/ext.md
-  - 软件demo:
+    - HelloWorld教程: quick_start/hello/index.md
+    - 本地脚本控制灯的亮和灭: quick_start/led/index.md
+    - 电脑浏览器通过Air780E控制灯的亮和灭: quick_start/netled/index.md
+    - 采集温湿度数据并上传到网页查看: quick_start/nettemp/index.md
+    - 固件的远程升级: quick_start/upgrade/index.md
+    - 通过MQTT连接实现远程控制: quick_start/mqtt/index.md
+    #- 驱动SPI小屏幕的详细讲解: quick_start/lcd/index.md
+    - 使用文件系统存储温湿度数据: quick_start/file/index.md
+    - 500毫安的电池让Air780E续航10年: quick_start/battery/index.md
+    - Air780E 跟服务器之间的加密通信: quick_start/ssl/index.md
+    - Air780E怎么获取精准的时钟: quick_start/time/index.md
+  - 硬件指南:
+    - 典型硬件设计指南:
+      - 简介: hardware/design/index.md
+      - 常见供电电路: hardware/design/power.md
+      - 常见充电电路: hardware/design/charge.md
+      - 常见开机电路: hardware/design/poweron.md
+      - 常见关机电路: hardware/design/poweroff.md
+      - Reset电路: hardware/design/reset.md
+      - 看门狗电路: hardware/design/wdt.md
+      - SIM卡电路: hardware/design/sim.md
+      - 天线电路: hardware/design/ant.md
+      - UART 0调试电路: hardware/design/uart0.md
+      - UART 1通信电路: hardware/design/uart1.md
+      - UART 2通信电路: hardware/design/uart2.md
+      - USB通信电路: hardware/design/usb.md
+      - LED状态灯电路: hardware/design/led.md
+      - 模组休眠唤醒电路: hardware/design/sleep.md
+      - 模组唤醒休眠状态下的主控电路: hardware/design/wakeup.md
+      - 模组控制外设的电路: hardware/design/ctrl.md
+      - 外设触发模组中断的电路: hardware/design/int.md
+      - 测试点电路: hardware/design/check_point.md
+      - 温湿度传感器参考电路: hardware/design/sensor.md
+      - 远程空开参考电路: hardware/design/remote.md
+  - 软件指南:
     - 介绍: app/index.md
     - 硬件驱动:
       - 简介: app/driver/index.md
@@ -118,16 +63,7 @@ nav:
         - 总结: app/driver/uart/summary.md
         - 常见问题: app/driver/uart/faq.md
         - 扩展: app/driver/uart/ext.md
-      - 模数转换(ADC):
-        - 简介: app/driver/adc/index.md
-        - 硬件准备: app/driver/adc/01.md
-        - 基本用法: app/driver/adc/basic.md
-        - 读取供电电压: app/driver/adc/vbat.md
-        - 读取CPU温度: app/driver/adc/cputemp.md
-        - 输入电压的范围: app/driver/adc/range.md
-        - 总结: app/driver/adc/summary.md
-        - 常见问题: app/driver/adc/faq.md
-        - 扩展: app/driver/adc/ext.md
+      - 模数转换(ADC): app/driver/adc/index.md
       - 通用输入输出(GPIO):
         - 简介: app/driver/gpio/index.md
         - 硬件准备: app/driver/gpio/01.md
@@ -143,94 +79,31 @@ nav:
         - 总结: app/driver/gpio/summary.md
         - 常见问题: app/driver/gpio/faq.md
         - 扩展: app/driver/gpio/ext.md
+      - I2C: app/driver/i2c/index.md
+      - SPI: app/driver/spi/index.md
+      - PWM: app/driver/pwm/index.md
     - 网络驱动(Socket):
       - 简介: app/socket/index.md
-      - TCP通信:
-        - 简介: app/socket/tcp/index.md
-        - 硬件准备: app/socket/tcp/01.md
-        - 基本用法: app/socket/tcp/02.md
-        - TCP-UART透传: app/socket/tcp/03.md
-        - TCP单向加密通信: app/socket/tcp/04.md
-        - TCP双向加密通信: app/socket/tcp/05.md
-        - TCP断链重连: app/socket/tcp/06.md
-        - TCP低功耗唤醒: app/socket/tcp/07.md
-        - 总结: app/socket/tcp/summary.md
-        - 常见问题: app/socket/tcp/faq.md
-        - 扩展: app/socket/tcp/ext.md
-        - 参考: app/socket/tcp/ref.md
-      - UDP通信:
-        - 简介: app/socket/udp/index.md
-        - 硬件准备: app/socket/udp/01.md
-        - 基本用法: app/socket/udp/basic.md
-        - UDP-UART透传: app/socket/udp/uart.md
-        - UDP加密通信: app/socket/udp/dtls.md
-        - 总结: app/socket/tcp/summary.md
-        - 常见问题: app/socket/tcp/faq.md
-        - 扩展: app/socket/tcp/ext.md
-        - 参考: app/socket/tcp/ref.md
-      - HTTP通信:
-        - 简介: app/socket/http/index.md
-        - 硬件准备: app/socket/http/01.md
-        - 基本用法: app/socket/http/basic.md
-        - GET请求: app/socket/http/get.md
-        - POST请求: app/socket/http/post.md
-        - 文件上传: app/socket/http/upload.md
-        - 文件下载: app/socket/http/download.md
-        - HTTPS加密通信: app/socket/http/https.md
-        - 处理JSON数据: app/socket/http/json.md
-        - 压缩和解压: app/socket/http/zip.md
-        - 总结: app/socket/http/summary.md
-        - 常见问题: app/socket/http/faq.md
-        - 扩展: app/socket/http/ext.md
-        - 参考: app/socket/http/ref.md
-      - MQTT通信:
-        - 简介: app/socket/mqtt/index.md
-        - 硬件准备: app/socket/mqtt/01.md
-        - 基本用法: app/socket/mqtt/basic.md
-        - 连接到阿里云: app/socket/mqtt/aliyun.md
-        - 连接到腾讯云: app/socket/mqtt/tencent.md
-        - 连接到华为云: app/socket/mqtt/huawei.md
-        - 连接到百度云: app/socket/mqtt/baidu.md
-        - 连接到ThingCloud: app/socket/mqtt/thingcloud.md
-        - MQTTS加密通信: app/socket/mqtt/mqtts.md
-        - 总结: app/socket/mqtt/summary.md
-        - 常见问题: app/socket/mqtt/faq.md
-        - 扩展: app/socket/mqtt/ext.md
-        - 参考: app/socket/mqtt/ref.md
-      - WebSocket通信:
-        - 简介: app/socket/websocket/index.md
-        - 硬件准备: app/socket/websocket/01.md
-        - 基本用法: app/socket/websocket/basic.md
-        - WebSocket加密通信: app/socket/websocket/wss.md
-        - 总结: app/socket/websocket/summary.md
-        - 常见问题: app/socket/websocket/faq.md
-        - 扩展: app/socket/websocket/ext.md
-        - 参考: app/socket/websocket/ref.md
+      - TCP通信: app/socket/tcp/index.md
+      - UDP通信: app/socket/udp/index.md
+      - HTTP通信: app/socket/http/index.md
+      - MQTT通信: app/socket/mqtt/index.md
+      - WebSocket通信: app/socket/websocket/index.md
+      - FTP通信: app/socket/ftp/index.md
+      - NTP通信: app/socket/ntp/index.md
+    - 网络应用:
+      - 简介: app/netapp/index.md
+      - 阿里云: app/netapp/aliiot/index.md
+      - 腾讯云: app/netapp/tencentiot/index.md
+      - ONENET: app/netapp/onenet/index.md
+      - 百度云: app/netapp/baiduiot/index.md
+      - 华为云: app/netapp/huaweiiot/index.md
+      - 涂鸦云: app/netapp/tuyaiot/index.md
+      - errDump: app/netapp/errdump/index.md
     - 基础服务:
       - 简介: app/service/index.md
-      - 文件系统(io):
-        - 简介: app/service/fs/index.md
-        - 硬件准备: app/service/fs/01.md
-        - 基本用法: app/service/fs/basic.md
-        - 文件追加: app/service/fs/append.md
-        - 文件删除: app/service/fs/delete.md
-        - 文件重命名: app/service/fs/rename.md
-        - 文件拷贝: app/service/fs/copy.md
-        - 文件移动: app/service/fs/move.md
-        - 文件大小: app/service/fs/size.md
-        - 文件枚举: app/service/fs/lsdir.md
-        - 总结: app/service/fs/summary.md
-        - 常见问题: app/service/fs/faq.md
-        - 扩展: app/service/fs/ext.md
-        - 参考: app/service/fs/ref.md
-      - 定时器(timer):
-        - 简介: app/service/timer/index.md
-        - 硬件准备: app/service/timer/01.md
-        - 基本用法: app/service/timer/basic.md
-        - 总结: app/service/timer/summary.md
-        - 常见问题: app/service/timer/faq.md
-        - 扩展: app/service/timer/ext.md
-        - 参考: app/service/timer/ref.md
+      - 文件系统(io): app/service/fs/index.md
+      - 定时器(timer): app/service/timer/index.md
       - 任务机制(task):
         - 简介: app/service/task/index.md
         - 硬件准备: app/service/task/01.md
@@ -281,18 +154,20 @@ nav:
         - 常见问题: app/service/module/faq.md
     - 4G通信:
       - 简介: app/mobile/index.md
-      - 通信信息(mobile):
-        - 简介: app/mobile/info/index.md
-        - IMEI获取: app/mobile/info/imei.md
-        - IMSI获取: app/mobile/info/imsi.md
-        - ICCID获取: app/mobile/info/iccid.md
-        - 信号强度: app/mobile/info/rssi.md
-        - 运营商信息: app/mobile/info/operator.md
-        - 切换SIM卡: app/mobile/info/sim.md
-        - 切换网络: app/mobile/info/net.md
-        - 设置APN: app/mobile/info/apn.md
-        - 获取网络状态: app/mobile/info/net_status.md
-        - 获取网络类型: app/mobile/info/net_type.md
+      - 通信信息(mobile): app/mobile/info/index.md
+      - 短消息(sms): app/mobile/sms/index.md
+      # - 通信信息(mobile):
+      #   - 简介: app/mobile/info/index.md
+      #   - IMEI获取: app/mobile/info/imei.md
+      #   - IMSI获取: app/mobile/info/imsi.md
+      #   - ICCID获取: app/mobile/info/iccid.md
+      #   - 信号强度: app/mobile/info/rssi.md
+      #   - 运营商信息: app/mobile/info/operator.md
+      #   - 切换SIM卡: app/mobile/info/sim.md
+      #   - 切换网络: app/mobile/info/net.md
+      #   - 设置APN: app/mobile/info/apn.md
+      #   - 获取网络状态: app/mobile/info/net_status.md
+      #   - 获取网络类型: app/mobile/info/net_type.md
       - 物联网卡专讲(iot):
         - 简介: app/mobile/iot/index.md
         - 硬件准备: app/mobile/iot/01.md
@@ -406,30 +281,11 @@ nav:
         - 基本用法: app/demo/feishu/basic.md
         - 总结: app/demo/feishu/summary.md
         - 常见问题: app/demo/feishu/faq.md
-  - 硬件demo:
-    - 典型硬件设计指南:
-      - 简介: hardware/design/index.md
-      - 常见供电电路: hardware/design/power.md
-      - 常见充电电路: hardware/design/charge.md
-      - 常见开机电路: hardware/design/poweron.md
-      - 常见关机电路: hardware/design/poweroff.md
-      - Reset电路: hardware/design/reset.md
-      - 看门狗电路: hardware/design/wdt.md
-      - SIM卡电路: hardware/design/sim.md
-      - 天线电路: hardware/design/ant.md
-      - UART 0调试电路: hardware/design/uart0.md
-      - UART 1通信电路: hardware/design/uart1.md
-      - UART 2通信电路: hardware/design/uart2.md
-      - USB通信电路: hardware/design/usb.md
-      - LED状态灯电路: hardware/design/led.md
-      - 模组休眠唤醒电路: hardware/design/sleep.md
-      - 模组唤醒休眠状态下的主控电路: hardware/design/wakeup.md
-      - 模组控制外设的电路: hardware/design/ctrl.md
-      - 外设触发模组中断的电路: hardware/design/int.md
-      - 测试点电路: hardware/design/check_point.md
-      - 温湿度传感器参考电路: hardware/design/sensor.md
-      - 远程空开参考电路: hardware/design/remote.md
-  - 固件版本: firmware.md
+  - SDK&Demo: firmware.md
+  - API文档:
+    - 索引页: api/index.md
+    - 核心库: api/core/index.md
+    - 扩展库: api/ext/index.md
   - 常见问题: faq.md
   - DTU: https://docs.openluat.com/dtu/
   - 增值服务: https://docs.openluat.com/web/

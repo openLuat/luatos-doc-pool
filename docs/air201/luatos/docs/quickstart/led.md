@@ -1,5 +1,5 @@
 # 用Air201本地脚本控制灯的亮和灭
-**1, 搭建环境**
+## 1, 搭建环境
 
 ![image](image/wps17.jpg) 
 
@@ -7,13 +7,13 @@
 
 对了，此时只需要下载脚本，因为您的设备的Core ( Core 可以理解为基础固件，咱们的Luatos 就是在上面运行的，所以Core  不变就不需要重新下载 )是一样的，选择下载脚本下载后，下载速度会飞快，帮您节约大量的调试时间
 
-**2, 调试代码**
+## 2, 调试代码
 
 **使用克隆的代码中 LuatOS-Air201\demo\gpio\gpio_led 代码测试**
 
- **2.1 初始化LED灯**
+###  2.1 初始化LED灯
 
- 
+
 ```Lua
 local blueLedPin = 1
 local redLedPin = 16
@@ -23,7 +23,7 @@ local blueLed = gpio.setup(blueLedPin, 0)
 local redLed = gpio.setup(redLedPin, 0)
 ```
 
- **2.2 控制GPIO**
+###  2.2 控制GPIO
 
 ```Lua
 sys.taskInit(function()
@@ -46,8 +46,8 @@ end)
 
 ![image](image/wps18.jpg) 
 
-  到此，您已经完成点灯仪式了������
+  到此，您已经完成点灯仪式了。
 
-**3, 课后习题**
+## 3, 课后习题
 
 *好，留给您一个课后习题：红灯，蓝灯同时亮起，间隔500ms 同时灭灯，再间隔500ms 同时亮起，如此循环。*

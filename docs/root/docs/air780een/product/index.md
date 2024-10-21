@@ -27,3 +27,7 @@
 ### FCC 证书
 
 [FCC - 2AEGG-AIR780E, Grant-PCB.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240603142151984_FCC%C2%A0-%C2%A02AEGG-AIR780E,%C2%A0Grant-PCB.pdf)
+
+### CE 证书
+
+[Air780E_CE_EU_Cert.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240514145856564_Air780E_CE_EU_Cert.pdf)
