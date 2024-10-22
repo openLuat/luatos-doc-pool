@@ -42,18 +42,35 @@ nav:
     - 介绍: app/index.md
     - AT指令手册: app/at_command.md
     - 应用实例:
-      - TCP应用实例: app/command/tcp.md
-      - MQTT应用实例: app/command/mqtt.md
-      - HTTP应用实例: app/command/http.md
+      - 简介: app/command/index.md
+      - TCP: app/command/tcp/index.md
+      - UDP: app/command/udp/index.md
+      - MQTT: app/command/mqtt/index.md
+      - HTTP: app/command/http/index.md
+      - FTP: app/command/ftp/index.md
+      - NTP: app/command/ntp/index.md
+      - 阿里云: app/command/aliiot/index.md
+      - 腾讯云: app/command/tencentiot/index.md
+      - 百度云: app/command/baiduiot/index.md
+      - ONENET: app/command/onenet/index.md
+      - 华为云: app/command/huaweiiot/index.md
+      - 电信云: app/command/wingiot/index.md
+      - 低功耗: app/command/lowpower/index.md
+      - 文件系统: app/command/fs/index.md
+      - 音频控制: app/command/audio/index.md
+      - 短消息(SMS): app/command/sms/index.md
+      - 通话(VoLTE): app/command/volte/index.md
+      - 基站&WIFI定位: app/command/lbswifi/index.md
+      - 远程升级(FOTA): app/command/fota/index.md
     - 常用状态机:
-      - 网络状态机: app/state/network.md
-      - TCP状态机: app/state/tcp.md
-      - MQTT状态机: app/state/mqtt.md
+      - 网络状态机: app/state/network/index.md
+      - TCP状态机: app/state/tcp/index.md
+      - MQTT状态机: app/state/mqtt/index.md
     - 常见异常:
-      - 网络异常类: app/error/network.md
-      - 通信异常类: app/error/error.md
+      - 网络异常类: app/error/network/index.md
+      - 通信异常类: app/error/command/index.md
     - MCU实例代码:
-      - STM32演示代码: app/mcu/stm32.md
+      - STM32演示代码: app/mcu/stm32/index.md
   - 固件版本: firmware.md
   - 常见问题: faq.md
   - DTU: https://docs.openluat.com/dtu/
