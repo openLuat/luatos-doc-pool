@@ -61,14 +61,14 @@ nav:
       - 基站&WIFI定位: app/command/lbswifi/index.md
       - 远程升级(FOTA): app/command/fota/index.md
     - 常用状态机:
-      - 网络状态机: app/state/network.md
-      - TCP状态机: app/state/tcp.md
-      - MQTT状态机: app/state/mqtt.md
+      - 网络状态机: app/state/network/index.md
+      - TCP状态机: app/state/tcp/index.md
+      - MQTT状态机: app/state/mqtt/index.md
     - 常见异常:
-      - 网络异常类: app/error/network.md
-      - 通信异常类: app/error/error.md
+      - 网络异常类: app/error/network/index.md
+      - 通信异常类: app/error/command/index.md
     - MCU实例代码:
-      - STM32演示代码: app/mcu/stm32.md
+      - STM32演示代码: app/mcu/stm32/index.md
   - 固件版本: firmware.md
   - 常见问题: faq.md
   - DTU: https://docs.openluat.com/dtu/
