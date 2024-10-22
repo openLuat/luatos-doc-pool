@@ -15,9 +15,10 @@ nav:
     - MQTT快速入门: quick_start/mqtt.md
     - HTTP快速入门: quick_start/http.md
   - 硬件指南:
-    - 典型硬件设计指南:
+    - 典型硬件功能电路:
       - 简介: hardware/design/index.md
       #- 常见供电电路: ../luatos/hardware/design/power 直接引用存在一个问题，左边导航栏会跳转到LuatOS资料中心，阅读体验很差
+      - 硬件参考设计: hardware/design/referencedesign.md
       - 常见供电电路: hardware/design/power.md
       - 常见充电电路: hardware/design/charge.md
       - 常见开机电路: hardware/design/poweron.md
