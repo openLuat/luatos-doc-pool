@@ -71,6 +71,16 @@ nav:
       - 通用加解密函数(crypto): app/utils/crypto/index.md
       - protobuf数据处理: app/utils/protobuf/index.md
       - iconv字符集转换: app/utils/iconv/index.md
+    - 音频应用:
+      - 简介: app/audio/index.md
+      - 音频播放: app/audio/play/index.md
+      - 音频录制: app/audio/record/index.md
+      - 语音通话: app/audio/volte/index.md
+    - 简易UI:
+      - 简介: app/simpleui/index.md
+      - SPI串口屏: app/simpleui/spilcd/index.md
+      - 摄像头拍照和扫码: app/simpleui/camera/index.md
+      - 二维码: app/simpleui/qrcode/index.md
   - SDK&Demo: firmware.md
   - 常见问题: faq.md
   - DTU: https://docs.openluat.com/dtu/
