@@ -18,10 +18,11 @@
 
 最新版本
 
-[AirM2M_780E_V1169_LTE_AT](https://cdn.openluat-erp.openluat.com/erp_site_file/product_file/sw_file_20240808181905_AirM2M_780E_V1169_LTE_AT.zip)
-
+[AirM2M_780E_V1170_LTE_AT](https://cdn.openluat-erp.openluat.com/erp_site_file/product_file/sw_file_20241021002239_AirM2M_780E_V1170_LTE_AT.zip)
 
 历史版本
+
+[AirM2M_780E_V1169_LTE_AT](https://cdn.openluat-erp.openluat.com/erp_site_file/product_file/sw_file_20240808181905_AirM2M_780E_V1169_LTE_AT.zip)
 
 [AirM2M_780E_V1167_LTE_LSAT](https://cdn.openluat-erp.openluat.com/erp_site_file/product_file/sw_file_20240703155017_AirM2M_780E_V1167_LTE_LSAT.zip)
 
@@ -129,8 +130,11 @@
 
 [AirM2M_780E_LTE_AT_V1024](https://cdn.openluat-erp.openluat.com/erp_site_file/product_file/20221114_164128_AirM2M_780E_LTE_AT_V1024.zip)
 
-
 ## AT固件版本更新说明
+
+**AirM2M_780E_V1170_LTE_AT** 2024-10-21
+
+修复AT+COPS?返回值不对的问题
 
 **AirM2M_780E_V1169_LTE_AT** 2024-09-12
 
