@@ -50,7 +50,7 @@ WINDOWS 系统。
 - 本教程使用的 demo：[https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/sntp](https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/sntp)
 - 将固件和脚本烧录到模块中：[Luatools 下载和使用教程 - 合宙模组资料中心](https://docs.openluat.com/Luatools/)
 - 源码和固件已打包，如下所示：
-[右键点我,另存为,下载完整压缩文件包](file/完整文件包.zip){:target="_blank"}
+[点我,下载完整压缩文件包](file/完整文件包.zip){:target="_blank"}
 
 
 ### 5.2 demo 使用 api 介绍
@@ -163,7 +163,7 @@ WINDOWS 系统。
             log.info("sntp", "时间同步成功", "本地时间os.date(os.time())", os.time(t))
             -- log.info("sntp", "时间同步成功", "本地时间", os.time())
             -- 正常使用, 一小时一次, 已经足够了, 甚至1天一次也可以
-            -- sys.wait(3600000) 
+            -- sys.wait(3600000)
             -- 这里为了演示, 用5秒一次
             sys.wait(5000)
         else
@@ -223,7 +223,7 @@ end)
 
 ## 给读者的话
 
-> 本篇文章由`孙晨龙`开发；
+> 本篇文章由`Linden`开发；
 >
 > 本篇文章描述的内容，如果有错误、细节缺失、细节不清晰或者其他任何问题，总之就是无法解决您遇到的问题；
 >
