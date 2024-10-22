@@ -126,7 +126,7 @@ nav:
       - 字符串处理: app/utils/string/index.md
       - 日志输出: app/utils/log/index.md
       - 数据打包解包(pack): app/utils/pack/index.md
-      - 通用加密函数(crypto): app/utils/crypto/index.md
+      - 通用加解密函数(crypto): app/utils/crypto/index.md
       - protobuf数据处理: app/utils/protobuf/index.md
       - 64位数据处理: app/utils/64bit/index.md
       - iconv字符集转换: app/utils/iconv/index.md
