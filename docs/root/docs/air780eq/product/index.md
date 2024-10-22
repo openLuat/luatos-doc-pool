@@ -27,11 +27,13 @@
 
 ## 相关证书
 ### CCC 证书
-[Air780E_CCC中文证书.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221129105209534_Air780E_CCC中文证书.pdf)
-[Air780E_CCC英文证书.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20221129105227474_Air780E_CCC英文证书.pdf)
+[Air780E_CCC中文证书(2023).pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230601135402627_Air780E_CCC中文证书(2023).pdf)
+
+[Air780E_CCC英文证书(2023).pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230601135417547_Air780E_CCC英文证书(2023).pdf)
 
 ### 入网许可证
-[Air780E入网许可证.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230130113321541_Air780E入网许可证.pdf)
+
+[Air780E入网许可证-2023.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20231222165428617_Air780E入网许可证-2023.pdf)
 
 ### SRRC 证书
 [Air780E型号核准证.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20230221104159741_Air780E型号核准证.pdf)

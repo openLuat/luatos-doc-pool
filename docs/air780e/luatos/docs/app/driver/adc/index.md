@@ -76,7 +76,7 @@ WINDOWS 系统，其他暂无特别要求
 3. 源码和固件已打包，如下所示：
    > 注：压缩包中 core 文件夹存放固件，code 文件夹存放 demo
 
-[右键点我,另存为,下载完整压缩文件包](adc.zip){:target="_blank"}
+[右键点我,另存为,下载完整压缩文件包](file/adc.zip){:target="_blank"}
 
 ## 五、模数转换(ADC)软硬件资料
 
@@ -110,19 +110,19 @@ WINDOWS 系统，其他暂无特别要求
 
 #### 6.1.1 代码介绍
 
-adc.open()开启 ADC 后，通过 adc.get(0)获取 ADC0 的输入模拟电压值
+adc.open()开启 ADC 后，通过 adc.get(1)获取 ADC1 的输入模拟电压值
 
 ```lua
 adc.setRange(adc.ADC_RANGE_3_8) -- 启用分压
-if adc.open(0) then
-    log.info("adc", adc.get(0)) --单位为mv
+if adc.open(1) then
+    log.info("adc", adc.get(1)) --单位为mv
 end
 ```
 
 #### 6.1.2 运行结果展示
 
 > 可以将 adc0/adc1 外接稳压电源供电，注意供电不可超过量程！（本示例启用分压后量程 0~3.2V)
-> 本示例将 adc0 输入 3V,查看 luatools 的 log 如下(返回值单位为 mV):
+> 本示例将 adc1 输入 3V,查看 luatools 的 log 如下(返回值单位为 mV):
 
 本示例中直流稳压电源使用合宙 Air9000P，淘宝购买链接：[Air9000P 淘宝购买链接](https://item.taobao.com/item.htm?id=820017234108&pisk=fZtD-X9JpE7XT4Vcd4jjSKL432u8cSs1uCEO6GCZz_55Xr3f6UXw6QMshipNsCARNCbsh1CNsCpwkYnKvK9ffGRi9DnLx3qMOCXV7OorQ9XF_EWBTxpffGlMuFtPhKOF04S5INkl4OXUbG7NguklBOCNbs7aaLWNa18R2J2WgWt-nwC3MeN3z0g9J6JVgKpv4XQ4lKfkPUKPnKCX3VZab3XcohBmhLJckFJCRndIjusvKUSPIhMUS1bH7nIy0boFPN8M_TTSsPfH7KLB2aeauLxGiw-VrJqyUK6w_NYStkBcDUbHmEM_aKRdieSXBJcvEwYlRT7zIrSrMzzUVpr1UAKz5P_VFTfLnXsAwY2cJLDoEygfuT6x9YDu5P_VFTfKEY4Q1ZW5HXC..&spm=a1z10.1-c-s.w4004-24087196161.6.255c1170QukeFS&skuId=5695681155123)
 

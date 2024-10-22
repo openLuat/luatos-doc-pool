@@ -199,7 +199,7 @@ LLCOM 的下载链接：[LLCOM](https://llcom.papapoi.com/index.html) ，详细�
 
 - **串口接线方式：Air780 提供三个 Uart.**
 
-**MAIN_UART：**通用串口，可用于 AT 命令和数据传输 最大波特率 921600bps，默认波特率自适应 9600-115200bps 支持硬件流控（RTS/CTS）
+**MAIN_UART：**通用串口，可用于 AT 命令和数据传输 最大波特率 921600bps，默认波特率自适应 9600-115200bps 支持硬件流控（RTS/CTS）
 
 **AUX_UART：**通用串口
 
@@ -510,7 +510,7 @@ uart.setup(
 
 #### 5.3.2 **数据接收回调：搭建响应桥梁**
 
-这里使用 uart.rx 接口，和以 zbuff 的方式存储从 uart1 外部串口收到的数据 -- 收取数据会触发回调, 这里的"receive" 是固定值不要修改。
+这里使用 uart.rx 接口,和以 zbuff 的方式存储从 uart1 外部串口收到的数据 -- 收取数据会触发回调, 这里的"receive" 是固定值不要修改。
 
 ```lua
 uart.on(uartid, "receive", function(id, len)
@@ -1076,7 +1076,7 @@ TCP（传输控制协议）和 UDP（用户数据报协议）是 OSI 模型中�
 
 ## 十、常见问题
 
-** sys.waitUntil**("IP_READY")     -- 等待联网成功
+sys.waitUntil("IP_READY")     -- 等待联网成功
 
 好多新入手的可能看到此函数 不理解 在整个脚本里面没有发布此事件 sys.publish（"IP_READY"）   为什么 后面还联网成功了？
 
