@@ -49,7 +49,7 @@ WINDOWS 系统，其他暂无特别要求
 3. 源码和固件已打包，如下所示：
    > 注：压缩包中 core 文件夹存放固件，code 文件夹存放 demo
 
-[右键点我,另存为,下载完整压缩文件包](腾讯云.zip){:target="_blank"}
+[右键点我,另存为,下载完整压缩文件包](file/腾讯云.zip){:target="_blank"}
 
 ## 五、腾讯云软硬件资料
 
@@ -294,7 +294,7 @@ iotcloudc = iotcloud.new(iotcloud.TENCENT,{produt_id = "xxx" ,product_secret = "
 >
 > 本篇文章描述的内容，如果有错误、细节缺失、细节不清晰或者其他任何问题，总之就是无法解决您遇到的问题；
 >
-> 请登录[合宙技术交流论坛](https://chat.openluat.com/)，点击[文档找错赢奖金-Air780E-LuatOS-软件demo-网络应用-腾讯云]
+> 请登录[合宙技术交流论坛](https://chat.openluat.com/)，点击[文档找错赢奖金-Air780E-LuatOS-软件指南-网络应用-腾讯云](https://chat.openluat.com/#/page/matter?125=1848634336954417154&126=%E6%96%87%E6%A1%A3%E6%89%BE%E9%94%99%E8%B5%A2%E5%A5%96%E9%87%91-Air780E-LuatOS-%E8%BD%AF%E4%BB%B6%E6%8C%87%E5%8D%97-%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8-%E8%85%BE%E8%AE%AF%E4%BA%91&askid=1848634336954417154)
 >
 > 用截图标注+文字描述的方式跟帖回复，记录清楚您发现的问题；
 >
