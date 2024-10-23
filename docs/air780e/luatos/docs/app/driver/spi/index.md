@@ -69,11 +69,11 @@ SPI 的优点包括简单的硬件连接、高速数据传输和全双工通信�
 
 ## 五、软硬件资料
 
-1、AIR708E 开发板原理图，打开 [Air780E 产品手册](https://docs.openluat.com/air780e/product/) ，访问页面中的 《[EVB_Air780X_V1.6.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240513100446379_EVB_Air780X_V1.6.zip)》
+1、AIR780E 开发板原理图，打开 [Air780E 产品手册](https://docs.openluat.com/air780e/product/) ，访问页面中的 《[EVB_Air780X_V1.6.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240513100446379_EVB_Air780X_V1.6.zip)》
 
 2、[API 使用介绍说明](https://wiki.luatos.com/api/spi.html)
 
-3、AIR708E 开发板使用说明，打开 [Air780E 产品手册](https://docs.openluat.com/air780e/product/) ，访问页面中的 《Core_Air780E 使用说明 V1.0.5.pdf》
+3、AIR780E 开发板使用说明，打开 [Air780E 产品手册](https://docs.openluat.com/air780e/product/) ，访问页面中的 《Core_Air780E 使用说明 V1.0.5.pdf》
 
 ### 5.1 开发板按钮与指示灯图示与说明
 
@@ -260,7 +260,7 @@ sys.run()
 
 ## 八、总结
 
-至此，我们已使用 AIR708E 开发板的 SPI 接口完成了对 W25Q64 读写操作。
+至此，我们已使用 AIR780E 开发板的 SPI 接口完成了对 W25Q64 读写操作。
 
 ## 给读者的话
 
