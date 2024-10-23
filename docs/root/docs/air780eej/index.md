@@ -1,7 +1,7 @@
 # 合宙Air780EEJ模组资料中心
 
-- [合宙Air780EEJ模组产品手册](https://docs.openluat.com/air780eej/product/)
-- [合宙Air780EEJ模组AT资料中心](https://docs.openluat.com/air780eej/at/)
+- [Air780EEJ产品资料](https://docs.openluat.com/air780eej/product/)
+- [Air780EEJ AT资料](https://docs.openluat.com/air780eej/at/)
 
 
 ## 选型 Air780EEN/EEU/EEJ 时，我应该注意什么?

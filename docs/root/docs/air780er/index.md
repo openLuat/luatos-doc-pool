@@ -1,7 +1,7 @@
 # 合宙Air780ER模组资料中心
 
-- [合宙Air780ER模组产品手册](https://docs.openluat.com/air780er/product/)
-- [合宙Air780ER模组AT资料中心](https://docs.openluat.com/air780er/at/)
+- [Air780ER产品资料](https://docs.openluat.com/air780er/product/)
+- [Air780ER USB上网](https://docs.openluat.com/air780er/at/)
 
 ## 选型Air780ER时，我应该注意什么？
 

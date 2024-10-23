@@ -1,4 +1,4 @@
 # 合宙Air530Z系列模组资料中心
 
-- [合宙Air530Z模组产品手册](https://docs.openluat.com/air530z/product/)
-- [合宙Air530Z模组AT资料中心](https://docs.openluat.com/air530z/at/)
+- [Air530Z产品资料](https://docs.openluat.com/air530z/product/)
+- [Air530Z开发资料](https://docs.openluat.com/air530z/at/)
