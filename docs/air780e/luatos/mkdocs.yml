@@ -29,7 +29,7 @@ nav:
       #- 串口电路设计指导: hardware/design/uart.md
       - SIM卡电路设计指导: hardware/design/sim.md
       #- LED状态灯电路: hardware/design/led.md
-      - GPIO使用注意事项: hardware/design/GPIO.md
+      - GPIO使用注意事项: hardware/design/gpio.md
       - 天线电路: hardware/design/ant.md
       #- 常见供电电路: hardware/design/power.md
       #- 常见充电电路: hardware/design/charge.md
