@@ -59,7 +59,7 @@ nav:
       - 简介: air780ex/index.md
       - 公用产品资料: air780ex/product/index.md
       - LuatOS二次开发: https://docs.openluat.com/air780ex/luatos/
-      - AAT指令使用方式: https://docs.openluat.com/air780ex/at/
+      - AT指令使用方式: https://docs.openluat.com/air780ex/at/
     - Air780ER:
       - 简介: air780er/index.md
       - 产品资料: air780er/product/index.md
