@@ -8,7 +8,7 @@ MQTT 的消息传递质量分为三种：最多一次（QoS 0）不保证交付�
 
 ## 二、演示功能概述
 
-本 demo 通过使用 AIR708E 开发板，带你快速体验通过 MQTT 协议进行数据接收与发送。
+本 demo 通过使用 AIR780E 开发板，带你快速体验通过 MQTT 协议进行数据接收与发送。
 
 ## 三、准备硬件环境
 
@@ -42,11 +42,11 @@ MQTT 的消息传递质量分为三种：最多一次（QoS 0）不保证交付�
 
 ## 五、软硬件资料
 
-1、AIR708E 开发板原理图，打开 [Air780E 产品手册](https://docs.openluat.com/air780e/product/) ，访问页面中的 《[EVB_Air780X_V1.6.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240513100446379_EVB_Air780X_V1.6.zip)》
+1、AIR780E 开发板原理图，打开 [Air780E 产品手册](https://docs.openluat.com/air780e/product/) ，访问页面中的 《[EVB_Air780X_V1.6.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240513100446379_EVB_Air780X_V1.6.zip)》
 
 2、[API 使用介绍说明](https://wiki.luatos.com/api/mqtt.html)
 
-3、AIR708E 开发板使用说明，打开 [Air780E 产品手册](https://docs.openluat.com/air780e/product/) ，访问页面中的 《Core_Air780E 使用说明 V1.0.5.pdf》
+3、AIR780E 开发板使用说明，打开 [Air780E 产品手册](https://docs.openluat.com/air780e/product/) ，访问页面中的 《Core_Air780E 使用说明 V1.0.5.pdf》
 
 ### 5.1 开发板按钮与指示灯图示与说明
 
@@ -307,7 +307,7 @@ Password：password
 
 ## 总结
 
-至此，我们已使用 AIR708E 开发板完成了 MQTT 通信的基本功能。
+至此，我们已使用 AIR780E 开发板完成了 MQTT 通信的基本功能。
 ## 给读者的话
 
 > 本篇文章由`肇朔`开发；
