@@ -1,29 +1,5 @@
 
 > [!TIP]
-> ！！！不要删除这个高亮块中的内容！！！
-
-每次版本迭代时，重新复制之前最近的一份文章内容，放到本文档最上面，然后修改；
-
-必读文章：
-[docs.openluat.com 文档开发过程（新人必看）](https://e3zt58hesn.feishu.cn/wiki/BJWIwMWI0ijF2zkiamUcI0s7nwd)
-[docs 文章基本要求（大家仔细阅读，严格遵守）](https://e3zt58hesn.feishu.cn/docx/UplIdAaKso4k09xZSG4cMBGfn6e)
-
-写本篇文章时，文章内容可以参考的一些合宙内部的资料（有些资料可能不是 Air780E 的，仅供参考）：
-
-- AT 命令手册；
-- [https://docs.openluat.com/air780e/luatos/quick_start/hello/](https://docs.openluat.com/air780e/luatos/quick_start/hello/)
-- [https://doc.openluat.com/wiki/21?wiki_page_id=6044](https://doc.openluat.com/wiki/21?wiki_page_id=6044)
-- [https://doc.openluat.com/wiki/21?wiki_page_id=1986](https://doc.openluat.com/wiki/21?wiki_page_id=1986)
-- [https://doc.openluat.com/wiki/21?wiki_page_id=1991](https://doc.openluat.com/wiki/21?wiki_page_id=1991)
-- [https://doc.openluat.com/wiki/21?wiki_page_id=6059](https://doc.openluat.com/wiki/21?wiki_page_id=6059)
-
-写本篇文章时，文章目录结构可以参考一下文章：
-
-- [Air780E LuatOS 快速入门示例 HelloWorld](https://docs.openluat.com/air780e/luatos/quick_start/hello/)
-- [合宙 DTU 整机产品线文档中心](https://e3zt58hesn.feishu.cn/wiki/CFgkw6I66idUVnkAeaQcGpL4nfe?chunked=false)
-- [Air780E AT 快速入门示例 TCP 通信](https://docs.openluat.com/air780e/at/quick_start/tcp/tcp/)
-
-# 2024-10-16 第一版
 
 ## 一、AT 命令概述
 
