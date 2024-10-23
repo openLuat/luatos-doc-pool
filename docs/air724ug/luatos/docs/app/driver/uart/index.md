@@ -230,8 +230,19 @@ uart.getchar(1)
 ### 4.3 初始化 uart
 
 使用 UART1 串口
+```lua
+local UART_ID = 1 -- 使用uart1，可根据实际设备选取不同的uartid
 
+--初始化 参数都可以根据实施情况修改
+uart.setup(UART_ID,115200,8,uart.PAR_NONE,uart.STOP_1)
+```
 使用 UART2 串口
+```lua
+local UART_ID= 2 -- 使用uart2
+
+--初始化 参数都可以根据实施情况修改
+uart.setup(UART_ID,115200,8,uart.PAR_NONE,uart.STOP_1)
+```
 
 ### 4.4 注册接收数据的回调函数
 
