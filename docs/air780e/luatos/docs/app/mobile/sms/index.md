@@ -50,7 +50,7 @@ Air780E 不支持电信卡的短信功能!!
 - 本教程使用的 demo：[https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/sms](https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/sms)
 - 将固件和脚本烧录到模块中，使用说明参考：[Luatools 下载和详细使用](https://docs.openluat.com/Luatools/)
 - 源码和固件已打包，如下所示：
-[右键点我,另存为,下载完整压缩文件包](file/完整文件包.zip){:target="_blank"}
+[点我,下载完整压缩文件包](file/完整文件包.zip){:target="_blank"}
 
 ### 5.3 本 demo 使用 api 简介
 
@@ -70,7 +70,7 @@ Air780E 不支持电信卡的短信功能!!
 
 | **返回值类型**<br/> | **解释**<br/>                            |
 | ------------------- | ---------------------------------------- |
-| bool<br/>           | 成功返回 true,否则返回 false 或 nil<br/> |
+| bool/nil           | 成功返回 true,否则返回 false 或 nil |
 
 #### sms.setNewSmsCb(func)
 
@@ -203,7 +203,7 @@ Air780E 不支持电信卡的短信功能!!
 
 ## 给读者的话
 
-> 本篇文章由`孙晨龙`开发；
+> 本篇文章由`Linden`开发；
 >
 > 本篇文章描述的内容，如果有错误、细节缺失、细节不清晰或者其他任何问题，总之就是无法解决您遇到的问题；
 >

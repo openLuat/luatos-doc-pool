@@ -71,7 +71,7 @@ WINDOWS 系统。
 - 本教程使用的 demo：[https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/sht20](https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/sht20)
 - 将固件和脚本烧录到模块中：[Luatools 下载和使用教程 - 合宙模组资料中心](https://docs.openluat.com/Luatools/)
 - 源码和固件已打包，如下所示：
-[右键点我,另存为,下载完整压缩文件包](file/完整文件包.zip){:target="_blank"}
+[点我,下载完整压缩文件包](file/完整文件包.zip){:target="_blank"}
 
 ### 5.2 demo 使用 api 介绍
 
@@ -200,14 +200,14 @@ sys.taskInit(function()
         ]]
         tmp = i2c.recv(id, addr, 2)
         log.info("SHT20", "read tem data", tmp:toHex())
-        
+
         --[[ 发送读取湿度的命令 ]]
         i2c.send(id, addr, string.char(0xF5))
         sys.wait(100)
         --[[ 接收湿度的数据 ]]
         hum = i2c.recv(id, addr, 2)
         log.info("SHT20", "read hum data", hum:toHex())
-        
+
         local _,tval = pack.unpack(tmp,'>H')
         local _,hval = pack.unpack(hum,'>H')
         if tval and hval then
@@ -272,7 +272,7 @@ setup 之后，只要没有 close，就可以反复读写数据
 
 ## 给读者的话
 
-> 本篇文章由`孙晨龙`开发；
+> 本篇文章由`Linden`开发；
 >
 > 本篇文章描述的内容，如果有错误、细节缺失、细节不清晰或者其他任何问题，总之就是无法解决您遇到的问题；
 >
