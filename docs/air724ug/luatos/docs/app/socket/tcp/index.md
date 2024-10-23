@@ -69,7 +69,7 @@ TCP（Transmission Control Protocol，传输控制协议）是一种面向连接
 
 ![](image/BnPybjQhhoQw7gxrynlcCaD9nZe.jpg)
 
-- 准备一块 TTL 串口板，这里采用了高速串口板其高达 12Mbps，建议购买一块备用，有需要时方便其对模块日志进行有效抓取：
+- 准备一块 TTL 串口板，这里采用了高速串口板其速率高达 12Mbps，建议购买一块备用，有需要时方便其对模块日志进行有效抓取：
 
 ![](image/GKwCbP0aOoqsSJxs7bUcCSQSnuf.jpg)
 
@@ -98,7 +98,7 @@ TCP（Transmission Control Protocol，传输控制协议）是一种面向连接
 
 ![](image/CFQbbVPqioJZOexrmANch4VKnMe.jpg)
 
-3、将 usb 公口线，连接电脑和串口板并将串口板的 ch-1 使用杜邦线或着顺手在淘宝店铺买的组装线连接至串口 2，注意板子上的丝印！
+3、将 usb 公口线，连接电脑和串口板并将串口板的 ch-1 使用杜邦线或者顺手在淘宝店铺买的组装线连接至串口 2，注意板子上的丝印！
 
 ![](image/Ex22beLLzoufGaxju1dc39SsnCe.jpg)
 
@@ -204,7 +204,7 @@ setTcpResendPara(retryCnt, retryMaxTimeout)
 printStatus()
 ```
 
-**以上接口函数不做详细介绍，可通过此链接查看具体介绍：****API 链接**
+**以上接口函数不做详细介绍，可通过此链接查看具体介绍：**[API 链接](https://doc.openluat.com/wiki/21?wiki_page_id=2294)
 
 ## 七、 TCP-UART 无校验实战演示
 
@@ -225,24 +225,21 @@ printStatus()
 这里只进行了工程下载的概述，详细下载教程请查看章节 4.2 Luatools 工具讲解
 
 1. 模块首先进行上电：
+   ![](image/OC6dbbo99oUb3sx0Fl1chieqnmh.png)
 
-![](image/OC6dbbo99oUb3sx0Fl1chieqnmh.png)
+2. 模块上电后，右侧三种状态灯会根据程序状态进行闪烁：
+   ![](image/RyDLbkzWHoUDjFxamTacVSFpnIh.png)
 
-1. 模块上电后，右侧三种状态灯会根据程序状态进行闪烁：
+3. 创建项目并添加对应的工程脚本进行下载，这里选择了工程中的 lib 以及免 boot 下载固件和脚本：
+   ![](image/HPn1bkOtAoQFz6xe0N8c5O4sneg.png)
 
-![](image/RyDLbkzWHoUDjFxamTacVSFpnIh.png)
+4. luatools 打印效果：
+   ![](image/HDO2bAlGGoX6R0xdBhzcGloAnVh.png)
 
-1. 创建项目并添加对应的工程脚本进行下载，这里选择了工程中的 lib 以及免 boot 下载固件和脚本：
-
-![](image/HPn1bkOtAoQFz6xe0N8c5O4sneg.png)
-
-1. luatools 打印效果：
-
-![](image/HDO2bAlGGoX6R0xdBhzcGloAnVh.png)
 
 #### 7.4 sscom 串口工具发送数据
 
-- 打开计算机右键，找到计算机管理，找到你连接的串口端口：
+- 点击计算机右键，找到计算机管理，找到你连接的串口端口：
 
 ![](image/P1bybNvf9oSfsLxS5g0cy9hPnCh.png)
 
@@ -277,16 +274,16 @@ printStatus()
 这里只进行了工程下载的概述，详细下载教程请查看章节 4.2 Luatools 工具讲解
 
 1. 模块首先进行上电：
+   ![](image/HyQ2bUupGomXLCxdDNncPoUnnzd.png)
 
-![](image/HyQ2bUupGomXLCxdDNncPoUnnzd.png)
-
-1. 模块上电后，右侧三种状态灯会根据程序状态进行闪烁：
+2. 模块上电后，右侧三种状态灯会根据程序状态进行闪烁：
    ![](image/HcgUbEwZ4oR95lxJbw6cQSLLnub.png)
-2. 创建项目并添加对应的工程脚本进行下载，这里选择了工程中的 lib 以及免 boot 下载固件和脚本：
-   ![](image/Qvuhb5e6loJ9RqxXoimc7HvwnJd.png)
-3. luatools 打印效果：
 
-![](image/Mzznbxzk1olscQx9eX6cBLxdngd.png)
+3. 创建项目并添加对应的工程脚本进行下载，这里选择了工程中的 lib 以及免 boot 下载固件和脚本：
+   ![](image/Qvuhb5e6loJ9RqxXoimc7HvwnJd.png)
+
+4. luatools 打印效果：
+   ![](image/Mzznbxzk1olscQx9eX6cBLxdngd.png)
 
 #### 8.4 sscom 串口工具发送数据
 
@@ -303,7 +300,7 @@ printStatus()
 
 ## 九、总结
 
-这篇文章详主要通过宝宝教学的方式，细述了 tcp 如何搭配串口进行数据透传，以及描述了一系列工具的使用和演示示例。
+这篇文章主要通过宝宝教学的方式，细述了 tcp 如何搭配串口进行数据透传，以及描述了一系列工具的使用和演示示例。
 
 ## 扩展
 
