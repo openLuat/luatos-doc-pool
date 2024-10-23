@@ -81,6 +81,9 @@ nav:
       - SPI串口屏: app/simpleui/spilcd/index.md
       - 摄像头拍照和扫码: app/simpleui/camera/index.md
       - 二维码: app/simpleui/qrcode/index.md
+    - 项目实战:
+      - 简介: app/project/index.md
+      - 温湿度数据采集: app/project/temprature_humity_report/index.md
   - SDK&Demo: firmware.md
   - 常见问题: faq.md
   - DTU: https://docs.openluat.com/dtu/
