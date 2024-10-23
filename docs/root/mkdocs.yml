@@ -22,9 +22,9 @@ nav:
   - 国内模组:
     - Air780E:
       - 简介: air780e/index.md
-      - 产品手册: air780e/product/index.md
-      - LuatOS二次开发资料: https://docs.openluat.com/air780e/luatos/
-      - AT资料: https://docs.openluat.com/air780e/at/
+      - 公用产品资料: air780e/product/index.md
+      - LuatOS二次开发: https://docs.openluat.com/air780e/luatos/
+      - AT指令使用方式: https://docs.openluat.com/air780e/at/
     - Air700ECQ:
       - 简介: air700ecq/index.md
       - 产品手册: air700ecq/product/index.md
