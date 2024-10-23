@@ -151,13 +151,15 @@ iotcloudc = iotcloud.new(iotcloud.TENCENT,{produt_id = "xxx" ,product_secret = "
 
 本例采用密钥校验(手动注册)的方式进行注册并连接云平台
 1. 设备日志
-   ![](image/FvDibkD8moIMxRx6gvUccwV8nug.png)可以看到我们的设备打印了连接成功，证明手动注册 + 连接流程已经完成
+   ![](image/FvDibkD8moIMxRx6gvUccwV8nug.png)
+   通过上图Luatools工具打印的日志，可以看到我们的设备打印了云平台连接成功，证明手动注册 + 连接流程已经完成
+
 2. 云平台效果
+   设备成功连接到云平台后，我们可以看到设备已经自动注册并且在线，如下图所示：
 
-    ![](image/Q8cdblwVUoDt5TxjXPKc2BOEnab.png)
+   ![](image/Q8cdblwVUoDt5TxjXPKc2BOEnab.png)
 
-    设备已经自动注册并且在线
-    至此，云平台已经连接成功，剩下的就是要根据自己的产品需求，自己的物模型上报/下发数据就可以了
+   至此，云平台已经连接成功，剩下的就是要根据自己的产品需求，自己的物模型上报/下发数据就可以了
 
 ## 七、代码示例说明及功能验证
 
