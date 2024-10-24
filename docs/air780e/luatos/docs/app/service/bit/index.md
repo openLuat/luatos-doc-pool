@@ -1,10 +1,10 @@
 ## 一、位运算概述
 
-位运算是一种在计算机系统中对二进制数位进行操作的运算。由于计算机内部数据的存储和处理都是以二进制形式进行的，位运算能够直接对整数的二进制位进行高效操作。位运算包括与（&）、或（|）、异或（^）、非（~）、左移（<<）和右移（>>）等基本操作。
+位运算是一种在计算机系统中对二进制数位进行操作的运算.由于计算机内部数据的存储和处理都是以二进制形式进行的，位运算能够直接对整数的二进制位进行高效操作.位运算包括与（&）、或（|）、异或（^）、非（~）、左移（<<）和右移（>>）等基本操作.
 
 ## 二、演示功能概述
 
-本文通过了解位操作的 API 函数,并用代码演示功能来熟悉 Air780E-LuatOS-软件 demo-基础服务-位运算(bit)。
+本文通过了解位操作的 API 函数,并用代码演示功能来熟悉 Air780E-LuatOS-软件 demo-基础服务-位运算(bit).
 
 ## 三、硬件环境
 
@@ -16,40 +16,40 @@
 
 淘宝购买链接：[Air780E 核心板淘宝购买链接](https://item.taobao.com/item.htm?id=693774140934&pisk=f1eiwOqL25l1_HYiV6D1ize3wN5d5FMjRrpxkx3VT2uIHCCskWm4kysffAEqor4KRRIskGT0ooqi_coq7DWE000qbVr2mmzKQjNtkV3mnoalvaBRelZshA7RyTFdpD4xQco2_VS2Tcnvc89h5lZshq-pu_FUfEDVVdOmgrkET0ir3mkq_MDEmmM2QjJaY2uI0UGAoNueWRjiw4YTC-_opNr-zluaXleFpfR_X2fhTJVn94W--KJ4KcqQreCDEs3zNVh-DyWpIxqEmyc8savgoor7gX2D7GUzmW4jBJS2_4PTWjestFRZqA0iaRlwjdkIgW2nBR7XNkEn7bDL96_tMA4gN4GNOwa0xVU4IX8G4iReapZyhDSYLIOj_DinyhbSB2IHjbEhxMA51foIXaIhxItMPKJlyMjHNEGZAcQR.&spm=a1z10.5-c-s.w4002-24045920841.33.639f1fd1YrS4b6&skuId=5098266470883) ；
 
-此核心板的详细使用说明参考：[Air780E 产品手册](https://docs.openluat.com/air780e/product/) 中的 << 开发板 Core_Air780E 使用说明 VX.X.X.pdf>>，写这篇文章时最新版本的使用说明为：开发板 Core_Air780E 使用说明 V1.0.5.pdf ；核心板使用过程中遇到任何问题，可以直接参考这份使用说明 pdf 文档。
+此核心板的详细使用说明参考：[Air780E 产品手册](https://docs.openluat.com/air780e/product/) 中的 << 开发板 Core_Air780E 使用说明 VX.X.X.pdf>>，写这篇文章时最新版本的使用说明为：开发板 Core_Air780E 使用说明 V1.0.5.pdf ；核心板使用过程中遇到任何问题，可以直接参考这份使用说明 pdf 文档.
 
 ### 3.2 SIM 卡
 
-中国大陆环境下，可以上网的 sim 卡,一般来说，使用移动，电信，联通的物联网卡或者手机卡都行；
+中国大陆环境下，可以上网的 sim 卡,一般来说，使用移动，电信，联通的物联网卡或者手机卡都行.
 
 ### 3.3 PC 电脑
 
-WINDOWS 系统，其他暂无特别要求；
+WINDOWS 系统.
 
 ### 3.4 数据通信线
 
-USB 数据线，暂无特别要求；
+USB 数据线.
 
 ## 四、软件环境
 
 ### 4.1 Luatools 工具
 
-要想烧录 LuatOS 固件到 4G 模组中，需要用到合宙的强大的调试工具：Luatools；
+要想烧录 LuatOS 固件到 4G 模组中，需要用到合宙的强大的调试工具：Luatools
 
-详细使用说明参考：[Luatools 工具使用说明](https://docs.openluat.com/Luatools/) 。
+详细使用说明参考：[Luatools 工具使用说明](https://docs.openluat.com/Luatools/) .
 
 Luatools 工具集具备以下几大核心功能：
 
-- 一键获取最新固件：自动连接合宙服务器，轻松下载最新的合宙模组固件。
-- 固件与脚本烧录：便捷地将固件及脚本文件烧录至目标模组中。
-- 串口日志管理：实时查看模组通过串口输出的日志信息，并支持保存功能。
-- 串口调试助手：提供简洁的串口调试界面，满足基本的串口通信测试需求。
+- 一键获取最新固件：自动连接合宙服务器，轻松下载最新的合宙模组固件.
+- 固件与脚本烧录：便捷地将固件及脚本文件烧录至目标模组中.
+- 串口日志管理：实时查看模组通过串口输出的日志信息，并支持保存功能.
+- 串口调试助手：提供简洁的串口调试界面，满足基本的串口通信测试需求.
 
-Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools_v3.exe 运行，出现如下界面，就代表 Luatools 安装成功了.
+Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools_v3.exe 即可运行.
 
 ### 4.2 准备需要烧录的代码
 
-首先要说明一点： 脚本代码， 要和固件的 soc 文件一起烧录。
+首先要说明一点： 脚本代码， 要和固件的 soc 文件一起烧录.
 
 #### 4.2.1 **烧录的底层固件文件**
 
@@ -119,13 +119,15 @@ print(bit.bnot(5))_--按位取反，输出-6_
 
 **例子**
 
-print(bit.band(1,1))_--与,--输出 1_
+print(bit.band(1,1))_--与,输出 1_
 
 ---
 
 ## 5.3 bit.bor( val1, val2, … valn )
 
 或运算，等价于 C 里面的 val1 | val2 | … | valn
+
+注:对于Air780E建议不要超过多少个参数
 
 **参数**
 
@@ -135,6 +137,7 @@ print(bit.band(1,1))_--与,--输出 1_
 | val2<br/>     | number<br/>   | 第二个参数<br/>  | <br/>         |
 | valn<br/>     | number<br/>   | 第 n 个参数<br/> | <br/>         |
 
+
 **返回值**
 
 | **返回值**<br/> | **类型**<br/> | **释义**<br/>         | **取值**<br/> |
@@ -143,7 +146,7 @@ print(bit.band(1,1))_--与,--输出 1_
 
 **例子**
 
-print(bit.bor(1,2))_--或，--输出 3_
+print(bit.bor(1,2))_--或，输出 3_
 
 ---
 
@@ -281,9 +284,9 @@ print(bit.bit(2))_--参数是位数，作用是 1 向左移动两位，打印出
 
 **例子**
 
-_-- 例子 1  _
+-- 例子 1
 
-print(bit.isset(5,0))_--第一个参数是是测试数字，第二个是测试位置。从右向左数 0 到 7。是 1 返回 true，否则返回 false，该返回 true_
+print(bit.isset(5,0))_--第一个参数是是测试数字，第二个是测试位置.从右向左数 0 到 7.是 1 返回 true，否则返回 false，该返回 true_
 
 _-- 例子 2_
 
@@ -318,8 +321,12 @@ print(bit.isset(5,3))_--返回返回 false_
 
 **例子**
 
-print(bit.isclear(5,0))_--与上面的相反_print(bit.isclear(5,1))
+print(bit.isclear(5,0))--与上面的相反
+
+print(bit.isclear(5,1))
+
 print(bit.isclear(5,2))
+
 print(bit.isclear(5,3))
 
 ---
@@ -416,7 +423,7 @@ local function log_bit()
         log.info("逻辑右移，“001”，输出为1",bit.rshift(4,2))
         log.info("算数右移，左边添加的数与符号有关，输出为0",bit.arshift(2,2))
         log.info("参数是位数，作用是1向左移动两位，打印出4",bit.bit(2))
-        log.info("测试位数是否被置1",bit.isset(5,0))--第一个参数是是测试数字，第二个是测试位置。从右向左数0到7。是1返回true，否则返回false，该返回true
+        log.info("测试位数是否被置1",bit.isset(5,0))--第一个参数是是测试数字，第二个是测试位置.从右向左数0到7.是1返回true，否则返回false，该返回true
         log.info("测试位数是否被置1",bit.isset(5,1))--打印false
         log.info("测试位数是否被置1",bit.isset(5,2))--打印true
         log.info("测试位数是否被置1",bit.isset(5,3))--返回返回false
@@ -442,17 +449,17 @@ sys.run()
 
 #### 6.2.1 **正确连接电脑和 4G 模组电路板**
 
-使用带有数据通信功能的数据线，不要使用仅有充电功能的数据线；
+使用带有数据通信功能的数据线，不要使用仅有充电功能的数据线.
 
 #### 6.2.2 **识别 4G 模组的 boot 引脚**
 
-在下载之前，要用模组的 boot 引脚触发下载， 也就是说，要把 4G 模组的 boot 引脚拉到 1.8v，或者直接把 boot 引脚和 VDD_EXT 引脚相连。我们要在按下 BOOT 按键时让模块开机，就可以进入下载模式了。
+在下载之前，要用模组的 boot 引脚触发下载， 也就是说，要把 4G 模组的 boot 引脚拉到 1.8v，或者直接把 boot 引脚和 VDD_EXT 引脚相连.我们要在按下 BOOT 按键时让模块开机，就可以进入下载模式了.
 
 具体到 Air780E 开发板:
 
-1、当我们模块没开机时，按着 BOOT 键然后长按 PWR 开机。
+1、当我们模块没开机时，按着 BOOT 键然后长按 POW 开机.
 
-2、当我们模块开机时，按着 BOOT 键然后点按重启键即可。
+2、当我们模块开机时，按着 BOOT 键然后点按重启键即可.
 
 ![](image/MAH7bxwImoDFxlxDCcdcRAATn9b.png)
 
@@ -468,13 +475,13 @@ sys.run()
 
 - 新建项目
 
-首先，确保你的 Luatools 的版本，大于等于 3.0.6 版本的。
+首先，确保你的 Luatools 的版本，大于等于 3.0.6 版本的.
 
 在 Luatools 的左上角上有版本显示的，如图所示：
 
 ![](image/UWZjb5rOsoVADVxRhpfc5ptRnEE.png)
 
-Luatools 版本没问题的话， 就点击 LuaTOols 右上角的“项目管理测试”按钮，如下图所示：
+Luatools 版本没问题的话， 就点击 Luatools 右上角的“项目管理测试”按钮，如下图所示：
 
 ![](image/QEL6bRWO5ouVRYxw68RcW5zwnNb.png)
 
@@ -484,19 +491,17 @@ Luatools 版本没问题的话， 就点击 LuaTOols 右上角的“项目管理
 
 - 开始烧录
 
-选择 780E 板子对应的底层 core 和刚改的 main.lua 脚本文件。下载到板子中。
+选择 780E 板子对应的底层 core 和刚改的 main.lua 脚本文件.下载到板子中.
 
 ![](image/QcbpbHlWroIS0yxnME4caSDzn8c.png)
 
-点击下载后，我们需要进入 boot 模式才能正常下载。
+点击下载后，我们需要进入 boot 模式才能正常下载.
 
 如果没进入 boot 模式会出现下图情况:
 
 ![](image/QAOsbZy0eoRfm8xvTiKcmrapn1i.png)
 
-当我们模块没开机时，按着 BOOT 键然后长按 PWR 开机,进入下载。
-
-当我们模块开机时，按着 BOOT 键然后点按重启键即可。可以进入下载,如图:
+进入 boot 模式下载,如图:
 
 ![](image/Qu3lbupOKoqstmxEUWwcvhLxnie.png)
 

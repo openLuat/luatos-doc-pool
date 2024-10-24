@@ -1,22 +1,22 @@
 ## 一、加解密概述
 
-加解密算法是保证数据安全的基础技术，无论是在数据传输、存储，还是用户身份验证中，都起着至关重要的作用。随着互联网的发展和信息安全威胁的增加，了解并掌握常用的加解密算法已经成为开发者和安全从业者的必修课。
+加解密算法是保证数据安全的基础技术，无论是在数据传输、存储，还是用户身份验证中，都起着至关重要的作用.随着互联网的发展和信息安全威胁的增加，了解并掌握常用的加解密算法已经成为开发者和安全从业者的必修课.
 
-常见的 15 种加密解密算法分别是：散列哈希[MD5、SHA1、CRC32]，对称[DES，3DES（TDEA、Triple DES），AES、，Blowfish，RC4、RC5，IDEA]，Base64、Rabbit、Escape。
+常见的 15 种加密解密算法分别是：散列哈希[MD5、SHA1、CRC32]，对称[DES，3DES（TDEA、Triple DES），AES、，Blowfish，RC4、RC5，IDEA]，Base64、Rabbit、Escape.
 
 【三种分类】
 
-1、对称加密：密钥只有一个，解密、解密都是这个密码，加解密速度快，典型的对称加密有 DES、AES、RC4 等
+1、对称加密：对称加密是指加密和解密使用同一个密钥的加密方法.由于加密和解密过程中的密钥相同，因此需要在通信双方之间安全地共享密钥.对称加密的速度较快，适合用于大量数据的加密
 
-2、非对称加密:密钥成对出现，分别为公钥和私钥，从公钥无法推知私钥，反之，从私钥也无法推知公钥，加密和解密使用不同的密钥，公钥加密需要私钥解密，反之，私钥加密需要公钥解密。非对称加密速度较慢，典型的非对称算法有：RSA,DSA,DSS.
+2、非对称加密:非对称加密算法采用一对密钥：公钥和私钥.公钥用于加密，私钥用于解密.由于加密和解密使用不同的密钥，非对称加密算法解决了密钥分发的问题，是当前加密系统中安全性最高的加密技术之一.
 
 3、Hash 算法，这是一种不可逆的算法，它常用于验证数据的完整性
 
 ## 二、演示功能概述
 
-本文章通过 Air780 的核心板烧录 LuatOS 示例代码([点此链接查看 crypto 的 demo 例子](https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/crypto)),来演示有关加解密的各种 API 的功能。
+本文章通过 Air780 的核心板烧录 LuatOS 示例代码([点此链接查看 crypto 的 demo 例子](https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/crypto)),来演示有关加解密的各种 API 的功能.
 
-API 的具体用法,读者可以参考本文中的"五、API 说明"。
+API 的具体用法,读者可以参考本文中的"五、API 说明".
 
 ## 三、硬件准备
 
@@ -28,40 +28,40 @@ API 的具体用法,读者可以参考本文中的"五、API 说明"。
 
 淘宝购买链接：[Air780E 核心板淘宝购买链接](https://item.taobao.com/item.htm?id=693774140934&pisk=f1eiwOqL25l1_HYiV6D1ize3wN5d5FMjRrpxkx3VT2uIHCCskWm4kysffAEqor4KRRIskGT0ooqi_coq7DWE000qbVr2mmzKQjNtkV3mnoalvaBRelZshA7RyTFdpD4xQco2_VS2Tcnvc89h5lZshq-pu_FUfEDVVdOmgrkET0ir3mkq_MDEmmM2QjJaY2uI0UGAoNueWRjiw4YTC-_opNr-zluaXleFpfR_X2fhTJVn94W--KJ4KcqQreCDEs3zNVh-DyWpIxqEmyc8savgoor7gX2D7GUzmW4jBJS2_4PTWjestFRZqA0iaRlwjdkIgW2nBR7XNkEn7bDL96_tMA4gN4GNOwa0xVU4IX8G4iReapZyhDSYLIOj_DinyhbSB2IHjbEhxMA51foIXaIhxItMPKJlyMjHNEGZAcQR.&spm=a1z10.5-c-s.w4002-24045920841.33.639f1fd1YrS4b6&skuId=5098266470883) ；
 
-此核心板的详细使用说明参考：[Air780E 产品手册](https://docs.openluat.com/air780e/product/) 中的 << 开发板 Core_Air780E 使用说明 VX.X.X.pdf>>，写这篇文章时最新版本的使用说明为：开发板 Core_Air780E 使用说明 V1.0.5.pdf ；核心板使用过程中遇到任何问题，可以直接参考这份使用说明 pdf 文档。
+此核心板的详细使用说明参考：[Air780E 产品手册](https://docs.openluat.com/air780e/product/) 中的 << 开发板 Core_Air780E 使用说明 VX.X.X.pdf>>，写这篇文章时最新版本的使用说明为：开发板 Core_Air780E 使用说明 V1.0.5.pdf ；核心板使用过程中遇到任何问题，可以直接参考这份使用说明 pdf 文档.
 
 ### 3.2 SIM 卡
 
-中国大陆环境下，可以上网的 sim 卡,一般来说，使用移动，电信，联通的物联网卡或者手机卡都行；
+中国大陆环境下，可以上网的 sim 卡,一般来说，使用移动，电信，联通的物联网卡或者手机卡都行.
 
 ### 3.3 PC 电脑
 
-WINDOWS 系统，其他暂无特别要求；
+WINDOWS 系统.
 
 ### 3.4 数据通信线
 
-USB 数据线，暂无特别要求；
+USB 数据线.
 
 ## 四、软件环境
 
 ### 4.1 Luatools 工具
 
-要想烧录 LuatOS 到 4G 模组中，需要用到合宙的强大的调试工具：Luatools；
+要想烧录 LuatOS 到 4G 模组中，需要用到合宙的强大的调试工具：Luatools
 
-详细使用说明参考：[Luatools 工具使用说明](https://docs.openluat.com/Luatools/) 。
+详细使用说明参考：[Luatools 工具使用说明](https://docs.openluat.com/Luatools/) .
 
 Luatools 工具集具备以下几大核心功能：
 
-- 一键获取最新固件：自动连接合宙服务器，轻松下载最新的合宙模组固件。
-- 固件与脚本烧录：便捷地将固件及脚本文件烧录至目标模组中。
-- 串口日志管理：实时查看模组通过串口输出的日志信息，并支持保存功能。
-- 串口调试助手：提供简洁的串口调试界面，满足基本的串口通信测试需求。
+- 一键获取最新固件：自动连接合宙服务器，轻松下载最新的合宙模组固件.
+- 固件与脚本烧录：便捷地将固件及脚本文件烧录至目标模组中.
+- 串口日志管理：实时查看模组通过串口输出的日志信息，并支持保存功能.
+- 串口调试助手：提供简洁的串口调试界面，满足基本的串口通信测试需求.
 
-Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools_v3.exe 运行，出现如下界面，就代表 Luatools 安装成功了.
+Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools_v3.exe 即可运行.
 
 ### 4.2 准备需要烧录的代码
 
-首先要说明一点： 脚本代码， 要和固件的 soc 文件一起烧录。
+首先要说明一点： 脚本代码， 要和固件的 soc 文件一起烧录.
 
 #### 4.2.1 **烧录的底层固件文件**
 
@@ -852,17 +852,17 @@ local hashResult = crypto.hash_finish(stream)
 
 #### 6.1.1 **正确连接电脑和 4G 模组电路板**
 
-使用带有数据通信功能的数据线，不要使用仅有充电功能的数据线；
+使用带有数据通信功能的数据线，不要使用仅有充电功能的数据线.
 
 #### 6.1.2 **识别 4G 模组的 boot 引脚**
 
-在下载之前，要用模组的 boot 引脚触发下载， 也就是说，要把 4G 模组的 boot 引脚拉到 1.8v，或者直接把 boot 引脚和 VDD_EXT 引脚相连。我们要在按下 BOOT 按键时让模块开机，就可以进入下载模式了。
+在下载之前，要用模组的 boot 引脚触发下载， 也就是说，要把 4G 模组的 boot 引脚拉到 1.8v，或者直接把 boot 引脚和 VDD_EXT 引脚相连.我们要在按下 BOOT 按键时让模块开机，就可以进入下载模式了.
 
 具体到 Air780E 开发板:
 
-1、当我们模块没开机时，按着 BOOT 键然后长按 PWR 开机。
+1、当我们模块没开机时，按着 BOOT 键然后长按 POW 开机.
 
-2、当我们模块开机时，按着 BOOT 键然后点按重启键即可。
+2、当我们模块开机时，按着 BOOT 键然后点按重启键即可.
 
 ![](image/G81fbtuSIov7ATxJfiPcGeNxnuB.png)
 
@@ -878,13 +878,13 @@ local hashResult = crypto.hash_finish(stream)
 
 - 新建项目
 
-首先，确保你的 Luatools 的版本，大于等于 3.0.6 版本的。
+首先，确保你的 Luatools 的版本，大于等于 3.0.6 版本的.
 
 在 Luatools 的左上角上有版本显示的，如图所示：
 
 ![](image/PzmgbypEuoRzLIxKHSlc2zfFnXg.png)
 
-Luatools 版本没问题的话， 就点击 LuaTOols 右上角的“项目管理测试”按钮，如下图所示：
+Luatools 版本没问题的话， 就点击 Luatools 右上角的“项目管理测试”按钮，如下图所示：
 
 ![](image/KROLbkx5joD6ZbxpM0OcIUNdnab.png)
 
@@ -894,19 +894,17 @@ Luatools 版本没问题的话， 就点击 LuaTOols 右上角的“项目管理
 
 - 开始烧录
 
-选择 780E 板子对应的底层 core 和刚改的 main.lua 脚本文件。下载到板子中。
+选择 780E 板子对应的底层 core 和刚改的 main.lua 脚本文件.下载到板子中.
 
 ![](image/NEKEb0ZfdoAqBVx20bDcXzeFnON.png)
 
-点击下载后，我们需要进入 boot 模式才能正常下载。
+点击下载后，我们需要进入 boot 模式才能正常下载.
 
 如果没进入 boot 模式会出现下图情况:
 
 ![](image/MBqKbcmqoooaOyxrT49c7bVDnzd.png)
 
-当我们模块没开机时，按着 BOOT 键然后长按 PWR 开机,进入下载。
-
-当我们模块开机时，按着 BOOT 键然后点按重启键即可。可以进入下载,如图:
+进入 boot 模式下载,如图:
 
 ![](image/PzEUbSoWOoyoAKxzWPIcmHnunKd.png)
 
@@ -1282,7 +1280,7 @@ sys.run()
 
 ## 七、总结
 
-通过本章内容的学习，你可以学习到有关加解密算法的函数，例如：crypto.md5(str)、crypto.hmac_md5(str, key)、crypto.hmac_sha1(str, key) 等等函数。
+通过本章内容的学习，你可以学习到有关加解密算法的函数，例如：crypto.md5(str)、crypto.hmac_md5(str, key)、crypto.hmac_sha1(str, key) 等等函数.
 
 ## 给读者的话
 
