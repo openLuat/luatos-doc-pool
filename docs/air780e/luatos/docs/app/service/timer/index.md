@@ -296,17 +296,20 @@ sys.timerStopAll(myCallback)
 ```lua
 -- main.lua文件
 -- LuaTools需要PROJECT和VERSION这两个信息
-PROJECT = "uart_tcp"
+PROJECT = "timer_demo"
 VERSION = "1.0.0"
 sys = require("sys")
 -- 定义一个单次触发的定时器回调函数  
-local function oneShotCallback(message)    log.info("One-shot timer triggered: " .. message)  
+local function oneShotCallback(message)    
+  log.info("One-shot timer triggered: " .. message)  
 end  
 -- 定义一个周期性触发的定时器回调函数  
-local function periodicCallback(count)    log.info("Periodic timer triggered (Count: " .. count .. ")")  
+local function periodicCallback(count)    
+  log.info("Periodic timer triggered (Count: " .. count .. ")")  
 end  
 -- 定义一个周期性触发的定时器回调函数  
-local function periodicCallback1(count)    log.info("Periodic timer triggered1 (Count: " .. count .. ")")  
+local function periodicCallback1(count)    
+  log.info("Periodic timer triggered1 (Count: " .. count .. ")")  
 end  
 -- 初始化计数器，用于周期性定时器  
 local periodicCount = 0  
@@ -326,7 +329,8 @@ end, 2000)
         log.info("stop 2s loop timer periodicCallback1")
     end,5000)
     sys.timerStart(function()
-        sys.timerStopAll(periodicCallback)        log.info("stop periodicCallback loop timer ")
+        sys.timerStopAll(periodicCallback)        
+        log.info("stop periodicCallback loop timer ")
     end,4000)
 sys.run()-- sys.run()-此后不要在添加其他函数
 ```
