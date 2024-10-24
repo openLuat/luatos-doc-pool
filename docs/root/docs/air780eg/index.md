@@ -1,8 +1,8 @@
 # 合宙Air780EG模组资料中心
 
-- [合宙Air780EG模组产品手册](https://docs.openluat.com/air780eg/product/)
-- [合宙Air780EG模组LuatOS资料中心](https://docs.openluat.com/air780eg/luatos/)
-- [合宙Air780EG模组AT资料中心](https://docs.openluat.com/air780eg/at/)
+- [Air780EG公用资料](https://docs.openluat.com/air780eg/product/)
+- [Air780EG LuatOS](https://docs.openluat.com/air780eg/luatos/)
+- [Air780EG AT指令](https://docs.openluat.com/air780eg/at/)
 
 
 ## 选型Air780EG时，我应该注意什么？

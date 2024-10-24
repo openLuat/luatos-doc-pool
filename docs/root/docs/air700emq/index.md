@@ -1,8 +1,8 @@
 # 合宙Air700EMQ模组资料中心
 
-- [合宙Air700EMQ模组产品手册](https://docs.openluat.com/air700emq/product/)
-- [合宙Air700EMQ模组LuatOS资料中心](https://docs.openluat.com/air700emq/luatos/)
-- [合宙Air700EMQ模组AT资料中心](https://docs.openluat.com/air700emq/at/)
+- [Air700EMQ公用资料](https://docs.openluat.com/air700emq/product/)
+- [Air700EMQ LuatOS](https://docs.openluat.com/air700emq/luatos/)
+- [Air700EMQ AT指令](https://docs.openluat.com/air700emq/at/)
 
 
 ## 选型Air700ECQ/EAQ/EMQ时，我应该注意什么?
