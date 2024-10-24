@@ -96,7 +96,7 @@ Air780E 的底层固件在 Luatools 解压后目录的 **LuatOS-SoC_V1112_EC618_
 | string<br/>         | 设备唯一 id<br/> |
 
 **例子**
-
+```lua
 --注意,可能包含不可见字符,如需查看建议 toHex()后打印
 
 sys.taskInit(function()
@@ -104,7 +104,7 @@ local unique_id = mcu.unique_id()
 log.info("unique_id", unique_id:toHex())
 -- 实例输出：unique_id   4A5139383707942E55FF    20
 end)
-
+```
 ---
 
 ### 5.2 **mobile.imei(index)**
@@ -124,14 +124,14 @@ end)
 | string<br/>         | 设备 IMEI<br/> |
 
 **例子**
-
+```lua
 --4G 模组只支持双卡单待/单卡，只有一个 IMEI，可以通过 mobile.imei()直接获取
 sys.taskInit(function()
 -- 获取 IMEI
 log.info("imei", mobile.imei())
 -- 实例输出：imei 866374063853768
 end)
-
+```
 ---
 
 ### 5.3 **hmeta.model()**
@@ -149,12 +149,12 @@ end)
 | string<br/>         | 若能识别到,返回硬件型号, 否则会是 nil<br/> |
 
 **例子**
-
+```lua
 sys.taskInit(function()
 log.info("hmeta-model", hmeta.model())
 -- 实例输出：hmeta-model Air780E
 end)
-
+```
 ---
 
 ### 5.4 **rtos.bsp()**
@@ -172,12 +172,12 @@ end)
 | string<br/>         | 硬件 bsp 型号<br/> |
 
 **例子**
-
+```lua
 sys.taskInit(function()
 log.info("rtos.bsp", rtos.bsp())
 -- 实例输出：rtos-bsp    EC618
 end)
-
+```
 ---
 
 ### 5.5 **hmeta.hwver()**
@@ -195,12 +195,12 @@ end)
 | string<br/>         | 若能识别到,返回模组的硬件版本号, 否则会是 nil<br/> |
 
 **例子**
-
+```lua
 sys.taskInit(function()
 log.info("hmeta", hmeta.hwver and hmeta.hwver())
 -- 实例输出：hmeta   A16
 end)
-
+```
 ---
 
 ### 5.6 **rtos.version()**
@@ -218,12 +218,12 @@ end)
 | string<br/>         | 固件版本号<br/> |
 
 **例子**
-
+```lua
 sys.taskInit(function()
 log.info("luatos_version ", rtos.version())
 -- 实例输出：luatos_version  V1112
 end)
-
+```
 ## 六、功能验证
 
 ### 6.1 烧录固件
