@@ -198,7 +198,8 @@ iotcloudc = iotcloud.new(iotcloud.TENCENT,{produt_id = "xxx" ,product_secret = "
 
 2. 模块端每隔2秒发布一次qos为1的消息到平台端
    > 本文 `iotcloudc:publish()` 中的第一个参数订阅的是一个自定义topic（**此topic在腾讯云平台获取，下面会介绍**），在腾讯云物联网平台上可以看到。用户可以根据需求自行修改第一个参数。
-   ```lua
+
+    ```lua
     -- 每隔2秒发布一次qos为1的消息到云平台
     sys.taskInit(function()
         while 1 do
@@ -209,6 +210,7 @@ iotcloudc = iotcloud.new(iotcloud.TENCENT,{produt_id = "xxx" ,product_secret = "
         end
     end)
     ```
+
     打开腾讯云产品设备界面，点击设备云端日志，选择内容日志，日志类型选择属性，此时右边会生成两个 topic
 
     > 一个是上行 topic \$thing/**up**/property/ZAJCHA24SH/869329069169988，即模块端向云平台发布消息；
