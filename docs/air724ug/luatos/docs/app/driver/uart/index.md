@@ -43,11 +43,11 @@ UART（通用异步接收器/发送器）是一种串行通信协议，因其多
 
 ### 3.3 数据通信线
 
-1. USB 数据线
+1、USB 数据线
 
 ![](image/HRwlbHOCBoPTQTx7vP9cQjpQn3b.png)
 
-2. 由于本篇教程和串口相关，所以需要准备 USB 转 TTL 工具或者串口线。例如 CH340、FT232 等，本文使用的是高速串口：[购买链接](https://item.taobao.com/item.htm?abbucket=12&id=608773837508&ns=1&pisk=gM2iHHqsm5l_brOIlMk1i10xvtu0KhMj1rpxkx3VT2uBBjuA1rc0kyG4BAET-qz8omeTH-VBnuZbBGMAfAZshx7RyT30flMXYCX9M-DUY0oRHClZgl_9YxXdyTB8x1osHk78BxmiR0nJ3xlZ3HJERm027jzqTpoj8do2Qm8FxmgE3moZb9rEX0dwbqz2TkosVFJw3V8eLmiZ3qzq3wNH3424dJ7137Wg-79ewDcizluHEkVobUmAFmvVEJobxUri-MILKccirXCMP5waJoyTCX9V4DOeaos6hk_z6IOj_Diny1NpoPbGTvsPxMA51foIXaIhxIwWPKJlpMjHakGZAcEd.&priceTId=214640db17291600001397870eb48b&skuId=4449333351143&spm=a21n57.1.item.319.487c523c1WpDjW&utparam=%7B%22aplus_abtest%22%3A%22062f9b6c0e4cc9c5268b2350d8d11526%22%7D&xxc=taobaoSearch)
+2、由于本篇教程和串口相关，所以需要准备 USB 转 TTL 工具或者串口线。例如 CH340、FT232 等，本文使用的是高速串口：[购买链接](https://item.taobao.com/item.htm?abbucket=12&id=608773837508&ns=1&pisk=gM2iHHqsm5l_brOIlMk1i10xvtu0KhMj1rpxkx3VT2uBBjuA1rc0kyG4BAET-qz8omeTH-VBnuZbBGMAfAZshx7RyT30flMXYCX9M-DUY0oRHClZgl_9YxXdyTB8x1osHk78BxmiR0nJ3xlZ3HJERm027jzqTpoj8do2Qm8FxmgE3moZb9rEX0dwbqz2TkosVFJw3V8eLmiZ3qzq3wNH3424dJ7137Wg-79ewDcizluHEkVobUmAFmvVEJobxUri-MILKccirXCMP5waJoyTCX9V4DOeaos6hk_z6IOj_Diny1NpoPbGTvsPxMA51foIXaIhxIwWPKJlpMjHakGZAcEd.&priceTId=214640db17291600001397870eb48b&skuId=4449333351143&spm=a21n57.1.item.319.487c523c1WpDjW&utparam=%7B%22aplus_abtest%22%3A%22062f9b6c0e4cc9c5268b2350d8d11526%22%7D&xxc=taobaoSearch)
 
 ![](image/SlEzbw7gsoPyMPxtPTCctgb3nLd.png)
 
@@ -71,15 +71,15 @@ ZSP UART 用来软件调试时输出 CP trace。
 
 其中 HOST UART 和 ZSP UART 不能作为普通串口使用，只用于调试输出底层日志。
 
-1. 如果你想了解这 5 个串口对应于模组的哪个管脚，请看下方图片：
+1、如果你想了解这 5 个串口对应于模组的哪个管脚，请看下方图片：
 
 ![](image/HmSGbWF1VoXYrtxbRTBcYsJQn5U.png)
 
-2. 如果你只想知道 Air724UG 开发板的串口引出位置，请看下方图片：
+2、如果你只想知道 Air724UG 开发板的串口引出位置，请看下方图片：
 
 ![](image/SD1fbKnmGoeTg3xCFRmcjQvUnmb.png)
 
-3. 接下来进行接线操作，注意模块与 MCU 之间要交叉接线，即 TX 接 RX，RX 接 TX，GND 接 GND 。由于本文只需用到 UART1 和 UART2 两个通用串口，因此下表中只列出了这两个通用串口的模块引脚编号及模块与 MCU 之间接线说明。
+3、接下来进行接线操作，注意模块与 MCU 之间要交叉接线，即 TX 接 RX，RX 接 TX，GND 接 GND 。由于本文只需用到 UART1 和 UART2 两个通用串口，因此下表中只列出了这两个通用串口的模块引脚编号及模块与 MCU 之间接线说明。
 
 | **模块引脚**<br/> | **模块**<br/>  | **连接 mcu 或串口线**<br/> |
 | ----------------- | -------------- | -------------------------- |
