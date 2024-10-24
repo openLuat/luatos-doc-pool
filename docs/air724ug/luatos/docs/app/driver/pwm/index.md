@@ -260,7 +260,7 @@ sys.run()
 ## 六、开机展示
 
 连接好硬件并下载固件后，重启开发板观察指示灯的变化，如下图所示。
-<video src="https://docs.openluat.com/file/pwm.mp4"></video>
+<video src="file/pwm.mp4"></video>
 
 ## 七、常见问题
 
