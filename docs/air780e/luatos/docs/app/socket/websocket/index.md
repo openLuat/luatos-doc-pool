@@ -519,7 +519,7 @@ wsc:close()
 #### 5.4.3 **完整实例深度剖析**
 
 ```lua
-PROJECT = "airtun"
+PROJECT = "Websocket_demo"
 VERSION = "1.0.0"
 
 -- sys库是标配
