@@ -92,11 +92,12 @@ Air780E 的底层固件在 Luatools 解压后目录的 **LuatOS-SoC_V1112_EC618_
 | result<br/>     | number<br/>   | 取反之后的值<br/> | 0x0000 0000~0xFFFF FFFF<br/> |
 
 **例子**
+```lua
+--支持 32 位比特数按位取反_
 
-_--支持 32 位比特数按位取反_
-
-print(bit.bnot(5))_--按位取反，输出-6_
-
+print(bit.bnot(5))
+--按位取反，输出-6
+```
 ---
 
 ## 5.2 bit.band( val1, val2, … valn )
@@ -118,9 +119,10 @@ print(bit.bnot(5))_--按位取反，输出-6_
 | result<br/>     | number<br/>   | 与运算之后的结果<br/> | <br/>         |
 
 **例子**
-
-print(bit.band(1,1))_--与,输出 1_
-
+```lua
+print(bit.band(1,1))
+--与,输出 1
+```
 ---
 
 ## 5.3 bit.bor( val1, val2, … valn )
@@ -145,9 +147,10 @@ print(bit.band(1,1))_--与,输出 1_
 | result<br/>     | number<br/>   | 或运算之后的结果<br/> | <br/>         |
 
 **例子**
-
-print(bit.bor(1,2))_--或，输出 3_
-
+```lua
+print(bit.bor(1,2))
+--或，输出 3
+```
 ---
 
 ## 5.4 bit.bxor( val1, val2, … valn )
@@ -169,9 +172,10 @@ print(bit.bor(1,2))_--或，输出 3_
 | result<br/>     | number<br/>   | 异或运算之后的结果, 此处为位异或<br/> | <br/>         |
 
 **例子**
-
-print(bit.bxor(2,3,5))_--异或结果为 4_
-
+```lua
+print(bit.bxor(2,3,5))
+--异或结果为 4
+```
 ---
 
 ## 5.5 bit.lshift( value, shift )
@@ -192,9 +196,10 @@ print(bit.bxor(2,3,5))_--异或结果为 4_
 | result<br/>     | number<br/>   | 逻辑左移之后的结果<br/> | <br/>         |
 
 **例子**
-
-print(bit.lshift(1,2))_--逻辑左移，“100”，输出为 4_
-
+```lua
+print(bit.lshift(1,2))
+--逻辑左移，“100”，输出为 4
+```
 ---
 
 ## 5.6 bit.rshift( value, shift )
@@ -215,9 +220,10 @@ print(bit.lshift(1,2))_--逻辑左移，“100”，输出为 4_
 | result<br/>     | number<br/>   | 逻辑右移之后的结果<br/> | <br/>         |
 
 **例子**
-
-print(bit.rshift(4,2))_--逻辑右移，“001”，输出为 1_
-
+```lua
+print(bit.rshift(4,2))
+--逻辑右移，“001”，输出为 1
+```
 ---
 
 ## 5.7 bit.arshift( value, shift )
@@ -238,9 +244,10 @@ print(bit.rshift(4,2))_--逻辑右移，“001”，输出为 1_
 | result<br/>     | number<br/>   | 逻辑右移之后的结果<br/> | <br/>         |
 
 **例子**
-
-print(bit.arshift(2,2))_--算数右移，左边添加的数与符号有关，输出为 0_
-
+```lua
+print(bit.arshift(2,2))
+--算数右移，左边添加的数与符号有关，输出为 0
+```
 ---
 
 ## 5.8 bit.bit( position )
@@ -260,9 +267,10 @@ print(bit.arshift(2,2))_--算数右移，左边添加的数与符号有关，输
 | result<br/>     | number<br/>   | 需要移位的位置<br/> | <br/>         |
 
 **例子**
-
-print(bit.bit(2))_--参数是位数，作用是 1 向左移动两位，打印出 4_
-
+```lua
+print(bit.bit(2))
+--参数是位数，作用是 1 向左移动两位，打印出 4
+```
 ---
 
 ## 5.9 bit.isset(value, position)
@@ -283,23 +291,27 @@ print(bit.bit(2))_--参数是位数，作用是 1 向左移动两位，打印出
 | result<br/>     | bool<br/>     | true:该位被置 1，false:其他<br/> | 0/其它<br/>   |
 
 **例子**
-
+```lua
 -- 例子 1
 
-print(bit.isset(5,0))_--第一个参数是是测试数字，第二个是测试位置.从右向左数 0 到 7.是 1 返回 true，否则返回 false，该返回 true_
+print(bit.isset(5,0))
+--第一个参数是是测试数字，第二个是测试位置.从右向左数 0 到 7.是 1 返回 true，否则返回 false，该返回 true
 
-_-- 例子 2_
+-- 例子 2_
 
-print(bit.isset(5,1))_--打印 false_
+print(bit.isset(5,1))
+--打印 false
 
-_-- 例子 3_
+-- 例子 3_
 
-print(bit.isset(5,2))_--打印 true_
+print(bit.isset(5,2))
+--打印 true
 
-_-- 例子 4_
+-- 例子 4_
 
-print(bit.isset(5,3))_--返回返回 false_
-
+print(bit.isset(5,3))
+--返回返回 false
+```
 ---
 
 ## 5.10 bit.isclear(value, position)
@@ -320,7 +332,7 @@ print(bit.isset(5,3))_--返回返回 false_
 | result<br/>     | bool<br/>     | true:该位被置 0，false:其他<br/> | 0/其它<br/>   |
 
 **例子**
-
+```lua
 print(bit.isclear(5,0))--与上面的相反
 
 print(bit.isclear(5,1))
@@ -328,7 +340,7 @@ print(bit.isclear(5,1))
 print(bit.isclear(5,2))
 
 print(bit.isclear(5,3))
-
+```
 ---
 
 ## 5.11 bit.set(value, pos1, pos2, …posn)
@@ -351,11 +363,12 @@ print(bit.isclear(5,3))
 | result<br/>     | bool<br/>     | 置 1 之后的值<br/> | <br/>         |
 
 **例子**
+```lua
+-- 把 0 的第 0，1，2，3 位值为 1
 
-_-- 把 0 的第 0，1，2，3 位值为 1_
-
-print(bit.set(0,0,1,2,3))_--在相应的位数置 1，打印 15_
-
+print(bit.set(0,0,1,2,3))
+--在相应的位数置 1，打印 15
+```
 ---
 
 ## 5.12 number=bit.clear(value, pos1, pos2, …posn)
@@ -378,11 +391,12 @@ print(bit.set(0,0,1,2,3))_--在相应的位数置 1，打印 15_
 | result<br/>     | bool<br/>     | 置 0 之后的值<br/> | <br/>         |
 
 **例子**
+```lua
+-- 把 5 的第 0，2 位置为 0
 
-_-- 把 5 的第 0，2 位置为 0_
-
-print(bit.clear(5,0,2)) _--在相应的位置置 0，打印 0_
-
+print(bit.clear(5,0,2))
+--在相应的位置置 0，打印 0
+```
 ## 六、功能验证
 
 ### 6.1 示例代码

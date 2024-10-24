@@ -106,11 +106,11 @@ Air780E 的底层固件在 Luatools 解压后目录的 **LuatOS-SoC_V1112_EC618_
 | string<br/>         | 计算得出的 md5 值的 hex 字符串<br/> |
 
 **例子**
-
+```lua
 -- 计算字符串"abc"的 md5
 
 log.info("md5", crypto.md5("abc"))
-
+```
 ---
 
 ### 5.2 crypto.hmac_md5(str, key)
@@ -131,11 +131,11 @@ log.info("md5", crypto.md5("abc"))
 | string<br/>         | 计算得出的 hmac_md5 值的 hex 字符串<br/> |
 
 **例子**
-
+```lua
 -- 计算字符串"abc"的 hmac_md5
 
 log.info("hmac_md5", crypto.hmac_md5("abc", "1234567890"))
-
+```
 ---
 
 ### 5.3 crypto.sha1(str)
@@ -155,11 +155,11 @@ log.info("hmac_md5", crypto.hmac_md5("abc", "1234567890"))
 | string<br/>         | 计算得出的 sha1 值的 hex 字符串<br/> |
 
 **例子**
-
+```lua
 -- 计算字符串"abc"的 sha1
 
 log.info("sha1", crypto.sha1("abc"))
-
+```
 ---
 
 ### 5.4 crypto.hmac_sha1(str, key)
@@ -180,11 +180,11 @@ log.info("sha1", crypto.sha1("abc"))
 | string<br/>         | 计算得出的 hmac_sha1 值的 hex 字符串<br/> |
 
 **例子**
-
+```lua
 -- 计算字符串"abc"的 hmac_sha1
 
 log.info("hmac_sha1", crypto.hmac_sha1("abc", "1234567890"))
-
+```
 ---
 
 ### 5.5 crypto.sha256(str)
@@ -204,11 +204,11 @@ log.info("hmac_sha1", crypto.hmac_sha1("abc", "1234567890"))
 | string<br/>         | 计算得出的 sha256 值的 hex 字符串<br/> |
 
 **例子**
-
+```lua
 -- 计算字符串"abc"的 sha256
 
 log.info("sha256", crypto.sha256("abc"))
-
+```
 ---
 
 ### 5.6 crypto.hmac_sha256(str, key)
@@ -229,11 +229,11 @@ log.info("sha256", crypto.sha256("abc"))
 | string<br/>         | 计算得出的 hmac_sha256 值的 hex 字符串<br/> |
 
 **例子**
-
+```lua
 -- 计算字符串"abc"的 hmac_sha256
 
 log.info("hmac_sha256", crypto.hmac_sha256("abc", "1234567890"))
-
+```
 ---
 
 ### 5.7 crypto.sha512(str)
@@ -253,11 +253,11 @@ log.info("hmac_sha256", crypto.hmac_sha256("abc", "1234567890"))
 | string<br/>         | 计算得出的 sha512 值的 hex 字符串<br/> |
 
 **例子**
-
+```lua
 -- 计算字符串"abc"的 sha512
 
 log.info("sha512", crypto.sha512("abc"))
-
+```
 ---
 
 ### 5.8 crypto.hmac_sha512(str, key)
@@ -278,11 +278,11 @@ log.info("sha512", crypto.sha512("abc"))
 | string<br/>         | 计算得出的 hmac_sha512 值的 hex 字符串<br/> |
 
 **例子**
-
+```lua
 -- 计算字符串"abc"的 hmac_sha512
 
 log.info("hmac_sha512", crypto.hmac_sha512("abc", "1234567890"))
-
+```
 ---
 
 ### 5.9 crypto.base64_encode(data)
@@ -302,7 +302,7 @@ log.info("hmac_sha512", crypto.hmac_sha512("abc", "1234567890"))
 | string<br/>         | 编码后的数据<br/> |
 
 **例子**
-
+```lua
 -- 本函数与 string.toBase64 是同一个
 
 local data = "123"
@@ -314,7 +314,7 @@ log.info("base64", "encode", data, bdata)
 data = crypto.base64_decode(data)
 
 log.info("base64", "decode", data, bdata)
-
+```
 ---
 
 ### 5.10 crypto.base64_decode(data)
@@ -334,7 +334,7 @@ log.info("base64", "decode", data, bdata)
 | string<br/>         | 解码后的数据<br/> |
 
 **例子**
-
+```lua
 -- 本函数与 string.fromBase64 是同一个
 
 local data = "123"
@@ -346,7 +346,7 @@ log.info("base64", "encode", data, bdata)
 data = crypto.base64_decode(data)
 
 log.info("base64", "decode", data, bdata)
-
+```
 ---
 
 ### 5.11 crypto.cipher_list()
@@ -364,7 +364,7 @@ log.info("base64", "decode", data, bdata)
 | table<br/>          | 本固件支持的 cipher 列表,字符串数组<br/> |
 
 **例子**
-
+```lua
 -- 本 API 于 2022.07.27 添加
 
 local ciphers = crypto.cipher_list()
@@ -374,7 +374,7 @@ if ciphers then
 log.info("crypto", "ciphers list", json.encode(ciphers))
 
 end
-
+```
 ---
 
 ### 5.12 crypto.cipher_suites()
@@ -392,7 +392,7 @@ end
 | table<br/>          | 本固件支持的 cipher suites 列表,字符串数组<br/> |
 
 **例子**
-
+```lua
 -- 本 API 于 2022.11.16 添加
 
 local suites = crypto.cipher_suites()
@@ -402,7 +402,7 @@ if suites then
 log.info("crypto", "ciphers suites", json.encode(suites))
 
 end
-
+```
 ---
 
 ### 5.13 crypto.cipher_encrypt(type, padding, str, key, iv)
@@ -426,13 +426,13 @@ end
 | string<br/>         | 加密后的字符串<br/> |
 
 **例子**
-
+```lua
 -- 计算 AES
 
 local data = crypto.cipher_encrypt("AES-128-ECB", "PKCS7", "1234567890123456", "1234567890123456")
 
 local data2 = crypto.cipher_encrypt("AES-128-CBC", "PKCS7", "1234567890123456", "1234567890123456", "1234567890666666")
-
+```
 ---
 
 ### 5.14 crypto.cipher_decrypt(type, padding, str, key, iv)
@@ -456,7 +456,7 @@ local data2 = crypto.cipher_encrypt("AES-128-CBC", "PKCS7", "1234567890123456", 
 | string<br/>         | 解密后的字符串<br/> |
 
 **例子**
-
+```lua
 -- 用 AES 加密,然后用 AES 解密
 
 local data = crypto.cipher_encrypt("AES-128-ECB", "PKCS7", "1234567890123456", "1234567890123456")
@@ -466,7 +466,7 @@ local data2 = crypto.cipher_decrypt("AES-128-ECB", "PKCS7", data, "1234567890123
 -- data 的 hex 为 757CCD0CDC5C90EADBEEECF638DD0000
 
 -- data2 的值为 1234567890123456
-
+```
 ---
 
 ### 5.15 crypto.crc16(method, data, poly, initial, finally, inReversem outReverse)
@@ -492,11 +492,11 @@ local data2 = crypto.cipher_decrypt("AES-128-ECB", "PKCS7", data, "1234567890123
 | int<br/>            | 对应的 CRC16 值<br/> |
 
 **例子**
-
+```lua
 -- 计算 CRC16
 
 local crc = crypto.crc16("")
-
+```
 ---
 
 ### 5.16 crypto.crc16_modbus(data, start)
@@ -517,7 +517,7 @@ local crc = crypto.crc16("")
 | int<br/>            | 对应的 CRC16 值<br/> |
 
 **例子**
-
+```lua
 -- 计算 CRC16 modbus
 
 local crc = crypto.crc16_modbus(data)
@@ -525,7 +525,7 @@ local crc = crypto.crc16_modbus(data)
 -- 2023.11.06 新增初始值设置
 
 crc = crypto.crc16_modbus(data, 0xFFFF)
-
+```
 ---
 
 ### 5.17 crypto.crc32(data)
@@ -545,11 +545,11 @@ crc = crypto.crc16_modbus(data, 0xFFFF)
 | int<br/>            | 对应的 CRC32 值<br/> |
 
 **例子**
-
+```lua
 -- 计算 CRC32
 
 local crc = crypto.crc32(data)
-
+```
 ---
 
 ### 5.18 crypto.crc8(data, poly, start, revert)
@@ -572,13 +572,13 @@ local crc = crypto.crc32(data)
 | int<br/>            | 对应的 CRC8 值<br/> |
 
 **例子**
-
+```lua
 -- 计算 CRC8
 
 local crc = crypto.crc8(data)
 
 local crc = crypto.crc8(data, 0x31, 0xff, false)
-
+```
 ---
 
 ### 5.19 crypto.crc7(data, poly, start)
@@ -600,13 +600,13 @@ local crc = crypto.crc8(data, 0x31, 0xff, false)
 | int<br/>            | 对应的 CRC7 值<br/> |
 
 **例子**
-
+```lua
 -- 计算 CRC7, 本 API 于 2023.10.07 新增
 
 local crc = crypto.crc7(data)
 
 local crc = crypto.crc7(data, 0x31, 0xff)
-
+```
 ---
 
 ### 5.20 crypto.checksum(data, mode)
@@ -627,7 +627,7 @@ local crc = crypto.crc7(data, 0x31, 0xff)
 | int<br/>            | checksum 值,校验和<br/> |
 
 **例子**
-
+```lua
 -- 本函数在 2022.12.28 添加
 
 -- 单纯计算 checksum 值
@@ -635,7 +635,7 @@ local crc = crypto.crc7(data, 0x31, 0xff)
 local ck = crypto.checksum("OK")
 
 log.info("checksum", "ok", string.format("%02X", ck))-- 第二个参数 mode 在 2023.5.23 日添加
-
+```
 ---
 
 ### 5.21 crypto.trng(len)
@@ -655,13 +655,13 @@ log.info("checksum", "ok", string.format("%02X", ck))-- 第二个参数 mode 在
 | string<br/>         | 指定随机数字符串<br/> |
 
 **例子**
-
+```lua
 -- 生成 32 位随机数 ir
 
 local r = crypto.trng(4)
 
 local _, ir = pack.unpack(r, "I")
-
+```
 ---
 
 ### 5.22 crypto.totp(secret,time)
@@ -682,11 +682,11 @@ local _, ir = pack.unpack(r, "I")
 | int<br/>            | 计算得出的六位数结果 计算失败返回 nil<br/> |
 
 **例子**
-
+```lua
 --使用当前系统时间计算
 
 local otp = crypto.totp("asdfassdfasdfass")
-
+```
 ---
 
 ### 5.23 crypto.md_file(tp, path, hmac)
@@ -708,7 +708,7 @@ local otp = crypto.totp("asdfassdfasdfass")
 | string<br/>         | HEX 过的 hash 值,若失败会无返回值<br/> |
 
 **例子**
-
+```lua
 -- 无 hmac 的 hash 值
 
 log.info("md5", crypto.md_file("MD5", "/luadb/logo.jpg"))
@@ -724,7 +724,7 @@ log.info("hmac_md5", crypto.md_file("MD5", "/luadb/logo.jpg", "123456"))
 log.info("hmac_sha1", crypto.md_file("SHA1", "/luadb/logo.jpg", "123456"))
 
 log.info("hmac_sha256", crypto.md_file("SHA256", "/luadb/logo.jpg", "123456"))
-
+```
 ---
 
 ### 5.24 crypto.md(tp, data, hmac)
@@ -746,7 +746,7 @@ log.info("hmac_sha256", crypto.md_file("SHA256", "/luadb/logo.jpg", "123456"))
 | string<br/>         | HEX 过的 hash 值,若失败会无返回值<br/> |
 
 **例子**
-
+```lua
 -- 无 hmac 的 hash 值
 
 log.info("md5", crypto.md("MD5", "1234567890"))
@@ -762,7 +762,7 @@ log.info("hmac_md5", crypto.md("MD5", "1234567890", "123456"))
 log.info("hmac_sha1", crypto.md("SHA1", "1234567890", "123456"))
 
 log.info("hmac_sha256", crypto.md("SHA256", "1234567890", "123456"))
-
+```
 ---
 
 ### 5.25 crypto.hash_init(tp)
@@ -783,7 +783,7 @@ log.info("hmac_sha256", crypto.md("SHA256", "1234567890", "123456"))
 | userdata<br/>       | 成功返回一个数据结构,否则返回 nil<br/> |
 
 **例子**
-
+```lua
 -- 无 hmac 的 hash stream
 
 local md5_stream = crypto.hash_init("MD5")
@@ -799,7 +799,7 @@ local md5_stream = crypto.hash_init("MD5", "123456")
 local sha1_stream = crypto.hash_init("SHA1", "123456")
 
 local sha256_stream = crypto.hash_init("SHA256", "123456")
-
+```
 ---
 
 ### 5.26 crypto.hash_update(stream, data)
@@ -819,9 +819,9 @@ local sha256_stream = crypto.hash_init("SHA256", "123456")
 无
 
 **例子**
-
+```lua
 crypto.hash_update(stream, "OK")
-
+```
 ---
 
 ### 5.27 crypto.hash_finish(stream)
@@ -841,9 +841,9 @@ crypto.hash_update(stream, "OK")
 | string<br/>         | 成功返回计算得出的流式 hash 值的 hex 字符串，失败无返回<br/> |
 
 **例子**
-
+```lua
 local hashResult = crypto.hash_finish(stream)
-
+```
 ---
 
 ## 六、功能验证

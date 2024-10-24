@@ -177,9 +177,9 @@ FTP 客户端
 | bool/string<br/>    | 成功返回 true 失败返回 string<br/> |
 
 **例子**
-
+```lua
 ftp_login = ftp.login(nil,"xxx")
-
+```
 ---
 
 ### 5.2 ftp.command(cmd)
@@ -199,7 +199,7 @@ FTP 命令
 | string<br/>         | 成功返回 true 失败返回 string<br/> |
 
 **例子**
-
+```lua
 -- 空操作，防止连接断掉
 
 print(ftp.command("NOOP").wait())
@@ -240,6 +240,7 @@ print(ftp.command("LIST").wait())
 
 print(ftp.command("DELE /1/12222.txt").wait())
 
+```
 ---
 
 ### 5.3 ftp.pull(local_name,remote_name)
@@ -260,9 +261,9 @@ FTP 文件下载
 | bool/string<br/>    | 成功返回 true 失败返回 string<br/> |
 
 **例子**
-
+```lua
 ftp.pull("/1222.txt","/1222.txt").wait()
-
+```
 ---
 
 ### 5.4 ftp.push(local_name,remote_name)
@@ -283,9 +284,9 @@ FTP 文件上传
 | bool/string<br/>    | 成功返回 true 失败返回 string<br/> |
 
 **例子**
-
+```
 ftp.push("/1222.txt","/1222.txt").wait()
-
+```
 ---
 
 ### 5.5 ftp.close()
@@ -303,9 +304,9 @@ FTP 客户端关闭
 | bool/string<br/>    | 成功返回 true 失败返回 string<br/> |
 
 **例子**
-
+```lua
 ftp.close().wait()
-
+```
 ---
 
 ### 5.6 ftp.debug(onoff)
