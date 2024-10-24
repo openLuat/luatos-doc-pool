@@ -29,6 +29,7 @@ nav:
       - SIM卡电路设计指导: hardware/design/sim.md
       #- USB电路设计指导: hardware/design/usb.md
       - GPIO使用注意事项: hardware/design/gpio.md
+      - ADC/LED/I2C/SPI/USB: hardware/design/adcledi2cspiusb.md
       - 天线电路设计指导: hardware/design/ant.md
       #- 串口电路设计指导: hardware/design/uart.md
       #- LED状态灯电路: hardware/design/led.md
