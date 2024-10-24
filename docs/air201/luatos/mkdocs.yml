@@ -46,6 +46,14 @@ nav:
       - 简介: app/netapp/index.md
     - 基础服务:
       - 简介: app/service/index.md
+      - LuatOS运行框架: app/service/framework/index.md
+      - 文件系统(io): app/service/fs/index.md
+      - 键值对存储(fskv): app/service/fskv/index.md
+      - 定时器(timer): app/service/timer/index.md
+      - 位运算(bit): app/service/bit/index.md
+      - 随机数(random): app/service/random/index.md
+      - 模块信息(hmeta): app/service/module/index.md
+      - 内部硬件看门狗(wdt): app/service/wdt/index.md
     - 4G通信:
       - 简介: app/mobile/index.md
     - 功耗管理:
