@@ -3,7 +3,7 @@
 
 ![](image/WzhebBwP9oU13JxbNjlc67nlnC2.gif)
 
-UART（通用异步接收器/发送器）是一种串行通信协议，因其多功能性和简单性而被广泛使用。与 I2C 和 SPI 不同，UART 只需要两条线即可运行：TX（发送）和 RX（接收）。该协议允许异步通信，也就是说发送器和接收器之间无需共享时钟。数据被组织成数据包，每个数据包包含一个起始位、5 到 9 个数据位、一个可选的奇偶校验位和一个或两个停止位。
+UART（通用异步接收器/发送器）是一种串行通信协议，因其多功能性和简单性而被广泛使用。与 I2C 和 SPI 不同，UART 只需要两条线即可运行：TX（发送）和 RX（接收）。该协议允许异步通信，也就是说发送器和接收器之间无需共享时钟。数据被组织成数据包，每个数据包包含一个起始位、5 到 9 个数据位、一个可选的奇偶校验位和1个、2个或者1.5个停止位。
 
 **优点**：
 
@@ -28,7 +28,7 @@ UART（通用异步接收器/发送器）是一种串行通信协议，因其多
 在开始之前，需要准备一套 Air724UG 开发板，目前合宙推出两种 Air724UG 开发板（开发板和核心板），开发板的优势在于大多数管脚接口都引出来了，例如 sd 卡，camera，屏幕等接口，实际使用都是一样的，在使用时可根据自身需求选择开发板。
 
 1. 如果你选择的是 Air724UG 开发板，下方资料可供你参考查阅
-   使用 Air724UG-NFM 开发板，如下图所示：
+   使用 Air724UG-NFM 开发板，如图所示：
    ![](image/UPnlbDcigo0jekx1qpocNR2FnVJ.png)
    淘宝购买链接：[Air724UG-NFM 开发板淘宝购买链接](https://item.taobao.com/item.htm?id=614077856538&pisk=fliezCgRrHKeY5RClWrz399HDhZLAodXU0N7EYDudWVnNJZzE5kDpWTJJbuZZfUQtW9L4zcotzc7Nv6KWjMcADTLVgrL2uAXGntfpvE8qeHl-l1dI82vVwqutHtLvKdXGntPbFd0mIGI4pMNR8PgK8VuZdzgpJquK7VHQ52zH7jnZuYWol5WiUapixFiPWEh80XknSSlqDx88SyNPgSzbJ4EDvVaCRiaLyP05f0fODcsEDiLWHsL2Agqa4cD1wNnu-lal2RVYjlLEf2iOL_8Q4koDkUdegh4YbzmxPWl0xqnJlyimL_Y1cPIZDzMhiz7jma0xVT9OzZU3bmKTTSoigkVwRfI_03FZaz3BRPXQd8vULWW-_YfbaQ8SoeaGpwCyaU3BRPXQd7RyPVTQS9Qd&skuId=4862577940947&spm=a1z10.3-c-s.w4002-24045920836.10.292c6ee5wTkgXN) ；
    此开发板的详细使用说明参考：[Air724UG 产品手册](https://docs.openluat.com/air724ug/product/) 中的 << EVB_Air724UG_AXX 开发板使用说明 >>，写这篇文章时最新版本的使用说明为：EVB_Air724UG_A14 开发板使用说明；开发板使用过程中遇到任何问题，可以直接参考这份使用说明文档。
@@ -43,11 +43,11 @@ UART（通用异步接收器/发送器）是一种串行通信协议，因其多
 
 ### 3.3 数据通信线
 
-1. USB 数据线
+1、USB 数据线
 
 ![](image/HRwlbHOCBoPTQTx7vP9cQjpQn3b.png)
 
-1. 由于本篇教程和串口相关，所以需要准备 USB 转 TTL 工具或者串口线。例如 CH340、FT232 等，本文使用的是高速串口：[购买链接](https://item.taobao.com/item.htm?abbucket=12&id=608773837508&ns=1&pisk=gM2iHHqsm5l_brOIlMk1i10xvtu0KhMj1rpxkx3VT2uBBjuA1rc0kyG4BAET-qz8omeTH-VBnuZbBGMAfAZshx7RyT30flMXYCX9M-DUY0oRHClZgl_9YxXdyTB8x1osHk78BxmiR0nJ3xlZ3HJERm027jzqTpoj8do2Qm8FxmgE3moZb9rEX0dwbqz2TkosVFJw3V8eLmiZ3qzq3wNH3424dJ7137Wg-79ewDcizluHEkVobUmAFmvVEJobxUri-MILKccirXCMP5waJoyTCX9V4DOeaos6hk_z6IOj_Diny1NpoPbGTvsPxMA51foIXaIhxIwWPKJlpMjHakGZAcEd.&priceTId=214640db17291600001397870eb48b&skuId=4449333351143&spm=a21n57.1.item.319.487c523c1WpDjW&utparam=%7B%22aplus_abtest%22%3A%22062f9b6c0e4cc9c5268b2350d8d11526%22%7D&xxc=taobaoSearch)
+2、由于本篇教程和串口相关，所以需要准备 USB 转 TTL 工具或者串口线。例如 CH340、FT232 等，本文使用的是高速串口：[购买链接](https://item.taobao.com/item.htm?abbucket=12&id=608773837508&ns=1&pisk=gM2iHHqsm5l_brOIlMk1i10xvtu0KhMj1rpxkx3VT2uBBjuA1rc0kyG4BAET-qz8omeTH-VBnuZbBGMAfAZshx7RyT30flMXYCX9M-DUY0oRHClZgl_9YxXdyTB8x1osHk78BxmiR0nJ3xlZ3HJERm027jzqTpoj8do2Qm8FxmgE3moZb9rEX0dwbqz2TkosVFJw3V8eLmiZ3qzq3wNH3424dJ7137Wg-79ewDcizluHEkVobUmAFmvVEJobxUri-MILKccirXCMP5waJoyTCX9V4DOeaos6hk_z6IOj_Diny1NpoPbGTvsPxMA51foIXaIhxIwWPKJlpMjHakGZAcEd.&priceTId=214640db17291600001397870eb48b&skuId=4449333351143&spm=a21n57.1.item.319.487c523c1WpDjW&utparam=%7B%22aplus_abtest%22%3A%22062f9b6c0e4cc9c5268b2350d8d11526%22%7D&xxc=taobaoSearch)
 
 ![](image/SlEzbw7gsoPyMPxtPTCctgb3nLd.png)
 
@@ -71,15 +71,15 @@ ZSP UART 用来软件调试时输出 CP trace。
 
 其中 HOST UART 和 ZSP UART 不能作为普通串口使用，只用于调试输出底层日志。
 
-1. 如果你想了解这 5 个串口对应于模组的哪个管脚，请看下方图片：
+1、如果你想了解这 5 个串口对应于模组的哪个管脚，请看下方图片：
 
 ![](image/HmSGbWF1VoXYrtxbRTBcYsJQn5U.png)
 
-1. 如果你只想知道 Air724UG 开发板的串口引出位置，请看下方图片：
+2、如果你只想知道 Air724UG 开发板的串口引出位置，请看下方图片：
 
 ![](image/SD1fbKnmGoeTg3xCFRmcjQvUnmb.png)
 
-1. 接下来进行接线操作，注意模块与 MCU 之间要交叉接线，即 TX 接 RX，RX 接 TX，GND 接 GND 。由于本文只需用到 UART1 和 UART2 两个通用串口，因此下表中只列出了这两个通用串口的模块引脚编号及模块与 MCU 之间接线说明。
+3、接下来进行接线操作，注意模块与 MCU 之间要交叉接线，即 TX 接 RX，RX 接 TX，GND 接 GND 。由于本文只需用到 UART1 和 UART2 两个通用串口，因此下表中只列出了这两个通用串口的模块引脚编号及模块与 MCU 之间接线说明。
 
 | **模块引脚**<br/> | **模块**<br/>  | **连接 mcu 或串口线**<br/> |
 | ----------------- | -------------- | -------------------------- |
@@ -119,7 +119,7 @@ uart 库即串口操作库，该库为内部库，所以在程序中使用时无
 -- @int 0 或者默认 - 消息通知，1 - 无消息上报需要用户主动轮询   取值:0/1
 -- @int txdone消息上报开关  0：关闭，1：打开
 -- @int 硬流控功能  0：关闭(默认)，1：打开
--- @int uart rx优先级   0：慢(默认)，1：快
+-- @int uart rx优先接收速度   0：慢(默认)，1：快
 -- @return int 串口的真实波特率 
 -- @usage
 -- 最常用115200 8N1
@@ -246,7 +246,7 @@ uart.setup(UART_ID,115200,8,uart.PAR_NONE,uart.STOP_1)
 
 ### 4.4 注册接收数据的回调函数
 
-`uart.on` 函数用于注册一个接收事件的回调函数，当指定的串口 `uartid` 接收到数据时，该回调函数会被自动触发并执行。回调函数通过 `uart.on(UART_ID, "receive", read)` 定义，并处理接收到的数据。数据的读取是通过 `uart.read()` 函数进行的，`uart.read()` 函数是非阻塞的，它是直接从现有缓存区中直接读取数据。
+`uart.on` 函数用于注册一个接收事件的回调函数，当指定的串口 `UART_ID` 接收到数据时，该回调函数会被自动触发并执行。回调函数通过 `uart.on(UART_ID, "receive", read)` 定义，并处理接收到的数据。数据的读取是通过 `uart.read()` 函数进行的，`uart.read()` 函数是非阻塞的，它是直接从现有缓存区中直接读取数据。
 
 ```lua
 -- 收取数据会触发回调, 这里的 "receive" 是固定值不要修改。
@@ -257,7 +257,7 @@ local function read()
     --如果接收缓冲器不为空，则不会通知Lua脚本
     --所以Lua脚本中收到中断读串口数据时，每次都要把接收缓冲区中的数据全部读出，这样才能保证底层core中的新数据中断上来，此read函数中的while语句中就保证了这一点
     while true do        
-        data = uart.read(uartid,"*l")
+        data = uart.read(UART_ID,"*l")
         if not data or string.len(data) == 0 then break end
         --打开下面的打印会耗时
         log.info("testUart.read bin",data)
@@ -460,7 +460,7 @@ uart.setup(UART_ID,115200,8,uart.PAR_NONE,uart.STOP_1)
 
 **代码运行结果**：
 
-`uart.write(UART_ID, common.utf8ToGb2312("合宙模块Air724UG"))` 向串口发送对应的字符串数据，`uart.on()` 会事先注册一个接收数据的回调函数，当指定的串口 `uartid` 接收到数据时，该回调函数会被自动触发并执行，`log.info``("testUart.read bin",data)``log.info``("testUart.read hex",data:toHex())` 会将接收到的数据打印出来，此时我们通过串口调试工具，选择对应的端口，即可看到对应的打印信息。
+`uart.write(UART_ID, common.utf8ToGb2312("合宙模块Air724UG"))` 向串口发送对应的字符串数据，`uart.on()` 会事先注册一个接收数据的回调函数，当指定的串口 `UART_ID` 接收到数据时，该回调函数会被自动触发并执行，`log.info``("testUart.read bin",data)``log.info``("testUart.read hex",data:toHex())` 会将接收到的数据打印出来，此时我们通过串口调试工具，选择对应的端口，即可看到对应的打印信息。
 
 ![](image/F9kXbF7JtoqYBGxhHQec6wYgn1U.png)
 
@@ -540,7 +540,7 @@ local function read()
     --如果接收缓冲器不为空，则不会通知Lua脚本
     --所以Lua脚本中收到中断读串口数据时，每次都要把接收缓冲区中的数据全部读出，这样才能保证底层core中的新数据中断上来，此read函数中的while语句中就保证了这一点
     while true do        
-        data = uart.read(uartid,"*l")
+        data = uart.read(UART_ID,"*l")
         if not data or string.len(data) == 0 then break end
         --打开下面的打印会耗时
         log.info("testUart.read bin",data)
@@ -745,7 +745,7 @@ uart.setup(UART_ID,115200,8,uart.PAR_NONE,uart.STOP_1,nil,1)
 
 **代码运行结果**：
 
-`uart.write(UART_ID, common.utf8ToGb2312("合宙模块Air724UG"))` 向串口发送对应的字符串数据，`uart.on()` 会事先注册一个接收数据的回调函数，当指定的串口 `uartid` 接收到数据时，该回调函数会被自动触发并执行，`log.info``("testUart.read bin",data)``log.info``("testUart.read hex",data:toHex())` 会将接收到的数据打印出来，此时我们通过串口调试工具，选择对应的端口，即可看到对应的打印信息。
+`uart.write(UART_ID, common.utf8ToGb2312("合宙模块Air724UG"))` 向串口发送对应的字符串数据，`uart.on()` 会事先注册一个接收数据的回调函数，当指定的串口 `UART_ID` 接收到数据时，该回调函数会被自动触发并执行，`log.info``("testUart.read bin",data)``log.info``("testUart.read hex",data:toHex())` 会将接收到的数据打印出来，此时我们通过串口调试工具，选择对应的端口，即可看到对应的打印信息。
 
 ![](image/ANsjb02e3oqm4NxktHfcFiAnnKg.png)
 
@@ -801,7 +801,7 @@ USB 虚拟串口广泛应用于各种领域，如工业自动化、物联网、�
 ### 6.3 初始化 USB_UART
 
 ```lua
-local UART_ID= uart.USB -- 使用USB虚拟串口，固定id
+local UART_ID= 0x81 -- 使用USB虚拟串口，固定id
 
 --初始化 参数都可以根据实施情况修改
 uart.setup(UART_ID,9600,8,uart.PAR_NONE,uart.STOP_1,nil,1)
@@ -818,7 +818,7 @@ local function read()
     --如果接收缓冲器不为空，则不会通知Lua脚本
     --所以Lua脚本中收到中断读串口数据时，每次都要把接收缓冲区中的数据全部读出，这样才能保证底层core中的新数据中断上来，此read函数中的while语句中就保证了这一点
     while true do        
-        data = uart.read(uartid,"*l")
+        data = uart.read(UART_ID,"*l")
         if not data or string.len(data) == 0 then break end
         --打开下面的打印会耗时
         log.info("testUart.read bin",data)
@@ -1210,8 +1210,8 @@ uart按照帧结构接收外围设备的输入，收到正确的指令后，回�
 收到的指令帧头为其余数据时，回复"CMD_ERROR\r\n"给外围设备；例如接收到0x04 0xC0两个字节，就回复"CMD_ERROR\r\n"
 ]]
 
---串口ID,1对应uart1
---如果要修改为uart2，把UART_ID赋值为2即可
+--UART_ID对应uart1
+--UART_ID2对应uart2
 local UART_ID = 1
 local UART_ID2 = 2
 --帧头类型以及帧尾
