@@ -191,10 +191,20 @@ setTcpResendPara(retryCnt, retryMaxTimeout)
 ### 6.4 设置域名解析参数
 
 ```lua
--- @number[opt=4] retryCnt 重传次数；取值范围0到12
--- @number[opt=16] retryMaxTimeout 限制每次重传允许的最大超时时间(单位秒)，取值范围1到16
+--- 设置域名解析参数
+-- 注意：0027以及之后的core版本才支持此功能
+-- @number[opt=4] retryCnt 重传次数；取值范围1到8
+-- @number[opt=4] retryTimeoutMulti 重传超时时间倍数，取值范围1到5
+--                第n次重传超时时间的计算方式为：第n次的重传超时基数*retryTimeoutMulti，单位为秒
+--                重传超时基数表为{1, 1, 2, 4, 4, 4, 4, 4}
+--                第1次重传超时时间为：1*retryTimeoutMulti 秒
+--                第2次重传超时时间为：1*retryTimeoutMulti 秒
+--                第3次重传超时时间为：2*retryTimeoutMulti 秒
+--                ...........................................
+--                第8次重传超时时间为：8*retryTimeoutMulti 秒
 -- @return nil
-setTcpResendPara(retryCnt, retryMaxTimeout)
+-- @usage
+socket.setDnsParsePara(8,5)
 ```
 
 ### 6.5 打印所有 socket 的状态
