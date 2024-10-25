@@ -1,4 +1,4 @@
-# Air780E用于AT指令使用方式时的参考设计
+# Air780E用于LuatOS二次开发时的参考设计
 
 ![img](image/Air780E用于LuatOS使用方式时的参考设计V20241025.png)
 
