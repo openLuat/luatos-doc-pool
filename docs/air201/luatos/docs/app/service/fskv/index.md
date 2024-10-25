@@ -482,7 +482,7 @@ sys.run()
 
 ## 六、总结
 
-Air780E-LuatOS 中的 fskv 库提供了一套完整的键值对（Key-Value）存储接口，允许开发者以灵活且持久的方式存储和检索数据。这些接口函数包括初始化数据库（`fskv.init()`）、设置键值对（`fskv.set()` 和 `fskv.sett()`）、获取键值对（`fskv.get()`）、删除键值对（`fskv.del()`）、清空数据库（`fskv.clear()`）、遍历数据库（`fskv.iter()` 和 `fskv.next()`）以及查询数据库状态（`fskv.status()`）。
+Air201-LuatOS 中的 fskv 库提供了一套完整的键值对（Key-Value）存储接口，允许开发者以灵活且持久的方式存储和检索数据。这些接口函数包括初始化数据库（`fskv.init()`）、设置键值对（`fskv.set()` 和 `fskv.sett()`）、获取键值对（`fskv.get()`）、删除键值对（`fskv.del()`）、清空数据库（`fskv.clear()`）、遍历数据库（`fskv.iter()` 和 `fskv.next()`）以及查询数据库状态（`fskv.status()`）。
 
 这些函数共同构成了一个功能强大的键值对存储系统，支持多种数据类型，包括字符串、数值、布尔值和 table 等。通过使用这些函数，开发者可以方便地管理存储在 Flash 存储器上的数据，实现数据的持久化和高效访问。
 
