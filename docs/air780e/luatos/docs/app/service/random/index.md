@@ -1,10 +1,10 @@
 ## 一、随机数概述
 
-想要讨论随机数，首先应该明确一下随机数的定义。毕竟这个东西比较虚，并不像算法那样明确。在各大网上也没有给出很好的定义。
+想要讨论随机数，首先应该明确一下随机数的定义.毕竟这个东西比较虚，并不像算法那样明确.在各大网上也没有给出很好的定义.
 
-那...就不死抠定义了。
+那...就不死抠定义了.
 
-随机数一般来说符合下面这几个性质。
+随机数一般来说符合下面这几个性质.
 
 1. 它产生时后面那个数与前面的毫无关系
 2. 给定样本的一部分和随机算法，无法推出样本的剩余部分
@@ -12,13 +12,13 @@
 
 另外还要说一下统计学伪随机数概念，**划重点:**
 
-**统计学伪随机性。统计学伪随机性指的是在给定的随机比特流样本中，1 的数量大致等于 0 的数量，同理，“10”“01”“00”“11”四者数量大致相等。类似的标准被称为统计学随机性。满足这类要求的数字在人类“一眼看上去”是随机的。（摘自百度词条）**
+**统计学伪随机性.统计学伪随机性指的是在给定的随机比特流样本中，1 的数量大致等于 0 的数量，同理，“10”“01”“00”“11”四者数量大致相等.类似的标准被称为统计学随机性.满足这类要求的数字在人类 “一眼看上去” 是随机的.（摘自百度词条）**
 
-实际上这也是在计算机中对伪随机数优劣的概念。
+实际上这也是在计算机中对伪随机数优劣的概念.
 
 ## 二、演示功能概述
 
-本文章通过 Air780 的核心板烧录底层固件(**LuatOS-SoC_V1112_EC618_FULL.soc**)和修改 LuatOS 示例代码([点此链接查看 crypto 的 demo 例子](https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/crypto)),来演示有关随机数的各种 API 的功能。
+本文章通过 Air780 的核心板烧录底层固件(**LuatOS-SoC_V1112_EC618_FULL.soc**)和修改 LuatOS 示例代码([点此链接查看 crypto 的 demo 例子](https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/crypto)),来演示有关随机数的各种 API 的功能.
 
 ## 三、硬件准备
 
@@ -30,40 +30,40 @@
 
 淘宝购买链接：[Air780E 核心板淘宝购买链接](https://item.taobao.com/item.htm?id=693774140934&pisk=f1eiwOqL25l1_HYiV6D1ize3wN5d5FMjRrpxkx3VT2uIHCCskWm4kysffAEqor4KRRIskGT0ooqi_coq7DWE000qbVr2mmzKQjNtkV3mnoalvaBRelZshA7RyTFdpD4xQco2_VS2Tcnvc89h5lZshq-pu_FUfEDVVdOmgrkET0ir3mkq_MDEmmM2QjJaY2uI0UGAoNueWRjiw4YTC-_opNr-zluaXleFpfR_X2fhTJVn94W--KJ4KcqQreCDEs3zNVh-DyWpIxqEmyc8savgoor7gX2D7GUzmW4jBJS2_4PTWjestFRZqA0iaRlwjdkIgW2nBR7XNkEn7bDL96_tMA4gN4GNOwa0xVU4IX8G4iReapZyhDSYLIOj_DinyhbSB2IHjbEhxMA51foIXaIhxItMPKJlyMjHNEGZAcQR.&spm=a1z10.5-c-s.w4002-24045920841.33.639f1fd1YrS4b6&skuId=5098266470883) ；
 
-此核心板的详细使用说明参考：[Air780E 产品手册](https://docs.openluat.com/air780e/product/) 中的 << 开发板 Core_Air780E 使用说明 VX.X.X.pdf>>，写这篇文章时最新版本的使用说明为：开发板 Core_Air780E 使用说明 V1.0.5.pdf ；核心板使用过程中遇到任何问题，可以直接参考这份使用说明 pdf 文档。
+此核心板的详细使用说明参考：[Air780E 产品手册](https://docs.openluat.com/air780e/product/) 中的 << 开发板 Core_Air780E 使用说明 VX.X.X.pdf>>，写这篇文章时最新版本的使用说明为：开发板 Core_Air780E 使用说明 V1.0.5.pdf ；核心板使用过程中遇到任何问题，可以直接参考这份使用说明 pdf 文档.
 
 ### 3.2 SIM 卡
 
-中国大陆环境下，可以上网的 sim 卡,一般来说，使用移动，电信，联通的物联网卡或者手机卡都行；
+中国大陆环境下，可以上网的 sim 卡,一般来说，使用移动，电信，联通的物联网卡或者手机卡都行.
 
 ### 3.3 PC 电脑
 
-WINDOWS 系统，其他暂无特别要求；
+WINDOWS 系统.
 
 ### 3.4 数据通信线
 
-USB 数据线，暂无特别要求；
+USB 数据线.
 
 ## 四、软件环境
 
 ### 4.1 Luatools 工具
 
-要想烧录 LuatOS 固件到 4G 模组中，需要用到合宙的强大的调试工具：Luatools；
+要想烧录 LuatOS 固件到 4G 模组中，需要用到合宙的强大的调试工具：Luatools
 
-详细使用说明参考：[Luatools 工具使用说明](https://docs.openluat.com/Luatools/) 。
+详细使用说明参考：[Luatools 工具使用说明](https://docs.openluat.com/Luatools/) .
 
 Luatools 工具集具备以下几大核心功能：
 
-- 一键获取最新固件：自动连接合宙服务器，轻松下载最新的合宙模组固件。
-- 固件与脚本烧录：便捷地将固件及脚本文件烧录至目标模组中。
-- 串口日志管理：实时查看模组通过串口输出的日志信息，并支持保存功能。
-- 串口调试助手：提供简洁的串口调试界面，满足基本的串口通信测试需求。
+- 一键获取最新固件：自动连接合宙服务器，轻松下载最新的合宙模组固件.
+- 固件与脚本烧录：便捷地将固件及脚本文件烧录至目标模组中.
+- 串口日志管理：实时查看模组通过串口输出的日志信息，并支持保存功能.
+- 串口调试助手：提供简洁的串口调试界面，满足基本的串口通信测试需求.
 
-Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools_v3.exe 运行，出现如下界面，就代表 Luatools 安装成功了.
+Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools_v3.exe 即可运行.
 
 ### 4.2 准备需要烧录的代码
 
-首先要说明一点： 脚本代码， 要和固件的 soc 文件一起烧录。
+首先要说明一点： 脚本代码， 要和固件的 soc 文件一起烧录.
 
 #### 4.2.1 **烧录的底层固件文件**
 
@@ -95,13 +95,13 @@ Air780E 的底层固件在 Luatools 解压后目录的 **LuatOS-SoC_V1112_EC618_
 
 - 识别 4G 模组的 boot 引脚
 
-在下载之前，要用模组的 boot 引脚触发下载， 也就是说，要把 4G 模组的 boot 引脚拉到 1.8v，或者直接把 boot 引脚和 VDD_EXT 引脚相连。我们要在按下 BOOT 按键时让模块开机，就可以进入下载模式了。
+在下载之前，要用模组的 boot 引脚触发下载， 也就是说，要把 4G 模组的 boot 引脚拉到 1.8v，或者直接把 boot 引脚和 VDD_EXT 引脚相连.我们要在按下 BOOT 按键时让模块开机，就可以进入下载模式了.
 
 具体到 Air780E 开发板:
 
-1、当我们模块没开机时，按着 BOOT 键然后长按 PWR 开机。
+1、当我们模块没开机时，按着 BOOT 键然后长按 POW 开机.
 
-2、当我们模块开机时，按着 BOOT 键然后点按重启键即可。
+2、当我们模块开机时，按着 BOOT 键然后点按重启键即可.
 
 ![](image/W3dDb5qklov4JZxa2eecuDPFnZd.png)
 
@@ -111,17 +111,17 @@ Air780E 的底层固件在 Luatools 解压后目录的 **LuatOS-SoC_V1112_EC618_
 
 ![](image/HDSlbmvYGo2qGZxkEhzcsjrunMb.png)
 
-当设备管理器出现了 3 个连续数字的 com 端口，并且每个数字都大于 4，这时候， 硬件连接上就绪状态，恭喜你，可以进行烧录了！
+
 
 - 新建项目
 
-首先，确保你的 Luatools 的版本，大于等于 3.0.6 版本的。
+首先，确保你的 Luatools 的版本，大于等于 3.0.6 版本的.
 
 在 Luatools 的左上角上有版本显示的，如图所示：
 
 ![](image/VgKUbiSQHodhICxrISRcVY15nff.png)
 
-Luatools 版本没问题的话， 就点击 LuaTOols 右上角的“项目管理测试”按钮，如下图所示：
+Luatools 版本没问题的话， 就点击 LuaTools 右上角的“项目管理测试”按钮，如下图所示：
 
 ![](image/QrKjbUIphoHvdNxVjlEcDLP3n7b.png)
 
@@ -131,19 +131,17 @@ Luatools 版本没问题的话， 就点击 LuaTOols 右上角的“项目管理
 
 - 开始烧录
 
-选择 780E 板子对应的底层 core 和刚改的 main.lua 脚本文件。下载到板子中。
+选择 780E 板子对应的底层 core 和刚改的 main.lua 脚本文件.下载到板子中.
 
 ![](image/Hy7BbIhUQoFcrkxgkYwcr4rvnDh.png)
 
-点击下载后，我们需要进入 boot 模式才能正常下载。
+点击下载后，我们需要进入 boot 模式才能正常下载.
 
 如果没进入 boot 模式会出现下图情况:
 
 ![](image/UYjWbLXToozTjIxdEf3c3Yjfnln.png)
 
-当我们模块没开机时，按着 BOOT 键然后长按 PWR 开机,进入下载。
-
-当我们模块开机时，按着 BOOT 键然后点按重启键即可。可以进入下载,如图:
+进入 boot 模式下载,如图:
 
 ![](image/YLWSbLxxToqOLgx1U0ncokqenmb.png)
 
@@ -168,13 +166,13 @@ Luatools 版本没问题的话， 就点击 LuaTOols 右上角的“项目管理
 | string<br/>         | 指定随机数字符串<br/> |
 
 **例子**
-
+```lua
 -- 生成 32 位随机数 ir
 
 local r = crypto.trng(4)
 
 local _, ir = pack.unpack(r, "I")
-
+```
 ---
 
 ### 5.2 math.random([n [,m]])
@@ -195,8 +193,8 @@ local _, ir = pack.unpack(r, "I")
 | local<br/>          | 随机数字<br/> |
 
 **例子**
-
---无参调用，产生[0, 1)之间的浮点随机数。
+```lua
+--无参调用，产生[0, 1)之间的浮点随机数.
 
 local num = math.random()
 
@@ -204,15 +202,15 @@ local num = math.random()
 
 local num = math.random(n)
 
---两个参数，产生[n, m]之间的整数。
+--两个参数，产生[n, m]之间的整数.
 
 local num = math.random(n,m)
-
+```
 ---
 
 ### 5.3 math.randomseed(n)
 
-用法：接收一个整数 n 作为随即序列的种子。
+用法：设置一个整数 n 作为随机序列的种子.
 
 **参数**
 
@@ -225,31 +223,27 @@ local num = math.random(n,m)
 无
 
 **例子**
-
+```lua
 --得到了正常的随机数
 
 math.randomseed(os.time())
 
 for i=0, 10 do
 
-```
-local n = math.random(10)
-```
+  local n = math.random(10)
 
 end
 
---一系列相同的数,这种在一个 for 循环内设置随机数的写法 seed 几乎是一样导致。
+--一系列相同的数,这种在一个 for 循环内设置随机数的写法 seed 几乎是一样导致.
 
 for i=0, 10 do
 
-```
-math.randomseed(os.time())
+  math.randomseed(os.time())
 
-local n = math.random(10)
-```
+  local n = math.random(10)
 
 end
-
+```
 ## 六、功能演示
 
 ### 6.1 修改示例
@@ -311,17 +305,17 @@ sys.run()
 
 #### 6.1.1 **正确连接电脑和 4G 模组电路板**
 
-使用带有数据通信功能的数据线，不要使用仅有充电功能的数据线；
+使用带有数据通信功能的数据线，不要使用仅有充电功能的数据线.
 
 #### 6.1.2 **识别 4G 模组的 boot 引脚**
 
-在下载之前，要用模组的 boot 引脚触发下载， 也就是说，要把 4G 模组的 boot 引脚拉到 1.8v，或者直接把 boot 引脚和 VDD_EXT 引脚相连。我们要在按下 BOOT 按键时让模块开机，就可以进入下载模式了。
+在下载之前，要用模组的 boot 引脚触发下载， 也就是说，要把 4G 模组的 boot 引脚拉到 1.8v，或者直接把 boot 引脚和 VDD_EXT 引脚相连.我们要在按下 BOOT 按键时让模块开机，就可以进入下载模式了.
 
 具体到 Air780E 开发板:
 
-1、当我们模块没开机时，按着 BOOT 键然后长按 PWR 开机。
+1、当我们模块没开机时，按着 BOOT 键然后长按 PWR 开机.
 
-2、当我们模块开机时，按着 BOOT 键然后点按重启键即可。
+2、当我们模块开机时，按着 BOOT 键然后点按重启键即可.
 
 ![](image/WtvtbS6oyo7DFTx6JM3c0ePVnAr.png)
 
@@ -331,13 +325,13 @@ sys.run()
 
 ![](image/TFhobKaCLoeCwyxaIAwcN6gOn1f.png)
 
-当设备管理器出现了 3 个连续数字的 com 端口，并且每个数字都大于 4，这时候， 硬件连接上就绪状态，恭喜你，可以进行烧录了！
+当设备管理器出现了 3 个连续数字的 com 端口，这时候， 硬件连接上就绪状态，恭喜你，可以进行烧录了！
 
 #### 6.1.4 用 Luatools 工具烧录
 
 - 新建项目
 
-首先，确保你的 Luatools 的版本，大于等于 3.0.6 版本的。
+首先，确保你的 Luatools 的版本，大于等于 3.0.6 版本的.
 
 在 Luatools 的左上角上有版本显示的，如图所示：
 
@@ -353,19 +347,19 @@ Luatools 版本没问题的话， 就点击 LuaTOols 右上角的“项目管理
 
 - 开始烧录
 
-选择 780E 板子对应的底层 core 和刚改的 main.lua 脚本文件。下载到板子中。
+选择 780E 板子对应的底层 core 和刚改的 main.lua 脚本文件.下载到板子中.
 
 ![](image/L2f0bSuMwoFuSxx95ldcIOSGnSb.png)
 
-点击下载后，我们需要进入 boot 模式才能正常下载。
+点击下载后，我们需要进入 boot 模式才能正常下载.
 
 如果没进入 boot 模式会出现下图情况:
 
 ![](image/MKSMbsQbuomXWaxCGaycXPtwndd.png)
 
-当我们模块没开机时，按着 BOOT 键然后长按 PWR 开机,进入下载。
+当我们模块没开机时，按着 BOOT 键然后长按 PWR 开机,进入下载.
 
-当我们模块开机时，按着 BOOT 键然后点按重启键即可。可以进入下载,如图:
+当我们模块开机时，按着 BOOT 键然后点按重启键即可.可以进入下载,如图:
 
 ![](image/AiKAbUU7roxn4LxFPcfcBVjInDd.png)
 
@@ -433,27 +427,27 @@ Luatools 版本没问题的话， 就点击 LuaTOols 右上角的“项目管理
 
 ## 七、总结
 
-通过本章内容的学习，你可以学习到有关随机数的函数，例如：crypto.trng(len)[#](https://wiki.luatos.com/api/crypto.html#crypto-trng-len)、math.random([n [,m]])、math.randomseed(n) 等函数。
+通过本章内容的学习，你可以学习到有关随机数的函数，例如：crypto.trng(len)、math.random([n [,m]])、math.randomseed(n) 等函数.
 
 ## 八、扩展
 
 ### 8.1 **注意事项**
 
-需要注意的是，Lua 中的随机数算法可能存在一些问题。例如，_math.random(1, 3276700)_返回的值最后两位必为 0，这是由于 Lua 本身的随机函数算法决定的。因此，在使用 Lua 生成随机数时，应当注意这些潜在的限制，并尽可能通过设置合适的随机种子来避免生成可预测的随机数序列。
+需要注意的是，Lua 中的随机数算法可能存在一些问题.例如，math.random(1, 3276700)返回的值最后两位必为 0，这是由于 Lua 本身的随机函数算法决定的.因此，在使用 Lua 生成随机数时，应当注意这些潜在的限制，并尽可能通过设置合适的随机种子来避免生成可预测的随机数序列.
 
-通过以上方法，可以在 Lua 中有效地生成随机数，并确保每次运行程序时都能得到不同的随机数序列，从而满足各种需要随机性的应用场景。
+通过以上方法，可以在 Lua 中有效地生成随机数，并确保每次运行程序时都能得到不同的随机数序列，从而满足各种需要随机性的应用场景.
 
 ### 8.2 **设置随机数种子**
 
-为了确保每次运行程序时都能生成不同的随机数序列，需要使用_math.randomseed_来设置一个随机种子。通常，使用系统时间_os.time()_作为种子是一个简单而有效的方法：
-
+为了确保每次运行程序时都能生成不同的随机数序列，需要使用math.randomseed来设置一个随机种子.通常，使用系统时间os.time()作为种子是一个简单而有效的方法：
+```lua
 math.randomseed(os.time())
-
-然而，如果程序在很短的时间内多次运行，可能会发现生成的随机数序列几乎不变。这是因为_os.time()_返回的是秒级的时间戳，不够精确。为了解决这个问题，可以将时间戳转换为字符串，然后反转并截取高位数字作为种子：
-
+```
+然而，如果程序在很短的时间内多次运行，可能会发现生成的随机数序列几乎不变.这是因为os.time()返回的是秒级的时间戳，不够精确.为了解决这个问题，可以将时间戳转换为字符串，然后反转并截取高位数字作为种子：
+```lua
 math.randomseed(tonumber(tostring(os.time()):reverse():sub(1, 7)))
-
-这种方法通过提高种子数值的变化量，使得即使在短时间内多次运行程序，也能产生更好的伪随机序列。
+```
+这种方法通过提高种子数值的变化量，使得即使在短时间内多次运行程序，也能产生更好的伪随机序列.
 
 ## 给读者的话
 

@@ -1,29 +1,4 @@
 
-
-> [!TIP]
-> ！！！不要删除这个高亮块中的内容！！！
-
-必读文章：
-[docs.openluat.com 文档开发过程（新人必看）](https://e3zt58hesn.feishu.cn/wiki/BJWIwMWI0ijF2zkiamUcI0s7nwd)
-[docs 文章基本要求（大家仔细阅读，严格遵守）](https://e3zt58hesn.feishu.cn/docx/UplIdAaKso4k09xZSG4cMBGfn6e)
-
-写本篇文章时，文章内容可以参考的一些合宙内部的资料（有些资料可能不是 Air780E 的，仅供参考）：
-
-- AT 命令手册；
-- [https://docs.openluat.com/air780e/luatos/quick_start/hello/](https://docs.openluat.com/air780e/luatos/quick_start/hello/)
-- [https://doc.openluat.com/wiki/21?wiki_page_id=6044](https://doc.openluat.com/wiki/21?wiki_page_id=6044)
-- [https://doc.openluat.com/wiki/21?wiki_page_id=1986](https://doc.openluat.com/wiki/21?wiki_page_id=1986)
-- [https://doc.openluat.com/wiki/21?wiki_page_id=1991](https://doc.openluat.com/wiki/21?wiki_page_id=1991)
-- [https://doc.openluat.com/wiki/21?wiki_page_id=6059](https://doc.openluat.com/wiki/21?wiki_page_id=6059)
-
-写本篇文章时，**文章基本结构和内容框架必须参考**：[docs 文章基本要求（大家仔细阅读，严格遵守）](https://e3zt58hesn.feishu.cn/docx/UplIdAaKso4k09xZSG4cMBGfn6e)
-
-- [Air780E LuatOS 快速入门示例 HelloWorld](https://docs.openluat.com/air780e/luatos/quick_start/hello/)
-- [合宙 DTU 整机产品线文档中心](https://e3zt58hesn.feishu.cn/wiki/CFgkw6I66idUVnkAeaQcGpL4nfe?chunked=false)
-- [Air780E AT 快速入门示例](https://docs.openluat.com/air780e/at/quick_start/tcp/tcp/)[UDP](https://docs.openluat.com/air780e/at/quick_start/tcp/tcp/)[通信](https://docs.openluat.com/air780e/at/quick_start/tcp/tcp/)
-
-# 2024-10-15 第一版
-
 ## 一、AT 命令概述
 
 AT 命令是一种古老的使用方式，从有线通信就开始使用了。
@@ -147,9 +122,9 @@ USB 数据线，连接电脑和 Air780E 开发板，如下图所示：
 
 第二种方式是访问：[Air780E 固件版本](https://docs.openluat.com/air780e/at/firmware/) ，找到最新版本的固件即可。
 
-### 4.3 合宙 合宙 UDP/UDP web 测试服务器
+### 4.3 合宙 合宙 TCP/UDP web 测试服务器
 
-为了方便测试，合宙提供了免费的不可商用的 [合宙 UDP/UDP web 测试服务器](https://netlab.luatos.com)；
+为了方便测试，合宙提供了免费的不可商用的 [合宙 TCP/UDP web 测试服务器](https://netlab.luatos.com)；
 
 ### 4.4 PC 端串口工具
 
@@ -171,13 +146,13 @@ LLCOM 的下载链接：[LLCOM](https://llcom.papapoi.com/index.html) ，详细�
 
 ### 5.2 UDP 相关指令
 
-[点击连接查看合宙 4G 模组 TCPIP 相关命令](https://docs.openluat.com/air780e/at/app/at_command/#tcpip)
+[点击连接查看合宙 4G 模组 UDP 相关命令](https://docs.openluat.com/air780e/at/app/at_command/#tcpip)
 
 ### 5.3 打开测试服务器
 
-在本文中用合宙 UDP/UDP web 测试服务器来演示整个过程。
+在本文中用合宙 TCP/UDP web 测试服务器来演示整个过程。
 
-点击右侧连接进入工具：[https://netlab.luatos.com](https://netlab.luatos.com)，浏览器中出现如下界面：
+点击右侧链接进入工具：[https://netlab.luatos.com](https://netlab.luatos.com)，浏览器中出现如下界面：
 
 ![](image/SVSjb8HsbodaTTxvF97cwrQpnmd.png)
 
@@ -209,7 +184,7 @@ AT+CIPQSEND=1        //设置为快发模式
 OK
 
 AT+CSTT               //启动任务，设置APN模块注册网络后会从网络自动获取<apn>并激活一个PDP上下文(此<apn>可以通过AT+CGDCONT?来查询)，所以直接输入AT+CSTT即可，模块内部会按照自动获取的<apn>来设置CSTT的APN
-                  
+                
 OK  
 
 AT+CIICR             //激活移动场景，获取IP地址
@@ -218,7 +193,7 @@ OK
 
 AT+CIFSR            //查询分配的IP地址
 
-10.83.172.111        //   此处IP随机     
+10.83.172.111        //   此处IP随机   
 
 AT+CIPSTART="UDP","112.125.89.8",45214 //建立UDP链接，其中:"UDP"为链接的协议类型，“112.125.89.8"为对端服务器的IP地址45214 为对端服务器的UDP端口号
 
@@ -267,7 +242,7 @@ AT+CIFSR        //查询当前的模块IP
 ### 6.2 UDP 透传应用 1：模块做为客户端，单链接，数据发送和数据接收
 
 ```
-AT+CIPMODE=1                //设置TCPIP应用为透明传输模式
+AT+CIPMODE=1                //设置为透明传输模式
 
 OK
 
@@ -317,7 +292,7 @@ OK
 退出透传模式后我们可以正常发送 AT 指令，关闭连接，指令序列如下：
 
 ```
-AT+CIPCLOSE        //关闭TCP链接
+AT+CIPCLOSE        //关闭UDP链接
 
 CLOSE OK            //关闭成功
 
@@ -342,35 +317,7 @@ SHUT OK
 
 ## 七、总结
 
-### 7.1 模块上电初始化以及 **TCPIP **流程。
-
-![](image/Up0rbHFCJoW5xmxVjKIcxGOPnic.png)
-
-### 7.2 单链接状态机
-
-当输入 TCPIP 相关命令以后， 模块的状态也会发生相应的迁移。 查询状态的命令是 AT+CIPSTATUS
-
-![](image/TMzFbm5eqomCjWxpFyTc1Rkynud.png)
-
-### 7.3 多链接状态机
-
-![](image/XDOtbj2Zuo8mc2xjTkzcFStMnjb.png)
-
-关于单连接状态机的几点说明：
-
-1.输入 AT+CIICR， 会马上进入 IP CONFIG 状态， 当返回 OK 后， 会进入到 IP GPRSACT 状态；
-
-2.输入 AT+CIPSTART 后， 会立马进入 IP/UDP CONNECTING 状态， 如果后续模块上报 CONNECT OK 这个 URC，表明连接服务器成功， 此时进入 CONNECT OK 状态；
-
-3.输入 AT+CIPCLOSE 后， 立马进入 TCP/UDP CLOSING 状态， 此时如果模块上报 CLOSE OK， 则表明关闭与服务器的连接成功， 此时模块进入 TCP/UDP CLOSED 状态；
-
-4.如果模块上报 +PDP DEACT 这个 URC， 则标志着模块释放 PDP 上下文， 并进入了 PDP DEACT 状态；
-
-5.在 IP GPRSACT， IP STATUS， CONNECT OK 以及 TCP/UDP CLOSED 状态下， 输入 AT+CGATT=0， 则也可以使模块释放上下文， 进入 PDP DEACT 状态；
-
-6.模块进入 PDP DEACT 状态， 仍需要输入 AT+CIPSHUT， 进入 IP INITIAL 状态；
-
-7.模块在各个状态下均可以输入 AT+CIPSHUT， 进入 IP INITIAL 状态。
+文章介绍了如何使用Air780E模组通过AT指令进行UDP通信，透传和非透传两种应用。
 
 ## 八、参考资料
 
@@ -378,7 +325,7 @@ SHUT OK
 
 [https://docs.openluat.com/air780e/](https://docs.openluat.com/air780e/)
 
-**8.2 Air780E AT TCP 快速入门教程**
+**8.2 Air780E AT UDP 快速入门教程**
 
 [https://docs.openluat.com/air780e/at/quick_start/tcp/tcp/](https://docs.openluat.com/air780e/at/quick_start/tcp/tcp/)
 
@@ -416,7 +363,7 @@ b.极端情况下，直接给模块断电，再上电，POWER KEY 引脚拉低�
 
 ## 给读者的话
 
-> 本篇文章由`Murphy`开发；
+> 本篇文章由 `Murphy`开发；
 >
 > 本篇文章描述的内容，如果有错误、细节缺失、细节不清晰或者其他任何问题，总之就是无法解决您遇到的问题；
 >

@@ -13,6 +13,14 @@ nav:
   - 硬件指南:
     - 典型硬件设计指南:
       - 简介: hardware/design/index.md
+      - 典型应用参考设计: hardware/design/reference.md
+      - 开机启动及外围电路: hardware/design/poweron.md
+      - 供电设计及选型推荐: hardware/design/power.md
+      - SIM卡电路设计指导: hardware/design/sim.md
+      #- USB电路设计指导: hardware/design/usb.md
+      - GPIO使用注意事项: hardware/design/gpio.md
+      - 天线电路设计指导: hardware/design/ant.md
+      #- 串口电路设计指导: hardware/design/uart.md
   - 软件指南:
     - 介绍: app/index.md
     - 硬件驱动:
@@ -81,6 +89,9 @@ nav:
       - SPI串口屏: app/simpleui/spilcd/index.md
       - 摄像头拍照和扫码: app/simpleui/camera/index.md
       - 二维码: app/simpleui/qrcode/index.md
+    - 项目实战:
+      - 简介: app/project/index.md
+      - 温湿度数据采集: app/project/temprature_humity_report/index.md
   - SDK&Demo: firmware.md
   - 常见问题: faq.md
   - DTU: https://docs.openluat.com/dtu/

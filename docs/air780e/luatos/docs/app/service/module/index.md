@@ -4,11 +4,11 @@
 
 包含设备唯一 id,硬件型号,模组的硬件版本号,固件版本号等;
 
-模块远程升级需要上传模块信息，解决和分析某些问题的时候可能也会需要确认模块信息。
+模块远程升级需要上传模块信息，解决和分析某些问题的时候可能也会需要确认模块信息.
 
 ## 二、演示功能概述
 
-使用 Air780E 核心板烧录底层固件(**LuatOS-SoC_V1112_EC618_FULL.soc**)和 [hmeta 例程](https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/hmeta)脚本学习有关模块信息的 api 函数。
+使用 Air780E 核心板烧录底层固件(**LuatOS-SoC_V1112_EC618_FULL.soc**)和 [hmeta 例程](https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/hmeta)脚本学习有关模块信息的 api 函数.
 
 ## 三、硬件准备
 
@@ -20,19 +20,19 @@
 
 淘宝购买链接：[Air780E 核心板淘宝购买链接](https://item.taobao.com/item.htm?id=693774140934&pisk=f1eiwOqL25l1_HYiV6D1ize3wN5d5FMjRrpxkx3VT2uIHCCskWm4kysffAEqor4KRRIskGT0ooqi_coq7DWE000qbVr2mmzKQjNtkV3mnoalvaBRelZshA7RyTFdpD4xQco2_VS2Tcnvc89h5lZshq-pu_FUfEDVVdOmgrkET0ir3mkq_MDEmmM2QjJaY2uI0UGAoNueWRjiw4YTC-_opNr-zluaXleFpfR_X2fhTJVn94W--KJ4KcqQreCDEs3zNVh-DyWpIxqEmyc8savgoor7gX2D7GUzmW4jBJS2_4PTWjestFRZqA0iaRlwjdkIgW2nBR7XNkEn7bDL96_tMA4gN4GNOwa0xVU4IX8G4iReapZyhDSYLIOj_DinyhbSB2IHjbEhxMA51foIXaIhxItMPKJlyMjHNEGZAcQR.&spm=a1z10.5-c-s.w4002-24045920841.33.639f1fd1YrS4b6&skuId=5098266470883) ；
 
-此核心板的详细使用说明参考：[Air780E 产品手册](https://docs.openluat.com/air780e/product/) 中的 << 开发板 Core_Air780E 使用说明 VX.X.X.pdf>>，写这篇文章时最新版本的使用说明为：开发板 Core_Air780E 使用说明 V1.0.5.pdf ；核心板使用过程中遇到任何问题，可以直接参考这份使用说明 pdf 文档。
+此核心板的详细使用说明参考：[Air780E 产品手册](https://docs.openluat.com/air780e/product/) 中的 << 开发板 Core_Air780E 使用说明 VX.X.X.pdf>>，写这篇文章时最新版本的使用说明为：开发板 Core_Air780E 使用说明 V1.0.5.pdf ；核心板使用过程中遇到任何问题，可以直接参考这份使用说明 pdf 文档.
 
 ### 3.2 SIM 卡
 
-中国大陆环境下，可以上网的 sim 卡,一般来说，使用移动，电信，联通的物联网卡或者手机卡都行；
+中国大陆环境下，可以上网的 sim 卡,一般来说，使用移动，电信，联通的物联网卡或者手机卡都行.
 
 ### 3.3 PC 电脑
 
-WINDOWS 系统，其他暂无特别要求；
+WINDOWS 系统.
 
 ### 3.4 数据通信线
 
-USB 数据线，暂无特别要求；
+USB 数据线.
 
 ## 四、软件环境
 
@@ -40,20 +40,20 @@ USB 数据线，暂无特别要求；
 
 要想烧录 LuatOS 固件到 4G 模组中，需要用到合宙的强大的调试工具：Luatools；
 
-详细使用说明参考：[Luatools 工具使用说明](https://docs.openluat.com/Luatools/) 。
+详细使用说明参考：[Luatools 工具使用说明](https://docs.openluat.com/Luatools/) .
 
 Luatools 工具集具备以下几大核心功能：
 
-- 一键获取最新固件：自动连接合宙服务器，轻松下载最新的合宙模组固件。
-- 固件与脚本烧录：便捷地将固件及脚本文件烧录至目标模组中。
-- 串口日志管理：实时查看模组通过串口输出的日志信息，并支持保存功能。
-- 串口调试助手：提供简洁的串口调试界面，满足基本的串口通信测试需求。
+- 一键获取最新固件：自动连接合宙服务器，轻松下载最新的合宙模组固件.
+- 固件与脚本烧录：便捷地将固件及脚本文件烧录至目标模组中.
+- 串口日志管理：实时查看模组通过串口输出的日志信息，并支持保存功能.
+- 串口调试助手：提供简洁的串口调试界面，满足基本的串口通信测试需求.
 
-Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools_v3.exe 运行，出现如下界面，就代表 Luatools 安装成功了.
+Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools_v3.exe 即可运行.
 
 ### 4.2 准备需要烧录的代码
 
-首先要说明一点： 脚本代码， 要和固件的 soc 文件一起烧录。
+首先要说明一点： 脚本代码， 要和固件的 soc 文件一起烧录.
 
 #### 4.2.1 **烧录的底层固件文件**
 
@@ -96,7 +96,7 @@ Air780E 的底层固件在 Luatools 解压后目录的 **LuatOS-SoC_V1112_EC618_
 | string<br/>         | 设备唯一 id<br/> |
 
 **例子**
-
+```lua
 --注意,可能包含不可见字符,如需查看建议 toHex()后打印
 
 sys.taskInit(function()
@@ -104,7 +104,7 @@ local unique_id = mcu.unique_id()
 log.info("unique_id", unique_id:toHex())
 -- 实例输出：unique_id   4A5139383707942E55FF    20
 end)
-
+```
 ---
 
 ### 5.2 **mobile.imei(index)**
@@ -113,7 +113,9 @@ end)
 
 **参数**
 
-无
+| **传入值类型**<br/> | **解释**<br/>                                       |
+| ------------------- | ---------------------------------------------------- |
+| int   <br/>         | 编号,默认0. 在支持双卡的模块上才会出现0或1的情况<br/> |
 
 **返回值**
 
@@ -122,14 +124,14 @@ end)
 | string<br/>         | 设备 IMEI<br/> |
 
 **例子**
-
+```lua
 --4G 模组只支持双卡单待/单卡，只有一个 IMEI，可以通过 mobile.imei()直接获取
 sys.taskInit(function()
 -- 获取 IMEI
 log.info("imei", mobile.imei())
 -- 实例输出：imei 866374063853768
 end)
-
+```
 ---
 
 ### 5.3 **hmeta.model()**
@@ -147,12 +149,12 @@ end)
 | string<br/>         | 若能识别到,返回硬件型号, 否则会是 nil<br/> |
 
 **例子**
-
+```lua
 sys.taskInit(function()
 log.info("hmeta-model", hmeta.model())
 -- 实例输出：hmeta-model Air780E
 end)
-
+```
 ---
 
 ### 5.4 **rtos.bsp()**
@@ -170,12 +172,12 @@ end)
 | string<br/>         | 硬件 bsp 型号<br/> |
 
 **例子**
-
+```lua
 sys.taskInit(function()
 log.info("rtos.bsp", rtos.bsp())
 -- 实例输出：rtos-bsp    EC618
 end)
-
+```
 ---
 
 ### 5.5 **hmeta.hwver()**
@@ -193,12 +195,12 @@ end)
 | string<br/>         | 若能识别到,返回模组的硬件版本号, 否则会是 nil<br/> |
 
 **例子**
-
+```lua
 sys.taskInit(function()
 log.info("hmeta", hmeta.hwver and hmeta.hwver())
 -- 实例输出：hmeta   A16
 end)
-
+```
 ---
 
 ### 5.6 **rtos.version()**
@@ -216,29 +218,29 @@ end)
 | string<br/>         | 固件版本号<br/> |
 
 **例子**
-
+```lua
 sys.taskInit(function()
 log.info("luatos_version ", rtos.version())
 -- 实例输出：luatos_version  V1112
 end)
-
+```
 ## 六、功能验证
 
 ### 6.1 烧录固件
 
 #### 6.1.1 **正确连接电脑和 4G 模组电路板**
 
-使用带有数据通信功能的数据线，不要使用仅有充电功能的数据线；
+使用带有数据通信功能的数据线，不要使用仅有充电功能的数据线.
 
 #### 6.1.2 **识别 4G 模组的 boot 引脚**
 
-在下载之前，要用模组的 boot 引脚触发下载， 也就是说，要把 4G 模组的 boot 引脚拉到 1.8v，或者直接把 boot 引脚和 VDD_EXT 引脚相连。我们要在按下 BOOT 按键时让模块开机，就可以进入下载模式了。
+在下载之前，要用模组的 boot 引脚触发下载， 也就是说，要把 4G 模组的 boot 引脚拉到 1.8v，或者直接把 boot 引脚和 VDD_EXT 引脚相连.我们要在按下 BOOT 按键时让模块开机，就可以进入下载模式了.
 
 具体到 Air780E 开发板:
 
-1、当我们模块没开机时，按着 BOOT 键然后长按 PWR 开机。
+1、当我们模块没开机时，按着 BOOT 键然后长按 POW 开机.
 
-2、当我们模块开机时，按着 BOOT 键然后点按重启键即可。
+2、当我们模块开机时，按着 BOOT 键然后点按重启键即可.
 
 ![](image/RPLPbcpuToZb46xez1lcUH3Dn2c.png)
 
@@ -248,19 +250,19 @@ end)
 
 ![](image/JWvQb0lWeoiqVlxrLmwczJ9gnHe.png)
 
-当设备管理器出现了 3 个连续数字的 com 端口，并且每个数字都大于 4，这时候， 硬件连接上就绪状态，恭喜你，可以进行烧录了！
+
 
 #### 6.1.4 用 Luatools 工具烧录
 
 - 新建项目
 
-首先，确保你的 Luatools 的版本，大于等于 3.0.6 版本的。
+首先，确保你的 Luatools 的版本，大于等于 3.0.6 版本的.
 
 在 Luatools 的左上角上有版本显示的，如图所示：
 
 ![](image/C7kqbBSTIowqOmxEAJCcT4Csntb.png)
 
-Luatools 版本没问题的话， 就点击 LuaTOols 右上角的“项目管理测试”按钮，如下图所示：
+Luatools 版本没问题的话， 就点击 Luatools 右上角的“项目管理测试”按钮，如下图所示：
 
 ![](image/UpNhbNdswoXQA9xAmX3cFqW3nov.png)
 
@@ -270,19 +272,17 @@ Luatools 版本没问题的话， 就点击 LuaTOols 右上角的“项目管理
 
 - 开始烧录
 
-选择 780E 板子对应的底层 core 和刚改的 main.lua 脚本文件。下载到板子中。
+选择 780E 板子对应的底层 core 和刚改的 main.lua 脚本文件.下载到板子中.
 
 ![](image/CAPKbXUaBobH6LxhpCScQsa2nve.png)
 
-点击下载后，我们需要进入 boot 模式才能正常下载。
+点击下载后，我们需要进入 boot 模式才能正常下载.
 
 如果没进入 boot 模式会出现下图情况:
 
 ![](image/Z19kbFV0Loc4Bdx29URczWZIn6e.png)
 
-当我们模块没开机时，按着 BOOT 键然后长按 PWR 开机,进入下载。
-
-当我们模块开机时，按着 BOOT 键然后点按重启键即可。可以进入下载,如图:
+进入 boot 模式下载,如图:
 
 ![](image/A3V2bXxZFoekP4xCxKXcPjAtntd.png)
 
@@ -351,7 +351,7 @@ sys.run()
 
 ## 七、总结
 
-通过本章学习，你可以学习到模块唯一 ID，模块硬件型号，固件版本，硬件版本的获取方法。
+通过本章学习，你可以学习到模块唯一 ID，模块硬件型号，固件版本，硬件版本的获取方法.
 
 ## 八、常见问题
 

@@ -68,7 +68,7 @@ WINDOWS 系统。
 | string<br/>         | 用户的特殊标识，可以为空<br/>                                                                                                                                                                     |
 | string<br/>         | 设备识别号, 4G 设备默认是 imei,其他设备默认是 mcu.unique_id<br/>                                                                                                                                  |
 | string<br/>         | 服务器域名,默认 dev_msg1.openluat.com<br/>                                                                                                                                                        |
-| int<br/>            | 服务器端口,默认<br/>                                                                                                                                                                              |
+| int<br/>            | 服务器端口,默认12425,默认是合宙的云平台                                                                                                                                                                              |
 
 **返回值**
 

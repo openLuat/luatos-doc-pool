@@ -17,6 +17,13 @@ nav:
   - 硬件指南:
     - 典型硬件设计指南:
       - 简介: hardware/design/index.md
+      - 典型应用参考设计: hardware/design/reference.md
+      - 开机启动及外围电路: hardware/design/poweron.md
+      - 供电设计及选型推荐: hardware/design/power.md
+      - 串口电路设计指导: hardware/design/uart.md
+      - SIM卡电路设计指导: hardware/design/sim.md
+      #- LED状态灯电路: hardware/design/led.md
+      - 天线电路设计指导: hardware/design/ant.md
       #- 常见供电电路: ../luatos/hardware/design/power 直接引用存在一个问题，左边导航栏会跳转到LuatOS资料中心，阅读体验很差
       - 常见供电电路: hardware/design/power.md
       - 常见充电电路: hardware/design/charge.md

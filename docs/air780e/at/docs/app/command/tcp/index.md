@@ -1,30 +1,4 @@
 
-> [!TIP]
-> ！！！不要删除这个高亮块中的内容！！！
-
-每次版本迭代时，重新复制之前最近的一份文章内容，放到本文档最上面，然后修改；
-
-必读文章：
-[docs.openluat.com 文档开发过程（新人必看）](https://e3zt58hesn.feishu.cn/wiki/BJWIwMWI0ijF2zkiamUcI0s7nwd)
-[docs 文章基本要求（大家仔细阅读，严格遵守）](https://e3zt58hesn.feishu.cn/docx/UplIdAaKso4k09xZSG4cMBGfn6e)
-
-写本篇文章时，文章内容可以参考的一些合宙内部的资料（有些资料可能不是 Air780E 的，仅供参考）：
-
-- AT 命令手册；
-- [https://docs.openluat.com/air780e/luatos/quick_start/hello/](https://docs.openluat.com/air780e/luatos/quick_start/hello/)
-- [https://doc.openluat.com/wiki/21?wiki_page_id=6044](https://doc.openluat.com/wiki/21?wiki_page_id=6044)
-- [https://doc.openluat.com/wiki/21?wiki_page_id=1986](https://doc.openluat.com/wiki/21?wiki_page_id=1986)
-- [https://doc.openluat.com/wiki/21?wiki_page_id=1991](https://doc.openluat.com/wiki/21?wiki_page_id=1991)
-- [https://doc.openluat.com/wiki/21?wiki_page_id=6059](https://doc.openluat.com/wiki/21?wiki_page_id=6059)
-
-写本篇文章时，文章目录结构可以参考一下文章：
-
-- [Air780E LuatOS 快速入门示例 HelloWorld](https://docs.openluat.com/air780e/luatos/quick_start/hello/)
-- [合宙 DTU 整机产品线文档中心](https://e3zt58hesn.feishu.cn/wiki/CFgkw6I66idUVnkAeaQcGpL4nfe?chunked=false)
-- [Air780E AT 快速入门示例 TCP 通信](https://docs.openluat.com/air780e/at/quick_start/tcp/tcp/)
-
-# 2024-10-16 第一版
-
 ## 一、AT 命令概述
 
 AT 命令是一种古老的使用方式，从有线通信就开始使用了。
@@ -64,7 +38,7 @@ AT 命令发展到今天， 功能日趋完善。
 本文教你怎么使用 AT 命令，通过几个简单的步骤，就可以让合宙 4G 模组与 TCP 服务器通讯。
 
 1. 使用 TCP 服务器
-2. 4G 模组插卡开机后，使用 AT 指令完成 UDP 链接建立，数据发送，数据接收以及链接关闭操作
+2. 4G 模组插卡开机后，使用 AT 指令完成 TCP 链接建立，数据发送，数据接收以及链接关闭操作
 
 ## 三、准备硬件环境
 
@@ -148,9 +122,9 @@ USB 数据线，连接电脑和 Air780E 开发板，如下图所示：
 
 第二种方式是访问：[Air780E 固件版本](https://docs.openluat.com/air780e/at/firmware/) ，找到最新版本的固件即可。
 
-### 4.3 合宙 合宙 UDP/UDP web 测试服务器
+### 4.3 合宙 合宙 TCP/UDP web 测试服务器
 
-为了方便测试，合宙提供了免费的不可商用的 [合宙 UDP/UDP web 测试服务器](https://netlab.luatos.com)；
+为了方便测试，合宙提供了免费的不可商用的 [合宙 TCP/UDP web 测试服务器](https://netlab.luatos.com)；
 
 ### 4.4 PC 端串口工具
 
@@ -198,13 +172,13 @@ LLCOM 的下载链接：[LLCOM](https://llcom.papapoi.com/index.html) ，详细�
 
 AT+CREG?                //查询当前 GPRS 注册状态
 
-+CREG: 0,1               //<n>=0，表示禁用 URC 上报，<stat>=1，标识已经注册 GPRS 网络，而且是本地网
++CREG: 0,1               //`<n>`=0，表示禁用 URC 上报，`<stat>`=1，标识已经注册 GPRS 网络，而且是本地网
 
 OK
 
 AT+CGATT?                //查看当前 GPRS 附着状态
 
-+CGATT:1                //<state>=1，标明当前 GPRS 已经附着
++CGATT:1                //`<state>`=1，标明当前 GPRS 已经附着
 
 OK
 
@@ -264,33 +238,33 @@ OK
 
 **定长数据发送**
 
-| -><br/> | AT+CIPSEND=10<br/>  | 发送数据(确定长度)<br/>                                     |
-| ------- | ------------------- | ----------------------------------------------------------- |
-| <-<br/> | ><br/>              | <br/>                                                       |
-| -><br/> | 1234567890<br/>     | 输入发送数据<br/>                                           |
-| <-<br/> | DATA ACCEPT:10<br/> | 输入数据达到 10 个字节，不用发送<CTRL-Z>数据会自动发送<br/> |
+| ->`` | AT+CIPSEND=10``  | 发送数据(确定长度)``                                         |
+| ----------- | ----------------------- | ------------------------------------------------------------------- |
+| <-`` | >``              | ``                                                           |
+| ->`` | 1234567890``     | 输入发送数据``                                               |
+| <-`` | DATA ACCEPT:10`` | 输入数据达到 10 个字节，不用发送`<CTRL-Z>`数据会自动发送`` |
 
 ![](image/SUdgboKe8ofLDdxJSDccNBLanae.png)
 
 **定时定长数据发送**
 
-| -><br/> | AT+CIPATS=1,10<br/> | 设置自动发送，自动发送的定时为 10S<br/>               |
-| ------- | ------------------- | ----------------------------------------------------- |
-| <-<br/> | OK<br/>             | <br/>                                                 |
-| -><br/> | AT+CIPSEND<br/>     | 发送数据<br/>                                         |
-| <-<br/> | ><br/>              | <br/>                                                 |
-| -><br/> | 1234567890<br/>     | <br/>                                                 |
-| <-<br/> | DATA ACCEPT:10<br/> | 10s 定时器溢出，不用发送<CTRL-Z>，数据会自己发送<br/> |
+| ->`` | AT+CIPATS=1,10`` | 设置自动发送，自动发送的定时为 10S``                   |
+| ----------- | ----------------------- | ------------------------------------------------------------- |
+| <-`` | OK``             | ``                                                     |
+| ->`` | AT+CIPSEND``     | 发送数据``                                             |
+| <-`` | >``              | ``                                                     |
+| ->`` | 1234567890``     | ``                                                     |
+| <-`` | DATA ACCEPT:10`` | 10s 定时器溢出，不用发送`<CTRL-Z>`，数据会自己发送`` |
 
 ![](image/IKvibv88soYoszxpt2lcJSVRnoh.png)
 
 **定时数据发送**
 
-| -><br/> | AT+CIPSEND=100<br/> | 设置自动发送，自动发送的定时为 10S<br/>                                            |
-| ------- | ------------------- | ---------------------------------------------------------------------------------- |
-| <-<br/> | ><br/>              | <br/>                                                                              |
-| -><br/> | 123<br/>            | <br/>                                                                              |
-| <-<br/> | DATA ACCEPT:3<br/>  | 10s 定时器溢出，输入内壁不必达到 100 字节，也不用发送<CTRL-Z>，数据会自己发送<br/> |
+| ->`` | AT+CIPSEND=100`` | 设置自动发送，自动发送的定时为 10S``                                                |
+| ----------- | ----------------------- | ------------------------------------------------------------------------------------------ |
+| <-`` | >``              | ``                                                                                  |
+| ->`` | 123``            | ``                                                                                  |
+| <-`` | DATA ACCEPT:3``  | 10s 定时器溢出，输入内壁不必达到 100 字节，也不用发送`<CTRL-Z>`，数据会自己发送`` |
 
 ![](image/Hpi1bWuWsoKVFnxoayHcw5yMnsb.png)
 
@@ -347,7 +321,7 @@ AT+CIPSEND
 >                        //等待输入数据
 
 1234567890<CTRL-Z>        //<CTRL-Z>用来发送数据，发送16进制数0x1A即等同于发送<CTRL-Z>。
-    
+  
 DATA ACCEPT:10            //表明模块接收了从TE输入的10个字节的待发数据
 
                             //+CIPCLOSE,+CIPSHUT，不再赘述
@@ -417,7 +391,7 @@ OK
 ONNECT OK
 
 AT+CIPSEND=10        //发送数据(确定长度)
-        
+      
 >                    //等待输入数据
 1234567890
 
@@ -487,7 +461,7 @@ AT+CIPCLOSE            //关闭TCP链接
 CLOSE OK                //关闭成功
 
 AT+CIPSHUT            //关闭移动场景
-    
+  
 SHUT OK                    //关闭成功
 
 OK
@@ -577,20 +551,19 @@ b.检查 TCP 参数是否正确，如指令 AT+CIPSTART="TCP",XXX,YYY, “xxx”
 
 a.使用 RESET 引脚复位模块
 
-b.极端情况下，直接给模块断电，再上电，POWER KEY 
+b.极端情况下，直接给模块断电，再上电，POWER KEY
 
 ## 给读者的话
 
-> 本篇文章由`Murphy`开发；
+> 本篇文章由 `Murphy`开发；
 >
 > 本篇文章描述的内容，如果有错误、细节缺失、细节不清晰或者其他任何问题，总之就是无法解决您遇到的问题；
 >
 > 请登录[合宙技术交流论坛](https://chat.openluat.com/)，点击
-[文档找错赢奖金-Air780E-AT-软件指南-应用实例-TCP](https://chat.openluat.com/#/page/matter?125=1847188442048495618&126=%E6%96%87%E6%A1%A3%E6%89%BE%E9%94%99%E8%B5%A2%E5%A5%96%E9%87%91-Air780E-AT-%E8%BD%AF%E4%BB%B6%E6%8C%87%E5%8D%97-%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B-TCP&askid=1847188442048495618)；
+> [文档找错赢奖金-Air780E-AT-软件指南-应用实例-TCP](https://chat.openluat.com/#/page/matter?125=1847188442048495618&126=%E6%96%87%E6%A1%A3%E6%89%BE%E9%94%99%E8%B5%A2%E5%A5%96%E9%87%91-Air780E-AT-%E8%BD%AF%E4%BB%B6%E6%8C%87%E5%8D%97-%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B-TCP&askid=1847188442048495618)；
 >
 > 用截图标注+文字描述的方式跟帖回复，记录清楚您发现的问题；
 >
 > 我们会迅速核实并且修改文档；
 >
 > 同时也会为您累计找错积分，您还可能赢取月度找错奖金！
-

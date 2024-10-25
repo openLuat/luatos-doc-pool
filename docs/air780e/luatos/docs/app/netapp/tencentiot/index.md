@@ -75,7 +75,7 @@ iotcloud 库本质就是上层设计一套通用的 API 库来进行每个平台
 
 ![](image/YTLZbJmaLodYqex0vC9cTRPSnug.png)
 
-如何判断有没有进入下载模式:可以通过 PC 端的设备管理器中虚拟出来的 USB 断开数量来判断，
+如何判断有没有进入下载模式:可以通过 PC 端的设备管理器中虚拟出来的 USB 端口数量来判断
 
 **正常开机模式：**
 
@@ -150,13 +150,17 @@ iotcloudc = iotcloud.new(iotcloud.TENCENT,{produt_id = "xxx" ,product_secret = "
 ### 6.3 效果展示
 
 本例采用密钥校验(手动注册)的方式进行注册并连接云平台
+
 1. 设备日志
-   ![](image/FvDibkD8moIMxRx6gvUccwV8nug.png)可以看到我们的设备打印了连接成功，证明手动注册 + 连接流程已经完成
+   通过下图Luatools工具打印的日志，可以看到我们的设备打印了云平台连接成功，证明手动注册 + 连接流程已经完成
+   ![](image/FvDibkD8moIMxRx6gvUccwV8nug.png)
+
 2. 云平台效果
+
+    设备成功连接到云平台后，我们可以看到设备已经自动注册并且在线，如下图所示：
 
     ![](image/Q8cdblwVUoDt5TxjXPKc2BOEnab.png)
 
-    设备已经自动注册并且在线
     至此，云平台已经连接成功，剩下的就是要根据自己的产品需求，自己的物模型上报/下发数据就可以了
 
 ## 七、代码示例说明及功能验证
@@ -194,7 +198,8 @@ iotcloudc = iotcloud.new(iotcloud.TENCENT,{produt_id = "xxx" ,product_secret = "
 
 2. 模块端每隔2秒发布一次qos为1的消息到平台端
    > 本文 `iotcloudc:publish()` 中的第一个参数订阅的是一个自定义topic（**此topic在腾讯云平台获取，下面会介绍**），在腾讯云物联网平台上可以看到。用户可以根据需求自行修改第一个参数。
-   ```lua
+
+    ```lua
     -- 每隔2秒发布一次qos为1的消息到云平台
     sys.taskInit(function()
         while 1 do
@@ -205,6 +210,7 @@ iotcloudc = iotcloud.new(iotcloud.TENCENT,{produt_id = "xxx" ,product_secret = "
         end
     end)
     ```
+
     打开腾讯云产品设备界面，点击设备云端日志，选择内容日志，日志类型选择属性，此时右边会生成两个 topic
 
     > 一个是上行 topic \$thing/**up**/property/ZAJCHA24SH/869329069169988，即模块端向云平台发布消息；

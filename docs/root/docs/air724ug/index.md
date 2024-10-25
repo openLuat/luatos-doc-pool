@@ -1,6 +1,6 @@
 # 合宙Air724UG模组资料中心
 
-- [合宙Air724UG模组产品手册](https://docs.openluat.com/air724ug/product/)
-- [合宙Air724UG模组LuatOS资料中心](https://docs.openluat.com/air724ug/luatos/)
-- [合宙Air724UG模组AT资料中心](https://docs.openluat.com/air724ug/at/)
+- [Air724UG公用资料](https://docs.openluat.com/air724ug/product/)
+- [Air724UG LuatOS](https://docs.openluat.com/air724ug/luatos/)
+- [Air724UG AT指令](https://docs.openluat.com/air724ug/at/)
 

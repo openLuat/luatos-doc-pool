@@ -1,7 +1,7 @@
 # 合宙Air780EEJ模组资料中心
 
-- [合宙Air780EEJ模组产品手册](https://docs.openluat.com/air780eej/product/)
-- [合宙Air780EEJ模组AT资料中心](https://docs.openluat.com/air780eej/at/)
+- [Air780EEJ产品资料](https://docs.openluat.com/air780eej/product/)
+- [Air780EEJ AT资料](https://docs.openluat.com/air780eej/at/)
 
 
 ## 选型 Air780EEN/EEU/EEJ 时，我应该注意什么?
@@ -94,6 +94,13 @@ Air780EEN/EEU/EEJ 用于 AT 指令使用方式时的管脚图
 5. Air780EEN/EEU/EEJ 与 Air780E/Air780EQ/Air780EP/Air780EPS 什么关系？
    Air780EEN/EEU/EEJ 与 Air780E/Air780EQ/Air780EP/Air780EPS 封装尺寸完全相同；
    就 AT 指令功能来讲，Air780EEN/EEU/EEJ 与 Air780E/Air780EQ/Air780EP/Air780EPS 之间可以完全替代，但功耗表现有差异，面向的区域市场也不一样；
+6. Air780EEN，支持北美区域，比如美国、加拿大、墨西哥等，频段支持FDD:B2/B4/B5/B12/B13/B66/B71，其中，
+B71频段是Air780EEN相对传统北美模组新增加的频段，T-moble重点新布基站，可以大大增加网络覆盖的密度，尤其是北美乡村郊区；
+
+    Air780EEU，支持欧洲和亚洲区域(日本除外)，频段支持FDD:B1/B3/B5/B7/B8/B20/B28；
+
+    Air780EEJ，支持日本，频段支持FDD:B1/B3/B8/B18/B19/B26/B28和
+TDD:B41，其中，B28/B41两个频段是Air780EEJ相对传统日本模组新增加的频段，NTT/SoftBank/KDDI三大运营商重点新布基站频段，保证模组稳定在线；
 
 # 合宙模组更多资料
 
