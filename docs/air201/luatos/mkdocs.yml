@@ -22,7 +22,8 @@ nav:
     - RTC: quickstart/rtc.md
     - uart: quickstart/uart.md
     - camera: quickstart/camera.md
-  - 硬件资料: 
+    - spi: quickstart/spi.md
+  - 硬件资料:
     - 产品介绍: hardware/index.md
     - 模块及芯片: hardware/module.md
     - 支持频段: hardware/bands.md
