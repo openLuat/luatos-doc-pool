@@ -61,7 +61,7 @@ USB 数据线（其一端为 Type-C 接口，用于连接 Air201）。
 ### 4.2 源码及固件
 
 - Air201 模组使用固件：[core/LuatOS-SoC_V1004_Air201.soc](https://gitee.com/openLuat/LuatOS-Air201/blob/master/core/LuatOS-SoC_V1004_Air201.soc)，本 demo 使用的固件版本是：LuatOS-SoC_V1004_Air201.soc
-- 本教程使用的 demo：[https://gitee.com/openLuat/LuatOS-Air201/tree/master/demo/spi_flash](https://gitee.com/openLuat/LuatOS-Air201/tree/master/demo/spi_flash)
+- 本教程使用的 demo：[https://gitee.com/openLuat/LuatOS-Air201/tree/master/demo/spi](https://gitee.com/openLuat/LuatOS-Air201/tree/master/demo/spi)
 - 源码和固件已打包，如下所示：
 
 > 注：缩包中 core 文件夹存放固件，code 文件夹存放 demo
