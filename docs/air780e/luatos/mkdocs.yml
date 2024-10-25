@@ -27,6 +27,7 @@ nav:
       - 开机启动及外围电路: hardware/design/poweron.md
       - 供电设计及选型推荐: hardware/design/power.md
       - SIM卡电路设计指导: hardware/design/sim.md
+      - 串口电路设计指导: hardware/design/uart.md
       #- USB电路设计指导: hardware/design/usb.md
       - GPIO使用注意事项: hardware/design/gpio.md
       - ADC/LED/I2C/SPI/USB: hardware/design/adcledi2cspiusb.md
