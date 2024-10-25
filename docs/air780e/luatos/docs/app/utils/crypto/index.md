@@ -686,6 +686,8 @@ local _, ir = pack.unpack(r, "I")
 --使用当前系统时间计算
 
 local otp = crypto.totp("asdfassdfasdfass")
+
+local r = crypto.totp("VK54ZXPO74ISEM2E",1646796576)
 ```
 ---
 
@@ -872,7 +874,7 @@ local hashResult = crypto.hash_finish(stream)
 
 ![](image/SgdGbPfsmoFkp1xkJgKcCHPYnSb.png)
 
-当设备管理器出现了 3 个连续数字的 com 端口，这时候， 硬件连接上就绪状态，恭喜你，可以进行烧录了！
+
 
 #### 6.1.4 用 Luatools 工具烧录
 

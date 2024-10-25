@@ -111,7 +111,7 @@ Air780E 的底层固件在 Luatools 解压后目录的 **LuatOS-SoC_V1112_EC618_
 
 ![](image/HDSlbmvYGo2qGZxkEhzcsjrunMb.png)
 
-当设备管理器出现了 3 个连续数字的 com 端口，这时候， 硬件连接上就绪状态，恭喜你，可以进行烧录了！
+
 
 - 新建项目
 
