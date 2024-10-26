@@ -78,8 +78,8 @@ ril.request("AT指令")
 
 在本教程中，我们将采用以下数据线配置进行测试和数据查看：
 
-- 第一部：USB 数据线：此数据线不仅用于为测试板供电，还可用于查看抓取 lua 脚本上层和底层 core 日志。其一端为 micro-B 接口，连接 Air724UG-NFM 开发板；另一端为标准 USB 接口，连接 PC 电脑。
-- 第二部：USB 转 TTL 串口板：主要用于 tcp 透传串口数据的查看和发送。
+- 第一步：USB 数据线：此数据线不仅用于为测试板供电，还可用于查看抓取 lua 脚本上层和底层 core 日志。其一端为 micro-B 接口，连接 Air724UG-NFM 开发板；另一端为标准 USB 接口，连接 PC 电脑。
+- 第二步：USB 转 TTL 串口板：主要用于 tcp 透传串口数据的查看和发送。
 
 ### 3.5 组装硬件环境
 
@@ -131,15 +131,15 @@ ril.request("AT指令")
 
 注：这里推荐使用第一种方式。
 
-#### 4.3.1、选择打包好的工程文件：
+#### 4.3.1 选择打包好的工程文件：
 
-1. 下载解压
+1、下载解压
 [点我,下载完整压缩文件包](file/724_udp_uart.7z){:target="_blank"}
 选择打包好的 UDP 工程进行下载，下载后解压缩后按照 4.2 Luatools 工具添加工程、lib、脚本文件.
 
 ![](image/Nn6GbsvdGoCtc3x39ZDc1Ecnnlf.png)
 
-2. 目录结构
+2、 目录结构
 
 - 脚本运行 lib：请选择 lib 文件下的脚本文件。
 - 底层固件：请选择 core 文件下的文件 LuatOS-Air_V4028_RDA8910。
@@ -147,27 +147,25 @@ ril.request("AT指令")
 
 ![](image/P0jIbvfCIoMZ1RxLcGpcE4finGg.png)
 
-#### 4.3.2、自行选底层固件、lib：
+#### 4.3.2 自行选底层固件、lib：
 
 点击浏览选择下载：[downlod-luatos-core-lib](https://docs.openluat.com/air724ug/luatos/firmware/)
 
 根据上述链接打开下载界面，在下载界面中有对 Air724 相关的固件功能、固件下载、固件更细说明、固件历史版本下载、固件功能可自定义定制以及 lib 下载等说明。
 
-1. 底层固件
+1、底层固件
 
 本 demo 中选择了历史版本中的标准版本 LuatOS-Air_V4028_RDA8910。
 
 ![](image/OOU4bKYtIoOMwRxZcKuckrT0ndh.png)
 
-2. 脚本运行 lib
+2、脚本运行 lib
 
 ![](image/ZUNMbOcYDoEemMx7qeScQzc3nBe.png)
 
-3. 运行脚本
+3、运行脚本
 [点我,下载完整压缩文件包](file/lua_run_script.7z){:target="_blank"}
 解压压缩包 lua_run_script，添加运行脚本。
-
-
 
 ### 4.4 合宙 TCP/UDP web 测试工具
 
@@ -188,10 +186,10 @@ ril.request("AT指令")
 
 ## 六、UDP 主要 API 介绍
 
-### 6.1 SOCKET 是否有可用
+### 6.1 SOCKET 是否可用
 
 ```lua
---- SOCKET 是否有可用
+--- SOCKET 是否可用
 -- @return 可用true,不可用false
 socket.isReady()
 ```
