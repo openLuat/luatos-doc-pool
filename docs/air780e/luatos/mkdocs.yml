@@ -81,7 +81,7 @@ nav:
       - HTTP: app/socket/http/index.md
       - MQTT: app/socket/mqtt/index.md      
       - FTP: app/socket/ftp/index.md
-      - NTP: app/socket/ntp/index.md
+      - SNTP: app/socket/sntp/index.md
       - WebSocket: app/socket/websocket/index.md
     - 网络应用:
       - 简介: app/netapp/index.md
