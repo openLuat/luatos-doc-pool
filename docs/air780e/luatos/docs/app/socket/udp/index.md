@@ -137,7 +137,7 @@ Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools
 
 具体到 Air780E 开发板，
 
-- 当我们模块没开机时，按着 BOOT 键然后长按 PWR 开机。
+- 当我们模块没开机时，按着 BOOT 键然后长按 POW 开机。
 - 当我们模块开机时，按着 BOOT 键然后点按重启键即可。
 
 ![](image/CGYTb7L7sofYnpxfezZcWbhLnxd.png)
@@ -147,7 +147,7 @@ Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools
 判断是否进入BOOT模式：
 - 模块上电，此时在电脑的设备管理器中，查看串口设备，如下图：
 ![](image/8877fef7b46c422995f19b54b6b1124.png)
-- 先按下载模式在按一下重启，会出现一个端口表示进入了boot下载模式，如下图所示：
+- 进入boot下载模式，如下图所示：
 ![](image/d08541e96f837f61a47958107ff84a3.png)
 -  这时候， 硬件连接上就绪状态，恭喜你，可以进行烧录了！
 
@@ -277,7 +277,7 @@ uart.on(uartid, "receive", function(id, len)
 local libnet = require "libnet"  -- libnet库，支持tcp、udp协议所用的同步阻塞接口
 local ip = "112.125.89.8"         -- 连接UDP服务器的ip地址
 local port = 46139                -- 连接UDP服务器的端口
-local netCB = nil                  -- socket服务的回调函数
+local netCB = nil                  -- socket服务的返回值
 local connect_state = false         -- 连接状态 true:已连接   false:未连接
 local protocol = true               -- 通讯协议 true:UDP协议  false:TCP协议
 local ssl = false                    -- 加密传输 true:加密     false:不加密
