@@ -1,9 +1,9 @@
 ## **一、配置信息存储-键值对存储(fskv)概述**
 
-fskv 是 LuatOS 系统中的一个库，用于提供键值对（Key-Value）数据库功能。它允许开发者以键值对的形式存储和检索数据，这些数据会被持久化在 Flash 存储器上，确保在设备断电后数据不会丢失。fskv 库旨在替代旧的 fdb 库，并兼容 fdb 的函数，同时使用 fdb 的 flash 空间。
+fskv 是 LuatOS 系统中的一个库，用于提供键值对（Key-Value）数据库功能。它允许开发者以键值对的形式存储和检索数据，这些数据会被持久化在 Flash 存储器上，确保在设备断电后数据不会丢失。fskv 库旨在替代旧的 fdb 库，并兼容 fdb 的函数，同时使用 fdb 的 Flash 空间。
 
 - **持久化存储：**数据存储在 Flash 上，确保设备断电后数据不会丢失。
-- **兼容性强：**兼容 fdb 库，方便开发者迁移和升级。
+- **兼容性强：**兼容 fdb 库，方便开发者迁移和升级。 点击链接购买：[点击我进入 fdb库](https://wiki.luatos.com/api/fdb.html) ；
 - **功能丰富：**提供了初始化、设置、获取、删除、清空等丰富的 API 接口。
 - **性能稳定：**读写速度恒定，不受脏数据影响。
 - **空间利用率：**虽然相比 fdb 库空间利用率较低，但提供了更大的 value 长度（最大 4096 字节）和灵活的 key 长度（最大 63 字节）
@@ -34,23 +34,13 @@ fskv 是 LuatOS 系统中的一个库，用于提供键值对（Key-Value）数�
 
 ### 2.4 数据通信线
 
-请准备一根用于连接 Air780E 开发板和 PC 电脑的数据线，该数据线将实现业务逻辑的控制与交互。您有两种选择：
+请准备一根用于连接 Air780E 开发板和 PC 电脑的数据线，该数据线将实现业务逻辑的控制与交互。
 
 - USB 数据线（其一端为 Type-C 接口，用于连接 Air780E 开发板）。通常，这种数据线的外观如下示意图所示：
 
 ![](image/UZxnbgW13omiFOxiYYYctMWRnOf.png)
 
 普通的手机 USB 数据线一般都可以直接使用；
-
-- 第二种数据线是 USB 转 TTL 串口线。通常，这种数据线的外观如下示意图所示：
-
-![](image/PqvUb8Q1RorPGqx4ZRFcryiJnwf.png)
-
-在本教程中，我们将采用以下数据线配置进行测试和数据查看：
-
-- 第一种：USB 数据线：此数据线不仅用于为测试板供电，还用于查看数据日志。其一端为 Type-C 接口，连接 Air780E 开发板；另一端为标准 USB 接口，连接 PC 电脑。
-- 第二种：USB 转 TTL 串口线：此数据线主要用于 透传数据的查看。其一端为 USB 接口，连接 PC 电脑；另一端为 TTL 串口接口，连接 Air780E 开发板，以便进行串口通信和数据传输。
-
 ### 2.5 组装硬件环境
 
 #### 2.5.1 请按照 SIM 卡槽上的指示方向正确插入 SIM 卡，务必确保插入方向正确，避免插反导致损坏！
@@ -173,15 +163,15 @@ Luatools 版本没问题的话， 就点击 Luatools 右上角的“项目管理
 
 解说：
 
-此函数用于初始化 kv 数据库。在调用其他 fskv 函数之前，通常需要先调用此函数进行初始化。初始化成功后，会返回一个布尔值 true，表示数据库已成功初始化；如果初始化失败，则返回 false。
+此函数用于初始化 fskv 数据库。在调用其他 fskv 函数之前，通常需要先调用此函数进行初始化。初始化成功后，会返回一个布尔值 true，表示数据库已成功初始化；如果初始化失败，则返回 false。
 
 举例：
 
 ```lua
 if fskv.init() then  
-    log.info("fdb", "kv数据库初始化成功")  
+    log.info("fskv", "数据库初始化成功")  
 else  
-    log.info("fdb", "kv数据库初始化失败")  
+    log.info("fskv", "数据库初始化失败")  
 end
 -- 关于清空fdb库
 -- 下载工具是没有提供直接清除fdb数据的途径的, 但有办法解决
@@ -203,10 +193,10 @@ fskv.init()是 fskv 库的基础函数，用于确保数据库在使用前处于
 ```lua
 -- 设置数据, 字符串,数值,table,布尔值,均可
 -- 但不可以是nil, function, userdata, task
-log.info("fdb", fskv.set("wendal", "goodgoodstudy"))
-log.info("fdb", fskv.set("upgrade", true))
-log.info("fdb", fskv.set("timer", 1))
-log.info("fdb", fskv.set("bigd", {name="wendal",age=123}))
+log.info("fskv", fskv.set("wendal", "goodgoodstudy"))
+log.info("fskv", fskv.set("upgrade", true))
+log.info("fskv", fskv.set("timer", 1))
+log.info("fskv", fskv.set("bigd", {name="wendal",age=123}))
 ```
 
 总结：
@@ -225,22 +215,22 @@ fskv.set()允许开发者以键值对的形式存储数据，支持多种数据�
 -- 本API在2023.7.26新增,注意与set函数区别
 -- 设置数据, 字符串,数值,table,布尔值,均可
 -- 但不可以是function, userdata, task
-log.info("fdb", fskv.sett("mytable", "wendal", "goodgoodstudy"))
-log.info("fdb", fskv.sett("mytable", "upgrade", true))
-log.info("fdb", fskv.sett("mytable", "timer", 1))
-log.info("fdb", fskv.sett("mytable", "bigd", {name="wendal",age=123}))
+log.info("fskv", fskv.sett("mytable", "wendal", "goodgoodstudy"))
+log.info("fskv", fskv.sett("mytable", "upgrade", true))
+log.info("fskv", fskv.sett("mytable", "timer", 1))
+log.info("fskv", fskv.sett("mytable", "bigd", {name="wendal",age=123}))
 
 -- 下列语句将打印出4个元素的table
-log.info("fdb", fskv.get("mytable"), json.encode(fskv.get("mytable")))
+log.info("fskv", fskv.get("mytable"), json.encode(fskv.get("mytable")))
 -- 注意: 如果key不存在, 或者原本的值不是table类型,将会完全覆盖
 -- 例如下列写法,最终获取到的是table,而非第一行的字符串
-log.info("fdb", fskv.set("mykv", "123"))
-log.info("fdb", fskv.sett("mykv", "age", "123")) -- 保存的将是 {age:"123"}
+log.info("fskv", fskv.set("mykv", "123"))
+log.info("fskv", fskv.sett("mykv", "age", "123")) -- 保存的将是 {age:"123"}
 
 
 -- 如果设置的数据填nil, 代表删除对应的key
-log.info("fdb", fskv.sett("mykv", "name", "wendal"))
-log.info("fdb", fskv.sett("mykv", "name")) -- 相当于删除
+log.info("fskv", fskv.sett("mykv", "name", "wendal"))
+log.info("fskv", fskv.sett("mykv", "name")) -- 相当于删除
 --
 ```
 
@@ -258,7 +248,7 @@ fskv.sett()提供了在 table 内嵌套设置键值对的功能，使得数据�
 
 ```lua
 if fskv.init() then
-    log.info("fdb", fskv.get("wendal"))
+    log.info("fskv", fskv.get("wendal"))
 end
 
 -- 若需要"默认值", 对应非bool布尔值, 可以这样写
@@ -278,7 +268,7 @@ fskv.get()允许开发者根据键名获取存储的数据，支持直接获取�
 举例：
 
 ```lua
-log.info("fdb", fskv.del("wendal"))-- 删除键值对
+log.info("fskv", fskv.del("wendal"))-- 删除键值对
 ```
 
 总结：
@@ -318,7 +308,7 @@ if iter then
         if not k then
             break
         end
-        log.info("fdb", k, "value", fskv.kv_get(k))
+        log.info("fskv", k, "value", fskv.kv_get(k))
     end
 end
 ```
@@ -363,7 +353,7 @@ fskv.next()是遍历数据库时使用的辅助函数，与 fskv.iter()配合使
 
 ```lua
 local used, total,kv_count = fskv.status()
-log.info("fdb", "kv", used,total,kv_count)
+log.info("fskv", "kv", used,total,kv_count)
 ```
 
 总结：
@@ -462,22 +452,22 @@ sys.taskInit(function()
     if fskv.sett then
         -- 设置数据, 字符串,数值,table,布尔值,均可
         -- 但不可以是nil, function, userdata, task
-        log.info("fdb", fskv.sett("mytable", "wendal", "goodgoodstudy"))
-        log.info("fdb", fskv.sett("mytable", "upgrade", true))
-        log.info("fdb", fskv.sett("mytable", "timer", 1))
-        log.info("fdb", fskv.sett("mytable", "bigd", {name="wendal",age=123}))
+        log.info("fskv", fskv.sett("mytable", "wendal", "goodgoodstudy"))
+        log.info("fskv", fskv.sett("mytable", "upgrade", true))
+        log.info("fskv", fskv.sett("mytable", "timer", 1))
+        log.info("fskv", fskv.sett("mytable", "bigd", {name="wendal",age=123}))
         
         -- 下列语句将打印出4个元素的table
-        log.info("fdb", fskv.get("mytable"), json.encode(fskv.get("mytable")))
+        log.info("fskv", fskv.get("mytable"), json.encode(fskv.get("mytable")))
         -- 注意: 如果key不存在, 或者原本的值不是table类型,将会完全覆盖
         -- 例如下列写法,最终获取到的是table,而非第一行的字符串
-        log.info("fdb", fskv.set("mykv", "123"))
-        log.info("fdb", fskv.sett("mykv", "age", "123")) -- 保存的将是 {age:"123"}
+        log.info("fskv", fskv.set("mykv", "123"))
+        log.info("fskv", fskv.sett("mykv", "age", "123")) -- 保存的将是 {age:"123"}
 
         -- 删除测试
-        log.info("fdb", fskv.set("mytable", {age=18, name="wendal"}))
-        log.info("fdb", fskv.sett("mytable", "name", nil))
-        log.info("fdb", fskv.get("mytable"), json.encode(fskv.get("mytable")))
+        log.info("fskv", fskv.set("mytable", {age=18, name="wendal"}))
+        log.info("fskv", fskv.sett("mytable", "name", nil))
+        log.info("fskv", fskv.get("mytable"), json.encode(fskv.get("mytable")))
     end
 end)
 
