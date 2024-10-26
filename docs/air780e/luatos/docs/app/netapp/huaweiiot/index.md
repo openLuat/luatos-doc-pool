@@ -28,11 +28,11 @@
 
 ### 3.2 数据通信线
 
-USB 转 typeC 数据线一根
+USB 转 typeC 数据线一根。
 
 ### 3.3 PC 电脑
 
-WINDOWS 系统，其他暂无特别要求
+WINDOWS 系统，其他暂无特别要求。
 
 ## 四、准备软件环境
 
@@ -45,7 +45,7 @@ WINDOWS 系统，其他暂无特别要求
 1. 底层 core 下载地址：[LuatOS 固件版本下载地址](https://docs.openluat.com/air780e/luatos/firmware/)![](image/TXJXbqJDxoX3ycxCdoBcEwIGnRg.png)本 demo 使用的固件是 core_V1112 压缩包内的 LuatOS-SoC_V1112_EC618_FULL.soc
 2. 本教程使用的 demo：[https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/iotcloud](https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/iotcloud)
 3. 源码和固件已打包，如下所示：
-   > 注：压缩包中 core 文件夹存放固件，code 文件夹存放 demo
+   > 注：压缩包中 core 文件夹存放固件，code 文件夹存放 demo。
 
 [右键点我,另存为,下载完整压缩文件包](file/华为云.zip){:target="_blank"}
 
@@ -73,7 +73,7 @@ iotcloud 库本质就是上层设计一套通用的 API 库来进行每个平台
 
 ![](image/Jg48bJy88ocTHJx7p4Hcb19fnLg.png)
 
-如何判断有没有进入下载模式:可以通过 PC 端的设备管理器中虚拟出来的 USB 端口数量来判断
+如何判断有没有进入下载模式:可以通过 PC 端的设备管理器中虚拟出来的 USB 端口数量来判断。
 
 **正常开机模式：**
 
@@ -89,9 +89,9 @@ iotcloud 库本质就是上层设计一套通用的 API 库来进行每个平台
 
 #### 6.1.1 登录并开通 IoTDA 实例
 
-登录官网[设备接入-控制台 (](https://console.huaweicloud.com/iotdm/?region=cn-north-4#/dm-portal/instance)[huaweicloud.com](https://console.huaweicloud.com/iotdm/?region=cn-north-4#/dm-portal/instance)[)](https://console.huaweicloud.com/iotdm/?region=cn-north-4#/dm-portal/instance)注册**华为云账号**开通物联网平台，填写实例名称，标签、实例描述可根据需要选填，完成之后点击立即创建
+登录官网[设备接入-控制台 (](https://console.huaweicloud.com/iotdm/?region=cn-north-4#/dm-portal/instance)[huaweicloud.com](https://console.huaweicloud.com/iotdm/?region=cn-north-4#/dm-portal/instance)[)](https://console.huaweicloud.com/iotdm/?region=cn-north-4#/dm-portal/instance)注册**华为云账号**开通物联网平台，填写实例名称，标签、实例描述可根据需要选填，完成之后点击立即创建。
 
-> 注:华为云首页若找不到该入口，在搜索框输入 "设备接入 IoTDA”  关键字进入
+> 注:华为云首页若找不到该入口，在搜索框输入 "设备接入 IoTDA”  关键字进入。
 
 ![](image/J8nlbd4pNoY68WxJfuXcHotPnAf.png)
 
@@ -99,7 +99,7 @@ iotcloud 库本质就是上层设计一套通用的 API 库来进行每个平台
 
 ![](image/PQAlbu79Lo9tMLxTBvZcl3gCnqf.png)
 
-接入地址中**.iotda **前的数据为** endpoint，**即下图中红框处，此信息需要记录下来，供后续使用，如果忘了记录也没有关系，后续可以再重新点开实例详情查看
+接入地址中**.iotda **前的数据为** endpoint，**即下图中红框处，此信息需要记录下来，供后续使用，如果忘了记录也没有关系，后续可以再重新点开实例详情查看。
 
 ![](image/XKGCbNUjro2gK9x8uVOcY2FMnVf.png)
 
@@ -148,20 +148,20 @@ iotcloud 库本质就是上层设计一套通用的 API 库来进行每个平台
 
 ### 6.3 效果展示
 
-本例采用密钥校验(手动注册)的方式进行注册并连接云平台
+本例采用密钥校验(手动注册)的方式进行注册并连接云平台。
 
 1. 设备日志
        ![](image/ASLPb6gh1ooeh7xa4fqcHBK2npe.png)
 
-    可以看到我们的设备打印了连接成功，证明手动注册 + 连接流程已经完成
+    可以看到我们的设备打印了连接成功，证明手动注册 + 连接流程已经完成。
 
 2. 云平台效果
 
     ![](image/ZiUxbBACSoJ95TxML5vcD5bgnug.png)
 
-    设备已经自动注册并且在线
+    设备已经自动注册并且在线，
 
-    至此，云平台已经连接成功，剩下的就是要根据自己的产品需求，自己的物模型上报/下发数据就可以了
+    至此，云平台已经连接成功，剩下的就是要根据自己的产品需求，自己的物模型上报/下发数据就可以了。
 
 ## 七、代码示例说明及功能验证
 
@@ -262,7 +262,7 @@ iotcloud 库本质就是上层设计一套通用的 API 库来进行每个平台
 
     此时将代码烧录进开发板，即可在华为云平台控制开发板网络灯的亮灭，如何配置华为云平台下发指令，请看下面介绍：
 
-    进入设备，点击调试，再点击前往新版（本示例使用华为云新版本在线调试工具）
+    进入设备，点击调试，再点击前往新版（本示例使用华为云新版本在线调试工具）。
 
     ![](image/FAVwb9Lj4oF2eox6hWcccXnnnqh.png)
 
@@ -274,7 +274,7 @@ iotcloud 库本质就是上层设计一套通用的 API 库来进行每个平台
 
 ### 7.3 运行结果展示
 
-消息内容选择{"switch":1}发送，即可控制开灯；{"switch":0}即可控制关灯，如视频中绿灯所示
+消息内容选择{"switch":1}发送，即可控制开灯；{"switch":0}即可控制关灯，如视频中绿灯所示。
 <video controls src="file/huawei_iot.mp4"></video>
 
 ## 八、总结

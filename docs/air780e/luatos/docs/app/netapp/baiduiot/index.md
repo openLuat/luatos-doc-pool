@@ -11,7 +11,7 @@
 
 ## 二、演示功能概述
 
-接下来为大家介绍 Air780E 如何接入百度云，并且在平台端通过模拟设备在线工具下发消息，控制模块端灯的亮灭
+接下来为大家介绍 Air780E 如何接入百度云，并且在平台端通过模拟设备在线工具下发消息，控制模块端灯的亮灭。
 
 ## 三、准备硬件环境
 
@@ -27,11 +27,11 @@
 
 ### 3.2 数据通信线
 
-USB 转 typeC 数据线一根
+USB 转 typeC 数据线一根。
 
 ### 3.3 PC 电脑
 
-WINDOWS 系统，其他暂无特别要求
+WINDOWS 系统，其他暂无特别要求。
 
 ## 四、准备软件环境
 
@@ -73,7 +73,7 @@ iotcloud 库本质就是上层设计一套通用的 API 库来进行每个平台
 
 ![](image/Jj26bzvI1oDhZWxoyBsc4iODnhg.png)
 
-如何判断有没有进入下载模式:可以通过 PC 端的设备管理器中虚拟出来的 USB 端口数量来判断
+如何判断有没有进入下载模式:可以通过 PC 端的设备管理器中虚拟出来的 USB 端口数量来判断。
 
 **正常开机模式：**
 
@@ -89,31 +89,31 @@ iotcloud 库本质就是上层设计一套通用的 API 库来进行每个平台
 
 #### 6.1.1 注册百度云账号并开通 IoTCore
 
-在使用物联网核心套件服务前，您需要创建一个百度智能云账号，请按照下述步骤进行注册和登录
+在使用物联网核心套件服务前，您需要创建一个百度智能云账号，请按照下述步骤进行注册和登录。
 
-1. 在百度智能云[登录页面](https://login.bce.baidu.com/?account=&redirect=http%3A%2F%2Fconsole.bce.baidu.com%2F)，选择百度账号，点击“立即注册”，进入百度账号注册界面。
-2. 如果未进行实名认证，请先进行[实名认证](https://cloud.baidu.com/doc/UserGuide/s/8jwvy3c96)。
-3. [开通 IoTCore](https://console.bce.baidu.com/iot2/core/landing)：开通服务并同意按需计费，可进入“实例列表”。
+1. 在百度智能云[登录页面](https://login.bce.baidu.com/?account=&redirect=http%3A%2F%2Fconsole.bce.baidu.com%2F)，选择百度账号，点击“立即注册”，进入百度账号注册界面
+2. 如果未进行实名认证，请先进行[实名认证](https://cloud.baidu.com/doc/UserGuide/s/8jwvy3c96)
+3. [开通 IoTCore](https://console.bce.baidu.com/iot2/core/landing)：开通服务并同意按需计费，可进入“实例列表”
 
 #### 6.1.2 创建 IoT Core 实例
 
-1、登录 [IoT Core 控制台页面](https://console.bce.baidu.com/iot2/core/coreList)。
+1、登录 [IoT Core 控制台页面](https://console.bce.baidu.com/iot2/core/coreList)
 
-2、点击“创建 IoT Core 实例”。
+2、点击“创建 IoT Core 实例”
 
    ![](image/SeHZbJwrnoPX0DxMo0acwd6Rnue.png)
 
-3、填写需要创建 IoT Core 的名称，付费方式选择按需付费，确认购买即可。
+3、填写需要创建 IoT Core 的名称，付费方式选择按需付费，确认购买即可
 
 ![](image/Mu0jbeh9gopxXyxjDH0cEQQfn0d.png)
 
-创建完成后，即可在列表页看到刚才创建的 IoT Core 实例。其中第一列展示了其名称及 ID。
+创建完成后，即可在列表页看到刚才创建的 IoT Core 实例。其中第一列展示了其名称及 ID
 
 #### 6.1.3 创建设备模板
 
-创建设备前需要先创建设备模板，默认的设备模板包含两个主题，也可自定义主题。
+创建设备前需要先创建设备模板，默认的设备模板包含两个主题，也可自定义主题，
 
-模板---> 添加模板---> 点击添加的模板名称--> 添加主题
+模板---> 添加模板---> 点击添加的模板名称--> 添加主题。
 
 ![](image/OcTCbZAAKo0O9KxEvBAchVwZnZg.png)
 
@@ -129,7 +129,7 @@ iotcloud 库本质就是上层设计一套通用的 API 库来进行每个平台
 
    ![](image/NcmTbf6QKoRJoWxHDJFcIvjTnkc.png)
 
-3、填写设备名称（此名称在当前 IoT Core 下唯一）、认证方式、描述（可选），并选择所需要使用的设备模板，点击提交即可完成设备创建。
+3、填写设备名称（此名称在当前 IoT Core 下唯一）、认证方式、描述（可选），并选择所需要使用的设备模板，点击提交即可完成设备创建
 
    ![](image/Lu5DbMzMco7AgJxYQYhcd5Nin1e.png)
 
@@ -153,7 +153,7 @@ iotcloud 库本质就是上层设计一套通用的 API 库来进行每个平台
 
 ![](image/N1QWbrwO3ooqovxvTsVc5Qb2nCf.png)
 
-将 6.1.5 记录连接信息教程中记录的 IoTCoreld 填入 demo 中的 produt_id 中，DeviceKey 填入 device_name 中，DeviceSecret 填入 device_secret 中
+将 6.1.5 记录连接信息教程中记录的 IoTCoreld 填入 demo 中的 produt_id 中，DeviceKey 填入 device_name 中，DeviceSecret 填入 device_secret 中。
 
 配置代码如下:
 
@@ -172,7 +172,7 @@ iotcloudc = iotcloud.new(iotcloud.BAIDU,{produt_id = "aakyhyw",device_name = "86
 
 ![](image/KL3WbLDbOoEa1XxmZztcpDmenfe.png)
 
-创建好设备后，点击设备名称，查看设备连接信息
+创建好设备后，点击设备名称，查看设备连接信息如下：
 
 ![](image/RirZbbCCbo0RRSx8Hs8cqw0onNg.png)
 
@@ -193,13 +193,13 @@ iotcloudc = iotcloud.new(iotcloud.BAIDU,{produt_id = "aakyhyw",device_name = "86
 
 ### 6.3 效果展示
 
-本例采用密钥认证(手动注册)的方式进行注册并连接云平台
+本例采用密钥认证(手动注册)的方式进行注册并连接云平台。
 
 1、设备日志
 
    ![](image/PYMhb8MTBobsz3xUwmNcjsmMnnf.png)
 
-   可以看到我们的设备打印了连接成功，证明手动注册 + 连接流程已经完成
+   可以看到我们的设备打印了连接成功，证明手动注册 + 连接流程已经完成。
 
 2、云平台效果
    点击运维管理的用量统计，可显示当前在线连接数量。
@@ -210,7 +210,7 @@ iotcloudc = iotcloud.new(iotcloud.BAIDU,{produt_id = "aakyhyw",device_name = "86
 
 ## 七、代码示例说明及功能验证
 
-本例我们通过密钥认证(手动注册)方式连接百度云平台，实现在平台端通过模拟设备在线工具下发消息，控制 Air780E 的 NET_STATUS 网络灯亮和灭
+本例我们通过密钥认证(手动注册)方式连接百度云平台，实现在平台端通过模拟设备在线工具下发消息，控制 Air780E 的 NET_STATUS 网络灯亮和灭。
 
 > 注意：百度云的物解析型实例已于 2019 年公告不再提供服务，故不能方便的通过云平台管理连接的物联网设备，包括设备的注册、状态监控和数据查看等。因此本例通过百度云平台的模拟设备工具，通过 topic 控制实际设备。
 
@@ -223,7 +223,7 @@ iotcloudc = iotcloud.new(iotcloud.BAIDU,{produt_id = "aakyhyw",device_name = "86
 ### 7.2 代码使用说明
 
 1、设备注册并连接云平台
-   > 记得修改 produt_id ,device_name 和 device_secret 三个参数为自己平台上的
+   > 记得修改 produt_id ,device_name 和 device_secret 三个参数为自己平台上的。
 
    ```lua
     sys.taskInit(function()
@@ -241,8 +241,8 @@ iotcloudc = iotcloud.new(iotcloud.BAIDU,{produt_id = "aakyhyw",device_name = "86
 
 2、模块端订阅主题，用于百度云平台模拟设备在线工具通过该主题向模块端下发消息
 
-   > 此行代码放置位置，只要在云平台连接成功之后即可
-   > 本文 `iotcloudc:subscribe()` 中的第一个参数订阅的仍然是一个自定义topic
+   > 此行代码放置位置，只要在云平台连接成功之后即可，
+   > 本文 `iotcloudc:subscribe()` 中的第一个参数订阅的仍然是一个自定义topic。
 
 ```lua
 iotcloudc:subscribe("$iot/869329069169988/user/fortest") -- 可以自由订阅主题等

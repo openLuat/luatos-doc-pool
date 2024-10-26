@@ -89,7 +89,7 @@ iotcloud 库本质就是上层设计一套通用的 API 库来进行每个平台
 
 ### 6.1 云平台配置
 
-【注意】本教程采用 v2 版本开发平台，V2 较 V1 版本去掉了证书校验，去掉了动态注册中自动创建设备功能
+【注意】本教程采用 v2 版本开发平台，V2 较 V1 版本去掉了证书校验，去掉了动态注册中自动创建设备功能。
 
 #### 6.1.1 登录并新建公共实例
 
@@ -101,10 +101,8 @@ iotcloud 库本质就是上层设计一套通用的 API 库来进行每个平台
 
 1. 物联网平台--公共示例--产品开发--新建产品，产品品类根据自己需要选择，产品信息通信方式选择 2G/3G/4G
    ![](image/AbM3bou7iobybExKEzecNrhjnLe.png)![](image/OE4AbIXpCo3j7Lx0Zb6cqPQentU.png)
-2. 创建完成后，自动跳转新建设备界面，点击设备调试，再点击新建设备，设备名称我们可以直接填写模组的 imei 号
+2. 创建完成后，自动跳转新建设备界面，点击设备调试，再点击新建设备，设备名称我们可以直接填写模组的 imei 号，这样我们就创建好了设备，我们点进去看下设备信息！
    ![](image/VO0nbszyZo7J9oxGOftcJRQjnDh.png)
-
-   这样我们就创建好了设备，我们点进去看下设备信息！
 
    ![](image/CW2FboWWkoqsg6xavzHcRRagnQb.png)
 
@@ -114,7 +112,7 @@ iotcloud 库本质就是上层设计一套通用的 API 库来进行每个平台
 
 ### 6.2 设备注册
 
-腾讯云 v2 开发平台支持两种注册方式，分别为密钥校验(手动注册)和动态注册
+腾讯云 v2 开发平台支持两种注册方式，分别为密钥校验(手动注册)和动态注册。
 
 #### 6.2.1 密钥校验(手动注册)
 
@@ -149,7 +147,7 @@ iotcloudc = iotcloud.new(iotcloud.TENCENT,{produt_id = "xxx" ,product_secret = "
 
 ### 6.3 效果展示
 
-本例采用密钥校验(手动注册)的方式进行注册并连接云平台
+本例采用密钥校验(手动注册)的方式进行注册并连接云平台。
 
 1. 设备日志
    通过下图Luatools工具打印的日志，可以看到我们的设备打印了云平台连接成功，证明手动注册 + 连接流程已经完成
@@ -161,7 +159,7 @@ iotcloudc = iotcloud.new(iotcloud.TENCENT,{produt_id = "xxx" ,product_secret = "
 
     ![](image/Q8cdblwVUoDt5TxjXPKc2BOEnab.png)
 
-    至此，云平台已经连接成功，剩下的就是要根据自己的产品需求，自己的物模型上报/下发数据就可以了
+    至此，云平台已经连接成功，剩下的就是要根据自己的产品需求，自己的物模型上报/下发数据就可以了。
 
 ## 七、代码示例说明及功能验证
 
@@ -278,7 +276,7 @@ iotcloudc = iotcloud.new(iotcloud.TENCENT,{produt_id = "xxx" ,product_secret = "
 
 ### 7.3 运行结果展示
 
-点击 LED(switch)并发送便可以控制 Air780E 核心板的网络灯，即下面视频中的绿灯
+点击 LED(switch)并发送便可以控制 Air780E 核心板的网络灯，即下面视频中的绿灯。
 
 <video controls src="file/tencent.mp4"></video>
 
