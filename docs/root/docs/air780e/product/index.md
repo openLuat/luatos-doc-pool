@@ -20,7 +20,7 @@
 
 | 资料简介           | 相关链接                                                     |
 | ------------------ | ------------------------------------------------------------ |
-| 低功耗             | [Air780E低功耗特性相关数据](http://docs.openluat.com/airpower/) |
+| 低功耗             | [Air780E低功耗特性相关数据](http://docs.openluat.com/airpower/) <br /> |
 | 规格书             | [Air780E_模块产品规格书_V1.0.5.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240814171731789_Air780E_模块产品规格书_V1.0.5.pdf)<br />[Air780E_Product_Specification_Sheet_V1.0.3.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240814171748402_Air780E_Product_Specification_Sheet_V1.0.3.pdf) |
 | 硬件手册   | [Air780E_硬件设计手册_V1.3.5.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20241024151610963_Air780E_硬件设计手册_V1.3.5.pdf)<br />[Air780E_Hardware_Design_Manual_V1.2.4.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240819170438346_Air780E_Hardware_Design_Manual_V1.2.4.pdf)<br />[Air780E开机GPIO引脚电平变化](https://doc.openluat.com/article/4996)<br />[Air780E_GPIO_table_20240812.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240813172012124_Air780E&Air780EG&Air780EX&Air700E_GPIO_table_20240812.pdf)<br />[Air780E&amp;Air780ET&amp;Air780EP的管脚对照表.pdf](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240701144747559_Air780E&Air780ET&Air780EP的管脚对照表.pdf) |
 | 原理图及PCB封装    | [Air780E_AT_PADS_ 封装_V20241026](file/Air780E_AT_PADS_封装_V20241026.zip){:target="_blank"} <br />[Air780E_LuaOS_PADS_ 封装_V20241026](file/Air780E_LuaOS_PADS_封装_V20241026.zip){:target="_blank"} |
