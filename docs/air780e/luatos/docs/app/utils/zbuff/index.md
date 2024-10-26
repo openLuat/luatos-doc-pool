@@ -6,22 +6,22 @@ zbuff 库可以用 c 风格直接操作(下标从 0 开始)，例如 buff[0] = b
 
 操作里面的元素时，可以根据 光标进行增删改查。偏移方式有三种：从头、当前位置、末尾开始。常用参数如下：
 
-| **常量**<br/>         | **类型**<br/> | **解释**<br/>                                                                    |
+| **常量**         | **类型** | **解释**                                                                    |
 | --------------------- | ------------- | -------------------------------------------------------------------------------- |
-| zbuff.SEEK_SET<br/>   | number<br/>   | 以头为基点<br/>                                                                  |
-| zbuff.SEEK_CUR<br/>   | number<br/>   | 以当前位置为基点<br/>                                                            |
-| zbuff.SEEK_END<br/>   | number<br/>   | 以末尾为基点<br/>                                                                |
-| zbuff.HEAP_AUTO<br/>  | number<br/>   | 自动申请(如存在 psram 则在 psram 进行申请,如不存在或失败则在 sram 进行申请)<br/> |
-| zbuff.HEAP_SRAM<br/>  | number<br/>   | 在 sram 申请<br/>                                                                |
-| zbuff.HEAP_PSRAM<br/> | number<br/>   | 在 psram 申请<br/>                                                               |
+| zbuff.SEEK_SET   | number   | 以头为基点                                                                  |
+| zbuff.SEEK_CUR   | number   | 以当前位置为基点                                                            |
+| zbuff.SEEK_END   | number   | 以末尾为基点                                                                |
+| zbuff.HEAP_AUTO  | number   | 自动申请(如存在 psram 则在 psram 进行申请,如不存在或失败则在 sram 进行申请) |
+| zbuff.HEAP_SRAM  | number   | 在 sram 申请                                                                |
+| zbuff.HEAP_PSRAM | number   | 在 psram 申请                                                               |
 
 ## 二、演示功能概述
 
-本 demo 将演示 ZBUFF 的创建、写入数据、读取数据、获取 zbuff 长度、获取光标位置
+本 demo 将演示 ZBUFF 的创建、写入数据、读取数据、获取 zbuff 长度、获取光标位置。
 
 ## 三、准备硬件环境
 
-### 3.1 780E 开发板一套，包括天线、USB 数据线.
+### 3.1 780E 开发板一套，包括天线、USB 数据线
 
 淘宝购买链接：[Air780E 核心板淘宝购买链接](https://item.taobao.com/item.htm?id=693774140934&pisk=f1eiwOqL25l1_HYiV6D1ize3wN5d5FMjRrpxkx3VT2uIHCCskWm4kysffAEqor4KRRIskGT0ooqi_coq7DWE000qbVr2mmzKQjNtkV3mnoalvaBRelZshA7RyTFdpD4xQco2_VS2Tcnvc89h5lZshq-pu_FUfEDVVdOmgrkET0ir3mkq_MDEmmM2QjJaY2uI0UGAoNueWRjiw4YTC-_opNr-zluaXleFpfR_X2fhTJVn94W--KJ4KcqQreCDEs3zNVh-DyWpIxqEmyc8savgoor7gX2D7GUzmW4jBJS2_4PTWjestFRZqA0iaRlwjdkIgW2nBR7XNkEn7bDL96_tMA4gN4GNOwa0xVU4IX8G4iReapZyhDSYLIOj_DinyhbSB2IHjbEhxMA51foIXaIhxItMPKJlyMjHNEGZAcQR.&spm=a1z10.5-c-s.w4002-24045920841.33.639f1fd1YrS4b6&skuId=5098266470883) ；
 
@@ -217,7 +217,9 @@ buff:pack(">IIHA", 0x1234, 0x4567, 0x12,"abcdefg") -- 按格式写入几个数�
 
 **参数**
 
-类型可为：I8、U8、I16、U16、I32、U32、I64、U64、F32、F64
+类型可为：（前缀I指有符号位，U指无符号位，后面的数字指有几位）I8、U8、I16、U16、I32、U32、I64、U64。
+
+（浮点数）F32、F64
 
 **返回值**
 
@@ -243,7 +245,9 @@ local data = buff:readU32()
 | -------- | -------------- | ------------------------------------------ |
 | data     | number         | 待写入的数据                              |
 
-写入类型，可为：I8、U8、I16、U16、I32、U32、I64、U64、F32、F64
+写入类型，可为：（前缀I指有符号位，U指无符号位，后面的数字指有几位）I8、U8、I16、U16、I32、U32、I64、U64。
+
+（浮点数）F32、F64
 
 **返回值**
 
