@@ -82,34 +82,36 @@ PC 电脑推荐使用 Windows10 及以上版本。
 
 ### 3.4 数据通信线
 
-1. USB 转 Type-C 数据线
+1\. USB 转 Type-C 数据线
 
-   > 它的一端是 USB 接口，另一端是 Type-C 接口。
+> 它的一端是 USB 接口，另一端是 Type-C 接口。
 
-   ![](./image/QSEbbauMFoCi4nxS02Xc684Znxb.png)
+![](./image/QSEbbauMFoCi4nxS02Xc684Znxb.png)
 
-2. USB 转 TTL 工具或者串口线
+2\. USB 转 TTL 工具或者串口线
 
-   > 由于本文教程与串口有关，所以需要大家准备 USB 转 TTL 工具或者串口线，例如 CH340、FT232 等。
+> 由于本文教程与串口有关，所以需要大家准备 USB 转 TTL 工具或者串口线，例如 CH340、FT232 等。
 
-   本文教程使用的是高速串口板，此为 [购买链接](https://item.taobao.com/item.htm?abbucket=12&id=608773837508&ns=1&pisk=gM2iHHqsm5l_brOIlMk1i10xvtu0KhMj1rpxkx3VT2uBBjuA1rc0kyG4BAET-qz8omeTH-VBnuZbBGMAfAZshx7RyT30flMXYCX9M-DUY0oRHClZgl_9YxXdyTB8x1osHk78BxmiR0nJ3xlZ3HJERm027jzqTpoj8do2Qm8FxmgE3moZb9rEX0dwbqz2TkosVFJw3V8eLmiZ3qzq3wNH3424dJ7137Wg-79ewDcizluHEkVobUmAFmvVEJobxUri-MILKccirXCMP5waJoyTCX9V4DOeaos6hk_z6IOj_Diny1NpoPbGTvsPxMA51foIXaIhxIwWPKJlpMjHakGZAcEd.&priceTId=214640db17291600001397870eb48b&skuId=4449333351143&spm=a21n57.1.item.319.487c523c1WpDjW&utparam=%7B%22aplus_abtest%22%3A%22062f9b6c0e4cc9c5268b2350d8d11526%22%7D&xxc=taobaoSearch) ，店铺中也有 CH340，大家自行选择。
-   需要注意的是，该购买链接只是推荐，大家也可以多看看几个店铺。
+本文教程使用的是高速串口板，此为 [购买链接](https://item.taobao.com/item.htm?abbucket=12&id=608773837508&ns=1&pisk=gM2iHHqsm5l_brOIlMk1i10xvtu0KhMj1rpxkx3VT2uBBjuA1rc0kyG4BAET-qz8omeTH-VBnuZbBGMAfAZshx7RyT30flMXYCX9M-DUY0oRHClZgl_9YxXdyTB8x1osHk78BxmiR0nJ3xlZ3HJERm027jzqTpoj8do2Qm8FxmgE3moZb9rEX0dwbqz2TkosVFJw3V8eLmiZ3qzq3wNH3424dJ7137Wg-79ewDcizluHEkVobUmAFmvVEJobxUri-MILKccirXCMP5waJoyTCX9V4DOeaos6hk_z6IOj_Diny1NpoPbGTvsPxMA51foIXaIhxIwWPKJlpMjHakGZAcEd.&priceTId=214640db17291600001397870eb48b&skuId=4449333351143&spm=a21n57.1.item.319.487c523c1WpDjW&utparam=%7B%22aplus_abtest%22%3A%22062f9b6c0e4cc9c5268b2350d8d11526%22%7D&xxc=taobaoSearch) ，店铺中也有 CH340，大家自行选择。
+需要注意的是，该购买链接只是推荐，大家也可以多看看几个店铺。
 
-   ![](./image/R1fAbBrYTodhTgxn9Lxcf9UZnrh.png)
+![](./image/R1fAbBrYTodhTgxn9Lxcf9UZnrh.png)
 
-3. TTL 转 RS485 模块
-   > 由于本文教程涉及 RS485 通信，所以需要大家准备 TTL 转 RS485 模块。此为 [购买链接](https://detail.tmall.com/item.htm?abbucket=12&id=609616777223&ns=1&pisk=gLXKHx20zP437xnZU4NMZ8jr2zM8JTIU-wSjEUYnNNQOVFDuYpVyeaLOzeAHdeDJegQPraIzY3T5PaLlt52cYMJyFrD8n-jFdIjEqwKBFCZW0nlQo2eMLk9yFr4-sYOUHL72yr86Vft673LSPH_WCGtJcLtWALZ953KqN2_WFlE92nhIALGI1AtHcLGWFXG6CnKqR2OWNFZ94FtWAwIYyFiBrYCrG93ClzqH4369vBLfXSHZIY8no3SQyYH5F1UpkM1rFY69vB6oCpj1vBf50IWHWg7fntB1gqbDlXZTXblyOhREzu-vEiT3WhL0v8hraCrwXEqtpbGSPS-9olYoabRNu&priceTId=2146402417291593304052114e5630&skuId=4387706588967&spm=a21n57.1.item.227.487c523c1WpDjW&utparam=%7B%22aplus_abtest%22%3A%229231e72621ac548ac3391f30d5d6a7e0%22%7D&xxc=taobaoSearch) 。
+3\. TTL 转 RS485 模块
 
-   需要注意的是，该购买链接只是推荐，大家也可以多看看几个店铺。
+> 由于本文教程涉及 RS485 通信，所以需要大家准备 TTL 转 RS485 模块。此为 [购买链接](https://detail.tmall.com/item.htm?abbucket=12&id=609616777223&ns=1&pisk=gLXKHx20zP437xnZU4NMZ8jr2zM8JTIU-wSjEUYnNNQOVFDuYpVyeaLOzeAHdeDJegQPraIzY3T5PaLlt52cYMJyFrD8n-jFdIjEqwKBFCZW0nlQo2eMLk9yFr4-sYOUHL72yr86Vft673LSPH_WCGtJcLtWALZ953KqN2_WFlE92nhIALGI1AtHcLGWFXG6CnKqR2OWNFZ94FtWAwIYyFiBrYCrG93ClzqH4369vBLfXSHZIY8no3SQyYH5F1UpkM1rFY69vB6oCpj1vBf50IWHWg7fntB1gqbDlXZTXblyOhREzu-vEiT3WhL0v8hraCrwXEqtpbGSPS-9olYoabRNu&priceTId=2146402417291593304052114e5630&skuId=4387706588967&spm=a21n57.1.item.227.487c523c1WpDjW&utparam=%7B%22aplus_abtest%22%3A%229231e72621ac548ac3391f30d5d6a7e0%22%7D&xxc=taobaoSearch) 。
 
-   ![](./image/B0j2bYd3TobXBJxRGp2cMHPgnLd.png)
+需要注意的是，该购买链接只是推荐，大家也可以多看看几个店铺。
 
-4. USB 转 RS485 模块
-   > 由于本文教程涉及 RS485 通信，所以需要大家准备 USB 转 RS485 模块。此为 [购买链接](https://detail.tmall.com/item.htm?abbucket=12&id=607264051474&ns=1&pisk=gVgxhYTHQLvDgYCP7OtujFcN6d_9kVh2nxlCSR2cfYH-18bMgrxaWAe-Q-q0l-bTWfHZIAhwg5wsCAeim3Yngjza5pb9-ecqlkcVsxQ_hUO_tS6XKtLuuIaa5pvOqNZ2JPkUBp74GgN7U5e1CSM_PbNQTPN_GPO8F5FFftM_5Qd86WIfGPsfVaN0OPs_5ZZ5VWP1cSw1l7O8_8w1R2JTFswGWcSIktMB-Oe8E4FYDJGJvaby9WX3TjZfWa2vIowQ-8Q154FjahiyXwKgdDy0xjsrC20KPDWnKJsXwQINboNz0ORa9PcQnLF8KILObGrya7eHwZI1fOtUwJAuIGSa4v5..&priceTId=2146402417291592532647820e5630&skuId=4389943960595&spm=a21n57.1.item.183.487c523c1WpDjW&utparam=%7B%22aplus_abtest%22%3A%22586362286f857861f02862f21e75cde4%22%7D&xxc=taobaoSearch) 。
+![](./image/B0j2bYd3TobXBJxRGp2cMHPgnLd.png)
 
-   需要注意的是，该购买链接只是推荐，大家也可以多看看几个店铺。
+4\. USB 转 RS485 模块
 
-   ![](image/QaNabtV2QodF6xx6PXsccwLNnyg.png)
+> 由于本文教程涉及 RS485 通信，所以需要大家准备 USB 转 RS485 模块。此为 [购买链接](https://detail.tmall.com/item.htm?abbucket=12&id=607264051474&ns=1&pisk=gVgxhYTHQLvDgYCP7OtujFcN6d_9kVh2nxlCSR2cfYH-18bMgrxaWAe-Q-q0l-bTWfHZIAhwg5wsCAeim3Yngjza5pb9-ecqlkcVsxQ_hUO_tS6XKtLuuIaa5pvOqNZ2JPkUBp74GgN7U5e1CSM_PbNQTPN_GPO8F5FFftM_5Qd86WIfGPsfVaN0OPs_5ZZ5VWP1cSw1l7O8_8w1R2JTFswGWcSIktMB-Oe8E4FYDJGJvaby9WX3TjZfWa2vIowQ-8Q154FjahiyXwKgdDy0xjsrC20KPDWnKJsXwQINboNz0ORa9PcQnLF8KILObGrya7eHwZI1fOtUwJAuIGSa4v5..&priceTId=2146402417291592532647820e5630&skuId=4389943960595&spm=a21n57.1.item.183.487c523c1WpDjW&utparam=%7B%22aplus_abtest%22%3A%22586362286f857861f02862f21e75cde4%22%7D&xxc=taobaoSearch) 。
+
+需要注意的是，该购买链接只是推荐，大家也可以多看看几个店铺。
+
+![](image/QaNabtV2QodF6xx6PXsccwLNnyg.png)
 
 ## 四、演示软件环境
 
@@ -127,26 +129,26 @@ Luatools 工具由合宙推出，支持最新固件获取、固件打包、trace
 
 ### 4.3 源码及固件
 
-1. 底层 core 下载地址：[LuatOS 固件版本下载地址](https://docs.openluat.com/air780e/luatos/firmware/)
+1\. 底层 core 下载地址：[LuatOS 固件版本下载地址](https://docs.openluat.com/air780e/luatos/firmware/)
 
-   > 本 demo 使用的固件是 core_V1112 压缩包 内的 LuatOS-SoC_V1112_EC618_FULL.soc
+> 本 demo 使用的固件是 core_V1112 压缩包 内的 LuatOS-SoC_V1112_EC618_FULL.soc
 
-   ![](./image/HhCcbmEHGolWsoxPt1HczFwpnF1.png)
+![](./image/HhCcbmEHGolWsoxPt1HczFwpnF1.png)
 
-2. demo 位置
+2\. demo 位置
 
-   > 本 demo 为单串口的标准串口通信代码，其他脚本代码可下载下方压缩包查看。
-   >
+> 本 demo 为单串口的标准串口通信代码，其他脚本代码可下载下方压缩包查看。
+>
 
-   ​demo 位置：[https://gitee.com/openLuat/LuatOS-Air780E/blob/master/demo/uart/main.lua](https://gitee.com/openLuat/LuatOS-Air780E/blob/master/demo/uart/main.lua)
+demo 位置：[https://gitee.com/openLuat/LuatOS-Air780E/blob/master/demo/uart/main.lua](https://gitee.com/openLuat/LuatOS-Air780E/blob/master/demo/uart/main.lua)
 
-3. 源码及固件已打包压缩，如下所示
+3\. 源码及固件已打包压缩，如下所示
 
-	> 压缩包中 core 文件夹存放的是固件，code 文件夹存放的是脚本代码。
-	>
-	> 大家在使用脚本代码时一定要记得修改参数，至于修改什么参数，后面演示时会告诉大家。
-	
-	[右键点我,另存为,下载完整压缩文件包](file/uart.zip)
+> 压缩包中 core 文件夹存放的是固件，code 文件夹存放的是脚本代码。
+>
+> 大家在使用脚本代码时一定要记得修改参数，至于修改什么参数，后面演示时会告诉大家。
+
+[右键点我,另存为,下载完整压缩文件包](file/uart.zip)
 
 ## 五、软硬件资料
 
@@ -187,38 +189,39 @@ uart 库即串口操作库，该库为内部库，因此在程序中使用时无
 
 #### 5.3.1 选择固件和脚本
 
-1. 打开 Luatools 工具
-2. 点击 **项目管理测试**
+1\. 打开 Luatools 工具
 
-   ![](./image/WXg8bFiENoibe2xW6iAcQKOSnTb.png)
+2\. 点击 **项目管理测试**
 
-3. 根据图示操作
+![](./image/WXg8bFiENoibe2xW6iAcQKOSnTb.png)
 
-   > 注意，大家只需要跟着做到第四步即可，第五步跟着后面的操作再做。
+3\. 根据图示操作
 
-   ![](./image/QZtObLriAo9Fg7xv3hwcn3Ylnfd.png)
+> 注意，大家只需要跟着做到第四步即可，第五步跟着后面的操作再做。
+
+![](./image/QZtObLriAo9Fg7xv3hwcn3Ylnfd.png)
 
 #### 5.3.2 烧录
 
-1. 将 Air780E 核心板通过 USB 数据线连接至电脑，如下图所示：
+1\. 将 Air780E 核心板通过 USB 数据线连接至电脑，如下图所示：
 
-   ![](./image/H37Cb3S9wo9oqNxaCJXcnn1Rntd.png)
+![](./image/H37Cb3S9wo9oqNxaCJXcnn1Rntd.png)
 
-2. 根据下方操作进行烧录
+2\. 根据下方操作进行烧录
 
-   > 此时就需要大家先点击 Luatools 工具上的 下载底层与脚本/下载脚本，再执行下方操作了。
-   > **开发板处于未开机状态：**此时先按住下载模式按键（BOOT 键）不放，再长按开机键（POW 键）开机，若不出意外开发板将会进入下载模式，Luatools 工具下载进度条会开始跑，这时便可以松开 BOOT 键和 POW 键，等到工具提示下载完成即可。
-   > **开发板已经处于开机状态：**此时可以先按住 BOOT 键不放，再短按复位键（RST 键）后开发板会重启并进入下载模式。
+> 此时就需要大家先点击 Luatools 工具上的 下载底层与脚本/下载脚本，再执行下方操作了。
+> **开发板处于未开机状态：**此时先按住下载模式按键（BOOT 键）不放，再长按开机键（POW 键）开机，若不出意外开发板将会进入下载模式，Luatools 工具下载进度条会开始跑，这时便可以松开 BOOT 键和 POW 键，等到工具提示下载完成即可。
+> **开发板已经处于开机状态：**此时可以先按住 BOOT 键不放，再短按复位键（RST 键）后开发板会重启并进入下载模式。
 
 #### 5.3.3 不同模式下的端口显示
 
-1. 正常开机模式
+1\. 正常开机模式
 
-   ![](./image/CTGCb16XFolEv5x5vIbcbFbMn0b.png)
+![](./image/CTGCb16XFolEv5x5vIbcbFbMn0b.png)
 
-2. 下载模式
+2\. 下载模式
 
-   ![](./image/D3ylbQghNoWuN1xANQLcgY0jnPd.png)
+![](./image/D3ylbQghNoWuN1xANQLcgY0jnPd.png)
 
 ## 六、代码示例介绍
 
@@ -813,9 +816,11 @@ sys.run()
 
 UART 电平是指串行通信中使用的电压电平标准。常见的串口电平标准有 RS-232、TTL 和 RS-485 等。
 
-1. RS-232 电平：RS-232 是一种常用的串口通信标准，它使用负逻辑电平，即逻辑 1 用 -3V 到 -15V 表示，逻辑 0 用 +3V 到 +15V 表示。RS-232 电平适用于短距离、低速率的通信。
-2. TTL 电平：TTL（Transistor-Transistor Logic）电平是一种常见的数字电路电平标准，它使用正逻辑电平，即逻辑 1 用 +5V 表示，逻辑 0 用 0V 表示。TTL 电平适用于短距离、高速率的通信。
-3. RS-485 电平：RS-485 是一种常用的串口通信标准，它使用差分电平，即逻辑 1 用 +2V 到 +6V 表示，逻辑 0 用 -2V 到 -6V 表示。RS-485 电平适用于长距离、高速率的通信。
+1\. RS-232 电平：RS-232 是一种常用的串口通信标准，它使用负逻辑电平，即逻辑 1 用 -3V 到 -15V 表示，逻辑 0 用 +3V 到 +15V 表示。RS-232 电平适用于短距离、低速率的通信。
+
+2\. TTL 电平：TTL（Transistor-Transistor Logic）电平是一种常见的数字电路电平标准，它使用正逻辑电平，即逻辑 1 用 +5V 表示，逻辑 0 用 0V 表示。TTL 电平适用于短距离、高速率的通信。
+
+3\. RS-485 电平：RS-485 是一种常用的串口通信标准，它使用差分电平，即逻辑 1 用 +2V 到 +6V 表示，逻辑 0 用 -2V 到 -6V 表示。RS-485 电平适用于长距离、高速率的通信。
 
 在串口通信中，选择合适的电平标准非常重要，它直接影响到通信的可靠性和稳定性。
 
@@ -855,15 +860,16 @@ pm.ioVol(pm.IOVOL_ALL_GPIO, 1800)    -- 所有GPIO高电平输出1.8V
 
 ## 十、常见问题
 
-1. **串口电平电压过低或过高可能会导致什么问题？**
+1\. **串口电平电压过低或过高可能会导致什么问题？**
 
-   > 如果电压过低，可能会导致接收器无法正确识别信号，如果过高，可能会导致信号损坏或损坏接收器。
-   > 概述：可能会导致串口无法正常通讯，或通讯数据会突然出现乱码，数据错乱等问题。
-   >
-2. **有没有推荐的串口设计电路可以作为参考？**
+> 如果电压过低，可能会导致接收器无法正确识别信号，如果过高，可能会导致信号损坏或损坏接收器。
+> 概述：可能会导致串口无法正常通讯，或通讯数据会突然出现乱码，数据错乱等问题。
+>
 
-   > 有，请跳转至 [https://docs.openluat.com/air780e/luatos/hardware/design/uart1/](https://docs.openluat.com/air780e/luatos/hardware/design/uart1/) 查看
-   >
+2\. **有没有推荐的串口设计电路可以作为参考？**
+
+> 有，请跳转至 [https://docs.openluat.com/air780e/luatos/hardware/design/uart1/](https://docs.openluat.com/air780e/luatos/hardware/design/uart1/) 查看
+>
 
 ## 给读者的话
 
