@@ -240,63 +240,63 @@ iotcloudc = iotcloud.new(iotcloud.BAIDU,{produt_id = "aakyhyw",device_name = "86
    ```
 
 2、模块端订阅主题，用于百度云平台模拟设备在线工具通过该主题向模块端下发消息
-    > 此行代码放置位置，只要在云平台连接成功之后即可
-    > 本文 `iotcloudc:subscribe()` 中的第一个参数订阅的仍然是一个自定义topic
 
-    ```lua
-    iotcloudc:subscribe("$iot/869329069169988/user/fortest") -- 可以自由订阅主题等
-    ```
+   > 此行代码放置位置，只要在云平台连接成功之后即可
+   > 本文 `iotcloudc:subscribe()` 中的第一个参数订阅的仍然是一个自定义topic
 
-    云平台自定义的 topic 如下所示：详见 4.2.3 创建设备模板中的添加主题教程，本例定义的 topic 兼发布和订阅权限。
+```lua
+iotcloudc:subscribe("$iot/869329069169988/user/fortest") -- 可以自由订阅主题等
+```
 
-    ![](image/OrjpbQsZDo65WjxmLXXcnf0qnCe.png)
+云平台自定义的 topic 如下所示：详见 4.2.3 创建设备模板中的添加主题教程，本例定义的 topic 兼发布和订阅权限。
+
+![](image/OrjpbQsZDo65WjxmLXXcnf0qnCe.png)
 
 3、模块端接收数据并解析
 
    > 接收统一使用了 `"iotcloud"` 消息进行通知，所以我们只需要订阅此系统消息即可，收到的消息 open 表示开灯，close 表示关灯
-   >
 
-    代码如下所示：
+代码如下所示：
 
-    ```lua
-    -- 初始化gpio27
-    LED = gpio.setup(27, 0, gpio.PULLUP)
-    sys.subscribe("iotcloud", function(cloudc,event,data,payload)
-        -- 注意，此处不是协程内，复杂操作发消息给协程内进行处理
-        if event == iotcloud.CONNECT then -- 云平台联上了
-            print("iotcloud","CONNECT", "云平台连接成功")
-            iotcloudc:subscribe("$iot/869329069169988/user/fortest") -- 可以自由订阅主题等
+```lua
+-- 初始化gpio27
+LED = gpio.setup(27, 0, gpio.PULLUP)
+sys.subscribe("iotcloud", function(cloudc,event,data,payload)
+    -- 注意，此处不是协程内，复杂操作发消息给协程内进行处理
+    if event == iotcloud.CONNECT then -- 云平台联上了
+        print("iotcloud","CONNECT", "云平台连接成功")
+        iotcloudc:subscribe("$iot/869329069169988/user/fortest") -- 可以自由订阅主题等
 
-        elseif event == iotcloud.RECEIVE then
-            print("iotcloud","topic", data, "payload", payload)
-            if payload == 1 then
-                LED(1)
-            elseif payload == 0 then
-                LED(0)
-            end
-            -- 用户处理代码
-        elseif event ==  iotcloud.OTA then
-            if data then
-                rtos.reboot()
-            end
-        elseif event == iotcloud.DISCONNECT then -- 云平台断开了
-            -- 用户处理代码
-            print("iotcloud","DISCONNECT", "云平台连接断开")
+    elseif event == iotcloud.RECEIVE then
+        print("iotcloud","topic", data, "payload", payload)
+        if payload == 1 then
+            LED(1)
+        elseif payload == 0 then
+            LED(0)
         end
-    end)
-    ```
+        -- 用户处理代码
+    elseif event ==  iotcloud.OTA then
+        if data then
+            rtos.reboot()
+        end
+    elseif event == iotcloud.DISCONNECT then -- 云平台断开了
+        -- 用户处理代码
+        print("iotcloud","DISCONNECT", "云平台连接断开")
+    end
+end)
+```
 
-    此时将代码烧录进开发板，即可在百度云平台的在线模拟设备工具控制开发板网络灯的亮灭，如何配置百度云平台下发指令，请看下面介绍：
+此时将代码烧录进开发板，即可在百度云平台的在线模拟设备工具控制开发板网络灯的亮灭，如何配置百度云平台下发指令，请看下面介绍：
 
-    IoT Core 实例名称"test"---> 设备列表---> 点击设备名称
+IoT Core 实例名称"test"---> 设备列表---> 点击设备名称
 
-    ![](image/VKIybsoiWoX60nxEe88cjY7mnSh.png)
+![](image/VKIybsoiWoX60nxEe88cjY7mnSh.png)
 
-    点击模拟设备，再点击开始模拟,填入自定义的 topic，输入 open 开灯或者 close 关灯。
+点击模拟设备，再点击开始模拟,填入自定义的 topic，输入 open 开灯或者 close 关灯。
 
-    ![](image/X1yYbCISRom68Wxabsdc6p9zn5e.png)
+![](image/X1yYbCISRom68Wxabsdc6p9zn5e.png)
 
-    ![](image/F3ombwb4EoEzS0xyEMDctAbrni1.png)
+![](image/F3ombwb4EoEzS0xyEMDctAbrni1.png)
 
 ### 7.3 运行结果展示
 
@@ -319,3 +319,17 @@ iotcloudc = iotcloud.new(iotcloud.BAIDU,{produt_id = "aakyhyw",device_name = "86
 2、百度云旧版和新版区别
 
    > 百度云旧版的天工物接入 IoT Hub，支持物解析型实例；目前新版为物联网核心套件 IoT Core，不再支持物解析型实例，核心套件的具体使用方法请查阅百度云官网的文档使用介绍。[https://cloud.baidu.com/doc/IoTCore/s/ek7o8ydue](https://cloud.baidu.com/doc/IoTCore/s/ek7o8ydue)
+
+
+## 给读者的话
+
+> 本篇文章由`王世豪`开发；
+>
+> 本篇文章描述的内容，如果有错误、细节缺失、细节不清晰或者其他任何问题，总之就是无法解决您遇到的问题；
+>
+> 请登录[合宙技术交流论坛](https://chat.openluat.com/)，点击[文档找错赢奖金-Air780E-LuatOS-软件指南-网络应用-百度云](https://chat.openluat.com/#/page/matter?125=1849703650633580546&126=%E6%96%87%E6%A1%A3%E6%89%BE%E9%94%99%E8%B5%A2%E5%A5%96%E9%87%91-Air780E-LuatOS-%E8%BD%AF%E4%BB%B6%E6%8C%87%E5%8D%97-%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8-%E7%99%BE%E5%BA%A6%E4%BA%91&askid=1849703650633580546)
+> 用截图标注+文字描述的方式跟帖回复，记录清楚您发现的问题；
+>
+> 我们会迅速核实并且修改文档；
+>
+> 同时也会为您累计找错积分，您还可能赢取月度找错奖金！
