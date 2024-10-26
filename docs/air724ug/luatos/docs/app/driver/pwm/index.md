@@ -78,7 +78,7 @@ api：[https://doc.openluat.com/wiki/21?wiki_page_id=2068](https://doc.openluat.
 
 ### 3.2 数据通信线
 
-USB 转 typeC 数据线一根
+USB 数据线一根（micro usb）。
 
 ### 3.3 PC 电脑
 
@@ -129,7 +129,7 @@ usb 数据线插入 usb 口，另一端与电脑相连，拨码开关全部拨�
 
 ![](image/I81fbZoTRoH9rHxY54mcuZA8nTd.png)
 
-- 点击增加脚本或资源文件，选择 4.1 项目中下载的 远程温湿度监控器程序源码，如下图所示。
+- 点击增加脚本或资源文件，选择之前下载的程序源码，如下图所示。
 
 ![](image/BfptbAjIOoEJByx4ElYcuUf4nRf.png)
 
