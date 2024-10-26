@@ -196,10 +196,10 @@ Air780EQ用于LuatOS开发方式时的管脚图
 
 ### 合宙模组更多资料
 
-官网 [www.openluat.com](www.openluat.com)
+官网 [www.openluat.com](https://www.openluat.com)
 
 资料 [docs.openluat.com](https://docs.openluat.com)
 
-样品 [luat.taobao.com](luat.taobao.com)
+样品 [luat.taobao.com](https://luat.taobao.com)
 
 公众号 HelloLuatOS
