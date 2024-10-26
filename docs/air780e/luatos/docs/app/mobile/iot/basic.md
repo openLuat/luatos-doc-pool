@@ -5,7 +5,7 @@
 ## 文档和工具
 
 - mobile接口文档：[info](./info/index.md)
-- 780E模块软件包：[LuatOS 发行版 - Gitee.com](https://gitee.com/openLuat/LuatOS/releases)
+- 780E模块软件包：[LuatOS 发行版](https://gitee.com/openLuat/LuatOS/releases)
 - 本示例所烧录的固件版本：**LuatOS-SoC_V1112_EC618_FULL.soc**
 - 本示例所烧录的脚本：[demo/mobile/main.lua · 合宙Luat/LuatOS - 码云 - 开源中国 (gitee.com)](https://gitee.com/openLuat/LuatOS/blob/master/demo/mobile/main.lua)
 - 如果不会烧录，可参考 [烧录教程](https://doc.openluat.com/wiki/21?wiki_page_id=6072)
