@@ -98,6 +98,7 @@ iotcloud 库本质就是上层设计一套通用的 API 库来进行每个平台
 #### 6.1.2 创建 IoT Core 实例
 
 1、登录 [IoT Core 控制台页面](https://console.bce.baidu.com/iot2/core/coreList)。
+
 2、点击“创建 IoT Core 实例”。
 
    ![](image/SeHZbJwrnoPX0DxMo0acwd6Rnue.png)
