@@ -97,12 +97,12 @@ iotcloud 库本质就是上层设计一套通用的 API 库来进行每个平台
 
 #### 6.1.2 创建 IoT Core 实例
 
-1. 登录 [IoT Core 控制台页面](https://console.bce.baidu.com/iot2/core/coreList)。
-2. 点击“创建 IoT Core 实例”。
+1、登录 [IoT Core 控制台页面](https://console.bce.baidu.com/iot2/core/coreList)。
+2、点击“创建 IoT Core 实例”。
 
    ![](image/SeHZbJwrnoPX0DxMo0acwd6Rnue.png)
 
-3. 填写需要创建 IoT Core 的名称，付费方式选择按需付费，确认购买即可。
+3、填写需要创建 IoT Core 的名称，付费方式选择按需付费，确认购买即可。
 
 ![](image/Mu0jbeh9gopxXyxjDH0cEQQfn0d.png)
 
@@ -120,15 +120,15 @@ iotcloud 库本质就是上层设计一套通用的 API 库来进行每个平台
 
 #### 6.1.4 创建设备
 
-1. 点击 IoT Core 实例名称
+1、点击 IoT Core 实例名称
 
    ![](image/AiOvbxVpgofEMXxAOj4cABBCnuN.png)
 
-2. 点击左侧导航栏中的”设备列表“，选择“新增设备”
+2、点击左侧导航栏中的”设备列表“，选择“新增设备”
 
    ![](image/NcmTbf6QKoRJoWxHDJFcIvjTnkc.png)
 
-3. 填写设备名称（此名称在当前 IoT Core 下唯一）、认证方式、描述（可选），并选择所需要使用的设备模板，点击提交即可完成设备创建。
+3、填写设备名称（此名称在当前 IoT Core 下唯一）、认证方式、描述（可选），并选择所需要使用的设备模板，点击提交即可完成设备创建。
 
    ![](image/Lu5DbMzMco7AgJxYQYhcd5Nin1e.png)
 
@@ -194,13 +194,13 @@ iotcloudc = iotcloud.new(iotcloud.BAIDU,{produt_id = "aakyhyw",device_name = "86
 
 本例采用密钥认证(手动注册)的方式进行注册并连接云平台
 
-1. 设备日志
+1、设备日志
 
    ![](image/PYMhb8MTBobsz3xUwmNcjsmMnnf.png)
 
    可以看到我们的设备打印了连接成功，证明手动注册 + 连接流程已经完成
 
-2. 云平台效果
+2、云平台效果
    点击运维管理的用量统计，可显示当前在线连接数量。
 
    ![](image/Mj78bg5DWo4UC6xqbvoc9uEonLd.png)
@@ -221,7 +221,7 @@ iotcloudc = iotcloud.new(iotcloud.BAIDU,{produt_id = "aakyhyw",device_name = "86
 
 ### 7.2 代码使用说明
 
-1. 设备注册并连接云平台
+1、设备注册并连接云平台
    > 记得修改 produt_id ,device_name 和 device_secret 三个参数为自己平台上的
 
    ```lua
@@ -238,7 +238,7 @@ iotcloudc = iotcloud.new(iotcloud.BAIDU,{produt_id = "aakyhyw",device_name = "86
     end)
    ```
 
-2. 模块端订阅主题，用于百度云平台模拟设备在线工具通过该主题向模块端下发消息
+2、模块端订阅主题，用于百度云平台模拟设备在线工具通过该主题向模块端下发消息
     > 此行代码放置位置，只要在云平台连接成功之后即可
     > 本文 `iotcloudc:subscribe()` 中的第一个参数订阅的仍然是一个自定义topic
 
@@ -250,7 +250,7 @@ iotcloudc = iotcloud.new(iotcloud.BAIDU,{produt_id = "aakyhyw",device_name = "86
 
     ![](image/OrjpbQsZDo65WjxmLXXcnf0qnCe.png)
 
-3. 模块端接收数据并解析
+3、模块端接收数据并解析
 
    > 接收统一使用了 `"iotcloud"` 消息进行通知，所以我们只需要订阅此系统消息即可，收到的消息 open 表示开灯，close 表示关灯
    >
@@ -311,10 +311,10 @@ iotcloudc = iotcloud.new(iotcloud.BAIDU,{produt_id = "aakyhyw",device_name = "86
 
 ## 常见问题
 
-1. 百度云接入失败，怎么排查？
+1、百度云接入失败，怎么排查？
 
    > 先检查设备配置，确保设备的 ID,名称,密钥等配置信息正确无误；同时也要检查下网络连接，确保 SIM 卡是正常入网状态，若还是不行，请再仔细看下教程，看是否有哪个步骤有疏漏。
 
-2. 百度云旧版和新版区别
+2、百度云旧版和新版区别
 
    > 百度云旧版的天工物接入 IoT Hub，支持物解析型实例；目前新版为物联网核心套件 IoT Core，不再支持物解析型实例，核心套件的具体使用方法请查阅百度云官网的文档使用介绍。[https://cloud.baidu.com/doc/IoTCore/s/ek7o8ydue](https://cloud.baidu.com/doc/IoTCore/s/ek7o8ydue)
