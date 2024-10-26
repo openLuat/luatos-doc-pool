@@ -67,11 +67,11 @@ PC 电脑推荐使用 Windows10 及以上版本。
 
 ### 3.4 数据通信线
 
-1. USB 转 Type-C 数据线
+1\. USB 转 Type-C 数据线
 
-   它的一端是 USB 接口，另一端是 Type-C 接口。
+> 它的一端是 USB 接口，另一端是 Type-C 接口。
 
-   ![](./image/MTpVb73WWoNrwXxWdMRcLj0un9g.png)
+![](./image/MTpVb73WWoNrwXxWdMRcLj0un9g.png)
 
 ## 四、演示软件环境
 
@@ -87,24 +87,24 @@ Luatools 工具由合宙推出，支持最新固件获取、固件打包、trace
 
 ### 4.3 源码及固件
 
-1. 底层 core 下载地址：[LuatOS 固件版本下载地址](https://docs.openluat.com/air780e/luatos/firmware/)
+1\. 底层 core 下载地址：[LuatOS 固件版本下载地址](https://docs.openluat.com/air780e/luatos/firmware/)
 
-   > 本 demo 使用的固件是 core_V1112 压缩包 内的 LuatOS-SoC_V1112_EC618_FULL.soc
+> 本 demo 使用的固件是 core_V1112 压缩包 内的 LuatOS-SoC_V1112_EC618_FULL.soc
 
-   ![](./image/MRDAbt460otcnCxMONGczNqBnyf.png)
+![](./image/MRDAbt460otcnCxMONGczNqBnyf.png)
 
-2. demo 位置
+2\. demo 位置
 
-   > 本 demo 为诸多云平台的集合型 demo，适用于如阿里云、百度云、OneNet 等诸多云平台，大家只需修改对应云平台的参数即可。
+> 本 demo 为诸多云平台的集合型 demo，适用于如阿里云、百度云、OneNet 等诸多云平台，大家只需修改对应云平台的参数即可。
 
-   [https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/iotcloud/iotcloud%E6%80%BB](https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/iotcloud/iotcloud%E6%80%BB)
+[https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/iotcloud/iotcloud%E6%80%BB](https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/iotcloud/iotcloud%E6%80%BB)
 
-3. 源码及固件已打包压缩，如下所示
+3\. 源码及固件已打包压缩，如下所示
 
-   > 压缩包中 core 文件夹存放的是固件，code 文件夹存放的是脚本代码。
-   > 大家在使用脚本代码时一定要记得修改参数，至于修改什么参数，后面演示时会告诉大家。
+> 压缩包中 core 文件夹存放的是固件，code 文件夹存放的是脚本代码。
+> 大家在使用脚本代码时一定要记得修改参数，至于修改什么参数，后面演示时会告诉大家。
 
-   [右键点我,另存为,下载完整压缩文件包](file/aliyun.zip)
+[右键点我,另存为,下载完整压缩文件包](file/aliyun.zip)
 
 ## 五、软硬件资料
 
@@ -130,74 +130,77 @@ iotcloud 同时支持新版公共实例 / 旧版公共实例 / 企业实例，�
 
 #### 5.2.1 选择固件和脚本
 
-1. 打开 Luatools 工具
-2. 点击 **项目管理测试**
+1\. 打开 Luatools 工具
 
-   ![](./image/IYTAbzI0mokkrpxrvvJcJpYynlf.png)
+2\. 点击 **项目管理测试**
 
-3. 根据图示操作
+![](./image/IYTAbzI0mokkrpxrvvJcJpYynlf.png)
 
-   > 注意，大家只需要跟着做到第四步即可，第五步跟着后面的操作再做。
+3\. 根据图示操作
 
-   ![](./image/WEgQbm5J8oabtxxwShVct3jXn0g.png)
+> 注意，大家只需要跟着做到第四步即可，第五步跟着后面的操作再做。
+
+![](./image/WEgQbm5J8oabtxxwShVct3jXn0g.png)
 
 #### 5.2.2 烧录
 
-1. 将 Air780E 核心板通过 USB 数据线连接至电脑，如下图所示：
+1\. 将 Air780E 核心板通过 USB 数据线连接至电脑，如下图所示：
 
-   ![](./image/RKJ4bU5wooHFsQxt9iScA3t8nrg.png)
+![](./image/RKJ4bU5wooHFsQxt9iScA3t8nrg.png)
 
-2. 根据下方操作进行烧录
+2\. 根据下方操作进行烧录
 
-   > 此时就需要大家先点击 Luatools 工具上的 下载底层与脚本/下载脚本，再执行下方操作了。
+> 此时就需要大家先点击 Luatools 工具上的 下载底层与脚本/下载脚本，再执行下方操作了。
 
-   **开发板处于未开机状态：**此时先按住下载模式按键（BOOT 键）不放，再长按开机键（POW 键）开机，若不出意外开发板将会进入下载模式，Luatools 工具下载进度条会开始跑，这时便可以松开 BOOT 键和 POW 键，等到工具提示下载完成即可。
+**开发板处于未开机状态：**此时先按住下载模式按键（BOOT 键）不放，再长按开机键（POW 键）开机，若不出意外开发板将会进入下载模式，Luatools 工具下载进度条会开始跑，这时便可以松开 BOOT 键和 POW 键，等到工具提示下载完成即可。
 
-   **开发板已经处于开机状态：**此时可以先按住 BOOT 键不放，再短按复位键（RST 键）后开发板会重启并进入下载模式。
+**开发板已经处于开机状态：**此时可以先按住 BOOT 键不放，再短按复位键（RST 键）后开发板会重启并进入下载模式。
 
 #### 5.2.3 不同模式下的端口显示
 
-1. 正常开机模式
+1\. 正常开机模式
 
-   ![](./image/SFo4bqkhgokrZTxxGjGcfOBCnEb.png)
+![](./image/SFo4bqkhgokrZTxxGjGcfOBCnEb.png)
 
-2. 下载模式
+2\. 下载模式
 
-   ![](./image/UI7hbPmygoCC5DxjvMMcN7oHnfd.png)
+![](./image/UI7hbPmygoCC5DxjvMMcN7oHnfd.png)
 
 ## 六、功能验证
 
 ### 6.1 云平台准备
 
-1. 登录官网 [阿里云物联网平台 (](https://gitee.com/link?target=https%3A%2F%2Fiot.console.aliyun.com%2Flk%2Fvpc%2Finstance%2Fdetail_s)[aliyun.com](https://gitee.com/link?target=https%3A%2F%2Fiot.console.aliyun.com%2Flk%2Fvpc%2Finstance%2Fdetail_s)[)](https://gitee.com/link?target=https%3A%2F%2Fiot.console.aliyun.com%2Flk%2Fvpc%2Finstance%2Fdetail_s) 并注册账号
-2. 开通物联网平台服务
-3. 试用物联网平台公共实例服务
+1\. 登录官网 [阿里云物联网平台 (](https://gitee.com/link?target=https%3A%2F%2Fiot.console.aliyun.com%2Flk%2Fvpc%2Finstance%2Fdetail_s)[aliyun.com](https://gitee.com/link?target=https%3A%2F%2Fiot.console.aliyun.com%2Flk%2Fvpc%2Finstance%2Fdetail_s)[)](https://gitee.com/link?target=https%3A%2F%2Fiot.console.aliyun.com%2Flk%2Fvpc%2Finstance%2Fdetail_s) 并注册账号
 
-   > 新旧公共实例平台需要进行区分，参考 [物联网平台新版公共实例、旧版公共实例和企业版实例类型、区别和开通使用_物联网平台(IoT)-阿里云帮助中心 (](https://gitee.com/link?target=https%3A%2F%2Fhelp.aliyun.com%2Fzh%2Fiot%2Fuser-guide%2Foverview-60%2392d6a1e87dpsh)[aliyun.com](https://gitee.com/link?target=https%3A%2F%2Fhelp.aliyun.com%2Fzh%2Fiot%2Fuser-guide%2Foverview-60%2392d6a1e87dpsh)[)](https://gitee.com/link?target=https%3A%2F%2Fhelp.aliyun.com%2Fzh%2Fiot%2Fuser-guide%2Foverview-60%2392d6a1e87dpsh)
+2\. 开通物联网平台服务
 
-   新版公共实例的实例概览页签显示实例 ID 值：
+3\. 试用物联网平台公共实例服务
 
-   ![](./image/Jjc6bLJCjoJvBexK48xcSP75nG7.png)
+> 新旧公共实例平台需要进行区分，参考 [物联网平台新版公共实例、旧版公共实例和企业版实例类型、区别和开通使用_物联网平台(IoT)-阿里云帮助中心 (](https://gitee.com/link?target=https%3A%2F%2Fhelp.aliyun.com%2Fzh%2Fiot%2Fuser-guide%2Foverview-60%2392d6a1e87dpsh)[aliyun.com](https://gitee.com/link?target=https%3A%2F%2Fhelp.aliyun.com%2Fzh%2Fiot%2Fuser-guide%2Foverview-60%2392d6a1e87dpsh)[)](https://gitee.com/link?target=https%3A%2F%2Fhelp.aliyun.com%2Fzh%2Fiot%2Fuser-guide%2Foverview-60%2392d6a1e87dpsh)
 
-   旧版公共实例的实力概览页不显示实例 ID 值
+新版公共实例的实例概览页签显示实例 ID 值：
 
-   ![](./image/QWKzbkXDioKWw0xNkx5cXA5Qnwg.png)
+![](./image/Jjc6bLJCjoJvBexK48xcSP75nG7.png)
 
-   注意：如果使用的是新版公共实例，需要记住此时的实例 ID，后面会用到。
+旧版公共实例的实力概览页不显示实例 ID 值
 
-4. 创建产品
+![](./image/QWKzbkXDioKWw0xNkx5cXA5Qnwg.png)
 
-   物联网平台--> 设备管理--> 产品--> 创建产品
+注意：如果使用的是新版公共实例，需要记住此时的实例 ID，后面会用到。
 
-   ![](./image/Gbl7bqZbEo5fmZxCaFlcbTuCnyb.png)
+4\. 创建产品
 
-   配置信息，注意认证方式要选择设备秘钥
+物联网平台--> 设备管理--> 产品--> 创建产品
 
-   ![](./image/SNolbJhL5o1Di5xZAiccx5MInnc.png)
+![](./image/Gbl7bqZbEo5fmZxCaFlcbTuCnyb.png)
 
-   创建完成后，要记住此时的产品 ID（ProductKey），后面会用到
+配置信息，注意认证方式要选择设备秘钥
 
-   ![](./image/Lwj1bqRtloBo3VxdECfcI4rAn1c.png)
+![](./image/SNolbJhL5o1Di5xZAiccx5MInnc.png)
+
+创建完成后，要记住此时的产品 ID（ProductKey），后面会用到
+
+![](./image/Lwj1bqRtloBo3VxdECfcI4rAn1c.png)
 
 ### 6.2 一型一密（免预注册，但需要是企业版实例平台）方式连接云平台
 
@@ -211,231 +214,231 @@ iotcloud 同时支持新版公共实例 / 旧版公共实例 / 企业实例，�
 
 #### 6.2.2 代码使用说明
 
-1. 设备注册并进行连接云平台
+1\. 设备注册并进行连接云平台
 
-   > 记得修改参数
+> 记得修改参数
 
-   ```lua
-   sys.taskInit(function()
-       -- 等待联网
-       local ret, device_id = sys.waitUntil("net_ready")
-   
-       --------    以下接入方式根据自己需要修改,相关参数修改为自己的    ---------
-   
-       -- 阿里云  
-       -- 动态注册(免预注册)(一型一密)(仅企业版支持)
-       iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",product_secret = "xxx"}) -- 企业版公共实例
-       -- 动态注册(预注册)(一型一密)
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",product_secret = "xxx"})                     -- 旧版公共实例
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",product_secret = "xxx"}) -- 新版公共实例
-       -- 密钥校验 (预注册)(一机一密)
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})                    -- 旧版公共实例
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})-- 新版公共实例
-   
-       if iotcloudc then
-           iotcloudc:connect()
-       end
-   
-   end)
-   ```
+```lua
+sys.taskInit(function()
+    -- 等待联网
+    local ret, device_id = sys.waitUntil("net_ready")
 
-2. 每隔 2 秒发布一次 qos 为 1 的消息到云平台
+    --------    以下接入方式根据自己需要修改,相关参数修改为自己的    ---------
 
-   > 本文 `iotcloudc:publish()` 中的第一个参数订阅的是一个自定义 topic，在阿里云物联网平台上可以看到。用户可以根据需求自行修改第一个参数。
+    -- 阿里云  
+    -- 动态注册(免预注册)(一型一密)(仅企业版支持)
+    iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",product_secret = "xxx"}) -- 企业版公共实例
+    -- 动态注册(预注册)(一型一密)
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",product_secret = "xxx"})                     -- 旧版公共实例
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",product_secret = "xxx"}) -- 新版公共实例
+    -- 密钥校验 (预注册)(一机一密)
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})                    -- 旧版公共实例
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})-- 新版公共实例
 
-   ```lua
-   -- 每隔2秒发布一次qos为1的消息到云平台
-   sys.taskInit(function()
-       while 1 do
-           sys.wait(2000)
-           if iotcloudc then
-               iotcloudc:publish("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/update", "hello world", 1) -- 上传数据
-           end
-       end
-   end)
-   ```
+    if iotcloudc then
+        iotcloudc:connect()
+    end
 
-   ![](./image/OKAbbI3ako7qmqxkIwqcxmrZnKf.png)
+end)
+```
 
-3. 订阅主题，用于云平台下发消息
+2\. 每隔 2 秒发布一次 qos 为 1 的消息到云平台
 
-   > 此行代码放置位置，只要在云平台连接成功之后即可，可参考后面的 4.接收数据
-   > 本文 `iotcloudc:subscribe()` 中的第一个参数订阅的仍然是一个自定义 topic
-   > 订阅成功之后，在阿里云物联网平台会有显示，看下图
+> 本文 `iotcloudc:publish()` 中的第一个参数订阅的是一个自定义 topic，在阿里云物联网平台上可以看到。用户可以根据需求自行修改第一个参数。
 
-   ```lua
-   iotcloudc:subscribe("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/get") -- 订阅主题，用于下发消息
-   ```
+```lua
+-- 每隔2秒发布一次qos为1的消息到云平台
+sys.taskInit(function()
+    while 1 do
+        sys.wait(2000)
+        if iotcloudc then
+            iotcloudc:publish("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/update", "hello world", 1) -- 上传数据
+        end
+    end
+end)
+```
 
-   ![](./image/D7gMbQoAko6QJ9xeGI5c9J7inCb.png)
+![](./image/OKAbbI3ako7qmqxkIwqcxmrZnKf.png)
 
-4. 接收数据
+3\. 订阅主题，用于云平台下发消息
 
-   > 接收统一使用了 `"iotcloud"` 消息进行通知，所以我们只需要订阅此系统消息即可
+> 此行代码放置位置，只要在云平台连接成功之后即可，可参考后面的 4.接收数据
+> 本文 `iotcloudc:subscribe()` 中的第一个参数订阅的仍然是一个自定义 topic
+> 订阅成功之后，在阿里云物联网平台会有显示，看下图
 
-   ```lua
-   sys.subscribe("iotcloud", function(cloudc,event,data,payload)
-       -- 注意，此处不是协程内，复杂操作发消息给协程内进行处理
-       if event == iotcloud.CONNECT then -- 云平台联上了
-           print("iotcloud","CONNECT", "云平台连接成功")
-           iotcloudc:subscribe("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/get") -- 订阅主题，用于下发消息
-       elseif event == iotcloud.RECEIVE then
-           print("iotcloud","topic", data, "payload", payload)
-           -- 用户处理代码
-       elseif event ==  iotcloud.OTA then
-           if data then
-               rtos.reboot()
-           end
-       elseif event == iotcloud.DISCONNECT then -- 云平台断开了
-           -- 用户处理代码
-       end
-   end)
-   ```
+```lua
+iotcloudc:subscribe("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/get") -- 订阅主题，用于下发消息
+```
 
-5. 完整代码
+![](./image/D7gMbQoAko6QJ9xeGI5c9J7inCb.png)
 
-   > 注意，记得修改参数！！！
+4\. 接收数据
 
-   ```lua
-   -- LuaTools需要PROJECT和VERSION这两个信息
-   PROJECT = "aliyun_yxym_myzc"
-   VERSION = "1.0.0"
-   
-   -- sys库是标配
-   _G.sys = require("sys")
-   --[[特别注意, 使用mqtt库需要下列语句]]
-   _G.sysplus = require("sysplus")
-   
-   local iotcloud = require("iotcloud")
-   
-   -- Air780E的AT固件默认会为开机键防抖, 导致部分用户刷机很麻烦
-   if rtos.bsp() == "EC618" and pm and pm.PWK_MODE then
-       pm.power(pm.PWK_MODE, false)
-   end
-   
-   -- 统一联网函数
-   sys.taskInit(function()
-       local device_id = mcu.unique_id():toHex()
-       -----------------------------
-       -- 统一联网函数, 可自行删减
-       ----------------------------
-       if wlan and wlan.connect then
-           -- wifi 联网, ESP32系列均支持
-           local ssid = "luatos1234"
-           local password = "12341234"
-           log.info("wifi", ssid, password)
-           -- TODO 改成自动配网
-           -- LED = gpio.setup(12, 0, gpio.PULLUP)
-           wlan.init()
-           wlan.setMode(wlan.STATION) -- 默认也是这个模式,不调用也可以
-           device_id = wlan.getMac()
-           wlan.connect(ssid, password, 1)
-       elseif mobile then
-           -- Air780E/Air600E系列
-           --mobile.simid(2) -- 自动切换SIM卡
-           -- LED = gpio.setup(27, 0, gpio.PULLUP)
-           device_id = mobile.imei()
-       elseif w5500 then
-           -- w5500 以太网, 当前仅Air105支持
-           w5500.init(spi.HSPI_0, 24000000, pin.PC14, pin.PC01, pin.PC00)
-           w5500.config() --默认是DHCP模式
-           w5500.bind(socket.ETH0)
-           -- LED = gpio.setup(62, 0, gpio.PULLUP)
-       elseif socket or mqtt then
-           -- 适配的socket库也OK
-           -- 没有其他操作, 单纯给个注释说明
-       else
-           -- 其他不认识的bsp, 循环提示一下吧
-           while 1 do
-               sys.wait(1000)
-               log.info("bsp", "本bsp可能未适配网络层, 请查证")
-           end
-       end
-       -- 默认都等到联网成功
-       sys.waitUntil("IP_READY")
-       sys.publish("net_ready", device_id)
-   end)
-   
-   sys.taskInit(function()
-       -- 等待联网
-       local ret, device_id = sys.waitUntil("net_ready")
-   
-       --------    以下接入方式根据自己需要修改,相关参数修改为自己的    ---------
-   
-       -- 阿里云  
-       -- 动态注册(免预注册)(一型一密)(仅企业版支持)
-       iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",product_secret = "xxx"}) -- 企业版公共实例
-       -- 动态注册(预注册)(一型一密)
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",product_secret = "xxx"})                     -- 旧版公共实例
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",product_secret = "xxx"}) -- 新版公共实例
-       -- 密钥校验 (预注册)(一机一密)
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})                    -- 旧版公共实例
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})-- 新版公共实例
-   
-       if iotcloudc then
-           iotcloudc:connect()
-       end
-   
-   end)
-   
-   sys.subscribe("iotcloud", function(cloudc,event,data,payload)
-       -- 注意，此处不是协程内，复杂操作发消息给协程内进行处理
-       if event == iotcloud.CONNECT then -- 云平台联上了
-           print("iotcloud","CONNECT", "云平台连接成功")
-           iotcloudc:subscribe("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/get") -- 订阅主题，用于下发消息
-       elseif event == iotcloud.RECEIVE then
-           print("iotcloud","topic", data, "payload", payload)
-           -- 用户处理代码
-       elseif event ==  iotcloud.OTA then
-           if data then
-               rtos.reboot()
-           end
-       elseif event == iotcloud.DISCONNECT then -- 云平台断开了
-           -- 用户处理代码
-       end
-   end)
-   
-   -- 每隔2秒发布一次qos为1的消息到云平台
-   sys.taskInit(function()
-       while 1 do
-           sys.wait(2000)
-           if iotcloudc then
-               iotcloudc:publish("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/update", "hello world", 1) -- 上传数据
-           end
-       end
-   end)
-   
-   -- 用户代码已结束---------------------------------------------
-   -- 结尾总是这一句
-   sys.run()
-   -- sys.run()之后后面不要加任何语句!!!!!
-   ```
+> 接收统一使用了 `"iotcloud"` 消息进行通知，所以我们只需要订阅此系统消息即可
+
+```lua
+sys.subscribe("iotcloud", function(cloudc,event,data,payload)
+    -- 注意，此处不是协程内，复杂操作发消息给协程内进行处理
+    if event == iotcloud.CONNECT then -- 云平台联上了
+        print("iotcloud","CONNECT", "云平台连接成功")
+        iotcloudc:subscribe("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/get") -- 订阅主题，用于下发消息
+    elseif event == iotcloud.RECEIVE then
+        print("iotcloud","topic", data, "payload", payload)
+        -- 用户处理代码
+    elseif event ==  iotcloud.OTA then
+        if data then
+            rtos.reboot()
+        end
+    elseif event == iotcloud.DISCONNECT then -- 云平台断开了
+        -- 用户处理代码
+    end
+end)
+```
+
+5\. 完整代码
+
+> 注意，记得修改参数！！！
+
+```lua
+-- LuaTools需要PROJECT和VERSION这两个信息
+PROJECT = "aliyun_yxym_myzc"
+VERSION = "1.0.0"
+
+-- sys库是标配
+_G.sys = require("sys")
+--[[特别注意, 使用mqtt库需要下列语句]]
+_G.sysplus = require("sysplus")
+
+local iotcloud = require("iotcloud")
+
+-- Air780E的AT固件默认会为开机键防抖, 导致部分用户刷机很麻烦
+if rtos.bsp() == "EC618" and pm and pm.PWK_MODE then
+    pm.power(pm.PWK_MODE, false)
+end
+
+-- 统一联网函数
+sys.taskInit(function()
+    local device_id = mcu.unique_id():toHex()
+    -----------------------------
+    -- 统一联网函数, 可自行删减
+    ----------------------------
+    if wlan and wlan.connect then
+        -- wifi 联网, ESP32系列均支持
+        local ssid = "luatos1234"
+        local password = "12341234"
+        log.info("wifi", ssid, password)
+        -- TODO 改成自动配网
+        -- LED = gpio.setup(12, 0, gpio.PULLUP)
+        wlan.init()
+        wlan.setMode(wlan.STATION) -- 默认也是这个模式,不调用也可以
+        device_id = wlan.getMac()
+        wlan.connect(ssid, password, 1)
+    elseif mobile then
+        -- Air780E/Air600E系列
+        --mobile.simid(2) -- 自动切换SIM卡
+        -- LED = gpio.setup(27, 0, gpio.PULLUP)
+        device_id = mobile.imei()
+    elseif w5500 then
+        -- w5500 以太网, 当前仅Air105支持
+        w5500.init(spi.HSPI_0, 24000000, pin.PC14, pin.PC01, pin.PC00)
+        w5500.config() --默认是DHCP模式
+        w5500.bind(socket.ETH0)
+        -- LED = gpio.setup(62, 0, gpio.PULLUP)
+    elseif socket or mqtt then
+        -- 适配的socket库也OK
+        -- 没有其他操作, 单纯给个注释说明
+    else
+        -- 其他不认识的bsp, 循环提示一下吧
+        while 1 do
+            sys.wait(1000)
+            log.info("bsp", "本bsp可能未适配网络层, 请查证")
+        end
+    end
+    -- 默认都等到联网成功
+    sys.waitUntil("IP_READY")
+    sys.publish("net_ready", device_id)
+end)
+
+sys.taskInit(function()
+    -- 等待联网
+    local ret, device_id = sys.waitUntil("net_ready")
+
+    --------    以下接入方式根据自己需要修改,相关参数修改为自己的    ---------
+
+    -- 阿里云  
+    -- 动态注册(免预注册)(一型一密)(仅企业版支持)
+    iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",product_secret = "xxx"}) -- 企业版公共实例
+    -- 动态注册(预注册)(一型一密)
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",product_secret = "xxx"})                     -- 旧版公共实例
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",product_secret = "xxx"}) -- 新版公共实例
+    -- 密钥校验 (预注册)(一机一密)
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})                    -- 旧版公共实例
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})-- 新版公共实例
+
+    if iotcloudc then
+        iotcloudc:connect()
+    end
+
+end)
+
+sys.subscribe("iotcloud", function(cloudc,event,data,payload)
+    -- 注意，此处不是协程内，复杂操作发消息给协程内进行处理
+    if event == iotcloud.CONNECT then -- 云平台联上了
+        print("iotcloud","CONNECT", "云平台连接成功")
+        iotcloudc:subscribe("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/get") -- 订阅主题，用于下发消息
+    elseif event == iotcloud.RECEIVE then
+        print("iotcloud","topic", data, "payload", payload)
+        -- 用户处理代码
+    elseif event ==  iotcloud.OTA then
+        if data then
+            rtos.reboot()
+        end
+    elseif event == iotcloud.DISCONNECT then -- 云平台断开了
+        -- 用户处理代码
+    end
+end)
+
+-- 每隔2秒发布一次qos为1的消息到云平台
+sys.taskInit(function()
+    while 1 do
+        sys.wait(2000)
+        if iotcloudc then
+            iotcloudc:publish("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/update", "hello world", 1) -- 上传数据
+        end
+    end
+end)
+
+-- 用户代码已结束---------------------------------------------
+-- 结尾总是这一句
+sys.run()
+-- sys.run()之后后面不要加任何语句!!!!!
+```
 
 #### 5.1.3 运行结果展示
 
-1. 设备日志
+1\. 设备日志
 
-   ![](./image/VlHybe0Kloa3ubxnNxSc9T2cnVf.png)
+![](./image/VlHybe0Kloa3ubxnNxSc9T2cnVf.png)
 
-2. 云平台效果
+2\. 云平台效果
 
-   ![](./image/B4IvbnCTgokUfPxTPG6cCqoKnaf.png)
+![](./image/B4IvbnCTgokUfPxTPG6cCqoKnaf.png)
 
-3. 上行数据效果
+3\. 上行数据效果
 
-   ![](./image/KwA6bfhJloI2aQxkArscNwQ0nUe.png)
+![](./image/KwA6bfhJloI2aQxkArscNwQ0nUe.png)
 
-4. 下发数据效果
+4\. 下发数据效果
 
-   > 通过 Luatools 工具查看日志即可
+> 通过 Luatools 工具查看日志即可
 
-   **发布消息：**
+**发布消息：**
 
-   ![](./image/WhFFbz13xo1FdMxQPoIcpK5Ynmc.png)
+![](./image/WhFFbz13xo1FdMxQPoIcpK5Ynmc.png)
 
-   **接收消息：**
+**接收消息：**
 
-   ![](./image/U1gVbny5eoXNz9xaH8Ic8FzFnnb.png)
+![](./image/U1gVbny5eoXNz9xaH8Ic8FzFnnb.png)
 
 ### 6.3 一型一密（预注册）方式连接云平台
 
@@ -455,231 +458,231 @@ iotcloud 同时支持新版公共实例 / 旧版公共实例 / 企业实例，�
 
 #### 6.3.3 代码使用说明
 
-1. 设备注册并进行连接云平台
+1\. 设备注册并进行连接云平台
 
-   > 记得修改参数
+> 记得修改参数
 
-   ```lua
-   sys.taskInit(function()
-       -- 等待联网
-       local ret, device_id = sys.waitUntil("net_ready")
-   
-       --------    以下接入方式根据自己需要修改,相关参数修改为自己的    ---------
-   
-       -- 阿里云  
-       -- 动态注册(免预注册)(一型一密)(仅企业版支持)
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",product_secret = "xxx"}) -- 企业版公共实例
-       -- 动态注册(预注册)(一型一密)
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",product_secret = "xxx"})                     -- 旧版公共实例
-       iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",product_secret = "xxx"}) -- 新版公共实例
-       -- 密钥校验 (预注册)(一机一密)
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})                    -- 旧版公共实例
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})-- 新版公共实例
-   
-       if iotcloudc then
-           iotcloudc:connect()
-       end
-   
-   end)
-   ```
+```lua
+sys.taskInit(function()
+    -- 等待联网
+    local ret, device_id = sys.waitUntil("net_ready")
 
-2. 每隔 2 秒发布一次 qos 为 1 的消息到云平台
+    --------    以下接入方式根据自己需要修改,相关参数修改为自己的    ---------
 
-   > 本文 `iotcloudc:publish()` 中的第一个参数订阅的是一个自定义 topic，在阿里云物联网平台上可以看到。用户可以根据需求自行修改第一个参数。
+    -- 阿里云  
+    -- 动态注册(免预注册)(一型一密)(仅企业版支持)
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",product_secret = "xxx"}) -- 企业版公共实例
+    -- 动态注册(预注册)(一型一密)
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",product_secret = "xxx"})                     -- 旧版公共实例
+    iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",product_secret = "xxx"}) -- 新版公共实例
+    -- 密钥校验 (预注册)(一机一密)
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})                    -- 旧版公共实例
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})-- 新版公共实例
 
-   ```lua
-   -- 每隔2秒发布一次qos为1的消息到云平台
-   sys.taskInit(function()
-       while 1 do
-           sys.wait(2000)
-           if iotcloudc then
-               iotcloudc:publish("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/update", "hello world", 1) -- 上传数据
-           end
-       end
-   end)
-   ```
+    if iotcloudc then
+        iotcloudc:connect()
+    end
 
-   ![](./image/XByebBjQ9oZCexxkzYmcVxt2nwO.png)
+end)
+```
 
-3. 订阅主题，用于云平台下发消息
+2\. 每隔 2 秒发布一次 qos 为 1 的消息到云平台
 
-   > 此行代码放置位置，只要在云平台连接成功之后即可，可参考后面的 4.接收数据
-   > 本文 `iotcloudc:subscribe()` 中的第一个参数订阅的仍然是一个自定义 topic
-   > 订阅成功之后，在阿里云物联网平台会有显示，看下图
+> 本文 `iotcloudc:publish()` 中的第一个参数订阅的是一个自定义 topic，在阿里云物联网平台上可以看到。用户可以根据需求自行修改第一个参数。
 
-   ```lua
-   iotcloudc:subscribe("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/get") -- 订阅主题，用于下发消息
-   ```
+```lua
+-- 每隔2秒发布一次qos为1的消息到云平台
+sys.taskInit(function()
+    while 1 do
+        sys.wait(2000)
+        if iotcloudc then
+            iotcloudc:publish("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/update", "hello world", 1) -- 上传数据
+        end
+    end
+end)
+```
 
-   ![](./image/PRbLbexuHoYWNAxhjIYcxcg4n2d.png)
+![](./image/XByebBjQ9oZCexxkzYmcVxt2nwO.png)
 
-4. 接收数据
+3\. 订阅主题，用于云平台下发消息
 
-   > 接收统一使用了 `"iotcloud"` 消息进行通知，所以我们只需要订阅此系统消息即可
+> 此行代码放置位置，只要在云平台连接成功之后即可，可参考后面的 4.接收数据
+> 本文 `iotcloudc:subscribe()` 中的第一个参数订阅的仍然是一个自定义 topic
+> 订阅成功之后，在阿里云物联网平台会有显示，看下图
 
-   ```lua
-   sys.subscribe("iotcloud", function(cloudc,event,data,payload)
-       -- 注意，此处不是协程内，复杂操作发消息给协程内进行处理
-       if event == iotcloud.CONNECT then -- 云平台联上了
-           print("iotcloud","CONNECT", "云平台连接成功")
-           iotcloudc:subscribe("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/get") -- 订阅主题，用于下发消息
-       elseif event == iotcloud.RECEIVE then
-           print("iotcloud","topic", data, "payload", payload)
-           -- 用户处理代码
-       elseif event ==  iotcloud.OTA then
-           if data then
-               rtos.reboot()
-           end
-       elseif event == iotcloud.DISCONNECT then -- 云平台断开了
-           -- 用户处理代码
-       end
-   end)
-   ```
+```lua
+iotcloudc:subscribe("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/get") -- 订阅主题，用于下发消息
+```
 
-5. 完整代码
+![](./image/PRbLbexuHoYWNAxhjIYcxcg4n2d.png)
 
-   > 注意，记得修改参数！！！
+4\. 接收数据
 
-   ```lua
-   -- LuaTools需要PROJECT和VERSION这两个信息
-   PROJECT = "aliyun_yxym_yzc"
-   VERSION = "1.0.0"
-   
-   -- sys库是标配
-   _G.sys = require("sys")
-   --[[特别注意, 使用mqtt库需要下列语句]]
-   _G.sysplus = require("sysplus")
-   
-   local iotcloud = require("iotcloud")
-   
-   -- Air780E的AT固件默认会为开机键防抖, 导致部分用户刷机很麻烦
-   if rtos.bsp() == "EC618" and pm and pm.PWK_MODE then
-       pm.power(pm.PWK_MODE, false)
-   end
-   
-   -- 统一联网函数
-   sys.taskInit(function()
-       local device_id = mcu.unique_id():toHex()
-       -----------------------------
-       -- 统一联网函数, 可自行删减
-       ----------------------------
-       if wlan and wlan.connect then
-           -- wifi 联网, ESP32系列均支持
-           local ssid = "luatos1234"
-           local password = "12341234"
-           log.info("wifi", ssid, password)
-           -- TODO 改成自动配网
-           -- LED = gpio.setup(12, 0, gpio.PULLUP)
-           wlan.init()
-           wlan.setMode(wlan.STATION) -- 默认也是这个模式,不调用也可以
-           device_id = wlan.getMac()
-           wlan.connect(ssid, password, 1)
-       elseif mobile then
-           -- Air780E/Air600E系列
-           --mobile.simid(2) -- 自动切换SIM卡
-           -- LED = gpio.setup(27, 0, gpio.PULLUP)
-           device_id = mobile.imei()
-       elseif w5500 then
-           -- w5500 以太网, 当前仅Air105支持
-           w5500.init(spi.HSPI_0, 24000000, pin.PC14, pin.PC01, pin.PC00)
-           w5500.config() --默认是DHCP模式
-           w5500.bind(socket.ETH0)
-           -- LED = gpio.setup(62, 0, gpio.PULLUP)
-       elseif socket or mqtt then
-           -- 适配的socket库也OK
-           -- 没有其他操作, 单纯给个注释说明
-       else
-           -- 其他不认识的bsp, 循环提示一下吧
-           while 1 do
-               sys.wait(1000)
-               log.info("bsp", "本bsp可能未适配网络层, 请查证")
-           end
-       end
-       -- 默认都等到联网成功
-       sys.waitUntil("IP_READY")
-       sys.publish("net_ready", device_id)
-   end)
-   
-   sys.taskInit(function()
-       -- 等待联网
-       local ret, device_id = sys.waitUntil("net_ready")
-   
-       --------    以下接入方式根据自己需要修改,相关参数修改为自己的    ---------
-   
-       -- 阿里云  
-       -- 动态注册(免预注册)(一型一密)(仅企业版支持)
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",product_secret = "xxx"}) -- 企业版公共实例
-       -- 动态注册(预注册)(一型一密)
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",product_secret = "xxx"})                     -- 旧版公共实例
-       iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",product_secret = "xxx"}) -- 新版公共实例
-       -- 密钥校验 (预注册)(一机一密)
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})                    -- 旧版公共实例
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})-- 新版公共实例
-   
-       if iotcloudc then
-           iotcloudc:connect()
-       end
-   
-   end)
-   
-   sys.subscribe("iotcloud", function(cloudc,event,data,payload)
-       -- 注意，此处不是协程内，复杂操作发消息给协程内进行处理
-       if event == iotcloud.CONNECT then -- 云平台联上了
-           print("iotcloud","CONNECT", "云平台连接成功")
-           iotcloudc:subscribe("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/get") -- 订阅主题，用于下发消息
-       elseif event == iotcloud.RECEIVE then
-           print("iotcloud","topic", data, "payload", payload)
-           -- 用户处理代码
-       elseif event ==  iotcloud.OTA then
-           if data then
-               rtos.reboot()
-           end
-       elseif event == iotcloud.DISCONNECT then -- 云平台断开了
-           -- 用户处理代码
-       end
-   end)
-   
-   -- 每隔2秒发布一次qos为1的消息到云平台
-   sys.taskInit(function()
-       while 1 do
-           sys.wait(2000)
-           if iotcloudc then
-               iotcloudc:publish("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/update", "hello world", 1) -- 上传数据
-           end
-       end
-   end)
-   
-   -- 用户代码已结束---------------------------------------------
-   -- 结尾总是这一句
-   sys.run()
-   -- sys.run()之后后面不要加任何语句!!!!!
-   ```
+> 接收统一使用了 `"iotcloud"` 消息进行通知，所以我们只需要订阅此系统消息即可
+
+```lua
+sys.subscribe("iotcloud", function(cloudc,event,data,payload)
+    -- 注意，此处不是协程内，复杂操作发消息给协程内进行处理
+    if event == iotcloud.CONNECT then -- 云平台联上了
+        print("iotcloud","CONNECT", "云平台连接成功")
+        iotcloudc:subscribe("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/get") -- 订阅主题，用于下发消息
+    elseif event == iotcloud.RECEIVE then
+        print("iotcloud","topic", data, "payload", payload)
+        -- 用户处理代码
+    elseif event ==  iotcloud.OTA then
+        if data then
+            rtos.reboot()
+        end
+    elseif event == iotcloud.DISCONNECT then -- 云平台断开了
+        -- 用户处理代码
+    end
+end)
+```
+
+5\. 完整代码
+
+> 注意，记得修改参数！！！
+
+```lua
+-- LuaTools需要PROJECT和VERSION这两个信息
+PROJECT = "aliyun_yxym_yzc"
+VERSION = "1.0.0"
+
+-- sys库是标配
+_G.sys = require("sys")
+--[[特别注意, 使用mqtt库需要下列语句]]
+_G.sysplus = require("sysplus")
+
+local iotcloud = require("iotcloud")
+
+-- Air780E的AT固件默认会为开机键防抖, 导致部分用户刷机很麻烦
+if rtos.bsp() == "EC618" and pm and pm.PWK_MODE then
+    pm.power(pm.PWK_MODE, false)
+end
+
+-- 统一联网函数
+sys.taskInit(function()
+    local device_id = mcu.unique_id():toHex()
+    -----------------------------
+    -- 统一联网函数, 可自行删减
+    ----------------------------
+    if wlan and wlan.connect then
+        -- wifi 联网, ESP32系列均支持
+        local ssid = "luatos1234"
+        local password = "12341234"
+        log.info("wifi", ssid, password)
+        -- TODO 改成自动配网
+        -- LED = gpio.setup(12, 0, gpio.PULLUP)
+        wlan.init()
+        wlan.setMode(wlan.STATION) -- 默认也是这个模式,不调用也可以
+        device_id = wlan.getMac()
+        wlan.connect(ssid, password, 1)
+    elseif mobile then
+        -- Air780E/Air600E系列
+        --mobile.simid(2) -- 自动切换SIM卡
+        -- LED = gpio.setup(27, 0, gpio.PULLUP)
+        device_id = mobile.imei()
+    elseif w5500 then
+        -- w5500 以太网, 当前仅Air105支持
+        w5500.init(spi.HSPI_0, 24000000, pin.PC14, pin.PC01, pin.PC00)
+        w5500.config() --默认是DHCP模式
+        w5500.bind(socket.ETH0)
+        -- LED = gpio.setup(62, 0, gpio.PULLUP)
+    elseif socket or mqtt then
+        -- 适配的socket库也OK
+        -- 没有其他操作, 单纯给个注释说明
+    else
+        -- 其他不认识的bsp, 循环提示一下吧
+        while 1 do
+            sys.wait(1000)
+            log.info("bsp", "本bsp可能未适配网络层, 请查证")
+        end
+    end
+    -- 默认都等到联网成功
+    sys.waitUntil("IP_READY")
+    sys.publish("net_ready", device_id)
+end)
+
+sys.taskInit(function()
+    -- 等待联网
+    local ret, device_id = sys.waitUntil("net_ready")
+
+    --------    以下接入方式根据自己需要修改,相关参数修改为自己的    ---------
+
+    -- 阿里云  
+    -- 动态注册(免预注册)(一型一密)(仅企业版支持)
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",product_secret = "xxx"}) -- 企业版公共实例
+    -- 动态注册(预注册)(一型一密)
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",product_secret = "xxx"})                     -- 旧版公共实例
+    iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",product_secret = "xxx"}) -- 新版公共实例
+    -- 密钥校验 (预注册)(一机一密)
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})                    -- 旧版公共实例
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})-- 新版公共实例
+
+    if iotcloudc then
+        iotcloudc:connect()
+    end
+
+end)
+
+sys.subscribe("iotcloud", function(cloudc,event,data,payload)
+    -- 注意，此处不是协程内，复杂操作发消息给协程内进行处理
+    if event == iotcloud.CONNECT then -- 云平台联上了
+        print("iotcloud","CONNECT", "云平台连接成功")
+        iotcloudc:subscribe("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/get") -- 订阅主题，用于下发消息
+    elseif event == iotcloud.RECEIVE then
+        print("iotcloud","topic", data, "payload", payload)
+        -- 用户处理代码
+    elseif event ==  iotcloud.OTA then
+        if data then
+            rtos.reboot()
+        end
+    elseif event == iotcloud.DISCONNECT then -- 云平台断开了
+        -- 用户处理代码
+    end
+end)
+
+-- 每隔2秒发布一次qos为1的消息到云平台
+sys.taskInit(function()
+    while 1 do
+        sys.wait(2000)
+        if iotcloudc then
+            iotcloudc:publish("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/update", "hello world", 1) -- 上传数据
+        end
+    end
+end)
+
+-- 用户代码已结束---------------------------------------------
+-- 结尾总是这一句
+sys.run()
+-- sys.run()之后后面不要加任何语句!!!!!
+```
 
 #### 6.3.4 运行结果展示
 
-1. 设备日志
+1\. 设备日志
 
-   ![](./image/X7h4b04IQoC5D3xkEfBcyDohn9b.png)
+![](./image/X7h4b04IQoC5D3xkEfBcyDohn9b.png)
 
-2. 云平台效果
+2\. 云平台效果
 
-   ![](./image/NlelbQZdroxPjLxiKhXcdGDInWh.png)
+![](./image/NlelbQZdroxPjLxiKhXcdGDInWh.png)
 
-3. 上行数据效果
+3\. 上行数据效果
 
-   ![](./image/TH99bRvNxomULgx4oq2cMkhdntd.png)
+![](./image/TH99bRvNxomULgx4oq2cMkhdntd.png)
 
-4. 下发数据效果
+4\. 下发数据效果
 
-   > 通过 Luatools 工具查看日志即可
+> 通过 Luatools 工具查看日志即可
 
-   **发布消息：**
+**发布消息：**
 
-   ![](./image/IQadb4OOboMv98x7Gsbc3ab1neg.png)
+![](./image/IQadb4OOboMv98x7Gsbc3ab1neg.png)
 
-   **接收消息：**
+**接收消息：**
 
-   ![](./image/ZTk1bPF4Co1K0oxQEVVcXEo8nGf.png)
+![](./image/ZTk1bPF4Co1K0oxQEVVcXEo8nGf.png)
 
 ### 6.4 一机一密方式连接云平台
 
@@ -703,231 +706,231 @@ iotcloud 同时支持新版公共实例 / 旧版公共实例 / 企业实例，�
 
 #### 6.4.3 代码使用说明
 
-1. 设备注册并进行连接云平台
+1\. 设备注册并进行连接云平台
 
-   > 记得修改参数
+> 记得修改参数
 
-   ```lua
-   sys.taskInit(function()
-       -- 等待联网
-       local ret, device_id = sys.waitUntil("net_ready")
-   
-       --------    以下接入方式根据自己需要修改,相关参数修改为自己的    ---------
-   
-       -- 阿里云  
-       -- 动态注册(免预注册)(一型一密)(仅企业版支持)
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",product_secret = "xxx"}) -- 企业版公共实例
-       -- 动态注册(预注册)(一型一密)
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",product_secret = "xxx"})                     -- 旧版公共实例
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",product_secret = "xxx"}) -- 新版公共实例
-       -- 密钥校验 (预注册)(一机一密)
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})                    -- 旧版公共实例
-       iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})-- 新版公共实例
-   
-       if iotcloudc then
-           iotcloudc:connect()
-       end
-   
-   end)
-   ```
+```lua
+sys.taskInit(function()
+    -- 等待联网
+    local ret, device_id = sys.waitUntil("net_ready")
 
-2. 每隔 2 秒发布一次 qos 为 1 的消息到云平台
+    --------    以下接入方式根据自己需要修改,相关参数修改为自己的    ---------
 
-   > 本文 `iotcloudc:publish()` 中的第一个参数订阅的是一个自定义 topic，在阿里云物联网平台上可以看到。用户可以根据需求自行修改第一个参数。
+    -- 阿里云  
+    -- 动态注册(免预注册)(一型一密)(仅企业版支持)
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",product_secret = "xxx"}) -- 企业版公共实例
+    -- 动态注册(预注册)(一型一密)
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",product_secret = "xxx"})                     -- 旧版公共实例
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",product_secret = "xxx"}) -- 新版公共实例
+    -- 密钥校验 (预注册)(一机一密)
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})                    -- 旧版公共实例
+    iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",device_secret = "xxx"})-- 新版公共实例
 
-   ```lua
-   -- 每隔2秒发布一次qos为1的消息到云平台
-   sys.taskInit(function()
-       while 1 do
-           sys.wait(2000)
-           if iotcloudc then
-               iotcloudc:publish("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/update", "hello world", 1) -- 上传数据
-           end
-       end
-   end)
-   ```
+    if iotcloudc then
+        iotcloudc:connect()
+    end
 
-   ![](./image/O3dmbbypGoIpROxQoPkc8LSGnBc.png)
+end)
+```
 
-3. 订阅主题，用于云平台下发消息
+2\. 每隔 2 秒发布一次 qos 为 1 的消息到云平台
 
-   > 此行代码放置位置，只要在云平台连接成功之后即可，可参考后面的 4.接收数据
-   > 本文 `iotcloudc:subscribe()` 中的第一个参数订阅的仍然是一个自定义 topic
-   > 订阅成功之后，在阿里云物联网平台会有显示，看下图
+> 本文 `iotcloudc:publish()` 中的第一个参数订阅的是一个自定义 topic，在阿里云物联网平台上可以看到。用户可以根据需求自行修改第一个参数。
 
-   ```lua
-   iotcloudc:subscribe("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/get") -- 订阅主题，用于下发消息
-   ```
+```lua
+-- 每隔2秒发布一次qos为1的消息到云平台
+sys.taskInit(function()
+    while 1 do
+        sys.wait(2000)
+        if iotcloudc then
+            iotcloudc:publish("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/update", "hello world", 1) -- 上传数据
+        end
+    end
+end)
+```
 
-   ![](./image/O5J7b9eApox5pqxYgaxc8s80nQf.png)
+![](./image/O3dmbbypGoIpROxQoPkc8LSGnBc.png)
 
-4. 接收数据
+3\. 订阅主题，用于云平台下发消息
 
-   > 接收统一使用了 `"iotcloud"` 消息进行通知，所以我们只需要订阅此系统消息即可
+> 此行代码放置位置，只要在云平台连接成功之后即可，可参考后面的 4.接收数据
+> 本文 `iotcloudc:subscribe()` 中的第一个参数订阅的仍然是一个自定义 topic
+> 订阅成功之后，在阿里云物联网平台会有显示，看下图
 
-   ```lua
-   sys.subscribe("iotcloud", function(cloudc,event,data,payload)
-       -- 注意，此处不是协程内，复杂操作发消息给协程内进行处理
-       if event == iotcloud.CONNECT then -- 云平台联上了
-           print("iotcloud","CONNECT", "云平台连接成功")
-           iotcloudc:subscribe("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/get") -- 订阅主题，用于下发消息
-       elseif event == iotcloud.RECEIVE then
-           print("iotcloud","topic", data, "payload", payload)
-           -- 用户处理代码
-       elseif event ==  iotcloud.OTA then
-           if data then
-               rtos.reboot()
-           end
-       elseif event == iotcloud.DISCONNECT then -- 云平台断开了
-           -- 用户处理代码
-       end
-   end)
-   ```
+```lua
+iotcloudc:subscribe("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/get") -- 订阅主题，用于下发消息
+```
 
-5. 完整代码
+![](./image/O5J7b9eApox5pqxYgaxc8s80nQf.png)
 
-   > 注意，记得修改参数！！！
+4\. 接收数据
 
-   ```lua
-   -- LuaTools需要PROJECT和VERSION这两个信息
-   PROJECT = "aliyun_yjym_yzc"
-   VERSION = "1.0.0"
-   
-   -- sys库是标配
-   _G.sys = require("sys")
-   --[[特别注意, 使用mqtt库需要下列语句]]
-   _G.sysplus = require("sysplus")
-   
-   local iotcloud = require("iotcloud")
-   
-   -- Air780E的AT固件默认会为开机键防抖, 导致部分用户刷机很麻烦
-   if rtos.bsp() == "EC618" and pm and pm.PWK_MODE then
-       pm.power(pm.PWK_MODE, false)
-   end
-   
-   -- 统一联网函数
-   sys.taskInit(function()
-       local device_id = mcu.unique_id():toHex()
-       -----------------------------
-       -- 统一联网函数, 可自行删减
-       ----------------------------
-       if wlan and wlan.connect then
-           -- wifi 联网, ESP32系列均支持
-           local ssid = "luatos1234"
-           local password = "12341234"
-           log.info("wifi", ssid, password)
-           -- TODO 改成自动配网
-           -- LED = gpio.setup(12, 0, gpio.PULLUP)
-           wlan.init()
-           wlan.setMode(wlan.STATION) -- 默认也是这个模式,不调用也可以
-           device_id = wlan.getMac()
-           wlan.connect(ssid, password, 1)
-       elseif mobile then
-           -- Air780E/Air600E系列
-           --mobile.simid(2) -- 自动切换SIM卡
-           -- LED = gpio.setup(27, 0, gpio.PULLUP)
-           device_id = mobile.imei()
-       elseif w5500 then
-           -- w5500 以太网, 当前仅Air105支持
-           w5500.init(spi.HSPI_0, 24000000, pin.PC14, pin.PC01, pin.PC00)
-           w5500.config() --默认是DHCP模式
-           w5500.bind(socket.ETH0)
-           -- LED = gpio.setup(62, 0, gpio.PULLUP)
-       elseif socket or mqtt then
-           -- 适配的socket库也OK
-           -- 没有其他操作, 单纯给个注释说明
-       else
-           -- 其他不认识的bsp, 循环提示一下吧
-           while 1 do
-               sys.wait(1000)
-               log.info("bsp", "本bsp可能未适配网络层, 请查证")
-           end
-       end
-       -- 默认都等到联网成功
-       sys.waitUntil("IP_READY")
-       sys.publish("net_ready", device_id)
-   end)
-   
-   sys.taskInit(function()
-       -- 等待联网
-       local ret, device_id = sys.waitUntil("net_ready")
-   
-       --------    以下接入方式根据自己需要修改,相关参数修改为自己的    ---------
-   
-       -- 阿里云  
-       -- 动态注册(免预注册)(一型一密)(仅企业版支持)
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",product_secret = "xxx"}) -- 企业版公共实例
-       -- 动态注册(预注册)(一型一密)
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",product_secret = "xxx"})                     -- 旧版公共实例
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",product_secret = "xxx"}) -- 新版公共实例
-       -- 密钥校验 (预注册)(一机一密)
-       -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",key = "xxx"})                    -- 旧版公共实例
-       iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",key = "xxx"})-- 新版公共实例
-   
-       if iotcloudc then
-           iotcloudc:connect()
-       end
-   
-   end)
-   
-   sys.subscribe("iotcloud", function(cloudc,event,data,payload)
-       -- 注意，此处不是协程内，复杂操作发消息给协程内进行处理
-       if event == iotcloud.CONNECT then -- 云平台联上了
-           print("iotcloud","CONNECT", "云平台连接成功")
-           iotcloudc:subscribe("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/get") -- 订阅主题，用于下发消息
-       elseif event == iotcloud.RECEIVE then
-           print("iotcloud","topic", data, "payload", payload)
-           -- 用户处理代码
-       elseif event ==  iotcloud.OTA then
-           if data then
-               rtos.reboot()
-           end
-       elseif event == iotcloud.DISCONNECT then -- 云平台断开了
-           -- 用户处理代码
-       end
-   end)
-   
-   -- 每隔2秒发布一次qos为1的消息到云平台
-   sys.taskInit(function()
-       while 1 do
-           sys.wait(2000)
-           if iotcloudc then
-               iotcloudc:publish("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/update", "hello world", 1) -- 上传数据
-           end
-       end
-   end)
-   
-   -- 用户代码已结束---------------------------------------------
-   -- 结尾总是这一句
-   sys.run()
-   -- sys.run()之后后面不要加任何语句!!!!!
-   ```
+> 接收统一使用了 `"iotcloud"` 消息进行通知，所以我们只需要订阅此系统消息即可
+
+```lua
+sys.subscribe("iotcloud", function(cloudc,event,data,payload)
+    -- 注意，此处不是协程内，复杂操作发消息给协程内进行处理
+    if event == iotcloud.CONNECT then -- 云平台联上了
+        print("iotcloud","CONNECT", "云平台连接成功")
+        iotcloudc:subscribe("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/get") -- 订阅主题，用于下发消息
+    elseif event == iotcloud.RECEIVE then
+        print("iotcloud","topic", data, "payload", payload)
+        -- 用户处理代码
+    elseif event ==  iotcloud.OTA then
+        if data then
+            rtos.reboot()
+        end
+    elseif event == iotcloud.DISCONNECT then -- 云平台断开了
+        -- 用户处理代码
+    end
+end)
+```
+
+5\. 完整代码
+
+> 注意，记得修改参数！！！
+
+```lua
+-- LuaTools需要PROJECT和VERSION这两个信息
+PROJECT = "aliyun_yjym_yzc"
+VERSION = "1.0.0"
+
+-- sys库是标配
+_G.sys = require("sys")
+--[[特别注意, 使用mqtt库需要下列语句]]
+_G.sysplus = require("sysplus")
+
+local iotcloud = require("iotcloud")
+
+-- Air780E的AT固件默认会为开机键防抖, 导致部分用户刷机很麻烦
+if rtos.bsp() == "EC618" and pm and pm.PWK_MODE then
+    pm.power(pm.PWK_MODE, false)
+end
+
+-- 统一联网函数
+sys.taskInit(function()
+    local device_id = mcu.unique_id():toHex()
+    -----------------------------
+    -- 统一联网函数, 可自行删减
+    ----------------------------
+    if wlan and wlan.connect then
+        -- wifi 联网, ESP32系列均支持
+        local ssid = "luatos1234"
+        local password = "12341234"
+        log.info("wifi", ssid, password)
+        -- TODO 改成自动配网
+        -- LED = gpio.setup(12, 0, gpio.PULLUP)
+        wlan.init()
+        wlan.setMode(wlan.STATION) -- 默认也是这个模式,不调用也可以
+        device_id = wlan.getMac()
+        wlan.connect(ssid, password, 1)
+    elseif mobile then
+        -- Air780E/Air600E系列
+        --mobile.simid(2) -- 自动切换SIM卡
+        -- LED = gpio.setup(27, 0, gpio.PULLUP)
+        device_id = mobile.imei()
+    elseif w5500 then
+        -- w5500 以太网, 当前仅Air105支持
+        w5500.init(spi.HSPI_0, 24000000, pin.PC14, pin.PC01, pin.PC00)
+        w5500.config() --默认是DHCP模式
+        w5500.bind(socket.ETH0)
+        -- LED = gpio.setup(62, 0, gpio.PULLUP)
+    elseif socket or mqtt then
+        -- 适配的socket库也OK
+        -- 没有其他操作, 单纯给个注释说明
+    else
+        -- 其他不认识的bsp, 循环提示一下吧
+        while 1 do
+            sys.wait(1000)
+            log.info("bsp", "本bsp可能未适配网络层, 请查证")
+        end
+    end
+    -- 默认都等到联网成功
+    sys.waitUntil("IP_READY")
+    sys.publish("net_ready", device_id)
+end)
+
+sys.taskInit(function()
+    -- 等待联网
+    local ret, device_id = sys.waitUntil("net_ready")
+
+    --------    以下接入方式根据自己需要修改,相关参数修改为自己的    ---------
+
+    -- 阿里云  
+    -- 动态注册(免预注册)(一型一密)(仅企业版支持)
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",product_secret = "xxx"}) -- 企业版公共实例
+    -- 动态注册(预注册)(一型一密)
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",product_secret = "xxx"})                     -- 旧版公共实例
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",product_secret = "xxx"}) -- 新版公共实例
+    -- 密钥校验 (预注册)(一机一密)
+    -- iotcloudc = iotcloud.new(iotcloud.ALIYUN,{produt_id = "xxx",device_name = "xxx",key = "xxx"})                    -- 旧版公共实例
+    iotcloudc = iotcloud.new(iotcloud.ALIYUN,{instance_id = "xxx",produt_id = "xxx",device_name = "xxx",key = "xxx"})-- 新版公共实例
+
+    if iotcloudc then
+        iotcloudc:connect()
+    end
+
+end)
+
+sys.subscribe("iotcloud", function(cloudc,event,data,payload)
+    -- 注意，此处不是协程内，复杂操作发消息给协程内进行处理
+    if event == iotcloud.CONNECT then -- 云平台联上了
+        print("iotcloud","CONNECT", "云平台连接成功")
+        iotcloudc:subscribe("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/get") -- 订阅主题，用于下发消息
+    elseif event == iotcloud.RECEIVE then
+        print("iotcloud","topic", data, "payload", payload)
+        -- 用户处理代码
+    elseif event ==  iotcloud.OTA then
+        if data then
+            rtos.reboot()
+        end
+    elseif event == iotcloud.DISCONNECT then -- 云平台断开了
+        -- 用户处理代码
+    end
+end)
+
+-- 每隔2秒发布一次qos为1的消息到云平台
+sys.taskInit(function()
+    while 1 do
+        sys.wait(2000)
+        if iotcloudc then
+            iotcloudc:publish("/"..iotcloudc.product_id.."/"..iotcloudc.device_name.."/user/update", "hello world", 1) -- 上传数据
+        end
+    end
+end)
+
+-- 用户代码已结束---------------------------------------------
+-- 结尾总是这一句
+sys.run()
+-- sys.run()之后后面不要加任何语句!!!!!
+```
 
 #### 6.4.4 运行结果展示
 
-1. 设备日志
+1\. 设备日志
 
-   ![](./image/UJjXbgOIUoAWR9xkx1WcNR8inZc.png)
+![](./image/UJjXbgOIUoAWR9xkx1WcNR8inZc.png)
 
-2. 云平台效果
+2\. 云平台效果
 
-   ![](./image/Kv9CbhLUdoK0tvxyRdJcr9A4n6g.png)
+![](./image/Kv9CbhLUdoK0tvxyRdJcr9A4n6g.png)
 
-3. 上行数据效果
+3\. 上行数据效果
 
-   ![](./image/JHOEbfxWPoidRCxRTtvcSLrznFc.png)
+![](./image/JHOEbfxWPoidRCxRTtvcSLrznFc.png)
 
-4. 下发数据效果
+4\. 下发数据效果
 
-   > 通过 Luatools 工具查看日志即可
+> 通过 Luatools 工具查看日志即可
 
-   **发布消息：**
+**发布消息：**
 
-   ![](./image/GPCWbewzHoKxCmx1n44cPailnae.png)
+![](./image/GPCWbewzHoKxCmx1n44cPailnae.png)
 
-   **接收消息：**
+**接收消息：**
 
-   ![](./image/Ee1AbkGm2oOF2OxQBHkc169dngc.png)
+![](./image/Ee1AbkGm2oOF2OxQBHkc169dngc.png)
 
 ### 6.5 阿里云 OTA 升级
 
@@ -946,35 +949,35 @@ iotcloud 同时支持新版公共实例 / 旧版公共实例 / 企业实例，�
 > 本次 demo 以一型一密（预注册）的 demo 为例。
 > 同时需要注意，Luatools 工具只有版本 2.1.89 以上支持生成 bin 文件差分包，低版本仅支持生成 sota 文件
 
-1. 只升级脚本，差分包制作流程如下：
+1\. 只升级脚本，差分包制作流程如下：
 
-   > 需要注意，升级前的脚本版本号 < 升级后的脚本版本号，而且我们此时模块中烧录的是升级前的脚本，不要搞错了。
+> 需要注意，升级前的脚本版本号 < 升级后的脚本版本号，而且我们此时模块中烧录的是升级前的脚本，不要搞错了。
 
-   固件及 demo 到前面的 源码及固件 章节下载，下载完成后根据下方图片进行操作，生成量产文件。
+固件及 demo 到前面的 源码及固件 章节下载，下载完成后根据下方图片进行操作，生成量产文件。
 
-   ![](./image/YoZmbZ2jRo3DMJx3uFYcLLGpnEg.png)
+![](./image/YoZmbZ2jRo3DMJx3uFYcLLGpnEg.png)
 
-   在选择的保存路径下会自动生成 **SOC 量产及远程升级文件\EC618** 文件夹，下图中箭头位置即为我们需要的差分包文件。
+在选择的保存路径下会自动生成 **SOC 量产及远程升级文件\EC618** 文件夹，下图中箭头位置即为我们需要的差分包文件。
 
-   ![ ](./image/ARpubdNF2oR24cxUeb2chKQXnhd.png)
+![ ](./image/ARpubdNF2oR24cxUeb2chKQXnhd.png)
 
-2. 需要升级底层 CORE，差分包制作流程如下：
+2\. 需要升级底层 CORE，差分包制作流程如下：
 
-   > 需要注意，升级前的固件版本号 <= 升级后的固件版本号
+> 需要注意，升级前的固件版本号 <= 升级后的固件版本号
 
-   a. 生成新固件版本的量产固件
+a. 生成新固件版本的量产固件
 
-   ![](./image/JxKHbey8RoxznDxZOsVctKTZnId.png)
+![](./image/JxKHbey8RoxznDxZOsVctKTZnId.png)
 
-   ![](./image/G0HMbhD07oQeboxXnaXcMQ52nwh.png)
+![](./image/G0HMbhD07oQeboxXnaXcMQ52nwh.png)
 
-   b. 根据新旧固件生成差分包
+b. 根据新旧固件生成差分包
 
-   ![](./image/WFHCb2QmcoEQcGxI6RAc7sTTnCg.png)
+![](./image/WFHCb2QmcoEQcGxI6RAc7sTTnCg.png)
 
-   ![](./image/Wrwob7cEEoTn4yxWErZcALzPnzf.png)
+![](./image/Wrwob7cEEoTn4yxWErZcALzPnzf.png)
 
-   ![](./image/AQGNbcZZzowLK3xmlc2crsP1n3c.png)
+![](./image/AQGNbcZZzowLK3xmlc2crsP1n3c.png)
 
 #### 6.5.3 阿里云平台上传差分包
 
@@ -990,13 +993,13 @@ iotcloud 同时支持新版公共实例 / 旧版公共实例 / 企业实例，�
 
 #### 6.5.5 升级完成
 
-1. 设备日志
+1\. 设备日志
 
-   ![](./image/QEHLbtjPtotaAoxBoCoc1cKknWd.png)
+![](./image/QEHLbtjPtotaAoxBoCoc1cKknWd.png)
 
-2. 云平台效果
+2\. 云平台效果
 
-   ![](./image/GtlAbysYdoXFddxpmKdcphoQnTh.png)
+![](./image/GtlAbysYdoXFddxpmKdcphoQnTh.png)
 
 ## 七、总结
 
@@ -1016,38 +1019,36 @@ MQTT（Message Queuing Telemetry Transport）是一种轻量级的消息传输�
 
 在 MQTT 中，消息的传输质量是通过 QoS（Quality of Service，服务质量）等级来定义的。QoS 定义了消息的传递可靠性，共有三个等级：
 
-1. **QoS 0（最多传递一次）**：
+1\. **QoS 0（最多传递一次）**：
 
-   - 最少传递一次：消息可能会丢失，也可能多次传递。
+- 最少传递一次：消息可能会丢失，也可能多次传递。
 
-   - 适用于非关键数据，或者允许数据丢失的场景。
+- 适用于非关键数据，或者允许数据丢失的场景。
 
+2\. **QoS 1（至少传递一次）**：
 
-2. **QoS 1（至少传递一次）**：
+- 至少传递一次：确保消息至少从发布者传输到服务器，并且至少传递给每个订阅者一次。
 
-   - 至少传递一次：确保消息至少从发布者传输到服务器，并且至少传递给每个订阅者一次。
+- 如果传输过程中出现错误，客户端会重新发送消息。
 
-   - 如果传输过程中出现错误，客户端会重新发送消息。
+- 适用于需要确认数据已传输但可以容忍一定程度数据丢失的场景。
 
-   - 适用于需要确认数据已传输但可以容忍一定程度数据丢失的场景。
+3\. **QoS 2（确保传递一次）**：
 
+- 确保传递一次：确保消息从发布者传输到服务器，并且至少传递给每个订阅者一次，而且在传输过程中不会被重复传递。
 
-3. **QoS 2（确保传递一次）**：
+- 客户端会在消息确认之后才能接收到下一个消息。
 
-   - 确保传递一次：确保消息从发布者传输到服务器，并且至少传递给每个订阅者一次，而且在传输过程中不会被重复传递。
-
-   - 客户端会在消息确认之后才能接收到下一个消息。
-
-   - 适用于对数据可靠性要求极高的场景，如关键数据传输。
+- 适用于对数据可靠性要求极高的场景，如关键数据传输。
 
 
 选择适当的 QoS 级别取决于应用场景对数据可靠性和网络资源利用的要求。在设计物联网应用时，通常需要根据设备的能力、网络条件以及应用的容忍度来选择合适的 QoS 设置。
 
 ## 九、常见问题
 
-1. 如何实现数据的上传和接收？
+1\. 如何实现数据的上传和接收？
 
-   > 数据的上传和接收是通过订阅和发布消息实现的。在代码中，需要调用 `iotcloudc:publish()` 和 `iotcloudc:subscribe()` 方法，分别用于发布和订阅消息。
+> 数据的上传和接收是通过订阅和发布消息实现的。在代码中，需要调用 `iotcloudc:publish()` 和 `iotcloudc:subscribe()` 方法，分别用于发布和订阅消息。
 
 ## 给读者的话
 
