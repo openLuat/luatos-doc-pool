@@ -24,3 +24,7 @@
   letter-spacing: -.01em;
   margin: 1.25em 0
 }
+
+td, th {
+  border: 0.05em solid;
+}
