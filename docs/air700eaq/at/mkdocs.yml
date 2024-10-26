@@ -17,6 +17,13 @@ nav:
   - 硬件指南:
     - 典型硬件设计指南:
       - 简介: hardware/design/index.md
+      - 典型应用参考设计: hardware/design/reference.md
+      - 开机启动及外围电路: hardware/design/poweron.md
+      - 供电设计及选型推荐: hardware/design/power.md
+      - 串口电路设计指导: hardware/design/uart.md
+      - SIM卡电路设计指导: hardware/design/sim.md
+      #- LED状态灯电路: hardware/design/led.md
+      - 天线电路设计指导: hardware/design/ant.md
   - 软件指南:
     - 介绍: app/index.md
     - AT指令手册: app/at_command.md

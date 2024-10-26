@@ -344,9 +344,9 @@ ATI
 
 ![](image/OrGVbVSHqovSRhxgPwpcFYgGn1p.png)
 
-### 6.4 FTP 断电续传流程举例
+### 6.4 FTP 断点续传流程举例
 
-本例使用上面 PUT 流程上传的文件来演示断电续传
+本例使用上面 PUT 流程上传的文件来演示断点续传
 
 ```
 ATI

@@ -1,22 +1,22 @@
 ## 一、加解密概述
 
-加解密算法是保证数据安全的基础技术，无论是在数据传输、存储，还是用户身份验证中，都起着至关重要的作用。随着互联网的发展和信息安全威胁的增加，了解并掌握常用的加解密算法已经成为开发者和安全从业者的必修课。
+加解密算法是保证数据安全的基础技术，无论是在数据传输、存储，还是用户身份验证中，都起着至关重要的作用.随着互联网的发展和信息安全威胁的增加，了解并掌握常用的加解密算法已经成为开发者和安全从业者的必修课.
 
-常见的 15 种加密解密算法分别是：散列哈希[MD5、SHA1、CRC32]，对称[DES，3DES（TDEA、Triple DES），AES、，Blowfish，RC4、RC5，IDEA]，Base64、Rabbit、Escape。
+常见的 15 种加密解密算法分别是：散列哈希[MD5、SHA1、CRC32]，对称[DES，3DES（TDEA、Triple DES），AES、，Blowfish，RC4、RC5，IDEA]，Base64、Rabbit、Escape.
 
 【三种分类】
 
-1、对称加密：密钥只有一个，解密、解密都是这个密码，加解密速度快，典型的对称加密有 DES、AES、RC4 等
+1、对称加密：对称加密是指加密和解密使用同一个密钥的加密方法.由于加密和解密过程中的密钥相同，因此需要在通信双方之间安全地共享密钥.对称加密的速度较快，适合用于大量数据的加密
 
-2、非对称加密:密钥成对出现，分别为公钥和私钥，从公钥无法推知私钥，反之，从私钥也无法推知公钥，加密和解密使用不同的密钥，公钥加密需要私钥解密，反之，私钥加密需要公钥解密。非对称加密速度较慢，典型的非对称算法有：RSA,DSA,DSS.
+2、非对称加密:非对称加密算法采用一对密钥：公钥和私钥.公钥用于加密，私钥用于解密.由于加密和解密使用不同的密钥，非对称加密算法解决了密钥分发的问题，是当前加密系统中安全性最高的加密技术之一.
 
 3、Hash 算法，这是一种不可逆的算法，它常用于验证数据的完整性
 
 ## 二、演示功能概述
 
-本文章通过 Air780 的核心板烧录 LuatOS 示例代码([点此链接查看 crypto 的 demo 例子](https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/crypto)),来演示有关加解密的各种 API 的功能。
+本文章通过 Air780 的核心板烧录 LuatOS 示例代码([点此链接查看 crypto 的 demo 例子](https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/crypto)),来演示有关加解密的各种 API 的功能.
 
-API 的具体用法,读者可以参考本文中的"五、API 说明"。
+API 的具体用法,读者可以参考本文中的"五、API 说明".
 
 ## 三、硬件准备
 
@@ -28,40 +28,40 @@ API 的具体用法,读者可以参考本文中的"五、API 说明"。
 
 淘宝购买链接：[Air780E 核心板淘宝购买链接](https://item.taobao.com/item.htm?id=693774140934&pisk=f1eiwOqL25l1_HYiV6D1ize3wN5d5FMjRrpxkx3VT2uIHCCskWm4kysffAEqor4KRRIskGT0ooqi_coq7DWE000qbVr2mmzKQjNtkV3mnoalvaBRelZshA7RyTFdpD4xQco2_VS2Tcnvc89h5lZshq-pu_FUfEDVVdOmgrkET0ir3mkq_MDEmmM2QjJaY2uI0UGAoNueWRjiw4YTC-_opNr-zluaXleFpfR_X2fhTJVn94W--KJ4KcqQreCDEs3zNVh-DyWpIxqEmyc8savgoor7gX2D7GUzmW4jBJS2_4PTWjestFRZqA0iaRlwjdkIgW2nBR7XNkEn7bDL96_tMA4gN4GNOwa0xVU4IX8G4iReapZyhDSYLIOj_DinyhbSB2IHjbEhxMA51foIXaIhxItMPKJlyMjHNEGZAcQR.&spm=a1z10.5-c-s.w4002-24045920841.33.639f1fd1YrS4b6&skuId=5098266470883) ；
 
-此核心板的详细使用说明参考：[Air780E 产品手册](https://docs.openluat.com/air780e/product/) 中的 << 开发板 Core_Air780E 使用说明 VX.X.X.pdf>>，写这篇文章时最新版本的使用说明为：开发板 Core_Air780E 使用说明 V1.0.5.pdf ；核心板使用过程中遇到任何问题，可以直接参考这份使用说明 pdf 文档。
+此核心板的详细使用说明参考：[Air780E 产品手册](https://docs.openluat.com/air780e/product/) 中的 << 开发板 Core_Air780E 使用说明 VX.X.X.pdf>>，写这篇文章时最新版本的使用说明为：开发板 Core_Air780E 使用说明 V1.0.5.pdf ；核心板使用过程中遇到任何问题，可以直接参考这份使用说明 pdf 文档.
 
 ### 3.2 SIM 卡
 
-中国大陆环境下，可以上网的 sim 卡,一般来说，使用移动，电信，联通的物联网卡或者手机卡都行；
+中国大陆环境下，可以上网的 sim 卡,一般来说，使用移动，电信，联通的物联网卡或者手机卡都行.
 
 ### 3.3 PC 电脑
 
-WINDOWS 系统，其他暂无特别要求；
+WINDOWS 系统.
 
 ### 3.4 数据通信线
 
-USB 数据线，暂无特别要求；
+USB 数据线.
 
 ## 四、软件环境
 
 ### 4.1 Luatools 工具
 
-要想烧录 LuatOS 到 4G 模组中，需要用到合宙的强大的调试工具：Luatools；
+要想烧录 LuatOS 到 4G 模组中，需要用到合宙的强大的调试工具：Luatools
 
-详细使用说明参考：[Luatools 工具使用说明](https://docs.openluat.com/Luatools/) 。
+详细使用说明参考：[Luatools 工具使用说明](https://docs.openluat.com/Luatools/) .
 
 Luatools 工具集具备以下几大核心功能：
 
-- 一键获取最新固件：自动连接合宙服务器，轻松下载最新的合宙模组固件。
-- 固件与脚本烧录：便捷地将固件及脚本文件烧录至目标模组中。
-- 串口日志管理：实时查看模组通过串口输出的日志信息，并支持保存功能。
-- 串口调试助手：提供简洁的串口调试界面，满足基本的串口通信测试需求。
+- 一键获取最新固件：自动连接合宙服务器，轻松下载最新的合宙模组固件.
+- 固件与脚本烧录：便捷地将固件及脚本文件烧录至目标模组中.
+- 串口日志管理：实时查看模组通过串口输出的日志信息，并支持保存功能.
+- 串口调试助手：提供简洁的串口调试界面，满足基本的串口通信测试需求.
 
-Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools_v3.exe 运行，出现如下界面，就代表 Luatools 安装成功了.
+Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools_v3.exe 即可运行.
 
 ### 4.2 准备需要烧录的代码
 
-首先要说明一点： 脚本代码， 要和固件的 soc 文件一起烧录。
+首先要说明一点： 脚本代码， 要和固件的 soc 文件一起烧录.
 
 #### 4.2.1 **烧录的底层固件文件**
 
@@ -106,11 +106,11 @@ Air780E 的底层固件在 Luatools 解压后目录的 **LuatOS-SoC_V1112_EC618_
 | string<br/>         | 计算得出的 md5 值的 hex 字符串<br/> |
 
 **例子**
-
+```lua
 -- 计算字符串"abc"的 md5
 
 log.info("md5", crypto.md5("abc"))
-
+```
 ---
 
 ### 5.2 crypto.hmac_md5(str, key)
@@ -131,11 +131,11 @@ log.info("md5", crypto.md5("abc"))
 | string<br/>         | 计算得出的 hmac_md5 值的 hex 字符串<br/> |
 
 **例子**
-
+```lua
 -- 计算字符串"abc"的 hmac_md5
 
 log.info("hmac_md5", crypto.hmac_md5("abc", "1234567890"))
-
+```
 ---
 
 ### 5.3 crypto.sha1(str)
@@ -155,11 +155,11 @@ log.info("hmac_md5", crypto.hmac_md5("abc", "1234567890"))
 | string<br/>         | 计算得出的 sha1 值的 hex 字符串<br/> |
 
 **例子**
-
+```lua
 -- 计算字符串"abc"的 sha1
 
 log.info("sha1", crypto.sha1("abc"))
-
+```
 ---
 
 ### 5.4 crypto.hmac_sha1(str, key)
@@ -180,11 +180,11 @@ log.info("sha1", crypto.sha1("abc"))
 | string<br/>         | 计算得出的 hmac_sha1 值的 hex 字符串<br/> |
 
 **例子**
-
+```lua
 -- 计算字符串"abc"的 hmac_sha1
 
 log.info("hmac_sha1", crypto.hmac_sha1("abc", "1234567890"))
-
+```
 ---
 
 ### 5.5 crypto.sha256(str)
@@ -204,11 +204,11 @@ log.info("hmac_sha1", crypto.hmac_sha1("abc", "1234567890"))
 | string<br/>         | 计算得出的 sha256 值的 hex 字符串<br/> |
 
 **例子**
-
+```lua
 -- 计算字符串"abc"的 sha256
 
 log.info("sha256", crypto.sha256("abc"))
-
+```
 ---
 
 ### 5.6 crypto.hmac_sha256(str, key)
@@ -229,11 +229,11 @@ log.info("sha256", crypto.sha256("abc"))
 | string<br/>         | 计算得出的 hmac_sha256 值的 hex 字符串<br/> |
 
 **例子**
-
+```lua
 -- 计算字符串"abc"的 hmac_sha256
 
 log.info("hmac_sha256", crypto.hmac_sha256("abc", "1234567890"))
-
+```
 ---
 
 ### 5.7 crypto.sha512(str)
@@ -253,11 +253,11 @@ log.info("hmac_sha256", crypto.hmac_sha256("abc", "1234567890"))
 | string<br/>         | 计算得出的 sha512 值的 hex 字符串<br/> |
 
 **例子**
-
+```lua
 -- 计算字符串"abc"的 sha512
 
 log.info("sha512", crypto.sha512("abc"))
-
+```
 ---
 
 ### 5.8 crypto.hmac_sha512(str, key)
@@ -278,11 +278,11 @@ log.info("sha512", crypto.sha512("abc"))
 | string<br/>         | 计算得出的 hmac_sha512 值的 hex 字符串<br/> |
 
 **例子**
-
+```lua
 -- 计算字符串"abc"的 hmac_sha512
 
 log.info("hmac_sha512", crypto.hmac_sha512("abc", "1234567890"))
-
+```
 ---
 
 ### 5.9 crypto.base64_encode(data)
@@ -302,7 +302,7 @@ log.info("hmac_sha512", crypto.hmac_sha512("abc", "1234567890"))
 | string<br/>         | 编码后的数据<br/> |
 
 **例子**
-
+```lua
 -- 本函数与 string.toBase64 是同一个
 
 local data = "123"
@@ -314,7 +314,7 @@ log.info("base64", "encode", data, bdata)
 data = crypto.base64_decode(data)
 
 log.info("base64", "decode", data, bdata)
-
+```
 ---
 
 ### 5.10 crypto.base64_decode(data)
@@ -334,7 +334,7 @@ log.info("base64", "decode", data, bdata)
 | string<br/>         | 解码后的数据<br/> |
 
 **例子**
-
+```lua
 -- 本函数与 string.fromBase64 是同一个
 
 local data = "123"
@@ -346,7 +346,7 @@ log.info("base64", "encode", data, bdata)
 data = crypto.base64_decode(data)
 
 log.info("base64", "decode", data, bdata)
-
+```
 ---
 
 ### 5.11 crypto.cipher_list()
@@ -364,7 +364,7 @@ log.info("base64", "decode", data, bdata)
 | table<br/>          | 本固件支持的 cipher 列表,字符串数组<br/> |
 
 **例子**
-
+```lua
 -- 本 API 于 2022.07.27 添加
 
 local ciphers = crypto.cipher_list()
@@ -374,7 +374,7 @@ if ciphers then
 log.info("crypto", "ciphers list", json.encode(ciphers))
 
 end
-
+```
 ---
 
 ### 5.12 crypto.cipher_suites()
@@ -392,7 +392,7 @@ end
 | table<br/>          | 本固件支持的 cipher suites 列表,字符串数组<br/> |
 
 **例子**
-
+```lua
 -- 本 API 于 2022.11.16 添加
 
 local suites = crypto.cipher_suites()
@@ -402,7 +402,7 @@ if suites then
 log.info("crypto", "ciphers suites", json.encode(suites))
 
 end
-
+```
 ---
 
 ### 5.13 crypto.cipher_encrypt(type, padding, str, key, iv)
@@ -426,13 +426,13 @@ end
 | string<br/>         | 加密后的字符串<br/> |
 
 **例子**
-
+```lua
 -- 计算 AES
 
 local data = crypto.cipher_encrypt("AES-128-ECB", "PKCS7", "1234567890123456", "1234567890123456")
 
 local data2 = crypto.cipher_encrypt("AES-128-CBC", "PKCS7", "1234567890123456", "1234567890123456", "1234567890666666")
-
+```
 ---
 
 ### 5.14 crypto.cipher_decrypt(type, padding, str, key, iv)
@@ -456,7 +456,7 @@ local data2 = crypto.cipher_encrypt("AES-128-CBC", "PKCS7", "1234567890123456", 
 | string<br/>         | 解密后的字符串<br/> |
 
 **例子**
-
+```lua
 -- 用 AES 加密,然后用 AES 解密
 
 local data = crypto.cipher_encrypt("AES-128-ECB", "PKCS7", "1234567890123456", "1234567890123456")
@@ -466,7 +466,7 @@ local data2 = crypto.cipher_decrypt("AES-128-ECB", "PKCS7", data, "1234567890123
 -- data 的 hex 为 757CCD0CDC5C90EADBEEECF638DD0000
 
 -- data2 的值为 1234567890123456
-
+```
 ---
 
 ### 5.15 crypto.crc16(method, data, poly, initial, finally, inReversem outReverse)
@@ -492,11 +492,11 @@ local data2 = crypto.cipher_decrypt("AES-128-ECB", "PKCS7", data, "1234567890123
 | int<br/>            | 对应的 CRC16 值<br/> |
 
 **例子**
-
+```lua
 -- 计算 CRC16
 
 local crc = crypto.crc16("")
-
+```
 ---
 
 ### 5.16 crypto.crc16_modbus(data, start)
@@ -517,7 +517,7 @@ local crc = crypto.crc16("")
 | int<br/>            | 对应的 CRC16 值<br/> |
 
 **例子**
-
+```lua
 -- 计算 CRC16 modbus
 
 local crc = crypto.crc16_modbus(data)
@@ -525,7 +525,7 @@ local crc = crypto.crc16_modbus(data)
 -- 2023.11.06 新增初始值设置
 
 crc = crypto.crc16_modbus(data, 0xFFFF)
-
+```
 ---
 
 ### 5.17 crypto.crc32(data)
@@ -545,11 +545,11 @@ crc = crypto.crc16_modbus(data, 0xFFFF)
 | int<br/>            | 对应的 CRC32 值<br/> |
 
 **例子**
-
+```lua
 -- 计算 CRC32
 
 local crc = crypto.crc32(data)
-
+```
 ---
 
 ### 5.18 crypto.crc8(data, poly, start, revert)
@@ -572,13 +572,13 @@ local crc = crypto.crc32(data)
 | int<br/>            | 对应的 CRC8 值<br/> |
 
 **例子**
-
+```lua
 -- 计算 CRC8
 
 local crc = crypto.crc8(data)
 
 local crc = crypto.crc8(data, 0x31, 0xff, false)
-
+```
 ---
 
 ### 5.19 crypto.crc7(data, poly, start)
@@ -600,13 +600,13 @@ local crc = crypto.crc8(data, 0x31, 0xff, false)
 | int<br/>            | 对应的 CRC7 值<br/> |
 
 **例子**
-
+```lua
 -- 计算 CRC7, 本 API 于 2023.10.07 新增
 
 local crc = crypto.crc7(data)
 
 local crc = crypto.crc7(data, 0x31, 0xff)
-
+```
 ---
 
 ### 5.20 crypto.checksum(data, mode)
@@ -627,7 +627,7 @@ local crc = crypto.crc7(data, 0x31, 0xff)
 | int<br/>            | checksum 值,校验和<br/> |
 
 **例子**
-
+```lua
 -- 本函数在 2022.12.28 添加
 
 -- 单纯计算 checksum 值
@@ -635,7 +635,7 @@ local crc = crypto.crc7(data, 0x31, 0xff)
 local ck = crypto.checksum("OK")
 
 log.info("checksum", "ok", string.format("%02X", ck))-- 第二个参数 mode 在 2023.5.23 日添加
-
+```
 ---
 
 ### 5.21 crypto.trng(len)
@@ -655,13 +655,13 @@ log.info("checksum", "ok", string.format("%02X", ck))-- 第二个参数 mode 在
 | string<br/>         | 指定随机数字符串<br/> |
 
 **例子**
-
+```lua
 -- 生成 32 位随机数 ir
 
 local r = crypto.trng(4)
 
 local _, ir = pack.unpack(r, "I")
-
+```
 ---
 
 ### 5.22 crypto.totp(secret,time)
@@ -682,11 +682,13 @@ local _, ir = pack.unpack(r, "I")
 | int<br/>            | 计算得出的六位数结果 计算失败返回 nil<br/> |
 
 **例子**
-
+```lua
 --使用当前系统时间计算
 
 local otp = crypto.totp("asdfassdfasdfass")
 
+local r = crypto.totp("VK54ZXPO74ISEM2E",1646796576)
+```
 ---
 
 ### 5.23 crypto.md_file(tp, path, hmac)
@@ -708,7 +710,7 @@ local otp = crypto.totp("asdfassdfasdfass")
 | string<br/>         | HEX 过的 hash 值,若失败会无返回值<br/> |
 
 **例子**
-
+```lua
 -- 无 hmac 的 hash 值
 
 log.info("md5", crypto.md_file("MD5", "/luadb/logo.jpg"))
@@ -724,7 +726,7 @@ log.info("hmac_md5", crypto.md_file("MD5", "/luadb/logo.jpg", "123456"))
 log.info("hmac_sha1", crypto.md_file("SHA1", "/luadb/logo.jpg", "123456"))
 
 log.info("hmac_sha256", crypto.md_file("SHA256", "/luadb/logo.jpg", "123456"))
-
+```
 ---
 
 ### 5.24 crypto.md(tp, data, hmac)
@@ -746,7 +748,7 @@ log.info("hmac_sha256", crypto.md_file("SHA256", "/luadb/logo.jpg", "123456"))
 | string<br/>         | HEX 过的 hash 值,若失败会无返回值<br/> |
 
 **例子**
-
+```lua
 -- 无 hmac 的 hash 值
 
 log.info("md5", crypto.md("MD5", "1234567890"))
@@ -762,7 +764,7 @@ log.info("hmac_md5", crypto.md("MD5", "1234567890", "123456"))
 log.info("hmac_sha1", crypto.md("SHA1", "1234567890", "123456"))
 
 log.info("hmac_sha256", crypto.md("SHA256", "1234567890", "123456"))
-
+```
 ---
 
 ### 5.25 crypto.hash_init(tp)
@@ -783,7 +785,7 @@ log.info("hmac_sha256", crypto.md("SHA256", "1234567890", "123456"))
 | userdata<br/>       | 成功返回一个数据结构,否则返回 nil<br/> |
 
 **例子**
-
+```lua
 -- 无 hmac 的 hash stream
 
 local md5_stream = crypto.hash_init("MD5")
@@ -799,7 +801,7 @@ local md5_stream = crypto.hash_init("MD5", "123456")
 local sha1_stream = crypto.hash_init("SHA1", "123456")
 
 local sha256_stream = crypto.hash_init("SHA256", "123456")
-
+```
 ---
 
 ### 5.26 crypto.hash_update(stream, data)
@@ -819,9 +821,9 @@ local sha256_stream = crypto.hash_init("SHA256", "123456")
 无
 
 **例子**
-
+```lua
 crypto.hash_update(stream, "OK")
-
+```
 ---
 
 ### 5.27 crypto.hash_finish(stream)
@@ -841,9 +843,9 @@ crypto.hash_update(stream, "OK")
 | string<br/>         | 成功返回计算得出的流式 hash 值的 hex 字符串，失败无返回<br/> |
 
 **例子**
-
+```lua
 local hashResult = crypto.hash_finish(stream)
-
+```
 ---
 
 ## 六、功能验证
@@ -852,17 +854,17 @@ local hashResult = crypto.hash_finish(stream)
 
 #### 6.1.1 **正确连接电脑和 4G 模组电路板**
 
-使用带有数据通信功能的数据线，不要使用仅有充电功能的数据线；
+使用带有数据通信功能的数据线，不要使用仅有充电功能的数据线.
 
 #### 6.1.2 **识别 4G 模组的 boot 引脚**
 
-在下载之前，要用模组的 boot 引脚触发下载， 也就是说，要把 4G 模组的 boot 引脚拉到 1.8v，或者直接把 boot 引脚和 VDD_EXT 引脚相连。我们要在按下 BOOT 按键时让模块开机，就可以进入下载模式了。
+在下载之前，要用模组的 boot 引脚触发下载， 也就是说，要把 4G 模组的 boot 引脚拉到 1.8v，或者直接把 boot 引脚和 VDD_EXT 引脚相连.我们要在按下 BOOT 按键时让模块开机，就可以进入下载模式了.
 
 具体到 Air780E 开发板:
 
-1、当我们模块没开机时，按着 BOOT 键然后长按 PWR 开机。
+1、当我们模块没开机时，按着 BOOT 键然后长按 POW 开机.
 
-2、当我们模块开机时，按着 BOOT 键然后点按重启键即可。
+2、当我们模块开机时，按着 BOOT 键然后点按重启键即可.
 
 ![](image/G81fbtuSIov7ATxJfiPcGeNxnuB.png)
 
@@ -872,19 +874,19 @@ local hashResult = crypto.hash_finish(stream)
 
 ![](image/SgdGbPfsmoFkp1xkJgKcCHPYnSb.png)
 
-当设备管理器出现了 3 个连续数字的 com 端口，这时候， 硬件连接上就绪状态，恭喜你，可以进行烧录了！
+
 
 #### 6.1.4 用 Luatools 工具烧录
 
 - 新建项目
 
-首先，确保你的 Luatools 的版本，大于等于 3.0.6 版本的。
+首先，确保你的 Luatools 的版本，大于等于 3.0.6 版本的.
 
 在 Luatools 的左上角上有版本显示的，如图所示：
 
 ![](image/PzmgbypEuoRzLIxKHSlc2zfFnXg.png)
 
-Luatools 版本没问题的话， 就点击 LuaTOols 右上角的“项目管理测试”按钮，如下图所示：
+Luatools 版本没问题的话， 就点击 Luatools 右上角的“项目管理测试”按钮，如下图所示：
 
 ![](image/KROLbkx5joD6ZbxpM0OcIUNdnab.png)
 
@@ -894,19 +896,17 @@ Luatools 版本没问题的话， 就点击 LuaTOols 右上角的“项目管理
 
 - 开始烧录
 
-选择 780E 板子对应的底层 core 和刚改的 main.lua 脚本文件。下载到板子中。
+选择 780E 板子对应的底层 core 和刚改的 main.lua 脚本文件.下载到板子中.
 
 ![](image/NEKEb0ZfdoAqBVx20bDcXzeFnON.png)
 
-点击下载后，我们需要进入 boot 模式才能正常下载。
+点击下载后，我们需要进入 boot 模式才能正常下载.
 
 如果没进入 boot 模式会出现下图情况:
 
 ![](image/MBqKbcmqoooaOyxrT49c7bVDnzd.png)
 
-当我们模块没开机时，按着 BOOT 键然后长按 PWR 开机,进入下载。
-
-当我们模块开机时，按着 BOOT 键然后点按重启键即可。可以进入下载,如图:
+进入 boot 模式下载,如图:
 
 ![](image/PzEUbSoWOoyoAKxzWPIcmHnunKd.png)
 
@@ -1282,7 +1282,7 @@ sys.run()
 
 ## 七、总结
 
-通过本章内容的学习，你可以学习到有关加解密算法的函数，例如：crypto.md5(str)、crypto.hmac_md5(str, key)、crypto.hmac_sha1(str, key) 等等函数。
+通过本章内容的学习，你可以学习到有关加解密算法的函数，例如：crypto.md5(str)、crypto.hmac_md5(str, key)、crypto.hmac_sha1(str, key) 等等函数.
 
 ## 给读者的话
 

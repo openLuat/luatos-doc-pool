@@ -280,7 +280,7 @@ wsc:connect()
     end
 ```
 
-#### 4.3.6 websocket 客户端关闭(关闭后资源释放无法再使用)
+#### 4.3.7 websocket 客户端关闭(关闭后资源释放无法再使用)
 
 ```lua
 wsc:close()
@@ -519,7 +519,7 @@ wsc:close()
 #### 5.4.3 **完整实例深度剖析**
 
 ```lua
-PROJECT = "airtun"
+PROJECT = "Websocket_demo"
 VERSION = "1.0.0"
 
 -- sys库是标配

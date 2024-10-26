@@ -8,19 +8,19 @@ MQTT 的消息传递质量分为三种：最多一次（QoS 0）不保证交付�
 
 ## 二、演示功能概述
 
-本 demo 通过使用 AIR780E 开发板，带你快速体验通过 MQTT 协议进行数据接收与发送。
+本 demo 通过使用 Air780E 开发板，带你快速体验通过 MQTT 协议进行数据接收与发送。
 
 ## 三、准备硬件环境
 
-### 3.1 AIR780E 开发板
+### 3.1 Air780E 开发板
 
 ![](image/ZIoyb0n55oAqLyxbacGcqLWWnon.png)
 [购买链接（注意：需要配套采购 4G 物联网卡！）](https://item.taobao.com/item.htm?id=693774140934&pisk=fhpqwk6HuxH4KGubOZWNYNN42s6AH93Cod_1jhxGcZbD5i6Nja-nDZGtMFRySUCfoqhAjR8HyGZXmsVlrMI4nSXGiaAykHfX7hnAjNYM7NOjNvtvDOBiROkIdnLlWvxH7sbDqzxRA-4062417OBiRVP7IsHFBedNnUSNZ0S1fRjMS1xlraINjRYGo_4lXGBGSbuCaJDS6s0HvaA15B4hHrX5zR2Uvi50onP_QRkNmsbhZw2MVLSVgwxDhJaPbgvWU617f46kvQTc49k4JiRkYtjwBDVN71JAUa8EKRIJiEJl_Lits3JNo6JcaVwwYt-lsL53YJ7Wai6knBrgI3WVSesAgruP-KKkpTfSKD-keEtvUhZiIgTCrnpcQvmd3tbcUgWaWg2F7dd4S55c2g7I40lKbcr6leOTt5FOZ9IPRmsbs54dORN2LJVT6_bd4wibK&skuId=5098266470883&spm=a1z10.5-c-s.w4002-24045920841.33.75b21fd1Su4B3X)
 
-### 3.2 TYPE-C 线快充线
+### 3.2 TYPE-C 数据线
 
 ![](image/Laf9bqpXNo9oTMxX0eMc5hHWnEf.png)
-[购买链接（注意：必须是快充线！）](https://item.taobao.com/item.htm?id=693774140934&pisk=fhpqwk6HuxH4KGubOZWNYNN42s6AH93Cod_1jhxGcZbD5i6Nja-nDZGtMFRySUCfoqhAjR8HyGZXmsVlrMI4nSXGiaAykHfX7hnAjNYM7NOjNvtvDOBiROkIdnLlWvxH7sbDqzxRA-4062417OBiRVP7IsHFBedNnUSNZ0S1fRjMS1xlraINjRYGo_4lXGBGSbuCaJDS6s0HvaA15B4hHrX5zR2Uvi50onP_QRkNmsbhZw2MVLSVgwxDhJaPbgvWU617f46kvQTc49k4JiRkYtjwBDVN71JAUa8EKRIJiEJl_Lits3JNo6JcaVwwYt-lsL53YJ7Wai6knBrgI3WVSesAgruP-KKkpTfSKD-keEtvUhZiIgTCrnpcQvmd3tbcUgWaWg2F7dd4S55c2g7I40lKbcr6leOTt5FOZ9IPRmsbs54dORN2LJVT6_bd4wibK&skuId=5098266470883&spm=a1z10.5-c-s.w4002-24045920841.33.75b21fd1Su4B3X)
+[购买链接（注意：必须是具备USB通信的数据线！）](https://item.taobao.com/item.htm?id=693774140934&pisk=fhpqwk6HuxH4KGubOZWNYNN42s6AH93Cod_1jhxGcZbD5i6Nja-nDZGtMFRySUCfoqhAjR8HyGZXmsVlrMI4nSXGiaAykHfX7hnAjNYM7NOjNvtvDOBiROkIdnLlWvxH7sbDqzxRA-4062417OBiRVP7IsHFBedNnUSNZ0S1fRjMS1xlraINjRYGo_4lXGBGSbuCaJDS6s0HvaA15B4hHrX5zR2Uvi50onP_QRkNmsbhZw2MVLSVgwxDhJaPbgvWU617f46kvQTc49k4JiRkYtjwBDVN71JAUa8EKRIJiEJl_Lits3JNo6JcaVwwYt-lsL53YJ7Wai6knBrgI3WVSesAgruP-KKkpTfSKD-keEtvUhZiIgTCrnpcQvmd3tbcUgWaWg2F7dd4S55c2g7I40lKbcr6leOTt5FOZ9IPRmsbs54dORN2LJVT6_bd4wibK&skuId=5098266470883&spm=a1z10.5-c-s.w4002-24045920841.33.75b21fd1Su4B3X)
 
 ## 四、准备软件环境
 
@@ -42,11 +42,11 @@ MQTT 的消息传递质量分为三种：最多一次（QoS 0）不保证交付�
 
 ## 五、软硬件资料
 
-1、AIR780E 开发板原理图，打开 [Air780E 产品手册](https://docs.openluat.com/air780e/product/) ，访问页面中的 《[EVB_Air780X_V1.6.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240513100446379_EVB_Air780X_V1.6.zip)》
+1、Air780E 开发板原理图，打开 [Air780E 产品手册](https://docs.openluat.com/Air780E/product/) ，访问页面中的 《[EVB_Air780X_V1.6.zip](https://cdn.openluat-luatcommunity.openluat.com/attachment/20240513100446379_EVB_Air780X_V1.6.zip)》
 
 2、[API 使用介绍说明](https://wiki.luatos.com/api/mqtt.html)
 
-3、AIR780E 开发板使用说明，打开 [Air780E 产品手册](https://docs.openluat.com/air780e/product/) ，访问页面中的 《Core_Air780E 使用说明 V1.0.5.pdf》
+3、Air780E 开发板使用说明，打开 [Air780E 产品手册](https://docs.openluat.com/Air780E/product/) ，访问页面中的 《开发板Core_Air780E使用说明V1.0.5.pdf》
 
 ### 5.1 开发板按钮与指示灯图示与说明
 
@@ -64,7 +64,7 @@ MQTT 的消息传递质量分为三种：最多一次（QoS 0）不保证交付�
 
 ![](image/YGKNbGxeEowL2sxZJ5RcbGGjnpb.png)
 
-注：开发板与电脑通过 TYPE-C 线连接，用于通信与供电，所以必须使用“支持快充”的 TYPE-C 线才可以；
+注：开发板与电脑通过 TYPE-C 线连接，用于通信与供电，所以必须使用支持USB通信的 TYPE-C 数据线才可以；
 
 ## 六、代码示例介绍
 
@@ -307,7 +307,7 @@ Password：password
 
 ## 总结
 
-至此，我们已使用 AIR780E 开发板完成了 MQTT 通信的基本功能。
+至此，我们已使用 Air780E 开发板完成了 MQTT 通信的基本功能。
 ## 给读者的话
 
 > 本篇文章由`肇朔`开发；

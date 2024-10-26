@@ -1,8 +1,8 @@
 ## 一、FTP 概述
 
-FTP（File Transfer Protocol，文件传输协议） 是 TCP/IP 协议组中的协议之一。FTP 协议包括两个组成部分，其一为 FTP 服务器，其二为 FTP 客户端。其中 FTP 服务器用来存储文件，用户可以使用 FTP 客户端通过 FTP 协议访问位于 FTP 服务器上的资源。在开发网站的时候，通常利用 FTP 协议把网页或程序传到 Web 服务器上。此外，由于 FTP 传输效率非常高，在网络上传输大的文件时，一般也采用该协议。
+FTP（File Transfer Protocol，文件传输协议） 是 TCP/IP 协议组中的协议之一.FTP 协议包括两个组成部分，其一为 FTP 服务器，其二为 FTP 客户端.其中 FTP 服务器用来存储文件，用户可以使用 FTP 客户端通过 FTP 协议访问位于 FTP 服务器上的资源.在开发网站的时候，通常利用 FTP 协议把网页或程序传到 Web 服务器上.此外，由于 FTP 传输效率非常高，在网络上传输大的文件时，一般也采用该协议.
 
-默认情况下 FTP 协议使用 TCP 端口中的 20 和 21 这两个端口，其中 20 用于传输数据，21 用于传输控制信息。但是，是否使用 20 作为传输数据的端口与 FTP 使用的传输模式有关，如果采用主动模式，那么数据传输端口就是 20；如果采用被动模式，则具体最终使用哪个端口要服务器端和客户端协商决定。
+默认情况下 FTP 协议使用 TCP 端口中的 20 和 21 这两个端口，其中 20 用于传输数据，21 用于传输控制信息.但是，是否使用 20 作为传输数据的端口与 FTP 使用的传输模式有关，如果采用主动模式，那么数据传输端口就是 20；如果采用被动模式，则具体最终使用哪个端口要服务器端和客户端协商决定.
 
 关于 FTP 更详细的理论知识说明，请参考:[https://blog.csdn.net/HinsCoder/article/details/130911658](https://blog.csdn.net/HinsCoder/article/details/130911658)
 
@@ -30,40 +30,40 @@ FTP（File Transfer Protocol，文件传输协议） 是 TCP/IP 协议组中的�
 
 淘宝购买链接：[Air780E 核心板淘宝购买链接](https://item.taobao.com/item.htm?id=693774140934&pisk=f1eiwOqL25l1_HYiV6D1ize3wN5d5FMjRrpxkx3VT2uIHCCskWm4kysffAEqor4KRRIskGT0ooqi_coq7DWE000qbVr2mmzKQjNtkV3mnoalvaBRelZshA7RyTFdpD4xQco2_VS2Tcnvc89h5lZshq-pu_FUfEDVVdOmgrkET0ir3mkq_MDEmmM2QjJaY2uI0UGAoNueWRjiw4YTC-_opNr-zluaXleFpfR_X2fhTJVn94W--KJ4KcqQreCDEs3zNVh-DyWpIxqEmyc8savgoor7gX2D7GUzmW4jBJS2_4PTWjestFRZqA0iaRlwjdkIgW2nBR7XNkEn7bDL96_tMA4gN4GNOwa0xVU4IX8G4iReapZyhDSYLIOj_DinyhbSB2IHjbEhxMA51foIXaIhxItMPKJlyMjHNEGZAcQR.&spm=a1z10.5-c-s.w4002-24045920841.33.639f1fd1YrS4b6&skuId=5098266470883) ；
 
-此核心板的详细使用说明参考：[Air780E 产品手册](https://docs.openluat.com/air780e/product/) 中的 << 开发板 Core_Air780E 使用说明 VX.X.X.pdf>>，写这篇文章时最新版本的使用说明为：开发板 Core_Air780E 使用说明 V1.0.5.pdf ；核心板使用过程中遇到任何问题，可以直接参考这份使用说明 pdf 文档。
+此核心板的详细使用说明参考：[Air780E 产品手册](https://docs.openluat.com/air780e/product/) 中的 << 开发板 Core_Air780E 使用说明 VX.X.X.pdf>>，写这篇文章时最新版本的使用说明为：开发板 Core_Air780E 使用说明 V1.0.5.pdf ；核心板使用过程中遇到任何问题，可以直接参考这份使用说明 pdf 文档.
 
 ### 3.2 SIM 卡
 
-中国大陆环境下，可以上网的 sim 卡,一般来说，使用移动，电信，联通的物联网卡或者手机卡都行；
+中国大陆环境下，可以上网的 sim 卡,一般来说，使用移动，电信，联通的物联网卡或者手机卡都行.
 
 ### 3.3 PC 电脑
 
-WINDOWS 系统，其他暂无特别要求；
+WINDOWS 系统.
 
 ### 3.4 数据通信线
 
-USB 数据线，暂无特别要求；
+USB 数据线.
 
 ## 四、软件环境
 
 ### 4.1 Luatools 工具
 
-要想烧录 LuatOS固件到 4G 模组中，需要用到合宙的强大的调试工具：Luatools；
+要想烧录 LuatOS固件到 4G 模组中，需要用到合宙的强大的调试工具：Luatools
 
-详细使用说明参考：[Luatools 工具使用说明](https://docs.openluat.com/Luatools/) 。
+详细使用说明参考：[Luatools 工具使用说明](https://docs.openluat.com/Luatools/) .
 
 Luatools 工具集具备以下几大核心功能：
 
-- 一键获取最新固件：自动连接合宙服务器，轻松下载最新的合宙模组固件。
-- 固件与脚本烧录：便捷地将固件及脚本文件烧录至目标模组中。
-- 串口日志管理：实时查看模组通过串口输出的日志信息，并支持保存功能。
-- 串口调试助手：提供简洁的串口调试界面，满足基本的串口通信测试需求。
+- 一键获取最新固件：自动连接合宙服务器，轻松下载最新的合宙模组固件.
+- 固件与脚本烧录：便捷地将固件及脚本文件烧录至目标模组中.
+- 串口日志管理：实时查看模组通过串口输出的日志信息，并支持保存功能.
+- 串口调试助手：提供简洁的串口调试界面，满足基本的串口通信测试需求.
 
-Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools_v3.exe 运行，出现如下界面，就代表 Luatools 安装成功了.
+Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools_v3.exe 即可运行.
 
 ### 4.2 准备需要烧录的代码
 
-首先要说明一点： 脚本代码， 要和固件的 soc 文件一起烧录。
+首先要说明一点： 脚本代码， 要和固件的 soc 文件一起烧录.
 
 #### 4.2.1 **烧录的底层固件文件**
 
@@ -93,17 +93,17 @@ Air780E 的底层固件在 Luatools 解压后目录的 **LuatOS-SoC_V1112_EC618_
 
 #### 4.3.1 **正确连接电脑和 4G 模组电路板**
 
-使用带有数据通信功能的数据线，不要使用仅有充电功能的数据线；
+使用带有数据通信功能的数据线，不要使用仅有充电功能的数据线.
 
 #### 4.3.2 **识别 4G 模组的 boot 引脚**
 
-在下载之前，要用模组的 boot 引脚触发下载， 也就是说，要把 4G 模组的 boot 引脚拉到 1.8v，或者直接把 boot 引脚和 VDD_EXT 引脚相连。我们要在按下 BOOT 按键时让模块开机，就可以进入下载模式了。
+在下载之前，要用模组的 boot 引脚触发下载， 也就是说，要把 4G 模组的 boot 引脚拉到 1.8v，或者直接把 boot 引脚和 VDD_EXT 引脚相连.我们要在按下 BOOT 按键时让模块开机，就可以进入下载模式了.
 
 具体到 Air780E 开发板:
 
-1、当我们模块没开机时，按着 BOOT 键然后长按 PWR 开机。
+1、当我们模块没开机时，按着 BOOT 键然后长按 POW 开机.
 
-2、当我们模块开机时，按着 BOOT 键然后点按重启键即可。
+2、当我们模块开机时，按着 BOOT 键然后点按重启键即可.
 
 ![](image/JVoBbpL9SoDlOuxkqOFc8GiFnAf.png)
 
@@ -113,19 +113,19 @@ Air780E 的底层固件在 Luatools 解压后目录的 **LuatOS-SoC_V1112_EC618_
 
 ![](image/NbHbbSx2zoLHlPxA3hdcvCtfnZe.png)
 
-当设备管理器出现了 3 个连续数字的 com 端口，这时候， 硬件连接上就绪状态，恭喜你，可以进行烧录了！
+
 
 #### 4.3.4 用 Luatools 工具烧录
 
 - 新建项目
 
-首先，确保你的 Luatools 的版本，大于等于 3.0.6 版本的。
+首先，确保你的 Luatools 的版本，大于等于 3.0.6 版本的.
 
 在 Luatools 的左上角上有版本显示的，如图所示：
 
 ![](image/Nw8jbvjymoURkcxgZYQcw6Ynnpd.png)
 
-Luatools 版本没问题的话， 就点击 LuaTOols 右上角的“项目管理测试”按钮，如下图所示：
+Luatools 版本没问题的话，就点击 Luatools 右上角的“项目管理测试”按钮，如下图所示：
 
 ![](image/XZk5b1ZDWouSScxssxCcFRNYnxc.png)
 
@@ -135,11 +135,11 @@ Luatools 版本没问题的话， 就点击 LuaTOols 右上角的“项目管理
 
 - 开始烧录
 
-选择 780E 板子对应的底层 core 和刚改的 main.lua 脚本文件。下载到板子中。
+选择 780E 板子对应的底层 core 和刚改的 main.lua 脚本文件,下载到板子中.
 
 ![](image/B1oFbw9tMo8d17xp7xRcpuRJnld.png)
 
-点击下载后，我们需要进入 boot 模式才能正常下载。
+点击下载后，我们需要进入 boot 模式才能正常下载.
 
 ![](image/Q2rybmmVRoxjayxs458cpVLNnUd.png)
 
@@ -147,9 +147,7 @@ Luatools 版本没问题的话， 就点击 LuaTOols 右上角的“项目管理
 
 ![](image/GwxDbu2kYo5J6fxeDnTcOTojn3e.png)
 
-当我们模块没开机时，按着 BOOT 键然后长按 PWR 开机,进入下载。
-
-当我们模块开机时，按着 BOOT 键然后点按重启键即可。可以进入下载,如图:
+进入 boot 模式下载,如图:
 
 ![](image/UDuIbhRRqow94WxPSZdcPFbtnCd.png)
 
@@ -167,7 +165,7 @@ FTP 客户端
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | int<br/>            | 适配器序号, 只能是 socket.ETH0, socket.STA, socket.AP,如果不填,会选择平台自带的方式,然后是最后一个注册的适配器<br/>                                                                                                                |
 | string<br/>         | ip_addr 地址<br/>                                                                                                                                                                                                                  |
-| string<br/>         | port 端口,默认 21<br/>                                                                                                                                                                                                             |
+| int<br/>            | port 端口,默认 21<br/>                                                                                                                                                                                                             |
 | string<br/>         | username 用户名<br/>                                                                                                                                                                                                               |
 | string<br/>         | password 密码<br/>                                                                                                                                                                                                                 |
 | bool/table<br/>     | 是否为 ssl 加密连接,默认不加密,true 为无证书最简单的加密，table 为有证书的加密<br/>server_cert 服务器 ca 证书数据<br/>client_cert 客户端 ca 证书数据<br/>client_key 客户端私钥加密数据<br/>client_password 客户端私钥口令数据<br/> |
@@ -179,9 +177,9 @@ FTP 客户端
 | bool/string<br/>    | 成功返回 true 失败返回 string<br/> |
 
 **例子**
-
+```lua
 ftp_login = ftp.login(nil,"xxx")
-
+```
 ---
 
 ### 5.2 ftp.command(cmd)
@@ -201,47 +199,48 @@ FTP 命令
 | string<br/>         | 成功返回 true 失败返回 string<br/> |
 
 **例子**
-
-// 空操作，防止连接断掉
+```lua
+-- 空操作，防止连接断掉
 
 print(ftp.command("NOOP").wait())
 
-// 报告远程系统的操作系统类型
+-- 报告远程系统的操作系统类型
 
 print(ftp.command("SYST").wait())
 
-// 指定文件类型
+-- 指定文件类型
 
 print(ftp.command("TYPE I").wait())
 
-// 显示当前工作目录名
+-- 显示当前工作目录名
 
 print(ftp.command("PWD").wait())
 
-// 创建目录
+-- 创建目录
 
 print(ftp.command("MKD QWER").wait())
 
-// 改变当前工作目录
+-- 改变当前工作目录
 
 print(ftp.command("CWD /QWER").wait())
 
-// 返回上一层目录
+-- 返回上一层目录
 
 print(ftp.command("CDUP").wait())
 
-// 删除目录
+-- 删除目录
 
 print(ftp.command("RMD QWER").wait())
 
-// 获取当前工作目录下的文件名列表
+-- 获取当前工作目录下的文件名列表
 
 print(ftp.command("LIST").wait())
 
-// 删除文件
+-- 删除文件
 
 print(ftp.command("DELE /1/12222.txt").wait())
 
+```
 ---
 
 ### 5.3 ftp.pull(local_name,remote_name)
@@ -262,9 +261,9 @@ FTP 文件下载
 | bool/string<br/>    | 成功返回 true 失败返回 string<br/> |
 
 **例子**
-
+```lua
 ftp.pull("/1222.txt","/1222.txt").wait()
-
+```
 ---
 
 ### 5.4 ftp.push(local_name,remote_name)
@@ -285,9 +284,9 @@ FTP 文件上传
 | bool/string<br/>    | 成功返回 true 失败返回 string<br/> |
 
 **例子**
-
+```
 ftp.push("/1222.txt","/1222.txt").wait()
-
+```
 ---
 
 ### 5.5 ftp.close()
@@ -305,9 +304,9 @@ FTP 客户端关闭
 | bool/string<br/>    | 成功返回 true 失败返回 string<br/> |
 
 **例子**
-
+```lua
 ftp.close().wait()
-
+```
 ---
 
 ### 5.6 ftp.debug(onoff)
@@ -332,8 +331,8 @@ ftp.close().wait()
 
 ## 六、实现流程
 
-- 打开 FTP 服务器。记录地址，端口号，用户名，密码等必要信息。
-- 改 DEMO，将登录中的地址，端口号，用户名，密码等必要信息修改为自己服务器的。
+- 打开 FTP 服务器.记录地址，端口号，用户名，密码等必要信息.
+- 改 DEMO，将登录中的地址，端口号，用户名，密码等必要信息修改为自己服务器的.
 - 登录 ftp 服务器(ftp 服务器用 vsftpd)
 - 等待登录成功
 - 执行自己的命令
@@ -566,17 +565,18 @@ drwx------    4 ftp      ftp          4096 Jul 29 09:39 home
 
 ## 七、总结
 
-本文档主要介绍 4G 通信中 FTP 通信的应用。结合例程讲解了 FTP 基本原理，介绍了 FTP 主要 API,旨在最简单的上手 Air780 的 LuatOS 的 FTP 开发。
+本文档主要介绍 4G 通信中 FTP 通信的应用.结合例程讲解了 FTP 基本原理，介绍了 FTP 主要 API,旨在最简单的上手 Air780 的 LuatOS 的 FTP 开发.
 
 ## 八、常见问题
 
 ### 8.1 关于不支持主动模式：
 
-模块 ftp 默认是被动模式，不支持主动模式，无法设置主动模式，公网下要想模块正常连接服务器，服务器肯定不能设置为主动模式，否则哪家模块都不能用。
+模块 ftp 默认是被动模式，不支持主动模式，无法设置主动模式，公网下要想模块正常连接服务器，服务器肯定不能设置为主动模式，否则哪家模块都不能用.
 
 ### 8.2 ftp 服务器用 vsftpd
 
-ftp 的服务器用 vsftpd。
+vsftpd 是一个ftp服务端.
+vsftpd 是very secure FTP daemon的缩写，安全性是它的一个最大的特点。vsftpd 是一个 UNIX 类操作系统上运行的服务器的名字，它可以运行在诸如 Linux、BSD、Solaris、 HP-UNIX等系统上面，是一个完全免费的、开放源代码的ftp服务器软件.
 
 ## 给读者的话
 
