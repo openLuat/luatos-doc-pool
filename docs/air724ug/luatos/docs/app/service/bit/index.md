@@ -92,7 +92,7 @@ usb 数据线插入 usb 口，另一端与电脑相连，拨码开关全部拨�
 
 位操作支持库
 
-1. bit.bnot( value )
+1.bit.bnot( value )
 
 取反，等价于 C 语言中的~
 
@@ -111,7 +111,7 @@ result        number        取反之后的值        0x0000 0000~0xFFFF FFFF
 print(bit.bnot(5))--按位取反，输出-6
 ```
 
-2. bit.band( val1, val2, … valn )
+2.bit.band( val1, val2, … valn )
 
 与运算，等价于 Ｃ 语言中的 val1 & val2 & … & valn
 
@@ -133,7 +133,7 @@ result        number        与运算之后的结果
 print(bit.band(1,1))--与,--输出1
 ```
 
-3. bit.bor( val1, val2, … valn )
+3.bit.bor( val1, val2, … valn )
 
 或运算，等价于 C 里面的 val1 | val2 | … | valn
 
@@ -155,7 +155,7 @@ result        number        或运算之后的结果
 print(bit.bor(1,2))--或，--输出3
 ```
 
-4. bit.bxor( val1, val2, … valn )
+4.bit.bxor( val1, val2, … valn )
 
 异或运算，等价于 C 语言中的 val1 ^ val2 ^ … ^ valn
 
@@ -177,7 +177,7 @@ result        number        异或运算之后的结果, 此处为位异或
 print(bit.bxor(2,3,5))--异或结果为4
 ```
 
-5. bit.lshift( value, shift )
+5.bit.lshift( value, shift )
 
 逻辑左移，等价于 C 语言中的 value << shift
 
@@ -197,7 +197,7 @@ result        number        逻辑左移之后的结果
 print(bit.lshift(1,2))--逻辑左移，“100”，输出为4
 ```
 
-6. bit.rshift( value, shift )
+6.bit.rshift( value, shift )
 
 逻辑右移，等价于 C 语言中的 value >> shift
 
@@ -217,7 +217,7 @@ result        number        逻辑右移之后的结果
 print(bit.rshift(4,2))--逻辑右移，“001”，输出为1
 ```
 
-7. bit.arshift( value, shift )
+7.bit.arshift( value, shift )
 
 算数右移
 
@@ -237,7 +237,7 @@ result        number        逻辑右移之后的结果
 print(bit.arshift(2,2))--算数右移，左边添加的数与符号有关，输出为0
 ```
 
-8. bit.bit( position )
+8.bit.bit( position )
 
 左移运算，等价于 C 语言中的 1 << position
 
@@ -255,7 +255,7 @@ result        number        需要移位的位置
 print(bit.bit(2))--参数是位数，作用是1向左移动两位，打印出4
 ```
 
-9. bit.isset(value, position)
+9.bit.isset(value, position)
 
 测试位数是否被置 1
 
@@ -280,7 +280,7 @@ print(bit.isset(5,2))--打印true
 print(bit.isset(5,3))--返回返回false
 ```
 
-10. bit.isclear(value, position)
+10.bit.isclear(value, position)
 
 测试位数是否被置 0
 
@@ -303,7 +303,7 @@ print(bit.isclear(5,2))
 print(bit.isclear(5,3))
 ```
 
-11. bit.set(value, pos1, pos2, …posn)
+11.bit.set(value, pos1, pos2, …posn)
 
 置 1
 
@@ -328,7 +328,7 @@ result        bool        置 1 之后的值
 print(bit.set(0,0,1,2,3))--在相应的位数置1，打印15
 ```
 
-12. number=bit.clear(value, pos1, pos2, …posn)
+12.number=bit.clear(value, pos1, pos2, …posn)
 
 置 0
 
