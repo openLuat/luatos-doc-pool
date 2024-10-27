@@ -2,23 +2,26 @@
 
 {% block htmltitle %}
 {% if page.meta and page.meta.title %}
-<title>{{ page.meta.title }} - {{ config.site_name }}</title>
+    <title>{{ page.meta.title }} - {{ config.site_name }}</title>
 {% elif page.title and not page.is_homepage %}
-
-{%  set paths = (page.url or "").split("/") %}
-{%  if paths.__len__() > 0 %}
-    {%  if paths[0].startswith("air") > 0 %}
-      {%  if paths.__len__() > 1 %}
-      <title>{{ page.title | striptags }} - {{ paths[0] }} - {{ paths[1] }} - {{ config.site_name }}</title>
-      {% else %}
-      <title>{{ page.title | striptags }} - {{ paths[0] }} - {{ config.site_name }}</title>
-      {% endif %}
-    {% else %}
-      <title>{{ page.title | striptags }} - {{ config.site_name }}</title>
-    {% endif %}
-{% else %}
-  <title>{{ page.title | striptags }} - {{ config.site_name }}</title>
-{% endif %}
+   {% if config.meta.model %}
+       {%  set paths = [config.meta.model, config.meta.doctp] %}
+   {%  else %}
+       {%  set paths = (page.url or "").split("/") %}
+   {%  endif %}
+   {%  if paths.__len__() > 0 %}
+       {%  if paths[0].startswith("air") %}
+         {%  if paths.__len__() > 1 %}
+         <title>{{ page.title | striptags }} - {{ paths[1] }}@{{ paths[0] }} - {{ config.site_name }}</title>
+         {% else %}
+         <title>{{ page.title | striptags }} - {{ paths[0] }} - {{ config.site_name }}</title>
+         {% endif %}
+       {% else %}
+         <title>{{ page.title | striptags }} - {{ config.site_name }}</title>
+       {% endif %}
+   {% else %}
+     <title>{{ page.title | striptags }} 4- {{ config.site_name }}</title>
+   {% endif %}
 {% else %}
 <title>{{ config.site_name }}</title>
 {% endif %}
