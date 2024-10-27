@@ -93,7 +93,6 @@ demo位置：[https://gitee.com/openLuat/LuatOS-Air780E/tree/master/demo/wdt](ht
 3\. 源码及固件已打包压缩，如下所示
 
 > 压缩包中 core 文件夹存放的是固件，code 文件夹存放的是脚本代码。
-> 大家在使用脚本代码时一定要记得修改参数，至于修改什么参数，后面演示时会告诉大家。
 
 [右键点我,另存为,下载完整压缩文件包](file/WDT.zip)
 
