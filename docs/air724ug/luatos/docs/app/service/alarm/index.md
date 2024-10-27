@@ -47,7 +47,7 @@ usb 数据线插入 usb 口，另一端与电脑相连，拨码开关全部拨�
 
 ### 4.2 源码及固件
 
-1. 底层 core 下载
+1.底层 core 下载
 
 下载底层固件，并解压
 
@@ -57,7 +57,7 @@ usb 数据线插入 usb 口，另一端与电脑相连，拨码开关全部拨�
 
 ![](image/Klh1baNMToDIrtxA8d5cbFl0n6d.png)
 
-2. 本教程使用的 demo 见附件：
+2.本教程使用的 demo 见附件：
 
 [右键点我,另存为,下载完整压缩文件包](file/alarm.zip){:target="_blank"}
 
