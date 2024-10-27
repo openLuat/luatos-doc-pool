@@ -152,6 +152,9 @@ def git_hook():
     # 调整site下所有文件的修改时间为固定值
     for root, dirs, files in os.walk("/opt/docs/site/"):
         for file in files:
+            name = str(file)
+            if name.endswith(".html") or name.endswith(".js") or name.endswith(".css") :
+                continue
             filename = os.path.join(root, file)
             os.utime(filename, (0, 0))
 
