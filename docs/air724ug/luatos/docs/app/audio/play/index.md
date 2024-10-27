@@ -14,7 +14,7 @@ Air724UG-LuatOS 支持多种音频格式的播放，如 MP3、AMR 等。通过 L
 
 点击链接购买：[EVB_Air724UG_A14 开发板淘宝购买链接](https://item.taobao.com/item.htm?spm=a1z10.1-c-s.w5003-23813349255.25.43af346aVmYQNY&id=614125604268&scene=taobao_shop) ；
 
-此开发板的详细使用说明参考：[Air724UG 产品手册](https://docs.openluat.com/air724ug/product/)中的开发板硬件资料中《EVB_Air724UG_A14 开发板使用说明.pdf》；开发板使用过程中遇到任何问题，可以直接参考这份使用说明 pdf 文档。
+此开发板的详细使用说明参考：[Air724UG 产品手册](https://docs.openluat.com/air724ug/product/)中的开发板硬件资料中《EVB_Air724UG_A14 开发板使用说明.pdf》，开发板使用过程中遇到任何问题，可以直接参考这份使用说明 pdf 文档。
 
 ### 2.2 SIM 卡
 
