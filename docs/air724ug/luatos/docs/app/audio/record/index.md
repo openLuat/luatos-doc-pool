@@ -1,5 +1,3 @@
-# 009：Air724UG-LuatOS-软件 demo-音频应用-音频录制
-
 ## **一、音频应用-音频录制概述**
 
 音频录制应用是指利用 Air724UG 模块的音频输入功能，通过 MIC 捕捉声音信号，并将其转换为数字音频数据进行存储或传输的应用。除了 MIC 输入外，Air724UG 还支持扬声器（SPK）输出、耳机（HP）输出和听筒（RECEIVER）输出等多种音频输出模式，方便用户在不同场景下进行音频录制和播放。这一应用广泛适用于物联网设备中的语音交互、语音记录等场景。
@@ -12,11 +10,11 @@
 
 本 demo 使用的是 Air724UG_A14 开发板，如下图所示：
 
-![](static/O3fXb76ato6ZSCxxdjDcAogsn1f.png)
+![](image/O3fXb76ato6ZSCxxdjDcAogsn1f.png)
 
 点击链接购买：[EVB_Air724UG_A14 开发板淘宝购买链接](https://item.taobao.com/item.htm?spm=a1z10.1-c-s.w5003-23813349255.25.43af346aVmYQNY&id=614125604268&scene=taobao_shop) ；
 
-此开发板的详细使用说明参考：[Air724UG 产品手册](https://docs.openluat.com/air724ug/product/)中的开发板硬件资料中《EVB_Air724UG_A14 开发板使用说明.pdf》；开发板使用过程中遇到任何问题，可以直接参考这份使用说明 pdf 文档。
+此开发板的详细使用说明参考：[Air724UG 产品手册](https://docs.openluat.com/air724ug/product/)中的开发板硬件资料中《EVB_Air724UG_A14 开发板使用说明.pdf》，开发板使用过程中遇到任何问题，可以直接参考这份使用说明 pdf 文档。
 
 ### 2.2 SIM 卡
 
@@ -34,7 +32,7 @@
 
 - USB 数据线：此数据线不仅用于为测试板供电，还用于查看数据日志。其一端为 Micro-B 接口（俗称老安卓口），用于连接 EVB_Air724UG_A14 开发板；另一端为标准 USB 接口，连接 PC 电脑。
 
-![](static/FwY6bvFgtoOkYsxwrjJcGVvTnld.png)
+![](image/FwY6bvFgtoOkYsxwrjJcGVvTnld.png)
 
 ### 2.5 组装硬件环境
 
@@ -46,12 +44,12 @@
 - 平稳地将 SIM 卡放入卡槽。
 - 上滑关闭卡槽。
 
-![](static/LW51buLF8oHz6mxbDZHcTEnFn5d.png)
-![](static/ZbUCbfTwPo3vsmx20wLcy9DOnkh.png)
+![](image/LW51buLF8oHz6mxbDZHcTEnFn5d.png)
+![](image/ZbUCbfTwPo3vsmx20wLcy9DOnkh.png)
 
 #### 2.5.2 USB 数据线，连接电脑和 EVB_Air724UG_A14 开发板，如下图所示：
 
-![](static/LHUfbBmfOoct5LxorJ3csBOznJd.png)
+![](image/LHUfbBmfOoct5LxorJ3csBOznJd.png)
 
 ## 三、准备软件环境
 
@@ -72,7 +70,7 @@ Luatools 工具集具备以下几大核心功能：
 
 Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools_v3.exe 运行，出现如下界面，就代表 Luatools 安装成功了：
 
-![](static/DmsMbL64aorKnlx31DJc4e5Gnwd.png)
+![](image/DmsMbL64aorKnlx31DJc4e5Gnwd.png)
 
 ### 3.2 烧录代码
 
@@ -80,17 +78,17 @@ Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools
 
 **整体压缩文件：内含有 二个文件，一个演示视频，如图所示。**
 
-![](static/OlOhbnJKFogzbsxKzbMcv159nbc.png)
+![](image/OlOhbnJKFogzbsxKzbMcv159nbc.png)
 
 #### 3.2.1 **压缩文件：完整文件包**
-
+[右键点我,另存为,下载完整压缩文件包](file/音频应用-录音.rar){:target="_blank"}
 #### 3.2.2 **找到烧录的固件文件**
 
 官网下载,底层 core 下载地址：[LuatOS 底层 core](https://docs.openluat.com/air724ug/luatos/firmware/)     **注：**本 demo 使用如图所示固件
 
-![](static/JBw7bKtzco4hcfxTQ7DcaeeGnLh.png)
+![](image/JBw7bKtzco4hcfxTQ7DcaeeGnLh.png)
 
-![](static/Emt9b5AcfoSoxFxrjkBcbBeynAc.png)
+![](image/Emt9b5AcfoSoxFxrjkBcbBeynAc.png)
 
 #### 3.2.3 **正确连接电脑和 4G 模组电路板**
 
@@ -105,7 +103,7 @@ Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools
 - 当我们模块没开机时，按着下载模式键然后长按开机键开机。
 - 当我们模块开机时，按着下载模式键然后点按重启键即可。
 
-![](static/DuZCbWChkobWBTxEOfycsjIYn2e.png)
+![](image/DuZCbWChkobWBTxEOfycsjIYn2e.png)
 
 #### 3.2.5 **识别电脑的正确端口**
 
@@ -113,11 +111,11 @@ Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools
 
 - 模块上电，此时在电脑的设备管理器中，查看串口设备，如下图：
 
-![](static/EswabnR3ooPCPxx4i7Rcs5EInoc.png)
+![](image/EswabnR3ooPCPxx4i7Rcs5EInoc.png)
 
 - 先按下载模式在按一下重启，会出现一个端口表示进入了 boot 下载模式，如下图所示：
 
-![](static/SmBTb61GDoCrT2xyILnclVsKnFf.png)
+![](image/SmBTb61GDoCrT2xyILnclVsKnFf.png)
 
 - 这时候， 硬件连接上就绪状态，恭喜你，可以进行烧录了！
 
@@ -127,33 +125,33 @@ Luatools 下载之后， 无需安装， 解压到你的硬盘，点击 Luatools
 
 在 Luatools 的左上角上有版本显示的，如图所示：
 
-![](static/KyWgb3Eh2oAvYjxXDPscOJ6wnRh.png)
+![](image/KyWgb3Eh2oAvYjxXDPscOJ6wnRh.png)
 
 Luatools 版本没问题的话， 就点击 Luatools 右上角的“项目管理测试”按钮，如下图所示：
 
-![](static/K7MbbeETboBHGyxYWB5cIP5fnKb.png)
+![](image/K7MbbeETboBHGyxYWB5cIP5fnKb.png)
 
 这时会弹出项目管理和烧录管理的对话框，如下图：
 
-![](static/CmifbIMbHo8iDTxmZtbcvoCfnjh.png)
+![](image/CmifbIMbHo8iDTxmZtbcvoCfnjh.png)
 
 #### 3.2.7 **开始烧录**
 
 - 选择 Air724ug 开发板对应的底层 core 和刚改的 main.lua 脚本文件。下载到板子中。
 
-![](static/FjDxbMkH3obY1Dx93BYcL3j0nhd.png)
+![](image/FjDxbMkH3obY1Dx93BYcL3j0nhd.png)
 
 - 一直按下载模式按键，在按一下重启，然后点击下载底层和脚本，如图所示：
 
-![](static/Z1YqbcSRQoPEi0x4wh6covKHnMg.png)
+![](image/Z1YqbcSRQoPEi0x4wh6covKHnMg.png)
 
 - 出现如图所示，表示已进入 boot 模式，可以松开下载模式按键，等待下载完成。
 
-![](static/RbCebHXDGoLMFRxTJ4ZczQiznRe.png)
+![](image/RbCebHXDGoLMFRxTJ4ZczQiznRe.png)
 
 - 下载完成，如图所示
 
-![](static/W7XVbbQP0oLOIUxv62mcSbBun3m.png)
+![](image/W7XVbbQP0oLOIUxv62mcSbBun3m.png)
 
 ## 四、音频应用-录音基本用法
 
@@ -444,10 +442,10 @@ end
 
 ### 5.1 音频应用-录音**成果演示与深度解析：视频 + 图文全面展示**
 
-![](static/GRncb0issoXxs1x3Ooncdko7nkg.png)
+![](image/GRncb0issoXxs1x3Ooncdko7nkg.png)
 
 #### 5.1.1 **成果运行精彩呈现**
-
+<video controls src="file/音频播放-录音.mp4"></video>
 #### 5.1.2 **完整实例深度剖析**
 
 ```lua
@@ -544,4 +542,16 @@ record 库的音频录制 API 接口共同构成了音频录制的核心功能�
 
 如果想使用外接的 mic ，请接开发板的 MIC_P、MIC_N 的管脚上。注：函数接口配置请阅读 API 接口详解。
 
-![](static/GlDhbe0dwoPs2HxY5j0cC1iGnKh.png)
+![](image/GlDhbe0dwoPs2HxY5j0cC1iGnKh.png)
+
+## 给读者的话
+
+> 本篇文章由`永仔`开发；
+>
+> 本篇文章描述的内容，如果有错误、细节缺失、细节不清晰或者其他任何问题，总之就是无法解决您遇到的问题；
+>
+> 请登录[合宙技术交流论坛](https://chat.openluat.com/)，点击[文档找错赢奖金-Air724UG-LuatOS-软件指南-音频应用-音频录制](https://chat.openluat.com/#/page/matter?125=1850349475168649217&126=%E6%96%87%E6%A1%A3%E6%89%BE%E9%94%99%E8%B5%A2%E5%A5%96%E9%87%91-Air724UG-LuatOS-%E8%BD%AF%E4%BB%B6%E6%8C%87%E5%8D%97-%E9%9F%B3%E9%A2%91%E5%BA%94%E7%94%A8-%E9%9F%B3%E9%A2%91%E5%BD%95%E5%88%B6&askid=1850349475168649217)；
+>
+> 我们会迅速核实并且修改文档；
+>
+> 同时也会为您累计找错积分，您还可能赢取月度找错奖金！
