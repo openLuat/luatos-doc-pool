@@ -2,6 +2,6 @@
     "core": ["gpio", "i2c", "spi", "zbuff", "json", "pack", 
             "pwm", "uart", "mobile", "wlan", "crypto", 
             "errDump", "fskv", "http", "mqtt", "websocket", 
-            "io", "sys", "sysplus", "string", "log", "mcu", "os", "rtc", "socket", "wdt","sms","miniz"],
+            "io", "sys", "sysplus", "string", "log", "mcu", "os", "rtc", "socket", "wdt","sms","miniz","iconv"],
     "ext" : ["libfota", "lbsLoc", "httpplus", "libnet"]
 }
