@@ -6,9 +6,9 @@
 
 ## 2. iRTU的发行版固件
 
->8910平台（Air724模块）：[iRTU 发行版 - Gitee.com](https://gitee.com/hotdll/iRTU/releases)
+>8910平台（Air724模块）：[iRTU 发行版](https://gitee.com/hotdll/iRTU/releases)
 >
->EC618平台（Air780E模块）：[LuatOS-IRTU 发行版 - Gitee.com](https://gitee.com/openLuat/luatos-irtu/releases)
+>EC618平台（Air780E模块）：[LuatOS-IRTU 发行版](https://gitee.com/openLuat/luatos-irtu/releases)
 
 ## 3.DTU后台是否能看到用户设备实时情况
 

@@ -14,10 +14,10 @@ I2C 配置：
 
 理论上最多可支持 127 个从设备。
 
-| 管脚名<br/>  | 类型<br/> | 序号<br/> | 电压域<br/>  | 描述<br/>                                |
+| 管脚名  | 类型 | 序号 | 电压域  | 描述                                |
 | ------------ | --------- | --------- | ------------ | ---------------------------------------- |
-| I2C_SCL<br/> | IO<br/>   | 67<br/>   | VDD_EXT<br/> | I2C 时钟信号，用作 I2C 时需外加上拉<br/> |
-| I2C_SDA<br/> | IO<br/>   | 66<br/>   | VDD_EXT<br/> | I2C 时钟信号，用作 I2C 时需外加上拉<br/> |
+| I2C_SCL | IO   | 67   | VDD_EXT | I2C 时钟信号，用作 I2C 时需外加上拉 |
+| I2C_SDA | IO   | 66   | VDD_EXT | I2C 时钟信号，用作 I2C 时需外加上拉 |
 
 I2C 的参考电路如下：
 
@@ -37,7 +37,7 @@ Air780E 的 I2C 接口电压是 1.8V/3.3V 可配置，通过 PIN100 IO_SEL 配�
 
 淘宝购买链接：[Air780E 核心板淘宝购买链接](https://item.taobao.com/item.htm?id=693774140934&pisk=f1eiwOqL25l1_HYiV6D1ize3wN5d5FMjRrpxkx3VT2uIHCCskWm4kysffAEqor4KRRIskGT0ooqi_coq7DWE000qbVr2mmzKQjNtkV3mnoalvaBRelZshA7RyTFdpD4xQco2_VS2Tcnvc89h5lZshq-pu_FUfEDVVdOmgrkET0ir3mkq_MDEmmM2QjJaY2uI0UGAoNueWRjiw4YTC-_opNr-zluaXleFpfR_X2fhTJVn94W--KJ4KcqQreCDEs3zNVh-DyWpIxqEmyc8savgoor7gX2D7GUzmW4jBJS2_4PTWjestFRZqA0iaRlwjdkIgW2nBR7XNkEn7bDL96_tMA4gN4GNOwa0xVU4IX8G4iReapZyhDSYLIOj_DinyhbSB2IHjbEhxMA51foIXaIhxItMPKJlyMjHNEGZAcQR.&spm=a1z10.5-c-s.w4002-24045920841.33.639f1fd1YrS4b6&skuId=5098266470883) ；
 
-此核心板的详细使用说明参考：[Air780E 产品手册](https://docs.openluat.com/air780e/product/) 中的 << 开发板 Core_Air780E 使用说明 V1.0.5.pdf>>；核心板使用过程中遇到任何问题，可以直接参考这份使用说明 pdf 文档。
+此核心板的详细使用说明参考：[Air780E 产品手册](https://docs.openluat.com/air780e/product/) 中的 << 开发板Core_Air780E使用说明V1.0.5.pdf>>；核心板使用过程中遇到任何问题，可以直接参考这份使用说明 pdf 文档。
 
 ![](image/GFB4bhx4io4F8Ox1faucKrDUn7f.png)
 
@@ -72,8 +72,9 @@ WINDOWS 系统。
 - 将固件和脚本烧录到模块中：[Luatools 下载和使用教程 - 合宙模组资料中心](https://docs.openluat.com/Luatools/)
 - 源码和固件已打包，如下所示：
 [点我,下载完整压缩文件包](file/完整文件包.zip){:target="_blank"}
+- [i2c-全部api地址](https://docs.openluat.com/air780e/luatos/api/core/i2c/)，如果只看本demo的api直接看下面的`5.2 demo使用api介绍`即可。
 
-### 5.2 demo 使用 api 介绍
+### 5.2 demo使用api介绍
 
 #### i2c.setup(id, speed, pullup)
 
@@ -81,17 +82,19 @@ WINDOWS 系统。
 
 **参数：**
 
-| **传入值类型**<br/> | **解释**<br/>                                       |
-| ------------------- | --------------------------------------------------- |
-| int<br/>            | 设备 id, 例如 i2c1 的 id 为 1, i2c2 的 id 为 2<br/> |
-| int<br/>            | I2C 速度, 例如 i2c.FAST<br/>                        |
-| bool<br/>           | 是否软件上拉, 默认不开启，需要硬件支持<br/>         |
+| **参数** | **传入值类型** | **解释**                                 |
+| -------- | -------------- | ---------------------------------------- |
+| id     | int            | 设备 ID，例如 i2c1 的 ID 为 1，i2c2 的 ID 为 2 |
+| speed  | int            | I2C 速度，例如 i2c.FAST               |
+| pullup | bool           | 是否启用软件上拉，默认关闭，需要硬件支持 |
 
 **返回值：**
 
-| **返回值类型**<br/> | **解释**<br/>                |
-| ------------------- | ---------------------------- |
-| int<br/>            | 成功就返回 1,否则返回 0<br/> |
+| **返回值类型** | **解释**                   |
+| -------------- | -------------------------- |
+| int            | 成功返回 1，否则返回 0     |
+
+---
 
 #### i2c.send(id, addr, data, stop)
 
@@ -99,34 +102,38 @@ WINDOWS 系统。
 
 **参数：**
 
-| **传入值类型**<br/>       | **解释**<br/>                                                     |
-| ------------------------- | ----------------------------------------------------------------- |
-| int<br/>                  | 设备 id, 例如 i2c1 的 id 为 1, i2c2 的 id 为 2<br/>               |
-| int<br/>                  | I2C 子设备的地址, 7 位地址<br/>                                   |
-| integer/string/table<br/> | 待发送的数据,自适应参数类型<br/>                                  |
-| integer<br/>              | 可选参数 是否发送停止位 1 发送 0 不发送 默认发送(105 不支持)<br/> |
+| **参数** | **传入值类型**            | **解释**                                                    |
+| -------- | ------------------------- | ----------------------------------------------------------- |
+| id     | int                       | 设备 ID，例如 i2c1 的 ID 为 1，i2c2 的 ID 为 2              |
+| addr   | int                       | I2C 子设备的地址，7 位地址                                   |
+| data   | integer/string/table      | 待发送的数据，自适应参数类型                                 |
+| stop   | integer                   | 可选参数：是否发送停止位，1 表示发送，0 表示不发送，默认发送（105 不支持） |
 
 **返回值：**
 
-| **传入值类型**<br/> | **解释**<br/>     |
-| ------------------- | ----------------- |
-| true/false<br/>     | 发送是否成功<br/> |
+| **返回值类型** | **解释**             |
+| -------------- | -------------------- |
+| true/false     | 发送是否成功         |
+
+---
 
 #### i2c.recv(id, addr, len)
 
 作用：i2c 接收数据
 
-| **传入值类型**<br/> | **解释**<br/>                                       |
-| ------------------- | --------------------------------------------------- |
-| int<br/>            | 设备 id, 例如 i2c1 的 id 为 1, i2c2 的 id 为 2<br/> |
-| int<br/>            | I2C 子设备的地址, 7 位地址<br/>                     |
-| int<br/>            | 接收数据的长度<br/>                                 |
+**参数：**
+
+| **参数** | **传入值类型** | **解释**                                 |
+| -------- | -------------- | ---------------------------------------- |
+| id     | int            | 设备 ID，例如 i2c1 的 ID 为 1，i2c2 的 ID 为 2 |
+| addr   | int            | I2C 子设备的地址，7 位地址               |
+| len    | int            | 接收数据的长度                           |
 
 **返回值：**
 
-| **传入值类型**<br/> | **解释**<br/>   |
-| ------------------- | --------------- |
-| string<br/>         | 收到的数据<br/> |
+| **返回值类型** | **解释**             |
+| -------------- | -------------------- |
+| string         | 收到的数据           |
 
 ## 六、代码示例介绍
 
@@ -177,7 +184,8 @@ sys.taskInit(function()
         @param3    是否软件上拉, 默认不开启，需要硬件支持
         @return    成功就返回1,否则返回0
     ]]
-    log.info("i2c", "initial",i2c.setup(id))
+    local ret = i2c.setup(id)
+    log.info("i2c", "initial",ret)
 
     while true do
         --第一种方式

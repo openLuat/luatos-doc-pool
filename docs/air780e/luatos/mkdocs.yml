@@ -54,23 +54,7 @@ nav:
     - 介绍: app/index.md
     - 硬件驱动:
       - 简介: app/driver/index.md
-      - UART: 
-        - 简介: app/driver/uart/index.md
-        - 硬件准备: app/driver/uart/01.md
-        - 基本用法: app/driver/uart/basic.md
-        - RS485通信: app/driver/uart/rs485.md
-        - USB虚拟串口: app/driver/uart/usb_uart.md
-        - 多串口: app/driver/uart/uarts.md
-        - 低功耗唤醒: app/driver/uart/uart_pm.md
-        - TCP-UART透传: app/driver/uart/uart_tcp.md
-        - MQTT-UART透传: app/driver/uart/uart_mqtt.md
-        - UDP-UART透传: app/driver/uart/uart_udp.md
-        - WebSocket-UART透传: app/driver/uart/uart_ws.md
-        - UART2复用到另外一组管脚: app/driver/uart/uart_mux.md
-        - UART电平: app/driver/uart/uart_level.md
-        - 总结: app/driver/uart/summary.md
-        - 常见问题: app/driver/uart/faq.md
-        - 扩展: app/driver/uart/ext.md
+      - UART: app/driver/uart/index.md
       - ADC: app/driver/adc/index.md
       - GPIO:
         - 简介: app/driver/gpio/index.md
@@ -97,7 +81,7 @@ nav:
       - HTTP: app/socket/http/index.md
       - MQTT: app/socket/mqtt/index.md      
       - FTP: app/socket/ftp/index.md
-      - NTP: app/socket/ntp/index.md
+      - SNTP: app/socket/sntp/index.md
       - WebSocket: app/socket/websocket/index.md
     - 网络应用:
       - 简介: app/netapp/index.md

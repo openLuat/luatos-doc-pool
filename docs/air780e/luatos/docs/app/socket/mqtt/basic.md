@@ -25,7 +25,7 @@
 ## 文档和工具
 
 - mqtt接口描述：[mqtt - mqtt客户端 - LuatOS 文档](https://wiki.luatos.com/api/mqtt.html)
-- 780E模块软件包：[LuatOS 发行版 - Gitee.com](https://gitee.com/openLuat/LuatOS/releases)
+- 780E模块软件包：[LuatOS 发行版](https://gitee.com/openLuat/LuatOS/releases)
 - 本示例所烧录的固件版本：**LuatOS-SoC_V1112_EC618_FULL.soc**
 - 本示例所烧录的脚本：[demo/mqtt · 合宙Luat/LuatOS - 码云 - 开源中国 (gitee.com)](https://gitee.com/openLuat/LuatOS/tree/master/demo/mqtt)
 - 如果不会烧录，可参考 [烧录教程](https://doc.openluat.com/wiki/21?wiki_page_id=6072)

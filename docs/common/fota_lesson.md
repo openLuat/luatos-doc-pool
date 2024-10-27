@@ -58,7 +58,7 @@ AT版本的远程升级主要是对AT固件版本进行升级，实际方式为�
 
 ### 配置流程
 
-以780ET为例，获取[AT固件版本]([AirM2M_EC718-EC716_AT 发行版 - Gitee.com](https://gitee.com/openLuat/airm2m-ec718-at/releases))，下载到本地后解压并将dfota.bin文件上传到dfota中。
+以780ET为例，获取[AT固件版本](https://gitee.com/openLuat/airm2m-ec718-at/releases)，下载到本地后解压并将dfota.bin文件上传到dfota中。
 
 1. 在IOT平台-我的项目页面点击固件列表
 
@@ -110,7 +110,7 @@ AT版本的远程升级主要是对AT固件版本进行升级，实际方式为�
 
 ### 配置流程
 
-以780ET为例，获取[AT固件版本]([AirM2M_EC718-EC716_AT 发行版 - Gitee.com](https://gitee.com/openLuat/airm2m-ec718-at/releases))，下载到本地后解压并将dfota.bin文件上传到dfota中。
+以780ET为例，获取[AT固件版本](https://gitee.com/openLuat/airm2m-ec718-at/releases)，下载到本地后解压并将dfota.bin文件上传到dfota中。
 
 1. 在IOT平台-我的项目页面点击固件列表
 

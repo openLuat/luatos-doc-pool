@@ -16,7 +16,7 @@ errDump 就是将模块运行过程中产生的错误信息或者应用日志通
 
 淘宝购买链接：[Air780E 核心板淘宝购买链接](https://item.taobao.com/item.htm?id=693774140934&pisk=f1eiwOqL25l1_HYiV6D1ize3wN5d5FMjRrpxkx3VT2uIHCCskWm4kysffAEqor4KRRIskGT0ooqi_coq7DWE000qbVr2mmzKQjNtkV3mnoalvaBRelZshA7RyTFdpD4xQco2_VS2Tcnvc89h5lZshq-pu_FUfEDVVdOmgrkET0ir3mkq_MDEmmM2QjJaY2uI0UGAoNueWRjiw4YTC-_opNr-zluaXleFpfR_X2fhTJVn94W--KJ4KcqQreCDEs3zNVh-DyWpIxqEmyc8savgoor7gX2D7GUzmW4jBJS2_4PTWjestFRZqA0iaRlwjdkIgW2nBR7XNkEn7bDL96_tMA4gN4GNOwa0xVU4IX8G4iReapZyhDSYLIOj_DinyhbSB2IHjbEhxMA51foIXaIhxItMPKJlyMjHNEGZAcQR.&spm=a1z10.5-c-s.w4002-24045920841.33.639f1fd1YrS4b6&skuId=5098266470883) ；
 
-此核心板的详细使用说明参考：[Air780E 产品手册](https://docs.openluat.com/air780e/product/) 中的 << 开发板 Core_Air780E 使用说明 V1.0.5.pdf>>。
+此核心板的详细使用说明参考：[Air780E 产品手册](https://docs.openluat.com/air780e/product/) 中的 << 开发板Core_Air780E使用说明V1.0.5.pdf>>。
 
 ![](image/HwHIbALQuohZ8BxyRHmcy0vbn1b.png)
 
@@ -52,63 +52,69 @@ WINDOWS 系统。
 - 合宙云平台：[https://iot.openluat.com](https://iot.openluat.com)
 - 源码和固件已打包，如下所示：
 [点我,下载完整压缩文件包](file/完整文件包.zip){:target="_blank"}
+- [errDump-全部api地址](https://docs.openluat.com/air780e/luatos/api/core/errDump/)，如果只看本demo的api直接看下面的`5.2 demo使用api介绍`即可。
 
-### 5.2 本 demo 使用 api 介绍
+### 5.2 demo使用api介绍
 
 #### errDump.config(enable, period, user_flag, custom_id, host, port)
 
-作用：配置关键日志上传 IOT 平台，这里的日志包括引起 luavm 异常退出的日志和用户通过 record 写入的日志，类似于 air 的 errDump.
+作用：配置关键日志上传至 IOT 平台，包括引起 Lua VM 异常退出的日志和用户通过 record 写入的日志，类似于 Air 的 errDump。
 
 **参数**
 
-| **传入值类型**<br/> | **解释**<br/>                                                                                                                                                                                     |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| boolean<br/>        | 是否启用记录功能，false 的话将不会记录任何日志<br/>                                                                                                                                               |
-| int<br/>            | 定时上传周期，单位秒，默认 600 秒，这个是自动上传时候后的重试时间时间，在开机后或者有 record 操作后会很快尝试上传到合宙 IOT 平台一次，如果为 0，则不会上传，由用户 dump 后自己上传自己的平台<br/> |
-| string<br/>         | 用户的特殊标识，可以为空<br/>                                                                                                                                                                     |
-| string<br/>         | 设备识别号, 4G 设备默认是 imei,其他设备默认是 mcu.unique_id<br/>                                                                                                                                  |
-| string<br/>         | 服务器域名,默认 dev_msg1.openluat.com<br/>                                                                                                                                                        |
-| int<br/>            | 服务器端口,默认12425,默认是合宙的云平台                                                                                                                                                                              |
+| **参数**      | **传入值类型** | **解释**                                                                                                                                                                                    |
+| ------------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| enable        | boolean        | 是否启用记录功能，false 时不记录任何日志                                                                                                                                                |
+| period        | int            | 定时上传周期，单位秒，默认 600 秒。此为自动上传后的重试时间，开机或 record 操作后会尝试快速上传至 IOT 平台。如果为 0，则不自动上传，由用户 dump 后上传至自己的平台 |
+| user_flag     | string         | 用户的特殊标识，可为空                                                                                                                                                                        |
+| custom_id     | string         | 设备识别号，4G 设备默认是 IMEI，其他设备默认是 mcu.unique_id                                                                                                                                    |
+| host          | string         | 服务器域名，默认 dev_msg1.openluat.com                                                                                                                                                        |
+| port          | int            | 服务器端口，默认 12425，为合宙云平台默认端口                                                                                                                                                      |
 
 **返回值**
 
-| **返回值类型**<br/> | **解释**<br/> |
-| ------------------- | ------------- |
-| nil<br/>            | 无返回值<br/> |
+| **返回值类型** | **解释**       |
+| -------------- | -------------- |
+| nil            | 无返回值       |
+
+---
 
 #### errDump.dump(zbuff, type, isDelete)
 
-作用：手动读取异常日志，主要用于用户将日志发送给自己的服务器而不是 IOT 平台，如果在 errDump.config 配置了周期上传，则不能使用本函数
+作用：手动读取异常日志，用于将日志发送至用户自有服务器而非 IOT 平台。如果在 errDump.config 中配置了周期上传，则不可使用本函数。
 
 **参数**
 
-| **传入值类型**<br/> | **解释**<br/>                                                |
-| ------------------- | ------------------------------------------------------------ |
-| zbuff<br/>          | 日志信息缓存，如果为 nil 就不会读出，一般当<br/>             |
-| int<br/>            | 日志类型，目前只有 errDump.TYPE_SYS 和 errDump.TYPE_USR<br/> |
-| boolean<br/>        | 是否删除日志<br/>                                            |
+| **参数**  | **传入值类型** | **解释**                                             |
+| --------- | -------------- | ---------------------------------------------------- |
+| zbuff     | zbuff          | 日志信息缓存，若为 nil 则不会读取日志                 |
+| type      | int            | 日志类型，目前支持 errDump.TYPE_SYS 和 errDump.TYPE_USR |
+| isDelete  | boolean        | 是否删除日志                                         |
 
 **返回值**
 
-| **返回值类型**<br/> | **解释**<br/>                                                                                        |
-| ------------------- | ---------------------------------------------------------------------------------------------------- |
-| boolean<br/>        | true 表示本次读取前并没有写入数据，false 反之，在删除日志前，最好再读一下确保没有新的数据写入了<br/> |
+| **返回值类型** | **解释**                                                                                              |
+| -------------- | ----------------------------------------------------------------------------------------------------- |
+| boolean        | true 表示在本次读取前无数据写入，false 表示有数据写入。删除日志前建议再次读取以确保无新数据写入       |
 
-#### errDump.record(string)
+---
 
-作用：写入用户的异常日志，注意最大只有 4KB，超过部分新的覆盖旧的，开启自动上传后会上传到合宙 IOT 平台
+#### errDump.record(msg)
+
+作用：写入用户异常日志，注意最大仅为 4KB，超过部分会覆盖旧数据。开启自动上传后会上传至 IOT 平台。
 
 **参数**
 
-| **传入值类型**<br/> | **解释**<br/> |
-| ------------------- | ------------- |
-| string<br/>         | 日志<br/>     |
+| **参数** | **传入值类型** | **解释**       |
+| -------- | -------------- | -------------- |
+| msg      | string         | 用户日志       |
 
 **返回值**
 
-| **返回值类型**<br/> | **解释**<br/> |
-| ------------------- | ------------- |
-| nil<br/>            | 无返回值<br/> |
+| **返回值类型** | **解释**       |
+| -------------- | -------------- |
+| nil            | 无返回值       |
+
 
 ## 六、代码示例介绍
 
