@@ -130,6 +130,7 @@ def do_build(path, copy_product=False):
                 if os.path.exists(dst) :
                     shutil.rmtree(dst)
         shutil.copytree(path + "/site", dst, dirs_exist_ok=True)
+        shutil.rmtree(path + "/site")
     except:
         import traceback
         traceback.print_exc()
