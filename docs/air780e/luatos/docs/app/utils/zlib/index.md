@@ -41,26 +41,26 @@ WINDOWS 系统。
 - 将固件和脚本烧录到模块中：[Luatools 下载和使用教程 - 合宙模组资料中心](https://docs.openluat.com/Luatools/)
 - 源码和固件已打包，如下所示：
 [点我,下载完整压缩文件包](file/完整文件包.zip){:target="_blank"}
-- zlib-全部api只有下面`5.2 demo使用api介绍`的两个函数。
+- [zlib-全部api地址](https://docs.openluat.com/air780e/luatos/api/core/miniz/)，如果只看本demo的api直接看下面的`5.2 demo使用api介绍`即可。
 
 ### 5.2 demo使用api介绍
 
 #### **使用常量**
 
-| 常量<br/>                                | 类型<br/> | 解释<br/>                                                     |
-| ---------------------------------------- | --------- | ------------------------------------------------------------- |
-| miniz.WRITE_ZLIB_HEADER<br/>             | int<br/>  | 压缩参数,是否写入 zlib 头部数据,compress 函数的默认值<br/>    |
-| miniz.COMPUTE_ADLER32<br/>               | int<br/>  | 压缩/解压参数,是否计算/校验 adler-32<br/>                     |
-| miniz.GREEDY_PARSING_FLAG<br/>           | int<br/>  | 压缩参数,是否快速 greedy 处理, 默认使用较慢的处理模式<br/>    |
-| miniz.NONDETERMINISTIC_PARSING_FLAG<br/> | int<br/>  | 压缩参数,是否快速初始化压缩器<br/>                            |
-| miniz.RLE_MATCHES<br/>                   | int<br/>  | 压缩参数, 仅扫描 RLE<br/>                                     |
-| miniz.FILTER_MATCHES<br/>                | int<br/>  | 压缩参数,过滤少于 5 次的字符<br/>                             |
-| miniz.FORCE_ALL_STATIC_BLOCKS<br/>       | int<br/>  | 压缩参数,是否禁用优化过的 Huffman 表<br/>                     |
-| miniz.FORCE_ALL_RAW_BLOCKS<br/>          | int<br/>  | 压缩参数,是否只要 raw 块<br/>                                 |
-| miniz.PARSE_ZLIB_HEADER<br/>             | int<br/>  | 解压参数,是否处理 zlib 头部,uncompress 函数的默认值<br/>      |
-| miniz.HAS_MORE_INPUT<br/>                | int<br/>  | 解压参数,是否还有更多数据,仅流式解压可用,暂不支持<br/>        |
-| miniz.USING_NON_WRAPPING_OUTPUT_BUF<br/> | int<br/>  | 解压参数,解压区间是否够全部数据,,仅流式解压可用,暂不支持<br/> |
-| miniz.COMPUTE_ADLER32<br/>               | int<br/>  | 解压参数,是否强制校验 adler-32<br/>                           |
+| 常量                                    | 类型      | 解释                                                        |
+| --------------------------------------- | --------- | ----------------------------------------------------------- |
+| miniz.WRITE_ZLIB_HEADER                 | int       | 压缩参数, 是否写入 zlib 头部数据, compress 函数的默认值     |
+| miniz.COMPUTE_ADLER32                   | int       | 压缩/解压参数, 是否计算/校验 adler-32                        |
+| miniz.GREEDY_PARSING_FLAG               | int       | 压缩参数, 是否快速 greedy 处理, 默认使用较慢的处理模式      |
+| miniz.NONDETERMINISTIC_PARSING_FLAG     | int       | 压缩参数, 是否快速初始化压缩器                              |
+| miniz.RLE_MATCHES                       | int       | 压缩参数, 仅扫描 RLE                                         |
+| miniz.FILTER_MATCHES                    | int       | 压缩参数, 过滤少于 5 次的字符                                |
+| miniz.FORCE_ALL_STATIC_BLOCKS           | int       | 压缩参数, 是否禁用优化过的 Huffman 表                       |
+| miniz.FORCE_ALL_RAW_BLOCKS              | int       | 压缩参数, 是否只要 raw 块                                   |
+| miniz.PARSE_ZLIB_HEADER                 | int       | 解压参数, 是否处理 zlib 头部, uncompress 函数的默认值       |
+| miniz.HAS_MORE_INPUT                    | int       | 解压参数, 是否还有更多数据, 仅流式解压可用, 暂不支持       |
+| miniz.USING_NON_WRAPPING_OUTPUT_BUF     | int       | 解压参数, 解压区间是否够全部数据, 仅流式解压可用, 暂不支持 |
+| miniz.COMPUTE_ADLER32                   | int       | 解压参数, 是否强制校验 adler-32                             |
 
 #### miniz.compress(data, flags)
 

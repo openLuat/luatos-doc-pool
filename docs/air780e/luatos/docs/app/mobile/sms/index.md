@@ -51,7 +51,7 @@ Air780E 不支持电信卡的短信功能!!
 - 将固件和脚本烧录到模块中，使用说明参考：[Luatools 下载和详细使用](https://docs.openluat.com/Luatools/)
 - 源码和固件已打包，如下所示：
 [点我,下载完整压缩文件包](file/完整文件包.zip){:target="_blank"}
-- [sms-全部api地址](https://wiki.luatos.com/api/sms.html)，如果只看本demo的api直接看下面的`5.2 demo使用api介绍`即可。
+- [sms-全部api地址](https://docs.openluat.com/air780e/luatos/api/core/sms/)，如果只看本demo的api直接看下面的`5.2 demo使用api介绍`即可。
 
 ### 5.2 demo使用api介绍
 #### sms.send(phone, msg, auto_phone_fix)
