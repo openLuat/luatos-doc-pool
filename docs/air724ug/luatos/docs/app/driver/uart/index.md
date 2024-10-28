@@ -756,9 +756,208 @@ uart.setup(UART_ID,115200,8,uart.PAR_NONE,uart.STOP_1,nil,1)
 使用的硬件为 sht20 温湿度传感器 +724UG 开发板 +RS485-TTL
 
 RS485-TTL：[购买链接](https://detail.tmall.com/item.htm?abbucket=12&id=609616777223&ns=1&pisk=gLXKHx20zP437xnZU4NMZ8jr2zM8JTIU-wSjEUYnNNQOVFDuYpVyeaLOzeAHdeDJegQPraIzY3T5PaLlt52cYMJyFrD8n-jFdIjEqwKBFCZW0nlQo2eMLk9yFr4-sYOUHL72yr86Vft673LSPH_WCGtJcLtWALZ953KqN2_WFlE92nhIALGI1AtHcLGWFXG6CnKqR2OWNFZ94FtWAwIYyFiBrYCrG93ClzqH4369vBLfXSHZIY8no3SQyYH5F1UpkM1rFY69vB6oCpj1vBf50IWHWg7fntB1gqbDlXZTXblyOhREzu-vEiT3WhL0v8hraCrwXEqtpbGSPS-9olYoabRNu&priceTId=2146402417291593304052114e5630&skuId=4387706588967&spm=a21n57.1.item.227.487c523c1WpDjW&utparam=%7B%22aplus_abtest%22%3A%229231e72621ac548ac3391f30d5d6a7e0%22%7D&xxc=taobaoSearch)
+![](image/UVGebfIvioFOJ6xhzWgcmsHBnPg.png)
 
+sht20温湿度传感器：[购买链接](https://item.taobao.com/item.htm?abbucket=12&id=582340027559&ns=1&pisk=gs-nHPvCEe7I-qa1NASIr2fRB05oJJs5RQERwgCr715_va5-RQbkwC_yvMpps_RvZTKp23Y_qK9Wvvs-dM9CVglxMmCkdps7QymLyHXwQt9a4WzEDXpF2JGxMmno8RSotjddqq-L7tXV49Sz4lkGeT4UTQ7zbd51FTPFUkkMQ11NUyWU8doNnt2U4QWUQNWP3_5Pzkrab9CNag7U4N5L4sxyfhlI4EoHsLzJ89bhgp5eLKxaXZzBH1XRFhWXIe9ePuryj9be2lSpQpbpzK_Xv1jPPPz2FvZWCj8LPz_FCOfxRFFktX0NfxkiIrgC8O6KMADgPnNb4omtIA42CwW1pdC..&priceTId=2147bfb717291515009627834ea737&skuId=5029210975363&spm=a21n57.1.item.156.487c523c1WpDjW&utparam=%7B%22aplus_abtest%22%3A%222b0aadea43e9ec20f967efcd7ef7f253%22%7D&xxc=taobaoSearch)
+![](image/1730083105258.png)
+
+接线方式：
+![](image/1730083156936.png)
+
+#### 5.7.2 代码展示
+```lua
+--- 模块功能：串口1功能测试
+-- @author openLuat
+-- @module uart.testUart
+-- @license MIT
+-- @copyright openLuat
+-- @release 2018.03.27
+
+module(...,package.seeall)
+
+require"utils"
+require"pm"
+require "common"
+require "pack"
+--[[
+功能定义：
+uart按照帧结构接收外围设备的输入，收到正确的指令后，回复ASCII字符串
+
+帧结构如下：
+帧头：1字节，0x01表示扫描指令，0x02表示控制GPIO命令，0x03表示控制端口命令
+帧体：字节不固定，跟帧头有关
+帧尾：1字节，固定为0xC0
+
+收到的指令帧头为0x01时，回复"CMD_SCANNER\r\n"给外围设备；例如接收到0x01 0xC0两个字节，就回复"CMD_SCANNER\r\n"
+收到的指令帧头为0x02时，回复"CMD_GPIO\r\n"给外围设备；例如接收到0x02 0xC0两个字节，就回复"CMD_GPIO\r\n"
+收到的指令帧头为0x03时，回复"CMD_PORT\r\n"给外围设备；例如接收到0x03 0xC0两个字节，就回复"CMD_PORT\r\n"
+收到的指令帧头为其余数据时，回复"CMD_ERROR\r\n"给外围设备；例如接收到0x04 0xC0两个字节，就回复"CMD_ERROR\r\n"
+]]
+
+--串口ID,1对应uart1
+--如果要修改为uart2，把UART_ID赋值为2即可
+local UART_ID = 1
+--帧头类型以及帧尾
+local CMD_SCANNER,CMD_GPIO,CMD_PORT,FRM_TAIL = 1,2,3,string.char(0xC0)
+--串口读到的数据缓冲区
+local rdbuf = ""
+
+--[[
+函数名：parse
+功能  ：按照帧结构解析处理一条完整的帧数据
+参数  ：
+        data：所有未处理的数据
+返回值：第一个返回值是一条完整帧报文的处理结果，第二个返回值是未处理的数据
+]]
+local function parse(data)
+    if not data then return end    
+    
+    local tail = string.find(data,string.char(0xC0))
+    if not tail then return false,data end    
+    local cmdtyp = string.byte(data,1)
+    local body,result = string.sub(data,2,tail-1)
+    
+    log.info("testUart.parse",data:toHex(),cmdtyp,body:toHex())
+    
+    if cmdtyp == CMD_SCANNER then
+        write("CMD_SCANNER")
+    elseif cmdtyp == CMD_GPIO then
+        write("CMD_GPIO")
+    elseif cmdtyp == CMD_PORT then
+        write("CMD_PORT")
+    else
+        write("CMD_ERROR")
+    end
+    
+    return true,string.sub(data,tail+1,-1)    
+end
+
+--[[
+函数名：proc
+功能  ：处理从串口读到的数据
+参数  ：
+        data：当前一次从串口读到的数据
+返回值：无
+]]
+local function proc(data)
+    if not data or string.len(data) == 0 then return end
+    --追加到缓冲区
+    rdbuf = rdbuf..data    
+    
+    local result,unproc
+    unproc = rdbuf
+    --根据帧结构循环解析未处理过的数据
+    while true do
+        result,unproc = parse(unproc)
+        if not unproc or unproc == "" or not result then
+            break
+        end
+    end
+
+    rdbuf = unproc or ""
+end
+local function test(...)
+    --将串口接收的数据赋值给str
+    local str= ...
+    local addr = str:sub(1, 1)--地址位
+    local fun = str:sub(2, 2)--功能码
+    local byte = str:sub(3, 3)--有效字节数
+    local humi =str:sub(4,5)--湿度值
+    local temp = str:sub(6,7)--温度值
+    local idx, crc = pack.unpack(str:sub(-2, -1), "H")
+    local tmp = str:sub(1, -3)
+    --crc校验原理前面所有位合起来校验后的值等于上报的数据的最后校验位
+    if crc == crypto.crc16("MODBUS", tmp) then
+        log.info("crc校验成功")
+        -- _无用，addr地址码，fun功能码，byte返回有效字节数，humi湿度，temp温度
+        -- pack.unpack 将lua字符串分解为不同的数值
+        -- ">b3h2"表示在tmp字符串中，从tmp第一个字节开始，取三个字节，取两个短整数
+        local _,addr,fun,byte,humi,temp = pack.unpack(tmp, ">b3h2")
+        --如果功能码为0x03，则为读取温湿度值
+        log.info("FUN",fun)
+        if fun == 0x04 then
+        log.info("humi",humi,temp)
+            --创建一个局部表，命名为t，lua语言种没有数组/结构体，取而代之的是table，用户可以当成结构体使用。       
+            local t= {}
+            --给表中添加一个叫做addr的元素，并将上文中的addr变量的值赋给该元素（如果用户不需要该值可不填）
+            --给表中添加一个叫做humi的元素，并将上文中的humi变量的值赋给该元素
+            t.temperature = humi/10 --pack.unpack后已经将该数转换成了十进制的整数，需要将其除以10才是真实的湿度百分比数
+            --给表中添加一个叫做temp的元素，并将上文中的temp变量的值赋给该元素
+            t.humidity =temp/10 --pack.unpack后已经将该数转换成了十进制的整数，需要将其除以10才是真实的温度值
+            --将该表转换成json格式的字符串并发送给服务器
+            return json.encode(t)
+        end
+    else
+    --如果crc校验失败则将"crc error"发送给服务器
+        log.info("crc校验失败")
+        return "crc error"
+    end
+end
+--[[
+函数名：read
+功能  ：读取串口接收到的数据
+参数  ：无
+返回值：无
+]]
+local function read()
+    local data = ""
+    --底层core中，串口收到数据时：
+    --如果接收缓冲区为空，则会以中断方式通知Lua脚本收到了新数据；
+    --如果接收缓冲器不为空，则不会通知Lua脚本
+    --所以Lua脚本中收到中断读串口数据时，每次都要把接收缓冲区中的数据全部读出，这样才能保证底层core中的新数据中断上来，此read函数中的while语句中就保证了这一点
+    while true do        
+        data = uart.read(UART_ID,"*l")
+        if not data or string.len(data) == 0 then break end
+        --打开下面的打印会耗时
+        log.info("testUart.read bin",data)
+        log.info("testUart.read hex",data:toHex())
+        -- proc(data)
+        local returndata=test(data)
+        log.info("returndata",returndata)
+    end
+end
+
+--[[
+函数名：write
+功能  ：通过串口发送数据
+参数  ：
+        s：要发送的数据
+返回值：无
+]]
+function write(s)
+    log.info("testUart.write",s)
+    uart.write(UART_ID,s.."\r\n")
+end
+
+local function writeOk()
+    log.info("testUart.writeOk")
+end
+
+sys.taskInit(function()
+    -- 循环两秒向串口发一次数据
+    while true do
+        sys.wait(2000)
+        --利用common库的common.utf8ToGb2312()将UTF-8编码转换成GB2312格式，在sscom可以正常显示中文
+        uart.write(UART_ID, string.char(0x01,0x04,0x00,0x01,0x00,0x02,0x20,0x0B))
+    end
+end)
+
+--保持系统处于唤醒状态，此处只是为了测试需要，所以此模块没有地方调用pm.sleep("testUart")休眠，不会进入低功耗休眠状态
+--在开发“要求功耗低”的项目时，一定要想办法保证pm.wake("testUart")后，在不需要串口时调用pm.sleep("testUart")
+pm.wake("testUart")
+--注册串口的数据接收函数，串口收到数据后，会以中断方式，调用read接口读取数据
+uart.on(UART_ID,"receive",read)
+--注册串口的数据发送通知函数
+uart.on(UART_ID,"sent",writeOk)
+
+--配置并且打开串口
+uart.setup(UART_ID,9600,8,uart.PAR_NONE,uart.STOP_1,nil,1)
+--如果需要打开“串口发送数据完成后，通过异步消息通知”的功能，则使用下面的这行setup，注释掉上面的一行setup
+--uart.setup(UART_ID,115200,8,uart.PAR_NONE,uart.STOP_1,nil,1)
+
+--uart.set_rs485_oe(UART_ID,pio.P0_23,1,3500)
+```
 ![](image/SDvHbwHDEoDV5Ex98vMcR4r6nee.png)
-
 本示例是利用 sht20 温湿度传感器 +724UG 开发板 +RS485-TTL 通过 485 做的一个采集温湿度的 demo，主要逻辑是通过发送 16 进制数据 0x01,0x04,0x00,0x01,0x00,0x02,0x20,0x0B 来获取温湿度
 
 ![](image/KnXbbNSiBomOJKxMKtIce4R1nig.png)
