@@ -7,7 +7,7 @@ AT 命令是一种古老的使用方式，从有线通信就开始使用了。
 
 AT 命令的使用场景是，把 4G 模组当做一个黑盒配件，设备必须有一个主控 CPU。
 
-设备的主控 CPU， 通过串口，（也可以是 SPI 或者 USB，但是 99% 的场景都是通过串口），发送一个 "AT"字符串开头的指令， 像 4G 模组请求各种服务。
+设备的主控 CPU， 通过串口，（也可以是 SPI 或者 USB，但是 99% 的场景都是通过串口），发送一个 "AT"字符串开头的指令， 向 4G 模组请求各种服务。
 
 4G 模组完成服务后， 回复一个字符串，向主控 CPU 做应答。
 
@@ -122,7 +122,7 @@ USB 数据线，连接电脑和 Air780E 开发板，如下图所示：
 
 第二种方式是访问：[Air780E 固件版本](https://docs.openluat.com/air780e/at/firmware/) ，找到最新版本的固件即可。
 
-### 4.3 合宙 合宙 TCP/UDP web 测试服务器
+### 4.3 合宙 TCP/UDP web 测试服务器
 
 为了方便测试，合宙提供了免费的不可商用的 [合宙 TCP/UDP web 测试服务器](https://netlab.luatos.com)；
 
@@ -158,9 +158,9 @@ LLCOM 的下载链接：[LLCOM](https://llcom.papapoi.com/index.html) ，详细�
 
 ![](image/LSbObxVCDo4Qb2xcfVxcFR8onLg.png)
 
-如下图标记处：待测试的 IP 地址为:112.125.89.8： 端口号为:43873
+如下图标记处：待测试的 IP 地址为:112.125.89.8： 端口号为:43316
 
-![](image/F9yxbSC5VocNaqxwktec83Ctnnh.png)
+![](image/a.png)
 
 注意：读者进行测试时 IP 和端口会随机分配，测试中我们替换成对应的 IP 和端口号即可。
 
@@ -172,13 +172,13 @@ LLCOM 的下载链接：[LLCOM](https://llcom.papapoi.com/index.html) ，详细�
 
 AT+CREG?                //查询当前 GPRS 注册状态
 
-+CREG: 0,1               //`<n>`=0，表示禁用 URC 上报，`<stat>`=1，标识已经注册 GPRS 网络，而且是本地网
++CREG: 0,1               //`<n>`=0，表示禁用 URC 上报，+CREG: 0,1，标识已经注册 GPRS 网络，而且是本地网
 
 OK
 
 AT+CGATT?                //查看当前 GPRS 附着状态
 
-+CGATT:1                //`<state>`=1，标明当前 GPRS 已经附着
++CGATT:1                //+CGATT:1 ，标明当前 GPRS 已经附着
 
 OK
 
